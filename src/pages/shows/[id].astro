@@ -28,8 +28,8 @@ if (!show) {
 // Get embed URL (prioritize Castos, fallback to auto-generated from platform URLs)
 const embedUrl = show.castosPlaylistUrl || show.embedUrl || getShowEmbedUrl(show.platform || 'apple', show.spotifyUrl, show.applePodcastsUrl);
 
-// Get base URL
-const base = import.meta.env.BASE_URL;
+// Get base URL (remove trailing slash for consistency)
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 // SEO metadata
 const title = `${show.title} | ${siteConfig.brand.name}`;
@@ -54,7 +54,7 @@ export async function getStaticPaths() {
         <!-- Back Link -->
         <div class="mb-6">
           <a 
-            href={`${base}shows`} 
+            href={`${base}/shows`} 
             class="inline-flex items-center text-brand-secondary hover:opacity-70 transition-opacity text-sm md:text-base font-medium"
           >
             <svg class="w-4 h-4 md:w-5 md:h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
