@@ -1,0 +1,44 @@
+---
+/**
+ * FeaturedEpisode Component
+ * 
+ * Displays the featured podcast show with artwork, description,
+ * and listen buttons for Spotify and Apple Podcasts.
+ * Gets show data from the shows array based on featuredShow.showId.
+ */
+
+import ShowDisplay from './ShowDisplay.astro';
+import { siteConfig } from '@/config/site';
+
+const { featuredShow, shows } = siteConfig;
+
+// Find the referenced show from the shows array
+const show = shows.find((s) => s.id === featuredShow.showId);
+
+// Fallback if show not found (should not happen if validation passed)
+if (!show) {
+  throw new Error(`Featured show with ID "${featuredShow.showId}" not found in shows array`);
+}
+
+// Get display options (defaults to true)
+const showTitle = featuredShow.displayOptions?.showTitle ?? true;
+const showDescription = featuredShow.displayOptions?.showDescription ?? true;
+---
+
+<section class="featured-episode py-12 md:py-16">
+  <div class="container-custom">
+    <ShowDisplay 
+      show={show} 
+      showTitle={showTitle} 
+      showDescription={showDescription}
+      headingLevel="h2"
+      linkable={true}
+    />
+  </div>
+</section>
+
+<style>
+  .featured-episode {
+    background-color: #F6F0E8; /* brand-primary */
+  }
+</style>

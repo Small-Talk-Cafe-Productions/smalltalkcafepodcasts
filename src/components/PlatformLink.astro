@@ -1,0 +1,31 @@
+---
+/**
+ * PlatformLink Component
+ * 
+ * Reusable external link component with security attributes.
+ * Opens in new tab with rel="noopener noreferrer" for security.
+ * 
+ * Props:
+ *   - href: External URL (required)
+ *   - label: Accessible label for screen readers (required)
+ *   - class: Additional CSS classes (optional)
+ */
+
+interface Props {
+  href: string;
+  label: string;
+  class?: string;
+}
+
+const { href, label, class: className = '' } = Astro.props;
+---
+
+<a
+  href={href}
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label={label}
+  class={`inline-flex items-center gap-2 transition-colors ${className}`}
+>
+  <slot />
+</a>

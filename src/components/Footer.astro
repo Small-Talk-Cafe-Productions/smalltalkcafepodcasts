@@ -1,0 +1,25 @@
+---
+/**
+ * Footer Component
+ * 
+ * Site footer with copyright text.
+ */
+
+import { siteConfig } from '@/config/site';
+
+const { footer } = siteConfig;
+const currentYear = footer.copyrightYear || new Date().getFullYear();
+---
+
+<footer class="bg-brand-background border-t border-brand-secondary/10 py-8">
+  <div class="container-custom">
+    <div class="text-center">
+      <p class="text-brand-secondary/80 text-sm mb-2">
+        {footer.copyrightText}
+      </p>
+      <p class="text-brand-secondary/60 text-xs">
+        © {currentYear} Small Talk Café Productions. All rights reserved.
+      </p>
+    </div>
+  </div>
+</footer>

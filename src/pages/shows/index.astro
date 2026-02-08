@@ -1,0 +1,75 @@
+---
+/**
+ * Shows Page
+ * 
+ * Displays all podcast shows with the same style as the featured show on the homepage.
+ * Uses ShowDisplay component for consistent styling and maximum code reuse.
+ */
+
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+import ShowDisplay from '@/components/ShowDisplay.astro';
+import { siteConfig } from '@/config/site';
+
+const { shows } = siteConfig;
+
+// SEO metadata
+const title = `All Shows | ${siteConfig.seo.title}`;
+const description = 'Browse all podcast shows from Small Talk Café. Listen with embedded players or visit your favorite podcast platform.';
+---
+
+<BaseLayout title={title} description={description}>
+  <div class="min-h-screen flex flex-col">
+    <Header />
+    
+    <main class="shows-page bg-brand-background flex-grow">
+      <!-- Page Header -->
+      <section class="py-12 bg-brand-background">
+        <div class="container-custom text-center">
+          <h1 class="text-4xl md:text-5xl font-bold text-brand-secondary mb-4">
+            All Shows
+          </h1>
+          <p class="text-lg text-brand-secondary/80 max-w-2xl mx-auto">
+            Explore our collection of podcast shows. Listen wherever you get your podcasts.
+          </p>
+        </div>
+      </section>
+
+      <!-- Shows Grid (2 columns) -->
+      <section class="py-12 md:py-16">
+        <div class="container-custom">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+            {shows.map((show) => (
+              <div class="show-grid-item">
+                <ShowDisplay 
+                  show={show} 
+                  showTitle={true} 
+                  showDescription={true}
+                  headingLevel="h2"
+                  linkable={true}
+                />
+              </div>
+            ))}
+          </div>
+          
+          {shows.length === 0 && (
+            <div class="text-center py-16">
+              <p class="text-brand-secondary/80 text-lg">
+                No shows available yet. Check back soon!
+              </p>
+            </div>
+          )}
+        </div>
+      </section>
+    </main>
+    
+    <Footer />
+  </div>
+</BaseLayout>
+
+<style>
+  .shows-page {
+    min-height: auto;
+  }
+</style>

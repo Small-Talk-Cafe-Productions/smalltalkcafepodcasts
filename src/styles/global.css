@@ -1,0 +1,81 @@
+/* Global Styles */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* CSS Variables for brand colors (populated from site config) */
+  :root {
+    --color-brand-primary: #F6F0E8;
+    --color-brand-secondary: #523E26;
+    --color-brand-accent: #F39C12;
+    --color-brand-background: #F6F0E8;
+    --color-brand-text: #121212;
+  }
+  
+  /* Base typography */
+  html {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  body {
+    @apply bg-brand-background text-brand-text;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+  }
+  
+  /* Ensure all interactive elements have focus indicators */
+  a:focus,
+  button:focus {
+    @apply outline-2 outline-offset-2 outline-blue-500;
+  }
+  
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Reusable button styles */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all duration-200;
+  }
+  
+  .btn-primary {
+    @apply bg-brand-secondary text-white hover:bg-brand-text hover:shadow-lg;
+  }
+  
+  .btn-secondary {
+    @apply bg-brand-secondary text-white hover:bg-brand-text hover:shadow-lg;
+  }
+  
+  /* Card component */
+  .card {
+    @apply bg-white rounded-lg shadow-md p-6;
+  }
+}
+
+@layer utilities {
+  /* Custom utility classes */
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  /* Aspect ratio utilities for images */
+  .aspect-square {
+    aspect-ratio: 1 / 1;
+  }
+  
+  .aspect-video {
+    aspect-ratio: 16 / 9;
+  }
+}

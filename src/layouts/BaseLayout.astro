@@ -1,0 +1,84 @@
+---
+/**
+ * BaseLayout
+ * 
+ * Main layout wrapper with SEO meta tags, Open Graph, Twitter Cards,
+ * and Schema.org structured data.
+ */
+
+import '@/styles/global.css';
+import { siteConfig } from '@/config/site';
+import { generatePodcastSchema, generateOGTags, generateTwitterTags } from '@/config/seo';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title, description } = Astro.props;
+const { seo, featuredShow, shows } = siteConfig;
+
+const pageTitle = title || seo.title;
+const pageDescription = description || seo.description;
+
+// Get the featured show from the shows array
+const show = shows.find((s) => s.id === featuredShow.showId);
+
+// Generate structured data
+const podcastSchema = show ? generatePodcastSchema(show, seo) : null;
+const ogTags = generateOGTags(seo, show);
+const twitterTags = generateTwitterTags(seo, show);
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Primary Meta Tags -->
+    <title>{pageTitle}</title>
+    <meta name="title" content={pageTitle} />
+    <meta name="description" content={pageDescription} />
+    <meta name="keywords" content={seo.keywords.join(', ')} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content={ogTags['og:type']} />
+    <meta property="og:url" content={ogTags['og:url']} />
+    <meta property="og:title" content={ogTags['og:title']} />
+    <meta property="og:description" content={ogTags['og:description']} />
+    <meta property="og:image" content={ogTags['og:image']} />
+    <meta property="og:site_name" content={ogTags['og:site_name']} />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content={twitterTags['twitter:card']} />
+    <meta property="twitter:url" content={seo.siteUrl} />
+    <meta property="twitter:title" content={twitterTags['twitter:title']} />
+    <meta property="twitter:description" content={twitterTags['twitter:description']} />
+    <meta property="twitter:image" content={twitterTags['twitter:image']} />
+    {twitterTags['twitter:site'] && (
+      <meta property="twitter:site" content={twitterTags['twitter:site']} />
+    )}
+
+    <!-- Canonical Link -->
+    <link rel="canonical" href={seo.siteUrl} />
+
+    <!-- Schema.org Structured Data -->
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(podcastSchema)} />
+
+    <!-- Preconnect to external domains for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Brand Fonts (Google Fonts) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

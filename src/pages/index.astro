@@ -1,0 +1,25 @@
+---
+/**
+ * Homepage
+ * 
+ * Main landing page featuring the latest podcast episode
+ * and navigation to social platforms.
+ */
+
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/Header.astro';
+import FeaturedEpisode from '@/components/FeaturedEpisode.astro';
+import Footer from '@/components/Footer.astro';
+---
+
+<BaseLayout>
+  <div class="min-h-screen flex flex-col">
+    <Header />
+    
+    <main class="flex-grow">
+      <FeaturedEpisode />
+    </main>
+    
+    <Footer />
+  </div>
+</BaseLayout>
