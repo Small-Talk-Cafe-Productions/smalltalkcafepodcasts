@@ -1,4 +1,4 @@
-### All Rights Reserved
+#### All Rights Reserved
 
 All website code, audio, images, and written content are © 2025-2026 Small Talk Café Productions™. All rights reserved.
 
