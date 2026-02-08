@@ -39,7 +39,28 @@ function getApplePodcastsEmbedUrl(url: string): string | null {
   try {
     // Apple Podcasts embed URLs just need to change the subdomain
     if (url.includes('podcasts.apple.com')) {
-      return url.replace('podcasts.apple.com', 'embed.podcasts.apple.com');
+      const embedUrl = url.replace('podcasts.apple.com', 'embed.podcasts.apple.com');
+      
+      // Extract podcast ID for tracking parameter
+      const idMatch = url.match(/id(\d+)/);
+      const podcastId = idMatch ? idMatch[1] : '';
+      
+      // Add Apple Podcasts embed parameters
+      const params = new URLSearchParams({
+        itscg: '30200',
+        itsct: 'podcast_box_player',
+        ls: '1',
+        theme: 'dark'
+      });
+      
+      // Add podcast ID as tracking parameter if available
+      if (podcastId) {
+        params.append('mttnsubad', podcastId);
+      }
+      
+      // Append parameters to URL
+      const separator = embedUrl.includes('?') ? '&' : '?';
+      return `${embedUrl}${separator}${params.toString()}`;
     }
     return null;
   } catch {
