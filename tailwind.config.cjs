@@ -6,7 +6,7 @@ module.exports = {
       colors: {
         // Brand colors from site config
         brand: {
-          primary: '#F6F0E8',    // Light beige
+          primary: '#F5F1E8',    // Light beige
           secondary: '#523E26',  // Dark brown
           accent: '#F39C12',     // Warm orange
           background: '#F6F0E8', // Light beige
