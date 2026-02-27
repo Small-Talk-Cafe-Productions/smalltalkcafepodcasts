@@ -7,10 +7,10 @@
 @layer base {
   /* CSS Variables for brand colors (populated from site config) */
   :root {
-    --color-brand-primary: #F6F0E8;
+    --color-brand-primary: #F5F1E8;
     --color-brand-secondary: #523E26;
     --color-brand-accent: #F39C12;
-    --color-brand-background: #F6F0E8;
+    --color-brand-background: #F5F1E8;
     --color-brand-text: #121212;
   }
   
