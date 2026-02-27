@@ -13,10 +13,10 @@ export const siteConfig: SiteConfig = {
   brand: {
     name: 'Small Talk Café Podcasts',
     colors: {
-      primary: '#F6F0E8',    // Light beige
+      primary: '#F5F1E8',    // Light beige
       secondary: '#523E26',  // Dark brown
       accent: '#F39C12',     // Warm orange
-      background: '#F6F0E8', // Light beige
+      background: '#F5F1E8', // Light beige
       text: '#121212',       // Almost black
     },
     fonts: {
