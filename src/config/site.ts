@@ -103,7 +103,7 @@ export const siteConfig: SiteConfig = {
       'meaningful dialogue',
     ],
     ogImage: 'https://Small-Talk-Cafe-Productions.github.io/smalltalkcafepodcasts/images/og-image.jpg',
-    siteUrl: 'https://smalltalkcafe.de',
+    siteUrl: 'Small-Talk-Cafe-Productions.github.io/smalltalkcafepodcasts',
     twitterHandle: 'smalltalkcafe',
   },
   
