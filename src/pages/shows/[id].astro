@@ -66,13 +66,13 @@ export async function getStaticPaths() {
 
         <!-- Show Title and Description -->
         <div class="mb-8">
-          <h2 class="text-3xl md:text-4xl font-normal text-brand-secondary mb-2">
+          <h1 class="text-3xl md:text-4xl font-normal text-brand-secondary mb-2">
             {show.title}
-          </h2>
+          </h1>
           {show.subtitle && (
-            <h3 class="text-3xl md:text-4xl font-normal text-brand-secondary mb-4">
+            <h2 class="text-3xl md:text-4xl font-normal text-brand-secondary mb-4">
               {show.subtitle}
-            </h3>
+            </h2>
           )}
           <p class="text-lg text-brand-secondary/70 leading-relaxed">
             {show.description}
