@@ -3,10 +3,10 @@ import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://Small-Talk-Cafe-Productions.github.io',
+  site: 'https://smalltalkcafe.de',
   // Use base path only in production (for GitHub Pages)
   // In dev mode, serve at root for easier development
-  base: import.meta.env.PROD ? '/smalltalkcafepodcasts' : '/',
+  base: '/',
   integrations: [tailwind()],
   output: 'static',
   build: {
