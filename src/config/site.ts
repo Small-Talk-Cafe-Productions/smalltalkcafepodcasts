@@ -24,8 +24,8 @@ export const siteConfig: SiteConfig = {
       body: '"Inter", system-ui, -apple-system, sans-serif',
       showTitle: {
         family: '"Poppins", "Helvetica Neue", sans-serif',
-        sizeLarge: '2rem',  // Desktop/tablet size
-        sizeSmall: '1.5rem',    // Mobile size
+        sizeLarge: '2.2rem',  // Desktop/tablet size
+        sizeSmall: '1.8rem',    // Mobile size
       },
     },
   },
