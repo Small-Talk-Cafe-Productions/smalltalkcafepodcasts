@@ -61,6 +61,28 @@ export const siteConfig: SiteConfig = {
       applePodcastsUrl: 'https://podcasts.apple.com/us/podcast/small-talk-café-aprende-alemán-en-minutos/id1858063577',
       releaseDate: '2026-02-08',
     },
+    {
+      id: 'french-german',
+      title: 'Small Talk Café',
+      subtitle: 'Apprenez L\'Allemand en Minutes',
+      description: 'Apprenez l\'allemand rapidement grâce à des conversations pratiques et utiles dans la vie de tous les jours.',
+      artworkUrl: 'images/french-german.jpg',
+      platform: 'apple',
+      spotifyUrl: 'https://open.spotify.com/show/114LIYwyc0gk4wtzd2Ae2b',
+      applePodcastsUrl: 'https://podcasts.apple.com/us/podcast/small-talk-caf%C3%A9-apprenez-lallemand-en-minutes/id1883812147',
+      releaseDate: '2026-03-07',
+    },
+    {
+      id: 'italian-german',
+      title: 'Small Talk Café',
+      subtitle: 'Impara il Tedesco in Minuti',
+      description: 'Impara il tedesco velocemente con conversazioni pratiche e quotidiane da usare ogni giorno.',
+      artworkUrl: 'images/italian-german.jpg',
+      platform: 'apple',
+      spotifyUrl: 'https://open.spotify.com/show/3LG1xNwsLcBhcLRASRyyhz',
+      applePodcastsUrl: 'https://podcasts.apple.com/us/podcast/small-talk-caf%C3%A9-impara-il-tedesco-in-minuti/id1883818414',
+      releaseDate: '2026-03-07',
+    },
   ],
   
   socialLinks: {
