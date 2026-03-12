@@ -112,6 +112,9 @@ export interface ShowConfig {
   
   /** Castos playlist player URL (primary embed player) */
   castosPlaylistUrl?: string;
+
+  /** Castos show notes website URL (links to the public show page on Castos) */
+  showNotesUrl?: string;
   
   /** Embedded player URL (Spotify or Apple Podcasts embed) - fallback if Castos not provided */
   embedUrl?: string;
