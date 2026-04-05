@@ -102,61 +102,76 @@ export function formatPrice(price: string): string {
 // ─── Fetcher ──────────────────────────────────────────────────────────────────
 
 /**
- * Discover product handles in storefront display order.
+ * Discover product handles for the full catalogue in display order.
  *
- * Primary: scrape the store homepage HTML — Shopify renders the featured
- * collection in merchant-defined order, so the first appearance of each
- * /products/{handle} link in the page is the canonical display sequence.
+ * Strategy: always run BOTH sources and merge:
+ *  1. Homepage scrape — gives merchant-defined display order but may only
+ *     surface a small featured collection (e.g. 2 of 10 products).
+ *  2. Sitemap — always contains the complete catalogue, order is arbitrary.
  *
- * Fallback: if the homepage yields no product links (e.g. the theme changes),
- * we fall back to the sitemap strategy which returns all products but in an
- * arbitrary (by-ID) order.
+ * Result: homepage-ordered handles come first, then any additional handles
+ * found in the sitemap are appended so the full catalogue is always built.
  */
 async function discoverProductHandles(): Promise<string[]> {
   const ua = 'Mozilla/5.0 (compatible; smalltalkcafe.de-astro-build/1.0)';
 
-  // ── Primary: homepage scrape (preserves merchant sort order) ──────────────
+  // ── Step 1: Homepage scrape (merchant sort order for featured products) ────
+  let homepageHandles: string[] = [];
   try {
     const homeRes = await fetch(SHOP_DOMAIN, { headers: { 'User-Agent': ua } });
     if (homeRes.ok) {
       const html = await homeRes.text();
-      // Match every /products/{handle} path in the HTML, in document order
       const matches = [...html.matchAll(/["'\/]products\/([^"'?#\s\/]+)/g)]
         .map((m) => decodeURIComponent(m[1]))
-        // Exclude Shopify system slugs (.json, .js, .css asset references)
         .filter((h) => h && !h.includes('.') && h.length > 2);
-      const ordered = [...new Set(matches)];
-      if (ordered.length > 0) {
-        console.log(`[shopify] Discovered ${ordered.length} handle(s) from homepage (store order preserved).`);
-        return ordered;
+      homepageHandles = [...new Set(matches)];
+    }
+  } catch {
+    // continue to sitemap
+  }
+
+  // ── Step 2: Sitemap (always run for complete catalogue) ───────────────────
+  const sitemapHandles: string[] = [];
+  try {
+    const rootRes = await fetch(`${SHOP_DOMAIN}/sitemap.xml`, { headers: { 'User-Agent': ua } });
+    if (rootRes.ok) {
+      const rootXml = await rootRes.text();
+      const productSitemapUrls = [...rootXml.matchAll(/<loc>([^<]*sitemap_products[^<]*)<\/loc>/g)]
+        .map((m) => m[1])
+        .filter((url) => !url.includes('/de/') && !url.includes('/fr/') &&
+                         !url.includes('/it/') && !url.includes('/es/') &&
+                         !url.includes('/ca/'));
+      for (const sitemapUrl of productSitemapUrls) {
+        const res = await fetch(sitemapUrl, { headers: { 'User-Agent': ua } });
+        if (!res.ok) continue;
+        const xml = await res.text();
+        const found = [...xml.matchAll(new RegExp(`${SHOP_DOMAIN}/products/([^<"?]+)`, 'g'))]
+          .map((m) => decodeURIComponent(m[1]));
+        sitemapHandles.push(...found);
       }
     }
   } catch {
-    // fall through to sitemap fallback
+    // continue with homepage handles only
   }
 
-  // ── Fallback: sitemap (order not guaranteed) ───────────────────────────────
-  console.log('[shopify] Homepage scrape yielded no handles — falling back to sitemap.');
-  const rootRes = await fetch(`${SHOP_DOMAIN}/sitemap.xml`, { headers: { 'User-Agent': ua } });
-  if (!rootRes.ok) throw new Error(`sitemap.xml returned HTTP ${rootRes.status}`);
-  const rootXml = await rootRes.text();
+  // ── Merge: homepage order first, then any extras from sitemap ─────────────
+  const homepageSet = new Set(homepageHandles);
+  const extraFromSitemap = [...new Set(sitemapHandles)].filter((h) => !homepageSet.has(h));
+  const merged = [...homepageHandles, ...extraFromSitemap];
 
-  const productSitemapUrls = [...rootXml.matchAll(/<loc>([^<]*sitemap_products[^<]*)<\/loc>/g)]
-    .map((m) => m[1])
-    .filter((url) => !url.includes('/de/') && !url.includes('/fr/') &&
-                     !url.includes('/it/') && !url.includes('/es/') &&
-                     !url.includes('/ca/'));
-
-  const handles: string[] = [];
-  for (const sitemapUrl of productSitemapUrls) {
-    const res = await fetch(sitemapUrl, { headers: { 'User-Agent': ua } });
-    if (!res.ok) continue;
-    const xml = await res.text();
-    const found = [...xml.matchAll(new RegExp(`${SHOP_DOMAIN}/products/([^<"?]+)`, 'g'))]
-      .map((m) => decodeURIComponent(m[1]));
-    handles.push(...found);
+  if (merged.length === 0) {
+    console.warn('[shopify] No product handles found from homepage or sitemap.');
+    return [];
   }
-  return [...new Set(handles)];
+
+  const source =
+    homepageHandles.length > 0 && extraFromSitemap.length > 0
+      ? `${homepageHandles.length} from homepage + ${extraFromSitemap.length} additional from sitemap`
+      : homepageHandles.length > 0
+        ? 'homepage'
+        : 'sitemap';
+  console.log(`[shopify] Discovered ${merged.length} handle(s) (${source}).`);
+  return merged;
 }
 
 /**

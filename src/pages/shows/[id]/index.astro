@@ -15,7 +15,7 @@ import Footer from '@/components/Footer.astro';
 import { siteConfig } from '@/config/site';
 import { getShowEmbedUrl } from '@/utils/podcast';
 import { fetchEpisodes, type RssEpisode } from '@/utils/rss';
-import { formatDate } from '@/config/seo';
+import { formatDate, generatePodcastSchema } from '@/config/seo';
 
 export async function getStaticPaths() {
   const paths = await Promise.all(
@@ -71,9 +71,11 @@ const hasSeasons = seasons.length > 1 || (seasons.length === 1 && seasons[0].key
 
 const title = `${show.title}: ${show.subtitle} | ${siteConfig.brand.name}`;
 const description = show.description;
+const showSchema = generatePodcastSchema(show, siteConfig.seo);
 ---
 
 <BaseLayout title={title} description={description}>
+  <script is:inline slot="head-extras" type="application/ld+json" set:html={JSON.stringify(showSchema)} />
   <div class="min-h-screen flex flex-col bg-brand-background">
     <Header />
     

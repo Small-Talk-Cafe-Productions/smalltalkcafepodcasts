@@ -4,12 +4,21 @@
  * Functions to generate SEO meta tags and structured data.
  */
 
-import type { SEOConfig, ShowConfig } from './types';
+import type { SEOConfig, ShowConfig, SocialLinksConfig } from './types';
 import type { RssEpisode } from '@/utils/rss';
+import type { ShopifyProduct } from '@/utils/shopify';
 
 /**
- * Generate Schema.org structured data for podcast show
+ * Generate Schema.org PodcastSeries structured data for a show.
+ * URL now correctly points to the show's own page.
  */
+/** Resolve a potentially-relative asset path to an absolute URL. */
+function toAbsoluteUrl(path: string, siteUrl: string): string {
+  if (!path) return '';
+  if (path.startsWith('http://') || path.startsWith('https://')) return path;
+  return `${siteUrl}/${path.replace(/^\//, '')}`;
+}
+
 export function generatePodcastSchema(
   show: ShowConfig,
   seo: SEOConfig
@@ -17,10 +26,82 @@ export function generatePodcastSchema(
   return {
     '@context': 'https://schema.org',
     '@type': 'PodcastSeries',
-    name: show.title,
+    name: show.subtitle ? `${show.title}: ${show.subtitle}` : show.title,
     description: show.description,
-    image: show.artworkUrl,
+    image: toAbsoluteUrl(show.artworkUrl, seo.siteUrl),
+    url: `${seo.siteUrl}/shows/${show.id}/`,
+  };
+}
+
+/**
+ * Generate Schema.org Organization structured data.
+ * Tells Google who is behind the site and links to social profiles.
+ */
+export function generateOrganizationSchema(
+  seo: SEOConfig,
+  socialLinks: SocialLinksConfig
+) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Small Talk Café Productions',
     url: seo.siteUrl,
+    logo: {
+      '@type': 'ImageObject',
+      url: seo.ogImage,
+    },
+    sameAs: [socialLinks.youtube, socialLinks.instagram, socialLinks.shopify],
+  };
+}
+
+/**
+ * Generate Schema.org WebSite structured data.
+ * Enables Google sitelinks search box eligibility.
+ */
+export function generateWebSiteSchema(seo: SEOConfig) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Small Talk Café Podcasts',
+    url: seo.siteUrl,
+    description: seo.description,
+  };
+}
+
+/**
+ * Generate a Schema.org ItemList of Products for the shop page.
+ * Enables Google Shopping Free Listings and Product Rich Results.
+ */
+export function generateProductListSchema(
+  products: ShopifyProduct[],
+  seo: SEOConfig
+) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Small Talk Café Merchandise — German Learning Gear',
+    url: `${seo.siteUrl}/shop/`,
+    itemListElement: products.map((p, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      item: {
+        '@type': 'Product',
+        name: p.title,
+        description: p.teaser || undefined,
+        image: p.images[0]?.src,
+        url: p.url,
+        brand: { '@type': 'Brand', name: p.vendor || 'Small Talk Café' },
+        offers: {
+          '@type': 'Offer',
+          price: p.price,
+          priceCurrency: 'EUR',
+          availability: p.available
+            ? 'https://schema.org/InStock'
+            : 'https://schema.org/OutOfStock',
+          url: p.url,
+        },
+      },
+    })),
   };
 }
 
@@ -96,7 +177,7 @@ export function generateEpisodeSchema(
     partOfSeries: {
       '@type': 'PodcastSeries',
       name: show.subtitle ? `${show.title}: ${show.subtitle}` : show.title,
-      url: `${seo.siteUrl}/shows/${show.id}`,
+      url: `${seo.siteUrl}/shows/${show.id}/`,
     },
   };
   if (episode.audioUrl) {

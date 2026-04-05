@@ -8,7 +8,7 @@
 
 import '@/styles/global.css';
 import { siteConfig } from '@/config/site';
-import { generatePodcastSchema, generateOGTags, generateTwitterTags } from '@/config/seo';
+import { generateOGTags, generateTwitterTags } from '@/config/seo';
 
 interface Props {
   title?: string;
@@ -22,7 +22,7 @@ interface Props {
 }
 
 const { title, description, canonicalUrl } = Astro.props;
-const { seo, featuredShow, shows } = siteConfig;
+const { seo } = siteConfig;
 
 // Use the passed canonical if provided, otherwise fall back to the real current URL
 const pageCanonical = canonicalUrl ?? new URL(Astro.url.pathname, seo.siteUrl).toString();
@@ -30,13 +30,10 @@ const pageCanonical = canonicalUrl ?? new URL(Astro.url.pathname, seo.siteUrl).t
 const pageTitle = title || seo.title;
 const pageDescription = description || seo.description;
 
-// Get the featured show from the shows array
-const show = shows.find((s) => s.id === featuredShow.showId);
-
-// Generate structured data
-const podcastSchema = show ? generatePodcastSchema(show, seo) : null;
-const ogTags = generateOGTags(seo, show);
-const twitterTags = generateTwitterTags(seo, show);
+// Generate Open Graph and Twitter tags using the page-specific title/description
+// (not the featured show's data, which would contaminate non-homepage pages)
+const ogTags = generateOGTags(seo);
+const twitterTags = generateTwitterTags(seo);
 ---
 
 <!DOCTYPE html>
@@ -56,16 +53,16 @@ const twitterTags = generateTwitterTags(seo, show);
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content={ogTags['og:type']} />
     <meta property="og:url" content={pageCanonical} />
-    <meta property="og:title" content={ogTags['og:title']} />
-    <meta property="og:description" content={ogTags['og:description']} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={pageDescription} />
     <meta property="og:image" content={ogTags['og:image']} />
     <meta property="og:site_name" content={ogTags['og:site_name']} />
 
     <!-- Twitter -->
     <meta property="twitter:card" content={twitterTags['twitter:card']} />
     <meta property="twitter:url" content={pageCanonical} />
-    <meta property="twitter:title" content={twitterTags['twitter:title']} />
-    <meta property="twitter:description" content={twitterTags['twitter:description']} />
+    <meta property="twitter:title" content={pageTitle} />
+    <meta property="twitter:description" content={pageDescription} />
     <meta property="twitter:image" content={twitterTags['twitter:image']} />
     {twitterTags['twitter:site'] && (
       <meta property="twitter:site" content={twitterTags['twitter:site']} />
@@ -73,11 +70,6 @@ const twitterTags = generateTwitterTags(seo, show);
 
     <!-- Canonical Link (unique per page — critical for Google deduplication) -->
     <link rel="canonical" href={pageCanonical} />
-
-    <!-- Schema.org Structured Data (site-level PodcastSeries) -->
-    {podcastSchema && (
-      <script is:inline type="application/ld+json" set:html={JSON.stringify(podcastSchema)} />
-    )}
 
     <!-- Per-page head extras (additional schema, overrides, etc.) -->
     <slot name="head-extras" />

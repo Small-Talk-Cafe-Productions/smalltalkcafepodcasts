@@ -104,8 +104,8 @@ export const siteConfig: SiteConfig = {
   },
   
   seo: {
-    title: 'Small Talk Café | Learn German in Minutes — Free Podcast',
-    description: 'Learn German in minutes with Small Talk Café — the free podcast for English, Spanish, French & Italian speakers. Bite-sized daily lessons. Listen on Spotify & Apple Podcasts.',
+    title: 'Small Talk Café | Speak German with Confidence — Bite-Sized Podcast',
+    description: 'Build real German speaking confidence with Small Talk Café — bite-sized podcast episodes for English, Spanish, French & Italian speakers. Real conversations, new episodes every week.',
     keywords: [
       'learn German podcast',
       'German language learning',
@@ -113,8 +113,8 @@ export const siteConfig: SiteConfig = {
       'Small Talk Café',
       'German for beginners',
       'conversational German',
+      'German speaking practice',
       'German mini lessons',
-      'learn German free',
       'German podcast Spotify',
       'German podcast Apple Podcasts',
       'learn German from English',
@@ -123,8 +123,9 @@ export const siteConfig: SiteConfig = {
       'learn German from Italian',
       'daily German practice',
       'German vocabulary podcast',
+      'speak German confidently',
     ],
-    ogImage: 'https://Small-Talk-Cafe-Productions.github.io/smalltalkcafepodcasts/images/og-image.jpg',
+    ogImage: 'https://smalltalkcafe.de/images/og-image.jpg',
     siteUrl: 'https://smalltalkcafe.de',
     twitterHandle: 'smalltalkcafe',
     // Google Analytics 4 — replace with your real Measurement ID from:

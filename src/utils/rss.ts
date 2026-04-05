@@ -62,6 +62,80 @@ type CustomItem = {
   };
 };
 
+/** A single episode paired with the show it belongs to. */
+export interface EpisodeWithShow {
+  episode: RssEpisode;
+  showId: string;
+  showTitle: string;
+  showSubtitle?: string;
+}
+
+/**
+ * Fetch the single most recently published episode across all shows that have
+ * an RSS URL configured. Used on the homepage to guarantee fresh content.
+ */
+export async function fetchLatestEpisodeAcrossShows(
+  shows: Array<{ id: string; title: string; subtitle?: string; rssUrl?: string }>
+): Promise<EpisodeWithShow | null> {
+  const showsWithRss = shows.filter((s) => s.rssUrl);
+  if (showsWithRss.length === 0) return null;
+
+  const settled = await Promise.allSettled(
+    showsWithRss.map(async (show) => {
+      const episodes = await fetchEpisodes(show.rssUrl!);
+      if (episodes.length === 0) return null;
+      // Castos feeds are newest-first in feed order
+      return {
+        episode: episodes[0],
+        showId: show.id,
+        showTitle: show.title,
+        showSubtitle: show.subtitle,
+      } satisfies EpisodeWithShow;
+    })
+  );
+
+  const candidates: EpisodeWithShow[] = [];
+  for (const r of settled) {
+    if (r.status === 'fulfilled' && r.value !== null) {
+      candidates.push(r.value);
+    }
+  }
+
+  if (candidates.length === 0) return null;
+
+  return candidates.sort(
+    (a, b) =>
+      new Date(b.episode.pubDate).getTime() - new Date(a.episode.pubDate).getTime()
+  )[0];
+}
+
+/**
+ * Fetch the most recent episode individually for each show that has an RSS URL.
+ * Returns a record keyed by show id. Shows with no RSS or fetch failure map to null.
+ * Used on the homepage to display a "latest episode" row per show.
+ */
+export async function fetchLatestEpisodePerShow(
+  shows: Array<{ id: string; title: string; subtitle?: string; rssUrl?: string }>
+): Promise<Record<string, EpisodeWithShow | null>> {
+  const results: Record<string, EpisodeWithShow | null> = {};
+
+  await Promise.allSettled(
+    shows.map(async (show) => {
+      if (!show.rssUrl) {
+        results[show.id] = null;
+        return;
+      }
+      const episodes = await fetchEpisodes(show.rssUrl);
+      results[show.id] =
+        episodes.length === 0
+          ? null
+          : { episode: episodes[0], showId: show.id, showTitle: show.title, showSubtitle: show.subtitle };
+    })
+  );
+
+  return results;
+}
+
 /**
  * Fetch all episodes from a Castos RSS feed URL.
  * Slugs are deduplicated: if two episode titles are identical the second gets a

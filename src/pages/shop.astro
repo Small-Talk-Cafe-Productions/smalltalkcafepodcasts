@@ -16,6 +16,7 @@ import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
 import { siteConfig } from '@/config/site';
 import { fetchShopifyProducts, formatPrice } from '@/utils/shopify';
+import { generateProductListSchema } from '@/config/seo';
 
 const shopUrl = siteConfig.socialLinks.shopify;
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
@@ -27,9 +28,16 @@ const hasProducts = products.length > 0;
 const title = 'Merch Shop | Small Talk Café — Language Learning Gear';
 const description =
   'Deck out in Small Talk Café gear while you practice your German. Shop hoodies, mugs, tote bags and more. Perfect gifts for language learners and German culture lovers.';
+
+const productListSchema = hasProducts
+  ? generateProductListSchema(products, siteConfig.seo)
+  : null;
 ---
 
 <BaseLayout title={title} description={description}>
+  {productListSchema && (
+    <script is:inline slot="head-extras" type="application/ld+json" set:html={JSON.stringify(productListSchema)} />
+  )}
   <div class="min-h-screen flex flex-col bg-brand-background">
     <Header />
 
@@ -42,7 +50,7 @@ const description =
             Merch for German<br />Language Learners
           </h1>
           <p class="text-brand-secondary/70 leading-relaxed text-base md:text-lg mb-4">
-            Small Talk Café is the free German-learning podcast built on one idea: Deutsch should feel like
+            Small Talk Café is the German podcast built on one idea: Deutsch should feel like
             a conversation over coffee, not a grammar exam. Our merchandise carries that same spirit — every
             mug, t-shirt, and tote is a wearable reminder that German is approachable, fun, and yours to own.
           </p>
@@ -171,7 +179,7 @@ const description =
             New to Small Talk Café?
           </h2>
           <p class="text-brand-background/75 mb-6 text-sm md:text-base">
-            Start with our free German-learning podcasts — bite-sized episodes, new every week.
+            Practice speaking German with our podcast — bite-sized episodes, new every week.
           </p>
           <a
             href={`${base}/shows/`}

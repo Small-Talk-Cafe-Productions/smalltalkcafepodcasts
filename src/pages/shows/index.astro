@@ -12,14 +12,33 @@ import Footer from '@/components/Footer.astro';
 import ShowDisplay from '@/components/ShowDisplay.astro';
 import { siteConfig } from '@/config/site';
 
-const { shows } = siteConfig;
+const { shows, seo } = siteConfig;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 // SEO metadata
-const title = `All Shows | ${siteConfig.seo.title}`;
-const description = 'Browse all podcast shows from Small Talk Café. Listen with embedded players or visit your favorite podcast platform.';
+const title = 'German Podcast Shows | Small Talk Café — Practice Speaking';
+const description = 'Browse all Small Talk Café German podcast shows. Bite-sized episodes to build real speaking confidence — for English, Spanish, French & Italian speakers. On Spotify & Apple Podcasts.';
+
+// Structured data: CollectionPage with the 4 shows
+const collectionSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'Small Talk Café — All Podcast Shows',
+  description,
+  url: `${seo.siteUrl}/shows/`,
+  hasPart: shows.map((show) => ({
+    '@type': 'PodcastSeries',
+    name: show.subtitle ? `${show.title}: ${show.subtitle}` : show.title,
+    description: show.description,
+    url: `${seo.siteUrl}/shows/${show.id}/`,
+  })),
+};
 ---
 
 <BaseLayout title={title} description={description}>
+  <Fragment slot="head-extras">
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(collectionSchema)} />
+  </Fragment>
   <div class="min-h-screen flex flex-col">
     <Header />
     
@@ -28,10 +47,11 @@ const description = 'Browse all podcast shows from Small Talk Café. Listen with
       <section class="py-12 bg-brand-background">
         <div class="container-custom text-center">
           <h1 class="text-4xl md:text-5xl font-bold text-brand-secondary mb-4">
-            All Shows
+            German Podcast Shows — Practice Speaking
           </h1>
           <p class="text-lg text-brand-secondary/80 max-w-2xl mx-auto">
-            Explore our collection of podcast shows. <br> Listen wherever you get your podcasts.
+            Bite-sized episodes designed to build real German speaking confidence.
+            <br> Available for English, Spanish, French &amp; Italian speakers.
           </p>
         </div>
       </section>
@@ -63,7 +83,28 @@ const description = 'Browse all podcast shows from Small Talk Café. Listen with
         </div>
       </section>
     </main>
-    
+
+      <!-- Shop Cross-link -->
+      <section class="py-10 bg-brand-secondary" aria-labelledby="shop-xlink-heading">
+        <div class="container-custom max-w-3xl mx-auto px-4 text-center">
+          <h2 id="shop-xlink-heading" class="text-xl md:text-2xl font-bold text-brand-background mb-3">
+            Love Small Talk Café? Wear It.
+          </h2>
+          <p class="text-brand-background/75 mb-6 text-sm md:text-base">
+            Browse our German-learner merch — mugs, tees, tote bags, and more.
+          </p>
+          <a
+            href={`${base}/shop/`}
+            class="inline-flex items-center gap-2 bg-brand-background text-brand-secondary font-heading font-bold px-6 py-3 rounded-full hover:opacity-90 transition-opacity text-sm"
+          >
+            Visit the Shop
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+            </svg>
+          </a>
+        </div>
+      </section>
+
     <Footer />
   </div>
 </BaseLayout>
