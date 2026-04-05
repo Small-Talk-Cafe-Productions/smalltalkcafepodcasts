@@ -1,36 +1,19 @@
 /**
  * Shopify Product Fetcher
  *
- * Pulls live product data from the public Shopify AJAX Products API at build
- * time. No API key or authentication is required — this endpoint is available
- * on all public Shopify storefronts.
+ * Reads pre-fetched product data from src/data/products.json — a static file
+ * committed to the repository. This avoids Cloudflare bot-protection blocking
+ * the live Shopify API from GitHub Actions CI environments.
  *
- * Endpoint:  GET https://smalltalkcafe.shop/products.json?limit=250
- * Docs:      https://shopify.dev/docs/api/ajax/reference/product
- *
- * Called during `astro build` (and during the weekly GitHub Actions cron job),
- * so the shop page always reflects the latest Shopify catalogue without any
- * manual maintenance.
+ * To refresh product data, run locally:
+ *   node scripts/fetch-products.mjs
+ * Then commit the updated src/data/products.json.
  */
 
 export const SHOP_DOMAIN = 'https://smalltalkcafe.shop';
 
-/**
- * Known product handles — used as a reliable fallback when Cloudflare bot
- * protection blocks the homepage/sitemap scrape in CI environments (e.g.
- * GitHub Actions). Dynamic discovery still runs and appends any new handles
- * not in this list. Update this list whenever you add a new product.
- */
-const KNOWN_PRODUCT_HANDLES: string[] = [
-  'small-talk-cafe-bier-essentials-mug-german-learner-expat-coffee-cup',
-  'copy-of-small-talk-cafe-weiss-bier-essentials-mug-german-learner-expat-coffee-cup',
-  'copy-of-copy-of-small-talk-cafe-wild-bier-essentials-mug-german-learner-expat-coffee-cup',
-  '11oz-ceramic-mug-white-with-color-inside-brezel-german-essentials',
-  'copy-of-small-talk-cafe-t-shirt-bier-essentials-german-language-culture-apparel',
-  'small-talk-cafe-t-shirt-weiss-bier-essentials-german-language-culture-apparel',
-  'small-talk-cafe-t-shirt-wild-bier-essentials-german-language-culture-apparel',
-  'heavyweight-unisex-crewneck-t-shirt-gildan®-5000-white-brezel-german-essentials',
-];
+import cachedProducts from '../data/products.json';
+
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -118,18 +101,24 @@ export function formatPrice(price: string): string {
 
 // ─── Fetcher ──────────────────────────────────────────────────────────────────
 
+// ─── Fetcher ──────────────────────────────────────────────────────────────────
+
 /**
- * Discover product handles for the full catalogue in display order.
- *
- * Strategy: always run BOTH sources and merge:
- *  1. Homepage scrape — gives merchant-defined display order but may only
- *     surface a small featured collection (e.g. 2 of 10 products).
- *  2. Sitemap — always contains the complete catalogue, order is arbitrary.
- *
- * Result: homepage-ordered handles come first, then any additional handles
- * found in the sitemap are appended so the full catalogue is always built.
+ * Returns pre-fetched Shopify product data from src/data/products.json.
+ * To update, run: node scripts/fetch-products.mjs
  */
-async function discoverProductHandles(): Promise<string[]> {
+export async function fetchShopifyProducts(): Promise<ShopifyProduct[]> {
+  console.log(`[shopify] Loaded ${cachedProducts.length} product(s) from static cache.`);
+  return cachedProducts as unknown as ShopifyProduct[];
+}
+
+// To refresh product data, run locally:
+//   node scripts/fetch-products.mjs
+// Then commit the updated src/data/products.json.
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+async function _discoverProductHandles(): Promise<string[]> {
+  const KNOWN_PRODUCT_HANDLES: string[] = [];
   const ua = 'Mozilla/5.0 (compatible; smalltalkcafe.de-astro-build/1.0)';
 
   // ── Step 1: Homepage scrape (merchant sort order for featured products) ────
@@ -193,23 +182,12 @@ async function discoverProductHandles(): Promise<string[]> {
   return merged;
 }
 
-/**
- * Fetch all products from the Shopify storefront at build time.
- *
- * Strategy: discover product handles via the Shopify-generated sitemap XML,
- * then fetch each product's `/products/{handle}.json` endpoint in parallel.
- * This works reliably even when the catalogue-level `/products.json` returns
- * 404 (which can happen on certain Shopify plan configurations).
- *
- * On any network or parse error it logs a warning and returns [] so that
- * the build never fails — the shop page will gracefully show a "visit the
- * store" fallback instead.
- */
-export async function fetchShopifyProducts(): Promise<ShopifyProduct[]> {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+async function _fetchShopifyProductsFromNetwork(): Promise<ShopifyProduct[]> {
   const ua = 'Mozilla/5.0 (compatible; smalltalkcafe.de-astro-build/1.0)';
 
   try {
-    const handles = await discoverProductHandles();
+    const handles = await _discoverProductHandles();
     if (handles.length === 0) {
       console.warn('[shopify] No product handles found — shop page will show fallback.');
       return [];
