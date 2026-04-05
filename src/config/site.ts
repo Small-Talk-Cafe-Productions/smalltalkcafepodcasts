@@ -50,7 +50,7 @@ export const siteConfig: SiteConfig = {
       // Verify this RSS URL in your Castos dashboard under Podcast Settings → Distribution
       rssUrl: 'https://small-talk-cafe-learn-german-in-minutes.castos.com/feed',
       platform: 'apple',
-      spotifyUrl: 'https://www.youtube.com/redirect?event=channel_description&redir_token=QUFFLUhqbjBoWTZ6cUpQNkJ0cEVVX21sc0VRaVFHME5uZ3xBQ3Jtc0tuWFpDcjF4YjJVcTVzaEZnUjdGV2hBSktmdTdLQ3Z2ZDJBY1Eya2dOQkVCbDQwVWRXdE1VVmwwWWt2Ni1sR21oVU1kbXZlVmoyMWZqV2RlNzJLSE0xc3hFclFFdWJrNWdZWmlYNmppUHJwaDFYU2dtRQ&q=https%3A%2F%2Fopen.spotify.com%2Fshow%2F3FHzjg8sMkL77DdpEkx6uq%3Fsi%3D4rFxu4I4QfaegZfSM45clA',
+      spotifyUrl: 'https://open.spotify.com/show/3FHzjg8sMkL77DdpEkx6uq',
       applePodcastsUrl: 'https://podcasts.apple.com/us/podcast/small-talk-café-learn-german-in-minutes/id1817982495',
       applePodcastsId: '1817982495',
       language: 'en',
@@ -68,7 +68,7 @@ export const siteConfig: SiteConfig = {
       // Verify this RSS URL in your Castos dashboard under Podcast Settings → Distribution
       rssUrl: 'https://small-talk-cafe-aprende-aleman-en-minutos.castos.com/feed',
       platform: 'apple',
-      spotifyUrl: 'https://www.youtube.com/redirect?event=channel_description&redir_token=QUFFLUhqbU8zSmFEaVA2MHlTWlFwWHBEUHBCYXpCMC1EQXxBQ3Jtc0tsdzBxZl9MSFcxVklyZW5sMEhuUzBkaVhLaVpSeExIZnRsbUE1dDZqMDItMlgyRFR5VlhfdDlQV1dMYm52NmM5dTRiNmtvNFhRQ19ROGJxeFoyTGdQRzhMTXJDRmE2SlRuNy05Z0tndXRCaWxzaUdYdw&q=https%3A%2F%2Fopen.spotify.com%2Fshow%2F2B0W15PEDW2iDMFMwTnCpP%3Fsi%3DQ4jKxxV_RK2VDlnBltnB5g',
+      spotifyUrl: 'https://open.spotify.com/show/2B0W15PEDW2iDMFMwTnCpP',
       applePodcastsUrl: 'https://podcasts.apple.com/us/podcast/small-talk-café-aprende-alemán-en-minutos/id1858063577',
       applePodcastsId: '1858063577',
       language: 'es',
@@ -138,7 +138,7 @@ export const siteConfig: SiteConfig = {
   
   seo: {
     title: 'Small Talk Café | Speak German with Confidence — Bite-Sized Podcast',
-    description: 'Build real German speaking confidence with Small Talk Café — bite-sized podcast episodes for English, Spanish, French & Italian speakers. Real conversations, new episodes every week.',
+    description: 'Build real German speaking confidence with Small Talk Café — bite-sized podcast episodes for English, Spanish, French, Italian & Turkish speakers. Real conversations, new episodes every week.',
     keywords: [
       'learn German podcast',
       'German language learning',
@@ -154,6 +154,8 @@ export const siteConfig: SiteConfig = {
       'learn German from Spanish',
       'learn German from French',
       'learn German from Italian',
+      'learn German from Turkish',
+      'Almanca öğren podcast',
       'daily German practice',
       'German vocabulary podcast',
       'speak German confidently',
