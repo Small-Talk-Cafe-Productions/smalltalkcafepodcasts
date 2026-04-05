@@ -71,10 +71,30 @@ const hasSeasons = seasons.length > 1 || (seasons.length === 1 && seasons[0].key
 
 const title = `${show.title}: ${show.subtitle} | ${siteConfig.brand.name}`;
 const description = show.description;
-const showSchema = generatePodcastSchema(show, siteConfig.seo);
+const showSchema = generatePodcastSchema(show, siteConfig.seo, { numberOfEpisodes: episodes.length });
+// Show artwork as the OG/social share image for this show page
+const showOgImage = show.artworkUrl.startsWith('http')
+  ? show.artworkUrl
+  : `${siteConfig.seo.siteUrl}/${show.artworkUrl.replace(/^\//, '')}`;
+
+// hreflang: self-reference + x-default pointing to homepage
+const hreflangLinks = [
+  { lang: show.language || 'en', href: `${siteConfig.seo.siteUrl}/shows/${show.id}/` },
+  { lang: 'x-default', href: `${siteConfig.seo.siteUrl}/` },
+];
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout
+  title={title}
+  description={description}
+  ogImage={showOgImage}
+  lang={show.language}
+  locale={show.locale}
+  hreflangLinks={hreflangLinks}
+  rssFeedUrl={show.rssUrl}
+  applePodcastsId={show.applePodcastsId}
+  applePodcastsUrl={show.applePodcastsUrl}
+>
   <script is:inline slot="head-extras" type="application/ld+json" set:html={JSON.stringify(showSchema)} />
   <div class="min-h-screen flex flex-col bg-brand-background">
     <Header />
@@ -96,14 +116,9 @@ const showSchema = generatePodcastSchema(show, siteConfig.seo);
 
         <!-- Show Title and Description -->
         <div class="mb-8">
-          <h1 class="text-3xl md:text-4xl font-normal text-brand-secondary mb-2">
-            {show.title}
+          <h1 class="text-3xl md:text-4xl font-bold text-brand-secondary mb-4 leading-tight">
+            {show.subtitle ? `${show.title}: ${show.subtitle}` : show.title}
           </h1>
-          {show.subtitle && (
-            <h2 class="text-3xl md:text-4xl font-normal text-brand-secondary mb-4">
-              {show.subtitle}
-            </h2>
-          )}
           <p class="text-lg text-brand-secondary/70 leading-relaxed">
             {show.description}
           </p>

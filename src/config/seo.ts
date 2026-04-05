@@ -21,9 +21,10 @@ function toAbsoluteUrl(path: string, siteUrl: string): string {
 
 export function generatePodcastSchema(
   show: ShowConfig,
-  seo: SEOConfig
+  seo: SEOConfig,
+  options?: { numberOfEpisodes?: number }
 ) {
-  return {
+  const schema: Record<string, unknown> = {
     '@context': 'https://schema.org',
     '@type': 'PodcastSeries',
     name: show.subtitle ? `${show.title}: ${show.subtitle}` : show.title,
@@ -31,6 +32,15 @@ export function generatePodcastSchema(
     image: toAbsoluteUrl(show.artworkUrl, seo.siteUrl),
     url: `${seo.siteUrl}/shows/${show.id}/`,
   };
+  // RSS feed URL — lets Google discover and index individual episodes
+  if (show.rssUrl) schema.webFeed = show.rssUrl;
+  // Language the show is presented in (BCP 47)
+  if (show.language) schema.inLanguage = show.language;
+  // Launch date — appears in Google knowledge panels
+  if (show.releaseDate) schema.startDate = show.releaseDate;
+  // Episode count — a strong relevance signal for podcast-specific search
+  if (options?.numberOfEpisodes !== undefined) schema.numberOfEpisodes = options.numberOfEpisodes;
+  return schema;
 }
 
 /**

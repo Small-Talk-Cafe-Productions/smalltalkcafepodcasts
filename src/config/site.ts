@@ -51,6 +51,9 @@ export const siteConfig: SiteConfig = {
       platform: 'apple',
       spotifyUrl: 'https://www.youtube.com/redirect?event=channel_description&redir_token=QUFFLUhqbjBoWTZ6cUpQNkJ0cEVVX21sc0VRaVFHME5uZ3xBQ3Jtc0tuWFpDcjF4YjJVcTVzaEZnUjdGV2hBSktmdTdLQ3Z2ZDJBY1Eya2dOQkVCbDQwVWRXdE1VVmwwWWt2Ni1sR21oVU1kbXZlVmoyMWZqV2RlNzJLSE0xc3hFclFFdWJrNWdZWmlYNmppUHJwaDFYU2dtRQ&q=https%3A%2F%2Fopen.spotify.com%2Fshow%2F3FHzjg8sMkL77DdpEkx6uq%3Fsi%3D4rFxu4I4QfaegZfSM45clA',
       applePodcastsUrl: 'https://podcasts.apple.com/us/podcast/small-talk-café-learn-german-in-minutes/id1817982495',
+      applePodcastsId: '1817982495',
+      language: 'en',
+      locale: 'en_US',
       releaseDate: '2026-02-08',
     },
     {
@@ -65,6 +68,9 @@ export const siteConfig: SiteConfig = {
       platform: 'apple',
       spotifyUrl: 'https://www.youtube.com/redirect?event=channel_description&redir_token=QUFFLUhqbU8zSmFEaVA2MHlTWlFwWHBEUHBCYXpCMC1EQXxBQ3Jtc0tsdzBxZl9MSFcxVklyZW5sMEhuUzBkaVhLaVpSeExIZnRsbUE1dDZqMDItMlgyRFR5VlhfdDlQV1dMYm52NmM5dTRiNmtvNFhRQ19ROGJxeFoyTGdQRzhMTXJDRmE2SlRuNy05Z0tndXRCaWxzaUdYdw&q=https%3A%2F%2Fopen.spotify.com%2Fshow%2F2B0W15PEDW2iDMFMwTnCpP%3Fsi%3DQ4jKxxV_RK2VDlnBltnB5g',
       applePodcastsUrl: 'https://podcasts.apple.com/us/podcast/small-talk-café-aprende-alemán-en-minutos/id1858063577',
+      applePodcastsId: '1858063577',
+      language: 'es',
+      locale: 'es_ES',
       releaseDate: '2026-02-08',
     },
     {
@@ -79,6 +85,9 @@ export const siteConfig: SiteConfig = {
       platform: 'apple',
       spotifyUrl: 'https://open.spotify.com/show/114LIYwyc0gk4wtzd2Ae2b',
       applePodcastsUrl: 'https://podcasts.apple.com/us/podcast/small-talk-caf%C3%A9-apprenez-lallemand-en-minutes/id1883812147',
+      applePodcastsId: '1883812147',
+      language: 'fr',
+      locale: 'fr_FR',
       releaseDate: '2026-03-07',
     },
     {
@@ -93,6 +102,9 @@ export const siteConfig: SiteConfig = {
       platform: 'apple',
       spotifyUrl: 'https://open.spotify.com/show/3LG1xNwsLcBhcLRASRyyhz',
       applePodcastsUrl: 'https://podcasts.apple.com/us/podcast/small-talk-caf%C3%A9-impara-il-tedesco-in-minuti/id1883818414',
+      applePodcastsId: '1883818414',
+      language: 'it',
+      locale: 'it_IT',
       releaseDate: '2026-03-07',
     },
   ],
@@ -131,7 +143,7 @@ export const siteConfig: SiteConfig = {
     // Google Analytics 4 — replace with your real Measurement ID from:
     // analytics.google.com → Admin → Data Streams → Web → Measurement ID
     // Format: 'G-XXXXXXXXXX'
-    // googleAnalyticsId: 'G-XXXXXXXXXX',
+    googleAnalyticsId: 'G-82VS48MBBM',
     //
     // Google Search Console HTML-tag verification — paste only the `content` value:
     // searchconsole.google.com → Add property → HTML tag → copy content="..."

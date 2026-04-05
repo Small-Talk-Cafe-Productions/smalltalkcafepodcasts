@@ -67,9 +67,25 @@ const breadcrumbSchema = generateBreadcrumbSchema([
   { name: showName, url: `${seo.siteUrl}/shows/${id}/` },
   { name: episode.title, url: canonicalUrl },
 ]);
+// hreflang: self-reference for episode + x-default pointing to homepage
+const hreflangLinks = [
+  { lang: show.language || 'en', href: canonicalUrl },
+  { lang: 'x-default', href: `${seo.siteUrl}/` },
+];
 ---
 
-<BaseLayout title={pageTitle} description={metaDescription} canonicalUrl={canonicalUrl}>
+<BaseLayout
+  title={pageTitle}
+  description={metaDescription}
+  canonicalUrl={canonicalUrl}
+  ogType="article"
+  ogImage={episode.artworkUrl || undefined}
+  lang={show.language}
+  locale={show.locale}
+  hreflangLinks={hreflangLinks}
+  applePodcastsId={show.applePodcastsId}
+  applePodcastsUrl={show.applePodcastsUrl}
+>
   <!-- Episode JSON-LD schemas injected into <head> via named slot -->
   <script is:inline type="application/ld+json" set:html={JSON.stringify(episodeSchema)} slot="head-extras" />
   <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} slot="head-extras" />

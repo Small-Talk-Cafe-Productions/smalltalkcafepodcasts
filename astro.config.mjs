@@ -13,7 +13,29 @@ export default defineConfig({
   trailingSlash: 'always',
   integrations: [
     tailwind(),
-    sitemap(),
+    sitemap({
+      // Hint to Google how often to re-crawl and the relative importance of each page.
+      // lastmod signals whether content has changed since the last crawl.
+      serialize(item) {
+        item.changefreq = 'weekly';
+        item.lastmod = new Date().toISOString();
+        const url = item.url;
+        if (url === 'https://smalltalkcafe.de/') {
+          item.priority = 1.0;
+        } else if (/\/shows\/[^/]+\/$/.test(url)) {
+          // Individual show pages (e.g. /shows/english-german/)
+          item.priority = 0.9;
+        } else if (url === 'https://smalltalkcafe.de/shows/') {
+          item.priority = 0.85;
+        } else if (/\/shows\/[^/]+\/[^/]+\//.test(url)) {
+          // Episode pages — numerous but still valuable long-tail
+          item.priority = 0.7;
+        } else {
+          item.priority = 0.6;
+        }
+        return item;
+      },
+    }),
   ],
   output: 'static',
   build: {

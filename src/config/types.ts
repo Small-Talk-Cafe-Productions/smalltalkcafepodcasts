@@ -130,7 +130,18 @@ export interface ShowConfig {
   
   /** Direct link to the show on Apple Podcasts (not embed URL) */
   applePodcastsUrl: string;
+
+  /** Apple Podcasts numeric show ID, e.g. '1817982495' (from the URL /id1817982495)
+   *  Used for the iOS smart-banner meta tag so mobile visitors can open the app directly. */
+  applePodcastsId?: string;
   
+  /** BCP 47 language code of the source (teaching) language, e.g. 'en', 'es', 'fr', 'it'.
+   *  Used for <html lang>, og:locale, and hreflang — critical for international SEO. */
+  language?: string;
+
+  /** IETF locale string for og:locale, e.g. 'en_US', 'es_ES', 'fr_FR', 'it_IT'. */
+  locale?: string;
+
   /** Show release date (ISO 8601 format: YYYY-MM-DD) */
   releaseDate?: string;
 }

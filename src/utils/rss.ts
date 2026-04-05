@@ -166,8 +166,10 @@ export async function fetchEpisodes(rssUrl: string): Promise<RssEpisode[]> {
           ? rawImage
           : (rawImage as { href?: string } | undefined)?.href ?? undefined;
 
-      const description =
-        (item.contentSnippet?.slice(0, 200) || item.itunes?.subtitle || '').trim();
+      const raw = (item.contentSnippet || item.itunes?.subtitle || '').trim();
+      const description = raw.length > 200
+        ? raw.slice(0, raw.lastIndexOf(' ', 197)).trimEnd() + '…'
+        : raw;
 
       return {
         slug: slugify(title),

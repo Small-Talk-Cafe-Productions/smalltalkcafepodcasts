@@ -13,15 +13,38 @@ import { generateOGTags, generateTwitterTags } from '@/config/seo';
 interface Props {
   title?: string;
   description?: string;
-  /**
-   * Canonical URL for this page. Defaults to the current page's full URL.
-   * Pass an explicit value from pages that know their canonical ahead of time
-   * (e.g. individual episode pages using the production domain).
-   */
   canonicalUrl?: string;
+  /** Override og:type — defaults to 'website'. Use 'article' for episode pages. */
+  ogType?: string;
+  /** Override the OG/Twitter share image — defaults to the global OG image. */
+  ogImage?: string;
+  /** BCP 47 language code for <html lang>. Defaults to 'en'. */
+  lang?: string;
+  /** IETF locale for og:locale, e.g. 'en_US', 'es_ES'. Defaults to 'en_US'. */
+  locale?: string;
+  /** hreflang link tags to inject: [ { lang, href } ] */
+  hreflangLinks?: Array<{ lang: string; href: string }>;
+  /** RSS feed URL — adds <link rel="alternate" type="application/rss+xml"> */
+  rssFeedUrl?: string;
+  /** Apple Podcasts numeric show ID for iOS smart-banner meta tag */
+  applePodcastsId?: string;
+  /** Apple Podcasts full show URL for smart-banner deep-link */
+  applePodcastsUrl?: string;
 }
 
-const { title, description, canonicalUrl } = Astro.props;
+const {
+  title,
+  description,
+  canonicalUrl,
+  ogType = 'website',
+  ogImage,
+  lang = 'en',
+  locale = 'en_US',
+  hreflangLinks,
+  rssFeedUrl,
+  applePodcastsId,
+  applePodcastsUrl,
+} = Astro.props;
 const { seo } = siteConfig;
 
 // Use the passed canonical if provided, otherwise fall back to the real current URL
@@ -29,6 +52,7 @@ const pageCanonical = canonicalUrl ?? new URL(Astro.url.pathname, seo.siteUrl).t
 
 const pageTitle = title || seo.title;
 const pageDescription = description || seo.description;
+const pageOgImage = ogImage || seo.ogImage;
 
 // Generate Open Graph and Twitter tags using the page-specific title/description
 // (not the featured show's data, which would contaminate non-homepage pages)
@@ -37,12 +61,14 @@ const twitterTags = generateTwitterTags(seo);
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/images/podcasts.svg" />
     <meta name="generator" content={Astro.generator} />
+    <!-- Brand colour for Chrome/Edge Android address bar -->
+    <meta name="theme-color" content="#F5F1E8" />
 
     <!-- Primary Meta Tags -->
     <title>{pageTitle}</title>
@@ -51,11 +77,13 @@ const twitterTags = generateTwitterTags(seo);
     <meta name="keywords" content={seo.keywords.join(', ')} />
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:type" content={ogTags['og:type']} />
+    <meta property="og:type" content={ogType} />
     <meta property="og:url" content={pageCanonical} />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={pageDescription} />
-    <meta property="og:image" content={ogTags['og:image']} />
+    <meta property="og:image" content={pageOgImage} />
+    <meta property="og:image:alt" content={pageTitle} />
+    <meta property="og:locale" content={locale} />
     <meta property="og:site_name" content={ogTags['og:site_name']} />
 
     <!-- Twitter -->
@@ -63,13 +91,28 @@ const twitterTags = generateTwitterTags(seo);
     <meta property="twitter:url" content={pageCanonical} />
     <meta property="twitter:title" content={pageTitle} />
     <meta property="twitter:description" content={pageDescription} />
-    <meta property="twitter:image" content={twitterTags['twitter:image']} />
+    <meta property="twitter:image" content={pageOgImage} />
+    <meta property="twitter:image:alt" content={pageTitle} />
     {twitterTags['twitter:site'] && (
       <meta property="twitter:site" content={twitterTags['twitter:site']} />
     )}
-
     <!-- Canonical Link (unique per page — critical for Google deduplication) -->
     <link rel="canonical" href={pageCanonical} />
+
+    <!-- hreflang: declare language targeting to Google (international SEO) -->
+    {hreflangLinks && hreflangLinks.map(({ lang: l, href }) => (
+      <link rel="alternate" hreflang={l} href={href} />
+    ))}
+
+    <!-- RSS feed discovery (podcast clients + Google) -->
+    {rssFeedUrl && (
+      <link rel="alternate" type="application/rss+xml" title={pageTitle} href={rssFeedUrl} />
+    )}
+
+    <!-- Apple Podcasts iOS smart-banner: lets mobile visitors open the Podcasts app directly -->
+    {applePodcastsId && applePodcastsUrl && (
+      <meta name="apple-itunes-app" content={`app-id=525463029, app-argument=${applePodcastsUrl}`} />
+    )}
 
     <!-- Per-page head extras (additional schema, overrides, etc.) -->
     <slot name="head-extras" />
