@@ -103,6 +103,10 @@ export interface ShowConfig {
   
   /** Show subtitle (optional second line) */
   subtitle?: string;
+
+  /** Short language-targeted heading shown on the homepage show row, e.g.
+   *  "Learn German for English Speakers". Falls back to subtitle then title. */
+  heading?: string;
   
   /** Show description/summary (100-200 characters recommended) */
   description: string;

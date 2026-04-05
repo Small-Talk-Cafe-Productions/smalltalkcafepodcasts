@@ -29,14 +29,6 @@ const orgSchema = generateOrganizationSchema(seo, socialLinks);
 const siteSchema = generateWebSiteSchema(seo);
 const showSchemas = shows.map((s) => generatePodcastSchema(s, seo));
 
-// Language-specific targeted headings for each show
-const showHeadings: Record<string, string> = {
-  'english-german': 'Learn German for English Speakers',
-  'spanish-german': 'Aprender alemán para hispanohablantes',
-  'french-german': 'Apprendre l\'allemand pour les francophones',
-  'italian-german': 'Imparare il tedesco per italofoni',
-};
-
 const pageTitle = 'Small Talk Café | Speak German with Confidence — Bite-Sized Podcast';
 const pageDescription =
   'Build real German speaking confidence with Small Talk Café — bite-sized podcast episodes for English, Spanish, French & Italian speakers. New episodes every week on Spotify & Apple.';
@@ -124,7 +116,7 @@ const pageDescription =
                     </a>
                     <div class="show-row-meta">
                       <h3 class="show-row-heading">
-                        {showHeadings[show.id] ?? show.subtitle ?? show.title}
+                        {show.heading ?? show.subtitle ?? show.title}
                       </h3>
                       <p class="show-row-desc">{show.description}</p>
                       <a href={`${base}/shows/${show.id}/`} class="show-row-cta">
