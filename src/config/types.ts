@@ -113,8 +113,11 @@ export interface ShowConfig {
   /** Castos playlist player URL (primary embed player) */
   castosPlaylistUrl?: string;
 
-  /** Castos show notes website URL (links to the public show page on Castos) */
-  showNotesUrl?: string;
+  /** Castos show website URL (links to the public show page on Castos) */
+  showWebsiteUrl?: string;
+
+  /** Castos RSS feed URL — used at build time to generate individual episode pages */
+  rssUrl?: string;
   
   /** Embedded player URL (Spotify or Apple Podcasts embed) - fallback if Castos not provided */
   embedUrl?: string;
@@ -171,6 +174,21 @@ export interface SEOConfig {
   
   /** Twitter handle (optional, without @ symbol) */
   twitterHandle?: string;
+
+  /**
+   * Google Analytics 4 Measurement ID (optional).
+   * Format: "G-XXXXXXXXXX" — get this from your GA4 property settings.
+   * When set, adds the GA4 global site tag to every page.
+   */
+  googleAnalyticsId?: string;
+
+  /**
+   * Google Search Console HTML tag verification code (optional).
+   * Copy only the `content` value from the HTML tag method, e.g.
+   * if GSC gives you <meta name="google-site-verification" content="abc123" />
+   * then set this to "abc123".
+   */
+  googleSearchConsoleVerification?: string;
 }
 
 /**

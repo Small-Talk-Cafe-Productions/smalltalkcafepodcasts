@@ -1,0 +1,265 @@
+---
+/**
+ * Individual Episode Page (Dynamic Route)
+ *
+ * One SEO-optimized page per podcast episode, generated at build time from
+ * each show's Castos RSS feed. Renders full show website content, an HTML5 audio player,
+ * breadcrumb navigation, and a Related Merch CTA.
+ *
+ * Schema.org PodcastEpisode + BreadcrumbList JSON-LD is injected for Google
+ * rich-result eligibility.
+ *
+ * Route: /shows/[id]/[slug]
+ */
+
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+import RelatedMerch from '@/components/RelatedMerch.astro';
+import { siteConfig } from '@/config/site';
+import { fetchEpisodes, type RssEpisode } from '@/utils/rss';
+import { generateEpisodeSchema, generateBreadcrumbSchema, formatDate } from '@/config/seo';
+
+export async function getStaticPaths() {
+  const allPaths: Array<{
+    params: { id: string; slug: string };
+    props: { episode: RssEpisode; showId: string };
+  }> = [];
+
+  for (const show of siteConfig.shows) {
+    if (!show.rssUrl) continue;
+    const episodes = await fetchEpisodes(show.rssUrl);
+    for (const episode of episodes) {
+      allPaths.push({
+        params: { id: show.id, slug: episode.slug },
+        props: { episode, showId: show.id },
+      });
+    }
+  }
+  return allPaths;
+}
+
+const { id, slug } = Astro.params;
+const { episode, showId } = Astro.props as { episode: RssEpisode; showId: string };
+
+const show = siteConfig.shows.find((s) => s.id === showId)!;
+const { seo } = siteConfig;
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+// Trailing slash required: sitemap generates /shows/{id}/{slug}/ and GitHub Pages
+// 301-redirects the slash-less URL. Canonical must match to avoid GSC "Page with redirect".
+const canonicalUrl = `${seo.siteUrl}/shows/${id}/${slug}/`;
+const showName = show.subtitle ? `${show.title}: ${show.subtitle}` : show.title;
+
+// Truncate description for meta tag (≤ 160 chars)
+const metaDescription =
+  episode.description.length > 160
+    ? episode.description.slice(0, 157) + '…'
+    : episode.description || `${episode.title} — ${showName}`;
+
+const pageTitle = `${episode.title} | ${showName}`;
+
+// Schema.org structured data
+const episodeSchema = generateEpisodeSchema(episode, show, seo, canonicalUrl);
+const breadcrumbSchema = generateBreadcrumbSchema([
+  { name: 'Home', url: `${seo.siteUrl}/` },
+  { name: 'Shows', url: `${seo.siteUrl}/shows/` },
+  { name: showName, url: `${seo.siteUrl}/shows/${id}/` },
+  { name: episode.title, url: canonicalUrl },
+]);
+---
+
+<BaseLayout title={pageTitle} description={metaDescription} canonicalUrl={canonicalUrl}>
+  <!-- Episode JSON-LD schemas injected into <head> via named slot -->
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(episodeSchema)} slot="head-extras" />
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} slot="head-extras" />
+
+  <div class="min-h-screen flex flex-col bg-brand-background">
+    <Header />
+
+    <main class="flex-grow py-8 md:py-12">
+      <div class="container-custom max-w-3xl mx-auto px-4">
+
+        <!-- Breadcrumb -->
+        <nav aria-label="Breadcrumb" class="mb-6 text-sm text-brand-secondary/50">
+          <ol class="flex flex-wrap items-center gap-1.5">
+            <li><a href={`${base}/`} class="hover:text-brand-secondary transition-colors">Home</a></li>
+            <li aria-hidden="true">/</li>
+            <li><a href={`${base}/shows/`} class="hover:text-brand-secondary transition-colors">Shows</a></li>
+            <li aria-hidden="true">/</li>
+            <li><a href={`${base}/shows/${id}/`} class="hover:text-brand-secondary transition-colors">{showName}</a></li>
+            <li aria-hidden="true">/</li>
+            <li class="text-brand-secondary/80 truncate max-w-[200px]" aria-current="page">{episode.title}</li>
+          </ol>
+        </nav>
+
+        <!-- Episode Header -->
+        <header class="mb-8">
+          <p class="text-sm font-semibold text-brand-accent uppercase tracking-widest mb-2">{showName}</p>
+          <h1 class="text-2xl md:text-4xl font-bold text-brand-secondary leading-tight mb-4">
+            {episode.title}
+          </h1>
+          <!-- Episode meta row -->
+          <div class="flex flex-wrap items-center gap-3 text-sm text-brand-secondary/55">
+            {episode.episodeNumber && (
+              <span class="bg-brand-secondary/8 px-2.5 py-0.5 rounded-full font-medium">
+                Episode {episode.episodeNumber}
+              </span>
+            )}
+            <time datetime={episode.pubDate}>{formatDate(episode.pubDate)}</time>
+            {episode.duration && (
+              <>
+                <span aria-hidden="true">·</span>
+                <span>{episode.duration}</span>
+              </>
+            )}
+          </div>
+        </header>
+
+        <!-- Audio Player -->
+        {episode.audioUrl && (
+          <div class="audio-player-wrap mb-8">
+            <audio
+              controls
+              preload="metadata"
+              class="w-full"
+              aria-label={`Listen to ${episode.title}`}
+            >
+              <source src={episode.audioUrl} type={episode.audioType || 'audio/mpeg'} />
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+        )}
+
+        <!-- Episode Show Website -->
+        {episode.contentHtml ? (
+          <article class="episode-notes" set:html={episode.contentHtml} />
+        ) : episode.description ? (
+          <p class="text-brand-secondary/80 leading-relaxed text-base md:text-lg">
+            {episode.description}
+          </p>
+        ) : null}
+
+        <!-- Listen on Platforms -->
+        <div class="mt-10 pt-8 border-t border-brand-secondary/10 flex flex-wrap gap-3">
+          {show.spotifyUrl && (
+            <a
+              href={show.spotifyUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="platform-btn"
+            >
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
+              </svg>
+              Listen on Spotify
+            </a>
+          )}
+          {show.applePodcastsUrl && (
+            <a
+              href={show.applePodcastsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="platform-btn"
+            >
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 4.5c4.142 0 7.5 3.358 7.5 7.5 0 4.142-3.358 7.5-7.5 7.5S4.5 16.142 4.5 12c0-4.142 3.358-7.5 7.5-7.5zm0 1.5A6 6 0 006 12a6 6 0 006 6 6 6 0 006-6 6 6 0 00-6-6zm0 2.25A3.75 3.75 0 0115.75 12 3.75 3.75 0 0112 15.75 3.75 3.75 0 018.25 12 3.75 3.75 0 0112 8.25zm0 1.5A2.25 2.25 0 009.75 12 2.25 2.25 0 0012 14.25 2.25 2.25 0 0014.25 12 2.25 2.25 0 0012 9.75z"/>
+              </svg>
+              Listen on Apple Podcasts
+            </a>
+          )}
+          <a
+            href={`${base}/shows/${id}/`}
+            class="platform-btn platform-btn--ghost"
+          >
+            ← All Episodes
+          </a>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- Related Merch CTA -->
+    <RelatedMerch />
+
+    <Footer />
+  </div>
+</BaseLayout>
+
+<style>
+  /* Audio player wrapper */
+  .audio-player-wrap {
+    background: linear-gradient(135deg, #fdf8f3 0%, #f5f1e8 100%);
+    border-radius: 16px;
+    padding: 1.25rem;
+    box-shadow: 0 4px 12px rgba(82, 62, 38, 0.1);
+  }
+  .audio-player-wrap audio {
+    border-radius: 8px;
+    height: 44px;
+  }
+
+  /* Rendered HTML show website content */
+  .episode-notes {
+    color: #2d2019;
+    line-height: 1.75;
+    font-size: 1rem;
+  }
+  .episode-notes :global(h2),
+  .episode-notes :global(h3),
+  .episode-notes :global(h4) {
+    font-family: "Poppins", "Helvetica Neue", sans-serif;
+    font-weight: 700;
+    color: #523E26;
+    margin: 1.5em 0 0.5em;
+  }
+  .episode-notes :global(h2) { font-size: 1.35rem; }
+  .episode-notes :global(h3) { font-size: 1.15rem; }
+  .episode-notes :global(p) { margin: 0 0 1em; }
+  .episode-notes :global(ul),
+  .episode-notes :global(ol) {
+    padding-left: 1.5rem;
+    margin: 0 0 1em;
+  }
+  .episode-notes :global(li) { margin-bottom: 0.4em; }
+  .episode-notes :global(a) {
+    color: #F39C12;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .episode-notes :global(a:hover) { opacity: 0.75; }
+  .episode-notes :global(strong) { font-weight: 700; color: #523E26; }
+  .episode-notes :global(blockquote) {
+    border-left: 3px solid #F39C12;
+    margin: 1em 0;
+    padding: 0.5em 1em;
+    font-style: italic;
+    color: rgba(82, 62, 38, 0.7);
+  }
+  .episode-notes :global(hr) {
+    border: none;
+    border-top: 1px solid rgba(82, 62, 38, 0.15);
+    margin: 1.5em 0;
+  }
+
+  /* Platform buttons */
+  .platform-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1.1rem;
+    border-radius: 999px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    background: #523E26;
+    color: #F5F1E8;
+    text-decoration: none;
+    transition: opacity 0.15s;
+  }
+  .platform-btn:hover { opacity: 0.82; }
+  .platform-btn--ghost {
+    background: transparent;
+    border: 1.5px solid rgba(82, 62, 38, 0.25);
+    color: #523E26;
+  }
+</style>

@@ -1,0 +1,42 @@
+---
+/**
+ * RelatedMerch Component
+ *
+ * A warm, on-brand CTA strip displayed at the bottom of every episode page.
+ * Drives traffic from listeners directly to the Shopify store.
+ */
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<section class="merch-cta" aria-labelledby="merch-cta-heading">
+  <div class="container-custom max-w-3xl mx-auto px-4 py-10 flex flex-col sm:flex-row items-center justify-between gap-6">
+    <div class="text-center sm:text-left">
+      <p class="text-brand-accent font-semibold text-sm uppercase tracking-widest mb-1">Enjoying the podcast?</p>
+      <h2 id="merch-cta-heading" class="text-xl md:text-2xl font-bold text-brand-secondary">
+        Wear your love for German ☕
+      </h2>
+      <p class="text-brand-secondary/65 text-sm mt-1 max-w-xs">
+        Hoodies, mugs &amp; totes — gear up for your language learning journey.
+      </p>
+    </div>
+    <div class="flex gap-3 flex-shrink-0">
+      <a
+        href={`${base}/shop/`}
+        class="inline-flex items-center gap-2 bg-brand-accent text-white font-heading font-bold px-5 py-2.5 rounded-full hover:opacity-88 transition-opacity text-sm whitespace-nowrap"
+      >
+        Browse Merch
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .merch-cta {
+    background: linear-gradient(135deg, #fdf8f3 0%, #fef3e2 100%);
+    border-top: 1px solid rgba(243, 156, 18, 0.2);
+    border-bottom: 1px solid rgba(243, 156, 18, 0.1);
+  }
+</style>

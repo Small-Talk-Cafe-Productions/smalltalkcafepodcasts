@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://yourusername.github.io/smalltalkcafepodcasts/sitemap.xml
+# Auto-generated sitemap index (updated on every build via GitHub Actions)
+Sitemap: https://smalltalkcafe.de/sitemap-index.xml

@@ -13,10 +13,19 @@ import { generatePodcastSchema, generateOGTags, generateTwitterTags } from '@/co
 interface Props {
   title?: string;
   description?: string;
+  /**
+   * Canonical URL for this page. Defaults to the current page's full URL.
+   * Pass an explicit value from pages that know their canonical ahead of time
+   * (e.g. individual episode pages using the production domain).
+   */
+  canonicalUrl?: string;
 }
 
-const { title, description } = Astro.props;
+const { title, description, canonicalUrl } = Astro.props;
 const { seo, featuredShow, shows } = siteConfig;
+
+// Use the passed canonical if provided, otherwise fall back to the real current URL
+const pageCanonical = canonicalUrl ?? new URL(Astro.url.pathname, seo.siteUrl).toString();
 
 const pageTitle = title || seo.title;
 const pageDescription = description || seo.description;
@@ -46,7 +55,7 @@ const twitterTags = generateTwitterTags(seo, show);
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content={ogTags['og:type']} />
-    <meta property="og:url" content={ogTags['og:url']} />
+    <meta property="og:url" content={pageCanonical} />
     <meta property="og:title" content={ogTags['og:title']} />
     <meta property="og:description" content={ogTags['og:description']} />
     <meta property="og:image" content={ogTags['og:image']} />
@@ -54,7 +63,7 @@ const twitterTags = generateTwitterTags(seo, show);
 
     <!-- Twitter -->
     <meta property="twitter:card" content={twitterTags['twitter:card']} />
-    <meta property="twitter:url" content={seo.siteUrl} />
+    <meta property="twitter:url" content={pageCanonical} />
     <meta property="twitter:title" content={twitterTags['twitter:title']} />
     <meta property="twitter:description" content={twitterTags['twitter:description']} />
     <meta property="twitter:image" content={twitterTags['twitter:image']} />
@@ -62,11 +71,34 @@ const twitterTags = generateTwitterTags(seo, show);
       <meta property="twitter:site" content={twitterTags['twitter:site']} />
     )}
 
-    <!-- Canonical Link -->
-    <link rel="canonical" href={seo.siteUrl} />
+    <!-- Canonical Link (unique per page — critical for Google deduplication) -->
+    <link rel="canonical" href={pageCanonical} />
 
-    <!-- Schema.org Structured Data -->
-    <script is:inline type="application/ld+json" set:html={JSON.stringify(podcastSchema)} />
+    <!-- Schema.org Structured Data (site-level PodcastSeries) -->
+    {podcastSchema && (
+      <script is:inline type="application/ld+json" set:html={JSON.stringify(podcastSchema)} />
+    )}
+
+    <!-- Per-page head extras (additional schema, overrides, etc.) -->
+    <slot name="head-extras" />
+
+    <!-- Google Search Console ownership verification -->
+    {seo.googleSearchConsoleVerification && (
+      <meta name="google-site-verification" content={seo.googleSearchConsoleVerification} />
+    )}
+
+    <!-- Google Analytics 4 — only injected when googleAnalyticsId is set in site.ts -->
+    {seo.googleAnalyticsId && (
+      <>
+        <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${seo.googleAnalyticsId}`}></script>
+        <script is:inline define:vars={{ gaId: seo.googleAnalyticsId }}>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', gaId);
+        </script>
+      </>
+    )}
 
     <!-- Preconnect to external domains for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />

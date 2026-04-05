@@ -1,10 +1,11 @@
 /**
  * SEO Helper Utilities
- * 
+ *
  * Functions to generate SEO meta tags and structured data.
  */
 
 import type { SEOConfig, ShowConfig } from './types';
+import type { RssEpisode } from '@/utils/rss';
 
 /**
  * Generate Schema.org structured data for podcast show
@@ -73,4 +74,63 @@ export function formatDate(isoDate: string): string {
     month: 'long',
     day: 'numeric',
   });
+}
+
+/**
+ * Generate Schema.org PodcastEpisode structured data for individual episode pages.
+ * Injected as JSON-LD — picked up by Google for rich search results.
+ */
+export function generateEpisodeSchema(
+  episode: RssEpisode,
+  show: ShowConfig,
+  seo: SEOConfig,
+  episodeUrl: string,
+) {
+  const schema: Record<string, unknown> = {
+    '@context': 'https://schema.org',
+    '@type': 'PodcastEpisode',
+    url: episodeUrl,
+    name: episode.title,
+    description: episode.description,
+    datePublished: episode.pubDate,
+    partOfSeries: {
+      '@type': 'PodcastSeries',
+      name: show.subtitle ? `${show.title}: ${show.subtitle}` : show.title,
+      url: `${seo.siteUrl}/shows/${show.id}`,
+    },
+  };
+  if (episode.audioUrl) {
+    schema.associatedMedia = {
+      '@type': 'MediaObject',
+      contentUrl: episode.audioUrl,
+      encodingFormat: episode.audioType ?? 'audio/mpeg',
+    };
+  }
+  if (episode.duration) {
+    schema.timeRequired = episode.duration;
+  }
+  if (episode.episodeNumber) {
+    schema.episodeNumber = episode.episodeNumber;
+  }
+  if (episode.artworkUrl) {
+    schema.image = episode.artworkUrl;
+  }
+  return schema;
+}
+
+/**
+ * Generate Schema.org BreadcrumbList structured data.
+ * Crumbs appear in Google search result snippets.
+ */
+export function generateBreadcrumbSchema(crumbs: Array<{ name: string; url: string }>) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: crumbs.map((crumb, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: crumb.name,
+      item: crumb.url,
+    })),
+  };
 }
