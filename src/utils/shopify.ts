@@ -15,6 +15,23 @@
 
 export const SHOP_DOMAIN = 'https://smalltalkcafe.shop';
 
+/**
+ * Known product handles — used as a reliable fallback when Cloudflare bot
+ * protection blocks the homepage/sitemap scrape in CI environments (e.g.
+ * GitHub Actions). Dynamic discovery still runs and appends any new handles
+ * not in this list. Update this list whenever you add a new product.
+ */
+const KNOWN_PRODUCT_HANDLES: string[] = [
+  'small-talk-cafe-bier-essentials-mug-german-learner-expat-coffee-cup',
+  'copy-of-small-talk-cafe-weiss-bier-essentials-mug-german-learner-expat-coffee-cup',
+  'copy-of-copy-of-small-talk-cafe-wild-bier-essentials-mug-german-learner-expat-coffee-cup',
+  '11oz-ceramic-mug-white-with-color-inside-brezel-german-essentials',
+  'copy-of-small-talk-cafe-t-shirt-bier-essentials-german-language-culture-apparel',
+  'small-talk-cafe-t-shirt-weiss-bier-essentials-german-language-culture-apparel',
+  'small-talk-cafe-t-shirt-wild-bier-essentials-german-language-culture-apparel',
+  'heavyweight-unisex-crewneck-t-shirt-gildan®-5000-white-brezel-german-essentials',
+];
+
 // ─── Types ────────────────────────────────────────────────────────────────────
 
 export interface ShopifyImage {
@@ -154,23 +171,25 @@ async function discoverProductHandles(): Promise<string[]> {
     // continue with homepage handles only
   }
 
-  // ── Merge: homepage order first, then any extras from sitemap ─────────────
+  // ── Merge: homepage order first, then sitemap extras, then known fallbacks ──
   const homepageSet = new Set(homepageHandles);
   const extraFromSitemap = [...new Set(sitemapHandles)].filter((h) => !homepageSet.has(h));
-  const merged = [...homepageHandles, ...extraFromSitemap];
+  const discovered = [...homepageHandles, ...extraFromSitemap];
+  const discoveredSet = new Set(discovered);
+
+  // Always include all known handles (CI fallback for when scraping is blocked)
+  const extraFromKnown = KNOWN_PRODUCT_HANDLES.filter((h) => !discoveredSet.has(h));
+  const merged = [...discovered, ...extraFromKnown];
 
   if (merged.length === 0) {
-    console.warn('[shopify] No product handles found from homepage or sitemap.');
+    console.warn('[shopify] No product handles found from homepage, sitemap, or known list.');
     return [];
   }
 
-  const source =
-    homepageHandles.length > 0 && extraFromSitemap.length > 0
-      ? `${homepageHandles.length} from homepage + ${extraFromSitemap.length} additional from sitemap`
-      : homepageHandles.length > 0
-        ? 'homepage'
-        : 'sitemap';
-  console.log(`[shopify] Discovered ${merged.length} handle(s) (${source}).`);
+  const source = discovered.length > 0
+    ? `${discovered.length} discovered + ${extraFromKnown.length} from known list`
+    : `known list only (scraping blocked in this environment)`;
+  console.log(`[shopify] Using ${merged.length} handle(s) (${source}).`);
   return merged;
 }
 
@@ -238,7 +257,8 @@ export async function fetchShopifyProducts(): Promise<ShopifyProduct[]> {
         images: raw.images,
         url: `${SHOP_DOMAIN}/products/${raw.handle}`,
         price: cheapest?.price ?? '0.00',
-        compareAtPrice: cheapest?.compare_at_price ?? null,
+        // Shopify returns '' for no sale price — normalise to null
+        compareAtPrice: cheapest?.compare_at_price || null,
         // `available` is absent from the public API on some Shopify plans.
         // Treat null/undefined as "in stock" — only mark sold out when explicitly false.
         available: raw.variants.some((v) => v.available !== false),
