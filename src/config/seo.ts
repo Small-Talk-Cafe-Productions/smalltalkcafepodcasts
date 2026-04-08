@@ -109,6 +109,49 @@ export function generateProductListSchema(
             ? 'https://schema.org/InStock'
             : 'https://schema.org/OutOfStock',
           url: p.url,
+          hasMerchantReturnPolicy: {
+            '@type': 'MerchantReturnPolicy',
+            applicableCountry: 'DE',
+            returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
+            merchantReturnDays: 14,
+            url: 'https://smalltalkcafe.shop/policies/refund-policy',
+          },
+          shippingDetails: {
+            '@type': 'OfferShippingDetails',
+            shippingRate: {
+              '@type': 'MonetaryAmount',
+              value: '0',
+              currency: 'EUR',
+            },
+            shippingOrigin: {
+              '@type': 'DefinedRegion',
+              addressCountry: 'DE',
+            },
+            shippingDestination: [
+              'AT', 'BE', 'BG', 'CY', 'CZ', 'DE', 'DK', 'EE', 'ES', 'FI',
+              'FR', 'GR', 'HR', 'HU', 'IE', 'IT', 'LT', 'LU', 'LV', 'MT',
+              'NL', 'PL', 'PT', 'RO', 'SE', 'SI', 'SK',
+            ].map(code => ({ '@type': 'DefinedRegion', addressCountry: code })),
+            deliveryTime: {
+              '@type': 'ShippingDeliveryTime',
+              businessDays: {
+                '@type': 'OpeningHoursSpecification',
+                dayOfWeek: [
+                  'https://schema.org/Monday',
+                  'https://schema.org/Tuesday',
+                  'https://schema.org/Wednesday',
+                  'https://schema.org/Thursday',
+                  'https://schema.org/Friday',
+                ],
+              },
+              transitTime: {
+                '@type': 'QuantitativeValue',
+                minValue: 2,
+                maxValue: 7,
+                unitCode: 'DAY',
+              },
+            },
+          },
         },
       },
     })),
