@@ -4,9 +4,11 @@ on:
   # Trigger on push to main branch
   push:
     branches: [ 001-homepage-v1 ]
-  # Rebuild weekly (every Sunday at 02:00 UTC) to pull in new RSS episodes
+  # Rebuild on Tuesday, Thursday and Saturday at 02:00 UTC to pull in new RSS episodes
   schedule:
-    - cron: '0 2 * * 0'
+    - cron: '0 2 * * 2'
+    - cron: '0 2 * * 4'
+    - cron: '0 2 * * 6'
   # Allow manual trigger
   workflow_dispatch:
 
