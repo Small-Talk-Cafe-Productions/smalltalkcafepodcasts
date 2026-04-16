@@ -1,0 +1,124 @@
+---
+/**
+ * Returns & Refund Policy Page
+ *
+ * Required by Google Merchant Center for shopping eligibility.
+ * Must be publicly accessible and linked from the shop and footer.
+ */
+
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+
+const title = 'Returns & Refund Policy | Small Talk Café Productions';
+const description = 'Our returns and refund policy for merchandise purchased through the Small Talk Café shop.';
+const lastUpdated = 'April 2026';
+---
+
+<BaseLayout title={title} description={description}>
+  <div class="min-h-screen flex flex-col bg-brand-background">
+    <Header />
+
+    <main class="flex-grow">
+      <section class="py-10 md:py-16 px-4">
+        <div class="container-custom max-w-3xl mx-auto">
+
+          <h1 class="text-4xl font-bold text-brand-secondary mb-2">Returns &amp; Refund Policy</h1>
+          <p class="text-brand-secondary/50 text-sm mb-8">Last updated: {lastUpdated}</p>
+
+          <!-- Summary Cards -->
+          <div class="grid md:grid-cols-3 gap-4 mb-10">
+            <div class="bg-white rounded-2xl p-5 border border-brand-secondary/10 shadow-sm text-center">
+              <p class="text-2xl font-bold text-brand-secondary mb-1">14 days</p>
+              <p class="text-brand-secondary/60 text-sm">Return window</p>
+            </div>
+            <div class="bg-white rounded-2xl p-5 border border-brand-secondary/10 shadow-sm text-center">
+              <p class="text-2xl font-bold text-brand-secondary mb-1">Full refund</p>
+              <p class="text-brand-secondary/60 text-sm">For eligible returns</p>
+            </div>
+            <div class="bg-white rounded-2xl p-5 border border-brand-secondary/10 shadow-sm text-center">
+              <p class="text-2xl font-bold text-brand-secondary mb-1">Germany</p>
+              <p class="text-brand-secondary/60 text-sm">Ships from</p>
+            </div>
+          </div>
+
+          <div class="space-y-8 text-brand-secondary/80 leading-relaxed">
+
+            <div>
+              <h2 class="text-xl font-bold text-brand-secondary mb-3">Our Return Policy</h2>
+              <p>
+                We want you to be happy with your purchase. If you are not satisfied with an item from our
+                shop, you may return it within <strong>14 days of delivery</strong> for a full refund of
+                the item price, provided the item is unused and in its original condition.
+              </p>
+            </div>
+
+            <div>
+              <h2 class="text-xl font-bold text-brand-secondary mb-3">How to Request a Return</h2>
+              <ol class="list-decimal list-inside space-y-2 text-sm">
+                <li>Email us at <a href="mailto:smalltalkcafe.productions@gmail.com" class="underline hover:opacity-70">smalltalkcafe.productions@gmail.com</a> with your order number and reason for return.</li>
+                <li>We will respond within 2 business days with return instructions.</li>
+                <li>Ship the item back in its original packaging.</li>
+                <li>Once we receive and inspect the return, your refund will be processed within 5 business days.</li>
+              </ol>
+            </div>
+
+            <div>
+              <h2 class="text-xl font-bold text-brand-secondary mb-3">Non-Returnable Items</h2>
+              <ul class="list-disc list-inside space-y-1 text-sm">
+                <li>Items that have been worn, washed, or damaged after delivery.</li>
+                <li>Digital products or podcast content (our podcasts are free and do not require purchase).</li>
+                <li>Items returned outside the 14-day window without prior agreement.</li>
+              </ul>
+            </div>
+
+            <div>
+              <h2 class="text-xl font-bold text-brand-secondary mb-3">Damaged or Incorrect Items</h2>
+              <p class="text-sm">
+                If you received a damaged or incorrect item, please contact us immediately at
+                <a href="mailto:smalltalkcafe.productions@gmail.com" class="underline hover:opacity-70">smalltalkcafe.productions@gmail.com</a>
+                with a photo of the item. We will arrange a replacement or full refund at no cost to you.
+              </p>
+            </div>
+
+            <div>
+              <h2 class="text-xl font-bold text-brand-secondary mb-3">Refunds</h2>
+              <p class="text-sm">
+                Approved refunds are processed to your original payment method within 5 business days of
+                receiving the returned item. Depending on your payment provider, it may take additional
+                time for the refund to appear on your statement.
+              </p>
+            </div>
+
+            <div>
+              <h2 class="text-xl font-bold text-brand-secondary mb-3">Return Shipping Costs</h2>
+              <p class="text-sm">
+                Customers are responsible for return shipping costs unless the item was damaged or incorrect.
+                We recommend using a tracked shipping service as we cannot be responsible for items lost
+                in transit.
+              </p>
+            </div>
+
+            <div>
+              <h2 class="text-xl font-bold text-brand-secondary mb-3">Full Shop Policies</h2>
+              <p class="text-sm">
+                Our Shopify store also maintains a full refund policy page. You can view it at:
+                <a href="https://smalltalkcafe.shop/policies/refund-policy" target="_blank" rel="noopener noreferrer" class="underline hover:opacity-70">smalltalkcafe.shop/policies/refund-policy</a>
+              </p>
+            </div>
+
+            <div>
+              <h2 class="text-xl font-bold text-brand-secondary mb-3">Questions?</h2>
+              <p class="text-sm">
+                Contact us at <a href="mailto:smalltalkcafe.productions@gmail.com" class="underline hover:opacity-70">smalltalkcafe.productions@gmail.com</a> — we're happy to help.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <Footer />
+  </div>
+</BaseLayout>

@@ -138,7 +138,7 @@ export const siteConfig: SiteConfig = {
   
   seo: {
     title: 'Small Talk Café | Speak German with Confidence — Bite-Sized Podcast',
-    description: 'Build real German speaking confidence with Small Talk Café — bite-sized podcast episodes for English, Spanish, French, Italian & Turkish speakers. Real conversations, new episodes every week.',
+    description: 'Build real German speaking confidence with Small Talk Café — bite-sized podcast episodes for English, Spanish, French, Italian & Turkish speakers. Real conversations, new episodes every day.',
     keywords: [
       'learn German podcast',
       'German language learning',

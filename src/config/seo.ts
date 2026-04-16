@@ -60,6 +60,20 @@ export function generateOrganizationSchema(
       '@type': 'ImageObject',
       url: seo.ogImage,
     },
+    contactPoint: {
+      '@type': 'ContactPoint',
+      contactType: 'customer support',
+      email: 'smalltalkcafe.productions@gmail.com',
+      availableLanguage: ['English', 'German'],
+    },
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: 'Kistlerhof Straße 84',
+      postalCode: '81379',
+      addressLocality: 'Munich',
+      addressRegion: 'Bavaria',
+      addressCountry: 'DE',
+    },
     sameAs: [socialLinks.youtube, socialLinks.instagram, socialLinks.shopify],
   };
 }

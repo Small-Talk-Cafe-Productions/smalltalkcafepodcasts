@@ -1,25 +1,99 @@
 ---
 /**
  * Footer Component
- * 
- * Site footer with copyright text.
+ *
+ * Site footer with navigation links, policy pages, contact, and copyright.
+ * Links to About, Contact, Privacy Policy and Returns are required by
+ * Google's Misrepresentation policy.
  */
 
 import { siteConfig } from '@/config/site';
 
-const { footer } = siteConfig;
+const { footer, socialLinks } = siteConfig;
 const currentYear = footer.copyrightYear || new Date().getFullYear();
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
-<footer class="bg-brand-background border-t border-brand-secondary/10 py-8">
+<footer class="bg-brand-background border-t border-brand-secondary/10 pt-10 pb-6">
   <div class="container-custom">
-    <div class="text-center">
-      <p class="text-brand-secondary/80 text-sm mb-2">
-        {footer.copyrightText}
-      </p>
+
+    <!-- Top row: brand + nav columns -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+
+      <!-- Brand -->
+      <div class="col-span-2 md:col-span-1">
+        <a href={`${base}/`} class="text-base font-semibold text-brand-secondary hover:opacity-70 transition-opacity">
+          Small Talk Café
+        </a>
+        <p class="text-brand-secondary/50 text-xs mt-2 leading-relaxed">
+          Bite-sized German podcast lessons for speakers of different native languages.
+        </p>
+        <p class="text-brand-secondary/50 text-xs mt-1">Kistlerhof Straße 84, 81379 Munich, Germany</p>
+      </div>
+
+      <!-- Explore -->
+      <div>
+        <p class="text-xs font-semibold uppercase tracking-wider text-brand-secondary/50 mb-3">Explore</p>
+        <ul class="space-y-2 text-sm">
+          <li><a href={`${base}/shows/`} class="text-brand-secondary/70 hover:text-brand-secondary transition-colors">Shows</a></li>
+          <li><a href={`${base}/shop/`} class="text-brand-secondary/70 hover:text-brand-secondary transition-colors">Shop</a></li>
+          <li><a href={`${base}/about/`} class="text-brand-secondary/70 hover:text-brand-secondary transition-colors">About Us</a></li>
+          <li><a href={`${base}/contact/`} class="text-brand-secondary/70 hover:text-brand-secondary transition-colors">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Legal -->
+      <div>
+        <p class="text-xs font-semibold uppercase tracking-wider text-brand-secondary/50 mb-3">Legal</p>
+        <ul class="space-y-2 text-sm">
+          <li><a href={`${base}/privacy-policy/`} class="text-brand-secondary/70 hover:text-brand-secondary transition-colors">Privacy Policy</a></li>
+          <li><a href={`${base}/returns/`} class="text-brand-secondary/70 hover:text-brand-secondary transition-colors">Returns &amp; Refunds</a></li>
+          <li>
+            <a href="https://smalltalkcafe.shop/policies/terms-of-service" target="_blank" rel="noopener noreferrer" class="text-brand-secondary/70 hover:text-brand-secondary transition-colors">
+              Terms of Service
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Follow -->
+      <div>
+        <p class="text-xs font-semibold uppercase tracking-wider text-brand-secondary/50 mb-3">Follow</p>
+        <ul class="space-y-2 text-sm">
+          <li>
+            <a href={socialLinks.instagram} target="_blank" rel="noopener noreferrer" class="text-brand-secondary/70 hover:text-brand-secondary transition-colors">
+              Instagram
+            </a>
+          </li>
+          <li>
+            <a href={socialLinks.youtube} target="_blank" rel="noopener noreferrer" class="text-brand-secondary/70 hover:text-brand-secondary transition-colors">
+              YouTube
+            </a>
+          </li>
+          <li>
+            <a href={socialLinks.shopify} target="_blank" rel="noopener noreferrer" class="text-brand-secondary/70 hover:text-brand-secondary transition-colors">
+              Shop
+            </a>
+          </li>
+        </ul>
+        <div class="mt-3">
+          <a href={`mailto:smalltalkcafe.productions@gmail.com`} class="text-brand-secondary/50 text-xs underline underline-offset-2 hover:opacity-70 transition-opacity break-all">
+            smalltalkcafe.productions@gmail.com
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom row: copyright -->
+    <div class="border-t border-brand-secondary/10 pt-5 flex flex-col md:flex-row items-center justify-between gap-2">
       <p class="text-brand-secondary/60 text-xs">
         © {currentYear} Small Talk Café Productions. All rights reserved.
       </p>
+      <p class="text-brand-secondary/40 text-xs">
+        {footer.copyrightText}
+      </p>
     </div>
+
   </div>
 </footer>
