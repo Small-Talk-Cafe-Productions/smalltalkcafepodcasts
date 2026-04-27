@@ -1,15 +1,15 @@
 name: Deploy to GitHub Pages
 
 on:
-  # Trigger on push to main branch
-  push:
-    branches: [ 001-homepage-v1 ]
-  # Rebuild on Tuesday, Thursday and Saturday at 02:00 UTC to pull in new RSS episodes
-  schedule:
-    - cron: '0 2 * * 2'
-    - cron: '0 2 * * 4'
-    - cron: '0 2 * * 6'
-  # Allow manual trigger
+  # # Trigger on push to main branch
+  # push:
+  #   branches: [ 001-homepage-v1 ]
+  # # Rebuild on Tuesday, Thursday and Saturday at 02:00 UTC to pull in new RSS episodes
+  # schedule:
+  #   - cron: '0 2 * * 2'
+  #   - cron: '0 2 * * 4'
+  #   - cron: '0 2 * * 6'
+  # # Allow manual trigger
   workflow_dispatch:
 
 permissions:
