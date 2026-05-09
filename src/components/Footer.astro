@@ -23,13 +23,16 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       <!-- Brand -->
       <div class="col-span-2 md:col-span-1">
         <a href={`${base}/`} class="text-base font-semibold text-brand-secondary hover:opacity-70 transition-opacity">
-          Small Talk Café
+          Small Talk Café Podcasts
         </a>
         <p class="text-brand-secondary/50 text-xs mt-2 leading-relaxed">
           Bite-sized German podcast lessons for speakers of different native languages.
         </p>
         <p class="text-brand-secondary/50 text-xs mt-1">Small Talk Café Productions</p>
         <p class="text-brand-secondary/50 text-xs mt-1">Kistlerhof Straße 84, Munich 81379, Germany</p>
+        <a href="mailto:smalltalkcafe.productions@gmail.com" class="text-brand-secondary/50 text-xs underline underline-offset-2 hover:opacity-70 transition-opacity break-all">
+          smalltalkcafe.productions@gmail.com
+        </a>
       </div>
 
       <!-- Explore -->
@@ -89,9 +92,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         <p class="text-brand-secondary/60 text-xs">
           © {currentYear} Small Talk Café Podcasts. All rights reserved.
         </p>
-        <a href={`mailto:smalltalkcafe.productions@gmail.com`} class="text-brand-secondary/50 text-xs underline underline-offset-2 hover:opacity-70 transition-opacity break-all mt-2">
-          smalltalkcafe.productions@gmail.com
-        </a>
+        <!-- Email moved to bottom footer -->
       </div>
       <p class="text-brand-secondary/40 text-xs">
         {footer.copyrightText}
