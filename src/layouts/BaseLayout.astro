@@ -124,28 +124,60 @@ const twitterTags = generateTwitterTags(seo);
       <meta name="google-site-verification" content={seo.googleSearchConsoleVerification} />
     )}
 
-    <!-- Google Analytics 4 — only injected when googleAnalyticsId is set in site.ts -->
+    <!-- Google Analytics 4 — load only after user interaction or a 5s idle fallback to avoid blocking TBT -->
     {seo.googleAnalyticsId && (
-      <>
-        <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${seo.googleAnalyticsId}`}></script>
-        <script is:inline define:vars={{ gaId: seo.googleAnalyticsId }}>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', gaId);
-        </script>
-      </>
+      <script is:inline define:vars={{ gaId: seo.googleAnalyticsId }}>
+        (function(){
+          var loaded = false;
+          function loadGA(){
+            if (loaded) return; loaded = true;
+            try {
+              var s = document.createElement('script');
+              s.src = 'https://www.googletagmanager.com/gtag/js?id=' + gaId;
+              s.async = true;
+              document.head.appendChild(s);
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);} 
+              window.gtag = gtag;
+              gtag('js', new Date());
+              gtag('config', gaId, { 'anonymize_ip': true });
+            } catch (e) { /* swallow errors */ }
+            removeListeners();
+          }
+          function onUserInteraction() { loadGA(); }
+          function removeListeners(){
+            ['scroll','pointerdown','keydown','touchstart'].forEach(function(ev){
+              window.removeEventListener(ev, onUserInteraction, { passive: true });
+            });
+            document.removeEventListener('visibilitychange', visibilityHandler);
+            if (gaTimer) clearTimeout(gaTimer);
+          }
+          function visibilityHandler(){ if (document.visibilityState === 'visible') { loadGA(); } }
+          // Load only after explicit user interaction or when the page is visible and 5s elapsed
+          var gaTimer = setTimeout(function(){ if (!loaded && document.visibilityState === 'visible') loadGA(); }, 5000);
+          ['scroll','pointerdown','keydown','touchstart'].forEach(function(ev){
+            window.addEventListener(ev, onUserInteraction, { passive: true, once: true });
+          });
+          document.addEventListener('visibilitychange', visibilityHandler, { once: true });
+        })();
+      </script>
     )}
 
     <!-- Preconnect to external domains for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     
-    <!-- Brand Fonts (Google Fonts) -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <!-- Brand Fonts (Google Fonts) - non-blocking preload with onload swap -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" as="style" onload="this.setAttribute('rel','stylesheet')" />
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet" />
+    </noscript>
+    <!-- Inline critical CSS (minimal: background and container) to reduce render-blocking CSS for above-the-fold content -->
+    <style>
+      html, body { background: #F5F1E8; color: #121212; }
+      .container-custom { max-width: 1200px; margin-left: auto; margin-right: auto; padding-left: 1rem; padding-right: 1rem; }
+      .min-h-screen { min-height: 100vh; }
+    </style>
   </head>
   <body>
     <slot />
