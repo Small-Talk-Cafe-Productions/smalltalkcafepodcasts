@@ -71,7 +71,6 @@ export function generateOrganizationSchema(
       streetAddress: 'Kistlerhof Straße 84',
       postalCode: '81379',
       addressLocality: 'Munich',
-      addressRegion: 'Bavaria',
       addressCountry: 'DE',
     },
     sameAs: [socialLinks.youtube, socialLinks.instagram, socialLinks.shopify],

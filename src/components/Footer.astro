@@ -3,8 +3,8 @@
  * Footer Component
  *
  * Site footer with navigation links, policy pages, contact, and copyright.
- * Links to About, Contact, Privacy Policy and Returns are required by
- * Google's Misrepresentation policy.
+ * Links to About, Contact, Privacy Policy, Returns, and Impressum are required by
+ * Google's Misrepresentation policy and German law.
  */
 
 import { siteConfig } from '@/config/site';
@@ -28,7 +28,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         <p class="text-brand-secondary/50 text-xs mt-2 leading-relaxed">
           Bite-sized German podcast lessons for speakers of different native languages.
         </p>
-        <p class="text-brand-secondary/50 text-xs mt-1">Kistlerhof Straße 84, 81379 Munich, Germany</p>
+        <p class="text-brand-secondary/50 text-xs mt-1">Kistlerhof Straße 84, Munich 81379, Germany</p>
       </div>
 
       <!-- Explore -->
@@ -48,6 +48,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         <ul class="space-y-2 text-sm">
           <li><a href={`${base}/privacy-policy/`} class="text-brand-secondary/70 hover:text-brand-secondary transition-colors">Privacy Policy</a></li>
           <li><a href={`${base}/returns/`} class="text-brand-secondary/70 hover:text-brand-secondary transition-colors">Returns &amp; Refunds</a></li>
+          <li><a href={`${base}/impressum/`} class="text-brand-secondary/70 hover:text-brand-secondary transition-colors">Impressum</a></li>
           <li>
             <a href="https://smalltalkcafe.shop/policies/terms-of-service" target="_blank" rel="noopener noreferrer" class="text-brand-secondary/70 hover:text-brand-secondary transition-colors">
               Terms of Service

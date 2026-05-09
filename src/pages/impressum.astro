@@ -1,0 +1,70 @@
+---
+/**
+ * Impressum Page
+ *
+ * Required by German law (DDG §5) for commercial websites.
+ * Provides business transparency and legal compliance.
+ */
+
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+
+const title = 'Impressum | Small Talk Café Productions';
+const description = 'Legal information and business details for Small Talk Café Productions.';
+---
+
+<BaseLayout title={title} description={description}>
+  <div class="min-h-screen flex flex-col bg-brand-background">
+    <Header />
+
+    <main class="flex-grow">
+      <section class="py-10 md:py-16 px-4">
+        <div class="container-custom max-w-3xl mx-auto">
+
+          <h1 class="text-4xl font-bold text-brand-secondary mb-8">Impressum</h1>
+
+          <div class="space-y-6 text-brand-secondary/80 leading-relaxed">
+
+            <div>
+              <h2 class="text-xl font-bold text-brand-secondary mb-3">Service Provider</h2>
+              <p class="text-sm">
+                Small Talk Café Productions<br />
+                Kistlerhof Straße 84<br />
+                Munich 81379<br />
+                Germany
+              </p>
+            </div>
+
+            <div>
+              <h2 class="text-xl font-bold text-brand-secondary mb-3">Contact</h2>
+              <p class="text-sm">
+                Email: <a href="mailto:smalltalkcafe.productions@gmail.com" class="underline hover:opacity-70">smalltalkcafe.productions@gmail.com</a>
+              </p>
+            </div>
+
+            <div>
+              <h2 class="text-xl font-bold text-brand-secondary mb-3">Tax Information</h2>
+              <p class="text-sm">
+                Tax ID: DE461810151
+              </p>
+            </div>
+
+            <div>
+              <h2 class="text-xl font-bold text-brand-secondary mb-3">Legal Policies</h2>
+              <p class="text-sm">
+                <a href="/privacy-policy/" class="underline hover:opacity-70">Privacy Policy</a><br />
+                <a href="/returns/" class="underline hover:opacity-70">Returns & Refund Policy</a>
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+    <Footer />
+  </div>
+</BaseLayout>
