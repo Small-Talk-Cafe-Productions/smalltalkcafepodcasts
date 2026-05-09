@@ -32,10 +32,18 @@ const showSchemas = shows.map((s) => generatePodcastSchema(s, seo));
 const pageTitle = 'Small Talk Café | Speak German with Confidence — Bite-Sized Podcast';
 const pageDescription =
   'Build real German speaking confidence with Small Talk Café — bite-sized podcast episodes for English, Spanish, French, Italian & Turkish speakers. New episodes every day on Spotify & Apple.';
+// Preload candidate: first show's artwork (used as LCP on some viewports)
+const firstShow = shows[0];
+const _firstArtFile = firstShow?.artworkUrl ? firstShow.artworkUrl.split('/').pop() : '';
+const _firstArtName = _firstArtFile ? _firstArtFile.replace(/\.[^.]+$/, '') : '';
 ---
 
 <BaseLayout title={pageTitle} description={pageDescription}>
   <Fragment slot="head-extras">
+    {/** Preload the first show's optimized AVIF as LCP candidate */}
+    {_firstArtName && (
+      <link rel="preload" as="image" href={`/images/optimized/${_firstArtName}-320.avif`} type="image/avif" />
+    )}
     <script is:inline type="application/ld+json" set:html={JSON.stringify(orgSchema)} />
     <script is:inline type="application/ld+json" set:html={JSON.stringify(siteSchema)} />
     {showSchemas.map((s) => (
@@ -93,6 +101,8 @@ const pageDescription =
           <ul class="flex flex-col gap-5 list-none p-0">
             {shows.map((show) => {
               const ep = latestPerShow[show.id];
+              const _artFile = show.artworkUrl ? show.artworkUrl.split('/').pop() : '';
+              const _artName = _artFile ? _artFile.replace(/\.[^.]+$/, '') : 'podcasts';
               return (
                 <li class="show-row">
                   <!-- Show info -->
@@ -103,16 +113,28 @@ const pageDescription =
                       aria-hidden="true"
                       class="show-row-art-link"
                     >
-                      <img
-                        src={show.artworkUrl}
-                        alt={`${show.title} artwork`}
-                        width="184"
-                        height="184"
-                        loading={shows.indexOf(show) === 0 ? 'eager' : 'lazy'}
-                        fetchpriority={shows.indexOf(show) === 0 ? 'high' : 'auto'}
-                        decoding="async"
-                        class="show-row-art"
-                      />
+                      <picture>
+                        <source
+                          type="image/avif"
+                          srcset={['184','150','320'].map(w => `/images/optimized/${_artName}-${w}.avif ${w}w`).join(', ')}
+                          sizes="184px"
+                        />
+                        <source
+                          type="image/webp"
+                          srcset={['184','150','320'].map(w => `/images/optimized/${_artName}-${w}.webp ${w}w`).join(', ')}
+                          sizes="184px"
+                        />
+                        <img
+                          src={show.artworkUrl}
+                          alt={`${show.title} artwork`}
+                          width="184"
+                          height="184"
+                          loading={shows.indexOf(show) === 0 ? 'eager' : 'lazy'}
+                          fetchpriority={shows.indexOf(show) === 0 ? 'high' : 'auto'}
+                          decoding="async"
+                          class="show-row-art"
+                        />
+                      </picture>
                     </a>
                     <div class="show-row-meta">
                       <h3 class="show-row-heading">

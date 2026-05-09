@@ -1,6 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+  content: [
+    './src/pages/**/*.{astro,html,js,jsx,ts,tsx,md,mdx}',
+    './src/components/**/*.{astro,html,js,jsx,ts,tsx}',
+    './src/layouts/**/*.{astro,html,js,jsx,ts,tsx}',
+    './src/styles/**/*.css',
+    './src/utils/**/*.{js,ts}',
+    // Fallback: any other Astro/HTML files under src
+    './src/**/*.{astro,html}'
+  ],
   theme: {
     extend: {
       colors: {

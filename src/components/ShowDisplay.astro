@@ -34,6 +34,9 @@ const showTitleSizeSmall = siteConfig.brand.fonts.showTitle?.sizeSmall || '2rem'
 
 const HeadingTag = headingLevel;
 const base = import.meta.env.BASE_URL.replace(/\/$/, ''); // Remove trailing slash for consistency
+// Safe artwork filename (without extension) for building optimized srcset paths
+const _artworkFile = show.artworkUrl ? show.artworkUrl.split('/').pop() : '';
+const _artworkName = _artworkFile ? _artworkFile.replace(/\.[^.]+$/, '') : 'podcasts';
 ---
 
 <div class="show-display">
@@ -42,25 +45,56 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, ''); // Remove trailing sla
     <div class="w-full max-w-md">
       {linkable ? (
         <a href={`${base}/shows/${show.id}/`} class="block aspect-square rounded-lg overflow-hidden shadow-2xl hover:shadow-xl transition-shadow duration-200">
-          <img
-            src={`${base}/${show.artworkUrl}`}
-            alt={`${show.title} - Show Artwork`}
-            class="w-full h-full object-cover hover:scale-105 transition-transform duration-200"
-            loading="lazy"
-            width="1200"
-            height="1200"
-          />
+          {
+            /* Responsive picture: prefer AVIF -> WebP -> JPEG fallback. Generated images live in /images/optimized/<name>-{w}.{fmt} */
+          }
+          <picture>
+            <source
+              type="image/avif"
+              srcset={['1600','1024','640','320'].map(w => `/images/optimized/${_artworkName}-${w}.avif ${w}w`).join(', ')}
+              sizes="(max-width: 640px) 320px, (max-width: 1024px) 640px, 1024px"
+            />
+            <source
+              type="image/webp"
+              srcset={['1600','1024','640','320'].map(w => `/images/optimized/${_artworkName}-${w}.webp ${w}w`).join(', ')}
+              sizes="(max-width: 640px) 320px, (max-width: 1024px) 640px, 1024px"
+            />
+            <img
+              src={`${base}/${show.artworkUrl}`}
+              alt={`${show.title} - Show Artwork`}
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-200"
+              loading="lazy"
+              decoding="async"
+              fetchpriority={linkable ? 'high' : 'auto'}
+              width="1200"
+              height="1200"
+            />
+          </picture>
         </a>
       ) : (
         <div class="aspect-square rounded-lg overflow-hidden shadow-2xl">
-          <img
-            src={`${base}/${show.artworkUrl}`}
-            alt={`${show.title} - Show Artwork`}
-            class="w-full h-full object-cover"
-            loading="lazy"
-            width="1200"
-            height="1200"
-          />
+          <picture>
+            <source
+              type="image/avif"
+              srcset={['1600','1024','640','320'].map(w => `/images/optimized/${_artworkName}-${w}.avif ${w}w`).join(', ')}
+              sizes="(max-width: 640px) 320px, (max-width: 1024px) 640px, 1024px"
+            />
+            <source
+              type="image/webp"
+              srcset={['1600','1024','640','320'].map(w => `/images/optimized/${_artworkName}-${w}.webp ${w}w`).join(', ')}
+              sizes="(max-width: 640px) 320px, (max-width: 1024px) 640px, 1024px"
+            />
+            <img
+              src={`${base}/${show.artworkUrl}`}
+              alt={`${show.title} - Show Artwork`}
+              class="w-full h-full object-cover"
+              loading="lazy"
+              decoding="async"
+              fetchpriority={linkable ? 'high' : 'auto'}
+              width="1200"
+              height="1200"
+            />
+          </picture>
         </div>
       )}
     </div>

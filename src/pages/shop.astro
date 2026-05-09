@@ -101,15 +101,28 @@ const productListSchema = hasProducts
                       <!-- Product image -->
                       <div class="product-img-wrap">
                         {image ? (
-                          <img
-                            src={image.src}
-                            alt={image.alt ?? product.title}
-                            width={image.width || 600}
-                            height={image.height || 600}
-                            loading="lazy"
-                            decoding="async"
-                            class="product-img"
-                          />
+                          <picture>
+                            <source
+                              type="image/avif"
+                              srcset={[800,600,400,300].map(w => `${image.src}${image.src.includes('?') ? '&' : '?'}width=${w} ${w}w`).join(', ')}
+                              sizes="(max-width: 640px) 300px, (max-width: 1024px) 600px, 800px"
+                            />
+                            <source
+                              type="image/webp"
+                              srcset={[800,600,400,300].map(w => `${image.src}${image.src.includes('?') ? '&' : '?'}width=${w} ${w}w`).join(', ')}
+                              sizes="(max-width: 640px) 300px, (max-width: 1024px) 600px, 800px"
+                            />
+                            <img
+                              src={image.src}
+                              alt={image.alt ?? product.title}
+                              width={image.width || 600}
+                              height={image.height || 600}
+                              loading="lazy"
+                              decoding="async"
+                              fetchpriority="auto"
+                              class="product-img"
+                            />
+                          </picture>
                         ) : (
                           <div class="product-img-placeholder" aria-hidden="true">🛍️</div>
                         )}
