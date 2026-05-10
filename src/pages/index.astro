@@ -10,6 +10,7 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
 import { siteConfig } from '@/config/site';
+import PreplyBanner from '@/components/PreplyBanner.astro';
 import {
   generatePodcastSchema,
   generateOrganizationSchema,
@@ -86,6 +87,13 @@ const _firstArtName = _firstArtFile ? _firstArtFile.replace(/\.[^.]+$/, '') : ''
               </svg>
             </a>
           </div>
+        </div>
+      </section>
+
+      <!-- ── Preply Affiliate Banner ───────────────────────────────────── -->
+      <section class="py-2 md:py-4 px-4" aria-label="Sponsored content">
+        <div class="container-custom max-w-5xl mx-auto">
+          <PreplyBanner />
         </div>
       </section>
 

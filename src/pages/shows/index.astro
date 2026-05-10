@@ -10,6 +10,7 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
 import ShowDisplay from '@/components/ShowDisplay.astro';
+import PreplyBanner from '@/components/PreplyBanner.astro';
 import { siteConfig } from '@/config/site';
 
 const { shows, seo } = siteConfig;
@@ -53,6 +54,13 @@ const collectionSchema = {
             Bite-sized episodes designed to build real German speaking confidence.
             <br> Available for English, Spanish, French &amp; Italian speakers.
           </p>
+        </div>
+      </section>
+
+      <!-- Preply Affiliate Banner -->
+      <section class="pb-4 px-4" aria-label="Sponsored content">
+        <div class="container-custom max-w-5xl mx-auto">
+          <PreplyBanner />
         </div>
       </section>
 
