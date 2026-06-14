@@ -146,6 +146,11 @@ export interface ShowConfig {
   /** IETF locale string for og:locale, e.g. 'en_US', 'es_ES', 'fr_FR', 'it_IT'. */
   locale?: string;
 
+  /** BCP 47 language code of the language being TAUGHT (e.g. 'de' for all German shows,
+   *  'es' for Spanish, 'fr' for French, 'it' for Italian, 'sv' for Swedish).
+   *  Used to group shows by target language on the Shows page. */
+  targetLanguage?: string;
+
   /** Show release date (ISO 8601 format: YYYY-MM-DD) */
   releaseDate?: string;
 }
