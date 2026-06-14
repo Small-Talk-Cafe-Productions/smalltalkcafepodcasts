@@ -2,8 +2,9 @@
 /**
  * Homepage
  *
- * SEO hub: H1 keyword target, dynamic latest episode, all 4 language shows
- * with targeted keyword headings, shop CTA, and rich JSON-LD graph.
+ * Brand pivot: Small Talk Café is now a multilingual language-learning network.
+ * Shows only English-speaker shows (one per target language) to keep the homepage clean.
+ * The /shows/ page has all variants grouped by target language.
  */
 
 import BaseLayout from '@/layouts/BaseLayout.astro';
@@ -22,26 +23,28 @@ import { fetchLatestEpisodePerShow } from '@/utils/rss';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const { seo, shows, socialLinks } = siteConfig;
 
-// Fetch the latest episode per show for the homepage rows
-const latestPerShow = await fetchLatestEpisodePerShow(shows);
+// Homepage only shows English-speaker shows (one per target language)
+const featuredShows = shows.filter((s) => s.language === 'en');
 
-// Build JSON-LD graph: Organization + WebSite + 4x PodcastSeries
+// Fetch latest episode for each featured show
+const latestPerShow = await fetchLatestEpisodePerShow(featuredShows);
+
+// Build JSON-LD graph: Organization + WebSite + all show schemas (for full SEO coverage)
 const orgSchema = generateOrganizationSchema(seo, socialLinks);
 const siteSchema = generateWebSiteSchema(seo);
 const showSchemas = shows.map((s) => generatePodcastSchema(s, seo));
 
-const pageTitle = 'Small Talk Café | Speak German with Confidence — Bite-Sized Podcast';
+const pageTitle = 'Small Talk Café | Learn Any Language in Minutes — Bite-Sized Podcast';
 const pageDescription =
-  'Build real German speaking confidence with Small Talk Café — bite-sized podcast episodes for English, Spanish, French, Italian & Turkish speakers. New episodes every day on Spotify & Apple.';
-// Preload candidate: first show's artwork (used as LCP on some viewports)
-const firstShow = shows[0];
+  'Learn Spanish, French, Italian, German or Swedish with Small Talk Café — bite-sized podcast episodes with real everyday conversations. New episodes every day on Spotify & Apple Podcasts.';
+
+const firstShow = featuredShows[0];
 const _firstArtFile = firstShow?.artworkUrl ? firstShow.artworkUrl.split('/').pop() : '';
 const _firstArtName = _firstArtFile ? _firstArtFile.replace(/\.[^.]+$/, '') : '';
 ---
 
 <BaseLayout title={pageTitle} description={pageDescription}>
   <Fragment slot="head-extras">
-    {/** Preload the first show's optimized AVIF as LCP candidate */}
     {_firstArtName && (
       <link rel="preload" as="image" href={`/images/optimized/${_firstArtName}-320.avif`} type="image/avif" />
     )}
@@ -61,13 +64,9 @@ const _firstArtName = _firstArtFile ? _firstArtFile.replace(/\.[^.]+$/, '') : ''
       <section class="py-8 md:py-12 text-center px-4">
         <div class="container-custom max-w-3xl mx-auto">
           <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-secondary leading-tight mb-5">
-            Speak German with Confidence<br class="hidden md:block" /> Bite-Sized Podcast Lessons
+            Speak Any Language<br class="hidden md:block" /> with Confidence — Bite-Sized Podcast Lessons
           </h1>
-          <p class="text-brand-secondary/70 text-lg md:text-xl leading-relaxed mb-8 max-w-2xl mx-auto">
-            Small Talk Café gives you the German speaking practice you need, in minutes a day.
-            Real conversations, no textbook. Available in multiple native languages.
-          </p>
-          <div class="flex flex-wrap gap-3 justify-center">
+          <div class="flex flex-wrap gap-3 justify-center mt-8">
             <a
               href={`${base}/shows/`}
               class="inline-flex items-center gap-2 bg-brand-secondary text-brand-background font-heading font-bold px-7 py-3.5 rounded-full hover:opacity-85 transition-opacity text-base"
@@ -104,10 +103,10 @@ const _firstArtName = _firstArtFile ? _firstArtFile.replace(/\.[^.]+$/, '') : ''
             Our Shows
           </h2>
           <p class="text-center text-brand-secondary/60 text-sm mb-10">
-            Bite-sized German speaking practice — pick your show and start today.
+            Bite-sized podcast lessons for English speakers — pick your language and start today.
           </p>
           <ul class="flex flex-col gap-5 list-none p-0">
-            {shows.map((show) => {
+            {featuredShows.map((show) => {
               const ep = latestPerShow[show.id];
               const _artFile = show.artworkUrl ? show.artworkUrl.split('/').pop() : '';
               const _artName = _artFile ? _artFile.replace(/\.[^.]+$/, '') : 'podcasts';
@@ -137,8 +136,8 @@ const _firstArtName = _firstArtFile ? _firstArtFile.replace(/\.[^.]+$/, '') : ''
                           alt={`${show.title} artwork`}
                           width="184"
                           height="184"
-                          loading={shows.indexOf(show) === 0 ? 'eager' : 'lazy'}
-                          fetchpriority={shows.indexOf(show) === 0 ? 'high' : 'auto'}
+                          loading={featuredShows.indexOf(show) === 0 ? 'eager' : 'lazy'}
+                          fetchpriority={featuredShows.indexOf(show) === 0 ? 'high' : 'auto'}
                           decoding="async"
                           class="show-row-art"
                         />
@@ -208,20 +207,33 @@ const _firstArtName = _firstArtFile ? _firstArtFile.replace(/\.[^.]+$/, '') : ''
               );
             })}
           </ul>
+
+          <!-- Link to see all German variants -->
+          <div class="text-center mt-8">
+            <p class="text-brand-secondary/50 text-sm mb-3">
+              Also learning German? We have dedicated shows for Spanish, French, Italian & Turkish speakers.
+            </p>
+            <a
+              href={`${base}/shows/#learn-german`}
+              class="inline-flex items-center gap-2 text-brand-secondary/70 font-semibold text-sm border border-brand-secondary/20 px-5 py-2 rounded-full hover:border-brand-secondary/50 transition-colors"
+            >
+              Browse German Learning Shows
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+              </svg>
+            </a>
+          </div>
         </div>
       </section>
-
-
 
       <section class="py-14 md:py-20 bg-brand-secondary px-4" aria-labelledby="shop-cta-heading">
         <div class="container-custom max-w-3xl mx-auto text-center">
           <p class="text-xs uppercase tracking-widest text-brand-background/50 font-semibold mb-3">Merch</p>
           <h2 id="shop-cta-heading" class="text-2xl md:text-3xl font-bold text-brand-background mb-4 leading-snug">
-            Wear Your German Journey
+            Wear Your Language Journey
           </h2>
           <p class="text-brand-background/75 text-base md:text-lg leading-relaxed mb-8 max-w-xl mx-auto">
-            From <em>Bier Essentials</em> mugs to German Essentials tees — browse exclusive gear made for
-            language learners and German culture lovers.
+            Mugs, tees, and tote bags — browse exclusive gear made for language learners and culture lovers.
           </p>
           <a
             href={`${base}/shop/`}
@@ -406,4 +418,4 @@ const _firstArtName = _firstArtFile ? _firstArtFile.replace(/\.[^.]+$/, '') : ''
   }
   .episode-listen-btn:hover,
   .show-platform-btn:hover { opacity: 0.85; }
-
+</style>
