@@ -1,190 +1,304 @@
 ---
 /**
- * PreplyBanner
+ * ShopProductBanner (replaces PreplyBanner)
  *
- * Affiliate advertisement banner for Preply.
- * Promotes the 50% off first lesson offer with the tracking link.
- * Designed to be clean, on-brand, and unobtrusive yet engaging.
+ * Shows a featured product from the Shopify store as an inline horizontal card component.
+ * Selects a product randomly on the client-side on every page visit.
  *
  * Usage:
- *   <PreplyBanner />
+ *   <PreplyBanner />   (drop-in replacement, same slot on every page)
  */
+
+import { fetchShopifyProducts, formatPrice } from '@/utils/shopify';
+
+// Fetch all live products at build time
+const productsRaw = await fetchShopifyProducts();
+const hasProducts = productsRaw.length > 0;
+
+// Transform the products array to a clean serialized array for client-side use
+const products = productsRaw.map(p => ({
+  title: p.title?.split('|')[0]?.trim() ?? p.title ?? '',
+  url: p.url,
+  imageSrc: p.images?.[0]?.src ?? '',
+  imageAlt: p.images?.[0]?.alt ?? p.title ?? '',
+  teaser: p.teaser ?? '',
+  priceFormatted: formatPrice(p.price),
+  comparePriceFormatted: p.compareAtPrice ? formatPrice(p.compareAtPrice) : null,
+  onSale: p.compareAtPrice && parseFloat(p.compareAtPrice) > parseFloat(p.price)
+}));
 ---
 
-<aside
-  class="preply-banner"
-  aria-label="Sponsored: Learn languages with Preply"
->
-  <div class="preply-banner__inner">
+{hasProducts && (
+  <aside class="shop-banner" aria-label="Featured product from the Small Talk Café shop" style="display: none;">
+    <div class="shop-banner__container">
+      
+      <!-- Left side: Image -->
+      <div class="shop-banner__img-wrap">
+        <a class="shop-banner__img-anchor" href="#" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <img
+            class="shop-banner__img"
+            src=""
+            alt=""
+            width="300"
+            height="300"
+            loading="lazy"
+            decoding="async"
+          />
+        </a>
+      </div>
 
-    <!-- Copy -->
-    <div class="preply-banner__copy">
-      <p class="preply-banner__headline">
-        Speak any language fluently — with a real tutor
-      </p>
-      <p class="preply-banner__sub">
-        Get <strong>50% off your first lesson</strong> on <strong>Preply</strong>. Learn with expert tutors, on your schedule.
-      </p>
+      <!-- Right side: Details -->
+      <div class="shop-banner__details">
+        <div class="shop-banner__header">
+          <span class="shop-banner__eyebrow">From the Shop</span>
+          <h3 class="shop-banner__title"></h3>
+        </div>
+        
+        <p class="shop-banner__teaser"></p>
+        
+        <div class="shop-banner__footer">
+          <div class="shop-banner__price-row">
+            <span class="shop-banner__price"></span>
+            <span class="shop-banner__compare-price" style="display: none;"></span>
+          </div>
+          
+          <a
+            class="shop-banner__cta"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Shop Now
+            <svg class="shop-banner__arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
     </div>
+  </aside>
+)}
 
-    <!-- CTA -->
-    <a
-      id="preply-banner-cta"
-      href="https://preply.sjv.io/c/7286863/1987575/24422"
-      target="_blank"
-      rel="noopener noreferrer sponsored"
-      class="preply-banner__cta"
-      aria-label="Claim 50% off your first Preply lesson (opens in a new tab)"
-    >
-      Claim 50% Off
-      <svg class="preply-banner__cta-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <path d="M5 12h14M12 5l7 7-7 7"/>
-      </svg>
-    </a>
-
-  </div>
-</aside>
+<script define:vars={{ products }}>
+  if (products && products.length > 0) {
+    const banners = document.querySelectorAll('.shop-banner');
+    
+    banners.forEach(banner => {
+      // Pick a random product from the list for this banner instance
+      const randomProduct = products[Math.floor(Math.random() * products.length)];
+      if (!randomProduct) return;
+      
+      const imgLink = banner.querySelector('.shop-banner__img-anchor');
+      const img = banner.querySelector('.shop-banner__img');
+      const titleEl = banner.querySelector('.shop-banner__title');
+      const teaserEl = banner.querySelector('.shop-banner__teaser');
+      const priceEl = banner.querySelector('.shop-banner__price');
+      const comparePriceEl = banner.querySelector('.shop-banner__compare-price');
+      const cta = banner.querySelector('.shop-banner__cta');
+      
+      // Update DOM
+      if (imgLink) imgLink.href = randomProduct.url;
+      if (img) {
+        img.src = randomProduct.imageSrc;
+        img.alt = randomProduct.imageAlt;
+      }
+      if (titleEl) titleEl.textContent = randomProduct.title;
+      if (teaserEl) teaserEl.textContent = randomProduct.teaser;
+      if (priceEl) priceEl.textContent = randomProduct.priceFormatted;
+      
+      if (comparePriceEl) {
+        if (randomProduct.comparePriceFormatted) {
+          comparePriceEl.textContent = randomProduct.comparePriceFormatted;
+          comparePriceEl.style.display = 'inline';
+        } else {
+          comparePriceEl.style.display = 'none';
+        }
+      }
+      
+      if (cta) {
+        cta.href = randomProduct.url;
+        cta.setAttribute('aria-label', `Buy ${randomProduct.title} in the Small Talk Café shop (opens in a new tab)`);
+      }
+      
+      // Show the banner now that it is populated
+      banner.style.display = 'block';
+    });
+  }
+</script>
 
 <style>
-  /* ── Container ────────────────────────────────────────────────── */
-  .preply-banner {
-    position: relative;
+  /* ── Banner Container ───────────────────────────────────────────── */
+  .shop-banner {
+    max-width: 760px;
+    margin: 2rem auto;
+    background: #ffffff;
+    border: 1.5px solid rgba(82, 62, 38, 0.08);
+    border-radius: 20px;
     overflow: hidden;
-    border-radius: 18px;
-    background: linear-gradient(
-      135deg,
-      rgba(243, 156, 18, 0.12) 0%,
-      rgba(243, 156, 18, 0.04) 60%,
-      rgba(82, 62, 38, 0.04) 100%
-    );
-    border: 1.5px solid rgba(243, 156, 18, 0.28);
-    box-shadow: 0 2px 16px rgba(243, 156, 18, 0.08);
-    /* Square-ish: fixed max-width so height-to-width ratio stays close to 1:2 */
-    max-width: 480px;
-    margin: 0 auto;
-    padding: 2rem 2rem;
-    transition: box-shadow 0.25s ease, border-color 0.25s ease;
+    box-shadow: 0 4px 20px rgba(82, 62, 38, 0.03);
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
   }
-  .preply-banner:hover {
-    box-shadow: 0 4px 24px rgba(243, 156, 18, 0.14);
-    border-color: rgba(243, 156, 18, 0.45);
+  .shop-banner:hover {
+    box-shadow: 0 8px 30px rgba(82, 62, 38, 0.09);
+    transform: translateY(-1px);
   }
 
-  /* Subtle animated shimmer accent in the top-left corner */
-  .preply-banner::before {
-    content: '';
-    position: absolute;
-    top: -40px;
-    left: -40px;
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(243,156,18,0.12) 0%, transparent 70%);
-    pointer-events: none;
-    animation: preply-glow 4s ease-in-out infinite alternate;
+  .shop-banner__container {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
   }
-  @keyframes preply-glow {
-    from { opacity: 0.6; transform: scale(1); }
-    to   { opacity: 1;   transform: scale(1.12); }
+  @media (max-width: 640px) {
+    .shop-banner__container {
+      flex-direction: column;
+    }
   }
 
-  /* ── Inner column ──────────────────────────────────────────── */
-  .preply-banner__inner {
-    position: relative;
+  /* ── Left side: Product Image ────────────────────────────────────── */
+  .shop-banner__img-wrap {
+    width: 200px;
+    flex-shrink: 0;
+    aspect-ratio: 1 / 1;
+    background: #f5f1e8;
+    overflow: hidden;
+  }
+  @media (max-width: 640px) {
+    .shop-banner__img-wrap {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+    }
+  }
+  .shop-banner__img-anchor {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .shop-banner__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  .shop-banner:hover .shop-banner__img {
+    transform: scale(1.03);
+  }
+
+  /* ── Right side: Product Details ─────────────────────────────────── */
+  .shop-banner__details {
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-  }
-
-  /* ── Top row: icon + label ──────────────────────────────────── */
-  .preply-banner__top {
-    display: flex;
-    align-items: center;
     justify-content: space-between;
+    padding: 1.25rem 1.5rem;
+    min-width: 0;
+  }
+  @media (max-width: 640px) {
+    .shop-banner__details {
+      gap: 0.75rem;
+    }
   }
 
-  /* ── "Sponsored" label ────────────────────────────────────── */
-  .preply-banner__label {
-    font-size: 0.625rem;
+  .shop-banner__header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .shop-banner__eyebrow {
+    font-size: 0.7rem;
     font-weight: 600;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: rgba(82, 62, 38, 0.38);
+    color: #F39C12;
+    margin: 0;
   }
 
-  /* ── Icon bubble ─────────────────────────────────────────────── */
-  .preply-banner__icon {
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 48px;
-    height: 48px;
-  }
-
-  /* ── Copy ────────────────────────────────────────────────────── */
-  .preply-banner__copy {
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-  }
-  .preply-banner__headline {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.0625rem;
+  .shop-banner__title {
+    font-family: "Poppins", "Helvetica Neue", sans-serif;
+    font-size: 1.05rem;
     font-weight: 700;
     color: #523E26;
     margin: 0;
     line-height: 1.3;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
-  .preply-banner__sub {
-    font-size: 0.875rem;
-    color: rgba(82, 62, 38, 0.70);
-    margin: 0;
-    line-height: 1.55;
-  }
-  .preply-banner__sub strong {
-    color: #523E26;
-    font-weight: 700;
+  @media (max-width: 640px) {
+    .shop-banner__title {
+      white-space: normal;
+    }
   }
 
-  /* ── CTA button ──────────────────────────────────────────────── */
-  .preply-banner__cta {
+  .shop-banner__teaser {
+    font-size: 0.8rem;
+    color: rgba(82, 62, 38, 0.6);
+    margin: 0.35rem 0 0.75rem;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .shop-banner__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    border-top: 1px solid rgba(82, 62, 38, 0.06);
+    padding-top: 0.75rem;
+    margin-top: auto;
+  }
+
+  .shop-banner__price-row {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+  }
+
+  .shop-banner__price {
+    font-family: "Poppins", "Helvetica Neue", sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #523E26;
+  }
+
+  .shop-banner__compare-price {
+    font-size: 0.8rem;
+    color: rgba(82, 62, 38, 0.45);
+    text-decoration: line-through;
+  }
+
+  /* ── CTA button ────────────────────────────────────────────────── */
+  .shop-banner__cta {
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
     flex-shrink: 0;
-    align-self: center;
     background: #F39C12;
     color: #fff;
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
-    font-size: 0.875rem;
-    padding: 0.65rem 1.5rem;
+    font-size: 0.8rem;
+    padding: 0.5rem 1.1rem;
     border-radius: 9999px;
     text-decoration: none;
     white-space: nowrap;
     transition: opacity 0.2s, transform 0.2s;
-    box-shadow: 0 2px 8px rgba(243, 156, 18, 0.35);
-    margin-top: 0.25rem;
+    box-shadow: 0 2px 8px rgba(243, 156, 18, 0.25);
   }
-  .preply-banner__cta:hover {
+  .shop-banner__cta:hover {
     opacity: 0.88;
     transform: translateY(-1px);
-    box-shadow: 0 4px 14px rgba(243, 156, 18, 0.45);
+    box-shadow: 0 4px 12px rgba(243, 156, 18, 0.35);
   }
-  .preply-banner__cta-arrow {
+  .shop-banner__arrow {
     flex-shrink: 0;
     transition: transform 0.2s;
   }
-  .preply-banner__cta:hover .preply-banner__cta-arrow {
+  .shop-banner__cta:hover .shop-banner__arrow {
     transform: translateX(2px);
-  }
-
-  /* ── Responsive ──────────────────────────────────────────────── */
-  @media (max-width: 639px) {
-    .preply-banner {
-      max-width: 100%;
-      padding: 1.5rem;
-    }
   }
 </style>
