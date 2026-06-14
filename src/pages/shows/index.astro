@@ -1,9 +1,10 @@
 ---
 /**
- * Shows Page
- * 
- * Displays all podcast shows with the same style as the featured show on the homepage.
- * Uses ShowDisplay component for consistent styling and maximum code reuse.
+ * Shows Page — Multilingual Edition
+ *
+ * Groups all shows by the language being taught (targetLanguage).
+ * Spanish, French, Italian, Swedish → single-show sections at the top.
+ * German → special multi-variant section at the bottom.
  */
 
 import BaseLayout from '@/layouts/BaseLayout.astro';
@@ -17,14 +18,38 @@ const { shows, seo } = siteConfig;
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 // SEO metadata
-const title = 'German Podcast Shows | Small Talk Café — Practice Speaking';
-const description = 'Browse all Small Talk Café German podcast shows. Bite-sized episodes to build real speaking confidence — for English, Spanish, French & Italian speakers. On Spotify & Apple Podcasts.';
+const title = 'Language Podcast Shows | Small Talk Café — Learn Spanish, French, Italian, German, Swedish';
+const description =
+  'Browse all Small Talk Café podcast shows. Bite-sized episodes to learn Spanish, French, Italian, German or Swedish — real conversations, no textbook. New episodes on Spotify & Apple Podcasts.';
 
-// Structured data: CollectionPage with the 4 shows
+// Language group metadata — order determines display order on the page
+const languageGroupMeta: Record<string, { name: string; flag: string; tagline: string }> = {
+  es: { name: 'Spanish', flag: '🇪🇸', tagline: 'Conversational Spanish — real situations, zero boring grammar.' },
+  fr: { name: 'French', flag: '🇫🇷', tagline: 'Practical French — from the boulangerie to the boardroom.' },
+  it: { name: 'Italian', flag: '🇮🇹', tagline: 'Everyday Italian — at the café, the market, and beyond.' },
+  sv: { name: 'Swedish', flag: '🇸🇪', tagline: 'Natural Swedish — short stories and everyday conversations.' },
+  // German last — it's the special multi-variant section
+  de: { name: 'German',  flag: '🇩🇪', tagline: 'Our most extensive series — available in 5 native languages.' },
+};
+
+const languageOrder = ['es', 'fr', 'it', 'sv', 'de'];
+const languageGroups = languageOrder
+  .map((lang) => ({
+    targetLanguage: lang,
+    ...languageGroupMeta[lang],
+    shows: shows.filter((s) => s.targetLanguage === lang),
+  }))
+  .filter((g) => g.shows.length > 0);
+
+// Split into single-show groups (non-German) and the German multi-variant group
+const singleGroups = languageGroups.filter((g) => g.targetLanguage !== 'de');
+const germanGroup = languageGroups.find((g) => g.targetLanguage === 'de');
+
+// Structured data
 const collectionSchema = {
   '@context': 'https://schema.org',
   '@type': 'CollectionPage',
-  name: 'Small Talk Café — All Podcast Shows',
+  name: 'Small Talk Café — All Language Podcast Shows',
   description,
   url: `${seo.siteUrl}/shows/`,
   hasPart: shows.map((show) => ({
@@ -40,66 +65,115 @@ const collectionSchema = {
   <Fragment slot="head-extras">
     <script is:inline type="application/ld+json" set:html={JSON.stringify(collectionSchema)} />
   </Fragment>
+
   <div class="min-h-screen flex flex-col">
     <Header />
-    
-    <main class="shows-page bg-brand-background flex-grow">
-      <!-- Page Header -->
-      <section class="py-12 bg-brand-background">
-        <div class="container-custom text-center">
-          <h1 class="text-4xl md:text-5xl font-bold text-brand-secondary mb-4">
-            German Podcast Shows — Practice Speaking
+
+    <main class="bg-brand-background flex-grow">
+
+      <!-- ── Page Header ─────────────────────────────────────────────── -->
+      <section class="py-10 md:py-14 bg-brand-background text-center px-4">
+        <div class="container-custom max-w-2xl mx-auto">
+          <p class="text-brand-accent font-semibold text-xs uppercase tracking-widest mb-3">All Shows</p>
+          <h1 class="text-3xl md:text-5xl font-bold text-brand-secondary mb-4 leading-tight">
+            Pick Your Language,<br class="hidden sm:block" /> Start Speaking
           </h1>
-          <p class="text-lg text-brand-secondary/80 max-w-2xl mx-auto">
-            Bite-sized episodes designed to build real German speaking confidence.
-            <br> Available for English, Spanish, French &amp; Italian speakers.
+          <p class="text-brand-secondary/70 text-base md:text-lg leading-relaxed">
+            Bite-sized podcast episodes for Spanish, French, Italian, German and Swedish.
+            New episodes every day — real conversations, no textbook.
           </p>
         </div>
       </section>
 
-      <!-- Preply Affiliate Banner -->
+      <!-- ── Preply Banner ───────────────────────────────────────────── -->
       <section class="pb-4 px-4" aria-label="Sponsored content">
         <div class="container-custom max-w-5xl mx-auto">
           <PreplyBanner />
         </div>
       </section>
 
-      <!-- Shows Grid (2 columns) -->
-      <section class="py-12 md:py-16">
-        <div class="container-custom">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-            {shows.map((show) => (
-              <div class="show-grid-item">
-                <ShowDisplay 
-                  show={show} 
-                  showTitle={true} 
-                  showDescription={true}
-                  headingLevel="h2"
-                  linkable={true}
-                />
-              </div>
-            ))}
+      <!-- ── Non-German Shows — 2-column grid ──────────────────────── -->
+      {singleGroups.length > 0 && (
+        <section class="px-4 py-10 md:py-14 border-b border-brand-secondary/8">
+          <div class="container-custom max-w-5xl mx-auto">
+            <div class="non-german-grid">
+              {singleGroups.map((group) => (
+                <div
+                  id={`learn-${group.name.toLowerCase()}`}
+                  class="non-german-cell"
+                  aria-labelledby={`heading-${group.targetLanguage}`}
+                >
+                  <!-- Cell header -->
+                  <div class="cell-header">
+                    <div class="cell-title-row">
+                      <span class="cell-flag" aria-hidden="true">{group.flag}</span>
+                      <h2 id={`heading-${group.targetLanguage}`} class="cell-heading">
+                        Learn {group.name}
+                      </h2>
+                    </div>
+                    <p class="cell-tagline">{group.tagline}</p>
+                  </div>
+                  <!-- Show -->
+                  {group.shows.map((show) => (
+                    <ShowDisplay
+                      show={show}
+                      showTitle={true}
+                      showDescription={true}
+                      headingLevel="h3"
+                      linkable={true}
+                    />
+                  ))}
+                </div>
+              ))}
+            </div>
           </div>
-          
-          {shows.length === 0 && (
-            <div class="text-center py-16">
-              <p class="text-brand-secondary/80 text-lg">
-                No shows available yet. Check back soon!
+        </section>
+      )}
+
+      <!-- ── German — Special multi-variant section ─────────────────── -->
+      {germanGroup && (
+        <section
+          id="learn-german"
+          class="german-section px-4 py-10 md:py-14"
+          aria-labelledby="heading-de"
+        >
+          <div class="container-custom max-w-5xl mx-auto">
+            <div class="cell-header" style="margin-bottom: 2rem;">
+              <div class="cell-title-row">
+                <span class="cell-flag" aria-hidden="true">{germanGroup.flag}</span>
+                <h2 id="heading-de" class="cell-heading">Learn {germanGroup.name}</h2>
+                <span class="german-badge">{germanGroup.shows.length} shows</span>
+              </div>
+              <p class="cell-tagline">{germanGroup.tagline}</p>
+              <p class="german-note">
+                Our most extensive series — dedicated versions for English, Spanish, French, Italian, and Turkish speakers. Pick the show taught in your native language.
               </p>
             </div>
-          )}
-        </div>
-      </section>
-    </main>
+            <div class="german-grid">
+              {germanGroup.shows.map((show) => (
+                <div class="show-grid-item">
+                  <ShowDisplay
+                    show={show}
+                    showTitle={true}
+                    showDescription={true}
+                    headingLevel="h3"
+                    linkable={true}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
-      <!-- Shop Cross-link -->
+      <!-- ── Shop Cross-link ─────────────────────────────────────────── -->
       <section class="py-10 bg-brand-secondary" aria-labelledby="shop-xlink-heading">
         <div class="container-custom max-w-3xl mx-auto px-4 text-center">
           <h2 id="shop-xlink-heading" class="text-xl md:text-2xl font-bold text-brand-background mb-3">
             Love Small Talk Café? Wear It.
           </h2>
           <p class="text-brand-background/75 mb-6 text-sm md:text-base">
-            Browse our German-learner merch — mugs, tees, tote bags, and more.
+            Mugs, hoodies, and tote bags — browse our exclusive gear for language learners.
           </p>
           <a
             href={`${base}/shop/`}
@@ -113,12 +187,99 @@ const collectionSchema = {
         </div>
       </section>
 
+    </main>
+
     <Footer />
   </div>
 </BaseLayout>
 
 <style>
-  .shows-page {
-    min-height: auto;
+  /* ── Non-German 2-column grid ─────────────────────────────────── */
+  .non-german-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  @media (min-width: 768px) {
+    .non-german-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+  }
+
+  /* Each non-German cell */
+  .non-german-cell {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  /* Cell header (shared by non-German cells and German section) */
+  .cell-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+  }
+  .cell-title-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  .cell-flag {
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+  .cell-heading {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.375rem;
+    font-weight: 800;
+    color: #523E26;
+    margin: 0;
+    line-height: 1.2;
+  }
+  @media (min-width: 768px) {
+    .cell-heading { font-size: 1.5rem; }
+  }
+  .cell-tagline {
+    font-size: 0.875rem;
+    color: rgba(82, 62, 38, 0.60);
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  /* ── German section ───────────────────────────────────────────── */
+  .german-section {
+    background: rgba(243, 156, 18, 0.04);
+    border-top: 2px solid rgba(243, 156, 18, 0.15);
+  }
+  .german-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  @media (min-width: 768px) {
+    .german-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  .german-badge {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(243, 156, 18, 0.15);
+    color: #b37800;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.2rem 0.65rem;
+    border-radius: 9999px;
+    border: 1px solid rgba(243, 156, 18, 0.3);
+    white-space: nowrap;
+  }
+  .german-note {
+    font-size: 0.875rem;
+    color: rgba(82, 62, 38, 0.55);
+    margin: 0.25rem 0 0;
+    line-height: 1.55;
+    max-width: 60ch;
   }
 </style>
