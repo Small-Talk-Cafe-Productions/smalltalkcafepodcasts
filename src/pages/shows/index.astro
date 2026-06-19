@@ -18,21 +18,26 @@ const { shows, seo } = siteConfig;
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 // SEO metadata
-const title = 'Language Podcast Shows | Small Talk Café — Learn Spanish, French, Italian, German, Swedish';
+const title = 'Language Podcast Shows | Small Talk Café — Learn Spanish, French, Italian, Portuguese, Dutch, Swedish, Japanese, Korean, Mandarin, German';
 const description =
-  'Browse all Small Talk Café podcast shows. Bite-sized episodes to learn Spanish, French, Italian, German or Swedish — real conversations, no textbook. New episodes on Spotify & Apple Podcasts.';
+  'Browse all Small Talk Café podcast shows. Bite-sized episodes to learn Spanish, French, Italian, Portuguese, Dutch, Swedish, Japanese, Korean, Mandarin, or German — real conversations, no textbook. New episodes on Spotify & Apple Podcasts.';
 
 // Language group metadata — order determines display order on the page
 const languageGroupMeta: Record<string, { name: string; flag: string; tagline: string }> = {
   es: { name: 'Spanish', flag: '🇪🇸', tagline: 'Conversational Spanish — real situations, zero boring grammar.' },
   fr: { name: 'French', flag: '🇫🇷', tagline: 'Practical French — from the boulangerie to the boardroom.' },
   it: { name: 'Italian', flag: '🇮🇹', tagline: 'Everyday Italian — at the café, the market, and beyond.' },
+  pt: { name: 'Portuguese', flag: '🇵🇹', tagline: 'Conversational Portuguese — real situations, bite-sized lessons.' },
+  nl: { name: 'Dutch', flag: '🇳🇱', tagline: 'Practical Dutch — short stories and everyday conversations.' },
   sv: { name: 'Swedish', flag: '🇸🇪', tagline: 'Natural Swedish — short stories and everyday conversations.' },
+  ja: { name: 'Japanese', flag: '🇯🇵', tagline: 'Everyday Japanese — speak naturally right from the start.' },
+  ko: { name: 'Korean', flag: '🇰🇷', tagline: 'Conversational Korean — real dialogues, no complex rules.' },
+  zh: { name: 'Mandarin', flag: '🇨🇳', tagline: 'Practical Mandarin — master everyday conversations easily.' },
   // German last — it's the special multi-variant section
   de: { name: 'German',  flag: '🇩🇪', tagline: 'Our most extensive series — available in 5 native languages.' },
 };
 
-const languageOrder = ['es', 'fr', 'it', 'sv', 'de'];
+const languageOrder = ['es', 'fr', 'it', 'pt', 'nl', 'sv', 'ja', 'ko', 'zh', 'de'];
 const languageGroups = languageOrder
   .map((lang) => ({
     targetLanguage: lang,
@@ -79,7 +84,7 @@ const collectionSchema = {
             Pick Your Language,<br class="hidden sm:block" /> Start Speaking
           </h1>
           <p class="text-brand-secondary/70 text-base md:text-lg leading-relaxed">
-            Bite-sized podcast episodes for Spanish, French, Italian, German and Swedish.
+            Bite-sized podcast episodes for Spanish, French, Italian, Portuguese, Dutch, Swedish, Japanese, Korean, Mandarin, and German.
             New episodes every day — real conversations, no textbook.
           </p>
         </div>
