@@ -10,6 +10,7 @@
  * Then commit the updated src/data/products.json.
  */
 
+// The Shopify store has been permanently closed. This domain is no longer active.
 export const SHOP_DOMAIN = 'https://smalltalkcafe.shop';
 
 import cachedProducts from '../data/products.json';

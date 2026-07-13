@@ -73,7 +73,7 @@ export function generateOrganizationSchema(
       addressLocality: 'Munich',
       addressCountry: 'DE',
     },
-    sameAs: [socialLinks.youtube, socialLinks.instagram, socialLinks.shopify],
+    sameAs: [socialLinks.youtube, socialLinks.instagram],
   };
 }
 
@@ -127,7 +127,7 @@ export function generateProductListSchema(
             applicableCountry: 'DE',
             returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
             merchantReturnDays: 14,
-            url: 'https://smalltalkcafe.shop/policies/refund-policy',
+            url: 'https://smalltalkcafe.de/returns/',
           },
           shippingDetails: {
             '@type': 'OfferShippingDetails',

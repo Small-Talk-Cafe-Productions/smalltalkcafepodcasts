@@ -1,6 +1,13 @@
 [build]
   publish = "dist"
 
+# Redirect disabled Shopify store to the /shop page on the main site
+[[redirects]]
+  from   = "https://smalltalkcafe.shop/*"
+  to     = "https://smalltalkcafe.de/shop/"
+  status = 301
+  force  = true
+
 # Default: HTML files should be revalidated frequently
 [[headers]]
 for = "/*.html"

@@ -2,11 +2,8 @@
 /**
  * Shop Page
  *
- * Dedicated merch hub for Small Talk Café. Products are fetched live from
- * the Shopify storefront at build time — any change you make in Shopify
- * will appear here on the next CI build (or the weekly automated rebuild).
- *
- * No manual maintenance required.
+ * The Small Talk Café merch store has been permanently closed.
+ * This page remains live to handle old links gracefully.
  *
  * Route: /shop
  */
@@ -14,135 +11,58 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
-import { siteConfig } from '@/config/site';
-import { fetchShopifyProducts, formatPrice } from '@/utils/shopify';
-import { generateProductListSchema } from '@/config/seo';
-import ProductCard from '@/components/ProductCard.astro';
 
-const shopUrl = siteConfig.socialLinks.shopify;
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
-// Fetch all live products at build time — returns [] gracefully on error
-const products = await fetchShopifyProducts();
-const hasProducts = products.length > 0;
-
-const title = 'Merch Shop | Small Talk Café — Language Learning Gear';
+const title = 'Shop | Small Talk Café';
 const description =
-  'Deck out in Small Talk Café gear while you practice your German. Shop hoodies, mugs, tote bags and more. Perfect gifts for language learners and German culture lovers.';
-
-const productListSchema = hasProducts
-  ? generateProductListSchema(products, siteConfig.seo)
-  : null;
+  'The Small Talk Café merch store is now closed. Browse our free German language learning podcasts on Spotify and Apple Podcasts.';
 ---
 
 <BaseLayout title={title} description={description}>
-  {productListSchema && (
-    <script is:inline slot="head-extras" type="application/ld+json" set:html={JSON.stringify(productListSchema)} />
-  )}
   <div class="min-h-screen flex flex-col bg-brand-background">
     <Header />
 
     <main class="flex-grow">
 
-      <!-- Hero -->
-      <section class="py-8 md:py-12">
-        <div class="container-custom text-center max-w-2xl mx-auto px-4">
+      <!-- Closed notice -->
+      <section class="py-16 md:py-24 px-4">
+        <div class="container-custom max-w-2xl mx-auto text-center">
+
+          <p class="text-5xl mb-6" aria-hidden="true">☕</p>
+
           <h1 class="text-4xl md:text-5xl font-bold text-brand-secondary leading-tight mb-5">
-            Merch for German<br />Language Learners
+            The Shop is Now Closed
           </h1>
+
           <p class="text-brand-secondary/70 leading-relaxed text-base md:text-lg mb-4">
-            Small Talk Café is the German podcast built on one idea: Deutsch should feel like
-            a conversation over coffee, not a grammar exam. Our merchandise carries that same spirit — every
-            mug, t-shirt, and tote is a wearable reminder that German is approachable, fun, and yours to own.
-          </p>
-          <p class="text-brand-secondary/70 leading-relaxed text-base md:text-lg mb-8">
-            Searching for the perfect German learner gift — for yourself or a fellow Deutschlerner? From
-            <em>Bier Essentials</em> mugs and <em>Brezel</em> ceramics to our German Essentials t-shirt
-            range, every piece is a conversation starter in any language.
-          </p>
-          <a
-            href={shopUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="inline-flex items-center gap-2 bg-brand-secondary text-brand-background font-heading font-bold px-7 py-3.5 rounded-full hover:opacity-85 transition-opacity text-base"
-          >
-            Shop Everything
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
-            </svg>
-          </a>
-        </div>
-      </section>
-
-      <!-- Live Products Grid (populated from Shopify at build time) -->
-      <section class="py-4 md:py-8" aria-labelledby="products-heading">
-        <div class="container-custom px-4">
-          <h2 id="products-heading" class="text-2xl md:text-3xl font-bold text-brand-secondary text-center mb-2">
-            {hasProducts ? 'Our Products' : 'Browse the Store'}
-          </h2>
-          <p class="text-center text-brand-secondary/60 text-sm mb-10">
-            {!hasProducts && 'Visit our Shopify store to see all available products.'}
+            We've decided to close the Small Talk Café merch store. Thank you to everyone
+            who showed interest — we genuinely appreciate the support.
           </p>
 
-          {hasProducts ? (
-            <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto list-none p-0">
-              {products.map((product) => (
-                <li>
-                  <ProductCard product={product} />
-                </li>
-              ))}
-            </ul>
-          ) : (
-            <!-- Fallback when Shopify is unreachable at build time -->
-            <div class="text-center py-12">
-              <p class="text-4xl mb-4" aria-hidden="true">🛍️</p>
-              <p class="text-brand-secondary/70 mb-6">
-                Head over to our Shopify store to browse the full collection.
-              </p>
-              <a
-                href={shopUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="inline-flex items-center gap-2 bg-brand-secondary text-brand-background font-heading font-bold px-6 py-3 rounded-full hover:opacity-85 transition-opacity"
-              >
-                Visit the Store
-              </a>
-            </div>
-          )}
-        </div>
-      </section>
-
-      <!-- Policy links -->
-      <section class="py-6 px-4 border-t border-brand-secondary/10">
-        <div class="container-custom max-w-3xl mx-auto text-center">
-          <p class="text-brand-secondary/50 text-xs">
-            <a href={`${base}/returns/`} class="underline hover:opacity-70 transition-opacity">Returns &amp; Refunds</a>
-            <span class="mx-2">·</span>
-            <a href={`${base}/privacy-policy/`} class="underline hover:opacity-70 transition-opacity">Privacy Policy</a>
-            <span class="mx-2">·</span>
-            <a href="https://smalltalkcafe.shop/policies/terms-of-service" target="_blank" rel="noopener noreferrer" class="underline hover:opacity-70 transition-opacity">Terms of Service</a>
+          <p class="text-brand-secondary/70 leading-relaxed text-base md:text-lg mb-10">
+            Our podcasts remain completely free. If you have a question or a pending
+            order inquiry, please reach out to us directly.
           </p>
-        </div>
-      </section>
 
-      <!-- Listen + Shop Cross-link -->
-      <section class="py-10 bg-brand-secondary" aria-labelledby="listen-heading">
-        <div class="container-custom max-w-3xl mx-auto px-4 text-center">
-          <h2 id="listen-heading" class="text-xl md:text-2xl font-bold text-brand-background mb-3">
-            New to Small Talk Café?
-          </h2>
-          <p class="text-brand-background/75 mb-6 text-sm md:text-base">
-            Practice speaking German with our podcast — bite-sized episodes, new every day.
-          </p>
-          <a
-            href={`${base}/shows/`}
-            class="inline-flex items-center gap-2 bg-brand-background text-brand-secondary font-heading font-bold px-6 py-3 rounded-full hover:opacity-90 transition-opacity text-sm"
-          >
-            Browse All Shows
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-            </svg>
-          </a>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href={`${base}/shows/`}
+              class="inline-flex items-center justify-center gap-2 bg-brand-secondary text-brand-background font-heading font-bold px-7 py-3.5 rounded-full hover:opacity-85 transition-opacity text-base"
+            >
+              Browse Our Shows
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+              </svg>
+            </a>
+            <a
+              href="mailto:smalltalkcafe.productions@gmail.com"
+              class="inline-flex items-center justify-center gap-2 border-2 border-brand-secondary text-brand-secondary font-heading font-bold px-7 py-3.5 rounded-full hover:opacity-80 transition-opacity text-base"
+            >
+              Contact Us
+            </a>
+          </div>
+
         </div>
       </section>
 
@@ -151,6 +71,3 @@ const productListSchema = hasProducts
     <Footer />
   </div>
 </BaseLayout>
-
-<style>
-</style>
