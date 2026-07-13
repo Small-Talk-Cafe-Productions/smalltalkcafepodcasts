@@ -11,7 +11,7 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
 import ShowDisplay from '@/components/ShowDisplay.astro';
-import PreplyBanner from '@/components/PreplyBanner.astro';
+
 import { siteConfig } from '@/config/site';
 
 const { shows, seo } = siteConfig;
@@ -90,13 +90,6 @@ const collectionSchema = {
         </div>
       </section>
 
-      <!-- ── Preply Banner ───────────────────────────────────────────── -->
-      <section class="pb-4 px-4" aria-label="Sponsored content">
-        <div class="container-custom max-w-5xl mx-auto">
-          <PreplyBanner />
-        </div>
-      </section>
-
       <!-- ── Non-German Shows — 2-column grid ──────────────────────── -->
       {singleGroups.length > 0 && (
         <section class="px-4 py-10 md:py-14 border-b border-brand-secondary/8">
@@ -170,27 +163,6 @@ const collectionSchema = {
           </div>
         </section>
       )}
-
-      <!-- ── Shop Cross-link ─────────────────────────────────────────── -->
-      <section class="py-10 bg-brand-secondary" aria-labelledby="shop-xlink-heading">
-        <div class="container-custom max-w-3xl mx-auto px-4 text-center">
-          <h2 id="shop-xlink-heading" class="text-xl md:text-2xl font-bold text-brand-background mb-3">
-            Love Small Talk Café? Wear It.
-          </h2>
-          <p class="text-brand-background/75 mb-6 text-sm md:text-base">
-            Mugs, hoodies, and tote bags — browse our exclusive gear for language learners.
-          </p>
-          <a
-            href={`${base}/shop/`}
-            class="inline-flex items-center gap-2 bg-brand-background text-brand-secondary font-heading font-bold px-6 py-3 rounded-full hover:opacity-90 transition-opacity text-sm"
-          >
-            Visit the Shop
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
-            </svg>
-          </a>
-        </div>
-      </section>
 
     </main>
 

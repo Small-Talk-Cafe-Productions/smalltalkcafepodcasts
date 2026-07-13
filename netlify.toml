@@ -1,6 +1,9 @@
 [build]
   publish = "dist"
 
+[build.environment]
+  NODE_VERSION = "22"
+
 # Redirect disabled Shopify store to the /shop page on the main site
 [[redirects]]
   from   = "https://smalltalkcafe.shop/*"

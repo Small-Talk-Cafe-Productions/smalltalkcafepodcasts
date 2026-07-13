@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
-import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
+import tailwindcss from 'tailwindcss';
+import autoprefixer from 'autoprefixer';
 
 // https://astro.build/config
 export default defineConfig({
@@ -12,7 +13,6 @@ export default defineConfig({
   // GitHub Pages served URLs are all consistent (no 301 redirect loops).
   trailingSlash: 'always',
   integrations: [
-    tailwind(),
     sitemap({
       // Hint to Google how often to re-crawl and the relative importance of each page.
       // lastmod signals whether content has changed since the last crawl.
@@ -40,5 +40,15 @@ export default defineConfig({
   output: 'static',
   build: {
     assets: 'assets'
-  }
+  },
+  vite: {
+    css: {
+      postcss: {
+        plugins: [
+          tailwindcss(),
+          autoprefixer(),
+        ],
+      },
+    },
+  },
 });
