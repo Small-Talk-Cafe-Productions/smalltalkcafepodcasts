@@ -1,0 +1,640 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="description" content="Deutsch Lounge — Language Learning Trainer"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/languagelounge/favicon.svg"><meta name="generator" content="Astro v7.3.5"><title>Simple Past: sein and haben — Deutsch Lounge</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet"><!-- Apply theme before paint to avoid flash --><script>
+      (function() {
+        const saved = localStorage.getItem('wortschatz_theme');
+        if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script><link rel="stylesheet" href="/languagelounge/_astro/Layout.BeSASyxj.css"></head><body class="antialiased min-h-screen flex flex-col" style="background-color:var(--bg);color:var(--text);"><!-- Header --><header class="sticky top-0 z-50 border-b" style="background-color:var(--bg);border-color:var(--border);"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between gap-4" style="height:4.5rem;"><!-- Logo + Language Switcher --><div class="flex items-center gap-4 shrink-0"><a href="/languagelounge/" class="flex items-center gap-2 group"><span class="font-outfit font-extrabold text-xl sm:text-2xl tracking-tight transition-colors" style="color:var(--text);">Small Talk Café <span class="font-normal text-base hidden sm:inline" style="color:var(--text-muted);">| <span id="site-name">Deutsch Lounge</span></span></span></a><!-- Language Selector Dropdown --><div class="relative" id="lang-dropdown-wrapper"><button id="lang-btn" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-sm font-bold transition-all hover:opacity-70" style="background-color:var(--bg); border-color:var(--border); color:var(--text);"><span id="lang-flag">🇩🇪</span><span id="lang-code">DE</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"></path></svg></button><div id="lang-menu" class="hidden absolute top-full left-0 mt-2 rounded-2xl border shadow-xl overflow-hidden z-50 min-w-[160px]" style="background-color:var(--card); border-color:var(--border);"><button class="lang-option w-full flex items-center gap-3 px-4 py-3 text-sm font-semibold text-left transition-colors hover:opacity-70" data-lang="de" data-flag="🇩🇪" data-code="DE" data-name="Deutsch Lounge" data-label="German" style="color:var(--text);"><span class="text-lg">🇩🇪</span><div><div class="font-bold" style="color:var(--text);">Deutsch</div><div class="text-xs" style="color:var(--text-muted);">German Learning</div></div></button><div class="border-t" style="border-color:var(--border);"></div><button class="lang-option w-full flex items-center gap-3 px-4 py-3 text-sm font-semibold text-left transition-colors hover:opacity-70" data-lang="es" data-flag="🇪🇸" data-code="ES" data-name="Spanish Gym" data-label="Spanish" style="color:var(--text);"><span class="text-lg">🇪🇸</span><div><div class="font-bold" style="color:var(--text);">Español</div><div class="text-xs" style="color:var(--text-muted);">Spanish Learning</div></div></button><div class="border-t" style="border-color:var(--border);"></div><button class="lang-option w-full flex items-center gap-3 px-4 py-3 text-sm font-semibold text-left transition-colors hover:opacity-70" data-lang="fr" data-flag="🇫🇷" data-code="FR" data-name="French Gym" data-label="French" style="color:var(--text);"><span class="text-lg">🇫🇷</span><div><div class="font-bold" style="color:var(--text);">Français</div><div class="text-xs" style="color:var(--text-muted);">French Learning</div></div></button></div></div></div><!-- Nav Links --><nav class="hidden md:flex gap-5 items-center"><a href="https://smalltalkcafe.de/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Small Talk Café Podcasts</a><span class="text-sm font-normal" style="color:var(--border);">|</span><a href="/languagelounge/vocabulary" data-german-nav class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Vokabeln</a><a href="/languagelounge/verbs" data-german-nav class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Verben</a><a href="/languagelounge/grammatik" data-german-nav class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Grammatik</a><a href="/languagelounge/redemittel" data-german-nav class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Redemittel</a><!-- Dark/Light Toggle --><button id="theme-toggle" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-sm font-semibold transition-all hover:opacity-70" style="border-color:var(--border); color:var(--text-muted);" aria-label="Toggle dark/light mode"><span id="theme-icon">☀️</span><span id="theme-label">Light</span></button></nav></div></header><!-- Coming Soon Overlay (shown for non-German languages) --><div id="coming-soon-overlay" class="hidden flex-1 flex items-center justify-center py-20 px-4"><div class="text-center max-w-lg mx-auto"><div class="text-7xl mb-6" id="coming-soon-flag">🌍</div><h1 class="font-outfit font-extrabold text-4xl sm:text-5xl mb-4" style="color:var(--text);">Coming Soon</h1><p class="text-lg mb-3" style="color:var(--text-muted);">We're working hard on the <strong id="coming-soon-lang">new language</strong> curriculum.</p><p class="text-base mb-8" style="color:var(--text-muted);">Stay tuned — it will be available very soon! In the meantime, explore our<strong>Deutsch Lounge</strong> to sharpen your German.</p><button id="coming-soon-back-btn" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-sm transition-all hover:opacity-80" style="background-color:var(--espresso); color:#fff;">🇩🇪 Switch to German</button></div></div><main id="main-content" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-1 w-full"><div class="max-w-4xl mx-auto py-6"><!-- Deck Header --><div class="flex items-start justify-between mb-8 gap-4 flex-wrap"><div><a href="/languagelounge/grammatik" class="text-xs font-bold flex items-center gap-1 mb-2 hover:opacity-70 transition-opacity capitalize" style="color:var(--espresso);"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg>grammatik</a><h1 class="text-2xl md:text-3xl font-extrabold font-outfit" style="color:var(--text);">Simple Past: sein and haben</h1><p class="text-xs font-bold uppercase tracking-wider mt-1" style="color:var(--text-muted);">Präteritum: sein und haben &bull; A1 &bull; 16 Karten</p></div><div class="flex flex-col items-end gap-4"><!-- Learn / Train mode switcher --><div class="flex rounded-xl border overflow-hidden p-1 gap-1 w-full max-w-[300px]" style="background-color:var(--bg); border-color:var(--border);"><span class="flex-1 flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold transition-all" style="background-color:var(--espresso); color:#F5F2EB;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>Lernen</span><a href="/languagelounge/training/grammatik/train?level=a1&amp;deck=grammatik-a1-praeteritum_sein_haben&amp;count=20&amp;mode=mc&amp;dir=en-de" class="flex-1 flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold hover:opacity-70 transition-all" style="color:var(--text-muted);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>Trainieren</a></div><!-- View switcher (Cards vs List) --><div class="flex rounded-xl border overflow-hidden p-1 gap-1 w-full max-w-[300px]" style="background-color:var(--bg); border-color:var(--border);"><button id="view-cards-btn" class="view-btn flex-1 flex items-center justify-center px-4 py-2 rounded-lg text-xs font-bold transition-all bg-[var(--espresso)] text-[#F5F2EB]">Karten</button><button id="view-list-btn" class="view-btn flex-1 flex items-center justify-center px-4 py-2 rounded-lg text-xs font-bold transition-all text-[var(--text-muted)] hover:opacity-70">Liste</button></div><!-- Progress indicator --><div id="progress-container" class="flex items-center gap-3"><div class="text-xs font-semibold" style="color:var(--text-muted);">Karte <span id="current-num" class="font-extrabold" style="color:var(--text);">1</span> / 16</div><div class="w-24 h-1.5 rounded-full overflow-hidden border" style="background-color:var(--bg);border-color:var(--border);"><div id="progress-bar" class="h-full transition-all duration-500 rounded-full" style="width:0%; background-color:var(--espresso);"></div></div></div></div></div><!-- ── Universal Study Card (rendered by LearningCard component) ── --><div id="card-view-wrap"><div id="card-host"><!-- The card shell — populated client-side by renderCard() --><div class="learning-card rounded-3xl border shadow-xl overflow-hidden" style="background-color:var(--card); border-color:var(--border);"><!-- ── Top bar ─────────────────────────────────── --><div class="lc-topbar flex items-center justify-between px-6 py-3.5 border-b" style="border-color:var(--border); background-color:var(--bg);"><div class="flex items-center gap-2"><span class="lc-type-badge text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-lg" style="background-color:var(--espresso); color:#F5F2EB;">—</span><span class="lc-level-badge text-[10px] font-bold px-2.5 py-1 rounded-lg cafe-badge"></span></div><button class="lc-audio-btn flex items-center justify-center w-11 h-11 rounded-full transition-transform hover:scale-105 active:scale-95 shadow-md flex-shrink-0" title="Anhören (A)" style="background-color:var(--espresso); color:#F5F2EB;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg></button></div><!-- ── Main word display ───────────────────────── --><div class="lc-hero px-7 py-8 text-center border-b" style="border-color:var(--border);"><div class="lc-article-wrap mb-1.5"><span class="lc-article text-xl font-bold"></span></div><h2 class="lc-word text-5xl md:text-6xl font-extrabold font-outfit mb-3" style="color:var(--text);">—</h2><p class="lc-translation text-lg font-semibold italic" style="color:var(--text-muted);"></p><p class="lc-forms text-sm font-medium mt-2" style="color:var(--text-muted);"></p></div><!-- ── Meta info grid ─────────────────────────── --><div class="lc-meta-grid grid border-b" style="border-color:var(--border);"><!-- populated by JS --></div><!-- ── Grammar note ───────────────────────────── --><div class="lc-grammar-wrap hidden px-7 py-5 border-b" style="border-color:var(--border); background-color:var(--bg);"><p class="text-[10px] font-bold uppercase tracking-widest mb-2" style="color:var(--espresso);">📌 <span class="lc-grammar-label">Grammatiknotiz</span></p><p class="lc-grammar-text text-sm leading-relaxed font-medium whitespace-pre-wrap" style="color:var(--text);"></p></div><!-- ── Type-specific block ────────────────────── --><!-- Verb conjugation (hidden by default, shown for verb cards) --><div class="lc-conjugation-wrap hidden border-b overflow-x-auto" style="border-color:var(--border);"><div class="lc-conjugation-inner"><!-- populated by JS --></div></div><!-- Connector word-order block --><div class="lc-wordorder-wrap hidden px-7 py-4 border-b" style="border-color:var(--border); background-color:var(--bg);"><div class="flex items-start gap-3 text-sm font-medium" style="color:var(--text-muted);"><span class="text-base flex-shrink-0">📐</span><span class="lc-wordorder-text"></span></div></div><!-- Phrase preposition block --><div class="lc-phrase-wrap hidden px-7 py-4 border-b" style="border-color:var(--border); background-color:var(--bg);"><p class="text-[10px] font-bold uppercase tracking-widest mb-2" style="color:var(--espresso);">Struktur</p><p class="lc-phrase-rule text-sm font-semibold" style="color:var(--text);"></p></div><!-- ── Examples ───────────────────────────────── --><div class="px-7 py-6 border-b" style="border-color:var(--border);"><p class="lc-examples-label text-[10px] font-bold uppercase tracking-widest mb-5" style="color:var(--text-muted);">Beispielsätze</p><div class="lc-examples space-y-3"><!-- populated by JS --></div></div><!-- ── Tags ───────────────────────────────────── --><div class="lc-tags-row px-7 py-4 flex items-center gap-2 flex-wrap"><span class="text-[10px] font-bold uppercase tracking-wider" style="color:var(--text-muted);">Tags:</span><div class="lc-tags flex gap-2 flex-wrap"></div></div></div><script>(function(){const cardJson = "{\"id\":\"grammatik-a1-praeteritum_sein_haben-001\",\"target\":\"Das Präteritum (Simple Past)\",\"source\":\"The Simple Past tense\",\"grammar_note\":\"The Präteritum is one of two past tenses in German. While the Perfekt (Present Perfect) is generally used for spoken language, the Präteritum is more common in written language, narratives, and formal contexts. However, for the verbs 'sein' (to be) and 'haben' (to have), the Präteritum is frequently used even in spoken German, making it crucial for A1 learners.\",\"example_target\":\"Gestern war ich im Kino.\",\"example_source\":\"Yesterday I was at the cinema.\",\"extra_examples\":[{\"de\":\"Ich hatte gestern keine Zeit.\",\"en\":\"I had no time yesterday.\"},{\"de\":\"Es war ein schöner Tag.\",\"en\":\"It was a beautiful day.\"}],\"common_error\":\"Learners often try to form the Perfekt for 'sein' and 'haben' (e.g., 'ich bin gewesen', 'ich habe gehabt') when the Präteritum ('ich war', 'ich hatte') is more natural and expected, especially in simple statements.\",\"tags\":[\"grammatik\",\"a1\",\"praeteritum\",\"introduction\"],\"type\":\"grammar\"}";
+const langConfigJson = "{\"language_pair\":\"english_german\",\"target_lang\":\"de\",\"native_lang\":\"en\",\"target_lang_name\":\"Deutsch\",\"native_lang_name\":\"English\",\"speech_lang\":\"de-DE\",\"noun_metadata_fields\":[{\"key\":\"article\",\"label\":\"Artikel\",\"render\":\"article_badge\"},{\"key\":\"gender\",\"label\":\"Genus\",\"render\":\"gender_label\"},{\"key\":\"plural\",\"label\":\"Plural\",\"render\":\"text\"}],\"article_colours\":{\"der\":\"#4A7C9E\",\"die\":\"#B05070\",\"das\":\"#4A8A5A\"},\"gender_labels\":{\"m\":\"Maskulinum\",\"f\":\"Femininum\",\"n\":\"Neutrum\"},\"verb_tenses\":[\"Präsens\",\"Präteritum\",\"Perfekt\",\"Futur I\",\"Konjunktiv II\"],\"cases\":{\"nominative\":\"Nominativ\",\"accusative\":\"Akkusativ\",\"dative\":\"Dativ\",\"genitive\":\"Genitiv\"},\"ui_labels\":{\"learn_mode\":\"Lernen\",\"train_mode\":\"Trainieren\",\"examples_heading\":\"Beispielsätze\",\"grammar_note_heading\":\"Grammatiknotiz\",\"audio_button\":\"Anhören\",\"back_link\":\"Zurück\",\"card_counter\":\"Karte {current} / {total}\",\"next_button\":\"Weiter\",\"finish_button\":\"Fertig\",\"correct\":\"Richtig!\",\"wrong\":\"Falsch\"}}";
+
+  /**
+   * Client-side card renderer.
+   * Uses the universal card-renderer logic inline (no imports in Astro is:inline).
+   */
+
+  // ── Parse data ──────────────────────────────────────────────────────────
+  const card   = JSON.parse(cardJson);
+  const config = JSON.parse(langConfigJson);
+
+  // ── Helpers ─────────────────────────────────────────────────────────────
+  function stripArticle(word) {
+    return (word || '').replace(/^(der|die|das|el|la|los|las|le|les|l')\s+/i, '').trim();
+  }
+
+  function getArticleColour(article) {
+    if (!article || !config.article_colours) return 'var(--espresso)';
+    return config.article_colours[article.toLowerCase()] || 'var(--espresso)';
+  }
+
+  function getGenderLabel(gender) {
+    if (!gender) return '';
+    return (config.gender_labels || {})[gender] || gender;
+  }
+
+  function getTypeLabel() {
+    const tags = card.tags || [];
+    if (tags.includes('noun'))       return 'Substantiv';
+    if (tags.includes('verb'))       return 'Verb';
+    if (tags.includes('adjective'))  return 'Adjektiv';
+    if (tags.includes('expression')) return 'Ausdruck';
+    const map = { vocab:'Vokabel', verb:'Verb', phrase:'Phrase', connector:'Konnektor', grammar:'Grammatik' };
+    return map[card.type] || 'Karte';
+  }
+
+  function formatHighlight(text) {
+    if (!text) return '';
+    return String(text).replace(/\*(.*?)\*/g, '<span class="highlighter">$1</span>');
+  }
+
+  function normaliseExample(ex) {
+    return {
+      target: ex.target || ex.de || '',
+      source: ex.source || ex.en || '',
+      note: ex.note,
+    };
+  }
+
+  function getMetaFacts() {
+    const meta = { ...card.metadata, article: card.article, gender: card.gender, plural: card.plural, ...card.metadata };
+    const facts = [];
+    for (const field of (config.noun_metadata_fields || [])) {
+      const raw = meta[field.key] || card[field.key];
+      if (!raw || raw === '~') continue;
+      let value = String(raw);
+      let colour;
+      if (field.render === 'gender_label') value = getGenderLabel(raw);
+      else if (field.render === 'article_badge') colour = getArticleColour(raw);
+      facts.push({ label: field.label, value, colour });
+    }
+    return facts;
+  }
+
+  // ── Render ──────────────────────────────────────────────────────────────
+  const container = document.querySelector('.learning-card');
+  if (!container) { console.error('LearningCard: container not found'); }
+
+  function sel(cls) { return container?.querySelector(cls); }
+
+  // Type badge
+  sel('.lc-type-badge').textContent = getTypeLabel();
+
+  // Level badge
+  sel('.lc-level-badge').textContent = card.level || '';
+
+  // Article
+  const article = card.article || card.metadata?.article;
+  const articleWrap = sel('.lc-article-wrap');
+  const articleEl   = sel('.lc-article');
+  if (article && card.tags?.includes('noun') && !card.plural_only) {
+    articleEl.textContent  = article;
+    articleEl.style.color  = getArticleColour(article);
+    articleWrap.style.display = '';
+  } else {
+    articleWrap.style.display = 'none';
+  }
+
+  // Word
+  sel('.lc-word').textContent = stripArticle(card.target);
+
+  // Translation
+  sel('.lc-translation').textContent = card.source || '';
+
+  // Plural / forms
+  const plural = card.plural || card.metadata?.plural;
+  const formsEl = sel('.lc-forms');
+  if (plural && !card.plural_only) formsEl.textContent = `Pl. ${plural}`;
+  else if (card.plural_only) formsEl.textContent = 'nur Plural';
+  else formsEl.textContent = '';
+
+  // Meta grid
+  const metaGrid = sel('.lc-meta-grid');
+  const facts = getMetaFacts();
+  if (facts.length) {
+    const cols = Math.min(facts.length, 4);
+    metaGrid.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
+    metaGrid.innerHTML = facts.map((f, i) => `
+      <div class="px-5 py-4 ${i < facts.length - 1 ? 'border-r' : ''}" style="border-color:var(--border);">
+        <p class="text-[9px] font-bold uppercase tracking-widest mb-1" style="color:var(--text-muted);">${f.label}</p>
+        <p class="text-sm font-bold" style="color:${f.colour || 'var(--text)'};">${f.value}</p>
+      </div>
+    `).join('');
+  } else {
+    metaGrid.style.display = 'none';
+  }
+
+  // Grammar note
+  const grammarWrap = sel('.lc-grammar-wrap');
+  if (card.grammar_note) {
+    sel('.lc-grammar-text').innerHTML = formatHighlight(card.grammar_note);
+    grammarWrap.classList.remove('hidden');
+  }
+
+  // Grammar label from config
+  const uiLabels = config.ui_labels || {};
+  if (uiLabels.grammar_note_heading) sel('.lc-grammar-label').textContent = uiLabels.grammar_note_heading;
+  if (uiLabels.examples_heading)     sel('.lc-examples-label').textContent = uiLabels.examples_heading;
+  if (uiLabels.audio_button)         sel('.lc-audio-label').textContent    = uiLabels.audio_button;
+
+  // ── Type-specific blocks ─────────────────────────────────────────────────
+
+  // Verb: conjugation table
+  const type = card.type || (card.tags?.includes('verb') ? 'verb' : 'vocab');
+  if (type === 'verb' && card.conjugations?.length) {
+    const conjWrap  = sel('.lc-conjugation-wrap');
+    const conjInner = sel('.lc-conjugation-inner');
+    conjWrap.classList.remove('hidden');
+    conjInner.innerHTML = (config.verb_tenses || card.conjugations.map(t => t.tense)).map(tense => {
+      const t = card.conjugations.find(c => c.tense === tense);
+      if (!t) return '';
+      return `
+        <div class="border-b last:border-0" style="border-color:var(--border);">
+          <p class="text-[10px] font-bold uppercase tracking-widest px-5 py-2" style="background-color:var(--bg); color:var(--espresso);">${t.tense}</p>
+          <table class="w-full text-sm">
+            <tbody>
+              ${t.forms.map((f, ri) => `
+                <tr class="${ri % 2 === 0 ? '' : ''} border-t" style="border-color:var(--border);">
+                  <td class="px-5 py-2.5 font-bold w-24" style="color:var(--espresso);">${f.pronoun}</td>
+                  <td class="px-5 py-2.5 font-semibold" style="color:var(--text);">${f.form}</td>
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+        </div>
+      `;
+    }).join('');
+  }
+
+  // Connector: word order block
+  if (type === 'connector' && card.word_order) {
+    const woWrap = sel('.lc-wordorder-wrap');
+    sel('.lc-wordorder-text').textContent = card.word_order;
+    woWrap.classList.remove('hidden');
+  }
+
+  // Phrase: preposition rule block
+  if (type === 'phrase' && card.clause_type) {
+    const phraseWrap = sel('.lc-phrase-wrap');
+    sel('.lc-phrase-rule').textContent = card.clause_type;
+    phraseWrap.classList.remove('hidden');
+  }
+
+  // ── Examples ─────────────────────────────────────────────────────────────
+  const examplesEl = sel('.lc-examples');
+  const rawExamples = card.examples || (card.example_target || card.example_de ? [{ target: card.example_target || card.example_de, source: card.example_source || card.example_en }] : []);
+
+  if (rawExamples.length) {
+    examplesEl.innerHTML = rawExamples.map(ex => {
+      const e = normaliseExample(ex);
+      return `
+        <div class="rounded-2xl border overflow-hidden" style="border-color:var(--border);">
+          <div class="px-4 py-3" style="background-color:var(--bg);">
+            <p class="font-semibold leading-snug mb-1" style="color:var(--text);">${formatHighlight(e.target)}</p>
+            <p class="text-sm italic" style="color:var(--text-muted);">${formatHighlight(e.source || '')}</p>
+          </div>
+          ${e.note ? `<div class="px-4 py-2 border-t" style="border-color:var(--border);">
+            <p class="text-[10px] font-bold font-mono" style="color:var(--espresso);">📐 ${e.note}</p>
+          </div>` : ''}
+        </div>
+      `;
+    }).join('');
+  } else {
+    examplesEl.innerHTML = `<p class="text-sm italic" style="color:var(--text-muted);">Kein Beispiel verfügbar.</p>`;
+  }
+
+  // ── Tags ─────────────────────────────────────────────────────────────────
+  const tagsEl = sel('.lc-tags');
+  tagsEl.innerHTML = (card.tags || []).map(t => `
+    <span class="text-[10px] font-bold px-2 py-0.5 rounded-md border uppercase" style="border-color:var(--border); color:var(--text-muted); background-color:var(--bg);">${t}</span>
+  `).join('');
+
+  // ── Audio button ─────────────────────────────────────────────────────────
+  sel('.lc-audio-btn')?.addEventListener('click', () => {
+    if (window.DeutschAudioEngine) {
+      window.DeutschAudioEngine.speak(card.target || '', config.speech_lang || 'de-DE', 0.85);
+    }
+  });
+})();</script></div><!-- ── Navigation ───────────────────────────── --><div class="flex items-center justify-between mt-8 gap-4"><button id="btn-prev" disabled class="flex items-center gap-2 px-6 py-3 rounded-2xl border font-bold text-sm transition-all hover:opacity-70 active:scale-95 disabled:opacity-30 disabled:cursor-not-allowed" style="border-color:var(--border); color:var(--text); background-color:var(--card);"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg>Zurück</button><!-- Dot navigation --><div id="dot-nav" class="flex items-center gap-1.5 flex-wrap justify-center max-w-xs overflow-hidden" style="max-height:2rem;"><!-- populated by JS --></div><button id="btn-next" class="flex items-center gap-2 px-6 py-3 rounded-2xl font-bold text-sm transition-all hover:opacity-80 active:scale-95" style="background-color:var(--espresso); color:#F5F2EB;">Weiter<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg></button></div><!-- Keyboard hint --><p class="text-center text-xs font-medium mt-4" style="color:var(--text-muted);">← → Pfeiltasten zum Navigieren &nbsp;·&nbsp; A zum Anhören</p></div><!-- ── List View ───────────────────────────── --><div id="list-view-wrap" class="hidden space-y-6"><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Das Präteritum (Simple Past)</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">The Simple Past tense</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">The Präteritum is one of two past tenses in German. While the Perfekt (Present Perfect) is generally used for spoken language, the Präteritum is more common in written language, narratives, and formal contexts. However, for the verbs 'sein' (to be) and 'haben' (to have), the Präteritum is frequently used even in spoken German, making it crucial for A1 learners.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Gestern war ich im Kino.</p><p class="italic text-[13px]" style="color:var(--text-muted);">Yesterday I was at the cinema.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Präteritum von 'sein' (ich, er/sie/es)</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">Simple Past of 'to be' (I, he/she/it)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">The verb 'sein' (to be) is highly irregular in the Präteritum. The forms 'ich war' and 'er/sie/es war' are identical. This form is used to describe states, conditions, or locations in the past for the first and third person singular subjects.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich war gestern sehr müde.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I was very tired yesterday.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Präteritum von 'sein' (du, ihr)</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">Simple Past of 'to be' (you singular, you plural informal)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">For the second person singular ('du') and second person plural informal ('ihr'), the Präteritum forms of 'sein' are 'warst' and 'wart' respectively. These forms are used when addressing one person informally or a group of people informally about past states or locations.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Du warst gestern nicht da.</p><p class="italic text-[13px]" style="color:var(--text-muted);">You were not there yesterday.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Präteritum von 'sein' (wir, sie/Sie)</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">Simple Past of 'to be' (we, they/you formal)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">The Präteritum forms for 'wir' (we) and 'sie/Sie' (they/you formal) are both 'waren'. This is a common pattern for many verbs in German, where the first and third person plural forms are identical to the infinitive for regular verbs, but for 'sein' it's 'waren'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Wir waren letzte Woche im Museum.</p><p class="italic text-[13px]" style="color:var(--text-muted);">We were at the museum last week.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Zusammenfassung: Präteritum von 'sein'</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">Summary: Simple Past of 'to be'</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Here is the complete conjugation of 'sein' in the Präteritum. Memorizing these forms is essential as 'sein' is one of the most frequently used verbs in German. It describes past states, conditions, or locations.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich war krank, du warst müde, er war glücklich, wir waren Freunde, ihr wart laut, sie waren zu Hause.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I was sick, you were tired, he was happy, we were friends, you all were loud, they were at home.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Präteritum von 'haben' (ich, er/sie/es)</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">Simple Past of 'to have' (I, he/she/it)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">The verb 'haben' (to have) is also irregular in the Präteritum, but its forms are more regular than 'sein'. The forms 'ich hatte' and 'er/sie/es hatte' are identical. This form is used to express past possession or experiences for the first and third person singular subjects.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich hatte gestern viel Arbeit.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I had a lot of work yesterday.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Präteritum von 'haben' (du, ihr)</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">Simple Past of 'to have' (you singular, you plural informal)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">For the second person singular ('du') and second person plural informal ('ihr'), the Präteritum forms of 'haben' are 'hattest' and 'hattet' respectively. These forms are used when addressing one person informally or a group of people informally about past possessions or experiences.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Hattest du einen schönen Urlaub?</p><p class="italic text-[13px]" style="color:var(--text-muted);">Did you have a nice vacation?</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Präteritum von 'haben' (wir, sie/Sie)</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">Simple Past of 'to have' (we, they/you formal)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">The Präteritum forms for 'wir' (we) and 'sie/Sie' (they/you formal) are both 'hatten'. This form is used for expressing past possession or experiences for plural subjects, both informal and formal.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Wir hatten gestern viel Spaß.</p><p class="italic text-[13px]" style="color:var(--text-muted);">We had a lot of fun yesterday.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Zusammenfassung: Präteritum von 'haben'</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">Summary: Simple Past of 'to have'</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Here is the complete conjugation of 'haben' in the Präteritum. These forms are crucial for expressing past possession, experiences, or states involving 'to have'. Remember that 'haben' in Präteritum is very common even in spoken German.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich hatte Hunger, du hattest Durst, er hatte Fieber, wir hatten Glück, ihr hattet Pech, sie hatten Zeit.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I was hungry, you were thirsty, he had a fever, we were lucky, you all were unlucky, they had time.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Verwendung: 'sein' im Präteritum (Zustände)</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">Usage: 'to be' in Simple Past (States/Conditions)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">The Präteritum of 'sein' is used to describe how something or someone was in the past. This includes physical states, emotional conditions, or general characteristics that existed at a specific time in the past.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich war als Kind sehr schüchtern.</p><p class="italic text-[13px]" style="color:var(--text-muted);">As a child, I was very shy.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Verwendung: 'sein' im Präteritum (Ort/Existenz)</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">Usage: 'to be' in Simple Past (Location/Existence)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">The Präteritum of 'sein' also describes where someone or something was located in the past, or simply that something existed. It answers questions like 'Wo war...?' (Where was...?).</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Meine Eltern waren letztes Jahr in Italien.</p><p class="italic text-[13px]" style="color:var(--text-muted);">My parents were in Italy last year.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Verwendung: 'haben' im Präteritum (Besitz)</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">Usage: 'to have' in Simple Past (Possession)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">The Präteritum of 'haben' is used to express that someone possessed something in the past. It's a direct equivalent to 'had' in English and is very common for describing past ownership.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Früher hatte ich ein rotes Auto.</p><p class="italic text-[13px]" style="color:var(--text-muted);">Earlier, I had a red car.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Verwendung: 'haben' im Präteritum (Erfahrungen/Ereignisse)</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">Usage: 'to have' in Simple Past (Experiences/Events)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Beyond possession, 'haben' in Präteritum is also used to describe past experiences or events, often in fixed expressions. This includes having fun, having time, having a good day, or having problems.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Wir hatten gestern viel Spaß auf der Party.</p><p class="italic text-[13px]" style="color:var(--text-muted);">We had a lot of fun at the party yesterday.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Präteritum vs. Perfekt für 'sein' und 'haben'</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">Simple Past vs. Present Perfect for 'to be' and 'to have'</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">For most verbs, Perfekt is used in spoken German and Präteritum in written German. However, for 'sein' and 'haben', the Präteritum forms ('war', 'hatte') are very common and often preferred even in spoken language, especially for simple statements. While Perfekt forms ('bin gewesen', 'habe gehabt') are grammatically correct, they sound less natural for basic statements at A1.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich war krank. (Common) vs. Ich bin krank gewesen. (Less common in simple statements)</p><p class="italic text-[13px]" style="color:var(--text-muted);">I was sick. vs. I have been sick.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Häufiger Fehler: Falsche Zeitform für 'sein' und 'haben'</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">Common Error: Incorrect Tense for 'to be' and 'to have'</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">A frequent mistake is to use a mix of tenses or the wrong auxiliary verb when trying to form the past for 'sein' and 'haben'. Remember that 'sein' and 'haben' are main verbs here, and their Präteritum forms are single words. Do not combine them with 'haben' or 'sein' as auxiliaries for their own past forms.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Falsch: Ich habe war. Richtig: Ich war.</p><p class="italic text-[13px]" style="color:var(--text-muted);">Wrong: I have was. Right: I was.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Zusammenfassung: Wann Präteritum für 'sein' und 'haben'?</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">Summary: When to use Simple Past for 'to be' and 'to have'?</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">At A1 level, always use the Präteritum forms ('war', 'hatte') for 'sein' and 'haben' when talking about past states, possessions, or experiences. These forms are simple, direct, and widely used in both written and spoken German for these two specific verbs. Focus on memorizing their irregular conjugations.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Gestern war ich im Büro und hatte viel zu tun.</p><p class="italic text-[13px]" style="color:var(--text-muted);">Yesterday I was in the office and had a lot to do.</p></div></div></div></div></div></div></main><footer class="mt-auto border-t py-8" style="background-color:var(--bg);border-color:var(--border);"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-medium" style="color:var(--text-muted);"><div>&copy; 2025 - 2026 Small Talk Café Podcasts. All rights reserved.</div><div class="flex gap-4">Made in Bayern ❤️ Los Geht's!</div></div></footer><!-- Theme toggle + Language switcher script --><script>
+      // ── Theme ──────────────────────────────────────
+      function applyTheme(dark) {
+        if (dark) {
+          document.documentElement.classList.add('dark');
+          localStorage.setItem('wortschatz_theme', 'dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+          localStorage.setItem('wortschatz_theme', 'light');
+        }
+        const icon = document.getElementById('theme-icon');
+        const label = document.getElementById('theme-label');
+        if (icon) icon.textContent = dark ? '🌙' : '☀️';
+        if (label) label.textContent = dark ? 'Dark' : 'Light';
+      }
+
+      const isDark = document.documentElement.classList.contains('dark');
+      applyTheme(isDark);
+
+      document.getElementById('theme-toggle')?.addEventListener('click', () => {
+        const nowDark = !document.documentElement.classList.contains('dark');
+        applyTheme(nowDark);
+      });
+
+      // ── Language Switcher ──────────────────────────
+      const LANG_CONTENT = {
+        de: {
+          name: 'Deutsch Lounge',
+          flag: '🇩🇪',
+          code: 'DE',
+          subtitle: 'Systematisches Vokabel- und Grammatiktraining',
+          tagline: 'Deutsch Lounge',
+          welcome: 'Willkommen beim',
+          cards: [
+            { title: 'Vokabeln', desc: 'Erweitere deinen Wortschatz. Lerne Nomen, Verben und Redewendungen mit Beispielsätzen.' },
+            { title: 'Verben', desc: 'Meistere reguläre, unregelmäßige, modale und reflexive Verben mit Konjugationstabellen.' },
+            { title: 'Grammatik', desc: 'Regeln verstehen & üben: Adjektivdeklination, Fälle, Präpositionen, Konnektoren & Phrasen.' },
+            { title: 'Redemittel', desc: 'Essentielle Phrasen für den Alltag, Diskussionen und Präsentationen.' }
+          ]
+        },
+        es: {
+          name: 'Spanish Gym',
+          flag: '🇪🇸',
+          code: 'ES',
+          subtitle: 'Tu compañero para aprender Español A1 – B2',
+          tagline: 'A1–B2 Spanish Curriculum',
+          welcome: 'Bienvenido al',
+          cards: [
+            { title: 'Vocabulario', desc: 'Amplía tu vocabulario A1–B2. Aprende sustantivos, verbos y frases con ejemplos contextuales.' },
+            { title: 'Verbos', desc: 'Domina verbos regulares, irregulares y reflexivos con tablas de conjugación.' },
+            { title: 'Gramática', desc: 'Entiende y practica las reglas gramaticales, casos y conectores.' },
+            { title: 'Expresiones', desc: 'Frases esenciales para el día a día, discusiones y presentaciones.' }
+          ]
+        },
+        fr: {
+          name: 'French Gym',
+          flag: '🇫🇷',
+          code: 'FR',
+          subtitle: 'Ton compagnon pour apprendre le Français A1 – B2',
+          tagline: 'A1–B2 French Curriculum',
+          welcome: 'Bienvenue au',
+          cards: [
+            { title: 'Vocabulaire', desc: 'Élargis ton vocabulaire A1–B2. Apprends des noms, verbes et expressions avec des exemples.' },
+            { title: 'Verbes', desc: 'Maîtrise les verbes réguliers, irréguliers et réflexifs avec des tableaux de conjugaison.' },
+            { title: 'Grammaire', desc: 'Comprends et pratique les règles de grammaire, les cas et les connecteurs.' },
+            { title: 'Expressions', desc: 'Phrases essentielles pour la vie quotidienne, les discussions et les présentations.' }
+          ]
+        }
+      };
+
+      function applyLanguage(lang) {
+        const c = LANG_CONTENT[lang] || LANG_CONTENT['de'];
+        localStorage.setItem('gym_language', lang);
+
+        // Header
+        const flag = document.getElementById('lang-flag');
+        const code = document.getElementById('lang-code');
+        const siteName = document.getElementById('site-name');
+        if (flag) flag.textContent = c.flag;
+        if (code) code.textContent = c.code;
+        if (siteName) siteName.textContent = c.name;
+
+        // Footer
+        const footerName = document.getElementById('footer-gym-name');
+        const footerLevel = document.getElementById('footer-level');
+        if (footerName) footerName.textContent = c.name;
+        if (footerLevel) footerLevel.textContent = c.tagline;
+
+        const isGerman = lang === 'de';
+        const overlay = document.getElementById('coming-soon-overlay');
+        const mainContent = document.getElementById('main-content');
+        const germanNavLinks = document.querySelectorAll('[data-german-nav]');
+
+        if (isGerman) {
+          // Show normal German content
+          if (overlay) overlay.classList.add('hidden');
+          if (mainContent) mainContent.classList.remove('hidden');
+          germanNavLinks.forEach(el => el.classList.remove('hidden'));
+
+          // Hero on homepage only
+          const heroTitle = document.getElementById('hero-gym-name');
+          const heroSubtitle = document.getElementById('hero-subtitle');
+          const heroWelcome = document.getElementById('hero-welcome');
+          if (heroTitle) heroTitle.textContent = c.name;
+          if (heroSubtitle) heroSubtitle.textContent = c.subtitle;
+          if (heroWelcome) heroWelcome.textContent = c.welcome;
+
+          // Category cards
+          const cardTitles = document.querySelectorAll('[data-card-title]');
+          const cardDescs = document.querySelectorAll('[data-card-desc]');
+          cardTitles.forEach((el, i) => {
+            if (c.cards[i]) el.textContent = c.cards[i].title;
+          });
+          cardDescs.forEach((el, i) => {
+            if (c.cards[i]) el.textContent = c.cards[i].desc;
+          });
+
+          // Nav links
+          const navLabels = document.querySelectorAll('[data-nav-label]');
+          navLabels.forEach((el, i) => {
+            if (c.cards[i]) el.textContent = c.cards[i].title;
+          });
+        } else {
+          // Non-German: show coming soon overlay, hide main content and German nav
+          if (mainContent) mainContent.classList.add('hidden');
+          germanNavLinks.forEach(el => el.classList.add('hidden'));
+
+          // Populate coming soon overlay
+          const comingFlag = document.getElementById('coming-soon-flag');
+          const comingLang = document.getElementById('coming-soon-lang');
+          if (comingFlag) comingFlag.textContent = c.flag;
+          if (comingLang) comingLang.textContent = c.name + ' content';
+
+          if (overlay) {
+            overlay.classList.remove('hidden');
+            overlay.classList.add('flex');
+          }
+        }
+      }
+
+      // Restore saved language
+      const savedLang = localStorage.getItem('gym_language') || 'de';
+      applyLanguage(savedLang);
+
+      // Dropdown toggle
+      const langBtn = document.getElementById('lang-btn');
+      const langMenu = document.getElementById('lang-menu');
+
+      langBtn?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        langMenu?.classList.toggle('hidden');
+      });
+
+      document.addEventListener('click', () => {
+        langMenu?.classList.add('hidden');
+      });
+
+      document.querySelectorAll('.lang-option').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const lang = btn.dataset.lang;
+          applyLanguage(lang);
+          langMenu?.classList.add('hidden');
+        });
+      });
+
+      // Coming soon "Switch to German" button
+      document.getElementById('coming-soon-back-btn')?.addEventListener('click', () => {
+        applyLanguage('de');
+      });
+    </script></body></html><script type="module" src="/languagelounge/_astro/_deckId_.astro_astro_type_script_index_0_lang.B80xyaMZ.js"></script><script>(function(){const cardsJson = "[{\"id\":\"grammatik-a1-praeteritum_sein_haben-001\",\"target\":\"Das Präteritum (Simple Past)\",\"source\":\"The Simple Past tense\",\"grammar_note\":\"The Präteritum is one of two past tenses in German. While the Perfekt (Present Perfect) is generally used for spoken language, the Präteritum is more common in written language, narratives, and formal contexts. However, for the verbs 'sein' (to be) and 'haben' (to have), the Präteritum is frequently used even in spoken German, making it crucial for A1 learners.\",\"example_target\":\"Gestern war ich im Kino.\",\"example_source\":\"Yesterday I was at the cinema.\",\"extra_examples\":[{\"de\":\"Ich hatte gestern keine Zeit.\",\"en\":\"I had no time yesterday.\"},{\"de\":\"Es war ein schöner Tag.\",\"en\":\"It was a beautiful day.\"}],\"common_error\":\"Learners often try to form the Perfekt for 'sein' and 'haben' (e.g., 'ich bin gewesen', 'ich habe gehabt') when the Präteritum ('ich war', 'ich hatte') is more natural and expected, especially in simple statements.\",\"tags\":[\"grammatik\",\"a1\",\"praeteritum\",\"introduction\"],\"type\":\"grammar\"},{\"id\":\"grammatik-a1-praeteritum_sein_haben-002\",\"target\":\"Präteritum von 'sein' (ich, er/sie/es)\",\"source\":\"Simple Past of 'to be' (I, he/she/it)\",\"grammar_note\":\"The verb 'sein' (to be) is highly irregular in the Präteritum. The forms 'ich war' and 'er/sie/es war' are identical. This form is used to describe states, conditions, or locations in the past for the first and third person singular subjects.\",\"example_target\":\"Ich war gestern sehr müde.\",\"example_source\":\"I was very tired yesterday.\",\"extra_examples\":[{\"de\":\"Er war letztes Jahr in Berlin.\",\"en\":\"He was in Berlin last year.\"},{\"de\":\"Das Wetter war am Wochenende schlecht.\",\"en\":\"The weather was bad on the weekend.\"}],\"common_error\":\"Confusing 'war' with 'wäre' (Konjunktiv II) or trying to use 'bin gewesen' for simple past statements at A1 level.\",\"tags\":[\"grammatik\",\"a1\",\"praeteritum\",\"sein\",\"conjugation\"],\"type\":\"grammar\"},{\"id\":\"grammatik-a1-praeteritum_sein_haben-003\",\"target\":\"Präteritum von 'sein' (du, ihr)\",\"source\":\"Simple Past of 'to be' (you singular, you plural informal)\",\"grammar_note\":\"For the second person singular ('du') and second person plural informal ('ihr'), the Präteritum forms of 'sein' are 'warst' and 'wart' respectively. These forms are used when addressing one person informally or a group of people informally about past states or locations.\",\"example_target\":\"Du warst gestern nicht da.\",\"example_source\":\"You were not there yesterday.\",\"extra_examples\":[{\"de\":\"Ihr wart sehr fleißig.\",\"en\":\"You all were very diligent.\"},{\"de\":\"Wo warst du im Urlaub?\",\"en\":\"Where were you on vacation?\"}],\"common_error\":\"Forgetting the '-st' ending for 'du' or the '-t' ending for 'ihr', leading to 'du war' or 'ihr war'.\",\"tags\":[\"grammatik\",\"a1\",\"praeteritum\",\"sein\",\"conjugation\"],\"type\":\"grammar\"},{\"id\":\"grammatik-a1-praeteritum_sein_haben-004\",\"target\":\"Präteritum von 'sein' (wir, sie/Sie)\",\"source\":\"Simple Past of 'to be' (we, they/you formal)\",\"grammar_note\":\"The Präteritum forms for 'wir' (we) and 'sie/Sie' (they/you formal) are both 'waren'. This is a common pattern for many verbs in German, where the first and third person plural forms are identical to the infinitive for regular verbs, but for 'sein' it's 'waren'.\",\"example_target\":\"Wir waren letzte Woche im Museum.\",\"example_source\":\"We were at the museum last week.\",\"extra_examples\":[{\"de\":\"Sie waren sehr freundlich zu uns.\",\"en\":\"They were very kind to us.\"},{\"de\":\"Waren Sie schon einmal in Deutschland?\",\"en\":\"Have you (formal) ever been to Germany?\"}],\"common_error\":\"Using 'wir sind gewesen' or 'sie sind gewesen' when 'wir waren' or 'sie waren' is more appropriate for simple past statements.\",\"tags\":[\"grammatik\",\"a1\",\"praeteritum\",\"sein\",\"conjugation\"],\"type\":\"grammar\"},{\"id\":\"grammatik-a1-praeteritum_sein_haben-005\",\"target\":\"Zusammenfassung: Präteritum von 'sein'\",\"source\":\"Summary: Simple Past of 'to be'\",\"grammar_note\":\"Here is the complete conjugation of 'sein' in the Präteritum. Memorizing these forms is essential as 'sein' is one of the most frequently used verbs in German. It describes past states, conditions, or locations.\",\"example_target\":\"Ich war krank, du warst müde, er war glücklich, wir waren Freunde, ihr wart laut, sie waren zu Hause.\",\"example_source\":\"I was sick, you were tired, he was happy, we were friends, you all were loud, they were at home.\",\"extra_examples\":[{\"de\":\"Wo warst du gestern Abend?\",\"en\":\"Where were you last night?\"},{\"de\":\"Es war einmal ein König...\",\"en\":\"Once upon a time there was a king...\"}],\"common_error\":\"Inconsistent conjugation, mixing up forms like 'ich waren' or 'du war'.\",\"tags\":[\"grammatik\",\"a1\",\"praeteritum\",\"sein\",\"conjugation\",\"summary\"],\"type\":\"grammar\"},{\"id\":\"grammatik-a1-praeteritum_sein_haben-006\",\"target\":\"Präteritum von 'haben' (ich, er/sie/es)\",\"source\":\"Simple Past of 'to have' (I, he/she/it)\",\"grammar_note\":\"The verb 'haben' (to have) is also irregular in the Präteritum, but its forms are more regular than 'sein'. The forms 'ich hatte' and 'er/sie/es hatte' are identical. This form is used to express past possession or experiences for the first and third person singular subjects.\",\"example_target\":\"Ich hatte gestern viel Arbeit.\",\"example_source\":\"I had a lot of work yesterday.\",\"extra_examples\":[{\"de\":\"Er hatte einen Hund als Kind.\",\"en\":\"He had a dog as a child.\"},{\"de\":\"Sie hatte großes Glück.\",\"en\":\"She had great luck.\"}],\"common_error\":\"Trying to form 'ich habe gehabt' for simple past possession, or incorrect stem like 'habte'.\",\"tags\":[\"grammatik\",\"a1\",\"praeteritum\",\"haben\",\"conjugation\"],\"type\":\"grammar\"},{\"id\":\"grammatik-a1-praeteritum_sein_haben-007\",\"target\":\"Präteritum von 'haben' (du, ihr)\",\"source\":\"Simple Past of 'to have' (you singular, you plural informal)\",\"grammar_note\":\"For the second person singular ('du') and second person plural informal ('ihr'), the Präteritum forms of 'haben' are 'hattest' and 'hattet' respectively. These forms are used when addressing one person informally or a group of people informally about past possessions or experiences.\",\"example_target\":\"Hattest du einen schönen Urlaub?\",\"example_source\":\"Did you have a nice vacation?\",\"extra_examples\":[{\"de\":\"Ihr hattet eine gute Idee.\",\"en\":\"You all had a good idea.\"},{\"de\":\"Was hattest du zum Frühstück?\",\"en\":\"What did you have for breakfast?\"}],\"common_error\":\"Forgetting the '-est' or '-et' endings, leading to 'du hatt' or 'ihr hatt'.\",\"tags\":[\"grammatik\",\"a1\",\"praeteritum\",\"haben\",\"conjugation\"],\"type\":\"grammar\"},{\"id\":\"grammatik-a1-praeteritum_sein_haben-008\",\"target\":\"Präteritum von 'haben' (wir, sie/Sie)\",\"source\":\"Simple Past of 'to have' (we, they/you formal)\",\"grammar_note\":\"The Präteritum forms for 'wir' (we) and 'sie/Sie' (they/you formal) are both 'hatten'. This form is used for expressing past possession or experiences for plural subjects, both informal and formal.\",\"example_target\":\"Wir hatten gestern viel Spaß.\",\"example_source\":\"We had a lot of fun yesterday.\",\"extra_examples\":[{\"de\":\"Sie hatten ein großes Haus.\",\"en\":\"They had a big house.\"},{\"de\":\"Hatten Sie einen guten Flug?\",\"en\":\"Did you (formal) have a good flight?\"}],\"common_error\":\"Using 'wir haben gehabt' or 'sie haben gehabt' when 'wir hatten' or 'sie hatten' is more appropriate for simple past statements.\",\"tags\":[\"grammatik\",\"a1\",\"praeteritum\",\"haben\",\"conjugation\"],\"type\":\"grammar\"},{\"id\":\"grammatik-a1-praeteritum_sein_haben-009\",\"target\":\"Zusammenfassung: Präteritum von 'haben'\",\"source\":\"Summary: Simple Past of 'to have'\",\"grammar_note\":\"Here is the complete conjugation of 'haben' in the Präteritum. These forms are crucial for expressing past possession, experiences, or states involving 'to have'. Remember that 'haben' in Präteritum is very common even in spoken German.\",\"example_target\":\"Ich hatte Hunger, du hattest Durst, er hatte Fieber, wir hatten Glück, ihr hattet Pech, sie hatten Zeit.\",\"example_source\":\"I was hungry, you were thirsty, he had a fever, we were lucky, you all were unlucky, they had time.\",\"extra_examples\":[{\"de\":\"Hatten Sie einen schönen Tag?\",\"en\":\"Did you (formal) have a nice day?\"},{\"de\":\"Sie hatten keine andere Wahl.\",\"en\":\"They had no other choice.\"}],\"common_error\":\"Inconsistent conjugation, mixing up forms like 'ich hatten' or 'du hatte'.\",\"tags\":[\"grammatik\",\"a1\",\"praeteritum\",\"haben\",\"conjugation\",\"summary\"],\"type\":\"grammar\"},{\"id\":\"grammatik-a1-praeteritum_sein_haben-010\",\"target\":\"Verwendung: 'sein' im Präteritum (Zustände)\",\"source\":\"Usage: 'to be' in Simple Past (States/Conditions)\",\"grammar_note\":\"The Präteritum of 'sein' is used to describe how something or someone was in the past. This includes physical states, emotional conditions, or general characteristics that existed at a specific time in the past.\",\"example_target\":\"Ich war als Kind sehr schüchtern.\",\"example_source\":\"As a child, I was very shy.\",\"extra_examples\":[{\"de\":\"Die Suppe war kalt.\",\"en\":\"The soup was cold.\"},{\"de\":\"Er war immer pünktlich.\",\"en\":\"He was always on time.\"}],\"common_error\":\"Using 'ich bin gewesen schüchtern' instead of 'ich war schüchtern'.\",\"tags\":[\"grammatik\",\"a1\",\"praeteritum\",\"sein\",\"usage\",\"states\"],\"type\":\"grammar\"},{\"id\":\"grammatik-a1-praeteritum_sein_haben-011\",\"target\":\"Verwendung: 'sein' im Präteritum (Ort/Existenz)\",\"source\":\"Usage: 'to be' in Simple Past (Location/Existence)\",\"grammar_note\":\"The Präteritum of 'sein' also describes where someone or something was located in the past, or simply that something existed. It answers questions like 'Wo war...?' (Where was...?).\",\"example_target\":\"Meine Eltern waren letztes Jahr in Italien.\",\"example_source\":\"My parents were in Italy last year.\",\"extra_examples\":[{\"de\":\"Das Buch war auf dem Tisch.\",\"en\":\"The book was on the table.\"},{\"de\":\"Es war einmal ein Prinz.\",\"en\":\"Once upon a time there was a prince.\"}],\"common_error\":\"Using 'meine Eltern sind gewesen in Italien' which sounds less natural for A1 simple past.\",\"tags\":[\"grammatik\",\"a1\",\"praeteritum\",\"sein\",\"usage\",\"location\"],\"type\":\"grammar\"},{\"id\":\"grammatik-a1-praeteritum_sein_haben-012\",\"target\":\"Verwendung: 'haben' im Präteritum (Besitz)\",\"source\":\"Usage: 'to have' in Simple Past (Possession)\",\"grammar_note\":\"The Präteritum of 'haben' is used to express that someone possessed something in the past. It's a direct equivalent to 'had' in English and is very common for describing past ownership.\",\"example_target\":\"Früher hatte ich ein rotes Auto.\",\"example_source\":\"Earlier, I had a red car.\",\"extra_examples\":[{\"de\":\"Sie hatte viele Bücher.\",\"en\":\"She had many books.\"},{\"de\":\"Wir hatten kein Geld.\",\"en\":\"We had no money.\"}],\"common_error\":\"Using 'ich habe gehabt ein Auto' instead of 'ich hatte ein Auto' for simple past possession.\",\"tags\":[\"grammatik\",\"a1\",\"praeteritum\",\"haben\",\"usage\",\"possession\"],\"type\":\"grammar\"},{\"id\":\"grammatik-a1-praeteritum_sein_haben-013\",\"target\":\"Verwendung: 'haben' im Präteritum (Erfahrungen/Ereignisse)\",\"source\":\"Usage: 'to have' in Simple Past (Experiences/Events)\",\"grammar_note\":\"Beyond possession, 'haben' in Präteritum is also used to describe past experiences or events, often in fixed expressions. This includes having fun, having time, having a good day, or having problems.\",\"example_target\":\"Wir hatten gestern viel Spaß auf der Party.\",\"example_source\":\"We had a lot of fun at the party yesterday.\",\"extra_examples\":[{\"de\":\"Ich hatte keine Zeit für dich.\",\"en\":\"I had no time for you.\"},{\"de\":\"Sie hatten große Probleme mit dem Computer.\",\"en\":\"They had big problems with the computer.\"}],\"common_error\":\"Trying to use 'wir haben gehabt Spaß' instead of the more common and natural 'wir hatten Spaß'.\",\"tags\":[\"grammatik\",\"a1\",\"praeteritum\",\"haben\",\"usage\",\"experiences\"],\"type\":\"grammar\"},{\"id\":\"grammatik-a1-praeteritum_sein_haben-014\",\"target\":\"Präteritum vs. Perfekt für 'sein' und 'haben'\",\"source\":\"Simple Past vs. Present Perfect for 'to be' and 'to have'\",\"grammar_note\":\"For most verbs, Perfekt is used in spoken German and Präteritum in written German. However, for 'sein' and 'haben', the Präteritum forms ('war', 'hatte') are very common and often preferred even in spoken language, especially for simple statements. While Perfekt forms ('bin gewesen', 'habe gehabt') are grammatically correct, they sound less natural for basic statements at A1.\",\"example_target\":\"Ich war krank. (Common) vs. Ich bin krank gewesen. (Less common in simple statements)\",\"example_source\":\"I was sick. vs. I have been sick.\",\"extra_examples\":[{\"de\":\"Wir hatten Hunger. (Common) vs. Wir haben Hunger gehabt. (Less common)\",\"en\":\"We were hungry. vs. We have been hungry.\"},{\"de\":\"Wo warst du? (Common) vs. Wo bist du gewesen? (Less common)\",\"en\":\"Where were you? vs. Where have you been?\"}],\"common_error\":\"Overusing the Perfekt forms ('bin gewesen', 'habe gehabt') for 'sein' and 'haben' in contexts where the Präteritum is more idiomatic and natural, especially for A1 learners.\",\"tags\":[\"grammatik\",\"a1\",\"praeteritum\",\"perfekt\",\"comparison\",\"sein\",\"haben\"],\"type\":\"grammar\"},{\"id\":\"grammatik-a1-praeteritum_sein_haben-015\",\"target\":\"Häufiger Fehler: Falsche Zeitform für 'sein' und 'haben'\",\"source\":\"Common Error: Incorrect Tense for 'to be' and 'to have'\",\"grammar_note\":\"A frequent mistake is to use a mix of tenses or the wrong auxiliary verb when trying to form the past for 'sein' and 'haben'. Remember that 'sein' and 'haben' are main verbs here, and their Präteritum forms are single words. Do not combine them with 'haben' or 'sein' as auxiliaries for their own past forms.\",\"example_target\":\"Falsch: Ich habe war. Richtig: Ich war.\",\"example_source\":\"Wrong: I have was. Right: I was.\",\"extra_examples\":[{\"de\":\"Falsch: Er ist gehabt. Richtig: Er hatte.\",\"en\":\"Wrong: He is had. Right: He had.\"},{\"de\":\"Falsch: Wir sind gewesen viel Spaß. Richtig: Wir hatten viel Spaß.\",\"en\":\"Wrong: We are been much fun. Right: We had much fun.\"}],\"common_error\":\"Creating non-existent forms like 'ich habe war' or 'er ist gehabt' by trying to apply Perfekt rules to the Präteritum of these specific verbs, or by confusing their roles as main verbs vs. auxiliary verbs.\",\"tags\":[\"grammatik\",\"a1\",\"praeteritum\",\"sein\",\"haben\",\"common_error\"],\"type\":\"grammar\"},{\"id\":\"grammatik-a1-praeteritum_sein_haben-016\",\"target\":\"Zusammenfassung: Wann Präteritum für 'sein' und 'haben'?\",\"source\":\"Summary: When to use Simple Past for 'to be' and 'to have'?\",\"grammar_note\":\"At A1 level, always use the Präteritum forms ('war', 'hatte') for 'sein' and 'haben' when talking about past states, possessions, or experiences. These forms are simple, direct, and widely used in both written and spoken German for these two specific verbs. Focus on memorizing their irregular conjugations.\",\"example_target\":\"Gestern war ich im Büro und hatte viel zu tun.\",\"example_source\":\"Yesterday I was in the office and had a lot to do.\",\"extra_examples\":[{\"de\":\"Als Kind war ich oft krank und hatte immer Schnupfen.\",\"en\":\"As a child, I was often sick and always had a cold.\"},{\"de\":\"Sie waren sehr glücklich und hatten ein schönes Leben.\",\"en\":\"They were very happy and had a beautiful life.\"}],\"common_error\":\"Hesitation or incorrect choice between Präteritum and Perfekt for these verbs, leading to less natural-sounding sentences.\",\"tags\":[\"grammatik\",\"a1\",\"praeteritum\",\"sein\",\"haben\",\"summary\",\"usage\"],\"type\":\"grammar\"}]";
+const langConfigJson = "{\"language_pair\":\"english_german\",\"target_lang\":\"de\",\"native_lang\":\"en\",\"target_lang_name\":\"Deutsch\",\"native_lang_name\":\"English\",\"speech_lang\":\"de-DE\",\"noun_metadata_fields\":[{\"key\":\"article\",\"label\":\"Artikel\",\"render\":\"article_badge\"},{\"key\":\"gender\",\"label\":\"Genus\",\"render\":\"gender_label\"},{\"key\":\"plural\",\"label\":\"Plural\",\"render\":\"text\"}],\"article_colours\":{\"der\":\"#4A7C9E\",\"die\":\"#B05070\",\"das\":\"#4A8A5A\"},\"gender_labels\":{\"m\":\"Maskulinum\",\"f\":\"Femininum\",\"n\":\"Neutrum\"},\"verb_tenses\":[\"Präsens\",\"Präteritum\",\"Perfekt\",\"Futur I\",\"Konjunktiv II\"],\"cases\":{\"nominative\":\"Nominativ\",\"accusative\":\"Akkusativ\",\"dative\":\"Dativ\",\"genitive\":\"Genitiv\"},\"ui_labels\":{\"learn_mode\":\"Lernen\",\"train_mode\":\"Trainieren\",\"examples_heading\":\"Beispielsätze\",\"grammar_note_heading\":\"Grammatiknotiz\",\"audio_button\":\"Anhören\",\"back_link\":\"Zurück\",\"card_counter\":\"Karte {current} / {total}\",\"next_button\":\"Weiter\",\"finish_button\":\"Fertig\",\"correct\":\"Richtig!\",\"wrong\":\"Falsch\"}}";
+const category = "grammatik";
+
+  const cards     = JSON.parse(cardsJson);
+  const config    = JSON.parse(langConfigJson);
+  let currentIndex = 0;
+
+  const dotNav    = document.getElementById('dot-nav');
+  const currentNum = document.getElementById('current-num');
+  const progressBar = document.getElementById('progress-bar');
+  const btnPrev   = document.getElementById('btn-prev');
+  const btnNext   = document.getElementById('btn-next');
+  const cardHost  = document.getElementById('card-host');
+  const progressCont = document.getElementById('progress-container');
+
+  const cardViewWrap = document.getElementById('card-view-wrap');
+  const listViewWrap = document.getElementById('list-view-wrap');
+  const btnViewCards = document.getElementById('view-cards-btn');
+  const btnViewList  = document.getElementById('view-list-btn');
+
+  // Toggle Logic
+  function setViewMode(mode) {
+    if (mode === 'list') {
+      cardViewWrap.classList.add('hidden');
+      listViewWrap.classList.remove('hidden');
+      progressCont.classList.add('hidden');
+      btnViewList.classList.add('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewList.classList.remove('text-[var(--text-muted)]');
+      btnViewCards.classList.remove('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewCards.classList.add('text-[var(--text-muted)]');
+    } else {
+      listViewWrap.classList.add('hidden');
+      cardViewWrap.classList.remove('hidden');
+      progressCont.classList.remove('hidden');
+      btnViewCards.classList.add('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewCards.classList.remove('text-[var(--text-muted)]');
+      btnViewList.classList.remove('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewList.classList.add('text-[var(--text-muted)]');
+    }
+  }
+
+  btnViewCards.addEventListener('click', () => setViewMode('cards'));
+  btnViewList.addEventListener('click', () => setViewMode('list'));
+
+  // Default Grammatik and Redemittel to list view!
+  if (category === 'grammatik' || category === 'redemittel' || category === 'phrases') {
+    setViewMode('list');
+  }
+
+
+
+  // ── Helpers (mirror card-renderer.ts — no module imports in inline scripts) ──
+  const articleColours = config.article_colours || { der:'#4A7C9E', die:'#B05070', das:'#4A8A5A' };
+  const genderLabels   = config.gender_labels   || { m:'Maskulinum', f:'Femininum', n:'Neutrum'  };
+  const speechLang     = config.speech_lang     || 'de-DE';
+
+  function stripArticle(w) {
+    return (w || '').replace(/^(der|die|das|el|la|los|las|le|les|l')\s+/i,'').trim();
+  }
+
+  function getTypeLabel(card) {
+    const tags = card.tags || [];
+    if (tags.includes('noun'))       return 'Substantiv';
+    if (tags.includes('verb'))       return 'Verb';
+    if (tags.includes('adjective'))  return 'Adjektiv';
+    if (tags.includes('expression')) return 'Ausdruck';
+    return { vocab:'Vokabel', verb:'Verb', phrase:'Phrase', connector:'Konnektor', grammar:'Grammatik' }[card.type] || 'Vokabel';
+  }
+
+  function normaliseEx(ex) {
+    return { target: ex.target||ex.de||'', source: ex.source||ex.en||'', note: ex.note };
+  }
+
+  function getMetaFacts(card) {
+    const meta = { ...(card.metadata||{}), article:card.article, gender:card.gender, plural:card.plural };
+    const facts = [];
+    for (const field of (config.noun_metadata_fields || [])) {
+      const raw = meta[field.key];
+      if (!raw || raw==='~') continue;
+      let value = String(raw), colour;
+      if (field.render === 'gender_label')  value  = genderLabels[raw] || raw;
+      if (field.render === 'article_badge') colour = articleColours[raw.toLowerCase()] || 'var(--espresso)';
+      facts.push({ label: field.label, value, colour });
+    }
+    return facts;
+  }
+
+  // ── Card renderer ─────────────────────────────────────────────────────────
+  function renderCard(idx) {
+    const card = cards[idx];
+    if (!card || !cardHost) return;
+
+    const lc = cardHost.querySelector('.learning-card');
+    if (!lc) return;
+
+    function sel(cls) { return lc.querySelector(cls); }
+
+    // Type badge + level
+    sel('.lc-type-badge').textContent = getTypeLabel(card);
+    sel('.lc-level-badge').textContent = (card.level || '').toUpperCase();
+
+    // Article
+    const article = card.article || card.metadata?.article;
+    const articleWrap = sel('.lc-article-wrap');
+    const articleEl   = sel('.lc-article');
+    if (article && (card.tags||[]).includes('noun') && !card.plural_only) {
+      articleEl.textContent = article;
+      articleEl.style.color = articleColours[article.toLowerCase()] || 'var(--espresso)';
+      articleWrap.style.display = '';
+    } else {
+      articleWrap.style.display = 'none';
+    }
+
+    // Word / translation / forms
+    sel('.lc-word').textContent        = stripArticle(card.target);
+    sel('.lc-translation').textContent = card.source || '';
+    const plural = card.plural || card.metadata?.plural;
+    sel('.lc-forms').textContent = plural && !card.plural_only ? `Pl. ${plural}` : card.plural_only ? 'nur Plural' : '';
+
+    // Meta grid
+    const metaGrid = sel('.lc-meta-grid');
+    const facts = getMetaFacts(card);
+    if (facts.length) {
+      metaGrid.style.gridTemplateColumns = `repeat(${Math.min(facts.length,4)}, 1fr)`;
+      metaGrid.style.display = '';
+      metaGrid.innerHTML = facts.map((f, i) => `
+        <div class="px-5 py-4 ${i<facts.length-1?'border-r':''}" style="border-color:var(--border);">
+          <p class="text-[9px] font-bold uppercase tracking-widest mb-1" style="color:var(--text-muted);">${f.label}</p>
+          <p class="text-sm font-bold" style="color:${f.colour||'var(--text)'};">${f.value}</p>
+        </div>`).join('');
+    } else {
+      metaGrid.style.display = 'none';
+    }
+
+    // Grammar note
+    const grammarWrap = sel('.lc-grammar-wrap');
+    if (card.grammar_note) {
+      sel('.lc-grammar-text').innerHTML = formatHighlight(card.grammar_note);
+      grammarWrap.classList.remove('hidden');
+    } else {
+      grammarWrap.classList.add('hidden');
+    }
+
+    // Examples
+    const examplesEl = sel('.lc-examples');
+    const rawEx = card.examples || (card.example_target ? [{ target:card.example_target, source:card.example_source }] : []);
+    examplesEl.innerHTML = rawEx.length
+      ? rawEx.map(ex => { const e=normaliseEx(ex); return `
+          <div class="rounded-2xl border overflow-hidden" style="border-color:var(--border);">
+            <div class="px-4 py-3" style="background-color:var(--bg);">
+              <p class="font-semibold leading-snug mb-1" style="color:var(--text);">${e.target}</p>
+              <p class="text-sm italic" style="color:var(--text-muted);">${e.source||''}</p>
+            </div>
+            ${e.note?`<div class="px-4 py-2 border-t" style="border-color:var(--border);">
+              <p class="text-[10px] font-bold font-mono" style="color:var(--espresso);">📐 ${e.note}</p>
+            </div>`:''}
+          </div>`; }).join('')
+      : '<p class="text-sm italic" style="color:var(--text-muted);">Kein Beispiel verfügbar.</p>';
+
+    // Tags
+    sel('.lc-tags').innerHTML = (card.tags||[]).map(t =>
+      `<span class="text-[10px] font-bold px-2 py-0.5 rounded-md border" style="border-color:var(--border);color:var(--text-muted);background-color:var(--bg);">${t}</span>`
+    ).join('');
+
+    // Progress UI
+    if (currentNum)  currentNum.textContent = String(idx+1);
+    if (progressBar) progressBar.style.width = `${Math.round(((idx+1)/cards.length)*100)}%`;
+    if (btnPrev)     btnPrev.disabled = idx === 0;
+    if (btnNext)     btnNext.innerHTML = idx === cards.length-1
+      ? '✓ Fertig'
+      : 'Weiter <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>';
+
+    updateDots();
+
+    // Re-bind audio button cleanly by cloning to strip old listeners
+    const oldBtn = sel('.lc-audio-btn');
+    if (oldBtn) {
+      const newBtn = oldBtn.cloneNode(true);
+      oldBtn.parentNode.replaceChild(newBtn, oldBtn);
+      newBtn.addEventListener('click', speakCurrent);
+    }
+  }
+
+  // ── Dot navigation ────────────────────────────────────────────────────────
+  function buildDots() {
+    if (!dotNav) return;
+    dotNav.innerHTML = '';
+    const maxVisible = 20;
+    const showAll = cards.length <= maxVisible;
+    cards.forEach((_, i) => {
+      if (!showAll && i >= maxVisible) return;
+      const dot = document.createElement('button');
+      dot.className = 'dot w-2 h-2 rounded-full transition-all duration-300 flex-shrink-0';
+      dot.style.backgroundColor = 'var(--border)';
+      dot.title = `Card ${i+1}`;
+      dot.addEventListener('click', () => goTo(i));
+      dotNav.appendChild(dot);
+    });
+    if (!showAll) {
+      const el = document.createElement('span');
+      el.textContent = `+${cards.length - maxVisible}`;
+      el.className = 'text-[10px] font-bold';
+      el.style.color = 'var(--text-muted)';
+      dotNav.appendChild(el);
+    }
+  }
+
+  function updateDots() {
+    dotNav?.querySelectorAll('.dot').forEach((dot, i) => {
+      dot.style.backgroundColor = i===currentIndex ? 'var(--espresso)' : 'var(--border)';
+      dot.style.width     = i===currentIndex ? '20px' : '8px';
+      dot.style.borderRadius = '4px';
+    });
+  }
+
+  // ── Audio ─────────────────────────────────────────────────────────────────
+  function speakCurrent() {
+    const card = cards[currentIndex];
+    if (!card) return;
+    if (window.DeutschAudioEngine) {
+      window.DeutschAudioEngine.speak(card.target || '', speechLang, 0.85);
+    }
+  }
+
+  // ── Navigate ─────────────────────────────────────────────────────────────
+  function goTo(idx) {
+    if (idx < 0 || idx >= cards.length) return;
+    currentIndex = idx;
+    renderCard(currentIndex);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  btnPrev?.addEventListener('click', () => goTo(currentIndex - 1));
+  btnNext?.addEventListener('click', () => {
+    if (currentIndex === cards.length - 1) window.location.href = '/vocabulary';
+    else goTo(currentIndex + 1);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') goTo(currentIndex + 1);
+    if (e.key === 'ArrowLeft')  goTo(currentIndex - 1);
+    if (e.key === 'a' || e.key === 'A') speakCurrent();
+  });
+
+  // ── Init ─────────────────────────────────────────────────────────────────
+  buildDots();
+  // Card 0 is already rendered server-side via LearningCard component.
+  // Sync progress UI to reflect card 0 state.
+  updateDots();
+  if (progressBar) progressBar.style.width = `${Math.round(1/cards.length*100)}%`;
+  // Update card 0 using client-side config too (ensures langConfig is applied)
+  renderCard(0);
+})();</script>

@@ -1,0 +1,640 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="description" content="Deutsch Lounge — Language Learning Trainer"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/languagelounge/favicon.svg"><meta name="generator" content="Astro v7.3.5"><title>Body &amp; Health (Basic) — Deutsch Lounge</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet"><!-- Apply theme before paint to avoid flash --><script>
+      (function() {
+        const saved = localStorage.getItem('wortschatz_theme');
+        if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script><link rel="stylesheet" href="/languagelounge/_astro/Layout.BeSASyxj.css"></head><body class="antialiased min-h-screen flex flex-col" style="background-color:var(--bg);color:var(--text);"><!-- Header --><header class="sticky top-0 z-50 border-b" style="background-color:var(--bg);border-color:var(--border);"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between gap-4" style="height:4.5rem;"><!-- Logo + Language Switcher --><div class="flex items-center gap-4 shrink-0"><a href="/languagelounge/" class="flex items-center gap-2 group"><span class="font-outfit font-extrabold text-xl sm:text-2xl tracking-tight transition-colors" style="color:var(--text);">Small Talk Café <span class="font-normal text-base hidden sm:inline" style="color:var(--text-muted);">| <span id="site-name">Deutsch Lounge</span></span></span></a><!-- Language Selector Dropdown --><div class="relative" id="lang-dropdown-wrapper"><button id="lang-btn" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-sm font-bold transition-all hover:opacity-70" style="background-color:var(--bg); border-color:var(--border); color:var(--text);"><span id="lang-flag">🇩🇪</span><span id="lang-code">DE</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"></path></svg></button><div id="lang-menu" class="hidden absolute top-full left-0 mt-2 rounded-2xl border shadow-xl overflow-hidden z-50 min-w-[160px]" style="background-color:var(--card); border-color:var(--border);"><button class="lang-option w-full flex items-center gap-3 px-4 py-3 text-sm font-semibold text-left transition-colors hover:opacity-70" data-lang="de" data-flag="🇩🇪" data-code="DE" data-name="Deutsch Lounge" data-label="German" style="color:var(--text);"><span class="text-lg">🇩🇪</span><div><div class="font-bold" style="color:var(--text);">Deutsch</div><div class="text-xs" style="color:var(--text-muted);">German Learning</div></div></button><div class="border-t" style="border-color:var(--border);"></div><button class="lang-option w-full flex items-center gap-3 px-4 py-3 text-sm font-semibold text-left transition-colors hover:opacity-70" data-lang="es" data-flag="🇪🇸" data-code="ES" data-name="Spanish Gym" data-label="Spanish" style="color:var(--text);"><span class="text-lg">🇪🇸</span><div><div class="font-bold" style="color:var(--text);">Español</div><div class="text-xs" style="color:var(--text-muted);">Spanish Learning</div></div></button><div class="border-t" style="border-color:var(--border);"></div><button class="lang-option w-full flex items-center gap-3 px-4 py-3 text-sm font-semibold text-left transition-colors hover:opacity-70" data-lang="fr" data-flag="🇫🇷" data-code="FR" data-name="French Gym" data-label="French" style="color:var(--text);"><span class="text-lg">🇫🇷</span><div><div class="font-bold" style="color:var(--text);">Français</div><div class="text-xs" style="color:var(--text-muted);">French Learning</div></div></button></div></div></div><!-- Nav Links --><nav class="hidden md:flex gap-5 items-center"><a href="https://smalltalkcafe.de/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Small Talk Café Podcasts</a><span class="text-sm font-normal" style="color:var(--border);">|</span><a href="/languagelounge/vocabulary" data-german-nav class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Vokabeln</a><a href="/languagelounge/verbs" data-german-nav class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Verben</a><a href="/languagelounge/grammatik" data-german-nav class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Grammatik</a><a href="/languagelounge/redemittel" data-german-nav class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Redemittel</a><!-- Dark/Light Toggle --><button id="theme-toggle" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-sm font-semibold transition-all hover:opacity-70" style="border-color:var(--border); color:var(--text-muted);" aria-label="Toggle dark/light mode"><span id="theme-icon">☀️</span><span id="theme-label">Light</span></button></nav></div></header><!-- Coming Soon Overlay (shown for non-German languages) --><div id="coming-soon-overlay" class="hidden flex-1 flex items-center justify-center py-20 px-4"><div class="text-center max-w-lg mx-auto"><div class="text-7xl mb-6" id="coming-soon-flag">🌍</div><h1 class="font-outfit font-extrabold text-4xl sm:text-5xl mb-4" style="color:var(--text);">Coming Soon</h1><p class="text-lg mb-3" style="color:var(--text-muted);">We're working hard on the <strong id="coming-soon-lang">new language</strong> curriculum.</p><p class="text-base mb-8" style="color:var(--text-muted);">Stay tuned — it will be available very soon! In the meantime, explore our<strong>Deutsch Lounge</strong> to sharpen your German.</p><button id="coming-soon-back-btn" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-sm transition-all hover:opacity-80" style="background-color:var(--espresso); color:#fff;">🇩🇪 Switch to German</button></div></div><main id="main-content" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-1 w-full"><div class="max-w-4xl mx-auto py-6"><!-- Deck Header --><div class="flex items-start justify-between mb-8 gap-4 flex-wrap"><div><a href="/languagelounge/vocabulary" class="text-xs font-bold flex items-center gap-1 mb-2 hover:opacity-70 transition-opacity capitalize" style="color:var(--espresso);"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg>vocabulary</a><h1 class="text-2xl md:text-3xl font-extrabold font-outfit" style="color:var(--text);">Body &amp; Health (Basic)</h1><p class="text-xs font-bold uppercase tracking-wider mt-1" style="color:var(--text-muted);">Körper &amp; Gesundheit &bull; A1 &bull; 14 Karten</p></div><div class="flex flex-col items-end gap-4"><!-- Learn / Train mode switcher --><div class="flex rounded-xl border overflow-hidden p-1 gap-1 w-full max-w-[300px]" style="background-color:var(--bg); border-color:var(--border);"><span class="flex-1 flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold transition-all" style="background-color:var(--espresso); color:#F5F2EB;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>Lernen</span><a href="/languagelounge/training/vocabulary/train?level=a1&amp;deck=a1-body-health-basic&amp;count=20&amp;mode=mc&amp;dir=en-de" class="flex-1 flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold hover:opacity-70 transition-all" style="color:var(--text-muted);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>Trainieren</a></div><!-- View switcher (Cards vs List) --><div class="flex rounded-xl border overflow-hidden p-1 gap-1 w-full max-w-[300px]" style="background-color:var(--bg); border-color:var(--border);"><button id="view-cards-btn" class="view-btn flex-1 flex items-center justify-center px-4 py-2 rounded-lg text-xs font-bold transition-all bg-[var(--espresso)] text-[#F5F2EB]">Karten</button><button id="view-list-btn" class="view-btn flex-1 flex items-center justify-center px-4 py-2 rounded-lg text-xs font-bold transition-all text-[var(--text-muted)] hover:opacity-70">Liste</button></div><!-- Progress indicator --><div id="progress-container" class="flex items-center gap-3"><div class="text-xs font-semibold" style="color:var(--text-muted);">Karte <span id="current-num" class="font-extrabold" style="color:var(--text);">1</span> / 14</div><div class="w-24 h-1.5 rounded-full overflow-hidden border" style="background-color:var(--bg);border-color:var(--border);"><div id="progress-bar" class="h-full transition-all duration-500 rounded-full" style="width:0%; background-color:var(--espresso);"></div></div></div></div></div><!-- ── Universal Study Card (rendered by LearningCard component) ── --><div id="card-view-wrap"><div id="card-host"><!-- The card shell — populated client-side by renderCard() --><div class="learning-card rounded-3xl border shadow-xl overflow-hidden" style="background-color:var(--card); border-color:var(--border);"><!-- ── Top bar ─────────────────────────────────── --><div class="lc-topbar flex items-center justify-between px-6 py-3.5 border-b" style="border-color:var(--border); background-color:var(--bg);"><div class="flex items-center gap-2"><span class="lc-type-badge text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-lg" style="background-color:var(--espresso); color:#F5F2EB;">—</span><span class="lc-level-badge text-[10px] font-bold px-2.5 py-1 rounded-lg cafe-badge"></span></div><button class="lc-audio-btn flex items-center justify-center w-11 h-11 rounded-full transition-transform hover:scale-105 active:scale-95 shadow-md flex-shrink-0" title="Anhören (A)" style="background-color:var(--espresso); color:#F5F2EB;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg></button></div><!-- ── Main word display ───────────────────────── --><div class="lc-hero px-7 py-8 text-center border-b" style="border-color:var(--border);"><div class="lc-article-wrap mb-1.5"><span class="lc-article text-xl font-bold"></span></div><h2 class="lc-word text-5xl md:text-6xl font-extrabold font-outfit mb-3" style="color:var(--text);">—</h2><p class="lc-translation text-lg font-semibold italic" style="color:var(--text-muted);"></p><p class="lc-forms text-sm font-medium mt-2" style="color:var(--text-muted);"></p></div><!-- ── Meta info grid ─────────────────────────── --><div class="lc-meta-grid grid border-b" style="border-color:var(--border);"><!-- populated by JS --></div><!-- ── Grammar note ───────────────────────────── --><div class="lc-grammar-wrap hidden px-7 py-5 border-b" style="border-color:var(--border); background-color:var(--bg);"><p class="text-[10px] font-bold uppercase tracking-widest mb-2" style="color:var(--espresso);">📌 <span class="lc-grammar-label">Grammatiknotiz</span></p><p class="lc-grammar-text text-sm leading-relaxed font-medium whitespace-pre-wrap" style="color:var(--text);"></p></div><!-- ── Type-specific block ────────────────────── --><!-- Verb conjugation (hidden by default, shown for verb cards) --><div class="lc-conjugation-wrap hidden border-b overflow-x-auto" style="border-color:var(--border);"><div class="lc-conjugation-inner"><!-- populated by JS --></div></div><!-- Connector word-order block --><div class="lc-wordorder-wrap hidden px-7 py-4 border-b" style="border-color:var(--border); background-color:var(--bg);"><div class="flex items-start gap-3 text-sm font-medium" style="color:var(--text-muted);"><span class="text-base flex-shrink-0">📐</span><span class="lc-wordorder-text"></span></div></div><!-- Phrase preposition block --><div class="lc-phrase-wrap hidden px-7 py-4 border-b" style="border-color:var(--border); background-color:var(--bg);"><p class="text-[10px] font-bold uppercase tracking-widest mb-2" style="color:var(--espresso);">Struktur</p><p class="lc-phrase-rule text-sm font-semibold" style="color:var(--text);"></p></div><!-- ── Examples ───────────────────────────────── --><div class="px-7 py-6 border-b" style="border-color:var(--border);"><p class="lc-examples-label text-[10px] font-bold uppercase tracking-widest mb-5" style="color:var(--text-muted);">Beispielsätze</p><div class="lc-examples space-y-3"><!-- populated by JS --></div></div><!-- ── Tags ───────────────────────────────────── --><div class="lc-tags-row px-7 py-4 flex items-center gap-2 flex-wrap"><span class="text-[10px] font-bold uppercase tracking-wider" style="color:var(--text-muted);">Tags:</span><div class="lc-tags flex gap-2 flex-wrap"></div></div></div><script>(function(){const cardJson = "{\"id\":\"a1-hea-001\",\"target\":\"Körper\",\"source\":\"body\",\"article\":\"der\",\"gender\":\"m\",\"plural\":\"die Körper\",\"example_target\":\"Sport ist gut für den Körper.\",\"example_source\":\"Sport is good for the body.\",\"tags\":[\"noun\",\"body\"],\"grammar_note\":\"Masculine noun (der). Preposition 'für' always requires Akkusativ → 'den Körper'.\",\"examples\":[{\"de\":\"Sport ist gut für den Körper.\",\"en\":\"Sport is good for the body.\",\"note\":\"für + Akkusativ: den Körper\"},{\"de\":\"Der menschliche Körper braucht viel Wasser.\",\"en\":\"The human body needs a lot of water.\",\"note\":\"Subject (Nominativ): der Körper\"},{\"de\":\"Sie pflegt ihren Körper mit Creme.\",\"en\":\"She cares for her body with cream.\",\"note\":\"Akkusativ direct object: ihren Körper\"},{\"de\":\"Ein gesunder Körper braucht Schlaf und Bewegung.\",\"en\":\"A healthy body needs sleep and movement.\",\"note\":\"Nominativ with adjective inflection (gesunder)\"},{\"de\":\"Nach dem Sport fühlt sich der Körper erschöpft an.\",\"en\":\"After sport, the body feels exhausted.\",\"note\":\"Reflexive verb 'sich anfühlen' + Nominativ\"}]}";
+const langConfigJson = "{\"language_pair\":\"english_german\",\"target_lang\":\"de\",\"native_lang\":\"en\",\"target_lang_name\":\"Deutsch\",\"native_lang_name\":\"English\",\"speech_lang\":\"de-DE\",\"noun_metadata_fields\":[{\"key\":\"article\",\"label\":\"Artikel\",\"render\":\"article_badge\"},{\"key\":\"gender\",\"label\":\"Genus\",\"render\":\"gender_label\"},{\"key\":\"plural\",\"label\":\"Plural\",\"render\":\"text\"}],\"article_colours\":{\"der\":\"#4A7C9E\",\"die\":\"#B05070\",\"das\":\"#4A8A5A\"},\"gender_labels\":{\"m\":\"Maskulinum\",\"f\":\"Femininum\",\"n\":\"Neutrum\"},\"verb_tenses\":[\"Präsens\",\"Präteritum\",\"Perfekt\",\"Futur I\",\"Konjunktiv II\"],\"cases\":{\"nominative\":\"Nominativ\",\"accusative\":\"Akkusativ\",\"dative\":\"Dativ\",\"genitive\":\"Genitiv\"},\"ui_labels\":{\"learn_mode\":\"Lernen\",\"train_mode\":\"Trainieren\",\"examples_heading\":\"Beispielsätze\",\"grammar_note_heading\":\"Grammatiknotiz\",\"audio_button\":\"Anhören\",\"back_link\":\"Zurück\",\"card_counter\":\"Karte {current} / {total}\",\"next_button\":\"Weiter\",\"finish_button\":\"Fertig\",\"correct\":\"Richtig!\",\"wrong\":\"Falsch\"}}";
+
+  /**
+   * Client-side card renderer.
+   * Uses the universal card-renderer logic inline (no imports in Astro is:inline).
+   */
+
+  // ── Parse data ──────────────────────────────────────────────────────────
+  const card   = JSON.parse(cardJson);
+  const config = JSON.parse(langConfigJson);
+
+  // ── Helpers ─────────────────────────────────────────────────────────────
+  function stripArticle(word) {
+    return (word || '').replace(/^(der|die|das|el|la|los|las|le|les|l')\s+/i, '').trim();
+  }
+
+  function getArticleColour(article) {
+    if (!article || !config.article_colours) return 'var(--espresso)';
+    return config.article_colours[article.toLowerCase()] || 'var(--espresso)';
+  }
+
+  function getGenderLabel(gender) {
+    if (!gender) return '';
+    return (config.gender_labels || {})[gender] || gender;
+  }
+
+  function getTypeLabel() {
+    const tags = card.tags || [];
+    if (tags.includes('noun'))       return 'Substantiv';
+    if (tags.includes('verb'))       return 'Verb';
+    if (tags.includes('adjective'))  return 'Adjektiv';
+    if (tags.includes('expression')) return 'Ausdruck';
+    const map = { vocab:'Vokabel', verb:'Verb', phrase:'Phrase', connector:'Konnektor', grammar:'Grammatik' };
+    return map[card.type] || 'Karte';
+  }
+
+  function formatHighlight(text) {
+    if (!text) return '';
+    return String(text).replace(/\*(.*?)\*/g, '<span class="highlighter">$1</span>');
+  }
+
+  function normaliseExample(ex) {
+    return {
+      target: ex.target || ex.de || '',
+      source: ex.source || ex.en || '',
+      note: ex.note,
+    };
+  }
+
+  function getMetaFacts() {
+    const meta = { ...card.metadata, article: card.article, gender: card.gender, plural: card.plural, ...card.metadata };
+    const facts = [];
+    for (const field of (config.noun_metadata_fields || [])) {
+      const raw = meta[field.key] || card[field.key];
+      if (!raw || raw === '~') continue;
+      let value = String(raw);
+      let colour;
+      if (field.render === 'gender_label') value = getGenderLabel(raw);
+      else if (field.render === 'article_badge') colour = getArticleColour(raw);
+      facts.push({ label: field.label, value, colour });
+    }
+    return facts;
+  }
+
+  // ── Render ──────────────────────────────────────────────────────────────
+  const container = document.querySelector('.learning-card');
+  if (!container) { console.error('LearningCard: container not found'); }
+
+  function sel(cls) { return container?.querySelector(cls); }
+
+  // Type badge
+  sel('.lc-type-badge').textContent = getTypeLabel();
+
+  // Level badge
+  sel('.lc-level-badge').textContent = card.level || '';
+
+  // Article
+  const article = card.article || card.metadata?.article;
+  const articleWrap = sel('.lc-article-wrap');
+  const articleEl   = sel('.lc-article');
+  if (article && card.tags?.includes('noun') && !card.plural_only) {
+    articleEl.textContent  = article;
+    articleEl.style.color  = getArticleColour(article);
+    articleWrap.style.display = '';
+  } else {
+    articleWrap.style.display = 'none';
+  }
+
+  // Word
+  sel('.lc-word').textContent = stripArticle(card.target);
+
+  // Translation
+  sel('.lc-translation').textContent = card.source || '';
+
+  // Plural / forms
+  const plural = card.plural || card.metadata?.plural;
+  const formsEl = sel('.lc-forms');
+  if (plural && !card.plural_only) formsEl.textContent = `Pl. ${plural}`;
+  else if (card.plural_only) formsEl.textContent = 'nur Plural';
+  else formsEl.textContent = '';
+
+  // Meta grid
+  const metaGrid = sel('.lc-meta-grid');
+  const facts = getMetaFacts();
+  if (facts.length) {
+    const cols = Math.min(facts.length, 4);
+    metaGrid.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
+    metaGrid.innerHTML = facts.map((f, i) => `
+      <div class="px-5 py-4 ${i < facts.length - 1 ? 'border-r' : ''}" style="border-color:var(--border);">
+        <p class="text-[9px] font-bold uppercase tracking-widest mb-1" style="color:var(--text-muted);">${f.label}</p>
+        <p class="text-sm font-bold" style="color:${f.colour || 'var(--text)'};">${f.value}</p>
+      </div>
+    `).join('');
+  } else {
+    metaGrid.style.display = 'none';
+  }
+
+  // Grammar note
+  const grammarWrap = sel('.lc-grammar-wrap');
+  if (card.grammar_note) {
+    sel('.lc-grammar-text').innerHTML = formatHighlight(card.grammar_note);
+    grammarWrap.classList.remove('hidden');
+  }
+
+  // Grammar label from config
+  const uiLabels = config.ui_labels || {};
+  if (uiLabels.grammar_note_heading) sel('.lc-grammar-label').textContent = uiLabels.grammar_note_heading;
+  if (uiLabels.examples_heading)     sel('.lc-examples-label').textContent = uiLabels.examples_heading;
+  if (uiLabels.audio_button)         sel('.lc-audio-label').textContent    = uiLabels.audio_button;
+
+  // ── Type-specific blocks ─────────────────────────────────────────────────
+
+  // Verb: conjugation table
+  const type = card.type || (card.tags?.includes('verb') ? 'verb' : 'vocab');
+  if (type === 'verb' && card.conjugations?.length) {
+    const conjWrap  = sel('.lc-conjugation-wrap');
+    const conjInner = sel('.lc-conjugation-inner');
+    conjWrap.classList.remove('hidden');
+    conjInner.innerHTML = (config.verb_tenses || card.conjugations.map(t => t.tense)).map(tense => {
+      const t = card.conjugations.find(c => c.tense === tense);
+      if (!t) return '';
+      return `
+        <div class="border-b last:border-0" style="border-color:var(--border);">
+          <p class="text-[10px] font-bold uppercase tracking-widest px-5 py-2" style="background-color:var(--bg); color:var(--espresso);">${t.tense}</p>
+          <table class="w-full text-sm">
+            <tbody>
+              ${t.forms.map((f, ri) => `
+                <tr class="${ri % 2 === 0 ? '' : ''} border-t" style="border-color:var(--border);">
+                  <td class="px-5 py-2.5 font-bold w-24" style="color:var(--espresso);">${f.pronoun}</td>
+                  <td class="px-5 py-2.5 font-semibold" style="color:var(--text);">${f.form}</td>
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+        </div>
+      `;
+    }).join('');
+  }
+
+  // Connector: word order block
+  if (type === 'connector' && card.word_order) {
+    const woWrap = sel('.lc-wordorder-wrap');
+    sel('.lc-wordorder-text').textContent = card.word_order;
+    woWrap.classList.remove('hidden');
+  }
+
+  // Phrase: preposition rule block
+  if (type === 'phrase' && card.clause_type) {
+    const phraseWrap = sel('.lc-phrase-wrap');
+    sel('.lc-phrase-rule').textContent = card.clause_type;
+    phraseWrap.classList.remove('hidden');
+  }
+
+  // ── Examples ─────────────────────────────────────────────────────────────
+  const examplesEl = sel('.lc-examples');
+  const rawExamples = card.examples || (card.example_target || card.example_de ? [{ target: card.example_target || card.example_de, source: card.example_source || card.example_en }] : []);
+
+  if (rawExamples.length) {
+    examplesEl.innerHTML = rawExamples.map(ex => {
+      const e = normaliseExample(ex);
+      return `
+        <div class="rounded-2xl border overflow-hidden" style="border-color:var(--border);">
+          <div class="px-4 py-3" style="background-color:var(--bg);">
+            <p class="font-semibold leading-snug mb-1" style="color:var(--text);">${formatHighlight(e.target)}</p>
+            <p class="text-sm italic" style="color:var(--text-muted);">${formatHighlight(e.source || '')}</p>
+          </div>
+          ${e.note ? `<div class="px-4 py-2 border-t" style="border-color:var(--border);">
+            <p class="text-[10px] font-bold font-mono" style="color:var(--espresso);">📐 ${e.note}</p>
+          </div>` : ''}
+        </div>
+      `;
+    }).join('');
+  } else {
+    examplesEl.innerHTML = `<p class="text-sm italic" style="color:var(--text-muted);">Kein Beispiel verfügbar.</p>`;
+  }
+
+  // ── Tags ─────────────────────────────────────────────────────────────────
+  const tagsEl = sel('.lc-tags');
+  tagsEl.innerHTML = (card.tags || []).map(t => `
+    <span class="text-[10px] font-bold px-2 py-0.5 rounded-md border uppercase" style="border-color:var(--border); color:var(--text-muted); background-color:var(--bg);">${t}</span>
+  `).join('');
+
+  // ── Audio button ─────────────────────────────────────────────────────────
+  sel('.lc-audio-btn')?.addEventListener('click', () => {
+    if (window.DeutschAudioEngine) {
+      window.DeutschAudioEngine.speak(card.target || '', config.speech_lang || 'de-DE', 0.85);
+    }
+  });
+})();</script></div><!-- ── Navigation ───────────────────────────── --><div class="flex items-center justify-between mt-8 gap-4"><button id="btn-prev" disabled class="flex items-center gap-2 px-6 py-3 rounded-2xl border font-bold text-sm transition-all hover:opacity-70 active:scale-95 disabled:opacity-30 disabled:cursor-not-allowed" style="border-color:var(--border); color:var(--text); background-color:var(--card);"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg>Zurück</button><!-- Dot navigation --><div id="dot-nav" class="flex items-center gap-1.5 flex-wrap justify-center max-w-xs overflow-hidden" style="max-height:2rem;"><!-- populated by JS --></div><button id="btn-next" class="flex items-center gap-2 px-6 py-3 rounded-2xl font-bold text-sm transition-all hover:opacity-80 active:scale-95" style="background-color:var(--espresso); color:#F5F2EB;">Weiter<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg></button></div><!-- Keyboard hint --><p class="text-center text-xs font-medium mt-4" style="color:var(--text-muted);">← → Pfeiltasten zum Navigieren &nbsp;·&nbsp; A zum Anhören</p></div><!-- ── List View ───────────────────────────── --><div id="list-view-wrap" class="hidden space-y-6"><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Körper</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">body</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Masculine noun (der). Preposition 'für' always requires Akkusativ → 'den Körper'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Sport ist gut für den Körper.</p><p class="italic text-[13px]" style="color:var(--text-muted);">Sport is good for the body.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Kopf</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">head</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Masculine noun (der). Possessive pronoun: mein (Nominativ m).</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Mein Kopf tut weh.</p><p class="italic text-[13px]" style="color:var(--text-muted);">My head hurts.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Auge</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">eye</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Neuter noun (das). Adjective 'blaue' inflects in Akkusativ plural (schwache Deklination nach 'haben').</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Sie hat blaue Augen.</p><p class="italic text-[13px]" style="color:var(--text-muted);">She has blue eyes.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Nase</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">nose</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Feminine noun (die). Indefinite article 'eine' (Akkusativ f).</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Der Hund hat eine kalte Nase.</p><p class="italic text-[13px]" style="color:var(--text-muted);">The dog has a cold nose.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Mund</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">mouth</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Masculine noun (der). 'aufmachen' = separable verb → Mund is Akkusativ direct object.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Bitte mach den Mund auf.</p><p class="italic text-[13px]" style="color:var(--text-muted);">Please open your mouth.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Hand</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">hand</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Feminine noun (die). Reflexive Dativ 'sich' + Akkusativ 'die Hände'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Bitte waschen Sie sich die Hände.</p><p class="italic text-[13px]" style="color:var(--text-muted);">Please wash your hands.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Bein</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">leg</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Neuter noun (das). Possessive pronoun 'meine' (Nominativ plural).</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Nach dem Sport tun meine Beine weh.</p><p class="italic text-[13px]" style="color:var(--text-muted);">After sport, my legs hurt.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Gesundheit</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">health</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Feminine noun (die). Mostly uncountable — no plural in everyday use. Also used as an exclamation after someone sneezes.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Gesundheit ist das Wichtigste im Leben.</p><p class="italic text-[13px]" style="color:var(--text-muted);">Health is the most important thing in life.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">krank</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">sick / ill</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Predicate adjective (no ending after 'sein'). Attributive use inflects: ein kranker Mann, eine kranke Frau, ein krankes Kind.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich bin krank und bleibe zu Hause.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I am sick and staying at home.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">gesund</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">healthy</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Predicate and attributive adjective. Comparative: gesünder. Superlative: am gesündesten.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Obst essen ist gesund.</p><p class="italic text-[13px]" style="color:var(--text-muted);">Eating fruit is healthy.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Arzt / Ärztin</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">doctor (m/f)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Masculine (der Arzt), feminine (die Ärztin). 'zum' = zu + dem → Dativ. 'beim Arzt' = bei + dem → Dativ.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich muss zum Arzt gehen.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I have to go to the doctor.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Schmerzen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">pain (plural)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Plural-only noun (Pluraliatantum). Compounds: Kopfschmerzen (headache), Bauchschmerzen (stomach ache), Rückenschmerzen (back pain).</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Haben Sie Schmerzen?</p><p class="italic text-[13px]" style="color:var(--text-muted);">Are you in pain?</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Fieber</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">fever</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Neuter noun (das). Usually uncountable. 'Fieber haben' = to have a fever. 'Fieber messen' = to take a temperature.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Das Kind hat hohes Fieber.</p><p class="italic text-[13px]" style="color:var(--text-muted);">The child has a high fever.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Krankenhaus</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">hospital</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Neuter compound noun: krank + Haus. 'ins Krankenhaus' = in + das (Akkusativ, direction). 'im Krankenhaus' = in + dem (Dativ, location).</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Er musste nach dem Unfall ins Krankenhaus.</p><p class="italic text-[13px]" style="color:var(--text-muted);">He had to go to hospital after the accident.</p></div></div></div></div></div></div></main><footer class="mt-auto border-t py-8" style="background-color:var(--bg);border-color:var(--border);"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-medium" style="color:var(--text-muted);"><div>&copy; 2025 - 2026 Small Talk Café Podcasts. All rights reserved.</div><div class="flex gap-4">Made in Bayern ❤️ Los Geht's!</div></div></footer><!-- Theme toggle + Language switcher script --><script>
+      // ── Theme ──────────────────────────────────────
+      function applyTheme(dark) {
+        if (dark) {
+          document.documentElement.classList.add('dark');
+          localStorage.setItem('wortschatz_theme', 'dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+          localStorage.setItem('wortschatz_theme', 'light');
+        }
+        const icon = document.getElementById('theme-icon');
+        const label = document.getElementById('theme-label');
+        if (icon) icon.textContent = dark ? '🌙' : '☀️';
+        if (label) label.textContent = dark ? 'Dark' : 'Light';
+      }
+
+      const isDark = document.documentElement.classList.contains('dark');
+      applyTheme(isDark);
+
+      document.getElementById('theme-toggle')?.addEventListener('click', () => {
+        const nowDark = !document.documentElement.classList.contains('dark');
+        applyTheme(nowDark);
+      });
+
+      // ── Language Switcher ──────────────────────────
+      const LANG_CONTENT = {
+        de: {
+          name: 'Deutsch Lounge',
+          flag: '🇩🇪',
+          code: 'DE',
+          subtitle: 'Systematisches Vokabel- und Grammatiktraining',
+          tagline: 'Deutsch Lounge',
+          welcome: 'Willkommen beim',
+          cards: [
+            { title: 'Vokabeln', desc: 'Erweitere deinen Wortschatz. Lerne Nomen, Verben und Redewendungen mit Beispielsätzen.' },
+            { title: 'Verben', desc: 'Meistere reguläre, unregelmäßige, modale und reflexive Verben mit Konjugationstabellen.' },
+            { title: 'Grammatik', desc: 'Regeln verstehen & üben: Adjektivdeklination, Fälle, Präpositionen, Konnektoren & Phrasen.' },
+            { title: 'Redemittel', desc: 'Essentielle Phrasen für den Alltag, Diskussionen und Präsentationen.' }
+          ]
+        },
+        es: {
+          name: 'Spanish Gym',
+          flag: '🇪🇸',
+          code: 'ES',
+          subtitle: 'Tu compañero para aprender Español A1 – B2',
+          tagline: 'A1–B2 Spanish Curriculum',
+          welcome: 'Bienvenido al',
+          cards: [
+            { title: 'Vocabulario', desc: 'Amplía tu vocabulario A1–B2. Aprende sustantivos, verbos y frases con ejemplos contextuales.' },
+            { title: 'Verbos', desc: 'Domina verbos regulares, irregulares y reflexivos con tablas de conjugación.' },
+            { title: 'Gramática', desc: 'Entiende y practica las reglas gramaticales, casos y conectores.' },
+            { title: 'Expresiones', desc: 'Frases esenciales para el día a día, discusiones y presentaciones.' }
+          ]
+        },
+        fr: {
+          name: 'French Gym',
+          flag: '🇫🇷',
+          code: 'FR',
+          subtitle: 'Ton compagnon pour apprendre le Français A1 – B2',
+          tagline: 'A1–B2 French Curriculum',
+          welcome: 'Bienvenue au',
+          cards: [
+            { title: 'Vocabulaire', desc: 'Élargis ton vocabulaire A1–B2. Apprends des noms, verbes et expressions avec des exemples.' },
+            { title: 'Verbes', desc: 'Maîtrise les verbes réguliers, irréguliers et réflexifs avec des tableaux de conjugaison.' },
+            { title: 'Grammaire', desc: 'Comprends et pratique les règles de grammaire, les cas et les connecteurs.' },
+            { title: 'Expressions', desc: 'Phrases essentielles pour la vie quotidienne, les discussions et les présentations.' }
+          ]
+        }
+      };
+
+      function applyLanguage(lang) {
+        const c = LANG_CONTENT[lang] || LANG_CONTENT['de'];
+        localStorage.setItem('gym_language', lang);
+
+        // Header
+        const flag = document.getElementById('lang-flag');
+        const code = document.getElementById('lang-code');
+        const siteName = document.getElementById('site-name');
+        if (flag) flag.textContent = c.flag;
+        if (code) code.textContent = c.code;
+        if (siteName) siteName.textContent = c.name;
+
+        // Footer
+        const footerName = document.getElementById('footer-gym-name');
+        const footerLevel = document.getElementById('footer-level');
+        if (footerName) footerName.textContent = c.name;
+        if (footerLevel) footerLevel.textContent = c.tagline;
+
+        const isGerman = lang === 'de';
+        const overlay = document.getElementById('coming-soon-overlay');
+        const mainContent = document.getElementById('main-content');
+        const germanNavLinks = document.querySelectorAll('[data-german-nav]');
+
+        if (isGerman) {
+          // Show normal German content
+          if (overlay) overlay.classList.add('hidden');
+          if (mainContent) mainContent.classList.remove('hidden');
+          germanNavLinks.forEach(el => el.classList.remove('hidden'));
+
+          // Hero on homepage only
+          const heroTitle = document.getElementById('hero-gym-name');
+          const heroSubtitle = document.getElementById('hero-subtitle');
+          const heroWelcome = document.getElementById('hero-welcome');
+          if (heroTitle) heroTitle.textContent = c.name;
+          if (heroSubtitle) heroSubtitle.textContent = c.subtitle;
+          if (heroWelcome) heroWelcome.textContent = c.welcome;
+
+          // Category cards
+          const cardTitles = document.querySelectorAll('[data-card-title]');
+          const cardDescs = document.querySelectorAll('[data-card-desc]');
+          cardTitles.forEach((el, i) => {
+            if (c.cards[i]) el.textContent = c.cards[i].title;
+          });
+          cardDescs.forEach((el, i) => {
+            if (c.cards[i]) el.textContent = c.cards[i].desc;
+          });
+
+          // Nav links
+          const navLabels = document.querySelectorAll('[data-nav-label]');
+          navLabels.forEach((el, i) => {
+            if (c.cards[i]) el.textContent = c.cards[i].title;
+          });
+        } else {
+          // Non-German: show coming soon overlay, hide main content and German nav
+          if (mainContent) mainContent.classList.add('hidden');
+          germanNavLinks.forEach(el => el.classList.add('hidden'));
+
+          // Populate coming soon overlay
+          const comingFlag = document.getElementById('coming-soon-flag');
+          const comingLang = document.getElementById('coming-soon-lang');
+          if (comingFlag) comingFlag.textContent = c.flag;
+          if (comingLang) comingLang.textContent = c.name + ' content';
+
+          if (overlay) {
+            overlay.classList.remove('hidden');
+            overlay.classList.add('flex');
+          }
+        }
+      }
+
+      // Restore saved language
+      const savedLang = localStorage.getItem('gym_language') || 'de';
+      applyLanguage(savedLang);
+
+      // Dropdown toggle
+      const langBtn = document.getElementById('lang-btn');
+      const langMenu = document.getElementById('lang-menu');
+
+      langBtn?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        langMenu?.classList.toggle('hidden');
+      });
+
+      document.addEventListener('click', () => {
+        langMenu?.classList.add('hidden');
+      });
+
+      document.querySelectorAll('.lang-option').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const lang = btn.dataset.lang;
+          applyLanguage(lang);
+          langMenu?.classList.add('hidden');
+        });
+      });
+
+      // Coming soon "Switch to German" button
+      document.getElementById('coming-soon-back-btn')?.addEventListener('click', () => {
+        applyLanguage('de');
+      });
+    </script></body></html><script type="module" src="/languagelounge/_astro/_deckId_.astro_astro_type_script_index_0_lang.B80xyaMZ.js"></script><script>(function(){const cardsJson = "[{\"id\":\"a1-hea-001\",\"target\":\"Körper\",\"source\":\"body\",\"article\":\"der\",\"gender\":\"m\",\"plural\":\"die Körper\",\"example_target\":\"Sport ist gut für den Körper.\",\"example_source\":\"Sport is good for the body.\",\"tags\":[\"noun\",\"body\"],\"grammar_note\":\"Masculine noun (der). Preposition 'für' always requires Akkusativ → 'den Körper'.\",\"examples\":[{\"de\":\"Sport ist gut für den Körper.\",\"en\":\"Sport is good for the body.\",\"note\":\"für + Akkusativ: den Körper\"},{\"de\":\"Der menschliche Körper braucht viel Wasser.\",\"en\":\"The human body needs a lot of water.\",\"note\":\"Subject (Nominativ): der Körper\"},{\"de\":\"Sie pflegt ihren Körper mit Creme.\",\"en\":\"She cares for her body with cream.\",\"note\":\"Akkusativ direct object: ihren Körper\"},{\"de\":\"Ein gesunder Körper braucht Schlaf und Bewegung.\",\"en\":\"A healthy body needs sleep and movement.\",\"note\":\"Nominativ with adjective inflection (gesunder)\"},{\"de\":\"Nach dem Sport fühlt sich der Körper erschöpft an.\",\"en\":\"After sport, the body feels exhausted.\",\"note\":\"Reflexive verb 'sich anfühlen' + Nominativ\"}]},{\"id\":\"a1-hea-002\",\"target\":\"Kopf\",\"source\":\"head\",\"article\":\"der\",\"gender\":\"m\",\"plural\":\"die Köpfe\",\"example_target\":\"Mein Kopf tut weh.\",\"example_source\":\"My head hurts.\",\"tags\":[\"noun\",\"body\"],\"grammar_note\":\"Masculine noun (der). Possessive pronoun: mein (Nominativ m).\",\"examples\":[{\"de\":\"Mein Kopf tut weh.\",\"en\":\"My head hurts.\",\"note\":\"Possessive pronoun mein (Nominativ m)\"},{\"de\":\"Er schüttelt den Kopf.\",\"en\":\"He shakes his head.\",\"note\":\"Akkusativ direct object: den Kopf\"},{\"de\":\"Ich habe starke Kopfschmerzen.\",\"en\":\"I have a bad headache.\",\"note\":\"Compound noun Kopf + Schmerzen\"},{\"de\":\"Den Kopf hoch! Alles wird gut.\",\"en\":\"Keep your head up! Everything will be fine.\",\"note\":\"Idiomatic expression with Akkusativ\"},{\"de\":\"Sie haben den Kopf verloren vor Aufregung.\",\"en\":\"They lost their heads with excitement.\",\"note\":\"Figurative use — Perfekt with haben\"}]},{\"id\":\"a1-hea-003\",\"target\":\"Auge\",\"source\":\"eye\",\"article\":\"das\",\"gender\":\"n\",\"plural\":\"die Augen\",\"example_target\":\"Sie hat blaue Augen.\",\"example_source\":\"She has blue eyes.\",\"tags\":[\"noun\",\"body\"],\"grammar_note\":\"Neuter noun (das). Adjective 'blaue' inflects in Akkusativ plural (schwache Deklination nach 'haben').\",\"examples\":[{\"de\":\"Sie hat blaue Augen.\",\"en\":\"She has blue eyes.\",\"note\":\"Akkusativ plural after 'haben'\"},{\"de\":\"Ich habe ein Auge zugetan.\",\"en\":\"I didn't close an eye (couldn't sleep).\",\"note\":\"Idiom — Perfekt with haben\"},{\"de\":\"Das Auge ist das Fenster zur Seele.\",\"en\":\"The eye is the window to the soul.\",\"note\":\"Nominativ + Genitivphrase\"},{\"de\":\"Er kann das Auge nicht von ihr lassen.\",\"en\":\"He can't take his eyes off her.\",\"note\":\"Modal + Infinitiv\"},{\"de\":\"Schließ die Augen und entspann dich.\",\"en\":\"Close your eyes and relax.\",\"note\":\"Imperativ plural\"}]},{\"id\":\"a1-hea-004\",\"target\":\"Nase\",\"source\":\"nose\",\"article\":\"die\",\"gender\":\"f\",\"plural\":\"die Nasen\",\"example_target\":\"Der Hund hat eine kalte Nase.\",\"example_source\":\"The dog has a cold nose.\",\"tags\":[\"noun\",\"body\"],\"grammar_note\":\"Feminine noun (die). Indefinite article 'eine' (Akkusativ f).\",\"examples\":[{\"de\":\"Der Hund hat eine kalte Nase.\",\"en\":\"The dog has a cold nose.\",\"note\":\"Akkusativ: eine kalte Nase\"},{\"de\":\"Ich habe Schnupfen. Meine Nase läuft.\",\"en\":\"I have a cold. My nose is running.\",\"note\":\"Nominativ with possessive pronoun\"},{\"de\":\"Putz dir die Nase!\",\"en\":\"Blow your nose!\",\"note\":\"Reflexive Dativ (dir) + Akkusativ (die Nase)\"},{\"de\":\"Er steckt die Nase in alles.\",\"en\":\"He sticks his nose into everything.\",\"note\":\"Figurative — Akkusativ\"},{\"de\":\"Die Nase blutet nach dem Sturz.\",\"en\":\"The nose is bleeding after the fall.\",\"note\":\"Nominativ after 'nach' (Dativ)\"}]},{\"id\":\"a1-hea-005\",\"target\":\"Mund\",\"source\":\"mouth\",\"article\":\"der\",\"gender\":\"m\",\"plural\":\"die Münder\",\"example_target\":\"Bitte mach den Mund auf.\",\"example_source\":\"Please open your mouth.\",\"tags\":[\"noun\",\"body\"],\"grammar_note\":\"Masculine noun (der). 'aufmachen' = separable verb → Mund is Akkusativ direct object.\",\"examples\":[{\"de\":\"Bitte mach den Mund auf.\",\"en\":\"Please open your mouth.\",\"note\":\"Akkusativ: den Mund + separable verb aufmachen\"},{\"de\":\"Er hat den Mund voll genommen.\",\"en\":\"He bit off more than he could chew.\",\"note\":\"Idiom — Perfekt\"},{\"de\":\"Halt den Mund!\",\"en\":\"Keep your mouth shut!\",\"note\":\"Imperativ — colloquial\"},{\"de\":\"Der Mund läuft ihr beim Essen über.\",\"en\":\"Her mouth is watering when she eats.\",\"note\":\"Figurative + Dativ pronoun\"},{\"de\":\"Von Mund zu Mund wird die Geschichte weitergegeben.\",\"en\":\"The story is passed on by word of mouth.\",\"note\":\"Prepositional phrase — Dativ\"}]},{\"id\":\"a1-hea-006\",\"target\":\"Hand\",\"source\":\"hand\",\"article\":\"die\",\"gender\":\"f\",\"plural\":\"die Hände\",\"example_target\":\"Bitte waschen Sie sich die Hände.\",\"example_source\":\"Please wash your hands.\",\"tags\":[\"noun\",\"body\"],\"grammar_note\":\"Feminine noun (die). Reflexive Dativ 'sich' + Akkusativ 'die Hände'.\",\"examples\":[{\"de\":\"Bitte waschen Sie sich die Hände.\",\"en\":\"Please wash your hands.\",\"note\":\"Reflexive Dativ + Akkusativ plural\"},{\"de\":\"Er reicht ihr die Hand.\",\"en\":\"He extends his hand to her.\",\"note\":\"Akkusativ: die Hand + Dativ: ihr\"},{\"de\":\"Sie hat die Sache in der Hand.\",\"en\":\"She has the matter in hand.\",\"note\":\"Dativ: in der Hand\"},{\"de\":\"Hand in Hand gingen sie den Strand entlang.\",\"en\":\"Hand in hand they walked along the beach.\",\"note\":\"Fixed expression without article\"},{\"de\":\"Ich gebe dir mein Wort — von Hand geschrieben.\",\"en\":\"I give you my word — written by hand.\",\"note\":\"Prepositional phrase (von + Dativ)\"}]},{\"id\":\"a1-hea-007\",\"target\":\"Bein\",\"source\":\"leg\",\"article\":\"das\",\"gender\":\"n\",\"plural\":\"die Beine\",\"example_target\":\"Nach dem Sport tun meine Beine weh.\",\"example_source\":\"After sport, my legs hurt.\",\"tags\":[\"noun\",\"body\"],\"grammar_note\":\"Neuter noun (das). Possessive pronoun 'meine' (Nominativ plural).\",\"examples\":[{\"de\":\"Nach dem Sport tun meine Beine weh.\",\"en\":\"After sport, my legs hurt.\",\"note\":\"Nominativ plural with wehtun\"},{\"de\":\"Er hat sich das Bein gebrochen.\",\"en\":\"He broke his leg.\",\"note\":\"Reflexive Dativ (sich) + Akkusativ (das Bein) — Perfekt\"},{\"de\":\"Sie stellte das Bein vor.\",\"en\":\"She put her leg forward.\",\"note\":\"Akkusativ: das Bein + separable verb vorgestellt\"},{\"de\":\"Steh auf eigenen Beinen!\",\"en\":\"Stand on your own two feet!\",\"note\":\"Idiom — Dativ plural nach 'auf'\"},{\"de\":\"Die Reise war lang — meine Beine sind müde.\",\"en\":\"The journey was long — my legs are tired.\",\"note\":\"Possessive pronoun + adjective predicative\"}]},{\"id\":\"a1-hea-008\",\"target\":\"Gesundheit\",\"source\":\"health\",\"article\":\"die\",\"gender\":\"f\",\"plural\":null,\"example_target\":\"Gesundheit ist das Wichtigste.\",\"example_source\":\"Health is the most important thing.\",\"tags\":[\"noun\",\"health\"],\"grammar_note\":\"Feminine noun (die). Mostly uncountable — no plural in everyday use. Also used as an exclamation after someone sneezes.\",\"examples\":[{\"de\":\"Gesundheit ist das Wichtigste im Leben.\",\"en\":\"Health is the most important thing in life.\",\"note\":\"Subject (Nominativ) — superlative adjective\"},{\"de\":\"Gesundheit! (after a sneeze)\",\"en\":\"Bless you!\",\"note\":\"Standalone exclamation\"},{\"de\":\"Er achtet sehr auf seine Gesundheit.\",\"en\":\"He pays close attention to his health.\",\"note\":\"auf + Akkusativ: seine Gesundheit (achten auf)\"},{\"de\":\"Die Gesundheit der Bevölkerung hat sich verbessert.\",\"en\":\"The health of the population has improved.\",\"note\":\"Genitive: der Bevölkerung\"},{\"de\":\"Auf Ihre Gesundheit! (toast)\",\"en\":\"To your health! (cheers)\",\"note\":\"Prepositional toast — Akkusativ\"}]},{\"id\":\"a1-hea-009\",\"target\":\"krank\",\"source\":\"sick / ill\",\"article\":null,\"gender\":null,\"example_target\":\"Ich kann nicht kommen, ich bin krank.\",\"example_source\":\"I can't come, I am sick.\",\"tags\":[\"adjective\",\"health\"],\"grammar_note\":\"Predicate adjective (no ending after 'sein'). Attributive use inflects: ein kranker Mann, eine kranke Frau, ein krankes Kind.\",\"examples\":[{\"de\":\"Ich bin krank und bleibe zu Hause.\",\"en\":\"I am sick and staying at home.\",\"note\":\"Predicate adjective — no ending\"},{\"de\":\"Der kranke Mann liegt im Bett.\",\"en\":\"The sick man lies in bed.\",\"note\":\"Attributive — Nominativ m (kranke → kranker... but after 'der': kranke)\"},{\"de\":\"Sie hat ein krankes Kind zu Hause.\",\"en\":\"She has a sick child at home.\",\"note\":\"Akkusativ n: ein krankes Kind\"},{\"de\":\"Ich bin von gestern noch krank.\",\"en\":\"I'm still sick from yesterday.\",\"note\":\"Predicate + prepositional phrase\"},{\"de\":\"Kranke Menschen brauchen viel Ruhe.\",\"en\":\"Sick people need a lot of rest.\",\"note\":\"Attributive plural — no article (starke Deklination)\"}]},{\"id\":\"a1-hea-010\",\"target\":\"gesund\",\"source\":\"healthy\",\"article\":null,\"gender\":null,\"example_target\":\"Ich esse viel Obst, das ist gesund.\",\"example_source\":\"I eat a lot of fruit, that is healthy.\",\"tags\":[\"adjective\",\"health\"],\"grammar_note\":\"Predicate and attributive adjective. Comparative: gesünder. Superlative: am gesündesten.\",\"examples\":[{\"de\":\"Obst essen ist gesund.\",\"en\":\"Eating fruit is healthy.\",\"note\":\"Predicate adjective\"},{\"de\":\"Er führt ein sehr gesundes Leben.\",\"en\":\"He leads a very healthy life.\",\"note\":\"Attributive Akkusativ n: ein gesundes Leben\"},{\"de\":\"Gesunde Ernährung ist wichtig.\",\"en\":\"Healthy nutrition is important.\",\"note\":\"Attributive Nominativ f (starke Deklination)\"},{\"de\":\"Sie ist wieder gesund geworden.\",\"en\":\"She became healthy again.\",\"note\":\"Perfekt with sein — change of state\"},{\"de\":\"Der gesündeste Lebensstil ist ausgewogen.\",\"en\":\"The healthiest lifestyle is balanced.\",\"note\":\"Superlative with definite article\"}]},{\"id\":\"a1-hea-011\",\"target\":\"Arzt / Ärztin\",\"source\":\"doctor (m/f)\",\"article\":\"der\",\"gender\":\"m\",\"plural\":\"die Ärzte / die Ärztinnen\",\"example_target\":\"Ich muss zum Arzt gehen.\",\"example_source\":\"I have to go to the doctor.\",\"tags\":[\"noun\",\"health\",\"profession\"],\"grammar_note\":\"Masculine (der Arzt), feminine (die Ärztin). 'zum' = zu + dem → Dativ. 'beim Arzt' = bei + dem → Dativ.\",\"examples\":[{\"de\":\"Ich muss zum Arzt gehen.\",\"en\":\"I have to go to the doctor.\",\"note\":\"zu + Dativ: zum Arzt\"},{\"de\":\"Ich habe einen Termin beim Arzt.\",\"en\":\"I have an appointment at the doctor's.\",\"note\":\"bei + Dativ: beim Arzt\"},{\"de\":\"Der Arzt hat mir Tabletten verschrieben.\",\"en\":\"The doctor prescribed me tablets.\",\"note\":\"Dativ: mir (indirect object)\"},{\"de\":\"Die Ärztin erklärt die Diagnose sehr gut.\",\"en\":\"The (female) doctor explains the diagnosis very well.\",\"note\":\"Feminine form — Nominativ\"},{\"de\":\"Ohne den Arzt wäre er nicht gesund geworden.\",\"en\":\"Without the doctor he wouldn't have gotten healthy.\",\"note\":\"Konjunktiv II + ohne + Akkusativ: den Arzt\"}]},{\"id\":\"a1-hea-012\",\"target\":\"Schmerzen\",\"source\":\"pain (plural)\",\"article\":null,\"gender\":null,\"plural_only\":true,\"example_target\":\"Haben Sie Schmerzen?\",\"example_source\":\"Do you have pain?\",\"tags\":[\"noun\",\"health\"],\"grammar_note\":\"Plural-only noun (Pluraliatantum). Compounds: Kopfschmerzen (headache), Bauchschmerzen (stomach ache), Rückenschmerzen (back pain).\",\"examples\":[{\"de\":\"Haben Sie Schmerzen?\",\"en\":\"Are you in pain?\",\"note\":\"Akkusativ plural (no article in question)\"},{\"de\":\"Ich habe starke Rückenschmerzen.\",\"en\":\"I have severe back pain.\",\"note\":\"Compound: Rücken + Schmerzen\"},{\"de\":\"Die Schmerzen lassen langsam nach.\",\"en\":\"The pain is slowly subsiding.\",\"note\":\"Subject Nominativ plural\"},{\"de\":\"Gegen die Schmerzen helfen Tabletten.\",\"en\":\"Tablets help against the pain.\",\"note\":\"gegen + Akkusativ: die Schmerzen\"},{\"de\":\"Er leidet unter starken Kopfschmerzen.\",\"en\":\"He suffers from severe headaches.\",\"note\":\"leiden unter + Dativ: starken Kopfschmerzen\"}]},{\"id\":\"a1-hea-013\",\"target\":\"Fieber\",\"source\":\"fever\",\"article\":\"das\",\"gender\":\"n\",\"plural\":null,\"example_target\":\"Das Kind hat hohes Fieber.\",\"example_source\":\"The child has a high fever.\",\"tags\":[\"noun\",\"health\"],\"grammar_note\":\"Neuter noun (das). Usually uncountable. 'Fieber haben' = to have a fever. 'Fieber messen' = to take a temperature.\",\"examples\":[{\"de\":\"Das Kind hat hohes Fieber.\",\"en\":\"The child has a high fever.\",\"note\":\"Akkusativ — hohes Fieber (adjective starke Deklination n)\"},{\"de\":\"Ich messe mein Fieber mit dem Thermometer.\",\"en\":\"I take my temperature with the thermometer.\",\"note\":\"Akkusativ — mein Fieber\"},{\"de\":\"Das Fieber ist auf 40 Grad gestiegen.\",\"en\":\"The fever has risen to 40 degrees.\",\"note\":\"Perfekt with sein + auf + Akkusativ\"},{\"de\":\"Mit Fieber sollte man im Bett bleiben.\",\"en\":\"With a fever you should stay in bed.\",\"note\":\"mit + Dativ: Fieber (no article)\"},{\"de\":\"Das Fieber ist nach zwei Tagen gesunken.\",\"en\":\"The fever subsided after two days.\",\"note\":\"Perfekt with sein — change of state\"}]},{\"id\":\"a1-hea-014\",\"target\":\"Krankenhaus\",\"source\":\"hospital\",\"article\":\"das\",\"gender\":\"n\",\"plural\":\"die Krankenhäuser\",\"example_target\":\"Er musste nach dem Unfall ins Krankenhaus.\",\"example_source\":\"He had to go to hospital after the accident.\",\"tags\":[\"noun\",\"health\",\"place\"],\"grammar_note\":\"Neuter compound noun: krank + Haus. 'ins Krankenhaus' = in + das (Akkusativ, direction). 'im Krankenhaus' = in + dem (Dativ, location).\",\"examples\":[{\"de\":\"Er musste nach dem Unfall ins Krankenhaus.\",\"en\":\"He had to go to hospital after the accident.\",\"note\":\"ins = in + das (Akkusativ — direction)\"},{\"de\":\"Sie liegt seit drei Tagen im Krankenhaus.\",\"en\":\"She has been in hospital for three days.\",\"note\":\"im = in + dem (Dativ — location)\"},{\"de\":\"Das Krankenhaus ist nur 10 Minuten entfernt.\",\"en\":\"The hospital is only 10 minutes away.\",\"note\":\"Nominativ — subject\"},{\"de\":\"Er wurde gestern aus dem Krankenhaus entlassen.\",\"en\":\"He was discharged from the hospital yesterday.\",\"note\":\"aus + Dativ: dem Krankenhaus — Passiv\"},{\"de\":\"Sie besucht ihren Vater täglich im Krankenhaus.\",\"en\":\"She visits her father daily in the hospital.\",\"note\":\"im Krankenhaus — Dativ location\"}]}]";
+const langConfigJson = "{\"language_pair\":\"english_german\",\"target_lang\":\"de\",\"native_lang\":\"en\",\"target_lang_name\":\"Deutsch\",\"native_lang_name\":\"English\",\"speech_lang\":\"de-DE\",\"noun_metadata_fields\":[{\"key\":\"article\",\"label\":\"Artikel\",\"render\":\"article_badge\"},{\"key\":\"gender\",\"label\":\"Genus\",\"render\":\"gender_label\"},{\"key\":\"plural\",\"label\":\"Plural\",\"render\":\"text\"}],\"article_colours\":{\"der\":\"#4A7C9E\",\"die\":\"#B05070\",\"das\":\"#4A8A5A\"},\"gender_labels\":{\"m\":\"Maskulinum\",\"f\":\"Femininum\",\"n\":\"Neutrum\"},\"verb_tenses\":[\"Präsens\",\"Präteritum\",\"Perfekt\",\"Futur I\",\"Konjunktiv II\"],\"cases\":{\"nominative\":\"Nominativ\",\"accusative\":\"Akkusativ\",\"dative\":\"Dativ\",\"genitive\":\"Genitiv\"},\"ui_labels\":{\"learn_mode\":\"Lernen\",\"train_mode\":\"Trainieren\",\"examples_heading\":\"Beispielsätze\",\"grammar_note_heading\":\"Grammatiknotiz\",\"audio_button\":\"Anhören\",\"back_link\":\"Zurück\",\"card_counter\":\"Karte {current} / {total}\",\"next_button\":\"Weiter\",\"finish_button\":\"Fertig\",\"correct\":\"Richtig!\",\"wrong\":\"Falsch\"}}";
+const category = "vocabulary";
+
+  const cards     = JSON.parse(cardsJson);
+  const config    = JSON.parse(langConfigJson);
+  let currentIndex = 0;
+
+  const dotNav    = document.getElementById('dot-nav');
+  const currentNum = document.getElementById('current-num');
+  const progressBar = document.getElementById('progress-bar');
+  const btnPrev   = document.getElementById('btn-prev');
+  const btnNext   = document.getElementById('btn-next');
+  const cardHost  = document.getElementById('card-host');
+  const progressCont = document.getElementById('progress-container');
+
+  const cardViewWrap = document.getElementById('card-view-wrap');
+  const listViewWrap = document.getElementById('list-view-wrap');
+  const btnViewCards = document.getElementById('view-cards-btn');
+  const btnViewList  = document.getElementById('view-list-btn');
+
+  // Toggle Logic
+  function setViewMode(mode) {
+    if (mode === 'list') {
+      cardViewWrap.classList.add('hidden');
+      listViewWrap.classList.remove('hidden');
+      progressCont.classList.add('hidden');
+      btnViewList.classList.add('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewList.classList.remove('text-[var(--text-muted)]');
+      btnViewCards.classList.remove('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewCards.classList.add('text-[var(--text-muted)]');
+    } else {
+      listViewWrap.classList.add('hidden');
+      cardViewWrap.classList.remove('hidden');
+      progressCont.classList.remove('hidden');
+      btnViewCards.classList.add('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewCards.classList.remove('text-[var(--text-muted)]');
+      btnViewList.classList.remove('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewList.classList.add('text-[var(--text-muted)]');
+    }
+  }
+
+  btnViewCards.addEventListener('click', () => setViewMode('cards'));
+  btnViewList.addEventListener('click', () => setViewMode('list'));
+
+  // Default Grammatik and Redemittel to list view!
+  if (category === 'grammatik' || category === 'redemittel' || category === 'phrases') {
+    setViewMode('list');
+  }
+
+
+
+  // ── Helpers (mirror card-renderer.ts — no module imports in inline scripts) ──
+  const articleColours = config.article_colours || { der:'#4A7C9E', die:'#B05070', das:'#4A8A5A' };
+  const genderLabels   = config.gender_labels   || { m:'Maskulinum', f:'Femininum', n:'Neutrum'  };
+  const speechLang     = config.speech_lang     || 'de-DE';
+
+  function stripArticle(w) {
+    return (w || '').replace(/^(der|die|das|el|la|los|las|le|les|l')\s+/i,'').trim();
+  }
+
+  function getTypeLabel(card) {
+    const tags = card.tags || [];
+    if (tags.includes('noun'))       return 'Substantiv';
+    if (tags.includes('verb'))       return 'Verb';
+    if (tags.includes('adjective'))  return 'Adjektiv';
+    if (tags.includes('expression')) return 'Ausdruck';
+    return { vocab:'Vokabel', verb:'Verb', phrase:'Phrase', connector:'Konnektor', grammar:'Grammatik' }[card.type] || 'Vokabel';
+  }
+
+  function normaliseEx(ex) {
+    return { target: ex.target||ex.de||'', source: ex.source||ex.en||'', note: ex.note };
+  }
+
+  function getMetaFacts(card) {
+    const meta = { ...(card.metadata||{}), article:card.article, gender:card.gender, plural:card.plural };
+    const facts = [];
+    for (const field of (config.noun_metadata_fields || [])) {
+      const raw = meta[field.key];
+      if (!raw || raw==='~') continue;
+      let value = String(raw), colour;
+      if (field.render === 'gender_label')  value  = genderLabels[raw] || raw;
+      if (field.render === 'article_badge') colour = articleColours[raw.toLowerCase()] || 'var(--espresso)';
+      facts.push({ label: field.label, value, colour });
+    }
+    return facts;
+  }
+
+  // ── Card renderer ─────────────────────────────────────────────────────────
+  function renderCard(idx) {
+    const card = cards[idx];
+    if (!card || !cardHost) return;
+
+    const lc = cardHost.querySelector('.learning-card');
+    if (!lc) return;
+
+    function sel(cls) { return lc.querySelector(cls); }
+
+    // Type badge + level
+    sel('.lc-type-badge').textContent = getTypeLabel(card);
+    sel('.lc-level-badge').textContent = (card.level || '').toUpperCase();
+
+    // Article
+    const article = card.article || card.metadata?.article;
+    const articleWrap = sel('.lc-article-wrap');
+    const articleEl   = sel('.lc-article');
+    if (article && (card.tags||[]).includes('noun') && !card.plural_only) {
+      articleEl.textContent = article;
+      articleEl.style.color = articleColours[article.toLowerCase()] || 'var(--espresso)';
+      articleWrap.style.display = '';
+    } else {
+      articleWrap.style.display = 'none';
+    }
+
+    // Word / translation / forms
+    sel('.lc-word').textContent        = stripArticle(card.target);
+    sel('.lc-translation').textContent = card.source || '';
+    const plural = card.plural || card.metadata?.plural;
+    sel('.lc-forms').textContent = plural && !card.plural_only ? `Pl. ${plural}` : card.plural_only ? 'nur Plural' : '';
+
+    // Meta grid
+    const metaGrid = sel('.lc-meta-grid');
+    const facts = getMetaFacts(card);
+    if (facts.length) {
+      metaGrid.style.gridTemplateColumns = `repeat(${Math.min(facts.length,4)}, 1fr)`;
+      metaGrid.style.display = '';
+      metaGrid.innerHTML = facts.map((f, i) => `
+        <div class="px-5 py-4 ${i<facts.length-1?'border-r':''}" style="border-color:var(--border);">
+          <p class="text-[9px] font-bold uppercase tracking-widest mb-1" style="color:var(--text-muted);">${f.label}</p>
+          <p class="text-sm font-bold" style="color:${f.colour||'var(--text)'};">${f.value}</p>
+        </div>`).join('');
+    } else {
+      metaGrid.style.display = 'none';
+    }
+
+    // Grammar note
+    const grammarWrap = sel('.lc-grammar-wrap');
+    if (card.grammar_note) {
+      sel('.lc-grammar-text').innerHTML = formatHighlight(card.grammar_note);
+      grammarWrap.classList.remove('hidden');
+    } else {
+      grammarWrap.classList.add('hidden');
+    }
+
+    // Examples
+    const examplesEl = sel('.lc-examples');
+    const rawEx = card.examples || (card.example_target ? [{ target:card.example_target, source:card.example_source }] : []);
+    examplesEl.innerHTML = rawEx.length
+      ? rawEx.map(ex => { const e=normaliseEx(ex); return `
+          <div class="rounded-2xl border overflow-hidden" style="border-color:var(--border);">
+            <div class="px-4 py-3" style="background-color:var(--bg);">
+              <p class="font-semibold leading-snug mb-1" style="color:var(--text);">${e.target}</p>
+              <p class="text-sm italic" style="color:var(--text-muted);">${e.source||''}</p>
+            </div>
+            ${e.note?`<div class="px-4 py-2 border-t" style="border-color:var(--border);">
+              <p class="text-[10px] font-bold font-mono" style="color:var(--espresso);">📐 ${e.note}</p>
+            </div>`:''}
+          </div>`; }).join('')
+      : '<p class="text-sm italic" style="color:var(--text-muted);">Kein Beispiel verfügbar.</p>';
+
+    // Tags
+    sel('.lc-tags').innerHTML = (card.tags||[]).map(t =>
+      `<span class="text-[10px] font-bold px-2 py-0.5 rounded-md border" style="border-color:var(--border);color:var(--text-muted);background-color:var(--bg);">${t}</span>`
+    ).join('');
+
+    // Progress UI
+    if (currentNum)  currentNum.textContent = String(idx+1);
+    if (progressBar) progressBar.style.width = `${Math.round(((idx+1)/cards.length)*100)}%`;
+    if (btnPrev)     btnPrev.disabled = idx === 0;
+    if (btnNext)     btnNext.innerHTML = idx === cards.length-1
+      ? '✓ Fertig'
+      : 'Weiter <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>';
+
+    updateDots();
+
+    // Re-bind audio button cleanly by cloning to strip old listeners
+    const oldBtn = sel('.lc-audio-btn');
+    if (oldBtn) {
+      const newBtn = oldBtn.cloneNode(true);
+      oldBtn.parentNode.replaceChild(newBtn, oldBtn);
+      newBtn.addEventListener('click', speakCurrent);
+    }
+  }
+
+  // ── Dot navigation ────────────────────────────────────────────────────────
+  function buildDots() {
+    if (!dotNav) return;
+    dotNav.innerHTML = '';
+    const maxVisible = 20;
+    const showAll = cards.length <= maxVisible;
+    cards.forEach((_, i) => {
+      if (!showAll && i >= maxVisible) return;
+      const dot = document.createElement('button');
+      dot.className = 'dot w-2 h-2 rounded-full transition-all duration-300 flex-shrink-0';
+      dot.style.backgroundColor = 'var(--border)';
+      dot.title = `Card ${i+1}`;
+      dot.addEventListener('click', () => goTo(i));
+      dotNav.appendChild(dot);
+    });
+    if (!showAll) {
+      const el = document.createElement('span');
+      el.textContent = `+${cards.length - maxVisible}`;
+      el.className = 'text-[10px] font-bold';
+      el.style.color = 'var(--text-muted)';
+      dotNav.appendChild(el);
+    }
+  }
+
+  function updateDots() {
+    dotNav?.querySelectorAll('.dot').forEach((dot, i) => {
+      dot.style.backgroundColor = i===currentIndex ? 'var(--espresso)' : 'var(--border)';
+      dot.style.width     = i===currentIndex ? '20px' : '8px';
+      dot.style.borderRadius = '4px';
+    });
+  }
+
+  // ── Audio ─────────────────────────────────────────────────────────────────
+  function speakCurrent() {
+    const card = cards[currentIndex];
+    if (!card) return;
+    if (window.DeutschAudioEngine) {
+      window.DeutschAudioEngine.speak(card.target || '', speechLang, 0.85);
+    }
+  }
+
+  // ── Navigate ─────────────────────────────────────────────────────────────
+  function goTo(idx) {
+    if (idx < 0 || idx >= cards.length) return;
+    currentIndex = idx;
+    renderCard(currentIndex);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  btnPrev?.addEventListener('click', () => goTo(currentIndex - 1));
+  btnNext?.addEventListener('click', () => {
+    if (currentIndex === cards.length - 1) window.location.href = '/vocabulary';
+    else goTo(currentIndex + 1);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') goTo(currentIndex + 1);
+    if (e.key === 'ArrowLeft')  goTo(currentIndex - 1);
+    if (e.key === 'a' || e.key === 'A') speakCurrent();
+  });
+
+  // ── Init ─────────────────────────────────────────────────────────────────
+  buildDots();
+  // Card 0 is already rendered server-side via LearningCard component.
+  // Sync progress UI to reflect card 0 state.
+  updateDots();
+  if (progressBar) progressBar.style.width = `${Math.round(1/cards.length*100)}%`;
+  // Update card 0 using client-side config too (ensures langConfig is applied)
+  renderCard(0);
+})();</script>

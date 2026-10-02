@@ -1,0 +1,640 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="description" content="Deutsch Lounge — Language Learning Trainer"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/languagelounge/favicon.svg"><meta name="generator" content="Astro v7.3.5"><title>B1 Environment &amp; Climate Verbs — Deutsch Lounge</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet"><!-- Apply theme before paint to avoid flash --><script>
+      (function() {
+        const saved = localStorage.getItem('wortschatz_theme');
+        if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script><link rel="stylesheet" href="/languagelounge/_astro/Layout.BeSASyxj.css"></head><body class="antialiased min-h-screen flex flex-col" style="background-color:var(--bg);color:var(--text);"><!-- Header --><header class="sticky top-0 z-50 border-b" style="background-color:var(--bg);border-color:var(--border);"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between gap-4" style="height:4.5rem;"><!-- Logo + Language Switcher --><div class="flex items-center gap-4 shrink-0"><a href="/languagelounge/" class="flex items-center gap-2 group"><span class="font-outfit font-extrabold text-xl sm:text-2xl tracking-tight transition-colors" style="color:var(--text);">Small Talk Café <span class="font-normal text-base hidden sm:inline" style="color:var(--text-muted);">| <span id="site-name">Deutsch Lounge</span></span></span></a><!-- Language Selector Dropdown --><div class="relative" id="lang-dropdown-wrapper"><button id="lang-btn" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-sm font-bold transition-all hover:opacity-70" style="background-color:var(--bg); border-color:var(--border); color:var(--text);"><span id="lang-flag">🇩🇪</span><span id="lang-code">DE</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"></path></svg></button><div id="lang-menu" class="hidden absolute top-full left-0 mt-2 rounded-2xl border shadow-xl overflow-hidden z-50 min-w-[160px]" style="background-color:var(--card); border-color:var(--border);"><button class="lang-option w-full flex items-center gap-3 px-4 py-3 text-sm font-semibold text-left transition-colors hover:opacity-70" data-lang="de" data-flag="🇩🇪" data-code="DE" data-name="Deutsch Lounge" data-label="German" style="color:var(--text);"><span class="text-lg">🇩🇪</span><div><div class="font-bold" style="color:var(--text);">Deutsch</div><div class="text-xs" style="color:var(--text-muted);">German Learning</div></div></button><div class="border-t" style="border-color:var(--border);"></div><button class="lang-option w-full flex items-center gap-3 px-4 py-3 text-sm font-semibold text-left transition-colors hover:opacity-70" data-lang="es" data-flag="🇪🇸" data-code="ES" data-name="Spanish Gym" data-label="Spanish" style="color:var(--text);"><span class="text-lg">🇪🇸</span><div><div class="font-bold" style="color:var(--text);">Español</div><div class="text-xs" style="color:var(--text-muted);">Spanish Learning</div></div></button><div class="border-t" style="border-color:var(--border);"></div><button class="lang-option w-full flex items-center gap-3 px-4 py-3 text-sm font-semibold text-left transition-colors hover:opacity-70" data-lang="fr" data-flag="🇫🇷" data-code="FR" data-name="French Gym" data-label="French" style="color:var(--text);"><span class="text-lg">🇫🇷</span><div><div class="font-bold" style="color:var(--text);">Français</div><div class="text-xs" style="color:var(--text-muted);">French Learning</div></div></button></div></div></div><!-- Nav Links --><nav class="hidden md:flex gap-5 items-center"><a href="https://smalltalkcafe.de/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Small Talk Café Podcasts</a><span class="text-sm font-normal" style="color:var(--border);">|</span><a href="/languagelounge/vocabulary" data-german-nav class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Vokabeln</a><a href="/languagelounge/verbs" data-german-nav class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Verben</a><a href="/languagelounge/grammatik" data-german-nav class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Grammatik</a><a href="/languagelounge/redemittel" data-german-nav class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Redemittel</a><!-- Dark/Light Toggle --><button id="theme-toggle" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-sm font-semibold transition-all hover:opacity-70" style="border-color:var(--border); color:var(--text-muted);" aria-label="Toggle dark/light mode"><span id="theme-icon">☀️</span><span id="theme-label">Light</span></button></nav></div></header><!-- Coming Soon Overlay (shown for non-German languages) --><div id="coming-soon-overlay" class="hidden flex-1 flex items-center justify-center py-20 px-4"><div class="text-center max-w-lg mx-auto"><div class="text-7xl mb-6" id="coming-soon-flag">🌍</div><h1 class="font-outfit font-extrabold text-4xl sm:text-5xl mb-4" style="color:var(--text);">Coming Soon</h1><p class="text-lg mb-3" style="color:var(--text-muted);">We're working hard on the <strong id="coming-soon-lang">new language</strong> curriculum.</p><p class="text-base mb-8" style="color:var(--text-muted);">Stay tuned — it will be available very soon! In the meantime, explore our<strong>Deutsch Lounge</strong> to sharpen your German.</p><button id="coming-soon-back-btn" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-sm transition-all hover:opacity-80" style="background-color:var(--espresso); color:#fff;">🇩🇪 Switch to German</button></div></div><main id="main-content" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-1 w-full"><div class="max-w-4xl mx-auto py-6"><!-- Deck Header --><div class="flex items-start justify-between mb-8 gap-4 flex-wrap"><div><a href="/languagelounge/verbs" class="text-xs font-bold flex items-center gap-1 mb-2 hover:opacity-70 transition-opacity capitalize" style="color:var(--espresso);"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg>verbs</a><h1 class="text-2xl md:text-3xl font-extrabold font-outfit" style="color:var(--text);">B1 Environment &amp; Climate Verbs</h1><p class="text-xs font-bold uppercase tracking-wider mt-1" style="color:var(--text-muted);">B1 Umweltverben &bull; B1 &bull; 25 Karten</p></div><div class="flex flex-col items-end gap-4"><!-- Learn / Train mode switcher --><div class="flex rounded-xl border overflow-hidden p-1 gap-1 w-full max-w-[300px]" style="background-color:var(--bg); border-color:var(--border);"><span class="flex-1 flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold transition-all" style="background-color:var(--espresso); color:#F5F2EB;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>Lernen</span><a href="/languagelounge/training/verbs/train?level=b1&amp;deck=verbs-b1_env_verbs&amp;count=20&amp;mode=mc&amp;dir=en-de" class="flex-1 flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold hover:opacity-70 transition-all" style="color:var(--text-muted);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>Trainieren</a></div><!-- View switcher (Cards vs List) --><div class="flex rounded-xl border overflow-hidden p-1 gap-1 w-full max-w-[300px]" style="background-color:var(--bg); border-color:var(--border);"><button id="view-cards-btn" class="view-btn flex-1 flex items-center justify-center px-4 py-2 rounded-lg text-xs font-bold transition-all bg-[var(--espresso)] text-[#F5F2EB]">Karten</button><button id="view-list-btn" class="view-btn flex-1 flex items-center justify-center px-4 py-2 rounded-lg text-xs font-bold transition-all text-[var(--text-muted)] hover:opacity-70">Liste</button></div><!-- Progress indicator --><div id="progress-container" class="flex items-center gap-3"><div class="text-xs font-semibold" style="color:var(--text-muted);">Karte <span id="current-num" class="font-extrabold" style="color:var(--text);">1</span> / 25</div><div class="w-24 h-1.5 rounded-full overflow-hidden border" style="background-color:var(--bg);border-color:var(--border);"><div id="progress-bar" class="h-full transition-all duration-500 rounded-full" style="width:0%; background-color:var(--espresso);"></div></div></div></div></div><!-- ── Universal Study Card (rendered by LearningCard component) ── --><div id="card-view-wrap"><div id="card-host"><!-- The card shell — populated client-side by renderCard() --><div class="learning-card rounded-3xl border shadow-xl overflow-hidden" style="background-color:var(--card); border-color:var(--border);"><!-- ── Top bar ─────────────────────────────────── --><div class="lc-topbar flex items-center justify-between px-6 py-3.5 border-b" style="border-color:var(--border); background-color:var(--bg);"><div class="flex items-center gap-2"><span class="lc-type-badge text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-lg" style="background-color:var(--espresso); color:#F5F2EB;">—</span><span class="lc-level-badge text-[10px] font-bold px-2.5 py-1 rounded-lg cafe-badge"></span></div><button class="lc-audio-btn flex items-center justify-center w-11 h-11 rounded-full transition-transform hover:scale-105 active:scale-95 shadow-md flex-shrink-0" title="Anhören (A)" style="background-color:var(--espresso); color:#F5F2EB;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg></button></div><!-- ── Main word display ───────────────────────── --><div class="lc-hero px-7 py-8 text-center border-b" style="border-color:var(--border);"><div class="lc-article-wrap mb-1.5"><span class="lc-article text-xl font-bold"></span></div><h2 class="lc-word text-5xl md:text-6xl font-extrabold font-outfit mb-3" style="color:var(--text);">—</h2><p class="lc-translation text-lg font-semibold italic" style="color:var(--text-muted);"></p><p class="lc-forms text-sm font-medium mt-2" style="color:var(--text-muted);"></p></div><!-- ── Meta info grid ─────────────────────────── --><div class="lc-meta-grid grid border-b" style="border-color:var(--border);"><!-- populated by JS --></div><!-- ── Grammar note ───────────────────────────── --><div class="lc-grammar-wrap hidden px-7 py-5 border-b" style="border-color:var(--border); background-color:var(--bg);"><p class="text-[10px] font-bold uppercase tracking-widest mb-2" style="color:var(--espresso);">📌 <span class="lc-grammar-label">Grammatiknotiz</span></p><p class="lc-grammar-text text-sm leading-relaxed font-medium whitespace-pre-wrap" style="color:var(--text);"></p></div><!-- ── Type-specific block ────────────────────── --><!-- Verb conjugation (hidden by default, shown for verb cards) --><div class="lc-conjugation-wrap hidden border-b overflow-x-auto" style="border-color:var(--border);"><div class="lc-conjugation-inner"><!-- populated by JS --></div></div><!-- Connector word-order block --><div class="lc-wordorder-wrap hidden px-7 py-4 border-b" style="border-color:var(--border); background-color:var(--bg);"><div class="flex items-start gap-3 text-sm font-medium" style="color:var(--text-muted);"><span class="text-base flex-shrink-0">📐</span><span class="lc-wordorder-text"></span></div></div><!-- Phrase preposition block --><div class="lc-phrase-wrap hidden px-7 py-4 border-b" style="border-color:var(--border); background-color:var(--bg);"><p class="text-[10px] font-bold uppercase tracking-widest mb-2" style="color:var(--espresso);">Struktur</p><p class="lc-phrase-rule text-sm font-semibold" style="color:var(--text);"></p></div><!-- ── Examples ───────────────────────────────── --><div class="px-7 py-6 border-b" style="border-color:var(--border);"><p class="lc-examples-label text-[10px] font-bold uppercase tracking-widest mb-5" style="color:var(--text-muted);">Beispielsätze</p><div class="lc-examples space-y-3"><!-- populated by JS --></div></div><!-- ── Tags ───────────────────────────────────── --><div class="lc-tags-row px-7 py-4 flex items-center gap-2 flex-wrap"><span class="text-[10px] font-bold uppercase tracking-wider" style="color:var(--text-muted);">Tags:</span><div class="lc-tags flex gap-2 flex-wrap"></div></div></div><script>(function(){const cardJson = "{\"id\":\"verbs-b1-b1_env_verbs-001\",\"infinitive\":\"schützen\",\"translation\":\"to protect\",\"type\":\"verb\",\"cefr\":\"B1\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb. Weak conjugation.\",\"examples\":[{\"de\":\"Wir müssen die Umwelt schützen.\",\"en\":\"We must protect the environment.\"},{\"de\":\"Die Regierung schützt bedrohte Tierarten.\",\"en\":\"The government protects endangered animal species.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"schützte\",\"du\":\"schütztest\",\"er_sie_es\":\"schützte\",\"wir\":\"schützten\",\"ihr\":\"schütztet\",\"sie_Sie\":\"schützten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe geschützt\",\"du\":\"hast geschützt\",\"er_sie_es\":\"hat geschützt\",\"wir\":\"haben geschützt\",\"ihr\":\"habt geschützt\",\"sie_Sie\":\"haben geschützt\"}],\"target\":\"schützen\",\"source\":\"to protect\",\"example_target\":\"\",\"example_source\":\"\"}";
+const langConfigJson = "{\"language_pair\":\"english_german\",\"target_lang\":\"de\",\"native_lang\":\"en\",\"target_lang_name\":\"Deutsch\",\"native_lang_name\":\"English\",\"speech_lang\":\"de-DE\",\"noun_metadata_fields\":[{\"key\":\"article\",\"label\":\"Artikel\",\"render\":\"article_badge\"},{\"key\":\"gender\",\"label\":\"Genus\",\"render\":\"gender_label\"},{\"key\":\"plural\",\"label\":\"Plural\",\"render\":\"text\"}],\"article_colours\":{\"der\":\"#4A7C9E\",\"die\":\"#B05070\",\"das\":\"#4A8A5A\"},\"gender_labels\":{\"m\":\"Maskulinum\",\"f\":\"Femininum\",\"n\":\"Neutrum\"},\"verb_tenses\":[\"Präsens\",\"Präteritum\",\"Perfekt\",\"Futur I\",\"Konjunktiv II\"],\"cases\":{\"nominative\":\"Nominativ\",\"accusative\":\"Akkusativ\",\"dative\":\"Dativ\",\"genitive\":\"Genitiv\"},\"ui_labels\":{\"learn_mode\":\"Lernen\",\"train_mode\":\"Trainieren\",\"examples_heading\":\"Beispielsätze\",\"grammar_note_heading\":\"Grammatiknotiz\",\"audio_button\":\"Anhören\",\"back_link\":\"Zurück\",\"card_counter\":\"Karte {current} / {total}\",\"next_button\":\"Weiter\",\"finish_button\":\"Fertig\",\"correct\":\"Richtig!\",\"wrong\":\"Falsch\"}}";
+
+  /**
+   * Client-side card renderer.
+   * Uses the universal card-renderer logic inline (no imports in Astro is:inline).
+   */
+
+  // ── Parse data ──────────────────────────────────────────────────────────
+  const card   = JSON.parse(cardJson);
+  const config = JSON.parse(langConfigJson);
+
+  // ── Helpers ─────────────────────────────────────────────────────────────
+  function stripArticle(word) {
+    return (word || '').replace(/^(der|die|das|el|la|los|las|le|les|l')\s+/i, '').trim();
+  }
+
+  function getArticleColour(article) {
+    if (!article || !config.article_colours) return 'var(--espresso)';
+    return config.article_colours[article.toLowerCase()] || 'var(--espresso)';
+  }
+
+  function getGenderLabel(gender) {
+    if (!gender) return '';
+    return (config.gender_labels || {})[gender] || gender;
+  }
+
+  function getTypeLabel() {
+    const tags = card.tags || [];
+    if (tags.includes('noun'))       return 'Substantiv';
+    if (tags.includes('verb'))       return 'Verb';
+    if (tags.includes('adjective'))  return 'Adjektiv';
+    if (tags.includes('expression')) return 'Ausdruck';
+    const map = { vocab:'Vokabel', verb:'Verb', phrase:'Phrase', connector:'Konnektor', grammar:'Grammatik' };
+    return map[card.type] || 'Karte';
+  }
+
+  function formatHighlight(text) {
+    if (!text) return '';
+    return String(text).replace(/\*(.*?)\*/g, '<span class="highlighter">$1</span>');
+  }
+
+  function normaliseExample(ex) {
+    return {
+      target: ex.target || ex.de || '',
+      source: ex.source || ex.en || '',
+      note: ex.note,
+    };
+  }
+
+  function getMetaFacts() {
+    const meta = { ...card.metadata, article: card.article, gender: card.gender, plural: card.plural, ...card.metadata };
+    const facts = [];
+    for (const field of (config.noun_metadata_fields || [])) {
+      const raw = meta[field.key] || card[field.key];
+      if (!raw || raw === '~') continue;
+      let value = String(raw);
+      let colour;
+      if (field.render === 'gender_label') value = getGenderLabel(raw);
+      else if (field.render === 'article_badge') colour = getArticleColour(raw);
+      facts.push({ label: field.label, value, colour });
+    }
+    return facts;
+  }
+
+  // ── Render ──────────────────────────────────────────────────────────────
+  const container = document.querySelector('.learning-card');
+  if (!container) { console.error('LearningCard: container not found'); }
+
+  function sel(cls) { return container?.querySelector(cls); }
+
+  // Type badge
+  sel('.lc-type-badge').textContent = getTypeLabel();
+
+  // Level badge
+  sel('.lc-level-badge').textContent = card.level || '';
+
+  // Article
+  const article = card.article || card.metadata?.article;
+  const articleWrap = sel('.lc-article-wrap');
+  const articleEl   = sel('.lc-article');
+  if (article && card.tags?.includes('noun') && !card.plural_only) {
+    articleEl.textContent  = article;
+    articleEl.style.color  = getArticleColour(article);
+    articleWrap.style.display = '';
+  } else {
+    articleWrap.style.display = 'none';
+  }
+
+  // Word
+  sel('.lc-word').textContent = stripArticle(card.target);
+
+  // Translation
+  sel('.lc-translation').textContent = card.source || '';
+
+  // Plural / forms
+  const plural = card.plural || card.metadata?.plural;
+  const formsEl = sel('.lc-forms');
+  if (plural && !card.plural_only) formsEl.textContent = `Pl. ${plural}`;
+  else if (card.plural_only) formsEl.textContent = 'nur Plural';
+  else formsEl.textContent = '';
+
+  // Meta grid
+  const metaGrid = sel('.lc-meta-grid');
+  const facts = getMetaFacts();
+  if (facts.length) {
+    const cols = Math.min(facts.length, 4);
+    metaGrid.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
+    metaGrid.innerHTML = facts.map((f, i) => `
+      <div class="px-5 py-4 ${i < facts.length - 1 ? 'border-r' : ''}" style="border-color:var(--border);">
+        <p class="text-[9px] font-bold uppercase tracking-widest mb-1" style="color:var(--text-muted);">${f.label}</p>
+        <p class="text-sm font-bold" style="color:${f.colour || 'var(--text)'};">${f.value}</p>
+      </div>
+    `).join('');
+  } else {
+    metaGrid.style.display = 'none';
+  }
+
+  // Grammar note
+  const grammarWrap = sel('.lc-grammar-wrap');
+  if (card.grammar_note) {
+    sel('.lc-grammar-text').innerHTML = formatHighlight(card.grammar_note);
+    grammarWrap.classList.remove('hidden');
+  }
+
+  // Grammar label from config
+  const uiLabels = config.ui_labels || {};
+  if (uiLabels.grammar_note_heading) sel('.lc-grammar-label').textContent = uiLabels.grammar_note_heading;
+  if (uiLabels.examples_heading)     sel('.lc-examples-label').textContent = uiLabels.examples_heading;
+  if (uiLabels.audio_button)         sel('.lc-audio-label').textContent    = uiLabels.audio_button;
+
+  // ── Type-specific blocks ─────────────────────────────────────────────────
+
+  // Verb: conjugation table
+  const type = card.type || (card.tags?.includes('verb') ? 'verb' : 'vocab');
+  if (type === 'verb' && card.conjugations?.length) {
+    const conjWrap  = sel('.lc-conjugation-wrap');
+    const conjInner = sel('.lc-conjugation-inner');
+    conjWrap.classList.remove('hidden');
+    conjInner.innerHTML = (config.verb_tenses || card.conjugations.map(t => t.tense)).map(tense => {
+      const t = card.conjugations.find(c => c.tense === tense);
+      if (!t) return '';
+      return `
+        <div class="border-b last:border-0" style="border-color:var(--border);">
+          <p class="text-[10px] font-bold uppercase tracking-widest px-5 py-2" style="background-color:var(--bg); color:var(--espresso);">${t.tense}</p>
+          <table class="w-full text-sm">
+            <tbody>
+              ${t.forms.map((f, ri) => `
+                <tr class="${ri % 2 === 0 ? '' : ''} border-t" style="border-color:var(--border);">
+                  <td class="px-5 py-2.5 font-bold w-24" style="color:var(--espresso);">${f.pronoun}</td>
+                  <td class="px-5 py-2.5 font-semibold" style="color:var(--text);">${f.form}</td>
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+        </div>
+      `;
+    }).join('');
+  }
+
+  // Connector: word order block
+  if (type === 'connector' && card.word_order) {
+    const woWrap = sel('.lc-wordorder-wrap');
+    sel('.lc-wordorder-text').textContent = card.word_order;
+    woWrap.classList.remove('hidden');
+  }
+
+  // Phrase: preposition rule block
+  if (type === 'phrase' && card.clause_type) {
+    const phraseWrap = sel('.lc-phrase-wrap');
+    sel('.lc-phrase-rule').textContent = card.clause_type;
+    phraseWrap.classList.remove('hidden');
+  }
+
+  // ── Examples ─────────────────────────────────────────────────────────────
+  const examplesEl = sel('.lc-examples');
+  const rawExamples = card.examples || (card.example_target || card.example_de ? [{ target: card.example_target || card.example_de, source: card.example_source || card.example_en }] : []);
+
+  if (rawExamples.length) {
+    examplesEl.innerHTML = rawExamples.map(ex => {
+      const e = normaliseExample(ex);
+      return `
+        <div class="rounded-2xl border overflow-hidden" style="border-color:var(--border);">
+          <div class="px-4 py-3" style="background-color:var(--bg);">
+            <p class="font-semibold leading-snug mb-1" style="color:var(--text);">${formatHighlight(e.target)}</p>
+            <p class="text-sm italic" style="color:var(--text-muted);">${formatHighlight(e.source || '')}</p>
+          </div>
+          ${e.note ? `<div class="px-4 py-2 border-t" style="border-color:var(--border);">
+            <p class="text-[10px] font-bold font-mono" style="color:var(--espresso);">📐 ${e.note}</p>
+          </div>` : ''}
+        </div>
+      `;
+    }).join('');
+  } else {
+    examplesEl.innerHTML = `<p class="text-sm italic" style="color:var(--text-muted);">Kein Beispiel verfügbar.</p>`;
+  }
+
+  // ── Tags ─────────────────────────────────────────────────────────────────
+  const tagsEl = sel('.lc-tags');
+  tagsEl.innerHTML = (card.tags || []).map(t => `
+    <span class="text-[10px] font-bold px-2 py-0.5 rounded-md border uppercase" style="border-color:var(--border); color:var(--text-muted); background-color:var(--bg);">${t}</span>
+  `).join('');
+
+  // ── Audio button ─────────────────────────────────────────────────────────
+  sel('.lc-audio-btn')?.addEventListener('click', () => {
+    if (window.DeutschAudioEngine) {
+      window.DeutschAudioEngine.speak(card.target || '', config.speech_lang || 'de-DE', 0.85);
+    }
+  });
+})();</script></div><!-- ── Navigation ───────────────────────────── --><div class="flex items-center justify-between mt-8 gap-4"><button id="btn-prev" disabled class="flex items-center gap-2 px-6 py-3 rounded-2xl border font-bold text-sm transition-all hover:opacity-70 active:scale-95 disabled:opacity-30 disabled:cursor-not-allowed" style="border-color:var(--border); color:var(--text); background-color:var(--card);"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg>Zurück</button><!-- Dot navigation --><div id="dot-nav" class="flex items-center gap-1.5 flex-wrap justify-center max-w-xs overflow-hidden" style="max-height:2rem;"><!-- populated by JS --></div><button id="btn-next" class="flex items-center gap-2 px-6 py-3 rounded-2xl font-bold text-sm transition-all hover:opacity-80 active:scale-95" style="background-color:var(--espresso); color:#F5F2EB;">Weiter<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg></button></div><!-- Keyboard hint --><p class="text-center text-xs font-medium mt-4" style="color:var(--text-muted);">← → Pfeiltasten zum Navigieren &nbsp;·&nbsp; A zum Anhören</p></div><!-- ── List View ───────────────────────────── --><div id="list-view-wrap" class="hidden space-y-6"><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">schützen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to protect</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Regular verb. Weak conjugation.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Wir müssen die Umwelt schützen.</p><p class="italic text-[13px]" style="color:var(--text-muted);">We must protect the environment.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">retten</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to save</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Regular verb. Weak conjugation.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Wir müssen den Planeten retten.</p><p class="italic text-[13px]" style="color:var(--text-muted);">We must save the planet.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">verschmutzen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to pollute</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Regular verb with inseparable prefix 'ver-'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Abgase verschmutzen die Luft.</p><p class="italic text-[13px]" style="color:var(--text-muted);">Exhaust fumes pollute the air.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">recyceln</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to recycle</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Regular verb. Weak conjugation. Note 'e' drop in 'ich' form for some tenses.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Wir sollten mehr Müll recyceln.</p><p class="italic text-[13px]" style="color:var(--text-muted);">We should recycle more waste.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">trennen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to separate (e.g., waste)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Regular verb with separable prefix.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Wir trennen unseren Müll nach Material.</p><p class="italic text-[13px]" style="color:var(--text-muted);">We separate our waste by material.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">vermeiden</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to avoid</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Irregular verb with inseparable prefix 'ver-'. Strong conjugation.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Wir versuchen, Plastikmüll zu vermeiden.</p><p class="italic text-[13px]" style="color:var(--text-muted);">We try to avoid plastic waste.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">reduzieren</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to reduce</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Regular verb. Weak conjugation.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Wir müssen unseren CO2-Ausstoß reduzieren.</p><p class="italic text-[13px]" style="color:var(--text-muted);">We must reduce our CO2 emissions.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">sparen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to save, to conserve</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Regular verb. Weak conjugation.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Wir müssen Energie sparen.</p><p class="italic text-[13px]" style="color:var(--text-muted);">We must save energy.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">verbrauchen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to consume, to use up</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Regular verb with inseparable prefix 'ver-'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Wir verbrauchen zu viel Strom.</p><p class="italic text-[13px]" style="color:var(--text-muted);">We consume too much electricity.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">produzieren</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to produce</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Regular verb. Weak conjugation.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Die Firma produziert umweltfreundliche Produkte.</p><p class="italic text-[13px]" style="color:var(--text-muted);">The company produces eco-friendly products.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">erzeugen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to generate, to produce (e.g., energy)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Regular verb with inseparable prefix 'er-'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Solaranlagen erzeugen sauberen Strom.</p><p class="italic text-[13px]" style="color:var(--text-muted);">Solar systems generate clean electricity.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">nutzen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to use, to make use of</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Regular verb. Weak conjugation.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Wir sollten öffentliche Verkehrsmittel nutzen.</p><p class="italic text-[13px]" style="color:var(--text-muted);">We should use public transport.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">wiederverwenden</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to reuse</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Regular verb with separable prefix 'wieder-'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Alte Kleidung kann man wiederverwenden.</p><p class="italic text-[13px]" style="color:var(--text-muted);">Old clothes can be reused.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">erneuern</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to renew</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Regular verb with inseparable prefix 'er-'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Wir müssen unsere Energiequellen erneuern.</p><p class="italic text-[13px]" style="color:var(--text-muted);">We must renew our energy sources.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">pflanzen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to plant</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Regular verb. Weak conjugation.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Wir pflanzen Bäume für das Klima.</p><p class="italic text-[13px]" style="color:var(--text-muted);">We plant trees for the climate.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">abholzen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to deforest, to cut down (trees)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Regular verb with separable prefix 'ab-'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Man darf den Regenwald nicht abholzen.</p><p class="italic text-[13px]" style="color:var(--text-muted);">One must not deforest the rainforest.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">aussterben</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to die out, to become extinct</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Irregular verb with separable prefix 'aus-'. Strong conjugation. Forms Perfekt with 'sein'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Viele Tierarten sterben aus.</p><p class="italic text-[13px]" style="color:var(--text-muted);">Many animal species are dying out.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">leisten</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to achieve, to contribute (e.g., 'einen Beitrag leisten')</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Regular verb. Weak conjugation. Often used with 'einen Beitrag' (to make a contribution).</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Jeder kann einen Beitrag zum Klimaschutz leisten.</p><p class="italic text-[13px]" style="color:var(--text-muted);">Everyone can make a contribution to climate protection.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">unterstützen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to support</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Regular verb with inseparable prefix 'unter-'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Wir unterstützen Umweltorganisationen.</p><p class="italic text-[13px]" style="color:var(--text-muted);">We support environmental organizations.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">fordern</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to demand</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Regular verb. Weak conjugation.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Die Demonstranten fordern mehr Klimaschutz.</p><p class="italic text-[13px]" style="color:var(--text-muted);">The demonstrators demand more climate protection.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">verbieten</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to forbid, to prohibit</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Irregular verb with inseparable prefix 'ver-'. Strong conjugation.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Man sollte Plastiktüten verbieten.</p><p class="italic text-[13px]" style="color:var(--text-muted);">Plastic bags should be forbidden.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">schmelzen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to melt</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Irregular verb. Strong conjugation. Forms Perfekt with 'sein' when indicating a change of state.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Das Eis in der Arktis schmilzt schnell.</p><p class="italic text-[13px]" style="color:var(--text-muted);">The ice in the Arctic is melting quickly.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">steigen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to rise, to increase</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Irregular verb. Strong conjugation. Forms Perfekt with 'sein'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Die Meeresspiegel steigen weltweit.</p><p class="italic text-[13px]" style="color:var(--text-muted);">Sea levels are rising worldwide.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">sinken</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to sink, to decrease</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Irregular verb. Strong conjugation. Forms Perfekt with 'sein'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Die Emissionen müssen dringend sinken.</p><p class="italic text-[13px]" style="color:var(--text-muted);">Emissions must urgently decrease.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">verursachen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to cause</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Regular verb with inseparable prefix 'ver-'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">CO2-Emissionen verursachen den Klimawandel.</p><p class="italic text-[13px]" style="color:var(--text-muted);">CO2 emissions cause climate change.</p></div></div></div></div></div></div></main><footer class="mt-auto border-t py-8" style="background-color:var(--bg);border-color:var(--border);"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-medium" style="color:var(--text-muted);"><div>&copy; 2025 - 2026 Small Talk Café Podcasts. All rights reserved.</div><div class="flex gap-4">Made in Bayern ❤️ Los Geht's!</div></div></footer><!-- Theme toggle + Language switcher script --><script>
+      // ── Theme ──────────────────────────────────────
+      function applyTheme(dark) {
+        if (dark) {
+          document.documentElement.classList.add('dark');
+          localStorage.setItem('wortschatz_theme', 'dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+          localStorage.setItem('wortschatz_theme', 'light');
+        }
+        const icon = document.getElementById('theme-icon');
+        const label = document.getElementById('theme-label');
+        if (icon) icon.textContent = dark ? '🌙' : '☀️';
+        if (label) label.textContent = dark ? 'Dark' : 'Light';
+      }
+
+      const isDark = document.documentElement.classList.contains('dark');
+      applyTheme(isDark);
+
+      document.getElementById('theme-toggle')?.addEventListener('click', () => {
+        const nowDark = !document.documentElement.classList.contains('dark');
+        applyTheme(nowDark);
+      });
+
+      // ── Language Switcher ──────────────────────────
+      const LANG_CONTENT = {
+        de: {
+          name: 'Deutsch Lounge',
+          flag: '🇩🇪',
+          code: 'DE',
+          subtitle: 'Systematisches Vokabel- und Grammatiktraining',
+          tagline: 'Deutsch Lounge',
+          welcome: 'Willkommen beim',
+          cards: [
+            { title: 'Vokabeln', desc: 'Erweitere deinen Wortschatz. Lerne Nomen, Verben und Redewendungen mit Beispielsätzen.' },
+            { title: 'Verben', desc: 'Meistere reguläre, unregelmäßige, modale und reflexive Verben mit Konjugationstabellen.' },
+            { title: 'Grammatik', desc: 'Regeln verstehen & üben: Adjektivdeklination, Fälle, Präpositionen, Konnektoren & Phrasen.' },
+            { title: 'Redemittel', desc: 'Essentielle Phrasen für den Alltag, Diskussionen und Präsentationen.' }
+          ]
+        },
+        es: {
+          name: 'Spanish Gym',
+          flag: '🇪🇸',
+          code: 'ES',
+          subtitle: 'Tu compañero para aprender Español A1 – B2',
+          tagline: 'A1–B2 Spanish Curriculum',
+          welcome: 'Bienvenido al',
+          cards: [
+            { title: 'Vocabulario', desc: 'Amplía tu vocabulario A1–B2. Aprende sustantivos, verbos y frases con ejemplos contextuales.' },
+            { title: 'Verbos', desc: 'Domina verbos regulares, irregulares y reflexivos con tablas de conjugación.' },
+            { title: 'Gramática', desc: 'Entiende y practica las reglas gramaticales, casos y conectores.' },
+            { title: 'Expresiones', desc: 'Frases esenciales para el día a día, discusiones y presentaciones.' }
+          ]
+        },
+        fr: {
+          name: 'French Gym',
+          flag: '🇫🇷',
+          code: 'FR',
+          subtitle: 'Ton compagnon pour apprendre le Français A1 – B2',
+          tagline: 'A1–B2 French Curriculum',
+          welcome: 'Bienvenue au',
+          cards: [
+            { title: 'Vocabulaire', desc: 'Élargis ton vocabulaire A1–B2. Apprends des noms, verbes et expressions avec des exemples.' },
+            { title: 'Verbes', desc: 'Maîtrise les verbes réguliers, irréguliers et réflexifs avec des tableaux de conjugaison.' },
+            { title: 'Grammaire', desc: 'Comprends et pratique les règles de grammaire, les cas et les connecteurs.' },
+            { title: 'Expressions', desc: 'Phrases essentielles pour la vie quotidienne, les discussions et les présentations.' }
+          ]
+        }
+      };
+
+      function applyLanguage(lang) {
+        const c = LANG_CONTENT[lang] || LANG_CONTENT['de'];
+        localStorage.setItem('gym_language', lang);
+
+        // Header
+        const flag = document.getElementById('lang-flag');
+        const code = document.getElementById('lang-code');
+        const siteName = document.getElementById('site-name');
+        if (flag) flag.textContent = c.flag;
+        if (code) code.textContent = c.code;
+        if (siteName) siteName.textContent = c.name;
+
+        // Footer
+        const footerName = document.getElementById('footer-gym-name');
+        const footerLevel = document.getElementById('footer-level');
+        if (footerName) footerName.textContent = c.name;
+        if (footerLevel) footerLevel.textContent = c.tagline;
+
+        const isGerman = lang === 'de';
+        const overlay = document.getElementById('coming-soon-overlay');
+        const mainContent = document.getElementById('main-content');
+        const germanNavLinks = document.querySelectorAll('[data-german-nav]');
+
+        if (isGerman) {
+          // Show normal German content
+          if (overlay) overlay.classList.add('hidden');
+          if (mainContent) mainContent.classList.remove('hidden');
+          germanNavLinks.forEach(el => el.classList.remove('hidden'));
+
+          // Hero on homepage only
+          const heroTitle = document.getElementById('hero-gym-name');
+          const heroSubtitle = document.getElementById('hero-subtitle');
+          const heroWelcome = document.getElementById('hero-welcome');
+          if (heroTitle) heroTitle.textContent = c.name;
+          if (heroSubtitle) heroSubtitle.textContent = c.subtitle;
+          if (heroWelcome) heroWelcome.textContent = c.welcome;
+
+          // Category cards
+          const cardTitles = document.querySelectorAll('[data-card-title]');
+          const cardDescs = document.querySelectorAll('[data-card-desc]');
+          cardTitles.forEach((el, i) => {
+            if (c.cards[i]) el.textContent = c.cards[i].title;
+          });
+          cardDescs.forEach((el, i) => {
+            if (c.cards[i]) el.textContent = c.cards[i].desc;
+          });
+
+          // Nav links
+          const navLabels = document.querySelectorAll('[data-nav-label]');
+          navLabels.forEach((el, i) => {
+            if (c.cards[i]) el.textContent = c.cards[i].title;
+          });
+        } else {
+          // Non-German: show coming soon overlay, hide main content and German nav
+          if (mainContent) mainContent.classList.add('hidden');
+          germanNavLinks.forEach(el => el.classList.add('hidden'));
+
+          // Populate coming soon overlay
+          const comingFlag = document.getElementById('coming-soon-flag');
+          const comingLang = document.getElementById('coming-soon-lang');
+          if (comingFlag) comingFlag.textContent = c.flag;
+          if (comingLang) comingLang.textContent = c.name + ' content';
+
+          if (overlay) {
+            overlay.classList.remove('hidden');
+            overlay.classList.add('flex');
+          }
+        }
+      }
+
+      // Restore saved language
+      const savedLang = localStorage.getItem('gym_language') || 'de';
+      applyLanguage(savedLang);
+
+      // Dropdown toggle
+      const langBtn = document.getElementById('lang-btn');
+      const langMenu = document.getElementById('lang-menu');
+
+      langBtn?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        langMenu?.classList.toggle('hidden');
+      });
+
+      document.addEventListener('click', () => {
+        langMenu?.classList.add('hidden');
+      });
+
+      document.querySelectorAll('.lang-option').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const lang = btn.dataset.lang;
+          applyLanguage(lang);
+          langMenu?.classList.add('hidden');
+        });
+      });
+
+      // Coming soon "Switch to German" button
+      document.getElementById('coming-soon-back-btn')?.addEventListener('click', () => {
+        applyLanguage('de');
+      });
+    </script></body></html><script type="module" src="/languagelounge/_astro/_deckId_.astro_astro_type_script_index_0_lang.B80xyaMZ.js"></script><script>(function(){const cardsJson = "[{\"id\":\"verbs-b1-b1_env_verbs-001\",\"infinitive\":\"schützen\",\"translation\":\"to protect\",\"type\":\"verb\",\"cefr\":\"B1\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb. Weak conjugation.\",\"examples\":[{\"de\":\"Wir müssen die Umwelt schützen.\",\"en\":\"We must protect the environment.\"},{\"de\":\"Die Regierung schützt bedrohte Tierarten.\",\"en\":\"The government protects endangered animal species.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"schützte\",\"du\":\"schütztest\",\"er_sie_es\":\"schützte\",\"wir\":\"schützten\",\"ihr\":\"schütztet\",\"sie_Sie\":\"schützten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe geschützt\",\"du\":\"hast geschützt\",\"er_sie_es\":\"hat geschützt\",\"wir\":\"haben geschützt\",\"ihr\":\"habt geschützt\",\"sie_Sie\":\"haben geschützt\"}],\"target\":\"schützen\",\"source\":\"to protect\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b1-b1_env_verbs-002\",\"infinitive\":\"retten\",\"translation\":\"to save\",\"type\":\"verb\",\"cefr\":\"B1\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb. Weak conjugation.\",\"examples\":[{\"de\":\"Wir müssen den Planeten retten.\",\"en\":\"We must save the planet.\"},{\"de\":\"Sie haben viele Tiere aus dem Feuer gerettet.\",\"en\":\"They saved many animals from the fire.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"rettete\",\"du\":\"rettetest\",\"er_sie_es\":\"rettete\",\"wir\":\"retteten\",\"ihr\":\"rettetet\",\"sie_Sie\":\"retteten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe gerettet\",\"du\":\"hast gerettet\",\"er_sie_es\":\"hat gerettet\",\"wir\":\"haben gerettet\",\"ihr\":\"habt gerettet\",\"sie_Sie\":\"haben gerettet\"}],\"target\":\"retten\",\"source\":\"to save\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b1-b1_env_verbs-003\",\"infinitive\":\"verschmutzen\",\"translation\":\"to pollute\",\"type\":\"verb\",\"cefr\":\"B1\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb with inseparable prefix 'ver-'.\",\"examples\":[{\"de\":\"Abgase verschmutzen die Luft.\",\"en\":\"Exhaust fumes pollute the air.\"},{\"de\":\"Die Fabrik hat den Fluss verschmutzt.\",\"en\":\"The factory has polluted the river.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"verschmutzte\",\"du\":\"verschmutztest\",\"er_sie_es\":\"verschmutzte\",\"wir\":\"verschmutzten\",\"ihr\":\"verschmutztet\",\"sie_Sie\":\"verschmutzten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe verschmutzt\",\"du\":\"hast verschmutzt\",\"er_sie_es\":\"hat verschmutzt\",\"wir\":\"haben verschmutzt\",\"ihr\":\"habt verschmutzt\",\"sie_Sie\":\"haben verschmutzt\"}],\"target\":\"verschmutzen\",\"source\":\"to pollute\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b1-b1_env_verbs-004\",\"infinitive\":\"recyceln\",\"translation\":\"to recycle\",\"type\":\"verb\",\"cefr\":\"B1\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb. Weak conjugation. Note 'e' drop in 'ich' form for some tenses.\",\"examples\":[{\"de\":\"Wir sollten mehr Müll recyceln.\",\"en\":\"We should recycle more waste.\"},{\"de\":\"Hast du die Flaschen recycelt?\",\"en\":\"Have you recycled the bottles?\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"recycelte\",\"du\":\"recyceltest\",\"er_sie_es\":\"recycelte\",\"wir\":\"recycelten\",\"ihr\":\"recyceltet\",\"sie_Sie\":\"recycelten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe recycelt\",\"du\":\"hast recycelt\",\"er_sie_es\":\"hat recycelt\",\"wir\":\"haben recycelt\",\"ihr\":\"habt recycelt\",\"sie_Sie\":\"haben recycelt\"}],\"target\":\"recyceln\",\"source\":\"to recycle\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b1-b1_env_verbs-005\",\"infinitive\":\"trennen\",\"translation\":\"to separate (e.g., waste)\",\"type\":\"verb\",\"cefr\":\"B1\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb with separable prefix.\",\"examples\":[{\"de\":\"Wir trennen unseren Müll nach Material.\",\"en\":\"We separate our waste by material.\"},{\"de\":\"Habt ihr den Müll schon getrennt?\",\"en\":\"Have you already separated the waste?\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"trennte\",\"du\":\"trenntest\",\"er_sie_es\":\"trennte\",\"wir\":\"trennten\",\"ihr\":\"trenntet\",\"sie_Sie\":\"trennten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe getrennt\",\"du\":\"hast getrennt\",\"er_sie_es\":\"hat getrennt\",\"wir\":\"haben getrennt\",\"ihr\":\"habt getrennt\",\"sie_Sie\":\"haben getrennt\"}],\"target\":\"trennen\",\"source\":\"to separate (e.g., waste)\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b1-b1_env_verbs-006\",\"infinitive\":\"vermeiden\",\"translation\":\"to avoid\",\"type\":\"verb\",\"cefr\":\"B1\",\"tags\":[\"verb\"],\"grammar_note\":\"Irregular verb with inseparable prefix 'ver-'. Strong conjugation.\",\"examples\":[{\"de\":\"Wir versuchen, Plastikmüll zu vermeiden.\",\"en\":\"We try to avoid plastic waste.\"},{\"de\":\"Er hat den Konflikt vermieden.\",\"en\":\"He avoided the conflict.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"vermied\",\"du\":\"vermiedest\",\"er_sie_es\":\"vermied\",\"wir\":\"vermieden\",\"ihr\":\"vermiedet\",\"sie_Sie\":\"vermieden\"},{\"tense\":\"Perfekt\",\"ich\":\"habe vermieden\",\"du\":\"hast vermieden\",\"er_sie_es\":\"hat vermieden\",\"wir\":\"haben vermieden\",\"ihr\":\"habt vermieden\",\"sie_Sie\":\"haben vermieden\"}],\"target\":\"vermeiden\",\"source\":\"to avoid\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b1-b1_env_verbs-007\",\"infinitive\":\"reduzieren\",\"translation\":\"to reduce\",\"type\":\"verb\",\"cefr\":\"B1\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb. Weak conjugation.\",\"examples\":[{\"de\":\"Wir müssen unseren CO2-Ausstoß reduzieren.\",\"en\":\"We must reduce our CO2 emissions.\"},{\"de\":\"Sie hat ihren Wasserverbrauch reduziert.\",\"en\":\"She has reduced her water consumption.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"reduzierte\",\"du\":\"reduziertest\",\"er_sie_es\":\"reduzierte\",\"wir\":\"reduzierten\",\"ihr\":\"reduziertet\",\"sie_Sie\":\"reduzierten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe reduziert\",\"du\":\"hast reduziert\",\"er_sie_es\":\"hat reduziert\",\"wir\":\"haben reduziert\",\"ihr\":\"habt reduziert\",\"sie_Sie\":\"haben reduziert\"}],\"target\":\"reduzieren\",\"source\":\"to reduce\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b1-b1_env_verbs-008\",\"infinitive\":\"sparen\",\"translation\":\"to save, to conserve\",\"type\":\"verb\",\"cefr\":\"B1\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb. Weak conjugation.\",\"examples\":[{\"de\":\"Wir müssen Energie sparen.\",\"en\":\"We must save energy.\"},{\"de\":\"Hast du heute Wasser gespart?\",\"en\":\"Did you save water today?\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"sparte\",\"du\":\"spartest\",\"er_sie_es\":\"sparte\",\"wir\":\"sparten\",\"ihr\":\"spartet\",\"sie_Sie\":\"sparten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe gespart\",\"du\":\"hast gespart\",\"er_sie_es\":\"hat gespart\",\"wir\":\"haben gespart\",\"ihr\":\"habt gespart\",\"sie_Sie\":\"haben gespart\"}],\"target\":\"sparen\",\"source\":\"to save, to conserve\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b1-b1_env_verbs-009\",\"infinitive\":\"verbrauchen\",\"translation\":\"to consume, to use up\",\"type\":\"verb\",\"cefr\":\"B1\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb with inseparable prefix 'ver-'.\",\"examples\":[{\"de\":\"Wir verbrauchen zu viel Strom.\",\"en\":\"We consume too much electricity.\"},{\"de\":\"Sie haben viel Benzin verbraucht.\",\"en\":\"They have consumed a lot of petrol.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"verbrauchte\",\"du\":\"verbrauchtest\",\"er_sie_es\":\"verbrauchte\",\"wir\":\"verbrauchten\",\"ihr\":\"verbrauchtet\",\"sie_Sie\":\"verbrauchten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe verbraucht\",\"du\":\"hast verbraucht\",\"er_sie_es\":\"hat verbraucht\",\"wir\":\"haben verbraucht\",\"ihr\":\"habt verbraucht\",\"sie_Sie\":\"haben verbraucht\"}],\"target\":\"verbrauchen\",\"source\":\"to consume, to use up\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b1-b1_env_verbs-010\",\"infinitive\":\"produzieren\",\"translation\":\"to produce\",\"type\":\"verb\",\"cefr\":\"B1\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb. Weak conjugation.\",\"examples\":[{\"de\":\"Die Firma produziert umweltfreundliche Produkte.\",\"en\":\"The company produces eco-friendly products.\"},{\"de\":\"Das Land hat viel erneuerbare Energie produziert.\",\"en\":\"The country has produced a lot of renewable energy.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"produzierte\",\"du\":\"produziertest\",\"er_sie_es\":\"produzierte\",\"wir\":\"produzierten\",\"ihr\":\"produziertet\",\"sie_Sie\":\"produzierten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe produziert\",\"du\":\"hast produziert\",\"er_sie_es\":\"hat produziert\",\"wir\":\"haben produziert\",\"ihr\":\"habt produziert\",\"sie_Sie\":\"haben produziert\"}],\"target\":\"produzieren\",\"source\":\"to produce\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b1-b1_env_verbs-011\",\"infinitive\":\"erzeugen\",\"translation\":\"to generate, to produce (e.g., energy)\",\"type\":\"verb\",\"cefr\":\"B1\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb with inseparable prefix 'er-'.\",\"examples\":[{\"de\":\"Solaranlagen erzeugen sauberen Strom.\",\"en\":\"Solar systems generate clean electricity.\"},{\"de\":\"Wir haben viel Windenergie erzeugt.\",\"en\":\"We have generated a lot of wind energy.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"erzeugte\",\"du\":\"erzeugtest\",\"er_sie_es\":\"erzeugte\",\"wir\":\"erzeugten\",\"ihr\":\"erzeugtet\",\"sie_Sie\":\"erzeugten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe erzeugt\",\"du\":\"hast erzeugt\",\"er_sie_es\":\"hat erzeugt\",\"wir\":\"haben erzeugt\",\"ihr\":\"habt erzeugt\",\"sie_Sie\":\"haben erzeugt\"}],\"target\":\"erzeugen\",\"source\":\"to generate, to produce (e.g., energy)\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b1-b1_env_verbs-012\",\"infinitive\":\"nutzen\",\"translation\":\"to use, to make use of\",\"type\":\"verb\",\"cefr\":\"B1\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb. Weak conjugation.\",\"examples\":[{\"de\":\"Wir sollten öffentliche Verkehrsmittel nutzen.\",\"en\":\"We should use public transport.\"},{\"de\":\"Viele Firmen nutzen grüne Energie.\",\"en\":\"Many companies use green energy.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"nutzte\",\"du\":\"nutztest\",\"er_sie_es\":\"nutzte\",\"wir\":\"nutzten\",\"ihr\":\"nutztet\",\"sie_Sie\":\"nutzten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe genutzt\",\"du\":\"hast genutzt\",\"er_sie_es\":\"hat genutzt\",\"wir\":\"haben genutzt\",\"ihr\":\"habt genutzt\",\"sie_Sie\":\"haben genutzt\"}],\"target\":\"nutzen\",\"source\":\"to use, to make use of\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b1-b1_env_verbs-013\",\"infinitive\":\"wiederverwenden\",\"translation\":\"to reuse\",\"type\":\"verb\",\"cefr\":\"B1\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb with separable prefix 'wieder-'.\",\"examples\":[{\"de\":\"Alte Kleidung kann man wiederverwenden.\",\"en\":\"Old clothes can be reused.\"},{\"de\":\"Wir haben die Tasche oft wiederverwendet.\",\"en\":\"We have often reused the bag.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"verwendete wieder\",\"du\":\"verwendetest wieder\",\"er_sie_es\":\"verwendete wieder\",\"wir\":\"verwendeten wieder\",\"ihr\":\"verwendetet wieder\",\"sie_Sie\":\"verwendeten wieder\"},{\"tense\":\"Perfekt\",\"ich\":\"habe wiederverwendet\",\"du\":\"hast wiederverwendet\",\"er_sie_es\":\"hat wiederverwendet\",\"wir\":\"haben wiederverwendet\",\"ihr\":\"habt wiederverwendet\",\"sie_Sie\":\"haben wiederverwendet\"}],\"target\":\"wiederverwenden\",\"source\":\"to reuse\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b1-b1_env_verbs-014\",\"infinitive\":\"erneuern\",\"translation\":\"to renew\",\"type\":\"verb\",\"cefr\":\"B1\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb with inseparable prefix 'er-'.\",\"examples\":[{\"de\":\"Wir müssen unsere Energiequellen erneuern.\",\"en\":\"We must renew our energy sources.\"},{\"de\":\"Das Dach des Hauses wurde erneuert.\",\"en\":\"The roof of the house was renewed.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"erneuerte\",\"du\":\"erneuertest\",\"er_sie_es\":\"erneuerte\",\"wir\":\"erneuerten\",\"ihr\":\"erneuertet\",\"sie_Sie\":\"erneuerten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe erneuert\",\"du\":\"hast erneuert\",\"er_sie_es\":\"hat erneuert\",\"wir\":\"haben erneuert\",\"ihr\":\"habt erneuert\",\"sie_Sie\":\"haben erneuert\"}],\"target\":\"erneuern\",\"source\":\"to renew\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b1-b1_env_verbs-015\",\"infinitive\":\"pflanzen\",\"translation\":\"to plant\",\"type\":\"verb\",\"cefr\":\"B1\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb. Weak conjugation.\",\"examples\":[{\"de\":\"Wir pflanzen Bäume für das Klima.\",\"en\":\"We plant trees for the climate.\"},{\"de\":\"Er hat einen Baum im Garten gepflanzt.\",\"en\":\"He planted a tree in the garden.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"pflanzte\",\"du\":\"pflanztest\",\"er_sie_es\":\"pflanzte\",\"wir\":\"pflanzten\",\"ihr\":\"pflanztet\",\"sie_Sie\":\"pflanzten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe gepflanzt\",\"du\":\"hast gepflanzt\",\"er_sie_es\":\"hat gepflanzt\",\"wir\":\"haben gepflanzt\",\"ihr\":\"habt gepflanzt\",\"sie_Sie\":\"haben gepflanzt\"}],\"target\":\"pflanzen\",\"source\":\"to plant\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b1-b1_env_verbs-016\",\"infinitive\":\"abholzen\",\"translation\":\"to deforest, to cut down (trees)\",\"type\":\"verb\",\"cefr\":\"B1\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb with separable prefix 'ab-'.\",\"examples\":[{\"de\":\"Man darf den Regenwald nicht abholzen.\",\"en\":\"One must not deforest the rainforest.\"},{\"de\":\"Viele Bäume wurden illegal abgeholzt.\",\"en\":\"Many trees were illegally cut down.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"holzte ab\",\"du\":\"holztest ab\",\"er_sie_es\":\"holzte ab\",\"wir\":\"holzten ab\",\"ihr\":\"holztet ab\",\"sie_Sie\":\"holzten ab\"},{\"tense\":\"Perfekt\",\"ich\":\"habe abgeholzt\",\"du\":\"hast abgeholzt\",\"er_sie_es\":\"hat abgeholzt\",\"wir\":\"haben abgeholzt\",\"ihr\":\"habt abgeholzt\",\"sie_Sie\":\"haben abgeholzt\"}],\"target\":\"abholzen\",\"source\":\"to deforest, to cut down (trees)\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b1-b1_env_verbs-017\",\"infinitive\":\"aussterben\",\"translation\":\"to die out, to become extinct\",\"type\":\"verb\",\"cefr\":\"B1\",\"tags\":[\"verb\"],\"grammar_note\":\"Irregular verb with separable prefix 'aus-'. Strong conjugation. Forms Perfekt with 'sein'.\",\"examples\":[{\"de\":\"Viele Tierarten sterben aus.\",\"en\":\"Many animal species are dying out.\"},{\"de\":\"Der Dinosaurier ist vor Millionen Jahren ausgestorben.\",\"en\":\"The dinosaur died out millions of years ago.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"starb aus\",\"du\":\"starbst aus\",\"er_sie_es\":\"starb aus\",\"wir\":\"starben aus\",\"ihr\":\"starbt aus\",\"sie_Sie\":\"starben aus\"},{\"tense\":\"Perfekt\",\"ich\":\"bin ausgestorben\",\"du\":\"bist ausgestorben\",\"er_sie_es\":\"ist ausgestorben\",\"wir\":\"sind ausgestorben\",\"ihr\":\"seid ausgestorben\",\"sie_Sie\":\"sind ausgestorben\"}],\"target\":\"aussterben\",\"source\":\"to die out, to become extinct\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b1-b1_env_verbs-018\",\"infinitive\":\"leisten\",\"translation\":\"to achieve, to contribute (e.g., 'einen Beitrag leisten')\",\"type\":\"verb\",\"cefr\":\"B1\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb. Weak conjugation. Often used with 'einen Beitrag' (to make a contribution).\",\"examples\":[{\"de\":\"Jeder kann einen Beitrag zum Klimaschutz leisten.\",\"en\":\"Everyone can make a contribution to climate protection.\"},{\"de\":\"Die Organisation hat viel für die Umwelt geleistet.\",\"en\":\"The organization has done a lot for the environment.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"leistete\",\"du\":\"leistetest\",\"er_sie_es\":\"leistete\",\"wir\":\"leisteten\",\"ihr\":\"leistetet\",\"sie_Sie\":\"leisteten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe geleistet\",\"du\":\"hast geleistet\",\"er_sie_es\":\"hat geleistet\",\"wir\":\"haben geleistet\",\"ihr\":\"habt geleistet\",\"sie_Sie\":\"haben geleistet\"}],\"target\":\"leisten\",\"source\":\"to achieve, to contribute (e.g., 'einen Beitrag leisten')\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b1-b1_env_verbs-019\",\"infinitive\":\"unterstützen\",\"translation\":\"to support\",\"type\":\"verb\",\"cefr\":\"B1\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb with inseparable prefix 'unter-'.\",\"examples\":[{\"de\":\"Wir unterstützen Umweltorganisationen.\",\"en\":\"We support environmental organizations.\"},{\"de\":\"Hast du die Initiative zum Schutz der Wälder unterstützt?\",\"en\":\"Have you supported the initiative for forest protection?\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"unterstützte\",\"du\":\"unterstütztest\",\"er_sie_es\":\"unterstützte\",\"wir\":\"unterstützten\",\"ihr\":\"unterstütztet\",\"sie_Sie\":\"unterstützten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe unterstützt\",\"du\":\"hast unterstützt\",\"er_sie_es\":\"hat unterstützt\",\"wir\":\"haben unterstützt\",\"ihr\":\"habt unterstützt\",\"sie_Sie\":\"haben unterstützt\"}],\"target\":\"unterstützen\",\"source\":\"to support\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b1-b1_env_verbs-020\",\"infinitive\":\"fordern\",\"translation\":\"to demand\",\"type\":\"verb\",\"cefr\":\"B1\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb. Weak conjugation.\",\"examples\":[{\"de\":\"Die Demonstranten fordern mehr Klimaschutz.\",\"en\":\"The demonstrators demand more climate protection.\"},{\"de\":\"Sie haben schnellere Maßnahmen gefordert.\",\"en\":\"They have demanded faster measures.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"forderte\",\"du\":\"fordertest\",\"er_sie_es\":\"forderte\",\"wir\":\"forderten\",\"ihr\":\"fordertet\",\"sie_Sie\":\"forderten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe gefordert\",\"du\":\"hast gefordert\",\"er_sie_es\":\"hat gefordert\",\"wir\":\"haben gefordert\",\"ihr\":\"habt gefordert\",\"sie_Sie\":\"haben gefordert\"}],\"target\":\"fordern\",\"source\":\"to demand\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b1-b1_env_verbs-021\",\"infinitive\":\"verbieten\",\"translation\":\"to forbid, to prohibit\",\"type\":\"verb\",\"cefr\":\"B1\",\"tags\":[\"verb\"],\"grammar_note\":\"Irregular verb with inseparable prefix 'ver-'. Strong conjugation.\",\"examples\":[{\"de\":\"Man sollte Plastiktüten verbieten.\",\"en\":\"Plastic bags should be forbidden.\"},{\"de\":\"Das Rauchen ist in öffentlichen Gebäuden verboten.\",\"en\":\"Smoking is prohibited in public buildings.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"verbot\",\"du\":\"verbotest\",\"er_sie_es\":\"verbot\",\"wir\":\"verboten\",\"ihr\":\"verbotet\",\"sie_Sie\":\"verboten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe verboten\",\"du\":\"hast verboten\",\"er_sie_es\":\"hat verboten\",\"wir\":\"haben verboten\",\"ihr\":\"habt verboten\",\"sie_Sie\":\"haben verboten\"}],\"target\":\"verbieten\",\"source\":\"to forbid, to prohibit\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b1-b1_env_verbs-022\",\"infinitive\":\"schmelzen\",\"translation\":\"to melt\",\"type\":\"verb\",\"cefr\":\"B1\",\"tags\":[\"verb\"],\"grammar_note\":\"Irregular verb. Strong conjugation. Forms Perfekt with 'sein' when indicating a change of state.\",\"examples\":[{\"de\":\"Das Eis in der Arktis schmilzt schnell.\",\"en\":\"The ice in the Arctic is melting quickly.\"},{\"de\":\"Der Gletscher ist in den letzten Jahren stark geschmolzen.\",\"en\":\"The glacier has melted a lot in recent years.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"schmolz\",\"du\":\"schmolzest\",\"er_sie_es\":\"schmolz\",\"wir\":\"schmolzen\",\"ihr\":\"schmolzt\",\"sie_Sie\":\"schmolzen\"},{\"tense\":\"Perfekt\",\"ich\":\"bin geschmolzen\",\"du\":\"bist geschmolzen\",\"er_sie_es\":\"ist geschmolzen\",\"wir\":\"sind geschmolzen\",\"ihr\":\"seid geschmolzen\",\"sie_Sie\":\"sind geschmolzen\"}],\"target\":\"schmelzen\",\"source\":\"to melt\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b1-b1_env_verbs-023\",\"infinitive\":\"steigen\",\"translation\":\"to rise, to increase\",\"type\":\"verb\",\"cefr\":\"B1\",\"tags\":[\"verb\"],\"grammar_note\":\"Irregular verb. Strong conjugation. Forms Perfekt with 'sein'.\",\"examples\":[{\"de\":\"Die Meeresspiegel steigen weltweit.\",\"en\":\"Sea levels are rising worldwide.\"},{\"de\":\"Die globalen Temperaturen sind stark gestiegen.\",\"en\":\"Global temperatures have risen sharply.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"stieg\",\"du\":\"stiegst\",\"er_sie_es\":\"stieg\",\"wir\":\"stiegen\",\"ihr\":\"stiegt\",\"sie_Sie\":\"stiegen\"},{\"tense\":\"Perfekt\",\"ich\":\"bin gestiegen\",\"du\":\"bist gestiegen\",\"er_sie_es\":\"ist gestiegen\",\"wir\":\"sind gestiegen\",\"ihr\":\"seid gestiegen\",\"sie_Sie\":\"sind gestiegen\"}],\"target\":\"steigen\",\"source\":\"to rise, to increase\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b1-b1_env_verbs-024\",\"infinitive\":\"sinken\",\"translation\":\"to sink, to decrease\",\"type\":\"verb\",\"cefr\":\"B1\",\"tags\":[\"verb\"],\"grammar_note\":\"Irregular verb. Strong conjugation. Forms Perfekt with 'sein'.\",\"examples\":[{\"de\":\"Die Emissionen müssen dringend sinken.\",\"en\":\"Emissions must urgently decrease.\"},{\"de\":\"Die Zahl der Plastiktüten ist gesunken.\",\"en\":\"The number of plastic bags has decreased.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"sank\",\"du\":\"sankst\",\"er_sie_es\":\"sank\",\"wir\":\"sanken\",\"ihr\":\"sankt\",\"sie_Sie\":\"sanken\"},{\"tense\":\"Perfekt\",\"ich\":\"bin gesunken\",\"du\":\"bist gesunken\",\"er_sie_es\":\"ist gesunken\",\"wir\":\"sind gesunken\",\"ihr\":\"seid gesunken\",\"sie_Sie\":\"sind gesunken\"}],\"target\":\"sinken\",\"source\":\"to sink, to decrease\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b1-b1_env_verbs-025\",\"infinitive\":\"verursachen\",\"translation\":\"to cause\",\"type\":\"verb\",\"cefr\":\"B1\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb with inseparable prefix 'ver-'.\",\"examples\":[{\"de\":\"CO2-Emissionen verursachen den Klimawandel.\",\"en\":\"CO2 emissions cause climate change.\"},{\"de\":\"Wer hat diesen Umweltschaden verursacht?\",\"en\":\"Who caused this environmental damage?\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"verursachte\",\"du\":\"verursachtest\",\"er_sie_es\":\"verursachte\",\"wir\":\"verursachten\",\"ihr\":\"verursachtet\",\"sie_Sie\":\"verursachten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe verursacht\",\"du\":\"hast verursacht\",\"er_sie_es\":\"hat verursacht\",\"wir\":\"haben verursacht\",\"ihr\":\"habt verursacht\",\"sie_Sie\":\"haben verursacht\"}],\"target\":\"verursachen\",\"source\":\"to cause\",\"example_target\":\"\",\"example_source\":\"\"}]";
+const langConfigJson = "{\"language_pair\":\"english_german\",\"target_lang\":\"de\",\"native_lang\":\"en\",\"target_lang_name\":\"Deutsch\",\"native_lang_name\":\"English\",\"speech_lang\":\"de-DE\",\"noun_metadata_fields\":[{\"key\":\"article\",\"label\":\"Artikel\",\"render\":\"article_badge\"},{\"key\":\"gender\",\"label\":\"Genus\",\"render\":\"gender_label\"},{\"key\":\"plural\",\"label\":\"Plural\",\"render\":\"text\"}],\"article_colours\":{\"der\":\"#4A7C9E\",\"die\":\"#B05070\",\"das\":\"#4A8A5A\"},\"gender_labels\":{\"m\":\"Maskulinum\",\"f\":\"Femininum\",\"n\":\"Neutrum\"},\"verb_tenses\":[\"Präsens\",\"Präteritum\",\"Perfekt\",\"Futur I\",\"Konjunktiv II\"],\"cases\":{\"nominative\":\"Nominativ\",\"accusative\":\"Akkusativ\",\"dative\":\"Dativ\",\"genitive\":\"Genitiv\"},\"ui_labels\":{\"learn_mode\":\"Lernen\",\"train_mode\":\"Trainieren\",\"examples_heading\":\"Beispielsätze\",\"grammar_note_heading\":\"Grammatiknotiz\",\"audio_button\":\"Anhören\",\"back_link\":\"Zurück\",\"card_counter\":\"Karte {current} / {total}\",\"next_button\":\"Weiter\",\"finish_button\":\"Fertig\",\"correct\":\"Richtig!\",\"wrong\":\"Falsch\"}}";
+const category = "verbs";
+
+  const cards     = JSON.parse(cardsJson);
+  const config    = JSON.parse(langConfigJson);
+  let currentIndex = 0;
+
+  const dotNav    = document.getElementById('dot-nav');
+  const currentNum = document.getElementById('current-num');
+  const progressBar = document.getElementById('progress-bar');
+  const btnPrev   = document.getElementById('btn-prev');
+  const btnNext   = document.getElementById('btn-next');
+  const cardHost  = document.getElementById('card-host');
+  const progressCont = document.getElementById('progress-container');
+
+  const cardViewWrap = document.getElementById('card-view-wrap');
+  const listViewWrap = document.getElementById('list-view-wrap');
+  const btnViewCards = document.getElementById('view-cards-btn');
+  const btnViewList  = document.getElementById('view-list-btn');
+
+  // Toggle Logic
+  function setViewMode(mode) {
+    if (mode === 'list') {
+      cardViewWrap.classList.add('hidden');
+      listViewWrap.classList.remove('hidden');
+      progressCont.classList.add('hidden');
+      btnViewList.classList.add('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewList.classList.remove('text-[var(--text-muted)]');
+      btnViewCards.classList.remove('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewCards.classList.add('text-[var(--text-muted)]');
+    } else {
+      listViewWrap.classList.add('hidden');
+      cardViewWrap.classList.remove('hidden');
+      progressCont.classList.remove('hidden');
+      btnViewCards.classList.add('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewCards.classList.remove('text-[var(--text-muted)]');
+      btnViewList.classList.remove('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewList.classList.add('text-[var(--text-muted)]');
+    }
+  }
+
+  btnViewCards.addEventListener('click', () => setViewMode('cards'));
+  btnViewList.addEventListener('click', () => setViewMode('list'));
+
+  // Default Grammatik and Redemittel to list view!
+  if (category === 'grammatik' || category === 'redemittel' || category === 'phrases') {
+    setViewMode('list');
+  }
+
+
+
+  // ── Helpers (mirror card-renderer.ts — no module imports in inline scripts) ──
+  const articleColours = config.article_colours || { der:'#4A7C9E', die:'#B05070', das:'#4A8A5A' };
+  const genderLabels   = config.gender_labels   || { m:'Maskulinum', f:'Femininum', n:'Neutrum'  };
+  const speechLang     = config.speech_lang     || 'de-DE';
+
+  function stripArticle(w) {
+    return (w || '').replace(/^(der|die|das|el|la|los|las|le|les|l')\s+/i,'').trim();
+  }
+
+  function getTypeLabel(card) {
+    const tags = card.tags || [];
+    if (tags.includes('noun'))       return 'Substantiv';
+    if (tags.includes('verb'))       return 'Verb';
+    if (tags.includes('adjective'))  return 'Adjektiv';
+    if (tags.includes('expression')) return 'Ausdruck';
+    return { vocab:'Vokabel', verb:'Verb', phrase:'Phrase', connector:'Konnektor', grammar:'Grammatik' }[card.type] || 'Vokabel';
+  }
+
+  function normaliseEx(ex) {
+    return { target: ex.target||ex.de||'', source: ex.source||ex.en||'', note: ex.note };
+  }
+
+  function getMetaFacts(card) {
+    const meta = { ...(card.metadata||{}), article:card.article, gender:card.gender, plural:card.plural };
+    const facts = [];
+    for (const field of (config.noun_metadata_fields || [])) {
+      const raw = meta[field.key];
+      if (!raw || raw==='~') continue;
+      let value = String(raw), colour;
+      if (field.render === 'gender_label')  value  = genderLabels[raw] || raw;
+      if (field.render === 'article_badge') colour = articleColours[raw.toLowerCase()] || 'var(--espresso)';
+      facts.push({ label: field.label, value, colour });
+    }
+    return facts;
+  }
+
+  // ── Card renderer ─────────────────────────────────────────────────────────
+  function renderCard(idx) {
+    const card = cards[idx];
+    if (!card || !cardHost) return;
+
+    const lc = cardHost.querySelector('.learning-card');
+    if (!lc) return;
+
+    function sel(cls) { return lc.querySelector(cls); }
+
+    // Type badge + level
+    sel('.lc-type-badge').textContent = getTypeLabel(card);
+    sel('.lc-level-badge').textContent = (card.level || '').toUpperCase();
+
+    // Article
+    const article = card.article || card.metadata?.article;
+    const articleWrap = sel('.lc-article-wrap');
+    const articleEl   = sel('.lc-article');
+    if (article && (card.tags||[]).includes('noun') && !card.plural_only) {
+      articleEl.textContent = article;
+      articleEl.style.color = articleColours[article.toLowerCase()] || 'var(--espresso)';
+      articleWrap.style.display = '';
+    } else {
+      articleWrap.style.display = 'none';
+    }
+
+    // Word / translation / forms
+    sel('.lc-word').textContent        = stripArticle(card.target);
+    sel('.lc-translation').textContent = card.source || '';
+    const plural = card.plural || card.metadata?.plural;
+    sel('.lc-forms').textContent = plural && !card.plural_only ? `Pl. ${plural}` : card.plural_only ? 'nur Plural' : '';
+
+    // Meta grid
+    const metaGrid = sel('.lc-meta-grid');
+    const facts = getMetaFacts(card);
+    if (facts.length) {
+      metaGrid.style.gridTemplateColumns = `repeat(${Math.min(facts.length,4)}, 1fr)`;
+      metaGrid.style.display = '';
+      metaGrid.innerHTML = facts.map((f, i) => `
+        <div class="px-5 py-4 ${i<facts.length-1?'border-r':''}" style="border-color:var(--border);">
+          <p class="text-[9px] font-bold uppercase tracking-widest mb-1" style="color:var(--text-muted);">${f.label}</p>
+          <p class="text-sm font-bold" style="color:${f.colour||'var(--text)'};">${f.value}</p>
+        </div>`).join('');
+    } else {
+      metaGrid.style.display = 'none';
+    }
+
+    // Grammar note
+    const grammarWrap = sel('.lc-grammar-wrap');
+    if (card.grammar_note) {
+      sel('.lc-grammar-text').innerHTML = formatHighlight(card.grammar_note);
+      grammarWrap.classList.remove('hidden');
+    } else {
+      grammarWrap.classList.add('hidden');
+    }
+
+    // Examples
+    const examplesEl = sel('.lc-examples');
+    const rawEx = card.examples || (card.example_target ? [{ target:card.example_target, source:card.example_source }] : []);
+    examplesEl.innerHTML = rawEx.length
+      ? rawEx.map(ex => { const e=normaliseEx(ex); return `
+          <div class="rounded-2xl border overflow-hidden" style="border-color:var(--border);">
+            <div class="px-4 py-3" style="background-color:var(--bg);">
+              <p class="font-semibold leading-snug mb-1" style="color:var(--text);">${e.target}</p>
+              <p class="text-sm italic" style="color:var(--text-muted);">${e.source||''}</p>
+            </div>
+            ${e.note?`<div class="px-4 py-2 border-t" style="border-color:var(--border);">
+              <p class="text-[10px] font-bold font-mono" style="color:var(--espresso);">📐 ${e.note}</p>
+            </div>`:''}
+          </div>`; }).join('')
+      : '<p class="text-sm italic" style="color:var(--text-muted);">Kein Beispiel verfügbar.</p>';
+
+    // Tags
+    sel('.lc-tags').innerHTML = (card.tags||[]).map(t =>
+      `<span class="text-[10px] font-bold px-2 py-0.5 rounded-md border" style="border-color:var(--border);color:var(--text-muted);background-color:var(--bg);">${t}</span>`
+    ).join('');
+
+    // Progress UI
+    if (currentNum)  currentNum.textContent = String(idx+1);
+    if (progressBar) progressBar.style.width = `${Math.round(((idx+1)/cards.length)*100)}%`;
+    if (btnPrev)     btnPrev.disabled = idx === 0;
+    if (btnNext)     btnNext.innerHTML = idx === cards.length-1
+      ? '✓ Fertig'
+      : 'Weiter <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>';
+
+    updateDots();
+
+    // Re-bind audio button cleanly by cloning to strip old listeners
+    const oldBtn = sel('.lc-audio-btn');
+    if (oldBtn) {
+      const newBtn = oldBtn.cloneNode(true);
+      oldBtn.parentNode.replaceChild(newBtn, oldBtn);
+      newBtn.addEventListener('click', speakCurrent);
+    }
+  }
+
+  // ── Dot navigation ────────────────────────────────────────────────────────
+  function buildDots() {
+    if (!dotNav) return;
+    dotNav.innerHTML = '';
+    const maxVisible = 20;
+    const showAll = cards.length <= maxVisible;
+    cards.forEach((_, i) => {
+      if (!showAll && i >= maxVisible) return;
+      const dot = document.createElement('button');
+      dot.className = 'dot w-2 h-2 rounded-full transition-all duration-300 flex-shrink-0';
+      dot.style.backgroundColor = 'var(--border)';
+      dot.title = `Card ${i+1}`;
+      dot.addEventListener('click', () => goTo(i));
+      dotNav.appendChild(dot);
+    });
+    if (!showAll) {
+      const el = document.createElement('span');
+      el.textContent = `+${cards.length - maxVisible}`;
+      el.className = 'text-[10px] font-bold';
+      el.style.color = 'var(--text-muted)';
+      dotNav.appendChild(el);
+    }
+  }
+
+  function updateDots() {
+    dotNav?.querySelectorAll('.dot').forEach((dot, i) => {
+      dot.style.backgroundColor = i===currentIndex ? 'var(--espresso)' : 'var(--border)';
+      dot.style.width     = i===currentIndex ? '20px' : '8px';
+      dot.style.borderRadius = '4px';
+    });
+  }
+
+  // ── Audio ─────────────────────────────────────────────────────────────────
+  function speakCurrent() {
+    const card = cards[currentIndex];
+    if (!card) return;
+    if (window.DeutschAudioEngine) {
+      window.DeutschAudioEngine.speak(card.target || '', speechLang, 0.85);
+    }
+  }
+
+  // ── Navigate ─────────────────────────────────────────────────────────────
+  function goTo(idx) {
+    if (idx < 0 || idx >= cards.length) return;
+    currentIndex = idx;
+    renderCard(currentIndex);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  btnPrev?.addEventListener('click', () => goTo(currentIndex - 1));
+  btnNext?.addEventListener('click', () => {
+    if (currentIndex === cards.length - 1) window.location.href = '/vocabulary';
+    else goTo(currentIndex + 1);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') goTo(currentIndex + 1);
+    if (e.key === 'ArrowLeft')  goTo(currentIndex - 1);
+    if (e.key === 'a' || e.key === 'A') speakCurrent();
+  });
+
+  // ── Init ─────────────────────────────────────────────────────────────────
+  buildDots();
+  // Card 0 is already rendered server-side via LearningCard component.
+  // Sync progress UI to reflect card 0 state.
+  updateDots();
+  if (progressBar) progressBar.style.width = `${Math.round(1/cards.length*100)}%`;
+  // Update card 0 using client-side config too (ensures langConfig is applied)
+  renderCard(0);
+})();</script>

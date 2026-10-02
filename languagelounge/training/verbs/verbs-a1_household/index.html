@@ -1,0 +1,640 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="description" content="Deutsch Lounge — Language Learning Trainer"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/languagelounge/favicon.svg"><meta name="generator" content="Astro v7.3.5"><title>A1 Household &amp; Home Verbs — Deutsch Lounge</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet"><!-- Apply theme before paint to avoid flash --><script>
+      (function() {
+        const saved = localStorage.getItem('wortschatz_theme');
+        if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script><link rel="stylesheet" href="/languagelounge/_astro/Layout.BeSASyxj.css"></head><body class="antialiased min-h-screen flex flex-col" style="background-color:var(--bg);color:var(--text);"><!-- Header --><header class="sticky top-0 z-50 border-b" style="background-color:var(--bg);border-color:var(--border);"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between gap-4" style="height:4.5rem;"><!-- Logo + Language Switcher --><div class="flex items-center gap-4 shrink-0"><a href="/languagelounge/" class="flex items-center gap-2 group"><span class="font-outfit font-extrabold text-xl sm:text-2xl tracking-tight transition-colors" style="color:var(--text);">Small Talk Café <span class="font-normal text-base hidden sm:inline" style="color:var(--text-muted);">| <span id="site-name">Deutsch Lounge</span></span></span></a><!-- Language Selector Dropdown --><div class="relative" id="lang-dropdown-wrapper"><button id="lang-btn" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-sm font-bold transition-all hover:opacity-70" style="background-color:var(--bg); border-color:var(--border); color:var(--text);"><span id="lang-flag">🇩🇪</span><span id="lang-code">DE</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"></path></svg></button><div id="lang-menu" class="hidden absolute top-full left-0 mt-2 rounded-2xl border shadow-xl overflow-hidden z-50 min-w-[160px]" style="background-color:var(--card); border-color:var(--border);"><button class="lang-option w-full flex items-center gap-3 px-4 py-3 text-sm font-semibold text-left transition-colors hover:opacity-70" data-lang="de" data-flag="🇩🇪" data-code="DE" data-name="Deutsch Lounge" data-label="German" style="color:var(--text);"><span class="text-lg">🇩🇪</span><div><div class="font-bold" style="color:var(--text);">Deutsch</div><div class="text-xs" style="color:var(--text-muted);">German Learning</div></div></button><div class="border-t" style="border-color:var(--border);"></div><button class="lang-option w-full flex items-center gap-3 px-4 py-3 text-sm font-semibold text-left transition-colors hover:opacity-70" data-lang="es" data-flag="🇪🇸" data-code="ES" data-name="Spanish Gym" data-label="Spanish" style="color:var(--text);"><span class="text-lg">🇪🇸</span><div><div class="font-bold" style="color:var(--text);">Español</div><div class="text-xs" style="color:var(--text-muted);">Spanish Learning</div></div></button><div class="border-t" style="border-color:var(--border);"></div><button class="lang-option w-full flex items-center gap-3 px-4 py-3 text-sm font-semibold text-left transition-colors hover:opacity-70" data-lang="fr" data-flag="🇫🇷" data-code="FR" data-name="French Gym" data-label="French" style="color:var(--text);"><span class="text-lg">🇫🇷</span><div><div class="font-bold" style="color:var(--text);">Français</div><div class="text-xs" style="color:var(--text-muted);">French Learning</div></div></button></div></div></div><!-- Nav Links --><nav class="hidden md:flex gap-5 items-center"><a href="https://smalltalkcafe.de/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Small Talk Café Podcasts</a><span class="text-sm font-normal" style="color:var(--border);">|</span><a href="/languagelounge/vocabulary" data-german-nav class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Vokabeln</a><a href="/languagelounge/verbs" data-german-nav class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Verben</a><a href="/languagelounge/grammatik" data-german-nav class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Grammatik</a><a href="/languagelounge/redemittel" data-german-nav class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Redemittel</a><!-- Dark/Light Toggle --><button id="theme-toggle" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-sm font-semibold transition-all hover:opacity-70" style="border-color:var(--border); color:var(--text-muted);" aria-label="Toggle dark/light mode"><span id="theme-icon">☀️</span><span id="theme-label">Light</span></button></nav></div></header><!-- Coming Soon Overlay (shown for non-German languages) --><div id="coming-soon-overlay" class="hidden flex-1 flex items-center justify-center py-20 px-4"><div class="text-center max-w-lg mx-auto"><div class="text-7xl mb-6" id="coming-soon-flag">🌍</div><h1 class="font-outfit font-extrabold text-4xl sm:text-5xl mb-4" style="color:var(--text);">Coming Soon</h1><p class="text-lg mb-3" style="color:var(--text-muted);">We're working hard on the <strong id="coming-soon-lang">new language</strong> curriculum.</p><p class="text-base mb-8" style="color:var(--text-muted);">Stay tuned — it will be available very soon! In the meantime, explore our<strong>Deutsch Lounge</strong> to sharpen your German.</p><button id="coming-soon-back-btn" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-sm transition-all hover:opacity-80" style="background-color:var(--espresso); color:#fff;">🇩🇪 Switch to German</button></div></div><main id="main-content" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-1 w-full"><div class="max-w-4xl mx-auto py-6"><!-- Deck Header --><div class="flex items-start justify-between mb-8 gap-4 flex-wrap"><div><a href="/languagelounge/verbs" class="text-xs font-bold flex items-center gap-1 mb-2 hover:opacity-70 transition-opacity capitalize" style="color:var(--espresso);"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg>verbs</a><h1 class="text-2xl md:text-3xl font-extrabold font-outfit" style="color:var(--text);">A1 Household &amp; Home Verbs</h1><p class="text-xs font-bold uppercase tracking-wider mt-1" style="color:var(--text-muted);">A1 Haushaltsverben &bull; A1 &bull; 25 Karten</p></div><div class="flex flex-col items-end gap-4"><!-- Learn / Train mode switcher --><div class="flex rounded-xl border overflow-hidden p-1 gap-1 w-full max-w-[300px]" style="background-color:var(--bg); border-color:var(--border);"><span class="flex-1 flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold transition-all" style="background-color:var(--espresso); color:#F5F2EB;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>Lernen</span><a href="/languagelounge/training/verbs/train?level=a1&amp;deck=verbs-a1_household&amp;count=20&amp;mode=mc&amp;dir=en-de" class="flex-1 flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold hover:opacity-70 transition-all" style="color:var(--text-muted);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>Trainieren</a></div><!-- View switcher (Cards vs List) --><div class="flex rounded-xl border overflow-hidden p-1 gap-1 w-full max-w-[300px]" style="background-color:var(--bg); border-color:var(--border);"><button id="view-cards-btn" class="view-btn flex-1 flex items-center justify-center px-4 py-2 rounded-lg text-xs font-bold transition-all bg-[var(--espresso)] text-[#F5F2EB]">Karten</button><button id="view-list-btn" class="view-btn flex-1 flex items-center justify-center px-4 py-2 rounded-lg text-xs font-bold transition-all text-[var(--text-muted)] hover:opacity-70">Liste</button></div><!-- Progress indicator --><div id="progress-container" class="flex items-center gap-3"><div class="text-xs font-semibold" style="color:var(--text-muted);">Karte <span id="current-num" class="font-extrabold" style="color:var(--text);">1</span> / 25</div><div class="w-24 h-1.5 rounded-full overflow-hidden border" style="background-color:var(--bg);border-color:var(--border);"><div id="progress-bar" class="h-full transition-all duration-500 rounded-full" style="width:0%; background-color:var(--espresso);"></div></div></div></div></div><!-- ── Universal Study Card (rendered by LearningCard component) ── --><div id="card-view-wrap"><div id="card-host"><!-- The card shell — populated client-side by renderCard() --><div class="learning-card rounded-3xl border shadow-xl overflow-hidden" style="background-color:var(--card); border-color:var(--border);"><!-- ── Top bar ─────────────────────────────────── --><div class="lc-topbar flex items-center justify-between px-6 py-3.5 border-b" style="border-color:var(--border); background-color:var(--bg);"><div class="flex items-center gap-2"><span class="lc-type-badge text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-lg" style="background-color:var(--espresso); color:#F5F2EB;">—</span><span class="lc-level-badge text-[10px] font-bold px-2.5 py-1 rounded-lg cafe-badge"></span></div><button class="lc-audio-btn flex items-center justify-center w-11 h-11 rounded-full transition-transform hover:scale-105 active:scale-95 shadow-md flex-shrink-0" title="Anhören (A)" style="background-color:var(--espresso); color:#F5F2EB;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg></button></div><!-- ── Main word display ───────────────────────── --><div class="lc-hero px-7 py-8 text-center border-b" style="border-color:var(--border);"><div class="lc-article-wrap mb-1.5"><span class="lc-article text-xl font-bold"></span></div><h2 class="lc-word text-5xl md:text-6xl font-extrabold font-outfit mb-3" style="color:var(--text);">—</h2><p class="lc-translation text-lg font-semibold italic" style="color:var(--text-muted);"></p><p class="lc-forms text-sm font-medium mt-2" style="color:var(--text-muted);"></p></div><!-- ── Meta info grid ─────────────────────────── --><div class="lc-meta-grid grid border-b" style="border-color:var(--border);"><!-- populated by JS --></div><!-- ── Grammar note ───────────────────────────── --><div class="lc-grammar-wrap hidden px-7 py-5 border-b" style="border-color:var(--border); background-color:var(--bg);"><p class="text-[10px] font-bold uppercase tracking-widest mb-2" style="color:var(--espresso);">📌 <span class="lc-grammar-label">Grammatiknotiz</span></p><p class="lc-grammar-text text-sm leading-relaxed font-medium whitespace-pre-wrap" style="color:var(--text);"></p></div><!-- ── Type-specific block ────────────────────── --><!-- Verb conjugation (hidden by default, shown for verb cards) --><div class="lc-conjugation-wrap hidden border-b overflow-x-auto" style="border-color:var(--border);"><div class="lc-conjugation-inner"><!-- populated by JS --></div></div><!-- Connector word-order block --><div class="lc-wordorder-wrap hidden px-7 py-4 border-b" style="border-color:var(--border); background-color:var(--bg);"><div class="flex items-start gap-3 text-sm font-medium" style="color:var(--text-muted);"><span class="text-base flex-shrink-0">📐</span><span class="lc-wordorder-text"></span></div></div><!-- Phrase preposition block --><div class="lc-phrase-wrap hidden px-7 py-4 border-b" style="border-color:var(--border); background-color:var(--bg);"><p class="text-[10px] font-bold uppercase tracking-widest mb-2" style="color:var(--espresso);">Struktur</p><p class="lc-phrase-rule text-sm font-semibold" style="color:var(--text);"></p></div><!-- ── Examples ───────────────────────────────── --><div class="px-7 py-6 border-b" style="border-color:var(--border);"><p class="lc-examples-label text-[10px] font-bold uppercase tracking-widest mb-5" style="color:var(--text-muted);">Beispielsätze</p><div class="lc-examples space-y-3"><!-- populated by JS --></div></div><!-- ── Tags ───────────────────────────────────── --><div class="lc-tags-row px-7 py-4 flex items-center gap-2 flex-wrap"><span class="text-[10px] font-bold uppercase tracking-wider" style="color:var(--text-muted);">Tags:</span><div class="lc-tags flex gap-2 flex-wrap"></div></div></div><script>(function(){const cardJson = "{\"id\":\"verbs-a1-a1_household-001\",\"infinitive\":\"wohnen\",\"translation\":\"to live / to reside\",\"type\":\"verb\",\"cefr\":\"A1\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb. Uses 'haben' for Perfekt.\",\"examples\":[{\"de\":\"Ich wohne in Berlin.\",\"en\":\"I live in Berlin.\"},{\"de\":\"Wo wohnst du?\",\"en\":\"Where do you live?\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"wohnte\",\"du\":\"wohntest\",\"er_sie_es\":\"wohnte\",\"wir\":\"wohnten\",\"ihr\":\"wohntet\",\"sie_Sie\":\"wohnten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe gewohnt\",\"du\":\"hast gewohnt\",\"er_sie_es\":\"hat gewohnt\",\"wir\":\"haben gewohnt\",\"ihr\":\"habt gewohnt\",\"sie_Sie\":\"haben gewohnt\"}],\"target\":\"wohnen\",\"source\":\"to live / to reside\",\"example_target\":\"\",\"example_source\":\"\"}";
+const langConfigJson = "{\"language_pair\":\"english_german\",\"target_lang\":\"de\",\"native_lang\":\"en\",\"target_lang_name\":\"Deutsch\",\"native_lang_name\":\"English\",\"speech_lang\":\"de-DE\",\"noun_metadata_fields\":[{\"key\":\"article\",\"label\":\"Artikel\",\"render\":\"article_badge\"},{\"key\":\"gender\",\"label\":\"Genus\",\"render\":\"gender_label\"},{\"key\":\"plural\",\"label\":\"Plural\",\"render\":\"text\"}],\"article_colours\":{\"der\":\"#4A7C9E\",\"die\":\"#B05070\",\"das\":\"#4A8A5A\"},\"gender_labels\":{\"m\":\"Maskulinum\",\"f\":\"Femininum\",\"n\":\"Neutrum\"},\"verb_tenses\":[\"Präsens\",\"Präteritum\",\"Perfekt\",\"Futur I\",\"Konjunktiv II\"],\"cases\":{\"nominative\":\"Nominativ\",\"accusative\":\"Akkusativ\",\"dative\":\"Dativ\",\"genitive\":\"Genitiv\"},\"ui_labels\":{\"learn_mode\":\"Lernen\",\"train_mode\":\"Trainieren\",\"examples_heading\":\"Beispielsätze\",\"grammar_note_heading\":\"Grammatiknotiz\",\"audio_button\":\"Anhören\",\"back_link\":\"Zurück\",\"card_counter\":\"Karte {current} / {total}\",\"next_button\":\"Weiter\",\"finish_button\":\"Fertig\",\"correct\":\"Richtig!\",\"wrong\":\"Falsch\"}}";
+
+  /**
+   * Client-side card renderer.
+   * Uses the universal card-renderer logic inline (no imports in Astro is:inline).
+   */
+
+  // ── Parse data ──────────────────────────────────────────────────────────
+  const card   = JSON.parse(cardJson);
+  const config = JSON.parse(langConfigJson);
+
+  // ── Helpers ─────────────────────────────────────────────────────────────
+  function stripArticle(word) {
+    return (word || '').replace(/^(der|die|das|el|la|los|las|le|les|l')\s+/i, '').trim();
+  }
+
+  function getArticleColour(article) {
+    if (!article || !config.article_colours) return 'var(--espresso)';
+    return config.article_colours[article.toLowerCase()] || 'var(--espresso)';
+  }
+
+  function getGenderLabel(gender) {
+    if (!gender) return '';
+    return (config.gender_labels || {})[gender] || gender;
+  }
+
+  function getTypeLabel() {
+    const tags = card.tags || [];
+    if (tags.includes('noun'))       return 'Substantiv';
+    if (tags.includes('verb'))       return 'Verb';
+    if (tags.includes('adjective'))  return 'Adjektiv';
+    if (tags.includes('expression')) return 'Ausdruck';
+    const map = { vocab:'Vokabel', verb:'Verb', phrase:'Phrase', connector:'Konnektor', grammar:'Grammatik' };
+    return map[card.type] || 'Karte';
+  }
+
+  function formatHighlight(text) {
+    if (!text) return '';
+    return String(text).replace(/\*(.*?)\*/g, '<span class="highlighter">$1</span>');
+  }
+
+  function normaliseExample(ex) {
+    return {
+      target: ex.target || ex.de || '',
+      source: ex.source || ex.en || '',
+      note: ex.note,
+    };
+  }
+
+  function getMetaFacts() {
+    const meta = { ...card.metadata, article: card.article, gender: card.gender, plural: card.plural, ...card.metadata };
+    const facts = [];
+    for (const field of (config.noun_metadata_fields || [])) {
+      const raw = meta[field.key] || card[field.key];
+      if (!raw || raw === '~') continue;
+      let value = String(raw);
+      let colour;
+      if (field.render === 'gender_label') value = getGenderLabel(raw);
+      else if (field.render === 'article_badge') colour = getArticleColour(raw);
+      facts.push({ label: field.label, value, colour });
+    }
+    return facts;
+  }
+
+  // ── Render ──────────────────────────────────────────────────────────────
+  const container = document.querySelector('.learning-card');
+  if (!container) { console.error('LearningCard: container not found'); }
+
+  function sel(cls) { return container?.querySelector(cls); }
+
+  // Type badge
+  sel('.lc-type-badge').textContent = getTypeLabel();
+
+  // Level badge
+  sel('.lc-level-badge').textContent = card.level || '';
+
+  // Article
+  const article = card.article || card.metadata?.article;
+  const articleWrap = sel('.lc-article-wrap');
+  const articleEl   = sel('.lc-article');
+  if (article && card.tags?.includes('noun') && !card.plural_only) {
+    articleEl.textContent  = article;
+    articleEl.style.color  = getArticleColour(article);
+    articleWrap.style.display = '';
+  } else {
+    articleWrap.style.display = 'none';
+  }
+
+  // Word
+  sel('.lc-word').textContent = stripArticle(card.target);
+
+  // Translation
+  sel('.lc-translation').textContent = card.source || '';
+
+  // Plural / forms
+  const plural = card.plural || card.metadata?.plural;
+  const formsEl = sel('.lc-forms');
+  if (plural && !card.plural_only) formsEl.textContent = `Pl. ${plural}`;
+  else if (card.plural_only) formsEl.textContent = 'nur Plural';
+  else formsEl.textContent = '';
+
+  // Meta grid
+  const metaGrid = sel('.lc-meta-grid');
+  const facts = getMetaFacts();
+  if (facts.length) {
+    const cols = Math.min(facts.length, 4);
+    metaGrid.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
+    metaGrid.innerHTML = facts.map((f, i) => `
+      <div class="px-5 py-4 ${i < facts.length - 1 ? 'border-r' : ''}" style="border-color:var(--border);">
+        <p class="text-[9px] font-bold uppercase tracking-widest mb-1" style="color:var(--text-muted);">${f.label}</p>
+        <p class="text-sm font-bold" style="color:${f.colour || 'var(--text)'};">${f.value}</p>
+      </div>
+    `).join('');
+  } else {
+    metaGrid.style.display = 'none';
+  }
+
+  // Grammar note
+  const grammarWrap = sel('.lc-grammar-wrap');
+  if (card.grammar_note) {
+    sel('.lc-grammar-text').innerHTML = formatHighlight(card.grammar_note);
+    grammarWrap.classList.remove('hidden');
+  }
+
+  // Grammar label from config
+  const uiLabels = config.ui_labels || {};
+  if (uiLabels.grammar_note_heading) sel('.lc-grammar-label').textContent = uiLabels.grammar_note_heading;
+  if (uiLabels.examples_heading)     sel('.lc-examples-label').textContent = uiLabels.examples_heading;
+  if (uiLabels.audio_button)         sel('.lc-audio-label').textContent    = uiLabels.audio_button;
+
+  // ── Type-specific blocks ─────────────────────────────────────────────────
+
+  // Verb: conjugation table
+  const type = card.type || (card.tags?.includes('verb') ? 'verb' : 'vocab');
+  if (type === 'verb' && card.conjugations?.length) {
+    const conjWrap  = sel('.lc-conjugation-wrap');
+    const conjInner = sel('.lc-conjugation-inner');
+    conjWrap.classList.remove('hidden');
+    conjInner.innerHTML = (config.verb_tenses || card.conjugations.map(t => t.tense)).map(tense => {
+      const t = card.conjugations.find(c => c.tense === tense);
+      if (!t) return '';
+      return `
+        <div class="border-b last:border-0" style="border-color:var(--border);">
+          <p class="text-[10px] font-bold uppercase tracking-widest px-5 py-2" style="background-color:var(--bg); color:var(--espresso);">${t.tense}</p>
+          <table class="w-full text-sm">
+            <tbody>
+              ${t.forms.map((f, ri) => `
+                <tr class="${ri % 2 === 0 ? '' : ''} border-t" style="border-color:var(--border);">
+                  <td class="px-5 py-2.5 font-bold w-24" style="color:var(--espresso);">${f.pronoun}</td>
+                  <td class="px-5 py-2.5 font-semibold" style="color:var(--text);">${f.form}</td>
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+        </div>
+      `;
+    }).join('');
+  }
+
+  // Connector: word order block
+  if (type === 'connector' && card.word_order) {
+    const woWrap = sel('.lc-wordorder-wrap');
+    sel('.lc-wordorder-text').textContent = card.word_order;
+    woWrap.classList.remove('hidden');
+  }
+
+  // Phrase: preposition rule block
+  if (type === 'phrase' && card.clause_type) {
+    const phraseWrap = sel('.lc-phrase-wrap');
+    sel('.lc-phrase-rule').textContent = card.clause_type;
+    phraseWrap.classList.remove('hidden');
+  }
+
+  // ── Examples ─────────────────────────────────────────────────────────────
+  const examplesEl = sel('.lc-examples');
+  const rawExamples = card.examples || (card.example_target || card.example_de ? [{ target: card.example_target || card.example_de, source: card.example_source || card.example_en }] : []);
+
+  if (rawExamples.length) {
+    examplesEl.innerHTML = rawExamples.map(ex => {
+      const e = normaliseExample(ex);
+      return `
+        <div class="rounded-2xl border overflow-hidden" style="border-color:var(--border);">
+          <div class="px-4 py-3" style="background-color:var(--bg);">
+            <p class="font-semibold leading-snug mb-1" style="color:var(--text);">${formatHighlight(e.target)}</p>
+            <p class="text-sm italic" style="color:var(--text-muted);">${formatHighlight(e.source || '')}</p>
+          </div>
+          ${e.note ? `<div class="px-4 py-2 border-t" style="border-color:var(--border);">
+            <p class="text-[10px] font-bold font-mono" style="color:var(--espresso);">📐 ${e.note}</p>
+          </div>` : ''}
+        </div>
+      `;
+    }).join('');
+  } else {
+    examplesEl.innerHTML = `<p class="text-sm italic" style="color:var(--text-muted);">Kein Beispiel verfügbar.</p>`;
+  }
+
+  // ── Tags ─────────────────────────────────────────────────────────────────
+  const tagsEl = sel('.lc-tags');
+  tagsEl.innerHTML = (card.tags || []).map(t => `
+    <span class="text-[10px] font-bold px-2 py-0.5 rounded-md border uppercase" style="border-color:var(--border); color:var(--text-muted); background-color:var(--bg);">${t}</span>
+  `).join('');
+
+  // ── Audio button ─────────────────────────────────────────────────────────
+  sel('.lc-audio-btn')?.addEventListener('click', () => {
+    if (window.DeutschAudioEngine) {
+      window.DeutschAudioEngine.speak(card.target || '', config.speech_lang || 'de-DE', 0.85);
+    }
+  });
+})();</script></div><!-- ── Navigation ───────────────────────────── --><div class="flex items-center justify-between mt-8 gap-4"><button id="btn-prev" disabled class="flex items-center gap-2 px-6 py-3 rounded-2xl border font-bold text-sm transition-all hover:opacity-70 active:scale-95 disabled:opacity-30 disabled:cursor-not-allowed" style="border-color:var(--border); color:var(--text); background-color:var(--card);"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg>Zurück</button><!-- Dot navigation --><div id="dot-nav" class="flex items-center gap-1.5 flex-wrap justify-center max-w-xs overflow-hidden" style="max-height:2rem;"><!-- populated by JS --></div><button id="btn-next" class="flex items-center gap-2 px-6 py-3 rounded-2xl font-bold text-sm transition-all hover:opacity-80 active:scale-95" style="background-color:var(--espresso); color:#F5F2EB;">Weiter<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg></button></div><!-- Keyboard hint --><p class="text-center text-xs font-medium mt-4" style="color:var(--text-muted);">← → Pfeiltasten zum Navigieren &nbsp;·&nbsp; A zum Anhören</p></div><!-- ── List View ───────────────────────────── --><div id="list-view-wrap" class="hidden space-y-6"><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">wohnen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to live / to reside</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Regular verb. Uses 'haben' for Perfekt.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich wohne in Berlin.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I live in Berlin.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">putzen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to clean</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Regular verb. Uses 'haben' for Perfekt.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich putze das Bad.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I clean the bathroom.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">kochen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to cook</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Regular verb. Uses 'haben' for Perfekt.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich koche heute Abend.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I'm cooking tonight.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">essen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to eat</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Irregular verb (strong). Vowel change in present (du, er/sie/es) and past forms. Uses 'haben' for Perfekt.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich esse Brot zum Frühstück.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I eat bread for breakfast.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">trinken</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to drink</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Irregular verb (strong). Vowel change in past forms. Uses 'haben' for Perfekt.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich trinke Wasser.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I drink water.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">schlafen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to sleep</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Irregular verb (strong). Vowel change in present (du, er/sie/es) and past forms. Uses 'haben' for Perfekt.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich schlafe acht Stunden.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I sleep eight hours.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">waschen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to wash</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Irregular verb (strong). Vowel change in present (du, er/sie/es) and past forms. Uses 'haben' for Perfekt.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich wasche meine Kleidung.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I wash my clothes.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">spülen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to wash dishes / to rinse</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Regular verb. Uses 'haben' for Perfekt.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich spüle das Geschirr.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I wash the dishes.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">aufräumen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to tidy up / to clean up</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Separable verb. The prefix 'auf-' separates in the present tense. Uses 'haben' for Perfekt, with 'ge-' between prefix and stem.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich räume mein Zimmer auf.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I tidy up my room.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">einkaufen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to shop / to buy groceries</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Separable verb. The prefix 'ein-' separates in the present tense. Uses 'haben' for Perfekt, with 'ge-' between prefix and stem.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich kaufe im Supermarkt ein.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I shop at the supermarket.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">lüften</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to air out / to ventilate</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Regular verb. Uses 'haben' for Perfekt.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich lüfte das Zimmer.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I air out the room.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">staubsaugen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to vacuum clean</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Separable verb. The prefix 'staub-' separates in the present tense. Uses 'haben' for Perfekt, with 'ge-' between prefix and stem.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich staubsauge das Wohnzimmer.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I vacuum the living room.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">kaufen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to buy</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Regular verb. Uses 'haben' for Perfekt.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich kaufe ein neues Buch.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I'm buying a new book.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">anmachen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to turn on</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Separable verb. The prefix 'an-' separates in the present tense. Uses 'haben' for Perfekt, with 'ge-' between prefix and stem.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich mache das Licht an.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I turn on the light.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">ausmachen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to turn off</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Separable verb. The prefix 'aus-' separates in the present tense. Uses 'haben' for Perfekt, with 'ge-' between prefix and stem.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich mache das Licht aus.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I turn off the light.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">öffnen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to open</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Regular verb. Uses 'haben' for Perfekt.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich öffne das Fenster.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I open the window.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">schließen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to close</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Irregular verb (strong). Vowel change in past forms. Uses 'haben' for Perfekt.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich schließe die Tür.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I close the door.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">stellen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to put / to place (upright)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Regular verb. Used for placing objects in an upright position. Uses 'haben' for Perfekt.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich stelle die Vase auf den Tisch.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I put the vase on the table.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">legen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to lay / to put (flat)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Regular verb. Used for placing objects in a flat position. Uses 'haben' for Perfekt.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich lege das Buch auf den Tisch.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I lay the book on the table.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">sitzen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to sit</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Irregular verb (strong). Vowel change in past forms. Uses 'haben' for Perfekt.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich sitze auf dem Sofa.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I sit on the sofa.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">stehen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to stand</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Irregular verb (strong). Vowel change in past forms. Uses 'haben' for Perfekt.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich stehe am Fenster.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I stand at the window.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">bringen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to bring</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Mixed verb. Has a stem change in past forms but takes weak endings. Uses 'haben' for Perfekt.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich bringe dir eine Tasse Tee.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I'll bring you a cup of tea.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">suchen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to search / to look for</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Regular verb. Uses 'haben' for Perfekt.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich suche meinen Schlüssel.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I'm looking for my key.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">finden</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to find</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Irregular verb (strong). Vowel change in past forms. Uses 'haben' for Perfekt.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich finde meinen Schlüssel nicht.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I can't find my key.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">helfen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to help</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Irregular verb (strong). Vowel change in present (du, er/sie/es) and past forms. Uses 'haben' for Perfekt.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich helfe dir beim Kochen.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I'll help you with cooking.</p></div></div></div></div></div></div></main><footer class="mt-auto border-t py-8" style="background-color:var(--bg);border-color:var(--border);"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-medium" style="color:var(--text-muted);"><div>&copy; 2025 - 2026 Small Talk Café Podcasts. All rights reserved.</div><div class="flex gap-4">Made in Bayern ❤️ Los Geht's!</div></div></footer><!-- Theme toggle + Language switcher script --><script>
+      // ── Theme ──────────────────────────────────────
+      function applyTheme(dark) {
+        if (dark) {
+          document.documentElement.classList.add('dark');
+          localStorage.setItem('wortschatz_theme', 'dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+          localStorage.setItem('wortschatz_theme', 'light');
+        }
+        const icon = document.getElementById('theme-icon');
+        const label = document.getElementById('theme-label');
+        if (icon) icon.textContent = dark ? '🌙' : '☀️';
+        if (label) label.textContent = dark ? 'Dark' : 'Light';
+      }
+
+      const isDark = document.documentElement.classList.contains('dark');
+      applyTheme(isDark);
+
+      document.getElementById('theme-toggle')?.addEventListener('click', () => {
+        const nowDark = !document.documentElement.classList.contains('dark');
+        applyTheme(nowDark);
+      });
+
+      // ── Language Switcher ──────────────────────────
+      const LANG_CONTENT = {
+        de: {
+          name: 'Deutsch Lounge',
+          flag: '🇩🇪',
+          code: 'DE',
+          subtitle: 'Systematisches Vokabel- und Grammatiktraining',
+          tagline: 'Deutsch Lounge',
+          welcome: 'Willkommen beim',
+          cards: [
+            { title: 'Vokabeln', desc: 'Erweitere deinen Wortschatz. Lerne Nomen, Verben und Redewendungen mit Beispielsätzen.' },
+            { title: 'Verben', desc: 'Meistere reguläre, unregelmäßige, modale und reflexive Verben mit Konjugationstabellen.' },
+            { title: 'Grammatik', desc: 'Regeln verstehen & üben: Adjektivdeklination, Fälle, Präpositionen, Konnektoren & Phrasen.' },
+            { title: 'Redemittel', desc: 'Essentielle Phrasen für den Alltag, Diskussionen und Präsentationen.' }
+          ]
+        },
+        es: {
+          name: 'Spanish Gym',
+          flag: '🇪🇸',
+          code: 'ES',
+          subtitle: 'Tu compañero para aprender Español A1 – B2',
+          tagline: 'A1–B2 Spanish Curriculum',
+          welcome: 'Bienvenido al',
+          cards: [
+            { title: 'Vocabulario', desc: 'Amplía tu vocabulario A1–B2. Aprende sustantivos, verbos y frases con ejemplos contextuales.' },
+            { title: 'Verbos', desc: 'Domina verbos regulares, irregulares y reflexivos con tablas de conjugación.' },
+            { title: 'Gramática', desc: 'Entiende y practica las reglas gramaticales, casos y conectores.' },
+            { title: 'Expresiones', desc: 'Frases esenciales para el día a día, discusiones y presentaciones.' }
+          ]
+        },
+        fr: {
+          name: 'French Gym',
+          flag: '🇫🇷',
+          code: 'FR',
+          subtitle: 'Ton compagnon pour apprendre le Français A1 – B2',
+          tagline: 'A1–B2 French Curriculum',
+          welcome: 'Bienvenue au',
+          cards: [
+            { title: 'Vocabulaire', desc: 'Élargis ton vocabulaire A1–B2. Apprends des noms, verbes et expressions avec des exemples.' },
+            { title: 'Verbes', desc: 'Maîtrise les verbes réguliers, irréguliers et réflexifs avec des tableaux de conjugaison.' },
+            { title: 'Grammaire', desc: 'Comprends et pratique les règles de grammaire, les cas et les connecteurs.' },
+            { title: 'Expressions', desc: 'Phrases essentielles pour la vie quotidienne, les discussions et les présentations.' }
+          ]
+        }
+      };
+
+      function applyLanguage(lang) {
+        const c = LANG_CONTENT[lang] || LANG_CONTENT['de'];
+        localStorage.setItem('gym_language', lang);
+
+        // Header
+        const flag = document.getElementById('lang-flag');
+        const code = document.getElementById('lang-code');
+        const siteName = document.getElementById('site-name');
+        if (flag) flag.textContent = c.flag;
+        if (code) code.textContent = c.code;
+        if (siteName) siteName.textContent = c.name;
+
+        // Footer
+        const footerName = document.getElementById('footer-gym-name');
+        const footerLevel = document.getElementById('footer-level');
+        if (footerName) footerName.textContent = c.name;
+        if (footerLevel) footerLevel.textContent = c.tagline;
+
+        const isGerman = lang === 'de';
+        const overlay = document.getElementById('coming-soon-overlay');
+        const mainContent = document.getElementById('main-content');
+        const germanNavLinks = document.querySelectorAll('[data-german-nav]');
+
+        if (isGerman) {
+          // Show normal German content
+          if (overlay) overlay.classList.add('hidden');
+          if (mainContent) mainContent.classList.remove('hidden');
+          germanNavLinks.forEach(el => el.classList.remove('hidden'));
+
+          // Hero on homepage only
+          const heroTitle = document.getElementById('hero-gym-name');
+          const heroSubtitle = document.getElementById('hero-subtitle');
+          const heroWelcome = document.getElementById('hero-welcome');
+          if (heroTitle) heroTitle.textContent = c.name;
+          if (heroSubtitle) heroSubtitle.textContent = c.subtitle;
+          if (heroWelcome) heroWelcome.textContent = c.welcome;
+
+          // Category cards
+          const cardTitles = document.querySelectorAll('[data-card-title]');
+          const cardDescs = document.querySelectorAll('[data-card-desc]');
+          cardTitles.forEach((el, i) => {
+            if (c.cards[i]) el.textContent = c.cards[i].title;
+          });
+          cardDescs.forEach((el, i) => {
+            if (c.cards[i]) el.textContent = c.cards[i].desc;
+          });
+
+          // Nav links
+          const navLabels = document.querySelectorAll('[data-nav-label]');
+          navLabels.forEach((el, i) => {
+            if (c.cards[i]) el.textContent = c.cards[i].title;
+          });
+        } else {
+          // Non-German: show coming soon overlay, hide main content and German nav
+          if (mainContent) mainContent.classList.add('hidden');
+          germanNavLinks.forEach(el => el.classList.add('hidden'));
+
+          // Populate coming soon overlay
+          const comingFlag = document.getElementById('coming-soon-flag');
+          const comingLang = document.getElementById('coming-soon-lang');
+          if (comingFlag) comingFlag.textContent = c.flag;
+          if (comingLang) comingLang.textContent = c.name + ' content';
+
+          if (overlay) {
+            overlay.classList.remove('hidden');
+            overlay.classList.add('flex');
+          }
+        }
+      }
+
+      // Restore saved language
+      const savedLang = localStorage.getItem('gym_language') || 'de';
+      applyLanguage(savedLang);
+
+      // Dropdown toggle
+      const langBtn = document.getElementById('lang-btn');
+      const langMenu = document.getElementById('lang-menu');
+
+      langBtn?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        langMenu?.classList.toggle('hidden');
+      });
+
+      document.addEventListener('click', () => {
+        langMenu?.classList.add('hidden');
+      });
+
+      document.querySelectorAll('.lang-option').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const lang = btn.dataset.lang;
+          applyLanguage(lang);
+          langMenu?.classList.add('hidden');
+        });
+      });
+
+      // Coming soon "Switch to German" button
+      document.getElementById('coming-soon-back-btn')?.addEventListener('click', () => {
+        applyLanguage('de');
+      });
+    </script></body></html><script type="module" src="/languagelounge/_astro/_deckId_.astro_astro_type_script_index_0_lang.B80xyaMZ.js"></script><script>(function(){const cardsJson = "[{\"id\":\"verbs-a1-a1_household-001\",\"infinitive\":\"wohnen\",\"translation\":\"to live / to reside\",\"type\":\"verb\",\"cefr\":\"A1\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb. Uses 'haben' for Perfekt.\",\"examples\":[{\"de\":\"Ich wohne in Berlin.\",\"en\":\"I live in Berlin.\"},{\"de\":\"Wo wohnst du?\",\"en\":\"Where do you live?\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"wohnte\",\"du\":\"wohntest\",\"er_sie_es\":\"wohnte\",\"wir\":\"wohnten\",\"ihr\":\"wohntet\",\"sie_Sie\":\"wohnten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe gewohnt\",\"du\":\"hast gewohnt\",\"er_sie_es\":\"hat gewohnt\",\"wir\":\"haben gewohnt\",\"ihr\":\"habt gewohnt\",\"sie_Sie\":\"haben gewohnt\"}],\"target\":\"wohnen\",\"source\":\"to live / to reside\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-a1-a1_household-002\",\"infinitive\":\"putzen\",\"translation\":\"to clean\",\"type\":\"verb\",\"cefr\":\"A1\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb. Uses 'haben' for Perfekt.\",\"examples\":[{\"de\":\"Ich putze das Bad.\",\"en\":\"I clean the bathroom.\"},{\"de\":\"Wir müssen die Fenster putzen.\",\"en\":\"We have to clean the windows.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"putzte\",\"du\":\"putztest\",\"er_sie_es\":\"putzte\",\"wir\":\"putzten\",\"ihr\":\"putztet\",\"sie_Sie\":\"putzten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe geputzt\",\"du\":\"hast geputzt\",\"er_sie_es\":\"hat geputzt\",\"wir\":\"haben geputzt\",\"ihr\":\"habt geputzt\",\"sie_Sie\":\"haben geputzt\"}],\"target\":\"putzen\",\"source\":\"to clean\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-a1-a1_household-003\",\"infinitive\":\"kochen\",\"translation\":\"to cook\",\"type\":\"verb\",\"cefr\":\"A1\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb. Uses 'haben' for Perfekt.\",\"examples\":[{\"de\":\"Ich koche heute Abend.\",\"en\":\"I'm cooking tonight.\"},{\"de\":\"Was kochst du gern?\",\"en\":\"What do you like to cook?\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"kochte\",\"du\":\"kochtest\",\"er_sie_es\":\"kochte\",\"wir\":\"kochten\",\"ihr\":\"kochtet\",\"sie_Sie\":\"kochten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe gekocht\",\"du\":\"hast gekocht\",\"er_sie_es\":\"hat gekocht\",\"wir\":\"haben gekocht\",\"ihr\":\"habt gekocht\",\"sie_Sie\":\"haben gekocht\"}],\"target\":\"kochen\",\"source\":\"to cook\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-a1-a1_household-004\",\"infinitive\":\"essen\",\"translation\":\"to eat\",\"type\":\"verb\",\"cefr\":\"A1\",\"tags\":[\"verb\"],\"grammar_note\":\"Irregular verb (strong). Vowel change in present (du, er/sie/es) and past forms. Uses 'haben' for Perfekt.\",\"examples\":[{\"de\":\"Ich esse Brot zum Frühstück.\",\"en\":\"I eat bread for breakfast.\"},{\"de\":\"Was isst du gern?\",\"en\":\"What do you like to eat?\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"aß\",\"du\":\"aßt\",\"er_sie_es\":\"aß\",\"wir\":\"aßen\",\"ihr\":\"aßt\",\"sie_Sie\":\"aßen\"},{\"tense\":\"Perfekt\",\"ich\":\"habe gegessen\",\"du\":\"hast gegessen\",\"er_sie_es\":\"hat gegessen\",\"wir\":\"haben gegessen\",\"ihr\":\"habt gegessen\",\"sie_Sie\":\"haben gegessen\"}],\"target\":\"essen\",\"source\":\"to eat\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-a1-a1_household-005\",\"infinitive\":\"trinken\",\"translation\":\"to drink\",\"type\":\"verb\",\"cefr\":\"A1\",\"tags\":[\"verb\"],\"grammar_note\":\"Irregular verb (strong). Vowel change in past forms. Uses 'haben' for Perfekt.\",\"examples\":[{\"de\":\"Ich trinke Wasser.\",\"en\":\"I drink water.\"},{\"de\":\"Möchtest du Kaffee trinken?\",\"en\":\"Would you like to drink coffee?\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"trank\",\"du\":\"trankst\",\"er_sie_es\":\"trank\",\"wir\":\"tranken\",\"ihr\":\"trankt\",\"sie_Sie\":\"tranken\"},{\"tense\":\"Perfekt\",\"ich\":\"habe getrunken\",\"du\":\"hast getrunken\",\"er_sie_es\":\"hat getrunken\",\"wir\":\"haben getrunken\",\"ihr\":\"habt getrunken\",\"sie_Sie\":\"haben getrunken\"}],\"target\":\"trinken\",\"source\":\"to drink\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-a1-a1_household-006\",\"infinitive\":\"schlafen\",\"translation\":\"to sleep\",\"type\":\"verb\",\"cefr\":\"A1\",\"tags\":[\"verb\"],\"grammar_note\":\"Irregular verb (strong). Vowel change in present (du, er/sie/es) and past forms. Uses 'haben' for Perfekt.\",\"examples\":[{\"de\":\"Ich schlafe acht Stunden.\",\"en\":\"I sleep eight hours.\"},{\"de\":\"Schläfst du gut?\",\"en\":\"Do you sleep well?\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"schlief\",\"du\":\"schliefst\",\"er_sie_es\":\"schlief\",\"wir\":\"schliefen\",\"ihr\":\"schlieft\",\"sie_Sie\":\"schliefen\"},{\"tense\":\"Perfekt\",\"ich\":\"habe geschlafen\",\"du\":\"hast geschlafen\",\"er_sie_es\":\"hat geschlafen\",\"wir\":\"haben geschlafen\",\"ihr\":\"habt geschlafen\",\"sie_Sie\":\"haben geschlafen\"}],\"target\":\"schlafen\",\"source\":\"to sleep\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-a1-a1_household-007\",\"infinitive\":\"waschen\",\"translation\":\"to wash\",\"type\":\"verb\",\"cefr\":\"A1\",\"tags\":[\"verb\"],\"grammar_note\":\"Irregular verb (strong). Vowel change in present (du, er/sie/es) and past forms. Uses 'haben' for Perfekt.\",\"examples\":[{\"de\":\"Ich wasche meine Kleidung.\",\"en\":\"I wash my clothes.\"},{\"de\":\"Wäschst du dir die Hände?\",\"en\":\"Do you wash your hands?\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"wusch\",\"du\":\"wuschst\",\"er_sie_es\":\"wusch\",\"wir\":\"wuschen\",\"ihr\":\"wuscht\",\"sie_Sie\":\"wuschen\"},{\"tense\":\"Perfekt\",\"ich\":\"habe gewaschen\",\"du\":\"hast gewaschen\",\"er_sie_es\":\"hat gewaschen\",\"wir\":\"haben gewaschen\",\"ihr\":\"habt gewaschen\",\"sie_Sie\":\"haben gewaschen\"}],\"target\":\"waschen\",\"source\":\"to wash\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-a1-a1_household-008\",\"infinitive\":\"spülen\",\"translation\":\"to wash dishes / to rinse\",\"type\":\"verb\",\"cefr\":\"A1\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb. Uses 'haben' for Perfekt.\",\"examples\":[{\"de\":\"Ich spüle das Geschirr.\",\"en\":\"I wash the dishes.\"},{\"de\":\"Kannst du bitte die Gläser spülen?\",\"en\":\"Can you please rinse the glasses?\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"spülte\",\"du\":\"spültest\",\"er_sie_es\":\"spülte\",\"wir\":\"spülten\",\"ihr\":\"spültet\",\"sie_Sie\":\"spülten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe gespült\",\"du\":\"hast gespült\",\"er_sie_es\":\"hat gespült\",\"wir\":\"haben gespült\",\"ihr\":\"habt gespült\",\"sie_Sie\":\"haben gespült\"}],\"target\":\"spülen\",\"source\":\"to wash dishes / to rinse\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-a1-a1_household-009\",\"infinitive\":\"aufräumen\",\"translation\":\"to tidy up / to clean up\",\"type\":\"verb\",\"cefr\":\"A1\",\"tags\":[\"verb\"],\"grammar_note\":\"Separable verb. The prefix 'auf-' separates in the present tense. Uses 'haben' for Perfekt, with 'ge-' between prefix and stem.\",\"examples\":[{\"de\":\"Ich räume mein Zimmer auf.\",\"en\":\"I tidy up my room.\"},{\"de\":\"Wir müssen das Wohnzimmer aufräumen.\",\"en\":\"We need to clean up the living room.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"räumte auf\",\"du\":\"räumtest auf\",\"er_sie_es\":\"räumte auf\",\"wir\":\"räumten auf\",\"ihr\":\"räumtet auf\",\"sie_Sie\":\"räumten auf\"},{\"tense\":\"Perfekt\",\"ich\":\"habe aufgeräumt\",\"du\":\"hast aufgeräumt\",\"er_sie_es\":\"hat aufgeräumt\",\"wir\":\"haben aufgeräumt\",\"ihr\":\"habt aufgeräumt\",\"sie_Sie\":\"haben aufgeräumt\"}],\"target\":\"aufräumen\",\"source\":\"to tidy up / to clean up\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-a1-a1_household-010\",\"infinitive\":\"einkaufen\",\"translation\":\"to shop / to buy groceries\",\"type\":\"verb\",\"cefr\":\"A1\",\"tags\":[\"verb\"],\"grammar_note\":\"Separable verb. The prefix 'ein-' separates in the present tense. Uses 'haben' for Perfekt, with 'ge-' between prefix and stem.\",\"examples\":[{\"de\":\"Ich kaufe im Supermarkt ein.\",\"en\":\"I shop at the supermarket.\"},{\"de\":\"Gehen wir zusammen einkaufen?\",\"en\":\"Shall we go shopping together?\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"kaufte ein\",\"du\":\"kauftest ein\",\"er_sie_es\":\"kaufte ein\",\"wir\":\"kauften ein\",\"ihr\":\"kauftet ein\",\"sie_Sie\":\"kauften ein\"},{\"tense\":\"Perfekt\",\"ich\":\"habe eingekauft\",\"du\":\"hast eingekauft\",\"er_sie_es\":\"hat eingekauft\",\"wir\":\"haben eingekauft\",\"ihr\":\"habt eingekauft\",\"sie_Sie\":\"haben eingekauft\"}],\"target\":\"einkaufen\",\"source\":\"to shop / to buy groceries\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-a1-a1_household-011\",\"infinitive\":\"lüften\",\"translation\":\"to air out / to ventilate\",\"type\":\"verb\",\"cefr\":\"A1\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb. Uses 'haben' for Perfekt.\",\"examples\":[{\"de\":\"Ich lüfte das Zimmer.\",\"en\":\"I air out the room.\"},{\"de\":\"Bitte lüfte das Schlafzimmer!\",\"en\":\"Please ventilate the bedroom!\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"lüftete\",\"du\":\"lüftetest\",\"er_sie_es\":\"lüftete\",\"wir\":\"lüfteten\",\"ihr\":\"lüftetet\",\"sie_Sie\":\"lüfteten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe gelüftet\",\"du\":\"hast gelüftet\",\"er_sie_es\":\"hat gelüftet\",\"wir\":\"haben gelüftet\",\"ihr\":\"habt gelüftet\",\"sie_Sie\":\"haben gelüftet\"}],\"target\":\"lüften\",\"source\":\"to air out / to ventilate\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-a1-a1_household-012\",\"infinitive\":\"staubsaugen\",\"translation\":\"to vacuum clean\",\"type\":\"verb\",\"cefr\":\"A1\",\"tags\":[\"verb\"],\"grammar_note\":\"Separable verb. The prefix 'staub-' separates in the present tense. Uses 'haben' for Perfekt, with 'ge-' between prefix and stem.\",\"examples\":[{\"de\":\"Ich staubsauge das Wohnzimmer.\",\"en\":\"I vacuum the living room.\"},{\"de\":\"Hast du schon gestaubsaugt?\",\"en\":\"Have you already vacuumed?\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"staubsaugte\",\"du\":\"staubsaugtest\",\"er_sie_es\":\"staubsaugte\",\"wir\":\"staubsaugten\",\"ihr\":\"staubsaugtet\",\"sie_Sie\":\"staubsaugten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe gestaubsaugt\",\"du\":\"hast gestaubsaugt\",\"er_sie_es\":\"hat gestaubsaugt\",\"wir\":\"haben gestaubsaugt\",\"ihr\":\"habt gestaubsaugt\",\"sie_Sie\":\"haben gestaubsaugt\"}],\"target\":\"staubsaugen\",\"source\":\"to vacuum clean\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-a1-a1_household-013\",\"infinitive\":\"kaufen\",\"translation\":\"to buy\",\"type\":\"verb\",\"cefr\":\"A1\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb. Uses 'haben' for Perfekt.\",\"examples\":[{\"de\":\"Ich kaufe ein neues Buch.\",\"en\":\"I'm buying a new book.\"},{\"de\":\"Was hast du gekauft?\",\"en\":\"What did you buy?\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"kaufte\",\"du\":\"kauftest\",\"er_sie_es\":\"kaufte\",\"wir\":\"kauften\",\"ihr\":\"kauftet\",\"sie_Sie\":\"kauften\"},{\"tense\":\"Perfekt\",\"ich\":\"habe gekauft\",\"du\":\"hast gekauft\",\"er_sie_es\":\"hat gekauft\",\"wir\":\"haben gekauft\",\"ihr\":\"habt gekauft\",\"sie_Sie\":\"haben gekauft\"}],\"target\":\"kaufen\",\"source\":\"to buy\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-a1-a1_household-014\",\"infinitive\":\"anmachen\",\"translation\":\"to turn on\",\"type\":\"verb\",\"cefr\":\"A1\",\"tags\":[\"verb\"],\"grammar_note\":\"Separable verb. The prefix 'an-' separates in the present tense. Uses 'haben' for Perfekt, with 'ge-' between prefix and stem.\",\"examples\":[{\"de\":\"Ich mache das Licht an.\",\"en\":\"I turn on the light.\"},{\"de\":\"Kannst du den Fernseher anmachen?\",\"en\":\"Can you turn on the TV?\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"machte an\",\"du\":\"machtest an\",\"er_sie_es\":\"machte an\",\"wir\":\"machten an\",\"ihr\":\"machtet an\",\"sie_Sie\":\"machten an\"},{\"tense\":\"Perfekt\",\"ich\":\"habe angemacht\",\"du\":\"hast angemacht\",\"er_sie_es\":\"hat angemacht\",\"wir\":\"haben angemacht\",\"ihr\":\"habt angemacht\",\"sie_Sie\":\"haben angemacht\"}],\"target\":\"anmachen\",\"source\":\"to turn on\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-a1-a1_household-015\",\"infinitive\":\"ausmachen\",\"translation\":\"to turn off\",\"type\":\"verb\",\"cefr\":\"A1\",\"tags\":[\"verb\"],\"grammar_note\":\"Separable verb. The prefix 'aus-' separates in the present tense. Uses 'haben' for Perfekt, with 'ge-' between prefix and stem.\",\"examples\":[{\"de\":\"Ich mache das Licht aus.\",\"en\":\"I turn off the light.\"},{\"de\":\"Vergiss nicht, den Computer auszumachen!\",\"en\":\"Don't forget to turn off the computer!\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"machte aus\",\"du\":\"machtest aus\",\"er_sie_es\":\"machte aus\",\"wir\":\"machten aus\",\"ihr\":\"machtet aus\",\"sie_Sie\":\"machten aus\"},{\"tense\":\"Perfekt\",\"ich\":\"habe ausgemacht\",\"du\":\"hast ausgemacht\",\"er_sie_es\":\"hat ausgemacht\",\"wir\":\"haben ausgemacht\",\"ihr\":\"habt ausgemacht\",\"sie_Sie\":\"haben ausgemacht\"}],\"target\":\"ausmachen\",\"source\":\"to turn off\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-a1-a1_household-016\",\"infinitive\":\"öffnen\",\"translation\":\"to open\",\"type\":\"verb\",\"cefr\":\"A1\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb. Uses 'haben' for Perfekt.\",\"examples\":[{\"de\":\"Ich öffne das Fenster.\",\"en\":\"I open the window.\"},{\"de\":\"Kannst du die Tür öffnen?\",\"en\":\"Can you open the door?\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"öffnete\",\"du\":\"öffnetest\",\"er_sie_es\":\"öffnete\",\"wir\":\"öffneten\",\"ihr\":\"öffnetet\",\"sie_Sie\":\"öffneten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe geöffnet\",\"du\":\"hast geöffnet\",\"er_sie_es\":\"hat geöffnet\",\"wir\":\"haben geöffnet\",\"ihr\":\"habt geöffnet\",\"sie_Sie\":\"haben geöffnet\"}],\"target\":\"öffnen\",\"source\":\"to open\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-a1-a1_household-017\",\"infinitive\":\"schließen\",\"translation\":\"to close\",\"type\":\"verb\",\"cefr\":\"A1\",\"tags\":[\"verb\"],\"grammar_note\":\"Irregular verb (strong). Vowel change in past forms. Uses 'haben' for Perfekt.\",\"examples\":[{\"de\":\"Ich schließe die Tür.\",\"en\":\"I close the door.\"},{\"de\":\"Hast du das Fenster geschlossen?\",\"en\":\"Did you close the window?\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"schloss\",\"du\":\"schlossest\",\"er_sie_es\":\"schloss\",\"wir\":\"schlossen\",\"ihr\":\"schlosst\",\"sie_Sie\":\"schlossen\"},{\"tense\":\"Perfekt\",\"ich\":\"habe geschlossen\",\"du\":\"hast geschlossen\",\"er_sie_es\":\"hat geschlossen\",\"wir\":\"haben geschlossen\",\"ihr\":\"habt geschlossen\",\"sie_Sie\":\"haben geschlossen\"}],\"target\":\"schließen\",\"source\":\"to close\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-a1-a1_household-018\",\"infinitive\":\"stellen\",\"translation\":\"to put / to place (upright)\",\"type\":\"verb\",\"cefr\":\"A1\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb. Used for placing objects in an upright position. Uses 'haben' for Perfekt.\",\"examples\":[{\"de\":\"Ich stelle die Vase auf den Tisch.\",\"en\":\"I put the vase on the table.\"},{\"de\":\"Wo hast du das Buch hingestellt?\",\"en\":\"Where did you put the book?\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"stellte\",\"du\":\"stelltest\",\"er_sie_es\":\"stellte\",\"wir\":\"stellten\",\"ihr\":\"stelltet\",\"sie_Sie\":\"stellten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe gestellt\",\"du\":\"hast gestellt\",\"er_sie_es\":\"hat gestellt\",\"wir\":\"haben gestellt\",\"ihr\":\"habt gestellt\",\"sie_Sie\":\"haben gestellt\"}],\"target\":\"stellen\",\"source\":\"to put / to place (upright)\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-a1-a1_household-019\",\"infinitive\":\"legen\",\"translation\":\"to lay / to put (flat)\",\"type\":\"verb\",\"cefr\":\"A1\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb. Used for placing objects in a flat position. Uses 'haben' for Perfekt.\",\"examples\":[{\"de\":\"Ich lege das Buch auf den Tisch.\",\"en\":\"I lay the book on the table.\"},{\"de\":\"Wohin hast du den Schlüssel gelegt?\",\"en\":\"Where did you lay the key?\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"legte\",\"du\":\"legtest\",\"er_sie_es\":\"legte\",\"wir\":\"legten\",\"ihr\":\"legtet\",\"sie_Sie\":\"legten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe gelegt\",\"du\":\"hast gelegt\",\"er_sie_es\":\"hat gelegt\",\"wir\":\"haben gelegt\",\"ihr\":\"habt gelegt\",\"sie_Sie\":\"haben gelegt\"}],\"target\":\"legen\",\"source\":\"to lay / to put (flat)\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-a1-a1_household-020\",\"infinitive\":\"sitzen\",\"translation\":\"to sit\",\"type\":\"verb\",\"cefr\":\"A1\",\"tags\":[\"verb\"],\"grammar_note\":\"Irregular verb (strong). Vowel change in past forms. Uses 'haben' for Perfekt.\",\"examples\":[{\"de\":\"Ich sitze auf dem Sofa.\",\"en\":\"I sit on the sofa.\"},{\"de\":\"Wir saßen lange im Garten.\",\"en\":\"We sat in the garden for a long time.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"saß\",\"du\":\"saßt\",\"er_sie_es\":\"saß\",\"wir\":\"saßen\",\"ihr\":\"saßt\",\"sie_Sie\":\"saßen\"},{\"tense\":\"Perfekt\",\"ich\":\"habe gesessen\",\"du\":\"hast gesessen\",\"er_sie_es\":\"hat gesessen\",\"wir\":\"haben gesessen\",\"ihr\":\"habt gesessen\",\"sie_Sie\":\"haben gesessen\"}],\"target\":\"sitzen\",\"source\":\"to sit\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-a1-a1_household-021\",\"infinitive\":\"stehen\",\"translation\":\"to stand\",\"type\":\"verb\",\"cefr\":\"A1\",\"tags\":[\"verb\"],\"grammar_note\":\"Irregular verb (strong). Vowel change in past forms. Uses 'haben' for Perfekt.\",\"examples\":[{\"de\":\"Ich stehe am Fenster.\",\"en\":\"I stand at the window.\"},{\"de\":\"Das Buch stand im Regal.\",\"en\":\"The book stood on the shelf.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"stand\",\"du\":\"standst\",\"er_sie_es\":\"stand\",\"wir\":\"standen\",\"ihr\":\"standet\",\"sie_Sie\":\"standen\"},{\"tense\":\"Perfekt\",\"ich\":\"habe gestanden\",\"du\":\"hast gestanden\",\"er_sie_es\":\"hat gestanden\",\"wir\":\"haben gestanden\",\"ihr\":\"habt gestanden\",\"sie_Sie\":\"haben gestanden\"}],\"target\":\"stehen\",\"source\":\"to stand\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-a1-a1_household-022\",\"infinitive\":\"bringen\",\"translation\":\"to bring\",\"type\":\"verb\",\"cefr\":\"A1\",\"tags\":[\"verb\"],\"grammar_note\":\"Mixed verb. Has a stem change in past forms but takes weak endings. Uses 'haben' for Perfekt.\",\"examples\":[{\"de\":\"Ich bringe dir eine Tasse Tee.\",\"en\":\"I'll bring you a cup of tea.\"},{\"de\":\"Er hat die Blumen mitgebracht.\",\"en\":\"He brought the flowers along.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"brachte\",\"du\":\"brachtest\",\"er_sie_es\":\"brachte\",\"wir\":\"brachten\",\"ihr\":\"brachtet\",\"sie_Sie\":\"brachten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe gebracht\",\"du\":\"hast gebracht\",\"er_sie_es\":\"hat gebracht\",\"wir\":\"haben gebracht\",\"ihr\":\"habt gebracht\",\"sie_Sie\":\"haben gebracht\"}],\"target\":\"bringen\",\"source\":\"to bring\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-a1-a1_household-023\",\"infinitive\":\"suchen\",\"translation\":\"to search / to look for\",\"type\":\"verb\",\"cefr\":\"A1\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb. Uses 'haben' for Perfekt.\",\"examples\":[{\"de\":\"Ich suche meinen Schlüssel.\",\"en\":\"I'm looking for my key.\"},{\"de\":\"Was suchst du?\",\"en\":\"What are you looking for?\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"suchte\",\"du\":\"suchtest\",\"er_sie_es\":\"suchte\",\"wir\":\"suchten\",\"ihr\":\"suchtet\",\"sie_Sie\":\"suchten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe gesucht\",\"du\":\"hast gesucht\",\"er_sie_es\":\"hat gesucht\",\"wir\":\"haben gesucht\",\"ihr\":\"habt gesucht\",\"sie_Sie\":\"haben gesucht\"}],\"target\":\"suchen\",\"source\":\"to search / to look for\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-a1-a1_household-024\",\"infinitive\":\"finden\",\"translation\":\"to find\",\"type\":\"verb\",\"cefr\":\"A1\",\"tags\":[\"verb\"],\"grammar_note\":\"Irregular verb (strong). Vowel change in past forms. Uses 'haben' for Perfekt.\",\"examples\":[{\"de\":\"Ich finde meinen Schlüssel nicht.\",\"en\":\"I can't find my key.\"},{\"de\":\"Hast du das Buch gefunden?\",\"en\":\"Did you find the book?\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"fand\",\"du\":\"fandest\",\"er_sie_es\":\"fand\",\"wir\":\"fanden\",\"ihr\":\"fandet\",\"sie_Sie\":\"fanden\"},{\"tense\":\"Perfekt\",\"ich\":\"habe gefunden\",\"du\":\"hast gefunden\",\"er_sie_es\":\"hat gefunden\",\"wir\":\"haben gefunden\",\"ihr\":\"habt gefunden\",\"sie_Sie\":\"haben gefunden\"}],\"target\":\"finden\",\"source\":\"to find\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-a1-a1_household-025\",\"infinitive\":\"helfen\",\"translation\":\"to help\",\"type\":\"verb\",\"cefr\":\"A1\",\"tags\":[\"verb\"],\"grammar_note\":\"Irregular verb (strong). Vowel change in present (du, er/sie/es) and past forms. Uses 'haben' for Perfekt.\",\"examples\":[{\"de\":\"Ich helfe dir beim Kochen.\",\"en\":\"I'll help you with cooking.\"},{\"de\":\"Kannst du mir bitte helfen?\",\"en\":\"Can you please help me?\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"half\",\"du\":\"halfst\",\"er_sie_es\":\"half\",\"wir\":\"halfen\",\"ihr\":\"halft\",\"sie_Sie\":\"halfen\"},{\"tense\":\"Perfekt\",\"ich\":\"habe geholfen\",\"du\":\"hast geholfen\",\"er_sie_es\":\"hat geholfen\",\"wir\":\"haben geholfen\",\"ihr\":\"habt geholfen\",\"sie_Sie\":\"haben geholfen\"}],\"target\":\"helfen\",\"source\":\"to help\",\"example_target\":\"\",\"example_source\":\"\"}]";
+const langConfigJson = "{\"language_pair\":\"english_german\",\"target_lang\":\"de\",\"native_lang\":\"en\",\"target_lang_name\":\"Deutsch\",\"native_lang_name\":\"English\",\"speech_lang\":\"de-DE\",\"noun_metadata_fields\":[{\"key\":\"article\",\"label\":\"Artikel\",\"render\":\"article_badge\"},{\"key\":\"gender\",\"label\":\"Genus\",\"render\":\"gender_label\"},{\"key\":\"plural\",\"label\":\"Plural\",\"render\":\"text\"}],\"article_colours\":{\"der\":\"#4A7C9E\",\"die\":\"#B05070\",\"das\":\"#4A8A5A\"},\"gender_labels\":{\"m\":\"Maskulinum\",\"f\":\"Femininum\",\"n\":\"Neutrum\"},\"verb_tenses\":[\"Präsens\",\"Präteritum\",\"Perfekt\",\"Futur I\",\"Konjunktiv II\"],\"cases\":{\"nominative\":\"Nominativ\",\"accusative\":\"Akkusativ\",\"dative\":\"Dativ\",\"genitive\":\"Genitiv\"},\"ui_labels\":{\"learn_mode\":\"Lernen\",\"train_mode\":\"Trainieren\",\"examples_heading\":\"Beispielsätze\",\"grammar_note_heading\":\"Grammatiknotiz\",\"audio_button\":\"Anhören\",\"back_link\":\"Zurück\",\"card_counter\":\"Karte {current} / {total}\",\"next_button\":\"Weiter\",\"finish_button\":\"Fertig\",\"correct\":\"Richtig!\",\"wrong\":\"Falsch\"}}";
+const category = "verbs";
+
+  const cards     = JSON.parse(cardsJson);
+  const config    = JSON.parse(langConfigJson);
+  let currentIndex = 0;
+
+  const dotNav    = document.getElementById('dot-nav');
+  const currentNum = document.getElementById('current-num');
+  const progressBar = document.getElementById('progress-bar');
+  const btnPrev   = document.getElementById('btn-prev');
+  const btnNext   = document.getElementById('btn-next');
+  const cardHost  = document.getElementById('card-host');
+  const progressCont = document.getElementById('progress-container');
+
+  const cardViewWrap = document.getElementById('card-view-wrap');
+  const listViewWrap = document.getElementById('list-view-wrap');
+  const btnViewCards = document.getElementById('view-cards-btn');
+  const btnViewList  = document.getElementById('view-list-btn');
+
+  // Toggle Logic
+  function setViewMode(mode) {
+    if (mode === 'list') {
+      cardViewWrap.classList.add('hidden');
+      listViewWrap.classList.remove('hidden');
+      progressCont.classList.add('hidden');
+      btnViewList.classList.add('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewList.classList.remove('text-[var(--text-muted)]');
+      btnViewCards.classList.remove('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewCards.classList.add('text-[var(--text-muted)]');
+    } else {
+      listViewWrap.classList.add('hidden');
+      cardViewWrap.classList.remove('hidden');
+      progressCont.classList.remove('hidden');
+      btnViewCards.classList.add('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewCards.classList.remove('text-[var(--text-muted)]');
+      btnViewList.classList.remove('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewList.classList.add('text-[var(--text-muted)]');
+    }
+  }
+
+  btnViewCards.addEventListener('click', () => setViewMode('cards'));
+  btnViewList.addEventListener('click', () => setViewMode('list'));
+
+  // Default Grammatik and Redemittel to list view!
+  if (category === 'grammatik' || category === 'redemittel' || category === 'phrases') {
+    setViewMode('list');
+  }
+
+
+
+  // ── Helpers (mirror card-renderer.ts — no module imports in inline scripts) ──
+  const articleColours = config.article_colours || { der:'#4A7C9E', die:'#B05070', das:'#4A8A5A' };
+  const genderLabels   = config.gender_labels   || { m:'Maskulinum', f:'Femininum', n:'Neutrum'  };
+  const speechLang     = config.speech_lang     || 'de-DE';
+
+  function stripArticle(w) {
+    return (w || '').replace(/^(der|die|das|el|la|los|las|le|les|l')\s+/i,'').trim();
+  }
+
+  function getTypeLabel(card) {
+    const tags = card.tags || [];
+    if (tags.includes('noun'))       return 'Substantiv';
+    if (tags.includes('verb'))       return 'Verb';
+    if (tags.includes('adjective'))  return 'Adjektiv';
+    if (tags.includes('expression')) return 'Ausdruck';
+    return { vocab:'Vokabel', verb:'Verb', phrase:'Phrase', connector:'Konnektor', grammar:'Grammatik' }[card.type] || 'Vokabel';
+  }
+
+  function normaliseEx(ex) {
+    return { target: ex.target||ex.de||'', source: ex.source||ex.en||'', note: ex.note };
+  }
+
+  function getMetaFacts(card) {
+    const meta = { ...(card.metadata||{}), article:card.article, gender:card.gender, plural:card.plural };
+    const facts = [];
+    for (const field of (config.noun_metadata_fields || [])) {
+      const raw = meta[field.key];
+      if (!raw || raw==='~') continue;
+      let value = String(raw), colour;
+      if (field.render === 'gender_label')  value  = genderLabels[raw] || raw;
+      if (field.render === 'article_badge') colour = articleColours[raw.toLowerCase()] || 'var(--espresso)';
+      facts.push({ label: field.label, value, colour });
+    }
+    return facts;
+  }
+
+  // ── Card renderer ─────────────────────────────────────────────────────────
+  function renderCard(idx) {
+    const card = cards[idx];
+    if (!card || !cardHost) return;
+
+    const lc = cardHost.querySelector('.learning-card');
+    if (!lc) return;
+
+    function sel(cls) { return lc.querySelector(cls); }
+
+    // Type badge + level
+    sel('.lc-type-badge').textContent = getTypeLabel(card);
+    sel('.lc-level-badge').textContent = (card.level || '').toUpperCase();
+
+    // Article
+    const article = card.article || card.metadata?.article;
+    const articleWrap = sel('.lc-article-wrap');
+    const articleEl   = sel('.lc-article');
+    if (article && (card.tags||[]).includes('noun') && !card.plural_only) {
+      articleEl.textContent = article;
+      articleEl.style.color = articleColours[article.toLowerCase()] || 'var(--espresso)';
+      articleWrap.style.display = '';
+    } else {
+      articleWrap.style.display = 'none';
+    }
+
+    // Word / translation / forms
+    sel('.lc-word').textContent        = stripArticle(card.target);
+    sel('.lc-translation').textContent = card.source || '';
+    const plural = card.plural || card.metadata?.plural;
+    sel('.lc-forms').textContent = plural && !card.plural_only ? `Pl. ${plural}` : card.plural_only ? 'nur Plural' : '';
+
+    // Meta grid
+    const metaGrid = sel('.lc-meta-grid');
+    const facts = getMetaFacts(card);
+    if (facts.length) {
+      metaGrid.style.gridTemplateColumns = `repeat(${Math.min(facts.length,4)}, 1fr)`;
+      metaGrid.style.display = '';
+      metaGrid.innerHTML = facts.map((f, i) => `
+        <div class="px-5 py-4 ${i<facts.length-1?'border-r':''}" style="border-color:var(--border);">
+          <p class="text-[9px] font-bold uppercase tracking-widest mb-1" style="color:var(--text-muted);">${f.label}</p>
+          <p class="text-sm font-bold" style="color:${f.colour||'var(--text)'};">${f.value}</p>
+        </div>`).join('');
+    } else {
+      metaGrid.style.display = 'none';
+    }
+
+    // Grammar note
+    const grammarWrap = sel('.lc-grammar-wrap');
+    if (card.grammar_note) {
+      sel('.lc-grammar-text').innerHTML = formatHighlight(card.grammar_note);
+      grammarWrap.classList.remove('hidden');
+    } else {
+      grammarWrap.classList.add('hidden');
+    }
+
+    // Examples
+    const examplesEl = sel('.lc-examples');
+    const rawEx = card.examples || (card.example_target ? [{ target:card.example_target, source:card.example_source }] : []);
+    examplesEl.innerHTML = rawEx.length
+      ? rawEx.map(ex => { const e=normaliseEx(ex); return `
+          <div class="rounded-2xl border overflow-hidden" style="border-color:var(--border);">
+            <div class="px-4 py-3" style="background-color:var(--bg);">
+              <p class="font-semibold leading-snug mb-1" style="color:var(--text);">${e.target}</p>
+              <p class="text-sm italic" style="color:var(--text-muted);">${e.source||''}</p>
+            </div>
+            ${e.note?`<div class="px-4 py-2 border-t" style="border-color:var(--border);">
+              <p class="text-[10px] font-bold font-mono" style="color:var(--espresso);">📐 ${e.note}</p>
+            </div>`:''}
+          </div>`; }).join('')
+      : '<p class="text-sm italic" style="color:var(--text-muted);">Kein Beispiel verfügbar.</p>';
+
+    // Tags
+    sel('.lc-tags').innerHTML = (card.tags||[]).map(t =>
+      `<span class="text-[10px] font-bold px-2 py-0.5 rounded-md border" style="border-color:var(--border);color:var(--text-muted);background-color:var(--bg);">${t}</span>`
+    ).join('');
+
+    // Progress UI
+    if (currentNum)  currentNum.textContent = String(idx+1);
+    if (progressBar) progressBar.style.width = `${Math.round(((idx+1)/cards.length)*100)}%`;
+    if (btnPrev)     btnPrev.disabled = idx === 0;
+    if (btnNext)     btnNext.innerHTML = idx === cards.length-1
+      ? '✓ Fertig'
+      : 'Weiter <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>';
+
+    updateDots();
+
+    // Re-bind audio button cleanly by cloning to strip old listeners
+    const oldBtn = sel('.lc-audio-btn');
+    if (oldBtn) {
+      const newBtn = oldBtn.cloneNode(true);
+      oldBtn.parentNode.replaceChild(newBtn, oldBtn);
+      newBtn.addEventListener('click', speakCurrent);
+    }
+  }
+
+  // ── Dot navigation ────────────────────────────────────────────────────────
+  function buildDots() {
+    if (!dotNav) return;
+    dotNav.innerHTML = '';
+    const maxVisible = 20;
+    const showAll = cards.length <= maxVisible;
+    cards.forEach((_, i) => {
+      if (!showAll && i >= maxVisible) return;
+      const dot = document.createElement('button');
+      dot.className = 'dot w-2 h-2 rounded-full transition-all duration-300 flex-shrink-0';
+      dot.style.backgroundColor = 'var(--border)';
+      dot.title = `Card ${i+1}`;
+      dot.addEventListener('click', () => goTo(i));
+      dotNav.appendChild(dot);
+    });
+    if (!showAll) {
+      const el = document.createElement('span');
+      el.textContent = `+${cards.length - maxVisible}`;
+      el.className = 'text-[10px] font-bold';
+      el.style.color = 'var(--text-muted)';
+      dotNav.appendChild(el);
+    }
+  }
+
+  function updateDots() {
+    dotNav?.querySelectorAll('.dot').forEach((dot, i) => {
+      dot.style.backgroundColor = i===currentIndex ? 'var(--espresso)' : 'var(--border)';
+      dot.style.width     = i===currentIndex ? '20px' : '8px';
+      dot.style.borderRadius = '4px';
+    });
+  }
+
+  // ── Audio ─────────────────────────────────────────────────────────────────
+  function speakCurrent() {
+    const card = cards[currentIndex];
+    if (!card) return;
+    if (window.DeutschAudioEngine) {
+      window.DeutschAudioEngine.speak(card.target || '', speechLang, 0.85);
+    }
+  }
+
+  // ── Navigate ─────────────────────────────────────────────────────────────
+  function goTo(idx) {
+    if (idx < 0 || idx >= cards.length) return;
+    currentIndex = idx;
+    renderCard(currentIndex);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  btnPrev?.addEventListener('click', () => goTo(currentIndex - 1));
+  btnNext?.addEventListener('click', () => {
+    if (currentIndex === cards.length - 1) window.location.href = '/vocabulary';
+    else goTo(currentIndex + 1);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') goTo(currentIndex + 1);
+    if (e.key === 'ArrowLeft')  goTo(currentIndex - 1);
+    if (e.key === 'a' || e.key === 'A') speakCurrent();
+  });
+
+  // ── Init ─────────────────────────────────────────────────────────────────
+  buildDots();
+  // Card 0 is already rendered server-side via LearningCard component.
+  // Sync progress UI to reflect card 0 state.
+  updateDots();
+  if (progressBar) progressBar.style.width = `${Math.round(1/cards.length*100)}%`;
+  // Update card 0 using client-side config too (ensures langConfig is applied)
+  renderCard(0);
+})();</script>

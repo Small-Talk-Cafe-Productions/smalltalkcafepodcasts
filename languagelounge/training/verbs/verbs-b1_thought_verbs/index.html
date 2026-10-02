@@ -1,0 +1,640 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="description" content="Deutsch Lounge — Language Learning Trainer"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/languagelounge/favicon.svg"><meta name="generator" content="Astro v7.3.5"><title>B1 Verbs of Thought &amp; Mind — Deutsch Lounge</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet"><!-- Apply theme before paint to avoid flash --><script>
+      (function() {
+        const saved = localStorage.getItem('wortschatz_theme');
+        if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script><link rel="stylesheet" href="/languagelounge/_astro/Layout.BeSASyxj.css"></head><body class="antialiased min-h-screen flex flex-col" style="background-color:var(--bg);color:var(--text);"><!-- Header --><header class="sticky top-0 z-50 border-b" style="background-color:var(--bg);border-color:var(--border);"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between gap-4" style="height:4.5rem;"><!-- Logo + Language Switcher --><div class="flex items-center gap-4 shrink-0"><a href="/languagelounge/" class="flex items-center gap-2 group"><span class="font-outfit font-extrabold text-xl sm:text-2xl tracking-tight transition-colors" style="color:var(--text);">Small Talk Café <span class="font-normal text-base hidden sm:inline" style="color:var(--text-muted);">| <span id="site-name">Deutsch Lounge</span></span></span></a><!-- Language Selector Dropdown --><div class="relative" id="lang-dropdown-wrapper"><button id="lang-btn" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-sm font-bold transition-all hover:opacity-70" style="background-color:var(--bg); border-color:var(--border); color:var(--text);"><span id="lang-flag">🇩🇪</span><span id="lang-code">DE</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"></path></svg></button><div id="lang-menu" class="hidden absolute top-full left-0 mt-2 rounded-2xl border shadow-xl overflow-hidden z-50 min-w-[160px]" style="background-color:var(--card); border-color:var(--border);"><button class="lang-option w-full flex items-center gap-3 px-4 py-3 text-sm font-semibold text-left transition-colors hover:opacity-70" data-lang="de" data-flag="🇩🇪" data-code="DE" data-name="Deutsch Lounge" data-label="German" style="color:var(--text);"><span class="text-lg">🇩🇪</span><div><div class="font-bold" style="color:var(--text);">Deutsch</div><div class="text-xs" style="color:var(--text-muted);">German Learning</div></div></button><div class="border-t" style="border-color:var(--border);"></div><button class="lang-option w-full flex items-center gap-3 px-4 py-3 text-sm font-semibold text-left transition-colors hover:opacity-70" data-lang="es" data-flag="🇪🇸" data-code="ES" data-name="Spanish Gym" data-label="Spanish" style="color:var(--text);"><span class="text-lg">🇪🇸</span><div><div class="font-bold" style="color:var(--text);">Español</div><div class="text-xs" style="color:var(--text-muted);">Spanish Learning</div></div></button><div class="border-t" style="border-color:var(--border);"></div><button class="lang-option w-full flex items-center gap-3 px-4 py-3 text-sm font-semibold text-left transition-colors hover:opacity-70" data-lang="fr" data-flag="🇫🇷" data-code="FR" data-name="French Gym" data-label="French" style="color:var(--text);"><span class="text-lg">🇫🇷</span><div><div class="font-bold" style="color:var(--text);">Français</div><div class="text-xs" style="color:var(--text-muted);">French Learning</div></div></button></div></div></div><!-- Nav Links --><nav class="hidden md:flex gap-5 items-center"><a href="https://smalltalkcafe.de/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Small Talk Café Podcasts</a><span class="text-sm font-normal" style="color:var(--border);">|</span><a href="/languagelounge/vocabulary" data-german-nav class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Vokabeln</a><a href="/languagelounge/verbs" data-german-nav class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Verben</a><a href="/languagelounge/grammatik" data-german-nav class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Grammatik</a><a href="/languagelounge/redemittel" data-german-nav class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Redemittel</a><!-- Dark/Light Toggle --><button id="theme-toggle" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-sm font-semibold transition-all hover:opacity-70" style="border-color:var(--border); color:var(--text-muted);" aria-label="Toggle dark/light mode"><span id="theme-icon">☀️</span><span id="theme-label">Light</span></button></nav></div></header><!-- Coming Soon Overlay (shown for non-German languages) --><div id="coming-soon-overlay" class="hidden flex-1 flex items-center justify-center py-20 px-4"><div class="text-center max-w-lg mx-auto"><div class="text-7xl mb-6" id="coming-soon-flag">🌍</div><h1 class="font-outfit font-extrabold text-4xl sm:text-5xl mb-4" style="color:var(--text);">Coming Soon</h1><p class="text-lg mb-3" style="color:var(--text-muted);">We're working hard on the <strong id="coming-soon-lang">new language</strong> curriculum.</p><p class="text-base mb-8" style="color:var(--text-muted);">Stay tuned — it will be available very soon! In the meantime, explore our<strong>Deutsch Lounge</strong> to sharpen your German.</p><button id="coming-soon-back-btn" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-sm transition-all hover:opacity-80" style="background-color:var(--espresso); color:#fff;">🇩🇪 Switch to German</button></div></div><main id="main-content" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-1 w-full"><div class="max-w-4xl mx-auto py-6"><!-- Deck Header --><div class="flex items-start justify-between mb-8 gap-4 flex-wrap"><div><a href="/languagelounge/verbs" class="text-xs font-bold flex items-center gap-1 mb-2 hover:opacity-70 transition-opacity capitalize" style="color:var(--espresso);"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg>verbs</a><h1 class="text-2xl md:text-3xl font-extrabold font-outfit" style="color:var(--text);">B1 Verbs of Thought &amp; Mind</h1><p class="text-xs font-bold uppercase tracking-wider mt-1" style="color:var(--text-muted);">B1 Denkverben &bull; B1 &bull; 25 Karten</p></div><div class="flex flex-col items-end gap-4"><!-- Learn / Train mode switcher --><div class="flex rounded-xl border overflow-hidden p-1 gap-1 w-full max-w-[300px]" style="background-color:var(--bg); border-color:var(--border);"><span class="flex-1 flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold transition-all" style="background-color:var(--espresso); color:#F5F2EB;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>Lernen</span><a href="/languagelounge/training/verbs/train?level=b1&amp;deck=verbs-b1_thought_verbs&amp;count=20&amp;mode=mc&amp;dir=en-de" class="flex-1 flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold hover:opacity-70 transition-all" style="color:var(--text-muted);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>Trainieren</a></div><!-- View switcher (Cards vs List) --><div class="flex rounded-xl border overflow-hidden p-1 gap-1 w-full max-w-[300px]" style="background-color:var(--bg); border-color:var(--border);"><button id="view-cards-btn" class="view-btn flex-1 flex items-center justify-center px-4 py-2 rounded-lg text-xs font-bold transition-all bg-[var(--espresso)] text-[#F5F2EB]">Karten</button><button id="view-list-btn" class="view-btn flex-1 flex items-center justify-center px-4 py-2 rounded-lg text-xs font-bold transition-all text-[var(--text-muted)] hover:opacity-70">Liste</button></div><!-- Progress indicator --><div id="progress-container" class="flex items-center gap-3"><div class="text-xs font-semibold" style="color:var(--text-muted);">Karte <span id="current-num" class="font-extrabold" style="color:var(--text);">1</span> / 25</div><div class="w-24 h-1.5 rounded-full overflow-hidden border" style="background-color:var(--bg);border-color:var(--border);"><div id="progress-bar" class="h-full transition-all duration-500 rounded-full" style="width:0%; background-color:var(--espresso);"></div></div></div></div></div><!-- ── Universal Study Card (rendered by LearningCard component) ── --><div id="card-view-wrap"><div id="card-host"><!-- The card shell — populated client-side by renderCard() --><div class="learning-card rounded-3xl border shadow-xl overflow-hidden" style="background-color:var(--card); border-color:var(--border);"><!-- ── Top bar ─────────────────────────────────── --><div class="lc-topbar flex items-center justify-between px-6 py-3.5 border-b" style="border-color:var(--border); background-color:var(--bg);"><div class="flex items-center gap-2"><span class="lc-type-badge text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-lg" style="background-color:var(--espresso); color:#F5F2EB;">—</span><span class="lc-level-badge text-[10px] font-bold px-2.5 py-1 rounded-lg cafe-badge"></span></div><button class="lc-audio-btn flex items-center justify-center w-11 h-11 rounded-full transition-transform hover:scale-105 active:scale-95 shadow-md flex-shrink-0" title="Anhören (A)" style="background-color:var(--espresso); color:#F5F2EB;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg></button></div><!-- ── Main word display ───────────────────────── --><div class="lc-hero px-7 py-8 text-center border-b" style="border-color:var(--border);"><div class="lc-article-wrap mb-1.5"><span class="lc-article text-xl font-bold"></span></div><h2 class="lc-word text-5xl md:text-6xl font-extrabold font-outfit mb-3" style="color:var(--text);">—</h2><p class="lc-translation text-lg font-semibold italic" style="color:var(--text-muted);"></p><p class="lc-forms text-sm font-medium mt-2" style="color:var(--text-muted);"></p></div><!-- ── Meta info grid ─────────────────────────── --><div class="lc-meta-grid grid border-b" style="border-color:var(--border);"><!-- populated by JS --></div><!-- ── Grammar note ───────────────────────────── --><div class="lc-grammar-wrap hidden px-7 py-5 border-b" style="border-color:var(--border); background-color:var(--bg);"><p class="text-[10px] font-bold uppercase tracking-widest mb-2" style="color:var(--espresso);">📌 <span class="lc-grammar-label">Grammatiknotiz</span></p><p class="lc-grammar-text text-sm leading-relaxed font-medium whitespace-pre-wrap" style="color:var(--text);"></p></div><!-- ── Type-specific block ────────────────────── --><!-- Verb conjugation (hidden by default, shown for verb cards) --><div class="lc-conjugation-wrap hidden border-b overflow-x-auto" style="border-color:var(--border);"><div class="lc-conjugation-inner"><!-- populated by JS --></div></div><!-- Connector word-order block --><div class="lc-wordorder-wrap hidden px-7 py-4 border-b" style="border-color:var(--border); background-color:var(--bg);"><div class="flex items-start gap-3 text-sm font-medium" style="color:var(--text-muted);"><span class="text-base flex-shrink-0">📐</span><span class="lc-wordorder-text"></span></div></div><!-- Phrase preposition block --><div class="lc-phrase-wrap hidden px-7 py-4 border-b" style="border-color:var(--border); background-color:var(--bg);"><p class="text-[10px] font-bold uppercase tracking-widest mb-2" style="color:var(--espresso);">Struktur</p><p class="lc-phrase-rule text-sm font-semibold" style="color:var(--text);"></p></div><!-- ── Examples ───────────────────────────────── --><div class="px-7 py-6 border-b" style="border-color:var(--border);"><p class="lc-examples-label text-[10px] font-bold uppercase tracking-widest mb-5" style="color:var(--text-muted);">Beispielsätze</p><div class="lc-examples space-y-3"><!-- populated by JS --></div></div><!-- ── Tags ───────────────────────────────────── --><div class="lc-tags-row px-7 py-4 flex items-center gap-2 flex-wrap"><span class="text-[10px] font-bold uppercase tracking-wider" style="color:var(--text-muted);">Tags:</span><div class="lc-tags flex gap-2 flex-wrap"></div></div></div><script>(function(){const cardJson = "{\"id\":\"verbs-b1-b1_thought_verbs-001\",\"infinitive\":\"denken\",\"translation\":\"to think\",\"type\":\"verb\",\"cefr\":\"B1\",\"tags\":[\"verb\"],\"grammar_note\":\"Strong verb. Often used with 'an + Akkusativ' (to think about).\",\"examples\":[{\"de\":\"Ich denke oft an dich.\",\"en\":\"I often think of you.\"},{\"de\":\"Was denkst du darüber?\",\"en\":\"What do you think about it?\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"dachte\",\"du\":\"dachtest\",\"er_sie_es\":\"dachte\",\"wir\":\"dachten\",\"ihr\":\"dachtet\",\"sie_Sie\":\"dachten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe gedacht\",\"du\":\"hast gedacht\",\"er_sie_es\":\"hat gedacht\",\"wir\":\"haben gedacht\",\"ihr\":\"habt gedacht\",\"sie_Sie\":\"haben gedacht\"}],\"target\":\"denken\",\"source\":\"to think\",\"example_target\":\"\",\"example_source\":\"\"}";
+const langConfigJson = "{\"language_pair\":\"english_german\",\"target_lang\":\"de\",\"native_lang\":\"en\",\"target_lang_name\":\"Deutsch\",\"native_lang_name\":\"English\",\"speech_lang\":\"de-DE\",\"noun_metadata_fields\":[{\"key\":\"article\",\"label\":\"Artikel\",\"render\":\"article_badge\"},{\"key\":\"gender\",\"label\":\"Genus\",\"render\":\"gender_label\"},{\"key\":\"plural\",\"label\":\"Plural\",\"render\":\"text\"}],\"article_colours\":{\"der\":\"#4A7C9E\",\"die\":\"#B05070\",\"das\":\"#4A8A5A\"},\"gender_labels\":{\"m\":\"Maskulinum\",\"f\":\"Femininum\",\"n\":\"Neutrum\"},\"verb_tenses\":[\"Präsens\",\"Präteritum\",\"Perfekt\",\"Futur I\",\"Konjunktiv II\"],\"cases\":{\"nominative\":\"Nominativ\",\"accusative\":\"Akkusativ\",\"dative\":\"Dativ\",\"genitive\":\"Genitiv\"},\"ui_labels\":{\"learn_mode\":\"Lernen\",\"train_mode\":\"Trainieren\",\"examples_heading\":\"Beispielsätze\",\"grammar_note_heading\":\"Grammatiknotiz\",\"audio_button\":\"Anhören\",\"back_link\":\"Zurück\",\"card_counter\":\"Karte {current} / {total}\",\"next_button\":\"Weiter\",\"finish_button\":\"Fertig\",\"correct\":\"Richtig!\",\"wrong\":\"Falsch\"}}";
+
+  /**
+   * Client-side card renderer.
+   * Uses the universal card-renderer logic inline (no imports in Astro is:inline).
+   */
+
+  // ── Parse data ──────────────────────────────────────────────────────────
+  const card   = JSON.parse(cardJson);
+  const config = JSON.parse(langConfigJson);
+
+  // ── Helpers ─────────────────────────────────────────────────────────────
+  function stripArticle(word) {
+    return (word || '').replace(/^(der|die|das|el|la|los|las|le|les|l')\s+/i, '').trim();
+  }
+
+  function getArticleColour(article) {
+    if (!article || !config.article_colours) return 'var(--espresso)';
+    return config.article_colours[article.toLowerCase()] || 'var(--espresso)';
+  }
+
+  function getGenderLabel(gender) {
+    if (!gender) return '';
+    return (config.gender_labels || {})[gender] || gender;
+  }
+
+  function getTypeLabel() {
+    const tags = card.tags || [];
+    if (tags.includes('noun'))       return 'Substantiv';
+    if (tags.includes('verb'))       return 'Verb';
+    if (tags.includes('adjective'))  return 'Adjektiv';
+    if (tags.includes('expression')) return 'Ausdruck';
+    const map = { vocab:'Vokabel', verb:'Verb', phrase:'Phrase', connector:'Konnektor', grammar:'Grammatik' };
+    return map[card.type] || 'Karte';
+  }
+
+  function formatHighlight(text) {
+    if (!text) return '';
+    return String(text).replace(/\*(.*?)\*/g, '<span class="highlighter">$1</span>');
+  }
+
+  function normaliseExample(ex) {
+    return {
+      target: ex.target || ex.de || '',
+      source: ex.source || ex.en || '',
+      note: ex.note,
+    };
+  }
+
+  function getMetaFacts() {
+    const meta = { ...card.metadata, article: card.article, gender: card.gender, plural: card.plural, ...card.metadata };
+    const facts = [];
+    for (const field of (config.noun_metadata_fields || [])) {
+      const raw = meta[field.key] || card[field.key];
+      if (!raw || raw === '~') continue;
+      let value = String(raw);
+      let colour;
+      if (field.render === 'gender_label') value = getGenderLabel(raw);
+      else if (field.render === 'article_badge') colour = getArticleColour(raw);
+      facts.push({ label: field.label, value, colour });
+    }
+    return facts;
+  }
+
+  // ── Render ──────────────────────────────────────────────────────────────
+  const container = document.querySelector('.learning-card');
+  if (!container) { console.error('LearningCard: container not found'); }
+
+  function sel(cls) { return container?.querySelector(cls); }
+
+  // Type badge
+  sel('.lc-type-badge').textContent = getTypeLabel();
+
+  // Level badge
+  sel('.lc-level-badge').textContent = card.level || '';
+
+  // Article
+  const article = card.article || card.metadata?.article;
+  const articleWrap = sel('.lc-article-wrap');
+  const articleEl   = sel('.lc-article');
+  if (article && card.tags?.includes('noun') && !card.plural_only) {
+    articleEl.textContent  = article;
+    articleEl.style.color  = getArticleColour(article);
+    articleWrap.style.display = '';
+  } else {
+    articleWrap.style.display = 'none';
+  }
+
+  // Word
+  sel('.lc-word').textContent = stripArticle(card.target);
+
+  // Translation
+  sel('.lc-translation').textContent = card.source || '';
+
+  // Plural / forms
+  const plural = card.plural || card.metadata?.plural;
+  const formsEl = sel('.lc-forms');
+  if (plural && !card.plural_only) formsEl.textContent = `Pl. ${plural}`;
+  else if (card.plural_only) formsEl.textContent = 'nur Plural';
+  else formsEl.textContent = '';
+
+  // Meta grid
+  const metaGrid = sel('.lc-meta-grid');
+  const facts = getMetaFacts();
+  if (facts.length) {
+    const cols = Math.min(facts.length, 4);
+    metaGrid.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
+    metaGrid.innerHTML = facts.map((f, i) => `
+      <div class="px-5 py-4 ${i < facts.length - 1 ? 'border-r' : ''}" style="border-color:var(--border);">
+        <p class="text-[9px] font-bold uppercase tracking-widest mb-1" style="color:var(--text-muted);">${f.label}</p>
+        <p class="text-sm font-bold" style="color:${f.colour || 'var(--text)'};">${f.value}</p>
+      </div>
+    `).join('');
+  } else {
+    metaGrid.style.display = 'none';
+  }
+
+  // Grammar note
+  const grammarWrap = sel('.lc-grammar-wrap');
+  if (card.grammar_note) {
+    sel('.lc-grammar-text').innerHTML = formatHighlight(card.grammar_note);
+    grammarWrap.classList.remove('hidden');
+  }
+
+  // Grammar label from config
+  const uiLabels = config.ui_labels || {};
+  if (uiLabels.grammar_note_heading) sel('.lc-grammar-label').textContent = uiLabels.grammar_note_heading;
+  if (uiLabels.examples_heading)     sel('.lc-examples-label').textContent = uiLabels.examples_heading;
+  if (uiLabels.audio_button)         sel('.lc-audio-label').textContent    = uiLabels.audio_button;
+
+  // ── Type-specific blocks ─────────────────────────────────────────────────
+
+  // Verb: conjugation table
+  const type = card.type || (card.tags?.includes('verb') ? 'verb' : 'vocab');
+  if (type === 'verb' && card.conjugations?.length) {
+    const conjWrap  = sel('.lc-conjugation-wrap');
+    const conjInner = sel('.lc-conjugation-inner');
+    conjWrap.classList.remove('hidden');
+    conjInner.innerHTML = (config.verb_tenses || card.conjugations.map(t => t.tense)).map(tense => {
+      const t = card.conjugations.find(c => c.tense === tense);
+      if (!t) return '';
+      return `
+        <div class="border-b last:border-0" style="border-color:var(--border);">
+          <p class="text-[10px] font-bold uppercase tracking-widest px-5 py-2" style="background-color:var(--bg); color:var(--espresso);">${t.tense}</p>
+          <table class="w-full text-sm">
+            <tbody>
+              ${t.forms.map((f, ri) => `
+                <tr class="${ri % 2 === 0 ? '' : ''} border-t" style="border-color:var(--border);">
+                  <td class="px-5 py-2.5 font-bold w-24" style="color:var(--espresso);">${f.pronoun}</td>
+                  <td class="px-5 py-2.5 font-semibold" style="color:var(--text);">${f.form}</td>
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+        </div>
+      `;
+    }).join('');
+  }
+
+  // Connector: word order block
+  if (type === 'connector' && card.word_order) {
+    const woWrap = sel('.lc-wordorder-wrap');
+    sel('.lc-wordorder-text').textContent = card.word_order;
+    woWrap.classList.remove('hidden');
+  }
+
+  // Phrase: preposition rule block
+  if (type === 'phrase' && card.clause_type) {
+    const phraseWrap = sel('.lc-phrase-wrap');
+    sel('.lc-phrase-rule').textContent = card.clause_type;
+    phraseWrap.classList.remove('hidden');
+  }
+
+  // ── Examples ─────────────────────────────────────────────────────────────
+  const examplesEl = sel('.lc-examples');
+  const rawExamples = card.examples || (card.example_target || card.example_de ? [{ target: card.example_target || card.example_de, source: card.example_source || card.example_en }] : []);
+
+  if (rawExamples.length) {
+    examplesEl.innerHTML = rawExamples.map(ex => {
+      const e = normaliseExample(ex);
+      return `
+        <div class="rounded-2xl border overflow-hidden" style="border-color:var(--border);">
+          <div class="px-4 py-3" style="background-color:var(--bg);">
+            <p class="font-semibold leading-snug mb-1" style="color:var(--text);">${formatHighlight(e.target)}</p>
+            <p class="text-sm italic" style="color:var(--text-muted);">${formatHighlight(e.source || '')}</p>
+          </div>
+          ${e.note ? `<div class="px-4 py-2 border-t" style="border-color:var(--border);">
+            <p class="text-[10px] font-bold font-mono" style="color:var(--espresso);">📐 ${e.note}</p>
+          </div>` : ''}
+        </div>
+      `;
+    }).join('');
+  } else {
+    examplesEl.innerHTML = `<p class="text-sm italic" style="color:var(--text-muted);">Kein Beispiel verfügbar.</p>`;
+  }
+
+  // ── Tags ─────────────────────────────────────────────────────────────────
+  const tagsEl = sel('.lc-tags');
+  tagsEl.innerHTML = (card.tags || []).map(t => `
+    <span class="text-[10px] font-bold px-2 py-0.5 rounded-md border uppercase" style="border-color:var(--border); color:var(--text-muted); background-color:var(--bg);">${t}</span>
+  `).join('');
+
+  // ── Audio button ─────────────────────────────────────────────────────────
+  sel('.lc-audio-btn')?.addEventListener('click', () => {
+    if (window.DeutschAudioEngine) {
+      window.DeutschAudioEngine.speak(card.target || '', config.speech_lang || 'de-DE', 0.85);
+    }
+  });
+})();</script></div><!-- ── Navigation ───────────────────────────── --><div class="flex items-center justify-between mt-8 gap-4"><button id="btn-prev" disabled class="flex items-center gap-2 px-6 py-3 rounded-2xl border font-bold text-sm transition-all hover:opacity-70 active:scale-95 disabled:opacity-30 disabled:cursor-not-allowed" style="border-color:var(--border); color:var(--text); background-color:var(--card);"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg>Zurück</button><!-- Dot navigation --><div id="dot-nav" class="flex items-center gap-1.5 flex-wrap justify-center max-w-xs overflow-hidden" style="max-height:2rem;"><!-- populated by JS --></div><button id="btn-next" class="flex items-center gap-2 px-6 py-3 rounded-2xl font-bold text-sm transition-all hover:opacity-80 active:scale-95" style="background-color:var(--espresso); color:#F5F2EB;">Weiter<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg></button></div><!-- Keyboard hint --><p class="text-center text-xs font-medium mt-4" style="color:var(--text-muted);">← → Pfeiltasten zum Navigieren &nbsp;·&nbsp; A zum Anhören</p></div><!-- ── List View ───────────────────────────── --><div id="list-view-wrap" class="hidden space-y-6"><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">denken</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to think</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Strong verb. Often used with 'an + Akkusativ' (to think about).</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich denke oft an dich.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I often think of you.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">glauben</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to believe</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Weak verb. Can take a direct object or a 'dass'-clause.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich glaube dir.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I believe you.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">wissen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to know (a fact)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Strong verb with modal verb-like conjugation in present tense. Used for factual knowledge.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich weiß die Antwort nicht.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I don't know the answer.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">kennen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to know (a person/place/thing)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Strong verb. Used for familiarity with people, places, or things.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Kennst du diesen Film?</p><p class="italic text-[13px]" style="color:var(--text-muted);">Do you know this movie?</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">verstehen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to understand</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Strong verb. Non-separable prefix 'ver-'. Takes a direct object.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich verstehe die Frage nicht.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I don't understand the question.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">meinen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to mean / to be of the opinion</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Weak verb. Can refer to opinion or the intended meaning of words.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Was meinst du dazu?</p><p class="italic text-[13px]" style="color:var(--text-muted);">What do you think about that?</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">vergessen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to forget</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Strong verb. Non-separable prefix 'ver-'. Takes a direct object.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich habe meinen Schlüssel vergessen.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I forgot my key.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">sich erinnern (an + Akk)</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to remember</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Weak, reflexive verb. Always used with 'sich' and the preposition 'an + Akkusativ'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich erinnere mich an diesen Tag.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I remember this day.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">nachdenken (über + Akk)</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to reflect / to think about</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Strong, separable verb. The prefix 'nach-' separates in present tense. Often used with 'über + Akkusativ'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich muss über deine Vorschläge nachdenken.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I need to think about your suggestions.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">sich entscheiden (für/gegen + Akk)</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to decide</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Strong, reflexive verb. Always used with 'sich'. Often followed by 'für' or 'gegen' + Akkusativ.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich muss mich bald entscheiden.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I have to decide soon.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">überlegen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to consider / to think over</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Weak verb. Non-separable prefix 'über-'. Implies careful consideration.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich muss mir das gut überlegen.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I need to think that over carefully.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">zweifeln (an + Dat)</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to doubt</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Weak verb. Often used with the preposition 'an + Dativ'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich zweifle an seiner Ehrlichkeit.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I doubt his honesty.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">erkennen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to recognize / to realize</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Strong verb. Non-separable prefix 'er-'. Can mean to identify or to become aware of something.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich habe ihn sofort erkannt.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I recognized him immediately.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">lernen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to learn</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Weak verb. Can take a direct object (what is learned) or an infinitive clause with 'zu'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich lerne Deutsch.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I am learning German.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">vermuten</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to suspect / to assume</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Weak verb. Non-separable prefix 'ver-'. Expresses a supposition or guess.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich vermute, dass er krank ist.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I suspect he is sick.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">hoffen (auf + Akk)</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to hope</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Weak verb. Can take a 'dass'-clause or 'auf + Akkusativ'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich hoffe, dass alles gut geht.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I hope that everything goes well.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">erwarten</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to expect</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Weak verb. Non-separable prefix 'er-'. Takes a direct object or a 'dass'-clause.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich erwarte einen Anruf von ihm.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I expect a call from him.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">sich vorstellen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to imagine</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Weak, reflexive, separable verb. The prefix 'vor-' separates. Means to visualize or conceive of something.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich kann mir das gut vorstellen.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I can imagine that well.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">beachten</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to pay attention to / to notice</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Weak verb. Non-separable prefix 'be-'. Takes a direct object.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Bitte beachten Sie die Hinweise.</p><p class="italic text-[13px]" style="color:var(--text-muted);">Please note the instructions.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">begreifen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to grasp / to comprehend</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Strong verb. Non-separable prefix 'be-'. Similar to 'verstehen' but often implies a deeper understanding.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich kann das nicht begreifen.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I can't grasp that.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">sich entschließen (zu + Dat)</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to resolve / to make up one's mind</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Strong, reflexive verb. Always used with 'sich'. Often followed by 'zu + Dativ' (to do something).</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich habe mich entschlossen, den Job anzunehmen.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I decided to take the job.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">bedenken</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to consider / to bear in mind</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Strong verb. Non-separable prefix 'be-'. Means to take something into account or reflect on it.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Man muss alle Risiken bedenken.</p><p class="italic text-[13px]" style="color:var(--text-muted);">One must consider all risks.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">merken</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to notice / to remember</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Weak verb. Can mean to perceive something or to retain something in memory.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich habe gemerkt, dass etwas nicht stimmt.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I noticed that something was wrong.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">einfallen (jemandem)</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to come to mind / to occur to someone</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Strong, separable verb. Uses 'sein' as auxiliary in Perfekt. The person to whom something occurs is in Dativ.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Mir fällt der Name nicht ein.</p><p class="italic text-[13px]" style="color:var(--text-muted);">The name doesn't come to my mind.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">verwechseln</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to confuse / to mix up</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Weak verb. Non-separable prefix 'ver-'. Takes a direct object.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich habe die beiden Namen verwechselt.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I confused the two names.</p></div></div></div></div></div></div></main><footer class="mt-auto border-t py-8" style="background-color:var(--bg);border-color:var(--border);"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-medium" style="color:var(--text-muted);"><div>&copy; 2025 - 2026 Small Talk Café Podcasts. All rights reserved.</div><div class="flex gap-4">Made in Bayern ❤️ Los Geht's!</div></div></footer><!-- Theme toggle + Language switcher script --><script>
+      // ── Theme ──────────────────────────────────────
+      function applyTheme(dark) {
+        if (dark) {
+          document.documentElement.classList.add('dark');
+          localStorage.setItem('wortschatz_theme', 'dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+          localStorage.setItem('wortschatz_theme', 'light');
+        }
+        const icon = document.getElementById('theme-icon');
+        const label = document.getElementById('theme-label');
+        if (icon) icon.textContent = dark ? '🌙' : '☀️';
+        if (label) label.textContent = dark ? 'Dark' : 'Light';
+      }
+
+      const isDark = document.documentElement.classList.contains('dark');
+      applyTheme(isDark);
+
+      document.getElementById('theme-toggle')?.addEventListener('click', () => {
+        const nowDark = !document.documentElement.classList.contains('dark');
+        applyTheme(nowDark);
+      });
+
+      // ── Language Switcher ──────────────────────────
+      const LANG_CONTENT = {
+        de: {
+          name: 'Deutsch Lounge',
+          flag: '🇩🇪',
+          code: 'DE',
+          subtitle: 'Systematisches Vokabel- und Grammatiktraining',
+          tagline: 'Deutsch Lounge',
+          welcome: 'Willkommen beim',
+          cards: [
+            { title: 'Vokabeln', desc: 'Erweitere deinen Wortschatz. Lerne Nomen, Verben und Redewendungen mit Beispielsätzen.' },
+            { title: 'Verben', desc: 'Meistere reguläre, unregelmäßige, modale und reflexive Verben mit Konjugationstabellen.' },
+            { title: 'Grammatik', desc: 'Regeln verstehen & üben: Adjektivdeklination, Fälle, Präpositionen, Konnektoren & Phrasen.' },
+            { title: 'Redemittel', desc: 'Essentielle Phrasen für den Alltag, Diskussionen und Präsentationen.' }
+          ]
+        },
+        es: {
+          name: 'Spanish Gym',
+          flag: '🇪🇸',
+          code: 'ES',
+          subtitle: 'Tu compañero para aprender Español A1 – B2',
+          tagline: 'A1–B2 Spanish Curriculum',
+          welcome: 'Bienvenido al',
+          cards: [
+            { title: 'Vocabulario', desc: 'Amplía tu vocabulario A1–B2. Aprende sustantivos, verbos y frases con ejemplos contextuales.' },
+            { title: 'Verbos', desc: 'Domina verbos regulares, irregulares y reflexivos con tablas de conjugación.' },
+            { title: 'Gramática', desc: 'Entiende y practica las reglas gramaticales, casos y conectores.' },
+            { title: 'Expresiones', desc: 'Frases esenciales para el día a día, discusiones y presentaciones.' }
+          ]
+        },
+        fr: {
+          name: 'French Gym',
+          flag: '🇫🇷',
+          code: 'FR',
+          subtitle: 'Ton compagnon pour apprendre le Français A1 – B2',
+          tagline: 'A1–B2 French Curriculum',
+          welcome: 'Bienvenue au',
+          cards: [
+            { title: 'Vocabulaire', desc: 'Élargis ton vocabulaire A1–B2. Apprends des noms, verbes et expressions avec des exemples.' },
+            { title: 'Verbes', desc: 'Maîtrise les verbes réguliers, irréguliers et réflexifs avec des tableaux de conjugaison.' },
+            { title: 'Grammaire', desc: 'Comprends et pratique les règles de grammaire, les cas et les connecteurs.' },
+            { title: 'Expressions', desc: 'Phrases essentielles pour la vie quotidienne, les discussions et les présentations.' }
+          ]
+        }
+      };
+
+      function applyLanguage(lang) {
+        const c = LANG_CONTENT[lang] || LANG_CONTENT['de'];
+        localStorage.setItem('gym_language', lang);
+
+        // Header
+        const flag = document.getElementById('lang-flag');
+        const code = document.getElementById('lang-code');
+        const siteName = document.getElementById('site-name');
+        if (flag) flag.textContent = c.flag;
+        if (code) code.textContent = c.code;
+        if (siteName) siteName.textContent = c.name;
+
+        // Footer
+        const footerName = document.getElementById('footer-gym-name');
+        const footerLevel = document.getElementById('footer-level');
+        if (footerName) footerName.textContent = c.name;
+        if (footerLevel) footerLevel.textContent = c.tagline;
+
+        const isGerman = lang === 'de';
+        const overlay = document.getElementById('coming-soon-overlay');
+        const mainContent = document.getElementById('main-content');
+        const germanNavLinks = document.querySelectorAll('[data-german-nav]');
+
+        if (isGerman) {
+          // Show normal German content
+          if (overlay) overlay.classList.add('hidden');
+          if (mainContent) mainContent.classList.remove('hidden');
+          germanNavLinks.forEach(el => el.classList.remove('hidden'));
+
+          // Hero on homepage only
+          const heroTitle = document.getElementById('hero-gym-name');
+          const heroSubtitle = document.getElementById('hero-subtitle');
+          const heroWelcome = document.getElementById('hero-welcome');
+          if (heroTitle) heroTitle.textContent = c.name;
+          if (heroSubtitle) heroSubtitle.textContent = c.subtitle;
+          if (heroWelcome) heroWelcome.textContent = c.welcome;
+
+          // Category cards
+          const cardTitles = document.querySelectorAll('[data-card-title]');
+          const cardDescs = document.querySelectorAll('[data-card-desc]');
+          cardTitles.forEach((el, i) => {
+            if (c.cards[i]) el.textContent = c.cards[i].title;
+          });
+          cardDescs.forEach((el, i) => {
+            if (c.cards[i]) el.textContent = c.cards[i].desc;
+          });
+
+          // Nav links
+          const navLabels = document.querySelectorAll('[data-nav-label]');
+          navLabels.forEach((el, i) => {
+            if (c.cards[i]) el.textContent = c.cards[i].title;
+          });
+        } else {
+          // Non-German: show coming soon overlay, hide main content and German nav
+          if (mainContent) mainContent.classList.add('hidden');
+          germanNavLinks.forEach(el => el.classList.add('hidden'));
+
+          // Populate coming soon overlay
+          const comingFlag = document.getElementById('coming-soon-flag');
+          const comingLang = document.getElementById('coming-soon-lang');
+          if (comingFlag) comingFlag.textContent = c.flag;
+          if (comingLang) comingLang.textContent = c.name + ' content';
+
+          if (overlay) {
+            overlay.classList.remove('hidden');
+            overlay.classList.add('flex');
+          }
+        }
+      }
+
+      // Restore saved language
+      const savedLang = localStorage.getItem('gym_language') || 'de';
+      applyLanguage(savedLang);
+
+      // Dropdown toggle
+      const langBtn = document.getElementById('lang-btn');
+      const langMenu = document.getElementById('lang-menu');
+
+      langBtn?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        langMenu?.classList.toggle('hidden');
+      });
+
+      document.addEventListener('click', () => {
+        langMenu?.classList.add('hidden');
+      });
+
+      document.querySelectorAll('.lang-option').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const lang = btn.dataset.lang;
+          applyLanguage(lang);
+          langMenu?.classList.add('hidden');
+        });
+      });
+
+      // Coming soon "Switch to German" button
+      document.getElementById('coming-soon-back-btn')?.addEventListener('click', () => {
+        applyLanguage('de');
+      });
+    </script></body></html><script type="module" src="/languagelounge/_astro/_deckId_.astro_astro_type_script_index_0_lang.B80xyaMZ.js"></script><script>(function(){const cardsJson = "[{\"id\":\"verbs-b1-b1_thought_verbs-001\",\"infinitive\":\"denken\",\"translation\":\"to think\",\"type\":\"verb\",\"cefr\":\"B1\",\"tags\":[\"verb\"],\"grammar_note\":\"Strong verb. Often used with 'an + Akkusativ' (to think about).\",\"examples\":[{\"de\":\"Ich denke oft an dich.\",\"en\":\"I often think of you.\"},{\"de\":\"Was denkst du darüber?\",\"en\":\"What do you think about it?\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"dachte\",\"du\":\"dachtest\",\"er_sie_es\":\"dachte\",\"wir\":\"dachten\",\"ihr\":\"dachtet\",\"sie_Sie\":\"dachten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe gedacht\",\"du\":\"hast gedacht\",\"er_sie_es\":\"hat gedacht\",\"wir\":\"haben gedacht\",\"ihr\":\"habt gedacht\",\"sie_Sie\":\"haben gedacht\"}],\"target\":\"denken\",\"source\":\"to think\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b1-b1_thought_verbs-002\",\"infinitive\":\"glauben\",\"translation\":\"to believe\",\"type\":\"verb\",\"cefr\":\"B1\",\"tags\":[\"verb\"],\"grammar_note\":\"Weak verb. Can take a direct object or a 'dass'-clause.\",\"examples\":[{\"de\":\"Ich glaube dir.\",\"en\":\"I believe you.\"},{\"de\":\"Glaubst du, dass es regnen wird?\",\"en\":\"Do you believe it will rain?\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"glaubte\",\"du\":\"glaubtest\",\"er_sie_es\":\"glaubte\",\"wir\":\"glaubten\",\"ihr\":\"glaubtet\",\"sie_Sie\":\"glaubten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe geglaubt\",\"du\":\"hast geglaubt\",\"er_sie_es\":\"hat geglaubt\",\"wir\":\"haben geglaubt\",\"ihr\":\"habt geglaubt\",\"sie_Sie\":\"haben geglaubt\"}],\"target\":\"glauben\",\"source\":\"to believe\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b1-b1_thought_verbs-003\",\"infinitive\":\"wissen\",\"translation\":\"to know (a fact)\",\"type\":\"verb\",\"cefr\":\"B1\",\"tags\":[\"verb\"],\"grammar_note\":\"Strong verb with modal verb-like conjugation in present tense. Used for factual knowledge.\",\"examples\":[{\"de\":\"Ich weiß die Antwort nicht.\",\"en\":\"I don't know the answer.\"},{\"de\":\"Wissen Sie, wo der Bahnhof ist?\",\"en\":\"Do you know where the train station is?\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"wusste\",\"du\":\"wusstest\",\"er_sie_es\":\"wusste\",\"wir\":\"wussten\",\"ihr\":\"wusstet\",\"sie_Sie\":\"wussten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe gewusst\",\"du\":\"hast gewusst\",\"er_sie_es\":\"hat gewusst\",\"wir\":\"haben gewusst\",\"ihr\":\"habt gewusst\",\"sie_Sie\":\"haben gewusst\"}],\"target\":\"wissen\",\"source\":\"to know (a fact)\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b1-b1_thought_verbs-004\",\"infinitive\":\"kennen\",\"translation\":\"to know (a person/place/thing)\",\"type\":\"verb\",\"cefr\":\"B1\",\"tags\":[\"verb\"],\"grammar_note\":\"Strong verb. Used for familiarity with people, places, or things.\",\"examples\":[{\"de\":\"Kennst du diesen Film?\",\"en\":\"Do you know this movie?\"},{\"de\":\"Ich kenne den Weg zum Museum.\",\"en\":\"I know the way to the museum.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"kannte\",\"du\":\"kanntest\",\"er_sie_es\":\"kannte\",\"wir\":\"kannten\",\"ihr\":\"kanntet\",\"sie_Sie\":\"kannten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe gekannt\",\"du\":\"hast gekannt\",\"er_sie_es\":\"hat gekannt\",\"wir\":\"haben gekannt\",\"ihr\":\"habt gekannt\",\"sie_Sie\":\"haben gekannt\"}],\"target\":\"kennen\",\"source\":\"to know (a person/place/thing)\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b1-b1_thought_verbs-005\",\"infinitive\":\"verstehen\",\"translation\":\"to understand\",\"type\":\"verb\",\"cefr\":\"B1\",\"tags\":[\"verb\"],\"grammar_note\":\"Strong verb. Non-separable prefix 'ver-'. Takes a direct object.\",\"examples\":[{\"de\":\"Ich verstehe die Frage nicht.\",\"en\":\"I don't understand the question.\"},{\"de\":\"Verstehst du, was ich meine?\",\"en\":\"Do you understand what I mean?\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"verstand\",\"du\":\"verstandest\",\"er_sie_es\":\"verstand\",\"wir\":\"verstanden\",\"ihr\":\"verstandet\",\"sie_Sie\":\"verstanden\"},{\"tense\":\"Perfekt\",\"ich\":\"habe verstanden\",\"du\":\"hast verstanden\",\"er_sie_es\":\"hat verstanden\",\"wir\":\"haben verstanden\",\"ihr\":\"habt verstanden\",\"sie_Sie\":\"haben verstanden\"}],\"target\":\"verstehen\",\"source\":\"to understand\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b1-b1_thought_verbs-006\",\"infinitive\":\"meinen\",\"translation\":\"to mean / to be of the opinion\",\"type\":\"verb\",\"cefr\":\"B1\",\"tags\":[\"verb\"],\"grammar_note\":\"Weak verb. Can refer to opinion or the intended meaning of words.\",\"examples\":[{\"de\":\"Was meinst du dazu?\",\"en\":\"What do you think about that?\"},{\"de\":\"Ich meine, dass es eine gute Idee ist.\",\"en\":\"I think it's a good idea.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"meinte\",\"du\":\"meintest\",\"er_sie_es\":\"meinte\",\"wir\":\"meinten\",\"ihr\":\"meintet\",\"sie_Sie\":\"meinten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe gemeint\",\"du\":\"hast gemeint\",\"er_sie_es\":\"hat gemeint\",\"wir\":\"haben gemeint\",\"ihr\":\"habt gemeint\",\"sie_Sie\":\"haben gemeint\"}],\"target\":\"meinen\",\"source\":\"to mean / to be of the opinion\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b1-b1_thought_verbs-007\",\"infinitive\":\"vergessen\",\"translation\":\"to forget\",\"type\":\"verb\",\"cefr\":\"B1\",\"tags\":[\"verb\"],\"grammar_note\":\"Strong verb. Non-separable prefix 'ver-'. Takes a direct object.\",\"examples\":[{\"de\":\"Ich habe meinen Schlüssel vergessen.\",\"en\":\"I forgot my key.\"},{\"de\":\"Vergiss nicht, mich anzurufen!\",\"en\":\"Don't forget to call me!\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"vergaß\",\"du\":\"vergaßt\",\"er_sie_es\":\"vergaß\",\"wir\":\"vergaßen\",\"ihr\":\"vergaßt\",\"sie_Sie\":\"vergaßen\"},{\"tense\":\"Perfekt\",\"ich\":\"habe vergessen\",\"du\":\"hast vergessen\",\"er_sie_es\":\"hat vergessen\",\"wir\":\"haben vergessen\",\"ihr\":\"habt vergessen\",\"sie_Sie\":\"haben vergessen\"}],\"target\":\"vergessen\",\"source\":\"to forget\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b1-b1_thought_verbs-008\",\"infinitive\":\"sich erinnern (an + Akk)\",\"translation\":\"to remember\",\"type\":\"verb\",\"cefr\":\"B1\",\"tags\":[\"verb\"],\"grammar_note\":\"Weak, reflexive verb. Always used with 'sich' and the preposition 'an + Akkusativ'.\",\"examples\":[{\"de\":\"Ich erinnere mich an diesen Tag.\",\"en\":\"I remember this day.\"},{\"de\":\"Erinnerst du dich an meinen Namen?\",\"en\":\"Do you remember my name?\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"erinnerte mich\",\"du\":\"erinnertest dich\",\"er_sie_es\":\"erinnerte sich\",\"wir\":\"erinnerten uns\",\"ihr\":\"erinnertet euch\",\"sie_Sie\":\"erinnerten sich\"},{\"tense\":\"Perfekt\",\"ich\":\"habe mich erinnert\",\"du\":\"hast dich erinnert\",\"er_sie_es\":\"hat sich erinnert\",\"wir\":\"haben uns erinnert\",\"ihr\":\"habt euch erinnert\",\"sie_Sie\":\"haben sich erinnert\"}],\"target\":\"sich erinnern (an + Akk)\",\"source\":\"to remember\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b1-b1_thought_verbs-009\",\"infinitive\":\"nachdenken (über + Akk)\",\"translation\":\"to reflect / to think about\",\"type\":\"verb\",\"cefr\":\"B1\",\"tags\":[\"verb\"],\"grammar_note\":\"Strong, separable verb. The prefix 'nach-' separates in present tense. Often used with 'über + Akkusativ'.\",\"examples\":[{\"de\":\"Ich muss über deine Vorschläge nachdenken.\",\"en\":\"I need to think about your suggestions.\"},{\"de\":\"Hast du schon lange darüber nachgedacht?\",\"en\":\"Have you thought about it for a long time?\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"dachte nach\",\"du\":\"dachtest nach\",\"er_sie_es\":\"dachte nach\",\"wir\":\"dachten nach\",\"ihr\":\"dachtet nach\",\"sie_Sie\":\"dachten nach\"},{\"tense\":\"Perfekt\",\"ich\":\"habe nachgedacht\",\"du\":\"hast nachgedacht\",\"er_sie_es\":\"hat nachgedacht\",\"wir\":\"haben nachgedacht\",\"ihr\":\"habt nachgedacht\",\"sie_Sie\":\"haben nachgedacht\"}],\"target\":\"nachdenken (über + Akk)\",\"source\":\"to reflect / to think about\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b1-b1_thought_verbs-010\",\"infinitive\":\"sich entscheiden (für/gegen + Akk)\",\"translation\":\"to decide\",\"type\":\"verb\",\"cefr\":\"B1\",\"tags\":[\"verb\"],\"grammar_note\":\"Strong, reflexive verb. Always used with 'sich'. Often followed by 'für' or 'gegen' + Akkusativ.\",\"examples\":[{\"de\":\"Ich muss mich bald entscheiden.\",\"en\":\"I have to decide soon.\"},{\"de\":\"Sie hat sich für das Studium in Berlin entschieden.\",\"en\":\"She decided on studying in Berlin.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"entschied mich\",\"du\":\"entschiedest dich\",\"er_sie_es\":\"entschied sich\",\"wir\":\"entschieden uns\",\"ihr\":\"entschiedet euch\",\"sie_Sie\":\"entschieden sich\"},{\"tense\":\"Perfekt\",\"ich\":\"habe mich entschieden\",\"du\":\"hast dich entschieden\",\"er_sie_es\":\"hat sich entschieden\",\"wir\":\"haben uns entschieden\",\"ihr\":\"habt euch entschieden\",\"sie_Sie\":\"haben sich entschieden\"}],\"target\":\"sich entscheiden (für/gegen + Akk)\",\"source\":\"to decide\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b1-b1_thought_verbs-011\",\"infinitive\":\"überlegen\",\"translation\":\"to consider / to think over\",\"type\":\"verb\",\"cefr\":\"B1\",\"tags\":[\"verb\"],\"grammar_note\":\"Weak verb. Non-separable prefix 'über-'. Implies careful consideration.\",\"examples\":[{\"de\":\"Ich muss mir das gut überlegen.\",\"en\":\"I need to think that over carefully.\"},{\"de\":\"Hast du dir schon überlegt, was du kochen möchtest?\",\"en\":\"Have you already considered what you'd like to cook?\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"überlegte\",\"du\":\"überlegtest\",\"er_sie_es\":\"überlegte\",\"wir\":\"überlegten\",\"ihr\":\"überlegtet\",\"sie_Sie\":\"überlegten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe überlegt\",\"du\":\"hast überlegt\",\"er_sie_es\":\"hat überlegt\",\"wir\":\"haben überlegt\",\"ihr\":\"habt überlegt\",\"sie_Sie\":\"haben überlegt\"}],\"target\":\"überlegen\",\"source\":\"to consider / to think over\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b1-b1_thought_verbs-012\",\"infinitive\":\"zweifeln (an + Dat)\",\"translation\":\"to doubt\",\"type\":\"verb\",\"cefr\":\"B1\",\"tags\":[\"verb\"],\"grammar_note\":\"Weak verb. Often used with the preposition 'an + Dativ'.\",\"examples\":[{\"de\":\"Ich zweifle an seiner Ehrlichkeit.\",\"en\":\"I doubt his honesty.\"},{\"de\":\"Sie zweifelt nicht daran, dass es klappen wird.\",\"en\":\"She doesn't doubt that it will work out.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"zweifelte\",\"du\":\"zweifeltest\",\"er_sie_es\":\"zweifelte\",\"wir\":\"zweifelten\",\"ihr\":\"zweifeltet\",\"sie_Sie\":\"zweifelten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe gezweifelt\",\"du\":\"hast gezweifelt\",\"er_sie_es\":\"hat gezweifelt\",\"wir\":\"haben gezweifelt\",\"ihr\":\"habt gezweifelt\",\"sie_Sie\":\"haben gezweifelt\"}],\"target\":\"zweifeln (an + Dat)\",\"source\":\"to doubt\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b1-b1_thought_verbs-013\",\"infinitive\":\"erkennen\",\"translation\":\"to recognize / to realize\",\"type\":\"verb\",\"cefr\":\"B1\",\"tags\":[\"verb\"],\"grammar_note\":\"Strong verb. Non-separable prefix 'er-'. Can mean to identify or to become aware of something.\",\"examples\":[{\"de\":\"Ich habe ihn sofort erkannt.\",\"en\":\"I recognized him immediately.\"},{\"de\":\"Sie erkannte, dass sie einen Fehler gemacht hatte.\",\"en\":\"She realized that she had made a mistake.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"erkannte\",\"du\":\"erkanntest\",\"er_sie_es\":\"erkannte\",\"wir\":\"erkannten\",\"ihr\":\"erkanntet\",\"sie_Sie\":\"erkannten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe erkannt\",\"du\":\"hast erkannt\",\"er_sie_es\":\"hat erkannt\",\"wir\":\"haben erkannt\",\"ihr\":\"habt erkannt\",\"sie_Sie\":\"haben erkannt\"}],\"target\":\"erkennen\",\"source\":\"to recognize / to realize\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b1-b1_thought_verbs-014\",\"infinitive\":\"lernen\",\"translation\":\"to learn\",\"type\":\"verb\",\"cefr\":\"B1\",\"tags\":[\"verb\"],\"grammar_note\":\"Weak verb. Can take a direct object (what is learned) or an infinitive clause with 'zu'.\",\"examples\":[{\"de\":\"Ich lerne Deutsch.\",\"en\":\"I am learning German.\"},{\"de\":\"Sie lernt schwimmen.\",\"en\":\"She is learning to swim.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"lernte\",\"du\":\"lerntest\",\"er_sie_es\":\"lernte\",\"wir\":\"lernten\",\"ihr\":\"lerntet\",\"sie_Sie\":\"lernten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe gelernt\",\"du\":\"hast gelernt\",\"er_sie_es\":\"hat gelernt\",\"wir\":\"haben gelernt\",\"ihr\":\"habt gelernt\",\"sie_Sie\":\"haben gelernt\"}],\"target\":\"lernen\",\"source\":\"to learn\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b1-b1_thought_verbs-015\",\"infinitive\":\"vermuten\",\"translation\":\"to suspect / to assume\",\"type\":\"verb\",\"cefr\":\"B1\",\"tags\":[\"verb\"],\"grammar_note\":\"Weak verb. Non-separable prefix 'ver-'. Expresses a supposition or guess.\",\"examples\":[{\"de\":\"Ich vermute, dass er krank ist.\",\"en\":\"I suspect he is sick.\"},{\"de\":\"Man vermutet, dass die Preise steigen werden.\",\"en\":\"It is assumed that prices will rise.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"vermutete\",\"du\":\"vermutetest\",\"er_sie_es\":\"vermutete\",\"wir\":\"vermuteten\",\"ihr\":\"vermutetet\",\"sie_Sie\":\"vermuteten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe vermutet\",\"du\":\"hast vermutet\",\"er_sie_es\":\"hat vermutet\",\"wir\":\"haben vermutet\",\"ihr\":\"habt vermutet\",\"sie_Sie\":\"haben vermutet\"}],\"target\":\"vermuten\",\"source\":\"to suspect / to assume\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b1-b1_thought_verbs-016\",\"infinitive\":\"hoffen (auf + Akk)\",\"translation\":\"to hope\",\"type\":\"verb\",\"cefr\":\"B1\",\"tags\":[\"verb\"],\"grammar_note\":\"Weak verb. Can take a 'dass'-clause or 'auf + Akkusativ'.\",\"examples\":[{\"de\":\"Ich hoffe, dass alles gut geht.\",\"en\":\"I hope that everything goes well.\"},{\"de\":\"Wir hoffen auf besseres Wetter.\",\"en\":\"We hope for better weather.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"hoffte\",\"du\":\"hofftest\",\"er_sie_es\":\"hoffte\",\"wir\":\"hofften\",\"ihr\":\"hofftet\",\"sie_Sie\":\"hofften\"},{\"tense\":\"Perfekt\",\"ich\":\"habe gehofft\",\"du\":\"hast gehofft\",\"er_sie_es\":\"hat gehofft\",\"wir\":\"haben gehofft\",\"ihr\":\"habt gehofft\",\"sie_Sie\":\"haben gehofft\"}],\"target\":\"hoffen (auf + Akk)\",\"source\":\"to hope\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b1-b1_thought_verbs-017\",\"infinitive\":\"erwarten\",\"translation\":\"to expect\",\"type\":\"verb\",\"cefr\":\"B1\",\"tags\":[\"verb\"],\"grammar_note\":\"Weak verb. Non-separable prefix 'er-'. Takes a direct object or a 'dass'-clause.\",\"examples\":[{\"de\":\"Ich erwarte einen Anruf von ihm.\",\"en\":\"I expect a call from him.\"},{\"de\":\"Wir erwarten, dass du pünktlich bist.\",\"en\":\"We expect you to be on time.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"erwartete\",\"du\":\"erwartetest\",\"er_sie_es\":\"erwartete\",\"wir\":\"erwarteten\",\"ihr\":\"erwartetet\",\"sie_Sie\":\"erwarteten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe erwartet\",\"du\":\"hast erwartet\",\"er_sie_es\":\"hat erwartet\",\"wir\":\"haben erwartet\",\"ihr\":\"habt erwartet\",\"sie_Sie\":\"haben erwartet\"}],\"target\":\"erwarten\",\"source\":\"to expect\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b1-b1_thought_verbs-018\",\"infinitive\":\"sich vorstellen\",\"translation\":\"to imagine\",\"type\":\"verb\",\"cefr\":\"B1\",\"tags\":[\"verb\"],\"grammar_note\":\"Weak, reflexive, separable verb. The prefix 'vor-' separates. Means to visualize or conceive of something.\",\"examples\":[{\"de\":\"Ich kann mir das gut vorstellen.\",\"en\":\"I can imagine that well.\"},{\"de\":\"Stell dir vor, du bist im Urlaub!\",\"en\":\"Imagine you're on vacation!\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"stellte mir vor\",\"du\":\"stelltest dir vor\",\"er_sie_es\":\"stellte sich vor\",\"wir\":\"stellten uns vor\",\"ihr\":\"stelltet euch vor\",\"sie_Sie\":\"stellten sich vor\"},{\"tense\":\"Perfekt\",\"ich\":\"habe mir vorgestellt\",\"du\":\"hast dir vorgestellt\",\"er_sie_es\":\"hat sich vorgestellt\",\"wir\":\"haben uns vorgestellt\",\"ihr\":\"habt euch vorgestellt\",\"sie_Sie\":\"haben sich vorgestellt\"}],\"target\":\"sich vorstellen\",\"source\":\"to imagine\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b1-b1_thought_verbs-019\",\"infinitive\":\"beachten\",\"translation\":\"to pay attention to / to notice\",\"type\":\"verb\",\"cefr\":\"B1\",\"tags\":[\"verb\"],\"grammar_note\":\"Weak verb. Non-separable prefix 'be-'. Takes a direct object.\",\"examples\":[{\"de\":\"Bitte beachten Sie die Hinweise.\",\"en\":\"Please note the instructions.\"},{\"de\":\"Er beachtete ihre Warnung nicht.\",\"en\":\"He did not heed her warning.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"beachtete\",\"du\":\"beachtetest\",\"er_sie_es\":\"beachtete\",\"wir\":\"beachteten\",\"ihr\":\"beachtetet\",\"sie_Sie\":\"beachteten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe beachtet\",\"du\":\"hast beachtet\",\"er_sie_es\":\"hat beachtet\",\"wir\":\"haben beachtet\",\"ihr\":\"habt beachtet\",\"sie_Sie\":\"haben beachtet\"}],\"target\":\"beachten\",\"source\":\"to pay attention to / to notice\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b1-b1_thought_verbs-020\",\"infinitive\":\"begreifen\",\"translation\":\"to grasp / to comprehend\",\"type\":\"verb\",\"cefr\":\"B1\",\"tags\":[\"verb\"],\"grammar_note\":\"Strong verb. Non-separable prefix 'be-'. Similar to 'verstehen' but often implies a deeper understanding.\",\"examples\":[{\"de\":\"Ich kann das nicht begreifen.\",\"en\":\"I can't grasp that.\"},{\"de\":\"Endlich habe ich die Situation begriffen.\",\"en\":\"Finally, I understood the situation.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"begriff\",\"du\":\"begriffst\",\"er_sie_es\":\"begriff\",\"wir\":\"begriffen\",\"ihr\":\"begrifft\",\"sie_Sie\":\"begriffen\"},{\"tense\":\"Perfekt\",\"ich\":\"habe begriffen\",\"du\":\"hast begriffen\",\"er_sie_es\":\"hat begriffen\",\"wir\":\"haben begriffen\",\"ihr\":\"habt begriffen\",\"sie_Sie\":\"haben begriffen\"}],\"target\":\"begreifen\",\"source\":\"to grasp / to comprehend\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b1-b1_thought_verbs-021\",\"infinitive\":\"sich entschließen (zu + Dat)\",\"translation\":\"to resolve / to make up one's mind\",\"type\":\"verb\",\"cefr\":\"B1\",\"tags\":[\"verb\"],\"grammar_note\":\"Strong, reflexive verb. Always used with 'sich'. Often followed by 'zu + Dativ' (to do something).\",\"examples\":[{\"de\":\"Ich habe mich entschlossen, den Job anzunehmen.\",\"en\":\"I decided to take the job.\"},{\"de\":\"Er konnte sich nicht entschließen.\",\"en\":\"He couldn't make up his mind.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"entschloss mich\",\"du\":\"entschlossest dich\",\"er_sie_es\":\"entschloss sich\",\"wir\":\"entschlossen uns\",\"ihr\":\"entschlosst euch\",\"sie_Sie\":\"entschlossen sich\"},{\"tense\":\"Perfekt\",\"ich\":\"habe mich entschlossen\",\"du\":\"hast dich entschlossen\",\"er_sie_es\":\"hat sich entschlossen\",\"wir\":\"haben uns entschlossen\",\"ihr\":\"habt euch entschlossen\",\"sie_Sie\":\"haben sich entschlossen\"}],\"target\":\"sich entschließen (zu + Dat)\",\"source\":\"to resolve / to make up one's mind\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b1-b1_thought_verbs-022\",\"infinitive\":\"bedenken\",\"translation\":\"to consider / to bear in mind\",\"type\":\"verb\",\"cefr\":\"B1\",\"tags\":[\"verb\"],\"grammar_note\":\"Strong verb. Non-separable prefix 'be-'. Means to take something into account or reflect on it.\",\"examples\":[{\"de\":\"Man muss alle Risiken bedenken.\",\"en\":\"One must consider all risks.\"},{\"de\":\"Hast du das gut bedacht?\",\"en\":\"Have you thought this through well?\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"bedachte\",\"du\":\"bedachtest\",\"er_sie_es\":\"bedachte\",\"wir\":\"bedachten\",\"ihr\":\"bedachtet\",\"sie_Sie\":\"bedachten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe bedacht\",\"du\":\"hast bedacht\",\"er_sie_es\":\"hat bedacht\",\"wir\":\"haben bedacht\",\"ihr\":\"habt bedacht\",\"sie_Sie\":\"haben bedacht\"}],\"target\":\"bedenken\",\"source\":\"to consider / to bear in mind\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b1-b1_thought_verbs-023\",\"infinitive\":\"merken\",\"translation\":\"to notice / to remember\",\"type\":\"verb\",\"cefr\":\"B1\",\"tags\":[\"verb\"],\"grammar_note\":\"Weak verb. Can mean to perceive something or to retain something in memory.\",\"examples\":[{\"de\":\"Ich habe gemerkt, dass etwas nicht stimmt.\",\"en\":\"I noticed that something was wrong.\"},{\"de\":\"Merk dir das gut!\",\"en\":\"Remember that well!\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"merkte\",\"du\":\"merktest\",\"er_sie_es\":\"merkte\",\"wir\":\"merkten\",\"ihr\":\"merktet\",\"sie_Sie\":\"merkten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe gemerkt\",\"du\":\"hast gemerkt\",\"er_sie_es\":\"hat gemerkt\",\"wir\":\"haben gemerkt\",\"ihr\":\"habt gemerkt\",\"sie_Sie\":\"haben gemerkt\"}],\"target\":\"merken\",\"source\":\"to notice / to remember\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b1-b1_thought_verbs-024\",\"infinitive\":\"einfallen (jemandem)\",\"translation\":\"to come to mind / to occur to someone\",\"type\":\"verb\",\"cefr\":\"B1\",\"tags\":[\"verb\"],\"grammar_note\":\"Strong, separable verb. Uses 'sein' as auxiliary in Perfekt. The person to whom something occurs is in Dativ.\",\"examples\":[{\"de\":\"Mir fällt der Name nicht ein.\",\"en\":\"The name doesn't come to my mind.\"},{\"de\":\"Ist dir noch etwas eingefallen?\",\"en\":\"Did anything else come to your mind?\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"fiel ein\",\"du\":\"fielst ein\",\"er_sie_es\":\"fiel ein\",\"wir\":\"fielen ein\",\"ihr\":\"fielt ein\",\"sie_Sie\":\"fielen ein\"},{\"tense\":\"Perfekt\",\"ich\":\"bin eingefallen\",\"du\":\"bist eingefallen\",\"er_sie_es\":\"ist eingefallen\",\"wir\":\"sind eingefallen\",\"ihr\":\"seid eingefallen\",\"sie_Sie\":\"sind eingefallen\"}],\"target\":\"einfallen (jemandem)\",\"source\":\"to come to mind / to occur to someone\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b1-b1_thought_verbs-025\",\"infinitive\":\"verwechseln\",\"translation\":\"to confuse / to mix up\",\"type\":\"verb\",\"cefr\":\"B1\",\"tags\":[\"verb\"],\"grammar_note\":\"Weak verb. Non-separable prefix 'ver-'. Takes a direct object.\",\"examples\":[{\"de\":\"Ich habe die beiden Namen verwechselt.\",\"en\":\"I confused the two names.\"},{\"de\":\"Verwechsle nicht Wahrheit mit Wunschdenken.\",\"en\":\"Don't confuse truth with wishful thinking.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"verwechselte\",\"du\":\"verwechseltest\",\"er_sie_es\":\"verwechselte\",\"wir\":\"verwechselten\",\"ihr\":\"verwechseltet\",\"sie_Sie\":\"verwechselten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe verwechselt\",\"du\":\"hast verwechselt\",\"er_sie_es\":\"hat verwechselt\",\"wir\":\"haben verwechselt\",\"ihr\":\"habt verwechselt\",\"sie_Sie\":\"haben verwechselt\"}],\"target\":\"verwechseln\",\"source\":\"to confuse / to mix up\",\"example_target\":\"\",\"example_source\":\"\"}]";
+const langConfigJson = "{\"language_pair\":\"english_german\",\"target_lang\":\"de\",\"native_lang\":\"en\",\"target_lang_name\":\"Deutsch\",\"native_lang_name\":\"English\",\"speech_lang\":\"de-DE\",\"noun_metadata_fields\":[{\"key\":\"article\",\"label\":\"Artikel\",\"render\":\"article_badge\"},{\"key\":\"gender\",\"label\":\"Genus\",\"render\":\"gender_label\"},{\"key\":\"plural\",\"label\":\"Plural\",\"render\":\"text\"}],\"article_colours\":{\"der\":\"#4A7C9E\",\"die\":\"#B05070\",\"das\":\"#4A8A5A\"},\"gender_labels\":{\"m\":\"Maskulinum\",\"f\":\"Femininum\",\"n\":\"Neutrum\"},\"verb_tenses\":[\"Präsens\",\"Präteritum\",\"Perfekt\",\"Futur I\",\"Konjunktiv II\"],\"cases\":{\"nominative\":\"Nominativ\",\"accusative\":\"Akkusativ\",\"dative\":\"Dativ\",\"genitive\":\"Genitiv\"},\"ui_labels\":{\"learn_mode\":\"Lernen\",\"train_mode\":\"Trainieren\",\"examples_heading\":\"Beispielsätze\",\"grammar_note_heading\":\"Grammatiknotiz\",\"audio_button\":\"Anhören\",\"back_link\":\"Zurück\",\"card_counter\":\"Karte {current} / {total}\",\"next_button\":\"Weiter\",\"finish_button\":\"Fertig\",\"correct\":\"Richtig!\",\"wrong\":\"Falsch\"}}";
+const category = "verbs";
+
+  const cards     = JSON.parse(cardsJson);
+  const config    = JSON.parse(langConfigJson);
+  let currentIndex = 0;
+
+  const dotNav    = document.getElementById('dot-nav');
+  const currentNum = document.getElementById('current-num');
+  const progressBar = document.getElementById('progress-bar');
+  const btnPrev   = document.getElementById('btn-prev');
+  const btnNext   = document.getElementById('btn-next');
+  const cardHost  = document.getElementById('card-host');
+  const progressCont = document.getElementById('progress-container');
+
+  const cardViewWrap = document.getElementById('card-view-wrap');
+  const listViewWrap = document.getElementById('list-view-wrap');
+  const btnViewCards = document.getElementById('view-cards-btn');
+  const btnViewList  = document.getElementById('view-list-btn');
+
+  // Toggle Logic
+  function setViewMode(mode) {
+    if (mode === 'list') {
+      cardViewWrap.classList.add('hidden');
+      listViewWrap.classList.remove('hidden');
+      progressCont.classList.add('hidden');
+      btnViewList.classList.add('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewList.classList.remove('text-[var(--text-muted)]');
+      btnViewCards.classList.remove('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewCards.classList.add('text-[var(--text-muted)]');
+    } else {
+      listViewWrap.classList.add('hidden');
+      cardViewWrap.classList.remove('hidden');
+      progressCont.classList.remove('hidden');
+      btnViewCards.classList.add('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewCards.classList.remove('text-[var(--text-muted)]');
+      btnViewList.classList.remove('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewList.classList.add('text-[var(--text-muted)]');
+    }
+  }
+
+  btnViewCards.addEventListener('click', () => setViewMode('cards'));
+  btnViewList.addEventListener('click', () => setViewMode('list'));
+
+  // Default Grammatik and Redemittel to list view!
+  if (category === 'grammatik' || category === 'redemittel' || category === 'phrases') {
+    setViewMode('list');
+  }
+
+
+
+  // ── Helpers (mirror card-renderer.ts — no module imports in inline scripts) ──
+  const articleColours = config.article_colours || { der:'#4A7C9E', die:'#B05070', das:'#4A8A5A' };
+  const genderLabels   = config.gender_labels   || { m:'Maskulinum', f:'Femininum', n:'Neutrum'  };
+  const speechLang     = config.speech_lang     || 'de-DE';
+
+  function stripArticle(w) {
+    return (w || '').replace(/^(der|die|das|el|la|los|las|le|les|l')\s+/i,'').trim();
+  }
+
+  function getTypeLabel(card) {
+    const tags = card.tags || [];
+    if (tags.includes('noun'))       return 'Substantiv';
+    if (tags.includes('verb'))       return 'Verb';
+    if (tags.includes('adjective'))  return 'Adjektiv';
+    if (tags.includes('expression')) return 'Ausdruck';
+    return { vocab:'Vokabel', verb:'Verb', phrase:'Phrase', connector:'Konnektor', grammar:'Grammatik' }[card.type] || 'Vokabel';
+  }
+
+  function normaliseEx(ex) {
+    return { target: ex.target||ex.de||'', source: ex.source||ex.en||'', note: ex.note };
+  }
+
+  function getMetaFacts(card) {
+    const meta = { ...(card.metadata||{}), article:card.article, gender:card.gender, plural:card.plural };
+    const facts = [];
+    for (const field of (config.noun_metadata_fields || [])) {
+      const raw = meta[field.key];
+      if (!raw || raw==='~') continue;
+      let value = String(raw), colour;
+      if (field.render === 'gender_label')  value  = genderLabels[raw] || raw;
+      if (field.render === 'article_badge') colour = articleColours[raw.toLowerCase()] || 'var(--espresso)';
+      facts.push({ label: field.label, value, colour });
+    }
+    return facts;
+  }
+
+  // ── Card renderer ─────────────────────────────────────────────────────────
+  function renderCard(idx) {
+    const card = cards[idx];
+    if (!card || !cardHost) return;
+
+    const lc = cardHost.querySelector('.learning-card');
+    if (!lc) return;
+
+    function sel(cls) { return lc.querySelector(cls); }
+
+    // Type badge + level
+    sel('.lc-type-badge').textContent = getTypeLabel(card);
+    sel('.lc-level-badge').textContent = (card.level || '').toUpperCase();
+
+    // Article
+    const article = card.article || card.metadata?.article;
+    const articleWrap = sel('.lc-article-wrap');
+    const articleEl   = sel('.lc-article');
+    if (article && (card.tags||[]).includes('noun') && !card.plural_only) {
+      articleEl.textContent = article;
+      articleEl.style.color = articleColours[article.toLowerCase()] || 'var(--espresso)';
+      articleWrap.style.display = '';
+    } else {
+      articleWrap.style.display = 'none';
+    }
+
+    // Word / translation / forms
+    sel('.lc-word').textContent        = stripArticle(card.target);
+    sel('.lc-translation').textContent = card.source || '';
+    const plural = card.plural || card.metadata?.plural;
+    sel('.lc-forms').textContent = plural && !card.plural_only ? `Pl. ${plural}` : card.plural_only ? 'nur Plural' : '';
+
+    // Meta grid
+    const metaGrid = sel('.lc-meta-grid');
+    const facts = getMetaFacts(card);
+    if (facts.length) {
+      metaGrid.style.gridTemplateColumns = `repeat(${Math.min(facts.length,4)}, 1fr)`;
+      metaGrid.style.display = '';
+      metaGrid.innerHTML = facts.map((f, i) => `
+        <div class="px-5 py-4 ${i<facts.length-1?'border-r':''}" style="border-color:var(--border);">
+          <p class="text-[9px] font-bold uppercase tracking-widest mb-1" style="color:var(--text-muted);">${f.label}</p>
+          <p class="text-sm font-bold" style="color:${f.colour||'var(--text)'};">${f.value}</p>
+        </div>`).join('');
+    } else {
+      metaGrid.style.display = 'none';
+    }
+
+    // Grammar note
+    const grammarWrap = sel('.lc-grammar-wrap');
+    if (card.grammar_note) {
+      sel('.lc-grammar-text').innerHTML = formatHighlight(card.grammar_note);
+      grammarWrap.classList.remove('hidden');
+    } else {
+      grammarWrap.classList.add('hidden');
+    }
+
+    // Examples
+    const examplesEl = sel('.lc-examples');
+    const rawEx = card.examples || (card.example_target ? [{ target:card.example_target, source:card.example_source }] : []);
+    examplesEl.innerHTML = rawEx.length
+      ? rawEx.map(ex => { const e=normaliseEx(ex); return `
+          <div class="rounded-2xl border overflow-hidden" style="border-color:var(--border);">
+            <div class="px-4 py-3" style="background-color:var(--bg);">
+              <p class="font-semibold leading-snug mb-1" style="color:var(--text);">${e.target}</p>
+              <p class="text-sm italic" style="color:var(--text-muted);">${e.source||''}</p>
+            </div>
+            ${e.note?`<div class="px-4 py-2 border-t" style="border-color:var(--border);">
+              <p class="text-[10px] font-bold font-mono" style="color:var(--espresso);">📐 ${e.note}</p>
+            </div>`:''}
+          </div>`; }).join('')
+      : '<p class="text-sm italic" style="color:var(--text-muted);">Kein Beispiel verfügbar.</p>';
+
+    // Tags
+    sel('.lc-tags').innerHTML = (card.tags||[]).map(t =>
+      `<span class="text-[10px] font-bold px-2 py-0.5 rounded-md border" style="border-color:var(--border);color:var(--text-muted);background-color:var(--bg);">${t}</span>`
+    ).join('');
+
+    // Progress UI
+    if (currentNum)  currentNum.textContent = String(idx+1);
+    if (progressBar) progressBar.style.width = `${Math.round(((idx+1)/cards.length)*100)}%`;
+    if (btnPrev)     btnPrev.disabled = idx === 0;
+    if (btnNext)     btnNext.innerHTML = idx === cards.length-1
+      ? '✓ Fertig'
+      : 'Weiter <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>';
+
+    updateDots();
+
+    // Re-bind audio button cleanly by cloning to strip old listeners
+    const oldBtn = sel('.lc-audio-btn');
+    if (oldBtn) {
+      const newBtn = oldBtn.cloneNode(true);
+      oldBtn.parentNode.replaceChild(newBtn, oldBtn);
+      newBtn.addEventListener('click', speakCurrent);
+    }
+  }
+
+  // ── Dot navigation ────────────────────────────────────────────────────────
+  function buildDots() {
+    if (!dotNav) return;
+    dotNav.innerHTML = '';
+    const maxVisible = 20;
+    const showAll = cards.length <= maxVisible;
+    cards.forEach((_, i) => {
+      if (!showAll && i >= maxVisible) return;
+      const dot = document.createElement('button');
+      dot.className = 'dot w-2 h-2 rounded-full transition-all duration-300 flex-shrink-0';
+      dot.style.backgroundColor = 'var(--border)';
+      dot.title = `Card ${i+1}`;
+      dot.addEventListener('click', () => goTo(i));
+      dotNav.appendChild(dot);
+    });
+    if (!showAll) {
+      const el = document.createElement('span');
+      el.textContent = `+${cards.length - maxVisible}`;
+      el.className = 'text-[10px] font-bold';
+      el.style.color = 'var(--text-muted)';
+      dotNav.appendChild(el);
+    }
+  }
+
+  function updateDots() {
+    dotNav?.querySelectorAll('.dot').forEach((dot, i) => {
+      dot.style.backgroundColor = i===currentIndex ? 'var(--espresso)' : 'var(--border)';
+      dot.style.width     = i===currentIndex ? '20px' : '8px';
+      dot.style.borderRadius = '4px';
+    });
+  }
+
+  // ── Audio ─────────────────────────────────────────────────────────────────
+  function speakCurrent() {
+    const card = cards[currentIndex];
+    if (!card) return;
+    if (window.DeutschAudioEngine) {
+      window.DeutschAudioEngine.speak(card.target || '', speechLang, 0.85);
+    }
+  }
+
+  // ── Navigate ─────────────────────────────────────────────────────────────
+  function goTo(idx) {
+    if (idx < 0 || idx >= cards.length) return;
+    currentIndex = idx;
+    renderCard(currentIndex);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  btnPrev?.addEventListener('click', () => goTo(currentIndex - 1));
+  btnNext?.addEventListener('click', () => {
+    if (currentIndex === cards.length - 1) window.location.href = '/vocabulary';
+    else goTo(currentIndex + 1);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') goTo(currentIndex + 1);
+    if (e.key === 'ArrowLeft')  goTo(currentIndex - 1);
+    if (e.key === 'a' || e.key === 'A') speakCurrent();
+  });
+
+  // ── Init ─────────────────────────────────────────────────────────────────
+  buildDots();
+  // Card 0 is already rendered server-side via LearningCard component.
+  // Sync progress UI to reflect card 0 state.
+  updateDots();
+  if (progressBar) progressBar.style.width = `${Math.round(1/cards.length*100)}%`;
+  // Update card 0 using client-side config too (ensures langConfig is applied)
+  renderCard(0);
+})();</script>

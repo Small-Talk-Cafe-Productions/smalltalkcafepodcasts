@@ -1,0 +1,640 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="description" content="Deutsch Lounge — Language Learning Trainer"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/languagelounge/favicon.svg"><meta name="generator" content="Astro v7.3.5"><title>Verbs with Vowel Change (essen, fahren...) — Deutsch Lounge</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet"><!-- Apply theme before paint to avoid flash --><script>
+      (function() {
+        const saved = localStorage.getItem('wortschatz_theme');
+        if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script><link rel="stylesheet" href="/languagelounge/_astro/Layout.BeSASyxj.css"></head><body class="antialiased min-h-screen flex flex-col" style="background-color:var(--bg);color:var(--text);"><!-- Header --><header class="sticky top-0 z-50 border-b" style="background-color:var(--bg);border-color:var(--border);"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between gap-4" style="height:4.5rem;"><!-- Logo + Language Switcher --><div class="flex items-center gap-4 shrink-0"><a href="/languagelounge/" class="flex items-center gap-2 group"><span class="font-outfit font-extrabold text-xl sm:text-2xl tracking-tight transition-colors" style="color:var(--text);">Small Talk Café <span class="font-normal text-base hidden sm:inline" style="color:var(--text-muted);">| <span id="site-name">Deutsch Lounge</span></span></span></a><!-- Language Selector Dropdown --><div class="relative" id="lang-dropdown-wrapper"><button id="lang-btn" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-sm font-bold transition-all hover:opacity-70" style="background-color:var(--bg); border-color:var(--border); color:var(--text);"><span id="lang-flag">🇩🇪</span><span id="lang-code">DE</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"></path></svg></button><div id="lang-menu" class="hidden absolute top-full left-0 mt-2 rounded-2xl border shadow-xl overflow-hidden z-50 min-w-[160px]" style="background-color:var(--card); border-color:var(--border);"><button class="lang-option w-full flex items-center gap-3 px-4 py-3 text-sm font-semibold text-left transition-colors hover:opacity-70" data-lang="de" data-flag="🇩🇪" data-code="DE" data-name="Deutsch Lounge" data-label="German" style="color:var(--text);"><span class="text-lg">🇩🇪</span><div><div class="font-bold" style="color:var(--text);">Deutsch</div><div class="text-xs" style="color:var(--text-muted);">German Learning</div></div></button><div class="border-t" style="border-color:var(--border);"></div><button class="lang-option w-full flex items-center gap-3 px-4 py-3 text-sm font-semibold text-left transition-colors hover:opacity-70" data-lang="es" data-flag="🇪🇸" data-code="ES" data-name="Spanish Gym" data-label="Spanish" style="color:var(--text);"><span class="text-lg">🇪🇸</span><div><div class="font-bold" style="color:var(--text);">Español</div><div class="text-xs" style="color:var(--text-muted);">Spanish Learning</div></div></button><div class="border-t" style="border-color:var(--border);"></div><button class="lang-option w-full flex items-center gap-3 px-4 py-3 text-sm font-semibold text-left transition-colors hover:opacity-70" data-lang="fr" data-flag="🇫🇷" data-code="FR" data-name="French Gym" data-label="French" style="color:var(--text);"><span class="text-lg">🇫🇷</span><div><div class="font-bold" style="color:var(--text);">Français</div><div class="text-xs" style="color:var(--text-muted);">French Learning</div></div></button></div></div></div><!-- Nav Links --><nav class="hidden md:flex gap-5 items-center"><a href="https://smalltalkcafe.de/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Small Talk Café Podcasts</a><span class="text-sm font-normal" style="color:var(--border);">|</span><a href="/languagelounge/vocabulary" data-german-nav class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Vokabeln</a><a href="/languagelounge/verbs" data-german-nav class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Verben</a><a href="/languagelounge/grammatik" data-german-nav class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Grammatik</a><a href="/languagelounge/redemittel" data-german-nav class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Redemittel</a><!-- Dark/Light Toggle --><button id="theme-toggle" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-sm font-semibold transition-all hover:opacity-70" style="border-color:var(--border); color:var(--text-muted);" aria-label="Toggle dark/light mode"><span id="theme-icon">☀️</span><span id="theme-label">Light</span></button></nav></div></header><!-- Coming Soon Overlay (shown for non-German languages) --><div id="coming-soon-overlay" class="hidden flex-1 flex items-center justify-center py-20 px-4"><div class="text-center max-w-lg mx-auto"><div class="text-7xl mb-6" id="coming-soon-flag">🌍</div><h1 class="font-outfit font-extrabold text-4xl sm:text-5xl mb-4" style="color:var(--text);">Coming Soon</h1><p class="text-lg mb-3" style="color:var(--text-muted);">We're working hard on the <strong id="coming-soon-lang">new language</strong> curriculum.</p><p class="text-base mb-8" style="color:var(--text-muted);">Stay tuned — it will be available very soon! In the meantime, explore our<strong>Deutsch Lounge</strong> to sharpen your German.</p><button id="coming-soon-back-btn" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-sm transition-all hover:opacity-80" style="background-color:var(--espresso); color:#fff;">🇩🇪 Switch to German</button></div></div><main id="main-content" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-1 w-full"><div class="max-w-4xl mx-auto py-6"><!-- Deck Header --><div class="flex items-start justify-between mb-8 gap-4 flex-wrap"><div><a href="/languagelounge/grammatik" class="text-xs font-bold flex items-center gap-1 mb-2 hover:opacity-70 transition-opacity capitalize" style="color:var(--espresso);"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg>grammatik</a><h1 class="text-2xl md:text-3xl font-extrabold font-outfit" style="color:var(--text);">Verbs with Vowel Change (essen, fahren...)</h1><p class="text-xs font-bold uppercase tracking-wider mt-1" style="color:var(--text-muted);">Verben mit Vokalwechsel &bull; A1 &bull; 16 Karten</p></div><div class="flex flex-col items-end gap-4"><!-- Learn / Train mode switcher --><div class="flex rounded-xl border overflow-hidden p-1 gap-1 w-full max-w-[300px]" style="background-color:var(--bg); border-color:var(--border);"><span class="flex-1 flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold transition-all" style="background-color:var(--espresso); color:#F5F2EB;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>Lernen</span><a href="/languagelounge/training/grammatik/train?level=a1&amp;deck=grammatik-a1-verben_vokalwechsel&amp;count=20&amp;mode=mc&amp;dir=en-de" class="flex-1 flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold hover:opacity-70 transition-all" style="color:var(--text-muted);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>Trainieren</a></div><!-- View switcher (Cards vs List) --><div class="flex rounded-xl border overflow-hidden p-1 gap-1 w-full max-w-[300px]" style="background-color:var(--bg); border-color:var(--border);"><button id="view-cards-btn" class="view-btn flex-1 flex items-center justify-center px-4 py-2 rounded-lg text-xs font-bold transition-all bg-[var(--espresso)] text-[#F5F2EB]">Karten</button><button id="view-list-btn" class="view-btn flex-1 flex items-center justify-center px-4 py-2 rounded-lg text-xs font-bold transition-all text-[var(--text-muted)] hover:opacity-70">Liste</button></div><!-- Progress indicator --><div id="progress-container" class="flex items-center gap-3"><div class="text-xs font-semibold" style="color:var(--text-muted);">Karte <span id="current-num" class="font-extrabold" style="color:var(--text);">1</span> / 16</div><div class="w-24 h-1.5 rounded-full overflow-hidden border" style="background-color:var(--bg);border-color:var(--border);"><div id="progress-bar" class="h-full transition-all duration-500 rounded-full" style="width:0%; background-color:var(--espresso);"></div></div></div></div></div><!-- ── Universal Study Card (rendered by LearningCard component) ── --><div id="card-view-wrap"><div id="card-host"><!-- The card shell — populated client-side by renderCard() --><div class="learning-card rounded-3xl border shadow-xl overflow-hidden" style="background-color:var(--card); border-color:var(--border);"><!-- ── Top bar ─────────────────────────────────── --><div class="lc-topbar flex items-center justify-between px-6 py-3.5 border-b" style="border-color:var(--border); background-color:var(--bg);"><div class="flex items-center gap-2"><span class="lc-type-badge text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-lg" style="background-color:var(--espresso); color:#F5F2EB;">—</span><span class="lc-level-badge text-[10px] font-bold px-2.5 py-1 rounded-lg cafe-badge"></span></div><button class="lc-audio-btn flex items-center justify-center w-11 h-11 rounded-full transition-transform hover:scale-105 active:scale-95 shadow-md flex-shrink-0" title="Anhören (A)" style="background-color:var(--espresso); color:#F5F2EB;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg></button></div><!-- ── Main word display ───────────────────────── --><div class="lc-hero px-7 py-8 text-center border-b" style="border-color:var(--border);"><div class="lc-article-wrap mb-1.5"><span class="lc-article text-xl font-bold"></span></div><h2 class="lc-word text-5xl md:text-6xl font-extrabold font-outfit mb-3" style="color:var(--text);">—</h2><p class="lc-translation text-lg font-semibold italic" style="color:var(--text-muted);"></p><p class="lc-forms text-sm font-medium mt-2" style="color:var(--text-muted);"></p></div><!-- ── Meta info grid ─────────────────────────── --><div class="lc-meta-grid grid border-b" style="border-color:var(--border);"><!-- populated by JS --></div><!-- ── Grammar note ───────────────────────────── --><div class="lc-grammar-wrap hidden px-7 py-5 border-b" style="border-color:var(--border); background-color:var(--bg);"><p class="text-[10px] font-bold uppercase tracking-widest mb-2" style="color:var(--espresso);">📌 <span class="lc-grammar-label">Grammatiknotiz</span></p><p class="lc-grammar-text text-sm leading-relaxed font-medium whitespace-pre-wrap" style="color:var(--text);"></p></div><!-- ── Type-specific block ────────────────────── --><!-- Verb conjugation (hidden by default, shown for verb cards) --><div class="lc-conjugation-wrap hidden border-b overflow-x-auto" style="border-color:var(--border);"><div class="lc-conjugation-inner"><!-- populated by JS --></div></div><!-- Connector word-order block --><div class="lc-wordorder-wrap hidden px-7 py-4 border-b" style="border-color:var(--border); background-color:var(--bg);"><div class="flex items-start gap-3 text-sm font-medium" style="color:var(--text-muted);"><span class="text-base flex-shrink-0">📐</span><span class="lc-wordorder-text"></span></div></div><!-- Phrase preposition block --><div class="lc-phrase-wrap hidden px-7 py-4 border-b" style="border-color:var(--border); background-color:var(--bg);"><p class="text-[10px] font-bold uppercase tracking-widest mb-2" style="color:var(--espresso);">Struktur</p><p class="lc-phrase-rule text-sm font-semibold" style="color:var(--text);"></p></div><!-- ── Examples ───────────────────────────────── --><div class="px-7 py-6 border-b" style="border-color:var(--border);"><p class="lc-examples-label text-[10px] font-bold uppercase tracking-widest mb-5" style="color:var(--text-muted);">Beispielsätze</p><div class="lc-examples space-y-3"><!-- populated by JS --></div></div><!-- ── Tags ───────────────────────────────────── --><div class="lc-tags-row px-7 py-4 flex items-center gap-2 flex-wrap"><span class="text-[10px] font-bold uppercase tracking-wider" style="color:var(--text-muted);">Tags:</span><div class="lc-tags flex gap-2 flex-wrap"></div></div></div><script>(function(){const cardJson = "{\"id\":\"grammatik-a1-verben_vokalwechsel-001\",\"target\":\"Vokalwechselverben (Starke Verben)\",\"source\":\"Verbs with Vowel Change (Strong Verbs)\",\"grammar_note\":\"These are verbs where the stem vowel changes when conjugated. They are also known as 'strong verbs' in German grammar, distinguishing them from 'weak verbs' (regular verbs). This vowel change is a fundamental aspect of German verb conjugation and must be learned for correct usage.\",\"example_target\":\"Ich fahre, aber du fährst.\",\"example_source\":\"I drive, but you drive.\",\"extra_examples\":[{\"de\":\"Ich esse, aber er isst.\",\"en\":\"I eat, but he eats.\"},{\"de\":\"Ich lese, aber sie liest.\",\"en\":\"I read, but she reads.\"}],\"common_error\":\"Confusing 'strong verbs' with 'weak verbs' and applying regular conjugation rules to verbs that require a vowel change.\",\"tags\":[\"grammatik\",\"a1\",\"verben\",\"vokalwechsel\",\"starke_verben\",\"intro\"],\"type\":\"grammar\"}";
+const langConfigJson = "{\"language_pair\":\"english_german\",\"target_lang\":\"de\",\"native_lang\":\"en\",\"target_lang_name\":\"Deutsch\",\"native_lang_name\":\"English\",\"speech_lang\":\"de-DE\",\"noun_metadata_fields\":[{\"key\":\"article\",\"label\":\"Artikel\",\"render\":\"article_badge\"},{\"key\":\"gender\",\"label\":\"Genus\",\"render\":\"gender_label\"},{\"key\":\"plural\",\"label\":\"Plural\",\"render\":\"text\"}],\"article_colours\":{\"der\":\"#4A7C9E\",\"die\":\"#B05070\",\"das\":\"#4A8A5A\"},\"gender_labels\":{\"m\":\"Maskulinum\",\"f\":\"Femininum\",\"n\":\"Neutrum\"},\"verb_tenses\":[\"Präsens\",\"Präteritum\",\"Perfekt\",\"Futur I\",\"Konjunktiv II\"],\"cases\":{\"nominative\":\"Nominativ\",\"accusative\":\"Akkusativ\",\"dative\":\"Dativ\",\"genitive\":\"Genitiv\"},\"ui_labels\":{\"learn_mode\":\"Lernen\",\"train_mode\":\"Trainieren\",\"examples_heading\":\"Beispielsätze\",\"grammar_note_heading\":\"Grammatiknotiz\",\"audio_button\":\"Anhören\",\"back_link\":\"Zurück\",\"card_counter\":\"Karte {current} / {total}\",\"next_button\":\"Weiter\",\"finish_button\":\"Fertig\",\"correct\":\"Richtig!\",\"wrong\":\"Falsch\"}}";
+
+  /**
+   * Client-side card renderer.
+   * Uses the universal card-renderer logic inline (no imports in Astro is:inline).
+   */
+
+  // ── Parse data ──────────────────────────────────────────────────────────
+  const card   = JSON.parse(cardJson);
+  const config = JSON.parse(langConfigJson);
+
+  // ── Helpers ─────────────────────────────────────────────────────────────
+  function stripArticle(word) {
+    return (word || '').replace(/^(der|die|das|el|la|los|las|le|les|l')\s+/i, '').trim();
+  }
+
+  function getArticleColour(article) {
+    if (!article || !config.article_colours) return 'var(--espresso)';
+    return config.article_colours[article.toLowerCase()] || 'var(--espresso)';
+  }
+
+  function getGenderLabel(gender) {
+    if (!gender) return '';
+    return (config.gender_labels || {})[gender] || gender;
+  }
+
+  function getTypeLabel() {
+    const tags = card.tags || [];
+    if (tags.includes('noun'))       return 'Substantiv';
+    if (tags.includes('verb'))       return 'Verb';
+    if (tags.includes('adjective'))  return 'Adjektiv';
+    if (tags.includes('expression')) return 'Ausdruck';
+    const map = { vocab:'Vokabel', verb:'Verb', phrase:'Phrase', connector:'Konnektor', grammar:'Grammatik' };
+    return map[card.type] || 'Karte';
+  }
+
+  function formatHighlight(text) {
+    if (!text) return '';
+    return String(text).replace(/\*(.*?)\*/g, '<span class="highlighter">$1</span>');
+  }
+
+  function normaliseExample(ex) {
+    return {
+      target: ex.target || ex.de || '',
+      source: ex.source || ex.en || '',
+      note: ex.note,
+    };
+  }
+
+  function getMetaFacts() {
+    const meta = { ...card.metadata, article: card.article, gender: card.gender, plural: card.plural, ...card.metadata };
+    const facts = [];
+    for (const field of (config.noun_metadata_fields || [])) {
+      const raw = meta[field.key] || card[field.key];
+      if (!raw || raw === '~') continue;
+      let value = String(raw);
+      let colour;
+      if (field.render === 'gender_label') value = getGenderLabel(raw);
+      else if (field.render === 'article_badge') colour = getArticleColour(raw);
+      facts.push({ label: field.label, value, colour });
+    }
+    return facts;
+  }
+
+  // ── Render ──────────────────────────────────────────────────────────────
+  const container = document.querySelector('.learning-card');
+  if (!container) { console.error('LearningCard: container not found'); }
+
+  function sel(cls) { return container?.querySelector(cls); }
+
+  // Type badge
+  sel('.lc-type-badge').textContent = getTypeLabel();
+
+  // Level badge
+  sel('.lc-level-badge').textContent = card.level || '';
+
+  // Article
+  const article = card.article || card.metadata?.article;
+  const articleWrap = sel('.lc-article-wrap');
+  const articleEl   = sel('.lc-article');
+  if (article && card.tags?.includes('noun') && !card.plural_only) {
+    articleEl.textContent  = article;
+    articleEl.style.color  = getArticleColour(article);
+    articleWrap.style.display = '';
+  } else {
+    articleWrap.style.display = 'none';
+  }
+
+  // Word
+  sel('.lc-word').textContent = stripArticle(card.target);
+
+  // Translation
+  sel('.lc-translation').textContent = card.source || '';
+
+  // Plural / forms
+  const plural = card.plural || card.metadata?.plural;
+  const formsEl = sel('.lc-forms');
+  if (plural && !card.plural_only) formsEl.textContent = `Pl. ${plural}`;
+  else if (card.plural_only) formsEl.textContent = 'nur Plural';
+  else formsEl.textContent = '';
+
+  // Meta grid
+  const metaGrid = sel('.lc-meta-grid');
+  const facts = getMetaFacts();
+  if (facts.length) {
+    const cols = Math.min(facts.length, 4);
+    metaGrid.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
+    metaGrid.innerHTML = facts.map((f, i) => `
+      <div class="px-5 py-4 ${i < facts.length - 1 ? 'border-r' : ''}" style="border-color:var(--border);">
+        <p class="text-[9px] font-bold uppercase tracking-widest mb-1" style="color:var(--text-muted);">${f.label}</p>
+        <p class="text-sm font-bold" style="color:${f.colour || 'var(--text)'};">${f.value}</p>
+      </div>
+    `).join('');
+  } else {
+    metaGrid.style.display = 'none';
+  }
+
+  // Grammar note
+  const grammarWrap = sel('.lc-grammar-wrap');
+  if (card.grammar_note) {
+    sel('.lc-grammar-text').innerHTML = formatHighlight(card.grammar_note);
+    grammarWrap.classList.remove('hidden');
+  }
+
+  // Grammar label from config
+  const uiLabels = config.ui_labels || {};
+  if (uiLabels.grammar_note_heading) sel('.lc-grammar-label').textContent = uiLabels.grammar_note_heading;
+  if (uiLabels.examples_heading)     sel('.lc-examples-label').textContent = uiLabels.examples_heading;
+  if (uiLabels.audio_button)         sel('.lc-audio-label').textContent    = uiLabels.audio_button;
+
+  // ── Type-specific blocks ─────────────────────────────────────────────────
+
+  // Verb: conjugation table
+  const type = card.type || (card.tags?.includes('verb') ? 'verb' : 'vocab');
+  if (type === 'verb' && card.conjugations?.length) {
+    const conjWrap  = sel('.lc-conjugation-wrap');
+    const conjInner = sel('.lc-conjugation-inner');
+    conjWrap.classList.remove('hidden');
+    conjInner.innerHTML = (config.verb_tenses || card.conjugations.map(t => t.tense)).map(tense => {
+      const t = card.conjugations.find(c => c.tense === tense);
+      if (!t) return '';
+      return `
+        <div class="border-b last:border-0" style="border-color:var(--border);">
+          <p class="text-[10px] font-bold uppercase tracking-widest px-5 py-2" style="background-color:var(--bg); color:var(--espresso);">${t.tense}</p>
+          <table class="w-full text-sm">
+            <tbody>
+              ${t.forms.map((f, ri) => `
+                <tr class="${ri % 2 === 0 ? '' : ''} border-t" style="border-color:var(--border);">
+                  <td class="px-5 py-2.5 font-bold w-24" style="color:var(--espresso);">${f.pronoun}</td>
+                  <td class="px-5 py-2.5 font-semibold" style="color:var(--text);">${f.form}</td>
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+        </div>
+      `;
+    }).join('');
+  }
+
+  // Connector: word order block
+  if (type === 'connector' && card.word_order) {
+    const woWrap = sel('.lc-wordorder-wrap');
+    sel('.lc-wordorder-text').textContent = card.word_order;
+    woWrap.classList.remove('hidden');
+  }
+
+  // Phrase: preposition rule block
+  if (type === 'phrase' && card.clause_type) {
+    const phraseWrap = sel('.lc-phrase-wrap');
+    sel('.lc-phrase-rule').textContent = card.clause_type;
+    phraseWrap.classList.remove('hidden');
+  }
+
+  // ── Examples ─────────────────────────────────────────────────────────────
+  const examplesEl = sel('.lc-examples');
+  const rawExamples = card.examples || (card.example_target || card.example_de ? [{ target: card.example_target || card.example_de, source: card.example_source || card.example_en }] : []);
+
+  if (rawExamples.length) {
+    examplesEl.innerHTML = rawExamples.map(ex => {
+      const e = normaliseExample(ex);
+      return `
+        <div class="rounded-2xl border overflow-hidden" style="border-color:var(--border);">
+          <div class="px-4 py-3" style="background-color:var(--bg);">
+            <p class="font-semibold leading-snug mb-1" style="color:var(--text);">${formatHighlight(e.target)}</p>
+            <p class="text-sm italic" style="color:var(--text-muted);">${formatHighlight(e.source || '')}</p>
+          </div>
+          ${e.note ? `<div class="px-4 py-2 border-t" style="border-color:var(--border);">
+            <p class="text-[10px] font-bold font-mono" style="color:var(--espresso);">📐 ${e.note}</p>
+          </div>` : ''}
+        </div>
+      `;
+    }).join('');
+  } else {
+    examplesEl.innerHTML = `<p class="text-sm italic" style="color:var(--text-muted);">Kein Beispiel verfügbar.</p>`;
+  }
+
+  // ── Tags ─────────────────────────────────────────────────────────────────
+  const tagsEl = sel('.lc-tags');
+  tagsEl.innerHTML = (card.tags || []).map(t => `
+    <span class="text-[10px] font-bold px-2 py-0.5 rounded-md border uppercase" style="border-color:var(--border); color:var(--text-muted); background-color:var(--bg);">${t}</span>
+  `).join('');
+
+  // ── Audio button ─────────────────────────────────────────────────────────
+  sel('.lc-audio-btn')?.addEventListener('click', () => {
+    if (window.DeutschAudioEngine) {
+      window.DeutschAudioEngine.speak(card.target || '', config.speech_lang || 'de-DE', 0.85);
+    }
+  });
+})();</script></div><!-- ── Navigation ───────────────────────────── --><div class="flex items-center justify-between mt-8 gap-4"><button id="btn-prev" disabled class="flex items-center gap-2 px-6 py-3 rounded-2xl border font-bold text-sm transition-all hover:opacity-70 active:scale-95 disabled:opacity-30 disabled:cursor-not-allowed" style="border-color:var(--border); color:var(--text); background-color:var(--card);"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg>Zurück</button><!-- Dot navigation --><div id="dot-nav" class="flex items-center gap-1.5 flex-wrap justify-center max-w-xs overflow-hidden" style="max-height:2rem;"><!-- populated by JS --></div><button id="btn-next" class="flex items-center gap-2 px-6 py-3 rounded-2xl font-bold text-sm transition-all hover:opacity-80 active:scale-95" style="background-color:var(--espresso); color:#F5F2EB;">Weiter<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg></button></div><!-- Keyboard hint --><p class="text-center text-xs font-medium mt-4" style="color:var(--text-muted);">← → Pfeiltasten zum Navigieren &nbsp;·&nbsp; A zum Anhören</p></div><!-- ── List View ───────────────────────────── --><div id="list-view-wrap" class="hidden space-y-6"><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Vokalwechselverben (Starke Verben)</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">Verbs with Vowel Change (Strong Verbs)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">These are verbs where the stem vowel changes when conjugated. They are also known as 'strong verbs' in German grammar, distinguishing them from 'weak verbs' (regular verbs). This vowel change is a fundamental aspect of German verb conjugation and must be learned for correct usage.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich fahre, aber du fährst.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I drive, but you drive.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Vokalwechsel: Nur 2. und 3. Person Singular</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">Vowel Change: Only 2nd and 3rd Person Singular</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">The vowel change in these verbs occurs exclusively in the 'du' (you, singular informal) and 'er/sie/es' (he/she/it) forms. All other persons ('ich', 'wir', 'ihr', 'sie/Sie' plural) follow the regular conjugation pattern without any vowel change in the verb stem. This is a crucial rule to remember.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich fahre, du fährst, er fährt. Wir fahren, ihr fahrt, sie fahren.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I drive, you drive, he drives. We drive, you (plural) drive, they drive.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Vokalwechsel-Typ 1: a → ä</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">Vowel Change Type 1: a → ä</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Many common verbs change their stem vowel 'a' to 'ä' (an Umlaut) in the 'du' and 'er/sie/es' forms. This is one of the most frequent vowel changes in German. Examples include 'fahren' (to drive), 'schlafen' (to sleep), 'waschen' (to wash), and 'tragen' (to carry/wear).</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Er fährt schnell zur Arbeit.</p><p class="italic text-[13px]" style="color:var(--text-muted);">He drives fast to work.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Konjugation: fahren (a → ä)</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">Conjugation: to drive (a → ä)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">The verb 'fahren' (to drive/go by vehicle) is a prime example of the 'a' to 'ä' vowel change. Remember to apply the Umlaut for 'du' and 'er/sie/es' forms, while keeping the standard personal endings. This verb is very common in daily conversation.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich fahre gern Auto, aber mein Bruder fährt lieber Fahrrad.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I like to drive a car, but my brother prefers to ride a bike.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Konjugation: schlafen (a → ä)</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">Conjugation: to sleep (a → ä)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">'Schlafen' (to sleep) also follows the 'a' to 'ä' vowel change pattern. Pay attention to the 'du' and 'er/sie/es' forms where the 'a' becomes 'ä'. The endings remain standard for each person. This verb is essential for describing daily routines.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich schlafe acht Stunden, aber mein Kind schläft nur sechs.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I sleep eight hours, but my child sleeps only six.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Konjugation: waschen (a → ä)</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">Conjugation: to wash (a → ä)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">The verb 'waschen' (to wash) is another example of the 'a' to 'ä' vowel change. Remember that the change only applies to the 'du' and 'er/sie/es' forms, making 'wäschst' and 'wäscht' the correct conjugations. This verb is useful for talking about chores and personal hygiene.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich wasche meine Hände, und er wäscht sein Auto.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I wash my hands, and he washes his car.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Vokalwechsel-Typ 2: e → i</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">Vowel Change Type 2: e → i</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Another common vowel change involves 'e' becoming 'i' in the 'du' and 'er/sie/es' forms. This applies to many important verbs like 'essen' (to eat), 'sprechen' (to speak), 'geben' (to give), 'helfen' (to help), and 'treffen' (to meet). This change is very frequent.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Er spricht sehr gut Deutsch.</p><p class="italic text-[13px]" style="color:var(--text-muted);">He speaks German very well.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Konjugation: essen (e → i)</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">Conjugation: to eat (e → i)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">The verb 'essen' (to eat) changes its stem vowel from 'e' to 'i' in the 'du' and 'er/sie/es' forms. Note that for 'du', the ending is just '-t' because the stem already ends in 'ss', avoiding an awkward 'isstst'. This is a very basic and frequently used verb.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich esse gern Obst, aber mein Freund isst lieber Fleisch.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I like to eat fruit, but my friend prefers to eat meat.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Konjugation: sprechen (e → i)</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">Conjugation: to speak (e → i)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">'Sprechen' (to speak) is another verb with the 'e' to 'i' vowel change. Remember to apply this change only to the 'du' and 'er/sie/es' forms, resulting in 'sprichst' and 'spricht'. This verb is crucial for communication and language learning.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich spreche Englisch, und mein Lehrer spricht auch Französisch.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I speak English, and my teacher also speaks French.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Konjugation: geben (e → i)</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">Conjugation: to give (e → i)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">The verb 'geben' (to give) also follows the 'e' to 'i' vowel change rule for 'du' and 'er/sie/es'. This means the forms are 'gibst' and 'gibt'. This verb is very common in expressing actions of giving or providing.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich gebe dir ein Geschenk, und er gibt mir einen Rat.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I give you a present, and he gives me advice.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Vokalwechsel-Typ 3: e → ie</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">Vowel Change Type 3: e → ie</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">A less common but important vowel change is 'e' to 'ie'. This occurs in verbs like 'lesen' (to read) and 'sehen' (to see) in the 'du' and 'er/sie/es' forms. This 'ie' sound is a long 'ee' sound, which is distinct from the short 'i' sound of the 'e → i' change.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Er liest jeden Tag die Zeitung.</p><p class="italic text-[13px]" style="color:var(--text-muted);">He reads the newspaper every day.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Konjugation: lesen (e → ie)</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">Conjugation: to read (e → ie)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">The verb 'lesen' (to read) changes its stem vowel from 'e' to 'ie' for 'du' and 'er/sie/es'. Additionally, because the verb stem ends in 's', the 'du' form only takes a '-t' ending, becoming 'liest' (not 'liestst'). This verb is fundamental for talking about hobbies and learning.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich lese gern Romane, aber meine Schwester liest lieber Krimis.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I like to read novels, but my sister prefers to read thrillers.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Konjugation: sehen (e → ie)</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">Conjugation: to see (e → ie)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">'Sehen' (to see) is another verb that changes 'e' to 'ie' in the 'du' and 'er/sie/es' forms. This results in 'siehst' and 'sieht'. This verb is frequently used in describing observations and perceptions, making its correct conjugation vital.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich sehe einen Vogel, und er sieht einen Baum.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I see a bird, and he sees a tree.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Kein Vokalwechsel bei ich, wir, ihr, sie/Sie</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">No Vowel Change for I, we, you (plural), they/You (formal)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">It is crucial to remember that vowel changes only occur in the 2nd and 3rd person singular. For 'ich' (I), 'wir' (we), 'ihr' (you plural informal), and 'sie/Sie' (they/You formal), the stem vowel remains unchanged, and regular personal endings are applied. Do not apply the vowel change to these forms.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich fahre, wir fahren, ihr fahrt, sie fahren. (Nicht: ich fähre)</p><p class="italic text-[13px]" style="color:var(--text-muted);">I drive, we drive, you (pl) drive, they drive. (Not: I drive with Umlaut)</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Häufiger Fehler: Vokalwechsel vergessen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">Common Error: Forgetting the Vowel Change</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">A very common mistake for learners is to forget to apply the vowel change in the 'du' and 'er/sie/es' forms. Always double-check if a verb is a 'strong verb' and requires a vowel change. Memorizing common vowel-changing verbs and their specific changes is key to avoiding this error.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Falsch: Du fahrst schnell. Richtig: Du fährst schnell.</p><p class="italic text-[13px]" style="color:var(--text-muted);">Wrong: You drive fast. Right: You drive fast.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Vergleich: Regelmäßige Verben vs. Vokalwechselverben</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">Comparison: Regular Verbs vs. Vowel Change Verbs</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Regular (weak) verbs keep their stem vowel consistent across all conjugations (e.g., 'machen' → 'ich mache, du machst, er macht'). Vowel-changing (strong) verbs, however, alter their stem vowel in the 'du' and 'er/sie/es' forms. This distinction is fundamental for correct German conjugation and understanding verb patterns.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Regelmäßig: Ich mache, du machst, er macht. Vokalwechsel: Ich fahre, du fährst, er fährt.</p><p class="italic text-[13px]" style="color:var(--text-muted);">Regular: I make, you make, he makes. Vowel Change: I drive, you drive, he drives.</p></div></div></div></div></div></div></main><footer class="mt-auto border-t py-8" style="background-color:var(--bg);border-color:var(--border);"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-medium" style="color:var(--text-muted);"><div>&copy; 2025 - 2026 Small Talk Café Podcasts. All rights reserved.</div><div class="flex gap-4">Made in Bayern ❤️ Los Geht's!</div></div></footer><!-- Theme toggle + Language switcher script --><script>
+      // ── Theme ──────────────────────────────────────
+      function applyTheme(dark) {
+        if (dark) {
+          document.documentElement.classList.add('dark');
+          localStorage.setItem('wortschatz_theme', 'dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+          localStorage.setItem('wortschatz_theme', 'light');
+        }
+        const icon = document.getElementById('theme-icon');
+        const label = document.getElementById('theme-label');
+        if (icon) icon.textContent = dark ? '🌙' : '☀️';
+        if (label) label.textContent = dark ? 'Dark' : 'Light';
+      }
+
+      const isDark = document.documentElement.classList.contains('dark');
+      applyTheme(isDark);
+
+      document.getElementById('theme-toggle')?.addEventListener('click', () => {
+        const nowDark = !document.documentElement.classList.contains('dark');
+        applyTheme(nowDark);
+      });
+
+      // ── Language Switcher ──────────────────────────
+      const LANG_CONTENT = {
+        de: {
+          name: 'Deutsch Lounge',
+          flag: '🇩🇪',
+          code: 'DE',
+          subtitle: 'Systematisches Vokabel- und Grammatiktraining',
+          tagline: 'Deutsch Lounge',
+          welcome: 'Willkommen beim',
+          cards: [
+            { title: 'Vokabeln', desc: 'Erweitere deinen Wortschatz. Lerne Nomen, Verben und Redewendungen mit Beispielsätzen.' },
+            { title: 'Verben', desc: 'Meistere reguläre, unregelmäßige, modale und reflexive Verben mit Konjugationstabellen.' },
+            { title: 'Grammatik', desc: 'Regeln verstehen & üben: Adjektivdeklination, Fälle, Präpositionen, Konnektoren & Phrasen.' },
+            { title: 'Redemittel', desc: 'Essentielle Phrasen für den Alltag, Diskussionen und Präsentationen.' }
+          ]
+        },
+        es: {
+          name: 'Spanish Gym',
+          flag: '🇪🇸',
+          code: 'ES',
+          subtitle: 'Tu compañero para aprender Español A1 – B2',
+          tagline: 'A1–B2 Spanish Curriculum',
+          welcome: 'Bienvenido al',
+          cards: [
+            { title: 'Vocabulario', desc: 'Amplía tu vocabulario A1–B2. Aprende sustantivos, verbos y frases con ejemplos contextuales.' },
+            { title: 'Verbos', desc: 'Domina verbos regulares, irregulares y reflexivos con tablas de conjugación.' },
+            { title: 'Gramática', desc: 'Entiende y practica las reglas gramaticales, casos y conectores.' },
+            { title: 'Expresiones', desc: 'Frases esenciales para el día a día, discusiones y presentaciones.' }
+          ]
+        },
+        fr: {
+          name: 'French Gym',
+          flag: '🇫🇷',
+          code: 'FR',
+          subtitle: 'Ton compagnon pour apprendre le Français A1 – B2',
+          tagline: 'A1–B2 French Curriculum',
+          welcome: 'Bienvenue au',
+          cards: [
+            { title: 'Vocabulaire', desc: 'Élargis ton vocabulaire A1–B2. Apprends des noms, verbes et expressions avec des exemples.' },
+            { title: 'Verbes', desc: 'Maîtrise les verbes réguliers, irréguliers et réflexifs avec des tableaux de conjugaison.' },
+            { title: 'Grammaire', desc: 'Comprends et pratique les règles de grammaire, les cas et les connecteurs.' },
+            { title: 'Expressions', desc: 'Phrases essentielles pour la vie quotidienne, les discussions et les présentations.' }
+          ]
+        }
+      };
+
+      function applyLanguage(lang) {
+        const c = LANG_CONTENT[lang] || LANG_CONTENT['de'];
+        localStorage.setItem('gym_language', lang);
+
+        // Header
+        const flag = document.getElementById('lang-flag');
+        const code = document.getElementById('lang-code');
+        const siteName = document.getElementById('site-name');
+        if (flag) flag.textContent = c.flag;
+        if (code) code.textContent = c.code;
+        if (siteName) siteName.textContent = c.name;
+
+        // Footer
+        const footerName = document.getElementById('footer-gym-name');
+        const footerLevel = document.getElementById('footer-level');
+        if (footerName) footerName.textContent = c.name;
+        if (footerLevel) footerLevel.textContent = c.tagline;
+
+        const isGerman = lang === 'de';
+        const overlay = document.getElementById('coming-soon-overlay');
+        const mainContent = document.getElementById('main-content');
+        const germanNavLinks = document.querySelectorAll('[data-german-nav]');
+
+        if (isGerman) {
+          // Show normal German content
+          if (overlay) overlay.classList.add('hidden');
+          if (mainContent) mainContent.classList.remove('hidden');
+          germanNavLinks.forEach(el => el.classList.remove('hidden'));
+
+          // Hero on homepage only
+          const heroTitle = document.getElementById('hero-gym-name');
+          const heroSubtitle = document.getElementById('hero-subtitle');
+          const heroWelcome = document.getElementById('hero-welcome');
+          if (heroTitle) heroTitle.textContent = c.name;
+          if (heroSubtitle) heroSubtitle.textContent = c.subtitle;
+          if (heroWelcome) heroWelcome.textContent = c.welcome;
+
+          // Category cards
+          const cardTitles = document.querySelectorAll('[data-card-title]');
+          const cardDescs = document.querySelectorAll('[data-card-desc]');
+          cardTitles.forEach((el, i) => {
+            if (c.cards[i]) el.textContent = c.cards[i].title;
+          });
+          cardDescs.forEach((el, i) => {
+            if (c.cards[i]) el.textContent = c.cards[i].desc;
+          });
+
+          // Nav links
+          const navLabels = document.querySelectorAll('[data-nav-label]');
+          navLabels.forEach((el, i) => {
+            if (c.cards[i]) el.textContent = c.cards[i].title;
+          });
+        } else {
+          // Non-German: show coming soon overlay, hide main content and German nav
+          if (mainContent) mainContent.classList.add('hidden');
+          germanNavLinks.forEach(el => el.classList.add('hidden'));
+
+          // Populate coming soon overlay
+          const comingFlag = document.getElementById('coming-soon-flag');
+          const comingLang = document.getElementById('coming-soon-lang');
+          if (comingFlag) comingFlag.textContent = c.flag;
+          if (comingLang) comingLang.textContent = c.name + ' content';
+
+          if (overlay) {
+            overlay.classList.remove('hidden');
+            overlay.classList.add('flex');
+          }
+        }
+      }
+
+      // Restore saved language
+      const savedLang = localStorage.getItem('gym_language') || 'de';
+      applyLanguage(savedLang);
+
+      // Dropdown toggle
+      const langBtn = document.getElementById('lang-btn');
+      const langMenu = document.getElementById('lang-menu');
+
+      langBtn?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        langMenu?.classList.toggle('hidden');
+      });
+
+      document.addEventListener('click', () => {
+        langMenu?.classList.add('hidden');
+      });
+
+      document.querySelectorAll('.lang-option').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const lang = btn.dataset.lang;
+          applyLanguage(lang);
+          langMenu?.classList.add('hidden');
+        });
+      });
+
+      // Coming soon "Switch to German" button
+      document.getElementById('coming-soon-back-btn')?.addEventListener('click', () => {
+        applyLanguage('de');
+      });
+    </script></body></html><script type="module" src="/languagelounge/_astro/_deckId_.astro_astro_type_script_index_0_lang.B80xyaMZ.js"></script><script>(function(){const cardsJson = "[{\"id\":\"grammatik-a1-verben_vokalwechsel-001\",\"target\":\"Vokalwechselverben (Starke Verben)\",\"source\":\"Verbs with Vowel Change (Strong Verbs)\",\"grammar_note\":\"These are verbs where the stem vowel changes when conjugated. They are also known as 'strong verbs' in German grammar, distinguishing them from 'weak verbs' (regular verbs). This vowel change is a fundamental aspect of German verb conjugation and must be learned for correct usage.\",\"example_target\":\"Ich fahre, aber du fährst.\",\"example_source\":\"I drive, but you drive.\",\"extra_examples\":[{\"de\":\"Ich esse, aber er isst.\",\"en\":\"I eat, but he eats.\"},{\"de\":\"Ich lese, aber sie liest.\",\"en\":\"I read, but she reads.\"}],\"common_error\":\"Confusing 'strong verbs' with 'weak verbs' and applying regular conjugation rules to verbs that require a vowel change.\",\"tags\":[\"grammatik\",\"a1\",\"verben\",\"vokalwechsel\",\"starke_verben\",\"intro\"],\"type\":\"grammar\"},{\"id\":\"grammatik-a1-verben_vokalwechsel-002\",\"target\":\"Vokalwechsel: Nur 2. und 3. Person Singular\",\"source\":\"Vowel Change: Only 2nd and 3rd Person Singular\",\"grammar_note\":\"The vowel change in these verbs occurs exclusively in the 'du' (you, singular informal) and 'er/sie/es' (he/she/it) forms. All other persons ('ich', 'wir', 'ihr', 'sie/Sie' plural) follow the regular conjugation pattern without any vowel change in the verb stem. This is a crucial rule to remember.\",\"example_target\":\"Ich fahre, du fährst, er fährt. Wir fahren, ihr fahrt, sie fahren.\",\"example_source\":\"I drive, you drive, he drives. We drive, you (plural) drive, they drive.\",\"extra_examples\":[{\"de\":\"Ich esse, du isst, er isst.\",\"en\":\"I eat, you eat, he eats.\"},{\"de\":\"Ich spreche, du sprichst, sie spricht.\",\"en\":\"I speak, you speak, she speaks.\"}],\"common_error\":\"Applying the vowel change to 'ich', 'wir', 'ihr', or 'sie/Sie' forms. Forgetting the change for 'du' or 'er/sie/es'.\",\"tags\":[\"grammatik\",\"a1\",\"verben\",\"vokalwechsel\",\"regel\",\"personen\"],\"type\":\"grammar\"},{\"id\":\"grammatik-a1-verben_vokalwechsel-003\",\"target\":\"Vokalwechsel-Typ 1: a → ä\",\"source\":\"Vowel Change Type 1: a → ä\",\"grammar_note\":\"Many common verbs change their stem vowel 'a' to 'ä' (an Umlaut) in the 'du' and 'er/sie/es' forms. This is one of the most frequent vowel changes in German. Examples include 'fahren' (to drive), 'schlafen' (to sleep), 'waschen' (to wash), and 'tragen' (to carry/wear).\",\"example_target\":\"Er fährt schnell zur Arbeit.\",\"example_source\":\"He drives fast to work.\",\"extra_examples\":[{\"de\":\"Du schläfst lange am Wochenende.\",\"en\":\"You sleep long on the weekend.\"},{\"de\":\"Sie trägt einen schönen Hut.\",\"en\":\"She wears a beautiful hat.\"}],\"common_error\":\"Forgetting the Umlaut (ä) and just conjugating with 'a' (e.g., 'du fahrst' instead of 'du fährst').\",\"tags\":[\"grammatik\",\"a1\",\"verben\",\"vokalwechsel\",\"a_ae\",\"typ\"],\"type\":\"grammar\"},{\"id\":\"grammatik-a1-verben_vokalwechsel-004\",\"target\":\"Konjugation: fahren (a → ä)\",\"source\":\"Conjugation: to drive (a → ä)\",\"grammar_note\":\"The verb 'fahren' (to drive/go by vehicle) is a prime example of the 'a' to 'ä' vowel change. Remember to apply the Umlaut for 'du' and 'er/sie/es' forms, while keeping the standard personal endings. This verb is very common in daily conversation.\",\"example_target\":\"Ich fahre gern Auto, aber mein Bruder fährt lieber Fahrrad.\",\"example_source\":\"I like to drive a car, but my brother prefers to ride a bike.\",\"extra_examples\":[{\"de\":\"Fährst du heute nach Hause?\",\"en\":\"Are you driving home today?\"},{\"de\":\"Wir fahren morgen in die Berge.\",\"en\":\"We are driving to the mountains tomorrow.\"}],\"common_error\":\"Incorrectly conjugating 'du' as 'du fahrst' or 'er' as 'er fahrt'.\",\"tags\":[\"grammatik\",\"a1\",\"verben\",\"vokalwechsel\",\"fahren\",\"a_ae\",\"konjugation\"],\"type\":\"grammar\"},{\"id\":\"grammatik-a1-verben_vokalwechsel-005\",\"target\":\"Konjugation: schlafen (a → ä)\",\"source\":\"Conjugation: to sleep (a → ä)\",\"grammar_note\":\"'Schlafen' (to sleep) also follows the 'a' to 'ä' vowel change pattern. Pay attention to the 'du' and 'er/sie/es' forms where the 'a' becomes 'ä'. The endings remain standard for each person. This verb is essential for describing daily routines.\",\"example_target\":\"Ich schlafe acht Stunden, aber mein Kind schläft nur sechs.\",\"example_source\":\"I sleep eight hours, but my child sleeps only six.\",\"extra_examples\":[{\"de\":\"Schläfst du schon?\",\"en\":\"Are you sleeping already?\"},{\"de\":\"Sie schlafen immer lange am Wochenende.\",\"en\":\"They always sleep long on the weekend.\"}],\"common_error\":\"Forgetting the Umlaut in 'du schläfst' or 'er schläft'.\",\"tags\":[\"grammatik\",\"a1\",\"verben\",\"vokalwechsel\",\"schlafen\",\"a_ae\",\"konjugation\"],\"type\":\"grammar\"},{\"id\":\"grammatik-a1-verben_vokalwechsel-006\",\"target\":\"Konjugation: waschen (a → ä)\",\"source\":\"Conjugation: to wash (a → ä)\",\"grammar_note\":\"The verb 'waschen' (to wash) is another example of the 'a' to 'ä' vowel change. Remember that the change only applies to the 'du' and 'er/sie/es' forms, making 'wäschst' and 'wäscht' the correct conjugations. This verb is useful for talking about chores and personal hygiene.\",\"example_target\":\"Ich wasche meine Hände, und er wäscht sein Auto.\",\"example_source\":\"I wash my hands, and he washes his car.\",\"extra_examples\":[{\"de\":\"Wäschst du deine Kleidung selbst?\",\"en\":\"Do you wash your clothes yourself?\"},{\"de\":\"Wir waschen das Geschirr nach dem Essen.\",\"en\":\"We wash the dishes after eating.\"}],\"common_error\":\"Using 'du waschst' or 'er wascht' instead of the correct forms with 'ä'.\",\"tags\":[\"grammatik\",\"a1\",\"verben\",\"vokalwechsel\",\"waschen\",\"a_ae\",\"konjugation\"],\"type\":\"grammar\"},{\"id\":\"grammatik-a1-verben_vokalwechsel-007\",\"target\":\"Vokalwechsel-Typ 2: e → i\",\"source\":\"Vowel Change Type 2: e → i\",\"grammar_note\":\"Another common vowel change involves 'e' becoming 'i' in the 'du' and 'er/sie/es' forms. This applies to many important verbs like 'essen' (to eat), 'sprechen' (to speak), 'geben' (to give), 'helfen' (to help), and 'treffen' (to meet). This change is very frequent.\",\"example_target\":\"Er spricht sehr gut Deutsch.\",\"example_source\":\"He speaks German very well.\",\"extra_examples\":[{\"de\":\"Du isst gern Pizza.\",\"en\":\"You like to eat pizza.\"},{\"de\":\"Sie gibt mir ein Buch.\",\"en\":\"She gives me a book.\"}],\"common_error\":\"Forgetting the 'e' to 'i' change and conjugating regularly (e.g., 'du essest' or 'er sprecht').\",\"tags\":[\"grammatik\",\"a1\",\"verben\",\"vokalwechsel\",\"e_i\",\"typ\"],\"type\":\"grammar\"},{\"id\":\"grammatik-a1-verben_vokalwechsel-008\",\"target\":\"Konjugation: essen (e → i)\",\"source\":\"Conjugation: to eat (e → i)\",\"grammar_note\":\"The verb 'essen' (to eat) changes its stem vowel from 'e' to 'i' in the 'du' and 'er/sie/es' forms. Note that for 'du', the ending is just '-t' because the stem already ends in 'ss', avoiding an awkward 'isstst'. This is a very basic and frequently used verb.\",\"example_target\":\"Ich esse gern Obst, aber mein Freund isst lieber Fleisch.\",\"example_source\":\"I like to eat fruit, but my friend prefers to eat meat.\",\"extra_examples\":[{\"de\":\"Was isst du zum Frühstück?\",\"en\":\"What do you eat for breakfast?\"},{\"de\":\"Wir essen heute Abend im Restaurant.\",\"en\":\"We are eating at the restaurant tonight.\"}],\"common_error\":\"Conjugating 'du' as 'du isstst' (incorrect double 's' and 't' ending) or 'du essest'.\",\"tags\":[\"grammatik\",\"a1\",\"verben\",\"vokalwechsel\",\"essen\",\"e_i\",\"konjugation\",\"s_ending\"],\"type\":\"grammar\"},{\"id\":\"grammatik-a1-verben_vokalwechsel-009\",\"target\":\"Konjugation: sprechen (e → i)\",\"source\":\"Conjugation: to speak (e → i)\",\"grammar_note\":\"'Sprechen' (to speak) is another verb with the 'e' to 'i' vowel change. Remember to apply this change only to the 'du' and 'er/sie/es' forms, resulting in 'sprichst' and 'spricht'. This verb is crucial for communication and language learning.\",\"example_target\":\"Ich spreche Englisch, und mein Lehrer spricht auch Französisch.\",\"example_source\":\"I speak English, and my teacher also speaks French.\",\"extra_examples\":[{\"de\":\"Sprichst du Deutsch mit deinen Freunden?\",\"en\":\"Do you speak German with your friends?\"},{\"de\":\"Sie sprechen sehr schnell.\",\"en\":\"They speak very fast.\"}],\"common_error\":\"Using 'du sprechst' or 'er sprecht' instead of the correct forms with 'i'.\",\"tags\":[\"grammatik\",\"a1\",\"verben\",\"vokalwechsel\",\"sprechen\",\"e_i\",\"konjugation\"],\"type\":\"grammar\"},{\"id\":\"grammatik-a1-verben_vokalwechsel-010\",\"target\":\"Konjugation: geben (e → i)\",\"source\":\"Conjugation: to give (e → i)\",\"grammar_note\":\"The verb 'geben' (to give) also follows the 'e' to 'i' vowel change rule for 'du' and 'er/sie/es'. This means the forms are 'gibst' and 'gibt'. This verb is very common in expressing actions of giving or providing.\",\"example_target\":\"Ich gebe dir ein Geschenk, und er gibt mir einen Rat.\",\"example_source\":\"I give you a present, and he gives me advice.\",\"extra_examples\":[{\"de\":\"Gibst du mir bitte das Salz?\",\"en\":\"Do you give me the salt, please?\"},{\"de\":\"Wir geben viel Geld für Bücher aus.\",\"en\":\"We spend a lot of money on books.\"}],\"common_error\":\"Forgetting the vowel change and saying 'du gebst' or 'er gebt'.\",\"tags\":[\"grammatik\",\"a1\",\"verben\",\"vokalwechsel\",\"geben\",\"e_i\",\"konjugation\"],\"type\":\"grammar\"},{\"id\":\"grammatik-a1-verben_vokalwechsel-011\",\"target\":\"Vokalwechsel-Typ 3: e → ie\",\"source\":\"Vowel Change Type 3: e → ie\",\"grammar_note\":\"A less common but important vowel change is 'e' to 'ie'. This occurs in verbs like 'lesen' (to read) and 'sehen' (to see) in the 'du' and 'er/sie/es' forms. This 'ie' sound is a long 'ee' sound, which is distinct from the short 'i' sound of the 'e → i' change.\",\"example_target\":\"Er liest jeden Tag die Zeitung.\",\"example_source\":\"He reads the newspaper every day.\",\"extra_examples\":[{\"de\":\"Sie sieht den Film im Kino.\",\"en\":\"She sees the movie in the cinema.\"},{\"de\":\"Du liest ein interessantes Buch.\",\"en\":\"You read an interesting book.\"}],\"common_error\":\"Confusing this change with 'e' to 'i' or forgetting the 'i' altogether (e.g., 'du lest' instead of 'du liest').\",\"tags\":[\"grammatik\",\"a1\",\"verben\",\"vokalwechsel\",\"e_ie\",\"typ\"],\"type\":\"grammar\"},{\"id\":\"grammatik-a1-verben_vokalwechsel-012\",\"target\":\"Konjugation: lesen (e → ie)\",\"source\":\"Conjugation: to read (e → ie)\",\"grammar_note\":\"The verb 'lesen' (to read) changes its stem vowel from 'e' to 'ie' for 'du' and 'er/sie/es'. Additionally, because the verb stem ends in 's', the 'du' form only takes a '-t' ending, becoming 'liest' (not 'liestst'). This verb is fundamental for talking about hobbies and learning.\",\"example_target\":\"Ich lese gern Romane, aber meine Schwester liest lieber Krimis.\",\"example_source\":\"I like to read novels, but my sister prefers to read thrillers.\",\"extra_examples\":[{\"de\":\"Liest du die E-Mails jeden Morgen?\",\"en\":\"Do you read the emails every morning?\"},{\"de\":\"Wir lesen ein neues Buch in der Schule.\",\"en\":\"We are reading a new book at school.\"}],\"common_error\":\"Conjugating 'du' as 'du lesest' or 'du liestst'.\",\"tags\":[\"grammatik\",\"a1\",\"verben\",\"vokalwechsel\",\"lesen\",\"e_ie\",\"konjugation\",\"s_ending\"],\"type\":\"grammar\"},{\"id\":\"grammatik-a1-verben_vokalwechsel-013\",\"target\":\"Konjugation: sehen (e → ie)\",\"source\":\"Conjugation: to see (e → ie)\",\"grammar_note\":\"'Sehen' (to see) is another verb that changes 'e' to 'ie' in the 'du' and 'er/sie/es' forms. This results in 'siehst' and 'sieht'. This verb is frequently used in describing observations and perceptions, making its correct conjugation vital.\",\"example_target\":\"Ich sehe einen Vogel, und er sieht einen Baum.\",\"example_source\":\"I see a bird, and he sees a tree.\",\"extra_examples\":[{\"de\":\"Siehst du den Mond am Himmel?\",\"en\":\"Do you see the moon in the sky?\"},{\"de\":\"Wir sehen uns morgen im Café.\",\"en\":\"We'll see each other tomorrow at the cafe.\"}],\"common_error\":\"Using 'du sehst' or 'er seht' instead of the correct forms with 'ie'.\",\"tags\":[\"grammatik\",\"a1\",\"verben\",\"vokalwechsel\",\"sehen\",\"e_ie\",\"konjugation\"],\"type\":\"grammar\"},{\"id\":\"grammatik-a1-verben_vokalwechsel-014\",\"target\":\"Kein Vokalwechsel bei ich, wir, ihr, sie/Sie\",\"source\":\"No Vowel Change for I, we, you (plural), they/You (formal)\",\"grammar_note\":\"It is crucial to remember that vowel changes only occur in the 2nd and 3rd person singular. For 'ich' (I), 'wir' (we), 'ihr' (you plural informal), and 'sie/Sie' (they/You formal), the stem vowel remains unchanged, and regular personal endings are applied. Do not apply the vowel change to these forms.\",\"example_target\":\"Ich fahre, wir fahren, ihr fahrt, sie fahren. (Nicht: ich fähre)\",\"example_source\":\"I drive, we drive, you (pl) drive, they drive. (Not: I drive with Umlaut)\",\"extra_examples\":[{\"de\":\"Ich esse, wir essen, ihr esst, sie essen.\",\"en\":\"I eat, we eat, you (pl) eat, they eat.\"},{\"de\":\"Ich spreche, wir sprechen, ihr sprecht, sie sprechen.\",\"en\":\"I speak, we speak, you (pl) speak, they speak.\"}],\"common_error\":\"Applying the vowel change to 'ich' (e.g., 'ich fähre'), 'wir' (e.g., 'wir fähren'), or 'ihr' (e.g., 'ihr fährt').\",\"tags\":[\"grammatik\",\"a1\",\"verben\",\"vokalwechsel\",\"personen\",\"kein_wechsel\"],\"type\":\"grammar\"},{\"id\":\"grammatik-a1-verben_vokalwechsel-015\",\"target\":\"Häufiger Fehler: Vokalwechsel vergessen\",\"source\":\"Common Error: Forgetting the Vowel Change\",\"grammar_note\":\"A very common mistake for learners is to forget to apply the vowel change in the 'du' and 'er/sie/es' forms. Always double-check if a verb is a 'strong verb' and requires a vowel change. Memorizing common vowel-changing verbs and their specific changes is key to avoiding this error.\",\"example_target\":\"Falsch: Du fahrst schnell. Richtig: Du fährst schnell.\",\"example_source\":\"Wrong: You drive fast. Right: You drive fast.\",\"extra_examples\":[{\"de\":\"Falsch: Er sprecht Deutsch. Richtig: Er spricht Deutsch.\",\"en\":\"Wrong: He speaks German. Right: He speaks German.\"},{\"de\":\"Falsch: Sie lest ein Buch. Richtig: Sie liest ein Buch.\",\"en\":\"Wrong: She reads a book. Right: She reads a book.\"}],\"common_error\":\"Consistently conjugating vowel-changing verbs as if they were regular (weak) verbs, especially in spoken German, leading to misunderstandings.\",\"tags\":[\"grammatik\",\"a1\",\"verben\",\"vokalwechsel\",\"fehler\",\"common_error\"],\"type\":\"grammar\"},{\"id\":\"grammatik-a1-verben_vokalwechsel-016\",\"target\":\"Vergleich: Regelmäßige Verben vs. Vokalwechselverben\",\"source\":\"Comparison: Regular Verbs vs. Vowel Change Verbs\",\"grammar_note\":\"Regular (weak) verbs keep their stem vowel consistent across all conjugations (e.g., 'machen' → 'ich mache, du machst, er macht'). Vowel-changing (strong) verbs, however, alter their stem vowel in the 'du' and 'er/sie/es' forms. This distinction is fundamental for correct German conjugation and understanding verb patterns.\",\"example_target\":\"Regelmäßig: Ich mache, du machst, er macht. Vokalwechsel: Ich fahre, du fährst, er fährt.\",\"example_source\":\"Regular: I make, you make, he makes. Vowel Change: I drive, you drive, he drives.\",\"extra_examples\":[{\"de\":\"Regelmäßig: Ich kaufe, du kaufst. Vokalwechsel: Ich esse, du isst.\",\"en\":\"Regular: I buy, you buy. Vowel Change: I eat, you eat.\"},{\"de\":\"Regelmäßig: Ich lerne, du lernst. Vokalwechsel: Ich spreche, du sprichst.\",\"en\":\"Regular: I learn, you learn. Vowel Change: I speak, you speak.\"}],\"common_error\":\"Over-generalizing the vowel change rule to all verbs, including regular ones, or vice-versa.\",\"tags\":[\"grammatik\",\"a1\",\"verben\",\"vokalwechsel\",\"vergleich\",\"regelmäßige_verben\"],\"type\":\"grammar\"}]";
+const langConfigJson = "{\"language_pair\":\"english_german\",\"target_lang\":\"de\",\"native_lang\":\"en\",\"target_lang_name\":\"Deutsch\",\"native_lang_name\":\"English\",\"speech_lang\":\"de-DE\",\"noun_metadata_fields\":[{\"key\":\"article\",\"label\":\"Artikel\",\"render\":\"article_badge\"},{\"key\":\"gender\",\"label\":\"Genus\",\"render\":\"gender_label\"},{\"key\":\"plural\",\"label\":\"Plural\",\"render\":\"text\"}],\"article_colours\":{\"der\":\"#4A7C9E\",\"die\":\"#B05070\",\"das\":\"#4A8A5A\"},\"gender_labels\":{\"m\":\"Maskulinum\",\"f\":\"Femininum\",\"n\":\"Neutrum\"},\"verb_tenses\":[\"Präsens\",\"Präteritum\",\"Perfekt\",\"Futur I\",\"Konjunktiv II\"],\"cases\":{\"nominative\":\"Nominativ\",\"accusative\":\"Akkusativ\",\"dative\":\"Dativ\",\"genitive\":\"Genitiv\"},\"ui_labels\":{\"learn_mode\":\"Lernen\",\"train_mode\":\"Trainieren\",\"examples_heading\":\"Beispielsätze\",\"grammar_note_heading\":\"Grammatiknotiz\",\"audio_button\":\"Anhören\",\"back_link\":\"Zurück\",\"card_counter\":\"Karte {current} / {total}\",\"next_button\":\"Weiter\",\"finish_button\":\"Fertig\",\"correct\":\"Richtig!\",\"wrong\":\"Falsch\"}}";
+const category = "grammatik";
+
+  const cards     = JSON.parse(cardsJson);
+  const config    = JSON.parse(langConfigJson);
+  let currentIndex = 0;
+
+  const dotNav    = document.getElementById('dot-nav');
+  const currentNum = document.getElementById('current-num');
+  const progressBar = document.getElementById('progress-bar');
+  const btnPrev   = document.getElementById('btn-prev');
+  const btnNext   = document.getElementById('btn-next');
+  const cardHost  = document.getElementById('card-host');
+  const progressCont = document.getElementById('progress-container');
+
+  const cardViewWrap = document.getElementById('card-view-wrap');
+  const listViewWrap = document.getElementById('list-view-wrap');
+  const btnViewCards = document.getElementById('view-cards-btn');
+  const btnViewList  = document.getElementById('view-list-btn');
+
+  // Toggle Logic
+  function setViewMode(mode) {
+    if (mode === 'list') {
+      cardViewWrap.classList.add('hidden');
+      listViewWrap.classList.remove('hidden');
+      progressCont.classList.add('hidden');
+      btnViewList.classList.add('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewList.classList.remove('text-[var(--text-muted)]');
+      btnViewCards.classList.remove('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewCards.classList.add('text-[var(--text-muted)]');
+    } else {
+      listViewWrap.classList.add('hidden');
+      cardViewWrap.classList.remove('hidden');
+      progressCont.classList.remove('hidden');
+      btnViewCards.classList.add('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewCards.classList.remove('text-[var(--text-muted)]');
+      btnViewList.classList.remove('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewList.classList.add('text-[var(--text-muted)]');
+    }
+  }
+
+  btnViewCards.addEventListener('click', () => setViewMode('cards'));
+  btnViewList.addEventListener('click', () => setViewMode('list'));
+
+  // Default Grammatik and Redemittel to list view!
+  if (category === 'grammatik' || category === 'redemittel' || category === 'phrases') {
+    setViewMode('list');
+  }
+
+
+
+  // ── Helpers (mirror card-renderer.ts — no module imports in inline scripts) ──
+  const articleColours = config.article_colours || { der:'#4A7C9E', die:'#B05070', das:'#4A8A5A' };
+  const genderLabels   = config.gender_labels   || { m:'Maskulinum', f:'Femininum', n:'Neutrum'  };
+  const speechLang     = config.speech_lang     || 'de-DE';
+
+  function stripArticle(w) {
+    return (w || '').replace(/^(der|die|das|el|la|los|las|le|les|l')\s+/i,'').trim();
+  }
+
+  function getTypeLabel(card) {
+    const tags = card.tags || [];
+    if (tags.includes('noun'))       return 'Substantiv';
+    if (tags.includes('verb'))       return 'Verb';
+    if (tags.includes('adjective'))  return 'Adjektiv';
+    if (tags.includes('expression')) return 'Ausdruck';
+    return { vocab:'Vokabel', verb:'Verb', phrase:'Phrase', connector:'Konnektor', grammar:'Grammatik' }[card.type] || 'Vokabel';
+  }
+
+  function normaliseEx(ex) {
+    return { target: ex.target||ex.de||'', source: ex.source||ex.en||'', note: ex.note };
+  }
+
+  function getMetaFacts(card) {
+    const meta = { ...(card.metadata||{}), article:card.article, gender:card.gender, plural:card.plural };
+    const facts = [];
+    for (const field of (config.noun_metadata_fields || [])) {
+      const raw = meta[field.key];
+      if (!raw || raw==='~') continue;
+      let value = String(raw), colour;
+      if (field.render === 'gender_label')  value  = genderLabels[raw] || raw;
+      if (field.render === 'article_badge') colour = articleColours[raw.toLowerCase()] || 'var(--espresso)';
+      facts.push({ label: field.label, value, colour });
+    }
+    return facts;
+  }
+
+  // ── Card renderer ─────────────────────────────────────────────────────────
+  function renderCard(idx) {
+    const card = cards[idx];
+    if (!card || !cardHost) return;
+
+    const lc = cardHost.querySelector('.learning-card');
+    if (!lc) return;
+
+    function sel(cls) { return lc.querySelector(cls); }
+
+    // Type badge + level
+    sel('.lc-type-badge').textContent = getTypeLabel(card);
+    sel('.lc-level-badge').textContent = (card.level || '').toUpperCase();
+
+    // Article
+    const article = card.article || card.metadata?.article;
+    const articleWrap = sel('.lc-article-wrap');
+    const articleEl   = sel('.lc-article');
+    if (article && (card.tags||[]).includes('noun') && !card.plural_only) {
+      articleEl.textContent = article;
+      articleEl.style.color = articleColours[article.toLowerCase()] || 'var(--espresso)';
+      articleWrap.style.display = '';
+    } else {
+      articleWrap.style.display = 'none';
+    }
+
+    // Word / translation / forms
+    sel('.lc-word').textContent        = stripArticle(card.target);
+    sel('.lc-translation').textContent = card.source || '';
+    const plural = card.plural || card.metadata?.plural;
+    sel('.lc-forms').textContent = plural && !card.plural_only ? `Pl. ${plural}` : card.plural_only ? 'nur Plural' : '';
+
+    // Meta grid
+    const metaGrid = sel('.lc-meta-grid');
+    const facts = getMetaFacts(card);
+    if (facts.length) {
+      metaGrid.style.gridTemplateColumns = `repeat(${Math.min(facts.length,4)}, 1fr)`;
+      metaGrid.style.display = '';
+      metaGrid.innerHTML = facts.map((f, i) => `
+        <div class="px-5 py-4 ${i<facts.length-1?'border-r':''}" style="border-color:var(--border);">
+          <p class="text-[9px] font-bold uppercase tracking-widest mb-1" style="color:var(--text-muted);">${f.label}</p>
+          <p class="text-sm font-bold" style="color:${f.colour||'var(--text)'};">${f.value}</p>
+        </div>`).join('');
+    } else {
+      metaGrid.style.display = 'none';
+    }
+
+    // Grammar note
+    const grammarWrap = sel('.lc-grammar-wrap');
+    if (card.grammar_note) {
+      sel('.lc-grammar-text').innerHTML = formatHighlight(card.grammar_note);
+      grammarWrap.classList.remove('hidden');
+    } else {
+      grammarWrap.classList.add('hidden');
+    }
+
+    // Examples
+    const examplesEl = sel('.lc-examples');
+    const rawEx = card.examples || (card.example_target ? [{ target:card.example_target, source:card.example_source }] : []);
+    examplesEl.innerHTML = rawEx.length
+      ? rawEx.map(ex => { const e=normaliseEx(ex); return `
+          <div class="rounded-2xl border overflow-hidden" style="border-color:var(--border);">
+            <div class="px-4 py-3" style="background-color:var(--bg);">
+              <p class="font-semibold leading-snug mb-1" style="color:var(--text);">${e.target}</p>
+              <p class="text-sm italic" style="color:var(--text-muted);">${e.source||''}</p>
+            </div>
+            ${e.note?`<div class="px-4 py-2 border-t" style="border-color:var(--border);">
+              <p class="text-[10px] font-bold font-mono" style="color:var(--espresso);">📐 ${e.note}</p>
+            </div>`:''}
+          </div>`; }).join('')
+      : '<p class="text-sm italic" style="color:var(--text-muted);">Kein Beispiel verfügbar.</p>';
+
+    // Tags
+    sel('.lc-tags').innerHTML = (card.tags||[]).map(t =>
+      `<span class="text-[10px] font-bold px-2 py-0.5 rounded-md border" style="border-color:var(--border);color:var(--text-muted);background-color:var(--bg);">${t}</span>`
+    ).join('');
+
+    // Progress UI
+    if (currentNum)  currentNum.textContent = String(idx+1);
+    if (progressBar) progressBar.style.width = `${Math.round(((idx+1)/cards.length)*100)}%`;
+    if (btnPrev)     btnPrev.disabled = idx === 0;
+    if (btnNext)     btnNext.innerHTML = idx === cards.length-1
+      ? '✓ Fertig'
+      : 'Weiter <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>';
+
+    updateDots();
+
+    // Re-bind audio button cleanly by cloning to strip old listeners
+    const oldBtn = sel('.lc-audio-btn');
+    if (oldBtn) {
+      const newBtn = oldBtn.cloneNode(true);
+      oldBtn.parentNode.replaceChild(newBtn, oldBtn);
+      newBtn.addEventListener('click', speakCurrent);
+    }
+  }
+
+  // ── Dot navigation ────────────────────────────────────────────────────────
+  function buildDots() {
+    if (!dotNav) return;
+    dotNav.innerHTML = '';
+    const maxVisible = 20;
+    const showAll = cards.length <= maxVisible;
+    cards.forEach((_, i) => {
+      if (!showAll && i >= maxVisible) return;
+      const dot = document.createElement('button');
+      dot.className = 'dot w-2 h-2 rounded-full transition-all duration-300 flex-shrink-0';
+      dot.style.backgroundColor = 'var(--border)';
+      dot.title = `Card ${i+1}`;
+      dot.addEventListener('click', () => goTo(i));
+      dotNav.appendChild(dot);
+    });
+    if (!showAll) {
+      const el = document.createElement('span');
+      el.textContent = `+${cards.length - maxVisible}`;
+      el.className = 'text-[10px] font-bold';
+      el.style.color = 'var(--text-muted)';
+      dotNav.appendChild(el);
+    }
+  }
+
+  function updateDots() {
+    dotNav?.querySelectorAll('.dot').forEach((dot, i) => {
+      dot.style.backgroundColor = i===currentIndex ? 'var(--espresso)' : 'var(--border)';
+      dot.style.width     = i===currentIndex ? '20px' : '8px';
+      dot.style.borderRadius = '4px';
+    });
+  }
+
+  // ── Audio ─────────────────────────────────────────────────────────────────
+  function speakCurrent() {
+    const card = cards[currentIndex];
+    if (!card) return;
+    if (window.DeutschAudioEngine) {
+      window.DeutschAudioEngine.speak(card.target || '', speechLang, 0.85);
+    }
+  }
+
+  // ── Navigate ─────────────────────────────────────────────────────────────
+  function goTo(idx) {
+    if (idx < 0 || idx >= cards.length) return;
+    currentIndex = idx;
+    renderCard(currentIndex);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  btnPrev?.addEventListener('click', () => goTo(currentIndex - 1));
+  btnNext?.addEventListener('click', () => {
+    if (currentIndex === cards.length - 1) window.location.href = '/vocabulary';
+    else goTo(currentIndex + 1);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') goTo(currentIndex + 1);
+    if (e.key === 'ArrowLeft')  goTo(currentIndex - 1);
+    if (e.key === 'a' || e.key === 'A') speakCurrent();
+  });
+
+  // ── Init ─────────────────────────────────────────────────────────────────
+  buildDots();
+  // Card 0 is already rendered server-side via LearningCard component.
+  // Sync progress UI to reflect card 0 state.
+  updateDots();
+  if (progressBar) progressBar.style.width = `${Math.round(1/cards.length*100)}%`;
+  // Update card 0 using client-side config too (ensures langConfig is applied)
+  renderCard(0);
+})();</script>

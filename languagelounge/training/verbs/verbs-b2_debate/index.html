@@ -1,0 +1,640 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="description" content="Deutsch Lounge — Language Learning Trainer"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/languagelounge/favicon.svg"><meta name="generator" content="Astro v7.3.5"><title>B2 Verbs of Communication &amp; Debate — Deutsch Lounge</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet"><!-- Apply theme before paint to avoid flash --><script>
+      (function() {
+        const saved = localStorage.getItem('wortschatz_theme');
+        if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script><link rel="stylesheet" href="/languagelounge/_astro/Layout.BeSASyxj.css"></head><body class="antialiased min-h-screen flex flex-col" style="background-color:var(--bg);color:var(--text);"><!-- Header --><header class="sticky top-0 z-50 border-b" style="background-color:var(--bg);border-color:var(--border);"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between gap-4" style="height:4.5rem;"><!-- Logo + Language Switcher --><div class="flex items-center gap-4 shrink-0"><a href="/languagelounge/" class="flex items-center gap-2 group"><span class="font-outfit font-extrabold text-xl sm:text-2xl tracking-tight transition-colors" style="color:var(--text);">Small Talk Café <span class="font-normal text-base hidden sm:inline" style="color:var(--text-muted);">| <span id="site-name">Deutsch Lounge</span></span></span></a><!-- Language Selector Dropdown --><div class="relative" id="lang-dropdown-wrapper"><button id="lang-btn" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-sm font-bold transition-all hover:opacity-70" style="background-color:var(--bg); border-color:var(--border); color:var(--text);"><span id="lang-flag">🇩🇪</span><span id="lang-code">DE</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"></path></svg></button><div id="lang-menu" class="hidden absolute top-full left-0 mt-2 rounded-2xl border shadow-xl overflow-hidden z-50 min-w-[160px]" style="background-color:var(--card); border-color:var(--border);"><button class="lang-option w-full flex items-center gap-3 px-4 py-3 text-sm font-semibold text-left transition-colors hover:opacity-70" data-lang="de" data-flag="🇩🇪" data-code="DE" data-name="Deutsch Lounge" data-label="German" style="color:var(--text);"><span class="text-lg">🇩🇪</span><div><div class="font-bold" style="color:var(--text);">Deutsch</div><div class="text-xs" style="color:var(--text-muted);">German Learning</div></div></button><div class="border-t" style="border-color:var(--border);"></div><button class="lang-option w-full flex items-center gap-3 px-4 py-3 text-sm font-semibold text-left transition-colors hover:opacity-70" data-lang="es" data-flag="🇪🇸" data-code="ES" data-name="Spanish Gym" data-label="Spanish" style="color:var(--text);"><span class="text-lg">🇪🇸</span><div><div class="font-bold" style="color:var(--text);">Español</div><div class="text-xs" style="color:var(--text-muted);">Spanish Learning</div></div></button><div class="border-t" style="border-color:var(--border);"></div><button class="lang-option w-full flex items-center gap-3 px-4 py-3 text-sm font-semibold text-left transition-colors hover:opacity-70" data-lang="fr" data-flag="🇫🇷" data-code="FR" data-name="French Gym" data-label="French" style="color:var(--text);"><span class="text-lg">🇫🇷</span><div><div class="font-bold" style="color:var(--text);">Français</div><div class="text-xs" style="color:var(--text-muted);">French Learning</div></div></button></div></div></div><!-- Nav Links --><nav class="hidden md:flex gap-5 items-center"><a href="https://smalltalkcafe.de/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Small Talk Café Podcasts</a><span class="text-sm font-normal" style="color:var(--border);">|</span><a href="/languagelounge/vocabulary" data-german-nav class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Vokabeln</a><a href="/languagelounge/verbs" data-german-nav class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Verben</a><a href="/languagelounge/grammatik" data-german-nav class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Grammatik</a><a href="/languagelounge/redemittel" data-german-nav class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Redemittel</a><!-- Dark/Light Toggle --><button id="theme-toggle" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-sm font-semibold transition-all hover:opacity-70" style="border-color:var(--border); color:var(--text-muted);" aria-label="Toggle dark/light mode"><span id="theme-icon">☀️</span><span id="theme-label">Light</span></button></nav></div></header><!-- Coming Soon Overlay (shown for non-German languages) --><div id="coming-soon-overlay" class="hidden flex-1 flex items-center justify-center py-20 px-4"><div class="text-center max-w-lg mx-auto"><div class="text-7xl mb-6" id="coming-soon-flag">🌍</div><h1 class="font-outfit font-extrabold text-4xl sm:text-5xl mb-4" style="color:var(--text);">Coming Soon</h1><p class="text-lg mb-3" style="color:var(--text-muted);">We're working hard on the <strong id="coming-soon-lang">new language</strong> curriculum.</p><p class="text-base mb-8" style="color:var(--text-muted);">Stay tuned — it will be available very soon! In the meantime, explore our<strong>Deutsch Lounge</strong> to sharpen your German.</p><button id="coming-soon-back-btn" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-sm transition-all hover:opacity-80" style="background-color:var(--espresso); color:#fff;">🇩🇪 Switch to German</button></div></div><main id="main-content" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-1 w-full"><div class="max-w-4xl mx-auto py-6"><!-- Deck Header --><div class="flex items-start justify-between mb-8 gap-4 flex-wrap"><div><a href="/languagelounge/verbs" class="text-xs font-bold flex items-center gap-1 mb-2 hover:opacity-70 transition-opacity capitalize" style="color:var(--espresso);"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg>verbs</a><h1 class="text-2xl md:text-3xl font-extrabold font-outfit" style="color:var(--text);">B2 Verbs of Communication &amp; Debate</h1><p class="text-xs font-bold uppercase tracking-wider mt-1" style="color:var(--text-muted);">B2 Debattierverben &bull; B2 &bull; 25 Karten</p></div><div class="flex flex-col items-end gap-4"><!-- Learn / Train mode switcher --><div class="flex rounded-xl border overflow-hidden p-1 gap-1 w-full max-w-[300px]" style="background-color:var(--bg); border-color:var(--border);"><span class="flex-1 flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold transition-all" style="background-color:var(--espresso); color:#F5F2EB;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>Lernen</span><a href="/languagelounge/training/verbs/train?level=b2&amp;deck=verbs-b2_debate&amp;count=20&amp;mode=mc&amp;dir=en-de" class="flex-1 flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold hover:opacity-70 transition-all" style="color:var(--text-muted);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>Trainieren</a></div><!-- View switcher (Cards vs List) --><div class="flex rounded-xl border overflow-hidden p-1 gap-1 w-full max-w-[300px]" style="background-color:var(--bg); border-color:var(--border);"><button id="view-cards-btn" class="view-btn flex-1 flex items-center justify-center px-4 py-2 rounded-lg text-xs font-bold transition-all bg-[var(--espresso)] text-[#F5F2EB]">Karten</button><button id="view-list-btn" class="view-btn flex-1 flex items-center justify-center px-4 py-2 rounded-lg text-xs font-bold transition-all text-[var(--text-muted)] hover:opacity-70">Liste</button></div><!-- Progress indicator --><div id="progress-container" class="flex items-center gap-3"><div class="text-xs font-semibold" style="color:var(--text-muted);">Karte <span id="current-num" class="font-extrabold" style="color:var(--text);">1</span> / 25</div><div class="w-24 h-1.5 rounded-full overflow-hidden border" style="background-color:var(--bg);border-color:var(--border);"><div id="progress-bar" class="h-full transition-all duration-500 rounded-full" style="width:0%; background-color:var(--espresso);"></div></div></div></div></div><!-- ── Universal Study Card (rendered by LearningCard component) ── --><div id="card-view-wrap"><div id="card-host"><!-- The card shell — populated client-side by renderCard() --><div class="learning-card rounded-3xl border shadow-xl overflow-hidden" style="background-color:var(--card); border-color:var(--border);"><!-- ── Top bar ─────────────────────────────────── --><div class="lc-topbar flex items-center justify-between px-6 py-3.5 border-b" style="border-color:var(--border); background-color:var(--bg);"><div class="flex items-center gap-2"><span class="lc-type-badge text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-lg" style="background-color:var(--espresso); color:#F5F2EB;">—</span><span class="lc-level-badge text-[10px] font-bold px-2.5 py-1 rounded-lg cafe-badge"></span></div><button class="lc-audio-btn flex items-center justify-center w-11 h-11 rounded-full transition-transform hover:scale-105 active:scale-95 shadow-md flex-shrink-0" title="Anhören (A)" style="background-color:var(--espresso); color:#F5F2EB;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg></button></div><!-- ── Main word display ───────────────────────── --><div class="lc-hero px-7 py-8 text-center border-b" style="border-color:var(--border);"><div class="lc-article-wrap mb-1.5"><span class="lc-article text-xl font-bold"></span></div><h2 class="lc-word text-5xl md:text-6xl font-extrabold font-outfit mb-3" style="color:var(--text);">—</h2><p class="lc-translation text-lg font-semibold italic" style="color:var(--text-muted);"></p><p class="lc-forms text-sm font-medium mt-2" style="color:var(--text-muted);"></p></div><!-- ── Meta info grid ─────────────────────────── --><div class="lc-meta-grid grid border-b" style="border-color:var(--border);"><!-- populated by JS --></div><!-- ── Grammar note ───────────────────────────── --><div class="lc-grammar-wrap hidden px-7 py-5 border-b" style="border-color:var(--border); background-color:var(--bg);"><p class="text-[10px] font-bold uppercase tracking-widest mb-2" style="color:var(--espresso);">📌 <span class="lc-grammar-label">Grammatiknotiz</span></p><p class="lc-grammar-text text-sm leading-relaxed font-medium whitespace-pre-wrap" style="color:var(--text);"></p></div><!-- ── Type-specific block ────────────────────── --><!-- Verb conjugation (hidden by default, shown for verb cards) --><div class="lc-conjugation-wrap hidden border-b overflow-x-auto" style="border-color:var(--border);"><div class="lc-conjugation-inner"><!-- populated by JS --></div></div><!-- Connector word-order block --><div class="lc-wordorder-wrap hidden px-7 py-4 border-b" style="border-color:var(--border); background-color:var(--bg);"><div class="flex items-start gap-3 text-sm font-medium" style="color:var(--text-muted);"><span class="text-base flex-shrink-0">📐</span><span class="lc-wordorder-text"></span></div></div><!-- Phrase preposition block --><div class="lc-phrase-wrap hidden px-7 py-4 border-b" style="border-color:var(--border); background-color:var(--bg);"><p class="text-[10px] font-bold uppercase tracking-widest mb-2" style="color:var(--espresso);">Struktur</p><p class="lc-phrase-rule text-sm font-semibold" style="color:var(--text);"></p></div><!-- ── Examples ───────────────────────────────── --><div class="px-7 py-6 border-b" style="border-color:var(--border);"><p class="lc-examples-label text-[10px] font-bold uppercase tracking-widest mb-5" style="color:var(--text-muted);">Beispielsätze</p><div class="lc-examples space-y-3"><!-- populated by JS --></div></div><!-- ── Tags ───────────────────────────────────── --><div class="lc-tags-row px-7 py-4 flex items-center gap-2 flex-wrap"><span class="text-[10px] font-bold uppercase tracking-wider" style="color:var(--text-muted);">Tags:</span><div class="lc-tags flex gap-2 flex-wrap"></div></div></div><script>(function(){const cardJson = "{\"id\":\"verbs-b2-b2_debate-001\",\"infinitive\":\"diskutieren\",\"translation\":\"to discuss\",\"type\":\"verb\",\"cefr\":\"B2\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb. Weak conjugation. Often used with 'über' + Akkusativ.\",\"examples\":[{\"de\":\"Wir müssen das Thema ausführlich diskutieren.\",\"en\":\"We need to discuss the topic extensively.\"},{\"de\":\"Sie haben stundenlang über Politik diskutiert.\",\"en\":\"They discussed politics for hours.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"diskutierte\",\"du\":\"diskutiertest\",\"er_sie_es\":\"diskutierte\",\"wir\":\"diskutierten\",\"ihr\":\"diskutiertet\",\"sie_Sie\":\"diskutierten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe diskutiert\",\"du\":\"hast diskutiert\",\"er_sie_es\":\"hat diskutiert\",\"wir\":\"haben diskutiert\",\"ihr\":\"habt diskutiert\",\"sie_Sie\":\"haben diskutiert\"}],\"target\":\"diskutieren\",\"source\":\"to discuss\",\"example_target\":\"\",\"example_source\":\"\"}";
+const langConfigJson = "{\"language_pair\":\"english_german\",\"target_lang\":\"de\",\"native_lang\":\"en\",\"target_lang_name\":\"Deutsch\",\"native_lang_name\":\"English\",\"speech_lang\":\"de-DE\",\"noun_metadata_fields\":[{\"key\":\"article\",\"label\":\"Artikel\",\"render\":\"article_badge\"},{\"key\":\"gender\",\"label\":\"Genus\",\"render\":\"gender_label\"},{\"key\":\"plural\",\"label\":\"Plural\",\"render\":\"text\"}],\"article_colours\":{\"der\":\"#4A7C9E\",\"die\":\"#B05070\",\"das\":\"#4A8A5A\"},\"gender_labels\":{\"m\":\"Maskulinum\",\"f\":\"Femininum\",\"n\":\"Neutrum\"},\"verb_tenses\":[\"Präsens\",\"Präteritum\",\"Perfekt\",\"Futur I\",\"Konjunktiv II\"],\"cases\":{\"nominative\":\"Nominativ\",\"accusative\":\"Akkusativ\",\"dative\":\"Dativ\",\"genitive\":\"Genitiv\"},\"ui_labels\":{\"learn_mode\":\"Lernen\",\"train_mode\":\"Trainieren\",\"examples_heading\":\"Beispielsätze\",\"grammar_note_heading\":\"Grammatiknotiz\",\"audio_button\":\"Anhören\",\"back_link\":\"Zurück\",\"card_counter\":\"Karte {current} / {total}\",\"next_button\":\"Weiter\",\"finish_button\":\"Fertig\",\"correct\":\"Richtig!\",\"wrong\":\"Falsch\"}}";
+
+  /**
+   * Client-side card renderer.
+   * Uses the universal card-renderer logic inline (no imports in Astro is:inline).
+   */
+
+  // ── Parse data ──────────────────────────────────────────────────────────
+  const card   = JSON.parse(cardJson);
+  const config = JSON.parse(langConfigJson);
+
+  // ── Helpers ─────────────────────────────────────────────────────────────
+  function stripArticle(word) {
+    return (word || '').replace(/^(der|die|das|el|la|los|las|le|les|l')\s+/i, '').trim();
+  }
+
+  function getArticleColour(article) {
+    if (!article || !config.article_colours) return 'var(--espresso)';
+    return config.article_colours[article.toLowerCase()] || 'var(--espresso)';
+  }
+
+  function getGenderLabel(gender) {
+    if (!gender) return '';
+    return (config.gender_labels || {})[gender] || gender;
+  }
+
+  function getTypeLabel() {
+    const tags = card.tags || [];
+    if (tags.includes('noun'))       return 'Substantiv';
+    if (tags.includes('verb'))       return 'Verb';
+    if (tags.includes('adjective'))  return 'Adjektiv';
+    if (tags.includes('expression')) return 'Ausdruck';
+    const map = { vocab:'Vokabel', verb:'Verb', phrase:'Phrase', connector:'Konnektor', grammar:'Grammatik' };
+    return map[card.type] || 'Karte';
+  }
+
+  function formatHighlight(text) {
+    if (!text) return '';
+    return String(text).replace(/\*(.*?)\*/g, '<span class="highlighter">$1</span>');
+  }
+
+  function normaliseExample(ex) {
+    return {
+      target: ex.target || ex.de || '',
+      source: ex.source || ex.en || '',
+      note: ex.note,
+    };
+  }
+
+  function getMetaFacts() {
+    const meta = { ...card.metadata, article: card.article, gender: card.gender, plural: card.plural, ...card.metadata };
+    const facts = [];
+    for (const field of (config.noun_metadata_fields || [])) {
+      const raw = meta[field.key] || card[field.key];
+      if (!raw || raw === '~') continue;
+      let value = String(raw);
+      let colour;
+      if (field.render === 'gender_label') value = getGenderLabel(raw);
+      else if (field.render === 'article_badge') colour = getArticleColour(raw);
+      facts.push({ label: field.label, value, colour });
+    }
+    return facts;
+  }
+
+  // ── Render ──────────────────────────────────────────────────────────────
+  const container = document.querySelector('.learning-card');
+  if (!container) { console.error('LearningCard: container not found'); }
+
+  function sel(cls) { return container?.querySelector(cls); }
+
+  // Type badge
+  sel('.lc-type-badge').textContent = getTypeLabel();
+
+  // Level badge
+  sel('.lc-level-badge').textContent = card.level || '';
+
+  // Article
+  const article = card.article || card.metadata?.article;
+  const articleWrap = sel('.lc-article-wrap');
+  const articleEl   = sel('.lc-article');
+  if (article && card.tags?.includes('noun') && !card.plural_only) {
+    articleEl.textContent  = article;
+    articleEl.style.color  = getArticleColour(article);
+    articleWrap.style.display = '';
+  } else {
+    articleWrap.style.display = 'none';
+  }
+
+  // Word
+  sel('.lc-word').textContent = stripArticle(card.target);
+
+  // Translation
+  sel('.lc-translation').textContent = card.source || '';
+
+  // Plural / forms
+  const plural = card.plural || card.metadata?.plural;
+  const formsEl = sel('.lc-forms');
+  if (plural && !card.plural_only) formsEl.textContent = `Pl. ${plural}`;
+  else if (card.plural_only) formsEl.textContent = 'nur Plural';
+  else formsEl.textContent = '';
+
+  // Meta grid
+  const metaGrid = sel('.lc-meta-grid');
+  const facts = getMetaFacts();
+  if (facts.length) {
+    const cols = Math.min(facts.length, 4);
+    metaGrid.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
+    metaGrid.innerHTML = facts.map((f, i) => `
+      <div class="px-5 py-4 ${i < facts.length - 1 ? 'border-r' : ''}" style="border-color:var(--border);">
+        <p class="text-[9px] font-bold uppercase tracking-widest mb-1" style="color:var(--text-muted);">${f.label}</p>
+        <p class="text-sm font-bold" style="color:${f.colour || 'var(--text)'};">${f.value}</p>
+      </div>
+    `).join('');
+  } else {
+    metaGrid.style.display = 'none';
+  }
+
+  // Grammar note
+  const grammarWrap = sel('.lc-grammar-wrap');
+  if (card.grammar_note) {
+    sel('.lc-grammar-text').innerHTML = formatHighlight(card.grammar_note);
+    grammarWrap.classList.remove('hidden');
+  }
+
+  // Grammar label from config
+  const uiLabels = config.ui_labels || {};
+  if (uiLabels.grammar_note_heading) sel('.lc-grammar-label').textContent = uiLabels.grammar_note_heading;
+  if (uiLabels.examples_heading)     sel('.lc-examples-label').textContent = uiLabels.examples_heading;
+  if (uiLabels.audio_button)         sel('.lc-audio-label').textContent    = uiLabels.audio_button;
+
+  // ── Type-specific blocks ─────────────────────────────────────────────────
+
+  // Verb: conjugation table
+  const type = card.type || (card.tags?.includes('verb') ? 'verb' : 'vocab');
+  if (type === 'verb' && card.conjugations?.length) {
+    const conjWrap  = sel('.lc-conjugation-wrap');
+    const conjInner = sel('.lc-conjugation-inner');
+    conjWrap.classList.remove('hidden');
+    conjInner.innerHTML = (config.verb_tenses || card.conjugations.map(t => t.tense)).map(tense => {
+      const t = card.conjugations.find(c => c.tense === tense);
+      if (!t) return '';
+      return `
+        <div class="border-b last:border-0" style="border-color:var(--border);">
+          <p class="text-[10px] font-bold uppercase tracking-widest px-5 py-2" style="background-color:var(--bg); color:var(--espresso);">${t.tense}</p>
+          <table class="w-full text-sm">
+            <tbody>
+              ${t.forms.map((f, ri) => `
+                <tr class="${ri % 2 === 0 ? '' : ''} border-t" style="border-color:var(--border);">
+                  <td class="px-5 py-2.5 font-bold w-24" style="color:var(--espresso);">${f.pronoun}</td>
+                  <td class="px-5 py-2.5 font-semibold" style="color:var(--text);">${f.form}</td>
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+        </div>
+      `;
+    }).join('');
+  }
+
+  // Connector: word order block
+  if (type === 'connector' && card.word_order) {
+    const woWrap = sel('.lc-wordorder-wrap');
+    sel('.lc-wordorder-text').textContent = card.word_order;
+    woWrap.classList.remove('hidden');
+  }
+
+  // Phrase: preposition rule block
+  if (type === 'phrase' && card.clause_type) {
+    const phraseWrap = sel('.lc-phrase-wrap');
+    sel('.lc-phrase-rule').textContent = card.clause_type;
+    phraseWrap.classList.remove('hidden');
+  }
+
+  // ── Examples ─────────────────────────────────────────────────────────────
+  const examplesEl = sel('.lc-examples');
+  const rawExamples = card.examples || (card.example_target || card.example_de ? [{ target: card.example_target || card.example_de, source: card.example_source || card.example_en }] : []);
+
+  if (rawExamples.length) {
+    examplesEl.innerHTML = rawExamples.map(ex => {
+      const e = normaliseExample(ex);
+      return `
+        <div class="rounded-2xl border overflow-hidden" style="border-color:var(--border);">
+          <div class="px-4 py-3" style="background-color:var(--bg);">
+            <p class="font-semibold leading-snug mb-1" style="color:var(--text);">${formatHighlight(e.target)}</p>
+            <p class="text-sm italic" style="color:var(--text-muted);">${formatHighlight(e.source || '')}</p>
+          </div>
+          ${e.note ? `<div class="px-4 py-2 border-t" style="border-color:var(--border);">
+            <p class="text-[10px] font-bold font-mono" style="color:var(--espresso);">📐 ${e.note}</p>
+          </div>` : ''}
+        </div>
+      `;
+    }).join('');
+  } else {
+    examplesEl.innerHTML = `<p class="text-sm italic" style="color:var(--text-muted);">Kein Beispiel verfügbar.</p>`;
+  }
+
+  // ── Tags ─────────────────────────────────────────────────────────────────
+  const tagsEl = sel('.lc-tags');
+  tagsEl.innerHTML = (card.tags || []).map(t => `
+    <span class="text-[10px] font-bold px-2 py-0.5 rounded-md border uppercase" style="border-color:var(--border); color:var(--text-muted); background-color:var(--bg);">${t}</span>
+  `).join('');
+
+  // ── Audio button ─────────────────────────────────────────────────────────
+  sel('.lc-audio-btn')?.addEventListener('click', () => {
+    if (window.DeutschAudioEngine) {
+      window.DeutschAudioEngine.speak(card.target || '', config.speech_lang || 'de-DE', 0.85);
+    }
+  });
+})();</script></div><!-- ── Navigation ───────────────────────────── --><div class="flex items-center justify-between mt-8 gap-4"><button id="btn-prev" disabled class="flex items-center gap-2 px-6 py-3 rounded-2xl border font-bold text-sm transition-all hover:opacity-70 active:scale-95 disabled:opacity-30 disabled:cursor-not-allowed" style="border-color:var(--border); color:var(--text); background-color:var(--card);"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg>Zurück</button><!-- Dot navigation --><div id="dot-nav" class="flex items-center gap-1.5 flex-wrap justify-center max-w-xs overflow-hidden" style="max-height:2rem;"><!-- populated by JS --></div><button id="btn-next" class="flex items-center gap-2 px-6 py-3 rounded-2xl font-bold text-sm transition-all hover:opacity-80 active:scale-95" style="background-color:var(--espresso); color:#F5F2EB;">Weiter<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg></button></div><!-- Keyboard hint --><p class="text-center text-xs font-medium mt-4" style="color:var(--text-muted);">← → Pfeiltasten zum Navigieren &nbsp;·&nbsp; A zum Anhören</p></div><!-- ── List View ───────────────────────────── --><div id="list-view-wrap" class="hidden space-y-6"><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">diskutieren</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to discuss</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Regular verb. Weak conjugation. Often used with 'über' + Akkusativ.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Wir müssen das Thema ausführlich diskutieren.</p><p class="italic text-[13px]" style="color:var(--text-muted);">We need to discuss the topic extensively.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">argumentieren</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to argue / to reason</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Regular verb. Weak conjugation. Often used with 'für' or 'gegen'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Er kann seine Position sehr überzeugend argumentieren.</p><p class="italic text-[13px]" style="color:var(--text-muted);">He can argue his position very convincingly.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">widerlegen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to refute / to disprove</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Regular verb. Weak conjugation. Not separable. Requires an object in the accusative.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Die neuen Beweise widerlegten seine Theorie.</p><p class="italic text-[13px]" style="color:var(--text-muted);">The new evidence refuted his theory.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">zustimmen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to agree / to consent</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Separable verb. Weak conjugation. Often used with 'Dativ' or 'zu' + Dativ.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich stimme deinem Vorschlag voll und ganz zu.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I fully agree with your proposal.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">ablehnen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to reject / to decline</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Regular verb. Weak conjugation. Not separable. Requires an object in the accusative.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Er lehnte den Kompromiss ab.</p><p class="italic text-[13px]" style="color:var(--text-muted);">He rejected the compromise.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">behaupten</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to claim / to assert</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Regular verb. Weak conjugation. Not separable. Often used with a 'dass'-clause.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Er behauptete, die Wahrheit zu kennen.</p><p class="italic text-[13px]" style="color:var(--text-muted);">He claimed to know the truth.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">bestreiten</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to dispute / to deny</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Irregular verb. Strong conjugation. Not separable. Requires an object in the accusative.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Der Angeklagte bestritt die Vorwürfe.</p><p class="italic text-[13px]" style="color:var(--text-muted);">The accused denied the allegations.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">einwenden</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to object / to interpose</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Separable, irregular verb. Often used with 'gegen' + Akkusativ or 'dass'-clause. Präteritum and Partizip II can be weak (wendete, gewendet) or strong (wandte, gewandt).</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich muss gegen diesen Plan einwenden.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I must object to this plan.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">überzeugen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to convince / to persuade</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Regular verb. Weak conjugation. Not separable. Requires an object in the accusative. Often used with 'von' + Dativ.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Er konnte mich von seiner Idee überzeugen.</p><p class="italic text-[13px]" style="color:var(--text-muted);">He was able to convince me of his idea.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">überreden</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to persuade / to talk into</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Regular verb. Weak conjugation. Not separable. Requires an object in the accusative. Often used with 'zu' + Dativ.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich habe ihn überredet, mitzukommen.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I persuaded him to come along.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">äußern</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to express / to utter</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Regular verb. Weak conjugation. Can be used reflexively (sich äußern).</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Er äußerte seine Bedenken deutlich.</p><p class="italic text-[13px]" style="color:var(--text-muted);">He clearly expressed his concerns.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">erläutern</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to explain / to clarify</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Regular verb. Weak conjugation. Not separable. Requires an object in the accusative.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Der Sprecher erläuterte die komplexen Zusammenhänge.</p><p class="italic text-[13px]" style="color:var(--text-muted);">The speaker explained the complex correlations.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">darlegen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to present / to explain</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Separable verb. Weak conjugation. Often used to present facts or arguments clearly.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Er legte seine Gründe detailliert dar.</p><p class="italic text-[13px]" style="color:var(--text-muted);">He presented his reasons in detail.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">vortragen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to present / to recite</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Separable, irregular verb. Strong conjugation. Often used for formal presentations or recitations.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Sie trug ihre Rede sehr überzeugend vor.</p><p class="italic text-[13px]" style="color:var(--text-muted);">She presented her speech very convincingly.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">entgegnen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to counter / to reply</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Regular verb. Weak conjugation. Not separable. Often used with 'Dativ' (to whom) or a 'dass'-clause.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Er entgegnete ihr mit einem scharfen Argument.</p><p class="italic text-[13px]" style="color:var(--text-muted);">He countered her with a sharp argument.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">einlenken</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to give in / to compromise</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Separable verb. Weak conjugation. Often used in negotiations or discussions.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Nach langer Debatte musste er schließlich einlenken.</p><p class="italic text-[13px]" style="color:var(--text-muted);">After a long debate, he finally had to give in.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">verhandeln</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to negotiate</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Regular verb. Weak conjugation. Not separable. Often used with 'über' + Akkusativ or 'mit' + Dativ.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Die Parteien verhandelten über einen neuen Vertrag.</p><p class="italic text-[13px]" style="color:var(--text-muted);">The parties negotiated a new contract.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">erörtern</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to discuss / to deliberate</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Regular verb. Weak conjugation. Not separable. Similar to 'diskutieren' but often implies a more thorough or formal discussion.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Der Ausschuss erörterte die verschiedenen Optionen.</p><p class="italic text-[13px]" style="color:var(--text-muted);">The committee discussed the various options.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">begründen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to justify / to give reasons</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Regular verb. Weak conjugation. Not separable. Requires an object in the accusative.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Sie konnte ihre Entscheidung nicht überzeugend begründen.</p><p class="italic text-[13px]" style="color:var(--text-muted);">She couldn't convincingly justify her decision.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">appellieren</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to appeal</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Regular verb. Weak conjugation. Not separable. Often used with 'an' + Akkusativ.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Der Redner appellierte an die Vernunft der Zuhörer.</p><p class="italic text-[13px]" style="color:var(--text-muted);">The speaker appealed to the reason of the audience.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">kritisieren</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to criticize</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Regular verb. Weak conjugation. Not separable. Requires an object in the accusative.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Er kritisierte die mangelnde Vorbereitung des Teams.</p><p class="italic text-[13px]" style="color:var(--text-muted);">He criticized the team's lack of preparation.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">verteidigen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to defend</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Regular verb. Weak conjugation. Not separable. Requires an object in the accusative. Can be used reflexively.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Sie verteidigte ihre Meinung energisch.</p><p class="italic text-[13px]" style="color:var(--text-muted);">She defended her opinion vigorously.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">zusammenfassen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to summarize</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Separable verb. Weak conjugation. Requires an object in the accusative.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Könnten Sie die wichtigsten Punkte bitte zusammenfassen?</p><p class="italic text-[13px]" style="color:var(--text-muted);">Could you please summarize the main points?</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">herausfordern</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to challenge</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Separable verb. Weak conjugation. Requires an object in the accusative. Can be used to challenge a person or a statement.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Er forderte seine Gegner zu einer Debatte heraus.</p><p class="italic text-[13px]" style="color:var(--text-muted);">He challenged his opponents to a debate.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">widersprechen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to contradict / to object</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Separable, irregular verb. Strong conjugation. Requires an object in the dative (to whom).</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Du darfst mir nicht immer widersprechen!</p><p class="italic text-[13px]" style="color:var(--text-muted);">You must not always contradict me!</p></div></div></div></div></div></div></main><footer class="mt-auto border-t py-8" style="background-color:var(--bg);border-color:var(--border);"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-medium" style="color:var(--text-muted);"><div>&copy; 2025 - 2026 Small Talk Café Podcasts. All rights reserved.</div><div class="flex gap-4">Made in Bayern ❤️ Los Geht's!</div></div></footer><!-- Theme toggle + Language switcher script --><script>
+      // ── Theme ──────────────────────────────────────
+      function applyTheme(dark) {
+        if (dark) {
+          document.documentElement.classList.add('dark');
+          localStorage.setItem('wortschatz_theme', 'dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+          localStorage.setItem('wortschatz_theme', 'light');
+        }
+        const icon = document.getElementById('theme-icon');
+        const label = document.getElementById('theme-label');
+        if (icon) icon.textContent = dark ? '🌙' : '☀️';
+        if (label) label.textContent = dark ? 'Dark' : 'Light';
+      }
+
+      const isDark = document.documentElement.classList.contains('dark');
+      applyTheme(isDark);
+
+      document.getElementById('theme-toggle')?.addEventListener('click', () => {
+        const nowDark = !document.documentElement.classList.contains('dark');
+        applyTheme(nowDark);
+      });
+
+      // ── Language Switcher ──────────────────────────
+      const LANG_CONTENT = {
+        de: {
+          name: 'Deutsch Lounge',
+          flag: '🇩🇪',
+          code: 'DE',
+          subtitle: 'Systematisches Vokabel- und Grammatiktraining',
+          tagline: 'Deutsch Lounge',
+          welcome: 'Willkommen beim',
+          cards: [
+            { title: 'Vokabeln', desc: 'Erweitere deinen Wortschatz. Lerne Nomen, Verben und Redewendungen mit Beispielsätzen.' },
+            { title: 'Verben', desc: 'Meistere reguläre, unregelmäßige, modale und reflexive Verben mit Konjugationstabellen.' },
+            { title: 'Grammatik', desc: 'Regeln verstehen & üben: Adjektivdeklination, Fälle, Präpositionen, Konnektoren & Phrasen.' },
+            { title: 'Redemittel', desc: 'Essentielle Phrasen für den Alltag, Diskussionen und Präsentationen.' }
+          ]
+        },
+        es: {
+          name: 'Spanish Gym',
+          flag: '🇪🇸',
+          code: 'ES',
+          subtitle: 'Tu compañero para aprender Español A1 – B2',
+          tagline: 'A1–B2 Spanish Curriculum',
+          welcome: 'Bienvenido al',
+          cards: [
+            { title: 'Vocabulario', desc: 'Amplía tu vocabulario A1–B2. Aprende sustantivos, verbos y frases con ejemplos contextuales.' },
+            { title: 'Verbos', desc: 'Domina verbos regulares, irregulares y reflexivos con tablas de conjugación.' },
+            { title: 'Gramática', desc: 'Entiende y practica las reglas gramaticales, casos y conectores.' },
+            { title: 'Expresiones', desc: 'Frases esenciales para el día a día, discusiones y presentaciones.' }
+          ]
+        },
+        fr: {
+          name: 'French Gym',
+          flag: '🇫🇷',
+          code: 'FR',
+          subtitle: 'Ton compagnon pour apprendre le Français A1 – B2',
+          tagline: 'A1–B2 French Curriculum',
+          welcome: 'Bienvenue au',
+          cards: [
+            { title: 'Vocabulaire', desc: 'Élargis ton vocabulaire A1–B2. Apprends des noms, verbes et expressions avec des exemples.' },
+            { title: 'Verbes', desc: 'Maîtrise les verbes réguliers, irréguliers et réflexifs avec des tableaux de conjugaison.' },
+            { title: 'Grammaire', desc: 'Comprends et pratique les règles de grammaire, les cas et les connecteurs.' },
+            { title: 'Expressions', desc: 'Phrases essentielles pour la vie quotidienne, les discussions et les présentations.' }
+          ]
+        }
+      };
+
+      function applyLanguage(lang) {
+        const c = LANG_CONTENT[lang] || LANG_CONTENT['de'];
+        localStorage.setItem('gym_language', lang);
+
+        // Header
+        const flag = document.getElementById('lang-flag');
+        const code = document.getElementById('lang-code');
+        const siteName = document.getElementById('site-name');
+        if (flag) flag.textContent = c.flag;
+        if (code) code.textContent = c.code;
+        if (siteName) siteName.textContent = c.name;
+
+        // Footer
+        const footerName = document.getElementById('footer-gym-name');
+        const footerLevel = document.getElementById('footer-level');
+        if (footerName) footerName.textContent = c.name;
+        if (footerLevel) footerLevel.textContent = c.tagline;
+
+        const isGerman = lang === 'de';
+        const overlay = document.getElementById('coming-soon-overlay');
+        const mainContent = document.getElementById('main-content');
+        const germanNavLinks = document.querySelectorAll('[data-german-nav]');
+
+        if (isGerman) {
+          // Show normal German content
+          if (overlay) overlay.classList.add('hidden');
+          if (mainContent) mainContent.classList.remove('hidden');
+          germanNavLinks.forEach(el => el.classList.remove('hidden'));
+
+          // Hero on homepage only
+          const heroTitle = document.getElementById('hero-gym-name');
+          const heroSubtitle = document.getElementById('hero-subtitle');
+          const heroWelcome = document.getElementById('hero-welcome');
+          if (heroTitle) heroTitle.textContent = c.name;
+          if (heroSubtitle) heroSubtitle.textContent = c.subtitle;
+          if (heroWelcome) heroWelcome.textContent = c.welcome;
+
+          // Category cards
+          const cardTitles = document.querySelectorAll('[data-card-title]');
+          const cardDescs = document.querySelectorAll('[data-card-desc]');
+          cardTitles.forEach((el, i) => {
+            if (c.cards[i]) el.textContent = c.cards[i].title;
+          });
+          cardDescs.forEach((el, i) => {
+            if (c.cards[i]) el.textContent = c.cards[i].desc;
+          });
+
+          // Nav links
+          const navLabels = document.querySelectorAll('[data-nav-label]');
+          navLabels.forEach((el, i) => {
+            if (c.cards[i]) el.textContent = c.cards[i].title;
+          });
+        } else {
+          // Non-German: show coming soon overlay, hide main content and German nav
+          if (mainContent) mainContent.classList.add('hidden');
+          germanNavLinks.forEach(el => el.classList.add('hidden'));
+
+          // Populate coming soon overlay
+          const comingFlag = document.getElementById('coming-soon-flag');
+          const comingLang = document.getElementById('coming-soon-lang');
+          if (comingFlag) comingFlag.textContent = c.flag;
+          if (comingLang) comingLang.textContent = c.name + ' content';
+
+          if (overlay) {
+            overlay.classList.remove('hidden');
+            overlay.classList.add('flex');
+          }
+        }
+      }
+
+      // Restore saved language
+      const savedLang = localStorage.getItem('gym_language') || 'de';
+      applyLanguage(savedLang);
+
+      // Dropdown toggle
+      const langBtn = document.getElementById('lang-btn');
+      const langMenu = document.getElementById('lang-menu');
+
+      langBtn?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        langMenu?.classList.toggle('hidden');
+      });
+
+      document.addEventListener('click', () => {
+        langMenu?.classList.add('hidden');
+      });
+
+      document.querySelectorAll('.lang-option').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const lang = btn.dataset.lang;
+          applyLanguage(lang);
+          langMenu?.classList.add('hidden');
+        });
+      });
+
+      // Coming soon "Switch to German" button
+      document.getElementById('coming-soon-back-btn')?.addEventListener('click', () => {
+        applyLanguage('de');
+      });
+    </script></body></html><script type="module" src="/languagelounge/_astro/_deckId_.astro_astro_type_script_index_0_lang.B80xyaMZ.js"></script><script>(function(){const cardsJson = "[{\"id\":\"verbs-b2-b2_debate-001\",\"infinitive\":\"diskutieren\",\"translation\":\"to discuss\",\"type\":\"verb\",\"cefr\":\"B2\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb. Weak conjugation. Often used with 'über' + Akkusativ.\",\"examples\":[{\"de\":\"Wir müssen das Thema ausführlich diskutieren.\",\"en\":\"We need to discuss the topic extensively.\"},{\"de\":\"Sie haben stundenlang über Politik diskutiert.\",\"en\":\"They discussed politics for hours.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"diskutierte\",\"du\":\"diskutiertest\",\"er_sie_es\":\"diskutierte\",\"wir\":\"diskutierten\",\"ihr\":\"diskutiertet\",\"sie_Sie\":\"diskutierten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe diskutiert\",\"du\":\"hast diskutiert\",\"er_sie_es\":\"hat diskutiert\",\"wir\":\"haben diskutiert\",\"ihr\":\"habt diskutiert\",\"sie_Sie\":\"haben diskutiert\"}],\"target\":\"diskutieren\",\"source\":\"to discuss\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b2-b2_debate-002\",\"infinitive\":\"argumentieren\",\"translation\":\"to argue / to reason\",\"type\":\"verb\",\"cefr\":\"B2\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb. Weak conjugation. Often used with 'für' or 'gegen'.\",\"examples\":[{\"de\":\"Er kann seine Position sehr überzeugend argumentieren.\",\"en\":\"He can argue his position very convincingly.\"},{\"de\":\"Sie argumentierte gegen den Vorschlag.\",\"en\":\"She argued against the proposal.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"argumentierte\",\"du\":\"argumentiertest\",\"er_sie_es\":\"argumentierte\",\"wir\":\"argumentierten\",\"ihr\":\"argumentiertet\",\"sie_Sie\":\"argumentierten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe argumentiert\",\"du\":\"hast argumentiert\",\"er_sie_es\":\"hat argumentiert\",\"wir\":\"haben argumentiert\",\"ihr\":\"habt argumentiert\",\"sie_Sie\":\"haben argumentiert\"}],\"target\":\"argumentieren\",\"source\":\"to argue / to reason\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b2-b2_debate-003\",\"infinitive\":\"widerlegen\",\"translation\":\"to refute / to disprove\",\"type\":\"verb\",\"cefr\":\"B2\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb. Weak conjugation. Not separable. Requires an object in the accusative.\",\"examples\":[{\"de\":\"Die neuen Beweise widerlegten seine Theorie.\",\"en\":\"The new evidence refuted his theory.\"},{\"de\":\"Es ist schwer, seine Argumente zu widerlegen.\",\"en\":\"It is difficult to refute his arguments.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"widerlegte\",\"du\":\"widerlegtest\",\"er_sie_es\":\"widerlegte\",\"wir\":\"widerlegten\",\"ihr\":\"widerlegtet\",\"sie_Sie\":\"widerlegten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe widerlegt\",\"du\":\"hast widerlegt\",\"er_sie_es\":\"hat widerlegt\",\"wir\":\"haben widerlegt\",\"ihr\":\"habt widerlegt\",\"sie_Sie\":\"haben widerlegt\"}],\"target\":\"widerlegen\",\"source\":\"to refute / to disprove\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b2-b2_debate-004\",\"infinitive\":\"zustimmen\",\"translation\":\"to agree / to consent\",\"type\":\"verb\",\"cefr\":\"B2\",\"tags\":[\"verb\"],\"grammar_note\":\"Separable verb. Weak conjugation. Often used with 'Dativ' or 'zu' + Dativ.\",\"examples\":[{\"de\":\"Ich stimme deinem Vorschlag voll und ganz zu.\",\"en\":\"I fully agree with your proposal.\"},{\"de\":\"Sie stimmte der Vereinbarung zu.\",\"en\":\"She consented to the agreement.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"stimmte zu\",\"du\":\"stimmtest zu\",\"er_sie_es\":\"stimmte zu\",\"wir\":\"stimmten zu\",\"ihr\":\"stimmtet zu\",\"sie_Sie\":\"stimmten zu\"},{\"tense\":\"Perfekt\",\"ich\":\"habe zugestimmt\",\"du\":\"hast zugestimmt\",\"er_sie_es\":\"hat zugestimmt\",\"wir\":\"haben zugestimmt\",\"ihr\":\"habt zugestimmt\",\"sie_Sie\":\"haben zugestimmt\"}],\"target\":\"zustimmen\",\"source\":\"to agree / to consent\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b2-b2_debate-005\",\"infinitive\":\"ablehnen\",\"translation\":\"to reject / to decline\",\"type\":\"verb\",\"cefr\":\"B2\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb. Weak conjugation. Not separable. Requires an object in the accusative.\",\"examples\":[{\"de\":\"Er lehnte den Kompromiss ab.\",\"en\":\"He rejected the compromise.\"},{\"de\":\"Wir müssen diesen Vorschlag ablehnen.\",\"en\":\"We must decline this proposal.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"lehnte ab\",\"du\":\"lehntest ab\",\"er_sie_es\":\"lehnte ab\",\"wir\":\"lehnten ab\",\"ihr\":\"lehntet ab\",\"sie_Sie\":\"lehnten ab\"},{\"tense\":\"Perfekt\",\"ich\":\"habe abgelehnt\",\"du\":\"hast abgelehnt\",\"er_sie_es\":\"hat abgelehnt\",\"wir\":\"haben abgelehnt\",\"ihr\":\"habt abgelehnt\",\"sie_Sie\":\"haben abgelehnt\"}],\"target\":\"ablehnen\",\"source\":\"to reject / to decline\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b2-b2_debate-006\",\"infinitive\":\"behaupten\",\"translation\":\"to claim / to assert\",\"type\":\"verb\",\"cefr\":\"B2\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb. Weak conjugation. Not separable. Often used with a 'dass'-clause.\",\"examples\":[{\"de\":\"Er behauptete, die Wahrheit zu kennen.\",\"en\":\"He claimed to know the truth.\"},{\"de\":\"Man kann nicht einfach etwas behaupten, ohne Beweise zu haben.\",\"en\":\"You can't just assert something without having proof.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"behauptete\",\"du\":\"behauptetest\",\"er_sie_es\":\"behauptete\",\"wir\":\"behaupteten\",\"ihr\":\"behauptetet\",\"sie_Sie\":\"behaupteten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe behauptet\",\"du\":\"hast behauptet\",\"er_sie_es\":\"hat behauptet\",\"wir\":\"haben behauptet\",\"ihr\":\"habt behauptet\",\"sie_Sie\":\"haben behauptet\"}],\"target\":\"behaupten\",\"source\":\"to claim / to assert\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b2-b2_debate-007\",\"infinitive\":\"bestreiten\",\"translation\":\"to dispute / to deny\",\"type\":\"verb\",\"cefr\":\"B2\",\"tags\":[\"verb\"],\"grammar_note\":\"Irregular verb. Strong conjugation. Not separable. Requires an object in the accusative.\",\"examples\":[{\"de\":\"Der Angeklagte bestritt die Vorwürfe.\",\"en\":\"The accused denied the allegations.\"},{\"de\":\"Man kann die Fakten nicht bestreiten.\",\"en\":\"You cannot dispute the facts.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"bestritt\",\"du\":\"bestrittest\",\"er_sie_es\":\"bestritt\",\"wir\":\"bestritten\",\"ihr\":\"bestrittet\",\"sie_Sie\":\"bestritten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe bestritten\",\"du\":\"hast bestritten\",\"er_sie_es\":\"hat bestritten\",\"wir\":\"haben bestritten\",\"ihr\":\"habt bestritten\",\"sie_Sie\":\"haben bestritten\"}],\"target\":\"bestreiten\",\"source\":\"to dispute / to deny\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b2-b2_debate-008\",\"infinitive\":\"einwenden\",\"translation\":\"to object / to interpose\",\"type\":\"verb\",\"cefr\":\"B2\",\"tags\":[\"verb\"],\"grammar_note\":\"Separable, irregular verb. Often used with 'gegen' + Akkusativ or 'dass'-clause. Präteritum and Partizip II can be weak (wendete, gewendet) or strong (wandte, gewandt).\",\"examples\":[{\"de\":\"Ich muss gegen diesen Plan einwenden.\",\"en\":\"I must object to this plan.\"},{\"de\":\"Sie wandte ein, dass die Zeit knapp sei.\",\"en\":\"She interposed that time was short.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"wandte ein\",\"du\":\"wandtest ein\",\"er_sie_es\":\"wandte ein\",\"wir\":\"wandten ein\",\"ihr\":\"wandtet ein\",\"sie_Sie\":\"wandten ein\"},{\"tense\":\"Perfekt\",\"ich\":\"habe eingewandt\",\"du\":\"hast eingewandt\",\"er_sie_es\":\"hat eingewandt\",\"wir\":\"haben eingewandt\",\"ihr\":\"habt eingewandt\",\"sie_Sie\":\"haben eingewandt\"}],\"target\":\"einwenden\",\"source\":\"to object / to interpose\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b2-b2_debate-009\",\"infinitive\":\"überzeugen\",\"translation\":\"to convince / to persuade\",\"type\":\"verb\",\"cefr\":\"B2\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb. Weak conjugation. Not separable. Requires an object in the accusative. Often used with 'von' + Dativ.\",\"examples\":[{\"de\":\"Er konnte mich von seiner Idee überzeugen.\",\"en\":\"He was able to convince me of his idea.\"},{\"de\":\"Ihre Argumente haben mich nicht überzeugt.\",\"en\":\"Her arguments did not persuade me.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"überzeugte\",\"du\":\"überzeugtest\",\"er_sie_es\":\"überzeugte\",\"wir\":\"überzeugten\",\"ihr\":\"überzeugtet\",\"sie_Sie\":\"überzeugten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe überzeugt\",\"du\":\"hast überzeugt\",\"er_sie_es\":\"hat überzeugt\",\"wir\":\"haben überzeugt\",\"ihr\":\"habt überzeugt\",\"sie_Sie\":\"haben überzeugt\"}],\"target\":\"überzeugen\",\"source\":\"to convince / to persuade\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b2-b2_debate-010\",\"infinitive\":\"überreden\",\"translation\":\"to persuade / to talk into\",\"type\":\"verb\",\"cefr\":\"B2\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb. Weak conjugation. Not separable. Requires an object in the accusative. Often used with 'zu' + Dativ.\",\"examples\":[{\"de\":\"Ich habe ihn überredet, mitzukommen.\",\"en\":\"I persuaded him to come along.\"},{\"de\":\"Lass dich nicht so leicht überreden.\",\"en\":\"Don't let yourself be talked into things so easily.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"überredete\",\"du\":\"überredetest\",\"er_sie_es\":\"überredete\",\"wir\":\"überredeten\",\"ihr\":\"überredetet\",\"sie_Sie\":\"überredeten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe überredet\",\"du\":\"hast überredet\",\"er_sie_es\":\"hat überredet\",\"wir\":\"haben überredet\",\"ihr\":\"habt überredet\",\"sie_Sie\":\"haben überredet\"}],\"target\":\"überreden\",\"source\":\"to persuade / to talk into\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b2-b2_debate-011\",\"infinitive\":\"äußern\",\"translation\":\"to express / to utter\",\"type\":\"verb\",\"cefr\":\"B2\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb. Weak conjugation. Can be used reflexively (sich äußern).\",\"examples\":[{\"de\":\"Er äußerte seine Bedenken deutlich.\",\"en\":\"He clearly expressed his concerns.\"},{\"de\":\"Sie hat sich zu diesem Thema noch nicht geäußert.\",\"en\":\"She has not yet commented on this topic.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"äußerte\",\"du\":\"äußertest\",\"er_sie_es\":\"äußerte\",\"wir\":\"äußerten\",\"ihr\":\"äußertet\",\"sie_Sie\":\"äußerten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe geäußert\",\"du\":\"hast geäußert\",\"er_sie_es\":\"hat geäußert\",\"wir\":\"haben geäußert\",\"ihr\":\"habt geäußert\",\"sie_Sie\":\"haben geäußert\"}],\"target\":\"äußern\",\"source\":\"to express / to utter\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b2-b2_debate-012\",\"infinitive\":\"erläutern\",\"translation\":\"to explain / to clarify\",\"type\":\"verb\",\"cefr\":\"B2\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb. Weak conjugation. Not separable. Requires an object in the accusative.\",\"examples\":[{\"de\":\"Der Sprecher erläuterte die komplexen Zusammenhänge.\",\"en\":\"The speaker explained the complex correlations.\"},{\"de\":\"Könnten Sie diesen Punkt bitte näher erläutern?\",\"en\":\"Could you please explain this point in more detail?\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"erläuterte\",\"du\":\"erläutertest\",\"er_sie_es\":\"erläuterte\",\"wir\":\"erläuterten\",\"ihr\":\"erläutertet\",\"sie_Sie\":\"erläuterten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe erläutert\",\"du\":\"hast erläutert\",\"er_sie_es\":\"hat erläutert\",\"wir\":\"haben erläutert\",\"ihr\":\"habt erläutert\",\"sie_Sie\":\"haben erläutert\"}],\"target\":\"erläutern\",\"source\":\"to explain / to clarify\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b2-b2_debate-013\",\"infinitive\":\"darlegen\",\"translation\":\"to present / to explain\",\"type\":\"verb\",\"cefr\":\"B2\",\"tags\":[\"verb\"],\"grammar_note\":\"Separable verb. Weak conjugation. Often used to present facts or arguments clearly.\",\"examples\":[{\"de\":\"Er legte seine Gründe detailliert dar.\",\"en\":\"He presented his reasons in detail.\"},{\"de\":\"Der Anwalt wird die Fakten vor Gericht darlegen.\",\"en\":\"The lawyer will present the facts in court.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"legte dar\",\"du\":\"legtest dar\",\"er_sie_es\":\"legte dar\",\"wir\":\"legten dar\",\"ihr\":\"legtet dar\",\"sie_Sie\":\"legten dar\"},{\"tense\":\"Perfekt\",\"ich\":\"habe dargelegt\",\"du\":\"hast dargelegt\",\"er_sie_es\":\"hat dargelegt\",\"wir\":\"haben dargelegt\",\"ihr\":\"habt dargelegt\",\"sie_Sie\":\"haben dargelegt\"}],\"target\":\"darlegen\",\"source\":\"to present / to explain\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b2-b2_debate-014\",\"infinitive\":\"vortragen\",\"translation\":\"to present / to recite\",\"type\":\"verb\",\"cefr\":\"B2\",\"tags\":[\"verb\"],\"grammar_note\":\"Separable, irregular verb. Strong conjugation. Often used for formal presentations or recitations.\",\"examples\":[{\"de\":\"Sie trug ihre Rede sehr überzeugend vor.\",\"en\":\"She presented her speech very convincingly.\"},{\"de\":\"Der Chor trug ein altes Lied vor.\",\"en\":\"The choir recited an old song.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"trug vor\",\"du\":\"trugst vor\",\"er_sie_es\":\"trug vor\",\"wir\":\"trugen vor\",\"ihr\":\"trugt vor\",\"sie_Sie\":\"trugen vor\"},{\"tense\":\"Perfekt\",\"ich\":\"habe vorgetragen\",\"du\":\"hast vorgetragen\",\"er_sie_es\":\"hat vorgetragen\",\"wir\":\"haben vorgetragen\",\"ihr\":\"habt vorgetragen\",\"sie_Sie\":\"haben vorgetragen\"}],\"target\":\"vortragen\",\"source\":\"to present / to recite\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b2-b2_debate-015\",\"infinitive\":\"entgegnen\",\"translation\":\"to counter / to reply\",\"type\":\"verb\",\"cefr\":\"B2\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb. Weak conjugation. Not separable. Often used with 'Dativ' (to whom) or a 'dass'-clause.\",\"examples\":[{\"de\":\"Er entgegnete ihr mit einem scharfen Argument.\",\"en\":\"He countered her with a sharp argument.\"},{\"de\":\"Sie entgegnete, dass dies nicht der Fall sei.\",\"en\":\"She replied that this was not the case.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"entgegnete\",\"du\":\"entgegnetest\",\"er_sie_es\":\"entgegnete\",\"wir\":\"entgegneten\",\"ihr\":\"entgegnetet\",\"sie_Sie\":\"entgegneten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe entgegnet\",\"du\":\"hast entgegnet\",\"er_sie_es\":\"hat entgegnet\",\"wir\":\"haben entgegnet\",\"ihr\":\"habt entgegnet\",\"sie_Sie\":\"haben entgegnet\"}],\"target\":\"entgegnen\",\"source\":\"to counter / to reply\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b2-b2_debate-016\",\"infinitive\":\"einlenken\",\"translation\":\"to give in / to compromise\",\"type\":\"verb\",\"cefr\":\"B2\",\"tags\":[\"verb\"],\"grammar_note\":\"Separable verb. Weak conjugation. Often used in negotiations or discussions.\",\"examples\":[{\"de\":\"Nach langer Debatte musste er schließlich einlenken.\",\"en\":\"After a long debate, he finally had to give in.\"},{\"de\":\"Sie sind bereit, in einigen Punkten einzulenken.\",\"en\":\"They are willing to compromise on some points.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"lenkte ein\",\"du\":\"lenktest ein\",\"er_sie_es\":\"lenkte ein\",\"wir\":\"lenkten ein\",\"ihr\":\"lenktet ein\",\"sie_Sie\":\"lenkten ein\"},{\"tense\":\"Perfekt\",\"ich\":\"habe eingelenkt\",\"du\":\"hast eingelenkt\",\"er_sie_es\":\"hat eingelenkt\",\"wir\":\"haben eingelenkt\",\"ihr\":\"habt eingelenkt\",\"sie_Sie\":\"haben eingelenkt\"}],\"target\":\"einlenken\",\"source\":\"to give in / to compromise\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b2-b2_debate-017\",\"infinitive\":\"verhandeln\",\"translation\":\"to negotiate\",\"type\":\"verb\",\"cefr\":\"B2\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb. Weak conjugation. Not separable. Often used with 'über' + Akkusativ or 'mit' + Dativ.\",\"examples\":[{\"de\":\"Die Parteien verhandelten über einen neuen Vertrag.\",\"en\":\"The parties negotiated a new contract.\"},{\"de\":\"Wir müssen noch mit dem Lieferanten verhandeln.\",\"en\":\"We still need to negotiate with the supplier.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"verhandelte\",\"du\":\"verhandeltest\",\"er_sie_es\":\"verhandelte\",\"wir\":\"verhandelten\",\"ihr\":\"verhandeltet\",\"sie_Sie\":\"verhandelten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe verhandelt\",\"du\":\"hast verhandelt\",\"er_sie_es\":\"hat verhandelt\",\"wir\":\"haben verhandelt\",\"ihr\":\"habt verhandelt\",\"sie_Sie\":\"haben verhandelt\"}],\"target\":\"verhandeln\",\"source\":\"to negotiate\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b2-b2_debate-018\",\"infinitive\":\"erörtern\",\"translation\":\"to discuss / to deliberate\",\"type\":\"verb\",\"cefr\":\"B2\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb. Weak conjugation. Not separable. Similar to 'diskutieren' but often implies a more thorough or formal discussion.\",\"examples\":[{\"de\":\"Der Ausschuss erörterte die verschiedenen Optionen.\",\"en\":\"The committee discussed the various options.\"},{\"de\":\"Wir sollten diese Angelegenheit in Ruhe erörtern.\",\"en\":\"We should deliberate this matter calmly.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"erörterte\",\"du\":\"erörtertest\",\"er_sie_es\":\"erörterte\",\"wir\":\"erörterten\",\"ihr\":\"erörtert\",\"sie_Sie\":\"erörterten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe erörtert\",\"du\":\"hast erörtert\",\"er_sie_es\":\"hat erörtert\",\"wir\":\"haben erörtert\",\"ihr\":\"habt erörtert\",\"sie_Sie\":\"haben erörtert\"}],\"target\":\"erörtern\",\"source\":\"to discuss / to deliberate\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b2-b2_debate-019\",\"infinitive\":\"begründen\",\"translation\":\"to justify / to give reasons\",\"type\":\"verb\",\"cefr\":\"B2\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb. Weak conjugation. Not separable. Requires an object in the accusative.\",\"examples\":[{\"de\":\"Sie konnte ihre Entscheidung nicht überzeugend begründen.\",\"en\":\"She couldn't convincingly justify her decision.\"},{\"de\":\"Bitte begründen Sie Ihre Meinung.\",\"en\":\"Please give reasons for your opinion.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"begründete\",\"du\":\"begründetest\",\"er_sie_es\":\"begründete\",\"wir\":\"begründeten\",\"ihr\":\"begründetet\",\"sie_Sie\":\"begründeten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe begründet\",\"du\":\"hast begründet\",\"er_sie_es\":\"hat begründet\",\"wir\":\"haben begründet\",\"ihr\":\"habt begründet\",\"sie_Sie\":\"haben begründet\"}],\"target\":\"begründen\",\"source\":\"to justify / to give reasons\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b2-b2_debate-020\",\"infinitive\":\"appellieren\",\"translation\":\"to appeal\",\"type\":\"verb\",\"cefr\":\"B2\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb. Weak conjugation. Not separable. Often used with 'an' + Akkusativ.\",\"examples\":[{\"de\":\"Der Redner appellierte an die Vernunft der Zuhörer.\",\"en\":\"The speaker appealed to the reason of the audience.\"},{\"de\":\"Wir müssen an die Politiker appellieren, etwas zu tun.\",\"en\":\"We must appeal to the politicians to do something.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"appellierte\",\"du\":\"appelliertest\",\"er_sie_es\":\"appellierte\",\"wir\":\"appellierten\",\"ihr\":\"appelliertet\",\"sie_Sie\":\"appellierten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe appelliert\",\"du\":\"hast appelliert\",\"er_sie_es\":\"hat appelliert\",\"wir\":\"haben appelliert\",\"ihr\":\"habt appelliert\",\"sie_Sie\":\"haben appelliert\"}],\"target\":\"appellieren\",\"source\":\"to appeal\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b2-b2_debate-021\",\"infinitive\":\"kritisieren\",\"translation\":\"to criticize\",\"type\":\"verb\",\"cefr\":\"B2\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb. Weak conjugation. Not separable. Requires an object in the accusative.\",\"examples\":[{\"de\":\"Er kritisierte die mangelnde Vorbereitung des Teams.\",\"en\":\"He criticized the team's lack of preparation.\"},{\"de\":\"Man sollte konstruktiv kritisieren.\",\"en\":\"One should criticize constructively.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"kritisierte\",\"du\":\"kritisiertest\",\"er_sie_es\":\"kritisierte\",\"wir\":\"kritisierten\",\"ihr\":\"kritisiertet\",\"sie_Sie\":\"kritisierten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe kritisiert\",\"du\":\"hast kritisiert\",\"er_sie_es\":\"hat kritisiert\",\"wir\":\"haben kritisiert\",\"ihr\":\"habt kritisiert\",\"sie_Sie\":\"haben kritisiert\"}],\"target\":\"kritisieren\",\"source\":\"to criticize\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b2-b2_debate-022\",\"infinitive\":\"verteidigen\",\"translation\":\"to defend\",\"type\":\"verb\",\"cefr\":\"B2\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb. Weak conjugation. Not separable. Requires an object in the accusative. Can be used reflexively.\",\"examples\":[{\"de\":\"Sie verteidigte ihre Meinung energisch.\",\"en\":\"She defended her opinion vigorously.\"},{\"de\":\"Wir müssen unsere Position verteidigen.\",\"en\":\"We must defend our position.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"verteidigte\",\"du\":\"verteidigtest\",\"er_sie_es\":\"verteidigte\",\"wir\":\"verteidigten\",\"ihr\":\"verteidigtet\",\"sie_Sie\":\"verteidigten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe verteidigt\",\"du\":\"hast verteidigt\",\"er_sie_es\":\"hat verteidigt\",\"wir\":\"haben verteidigt\",\"ihr\":\"habt verteidigt\",\"sie_Sie\":\"haben verteidigt\"}],\"target\":\"verteidigen\",\"source\":\"to defend\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b2-b2_debate-023\",\"infinitive\":\"zusammenfassen\",\"translation\":\"to summarize\",\"type\":\"verb\",\"cefr\":\"B2\",\"tags\":[\"verb\"],\"grammar_note\":\"Separable verb. Weak conjugation. Requires an object in the accusative.\",\"examples\":[{\"de\":\"Könnten Sie die wichtigsten Punkte bitte zusammenfassen?\",\"en\":\"Could you please summarize the main points?\"},{\"de\":\"Ich fasse die Ergebnisse unserer Diskussion zusammen.\",\"en\":\"I am summarizing the results of our discussion.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"fasste zusammen\",\"du\":\"fasstest zusammen\",\"er_sie_es\":\"fasste zusammen\",\"wir\":\"fassten zusammen\",\"ihr\":\"fasstet zusammen\",\"sie_Sie\":\"fassten zusammen\"},{\"tense\":\"Perfekt\",\"ich\":\"habe zusammengefasst\",\"du\":\"hast zusammengefasst\",\"er_sie_es\":\"hat zusammengefasst\",\"wir\":\"haben zusammengefasst\",\"ihr\":\"habt zusammengefasst\",\"sie_Sie\":\"haben zusammengefasst\"}],\"target\":\"zusammenfassen\",\"source\":\"to summarize\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b2-b2_debate-024\",\"infinitive\":\"herausfordern\",\"translation\":\"to challenge\",\"type\":\"verb\",\"cefr\":\"B2\",\"tags\":[\"verb\"],\"grammar_note\":\"Separable verb. Weak conjugation. Requires an object in the accusative. Can be used to challenge a person or a statement.\",\"examples\":[{\"de\":\"Er forderte seine Gegner zu einer Debatte heraus.\",\"en\":\"He challenged his opponents to a debate.\"},{\"de\":\"Diese Aussage forderte zum Widerspruch heraus.\",\"en\":\"This statement challenged contradiction.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"forderte heraus\",\"du\":\"fordertest heraus\",\"er_sie_es\":\"forderte heraus\",\"wir\":\"forderten heraus\",\"ihr\":\"fordertet heraus\",\"sie_Sie\":\"forderten heraus\"},{\"tense\":\"Perfekt\",\"ich\":\"habe herausgefordert\",\"du\":\"hast herausgefordert\",\"er_sie_es\":\"hat herausgefordert\",\"wir\":\"haben herausgefordert\",\"ihr\":\"habt herausgefordert\",\"sie_Sie\":\"haben herausgefordert\"}],\"target\":\"herausfordern\",\"source\":\"to challenge\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b2-b2_debate-025\",\"infinitive\":\"widersprechen\",\"translation\":\"to contradict / to object\",\"type\":\"verb\",\"cefr\":\"B2\",\"tags\":[\"verb\"],\"grammar_note\":\"Separable, irregular verb. Strong conjugation. Requires an object in the dative (to whom).\",\"examples\":[{\"de\":\"Du darfst mir nicht immer widersprechen!\",\"en\":\"You must not always contradict me!\"},{\"de\":\"Ihre Aussagen widersprechen sich.\",\"en\":\"Her statements contradict each other.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"widersprach\",\"du\":\"widersprachst\",\"er_sie_es\":\"widersprach\",\"wir\":\"widersprachen\",\"ihr\":\"widerspracht\",\"sie_Sie\":\"widersprachen\"},{\"tense\":\"Perfekt\",\"ich\":\"habe widersprochen\",\"du\":\"hast widersprochen\",\"er_sie_es\":\"hat widersprochen\",\"wir\":\"haben widersprochen\",\"ihr\":\"habt widersprochen\",\"sie_Sie\":\"haben widersprochen\"}],\"target\":\"widersprechen\",\"source\":\"to contradict / to object\",\"example_target\":\"\",\"example_source\":\"\"}]";
+const langConfigJson = "{\"language_pair\":\"english_german\",\"target_lang\":\"de\",\"native_lang\":\"en\",\"target_lang_name\":\"Deutsch\",\"native_lang_name\":\"English\",\"speech_lang\":\"de-DE\",\"noun_metadata_fields\":[{\"key\":\"article\",\"label\":\"Artikel\",\"render\":\"article_badge\"},{\"key\":\"gender\",\"label\":\"Genus\",\"render\":\"gender_label\"},{\"key\":\"plural\",\"label\":\"Plural\",\"render\":\"text\"}],\"article_colours\":{\"der\":\"#4A7C9E\",\"die\":\"#B05070\",\"das\":\"#4A8A5A\"},\"gender_labels\":{\"m\":\"Maskulinum\",\"f\":\"Femininum\",\"n\":\"Neutrum\"},\"verb_tenses\":[\"Präsens\",\"Präteritum\",\"Perfekt\",\"Futur I\",\"Konjunktiv II\"],\"cases\":{\"nominative\":\"Nominativ\",\"accusative\":\"Akkusativ\",\"dative\":\"Dativ\",\"genitive\":\"Genitiv\"},\"ui_labels\":{\"learn_mode\":\"Lernen\",\"train_mode\":\"Trainieren\",\"examples_heading\":\"Beispielsätze\",\"grammar_note_heading\":\"Grammatiknotiz\",\"audio_button\":\"Anhören\",\"back_link\":\"Zurück\",\"card_counter\":\"Karte {current} / {total}\",\"next_button\":\"Weiter\",\"finish_button\":\"Fertig\",\"correct\":\"Richtig!\",\"wrong\":\"Falsch\"}}";
+const category = "verbs";
+
+  const cards     = JSON.parse(cardsJson);
+  const config    = JSON.parse(langConfigJson);
+  let currentIndex = 0;
+
+  const dotNav    = document.getElementById('dot-nav');
+  const currentNum = document.getElementById('current-num');
+  const progressBar = document.getElementById('progress-bar');
+  const btnPrev   = document.getElementById('btn-prev');
+  const btnNext   = document.getElementById('btn-next');
+  const cardHost  = document.getElementById('card-host');
+  const progressCont = document.getElementById('progress-container');
+
+  const cardViewWrap = document.getElementById('card-view-wrap');
+  const listViewWrap = document.getElementById('list-view-wrap');
+  const btnViewCards = document.getElementById('view-cards-btn');
+  const btnViewList  = document.getElementById('view-list-btn');
+
+  // Toggle Logic
+  function setViewMode(mode) {
+    if (mode === 'list') {
+      cardViewWrap.classList.add('hidden');
+      listViewWrap.classList.remove('hidden');
+      progressCont.classList.add('hidden');
+      btnViewList.classList.add('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewList.classList.remove('text-[var(--text-muted)]');
+      btnViewCards.classList.remove('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewCards.classList.add('text-[var(--text-muted)]');
+    } else {
+      listViewWrap.classList.add('hidden');
+      cardViewWrap.classList.remove('hidden');
+      progressCont.classList.remove('hidden');
+      btnViewCards.classList.add('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewCards.classList.remove('text-[var(--text-muted)]');
+      btnViewList.classList.remove('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewList.classList.add('text-[var(--text-muted)]');
+    }
+  }
+
+  btnViewCards.addEventListener('click', () => setViewMode('cards'));
+  btnViewList.addEventListener('click', () => setViewMode('list'));
+
+  // Default Grammatik and Redemittel to list view!
+  if (category === 'grammatik' || category === 'redemittel' || category === 'phrases') {
+    setViewMode('list');
+  }
+
+
+
+  // ── Helpers (mirror card-renderer.ts — no module imports in inline scripts) ──
+  const articleColours = config.article_colours || { der:'#4A7C9E', die:'#B05070', das:'#4A8A5A' };
+  const genderLabels   = config.gender_labels   || { m:'Maskulinum', f:'Femininum', n:'Neutrum'  };
+  const speechLang     = config.speech_lang     || 'de-DE';
+
+  function stripArticle(w) {
+    return (w || '').replace(/^(der|die|das|el|la|los|las|le|les|l')\s+/i,'').trim();
+  }
+
+  function getTypeLabel(card) {
+    const tags = card.tags || [];
+    if (tags.includes('noun'))       return 'Substantiv';
+    if (tags.includes('verb'))       return 'Verb';
+    if (tags.includes('adjective'))  return 'Adjektiv';
+    if (tags.includes('expression')) return 'Ausdruck';
+    return { vocab:'Vokabel', verb:'Verb', phrase:'Phrase', connector:'Konnektor', grammar:'Grammatik' }[card.type] || 'Vokabel';
+  }
+
+  function normaliseEx(ex) {
+    return { target: ex.target||ex.de||'', source: ex.source||ex.en||'', note: ex.note };
+  }
+
+  function getMetaFacts(card) {
+    const meta = { ...(card.metadata||{}), article:card.article, gender:card.gender, plural:card.plural };
+    const facts = [];
+    for (const field of (config.noun_metadata_fields || [])) {
+      const raw = meta[field.key];
+      if (!raw || raw==='~') continue;
+      let value = String(raw), colour;
+      if (field.render === 'gender_label')  value  = genderLabels[raw] || raw;
+      if (field.render === 'article_badge') colour = articleColours[raw.toLowerCase()] || 'var(--espresso)';
+      facts.push({ label: field.label, value, colour });
+    }
+    return facts;
+  }
+
+  // ── Card renderer ─────────────────────────────────────────────────────────
+  function renderCard(idx) {
+    const card = cards[idx];
+    if (!card || !cardHost) return;
+
+    const lc = cardHost.querySelector('.learning-card');
+    if (!lc) return;
+
+    function sel(cls) { return lc.querySelector(cls); }
+
+    // Type badge + level
+    sel('.lc-type-badge').textContent = getTypeLabel(card);
+    sel('.lc-level-badge').textContent = (card.level || '').toUpperCase();
+
+    // Article
+    const article = card.article || card.metadata?.article;
+    const articleWrap = sel('.lc-article-wrap');
+    const articleEl   = sel('.lc-article');
+    if (article && (card.tags||[]).includes('noun') && !card.plural_only) {
+      articleEl.textContent = article;
+      articleEl.style.color = articleColours[article.toLowerCase()] || 'var(--espresso)';
+      articleWrap.style.display = '';
+    } else {
+      articleWrap.style.display = 'none';
+    }
+
+    // Word / translation / forms
+    sel('.lc-word').textContent        = stripArticle(card.target);
+    sel('.lc-translation').textContent = card.source || '';
+    const plural = card.plural || card.metadata?.plural;
+    sel('.lc-forms').textContent = plural && !card.plural_only ? `Pl. ${plural}` : card.plural_only ? 'nur Plural' : '';
+
+    // Meta grid
+    const metaGrid = sel('.lc-meta-grid');
+    const facts = getMetaFacts(card);
+    if (facts.length) {
+      metaGrid.style.gridTemplateColumns = `repeat(${Math.min(facts.length,4)}, 1fr)`;
+      metaGrid.style.display = '';
+      metaGrid.innerHTML = facts.map((f, i) => `
+        <div class="px-5 py-4 ${i<facts.length-1?'border-r':''}" style="border-color:var(--border);">
+          <p class="text-[9px] font-bold uppercase tracking-widest mb-1" style="color:var(--text-muted);">${f.label}</p>
+          <p class="text-sm font-bold" style="color:${f.colour||'var(--text)'};">${f.value}</p>
+        </div>`).join('');
+    } else {
+      metaGrid.style.display = 'none';
+    }
+
+    // Grammar note
+    const grammarWrap = sel('.lc-grammar-wrap');
+    if (card.grammar_note) {
+      sel('.lc-grammar-text').innerHTML = formatHighlight(card.grammar_note);
+      grammarWrap.classList.remove('hidden');
+    } else {
+      grammarWrap.classList.add('hidden');
+    }
+
+    // Examples
+    const examplesEl = sel('.lc-examples');
+    const rawEx = card.examples || (card.example_target ? [{ target:card.example_target, source:card.example_source }] : []);
+    examplesEl.innerHTML = rawEx.length
+      ? rawEx.map(ex => { const e=normaliseEx(ex); return `
+          <div class="rounded-2xl border overflow-hidden" style="border-color:var(--border);">
+            <div class="px-4 py-3" style="background-color:var(--bg);">
+              <p class="font-semibold leading-snug mb-1" style="color:var(--text);">${e.target}</p>
+              <p class="text-sm italic" style="color:var(--text-muted);">${e.source||''}</p>
+            </div>
+            ${e.note?`<div class="px-4 py-2 border-t" style="border-color:var(--border);">
+              <p class="text-[10px] font-bold font-mono" style="color:var(--espresso);">📐 ${e.note}</p>
+            </div>`:''}
+          </div>`; }).join('')
+      : '<p class="text-sm italic" style="color:var(--text-muted);">Kein Beispiel verfügbar.</p>';
+
+    // Tags
+    sel('.lc-tags').innerHTML = (card.tags||[]).map(t =>
+      `<span class="text-[10px] font-bold px-2 py-0.5 rounded-md border" style="border-color:var(--border);color:var(--text-muted);background-color:var(--bg);">${t}</span>`
+    ).join('');
+
+    // Progress UI
+    if (currentNum)  currentNum.textContent = String(idx+1);
+    if (progressBar) progressBar.style.width = `${Math.round(((idx+1)/cards.length)*100)}%`;
+    if (btnPrev)     btnPrev.disabled = idx === 0;
+    if (btnNext)     btnNext.innerHTML = idx === cards.length-1
+      ? '✓ Fertig'
+      : 'Weiter <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>';
+
+    updateDots();
+
+    // Re-bind audio button cleanly by cloning to strip old listeners
+    const oldBtn = sel('.lc-audio-btn');
+    if (oldBtn) {
+      const newBtn = oldBtn.cloneNode(true);
+      oldBtn.parentNode.replaceChild(newBtn, oldBtn);
+      newBtn.addEventListener('click', speakCurrent);
+    }
+  }
+
+  // ── Dot navigation ────────────────────────────────────────────────────────
+  function buildDots() {
+    if (!dotNav) return;
+    dotNav.innerHTML = '';
+    const maxVisible = 20;
+    const showAll = cards.length <= maxVisible;
+    cards.forEach((_, i) => {
+      if (!showAll && i >= maxVisible) return;
+      const dot = document.createElement('button');
+      dot.className = 'dot w-2 h-2 rounded-full transition-all duration-300 flex-shrink-0';
+      dot.style.backgroundColor = 'var(--border)';
+      dot.title = `Card ${i+1}`;
+      dot.addEventListener('click', () => goTo(i));
+      dotNav.appendChild(dot);
+    });
+    if (!showAll) {
+      const el = document.createElement('span');
+      el.textContent = `+${cards.length - maxVisible}`;
+      el.className = 'text-[10px] font-bold';
+      el.style.color = 'var(--text-muted)';
+      dotNav.appendChild(el);
+    }
+  }
+
+  function updateDots() {
+    dotNav?.querySelectorAll('.dot').forEach((dot, i) => {
+      dot.style.backgroundColor = i===currentIndex ? 'var(--espresso)' : 'var(--border)';
+      dot.style.width     = i===currentIndex ? '20px' : '8px';
+      dot.style.borderRadius = '4px';
+    });
+  }
+
+  // ── Audio ─────────────────────────────────────────────────────────────────
+  function speakCurrent() {
+    const card = cards[currentIndex];
+    if (!card) return;
+    if (window.DeutschAudioEngine) {
+      window.DeutschAudioEngine.speak(card.target || '', speechLang, 0.85);
+    }
+  }
+
+  // ── Navigate ─────────────────────────────────────────────────────────────
+  function goTo(idx) {
+    if (idx < 0 || idx >= cards.length) return;
+    currentIndex = idx;
+    renderCard(currentIndex);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  btnPrev?.addEventListener('click', () => goTo(currentIndex - 1));
+  btnNext?.addEventListener('click', () => {
+    if (currentIndex === cards.length - 1) window.location.href = '/vocabulary';
+    else goTo(currentIndex + 1);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') goTo(currentIndex + 1);
+    if (e.key === 'ArrowLeft')  goTo(currentIndex - 1);
+    if (e.key === 'a' || e.key === 'A') speakCurrent();
+  });
+
+  // ── Init ─────────────────────────────────────────────────────────────────
+  buildDots();
+  // Card 0 is already rendered server-side via LearningCard component.
+  // Sync progress UI to reflect card 0 state.
+  updateDots();
+  if (progressBar) progressBar.style.width = `${Math.round(1/cards.length*100)}%`;
+  // Update card 0 using client-side config too (ensures langConfig is applied)
+  renderCard(0);
+})();</script>

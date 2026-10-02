@@ -1,0 +1,278 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="description" content="Deutsch Lounge — Language Learning Trainer"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/languagelounge/favicon.svg"><meta name="generator" content="Astro v7.3.5"><title>Redemittel — Deutsch Lounge</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet"><!-- Apply theme before paint to avoid flash --><script>
+      (function() {
+        const saved = localStorage.getItem('wortschatz_theme');
+        if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script><link rel="stylesheet" href="/languagelounge/_astro/Layout.BeSASyxj.css"><style>.sel-opt[data-astro-cid-as4z3awb]{border:2px solid var(--border);background-color:var(--card);color:var(--text);cursor:pointer;text-align:center;border-radius:12px;flex-direction:column;justify-content:center;align-items:center;width:100%;padding:14px 12px;transition:border-color .15s,background-color .15s,color .15s,box-shadow .15s;display:flex}.sel-opt[data-astro-cid-as4z3awb]:hover{border-color:var(--border-hover);box-shadow:0 2px 8px #00000014}.sel-opt[data-astro-cid-as4z3awb].sel-active{border-color:var(--espresso);background-color:var(--espresso);color:#f5f2eb;box-shadow:0 2px 12px #0000002e}
+</style></head><body class="antialiased min-h-screen flex flex-col" style="background-color:var(--bg);color:var(--text);"><!-- Header --><header class="sticky top-0 z-50 border-b" style="background-color:var(--bg);border-color:var(--border);"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between gap-4" style="height:4.5rem;"><!-- Logo + Language Switcher --><div class="flex items-center gap-4 shrink-0"><a href="/languagelounge/" class="flex items-center gap-2 group"><span class="font-outfit font-extrabold text-xl sm:text-2xl tracking-tight transition-colors" style="color:var(--text);">Small Talk Café <span class="font-normal text-base hidden sm:inline" style="color:var(--text-muted);">| <span id="site-name">Deutsch Lounge</span></span></span></a><!-- Language Selector Dropdown --><div class="relative" id="lang-dropdown-wrapper"><button id="lang-btn" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-sm font-bold transition-all hover:opacity-70" style="background-color:var(--bg); border-color:var(--border); color:var(--text);"><span id="lang-flag">🇩🇪</span><span id="lang-code">DE</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"></path></svg></button><div id="lang-menu" class="hidden absolute top-full left-0 mt-2 rounded-2xl border shadow-xl overflow-hidden z-50 min-w-[160px]" style="background-color:var(--card); border-color:var(--border);"><button class="lang-option w-full flex items-center gap-3 px-4 py-3 text-sm font-semibold text-left transition-colors hover:opacity-70" data-lang="de" data-flag="🇩🇪" data-code="DE" data-name="Deutsch Lounge" data-label="German" style="color:var(--text);"><span class="text-lg">🇩🇪</span><div><div class="font-bold" style="color:var(--text);">Deutsch</div><div class="text-xs" style="color:var(--text-muted);">German Learning</div></div></button><div class="border-t" style="border-color:var(--border);"></div><button class="lang-option w-full flex items-center gap-3 px-4 py-3 text-sm font-semibold text-left transition-colors hover:opacity-70" data-lang="es" data-flag="🇪🇸" data-code="ES" data-name="Spanish Gym" data-label="Spanish" style="color:var(--text);"><span class="text-lg">🇪🇸</span><div><div class="font-bold" style="color:var(--text);">Español</div><div class="text-xs" style="color:var(--text-muted);">Spanish Learning</div></div></button><div class="border-t" style="border-color:var(--border);"></div><button class="lang-option w-full flex items-center gap-3 px-4 py-3 text-sm font-semibold text-left transition-colors hover:opacity-70" data-lang="fr" data-flag="🇫🇷" data-code="FR" data-name="French Gym" data-label="French" style="color:var(--text);"><span class="text-lg">🇫🇷</span><div><div class="font-bold" style="color:var(--text);">Français</div><div class="text-xs" style="color:var(--text-muted);">French Learning</div></div></button></div></div></div><!-- Nav Links --><nav class="hidden md:flex gap-5 items-center"><a href="https://smalltalkcafe.de/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Small Talk Café Podcasts</a><span class="text-sm font-normal" style="color:var(--border);">|</span><a href="/languagelounge/vocabulary" data-german-nav class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Vokabeln</a><a href="/languagelounge/verbs" data-german-nav class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Verben</a><a href="/languagelounge/grammatik" data-german-nav class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Grammatik</a><a href="/languagelounge/redemittel" data-german-nav class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Redemittel</a><!-- Dark/Light Toggle --><button id="theme-toggle" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-sm font-semibold transition-all hover:opacity-70" style="border-color:var(--border); color:var(--text-muted);" aria-label="Toggle dark/light mode"><span id="theme-icon">☀️</span><span id="theme-label">Light</span></button></nav></div></header><!-- Coming Soon Overlay (shown for non-German languages) --><div id="coming-soon-overlay" class="hidden flex-1 flex items-center justify-center py-20 px-4"><div class="text-center max-w-lg mx-auto"><div class="text-7xl mb-6" id="coming-soon-flag">🌍</div><h1 class="font-outfit font-extrabold text-4xl sm:text-5xl mb-4" style="color:var(--text);">Coming Soon</h1><p class="text-lg mb-3" style="color:var(--text-muted);">We're working hard on the <strong id="coming-soon-lang">new language</strong> curriculum.</p><p class="text-base mb-8" style="color:var(--text-muted);">Stay tuned — it will be available very soon! In the meantime, explore our<strong>Deutsch Lounge</strong> to sharpen your German.</p><button id="coming-soon-back-btn" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-sm transition-all hover:opacity-80" style="background-color:var(--espresso); color:#fff;">🇩🇪 Switch to German</button></div></div><main id="main-content" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-1 w-full"><div class="max-w-5xl mx-auto py-8 space-y-10" data-astro-cid-as4z3awb><!-- Header --><div class="border-b pb-6 flex items-end justify-between gap-4" style="border-color:var(--border);" data-astro-cid-as4z3awb><div data-astro-cid-as4z3awb><a href="/languagelounge/" class="text-xs font-bold flex items-center gap-1 mb-3 hover:opacity-70" style="color:var(--espresso);" data-astro-cid-as4z3awb><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-as4z3awb><path d="m15 18-6-6 6-6" data-astro-cid-as4z3awb></path></svg>Dashboard</a><h1 class="text-3xl md:text-4xl font-extrabold font-outfit" style="color:var(--text);" data-astro-cid-as4z3awb>Redemittel</h1></div></div><!-- ── Mode Toggle ───────────────────────────── --><div class="flex rounded-xl border overflow-hidden p-1 gap-1 w-full max-w-[300px]" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-as4z3awb><button id="btn-mode-learn" class="mode-btn flex-1 flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold transition-all" data-astro-cid-as4z3awb><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-as4z3awb><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" data-astro-cid-as4z3awb></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" data-astro-cid-as4z3awb></path></svg>Lernen</button><button id="btn-mode-train" class="mode-btn flex-1 flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold transition-all" data-astro-cid-as4z3awb><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-as4z3awb><circle cx="12" cy="12" r="10" data-astro-cid-as4z3awb></circle><polyline points="12 6 12 12 16 14" data-astro-cid-as4z3awb></polyline></svg>Trainieren</button></div><!-- ══ LEARN PANEL ════════════════════════════ --><div id="learn-panel" class="space-y-10" data-astro-cid-as4z3awb><p class="text-sm font-medium" style="color:var(--text-muted);" data-astro-cid-as4z3awb>Wähle ein Deck aus der Bibliothek und lerne alle Informationen auf den Karten.</p><div class="space-y-4" data-astro-cid-as4z3awb><div class="flex items-center gap-4" data-astro-cid-as4z3awb><h3 class="text-xl font-extrabold font-outfit" style="color:var(--text);" data-astro-cid-as4z3awb>A1</h3><div class="h-px flex-1" style="background-color:var(--border);" data-astro-cid-as4z3awb></div></div><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" data-astro-cid-as4z3awb><a href="/languagelounge/training/redemittel/redemittel-a1-greetings" class="group block" data-astro-cid-as4z3awb><div class="h-full rounded-2xl p-5 border transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-as4z3awb><div class="flex items-start justify-end mb-2" data-astro-cid-as4z3awb><span class="text-[10px] font-bold tracking-widest uppercase px-2 py-1 rounded shadow-sm border" style="color:var(--text-muted); border-color:var(--border); background-color:var(--bg);" data-astro-cid-as4z3awb>4 KARTEN</span></div><h4 class="font-bold text-lg mb-1" style="color:var(--text);" data-astro-cid-as4z3awb>Greetings &amp; Small Talk</h4><p class="text-xs font-medium" style="color:var(--text-muted);" data-astro-cid-as4z3awb>Begrüßung &amp; Smalltalk</p></div></a><a href="/languagelounge/training/redemittel/rm-apologies-a1" class="group block" data-astro-cid-as4z3awb><div class="h-full rounded-2xl p-5 border transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-as4z3awb><div class="flex items-start justify-end mb-2" data-astro-cid-as4z3awb><span class="text-[10px] font-bold tracking-widest uppercase px-2 py-1 rounded shadow-sm border" style="color:var(--text-muted); border-color:var(--border); background-color:var(--bg);" data-astro-cid-as4z3awb>20 KARTEN</span></div><h4 class="font-bold text-lg mb-1" style="color:var(--text);" data-astro-cid-as4z3awb>Apologies</h4><p class="text-xs font-medium" style="color:var(--text-muted);" data-astro-cid-as4z3awb>Entschuldigungen</p></div></a><a href="/languagelounge/training/redemittel/greetings" class="group block" data-astro-cid-as4z3awb><div class="h-full rounded-2xl p-5 border transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-as4z3awb><div class="flex items-start justify-end mb-2" data-astro-cid-as4z3awb><span class="text-[10px] font-bold tracking-widest uppercase px-2 py-1 rounded shadow-sm border" style="color:var(--text-muted); border-color:var(--border); background-color:var(--bg);" data-astro-cid-as4z3awb>20 KARTEN</span></div><h4 class="font-bold text-lg mb-1" style="color:var(--text);" data-astro-cid-as4z3awb>Begrüßung &amp; Verabschiedung</h4><p class="text-xs font-medium" style="color:var(--text-muted);" data-astro-cid-as4z3awb>Greetings &amp; Farewells</p></div></a><a href="/languagelounge/training/redemittel/rm-help-a1" class="group block" data-astro-cid-as4z3awb><div class="h-full rounded-2xl p-5 border transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-as4z3awb><div class="flex items-start justify-end mb-2" data-astro-cid-as4z3awb><span class="text-[10px] font-bold tracking-widest uppercase px-2 py-1 rounded shadow-sm border" style="color:var(--text-muted); border-color:var(--border); background-color:var(--bg);" data-astro-cid-as4z3awb>20 KARTEN</span></div><h4 class="font-bold text-lg mb-1" style="color:var(--text);" data-astro-cid-as4z3awb>Asking for Help</h4><p class="text-xs font-medium" style="color:var(--text-muted);" data-astro-cid-as4z3awb>Hilfe bitten</p></div></a><a href="/languagelounge/training/redemittel/introductions" class="group block" data-astro-cid-as4z3awb><div class="h-full rounded-2xl p-5 border transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-as4z3awb><div class="flex items-start justify-end mb-2" data-astro-cid-as4z3awb><span class="text-[10px] font-bold tracking-widest uppercase px-2 py-1 rounded shadow-sm border" style="color:var(--text-muted); border-color:var(--border); background-color:var(--bg);" data-astro-cid-as4z3awb>20 KARTEN</span></div><h4 class="font-bold text-lg mb-1" style="color:var(--text);" data-astro-cid-as4z3awb>Sich vorstellen</h4><p class="text-xs font-medium" style="color:var(--text-muted);" data-astro-cid-as4z3awb>Introducing Oneself</p></div></a><a href="/languagelounge/training/redemittel/rm-prices-a1" class="group block" data-astro-cid-as4z3awb><div class="h-full rounded-2xl p-5 border transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-as4z3awb><div class="flex items-start justify-end mb-2" data-astro-cid-as4z3awb><span class="text-[10px] font-bold tracking-widest uppercase px-2 py-1 rounded shadow-sm border" style="color:var(--text-muted); border-color:var(--border); background-color:var(--bg);" data-astro-cid-as4z3awb>20 KARTEN</span></div><h4 class="font-bold text-lg mb-1" style="color:var(--text);" data-astro-cid-as4z3awb>Asking About Prices</h4><p class="text-xs font-medium" style="color:var(--text-muted);" data-astro-cid-as4z3awb>Preise erfragen</p></div></a><a href="/languagelounge/training/redemittel/rm-telling_time-a1" class="group block" data-astro-cid-as4z3awb><div class="h-full rounded-2xl p-5 border transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-as4z3awb><div class="flex items-start justify-end mb-2" data-astro-cid-as4z3awb><span class="text-[10px] font-bold tracking-widest uppercase px-2 py-1 rounded shadow-sm border" style="color:var(--text-muted); border-color:var(--border); background-color:var(--bg);" data-astro-cid-as4z3awb>20 KARTEN</span></div><h4 class="font-bold text-lg mb-1" style="color:var(--text);" data-astro-cid-as4z3awb>Telling the Time</h4><p class="text-xs font-medium" style="color:var(--text-muted);" data-astro-cid-as4z3awb>Uhrzeiten angeben</p></div></a></div></div><div class="space-y-4" data-astro-cid-as4z3awb><div class="flex items-center gap-4" data-astro-cid-as4z3awb><h3 class="text-xl font-extrabold font-outfit" style="color:var(--text);" data-astro-cid-as4z3awb>A2</h3><div class="h-px flex-1" style="background-color:var(--border);" data-astro-cid-as4z3awb></div></div><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" data-astro-cid-as4z3awb><a href="/languagelounge/training/redemittel/redemittel-a2-ordering-food" class="group block" data-astro-cid-as4z3awb><div class="h-full rounded-2xl p-5 border transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-as4z3awb><div class="flex items-start justify-end mb-2" data-astro-cid-as4z3awb><span class="text-[10px] font-bold tracking-widest uppercase px-2 py-1 rounded shadow-sm border" style="color:var(--text-muted); border-color:var(--border); background-color:var(--bg);" data-astro-cid-as4z3awb>4 KARTEN</span></div><h4 class="font-bold text-lg mb-1" style="color:var(--text);" data-astro-cid-as4z3awb>Ordering Food</h4><p class="text-xs font-medium" style="color:var(--text-muted);" data-astro-cid-as4z3awb>Essen bestellen</p></div></a><a href="/languagelounge/training/redemittel/rm-feelings-a2" class="group block" data-astro-cid-as4z3awb><div class="h-full rounded-2xl p-5 border transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-as4z3awb><div class="flex items-start justify-end mb-2" data-astro-cid-as4z3awb><span class="text-[10px] font-bold tracking-widest uppercase px-2 py-1 rounded shadow-sm border" style="color:var(--text-muted); border-color:var(--border); background-color:var(--bg);" data-astro-cid-as4z3awb>20 KARTEN</span></div><h4 class="font-bold text-lg mb-1" style="color:var(--text);" data-astro-cid-as4z3awb>Expressing Feelings</h4><p class="text-xs font-medium" style="color:var(--text-muted);" data-astro-cid-as4z3awb>Gefühle ausdrücken</p></div></a><a href="/languagelounge/training/redemittel/rm-invitations-a2" class="group block" data-astro-cid-as4z3awb><div class="h-full rounded-2xl p-5 border transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-as4z3awb><div class="flex items-start justify-end mb-2" data-astro-cid-as4z3awb><span class="text-[10px] font-bold tracking-widest uppercase px-2 py-1 rounded shadow-sm border" style="color:var(--text-muted); border-color:var(--border); background-color:var(--bg);" data-astro-cid-as4z3awb>20 KARTEN</span></div><h4 class="font-bold text-lg mb-1" style="color:var(--text);" data-astro-cid-as4z3awb>Making Invitations</h4><p class="text-xs font-medium" style="color:var(--text-muted);" data-astro-cid-as4z3awb>Einladungen aussprechen</p></div></a><a href="/languagelounge/training/redemittel/rm-past-a2" class="group block" data-astro-cid-as4z3awb><div class="h-full rounded-2xl p-5 border transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-as4z3awb><div class="flex items-start justify-end mb-2" data-astro-cid-as4z3awb><span class="text-[10px] font-bold tracking-widest uppercase px-2 py-1 rounded shadow-sm border" style="color:var(--text-muted); border-color:var(--border); background-color:var(--bg);" data-astro-cid-as4z3awb>20 KARTEN</span></div><h4 class="font-bold text-lg mb-1" style="color:var(--text);" data-astro-cid-as4z3awb>Talking About the Past</h4><p class="text-xs font-medium" style="color:var(--text-muted);" data-astro-cid-as4z3awb>Über die Vergangenheit sprechen</p></div></a><a href="/languagelounge/training/redemittel/rm-plans-a2" class="group block" data-astro-cid-as4z3awb><div class="h-full rounded-2xl p-5 border transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-as4z3awb><div class="flex items-start justify-end mb-2" data-astro-cid-as4z3awb><span class="text-[10px] font-bold tracking-widest uppercase px-2 py-1 rounded shadow-sm border" style="color:var(--text-muted); border-color:var(--border); background-color:var(--bg);" data-astro-cid-as4z3awb>20 KARTEN</span></div><h4 class="font-bold text-lg mb-1" style="color:var(--text);" data-astro-cid-as4z3awb>Making Plans</h4><p class="text-xs font-medium" style="color:var(--text-muted);" data-astro-cid-as4z3awb>Pläne machen</p></div></a><a href="/languagelounge/training/redemittel/rm-problems-a2" class="group block" data-astro-cid-as4z3awb><div class="h-full rounded-2xl p-5 border transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-as4z3awb><div class="flex items-start justify-end mb-2" data-astro-cid-as4z3awb><span class="text-[10px] font-bold tracking-widest uppercase px-2 py-1 rounded shadow-sm border" style="color:var(--text-muted); border-color:var(--border); background-color:var(--bg);" data-astro-cid-as4z3awb>20 KARTEN</span></div><h4 class="font-bold text-lg mb-1" style="color:var(--text);" data-astro-cid-as4z3awb>Describing Problems</h4><p class="text-xs font-medium" style="color:var(--text-muted);" data-astro-cid-as4z3awb>Probleme beschreiben</p></div></a></div></div><div class="space-y-4" data-astro-cid-as4z3awb><div class="flex items-center gap-4" data-astro-cid-as4z3awb><h3 class="text-xl font-extrabold font-outfit" style="color:var(--text);" data-astro-cid-as4z3awb>B1</h3><div class="h-px flex-1" style="background-color:var(--border);" data-astro-cid-as4z3awb></div></div><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" data-astro-cid-as4z3awb><a href="/languagelounge/training/redemittel/rm-b1-diskussion" class="group block" data-astro-cid-as4z3awb><div class="h-full rounded-2xl p-5 border transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-as4z3awb><div class="flex items-start justify-end mb-2" data-astro-cid-as4z3awb><span class="text-[10px] font-bold tracking-widest uppercase px-2 py-1 rounded shadow-sm border" style="color:var(--text-muted); border-color:var(--border); background-color:var(--bg);" data-astro-cid-as4z3awb>15 KARTEN</span></div><h4 class="font-bold text-lg mb-1" style="color:var(--text);" data-astro-cid-as4z3awb>Diskussion &amp; Meinung äußern</h4><p class="text-xs font-medium" style="color:var(--text-muted);" data-astro-cid-as4z3awb>Discussion &amp; Expressing Opinions</p></div></a><a href="/languagelounge/training/redemittel/rm-b1-kochen-rezepte" class="group block" data-astro-cid-as4z3awb><div class="h-full rounded-2xl p-5 border transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-as4z3awb><div class="flex items-start justify-end mb-2" data-astro-cid-as4z3awb><span class="text-[10px] font-bold tracking-widest uppercase px-2 py-1 rounded shadow-sm border" style="color:var(--text-muted); border-color:var(--border); background-color:var(--bg);" data-astro-cid-as4z3awb>21 KARTEN</span></div><h4 class="font-bold text-lg mb-1" style="color:var(--text);" data-astro-cid-as4z3awb>Rezepte &amp; Kochen</h4><p class="text-xs font-medium" style="color:var(--text-muted);" data-astro-cid-as4z3awb>Recipes &amp; Cooking</p></div></a><a href="/languagelounge/training/redemittel/rm-comparisons-b1" class="group block" data-astro-cid-as4z3awb><div class="h-full rounded-2xl p-5 border transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-as4z3awb><div class="flex items-start justify-end mb-2" data-astro-cid-as4z3awb><span class="text-[10px] font-bold tracking-widest uppercase px-2 py-1 rounded shadow-sm border" style="color:var(--text-muted); border-color:var(--border); background-color:var(--bg);" data-astro-cid-as4z3awb>20 KARTEN</span></div><h4 class="font-bold text-lg mb-1" style="color:var(--text);" data-astro-cid-as4z3awb>Making Comparisons</h4><p class="text-xs font-medium" style="color:var(--text-muted);" data-astro-cid-as4z3awb>Vergleiche anstellen</p></div></a><a href="/languagelounge/training/redemittel/rm-emotions_conv-b1" class="group block" data-astro-cid-as4z3awb><div class="h-full rounded-2xl p-5 border transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-as4z3awb><div class="flex items-start justify-end mb-2" data-astro-cid-as4z3awb><span class="text-[10px] font-bold tracking-widest uppercase px-2 py-1 rounded shadow-sm border" style="color:var(--text-muted); border-color:var(--border); background-color:var(--bg);" data-astro-cid-as4z3awb>20 KARTEN</span></div><h4 class="font-bold text-lg mb-1" style="color:var(--text);" data-astro-cid-as4z3awb>Emotions in Conversation</h4><p class="text-xs font-medium" style="color:var(--text-muted);" data-astro-cid-as4z3awb>Emotionen im Gespräch</p></div></a><a href="/languagelounge/training/redemittel/rm-hypotheses-b1" class="group block" data-astro-cid-as4z3awb><div class="h-full rounded-2xl p-5 border transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-as4z3awb><div class="flex items-start justify-end mb-2" data-astro-cid-as4z3awb><span class="text-[10px] font-bold tracking-widest uppercase px-2 py-1 rounded shadow-sm border" style="color:var(--text-muted); border-color:var(--border); background-color:var(--bg);" data-astro-cid-as4z3awb>20 KARTEN</span></div><h4 class="font-bold text-lg mb-1" style="color:var(--text);" data-astro-cid-as4z3awb>Formulating Hypotheses</h4><p class="text-xs font-medium" style="color:var(--text-muted);" data-astro-cid-as4z3awb>Hypothesen formulieren</p></div></a><a href="/languagelounge/training/redemittel/rm-objections-b1" class="group block" data-astro-cid-as4z3awb><div class="h-full rounded-2xl p-5 border transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-as4z3awb><div class="flex items-start justify-end mb-2" data-astro-cid-as4z3awb><span class="text-[10px] font-bold tracking-widest uppercase px-2 py-1 rounded shadow-sm border" style="color:var(--text-muted); border-color:var(--border); background-color:var(--bg);" data-astro-cid-as4z3awb>20 KARTEN</span></div><h4 class="font-bold text-lg mb-1" style="color:var(--text);" data-astro-cid-as4z3awb>Responding to Objections</h4><p class="text-xs font-medium" style="color:var(--text-muted);" data-astro-cid-as4z3awb>Auf Einwände reagieren</p></div></a><a href="/languagelounge/training/redemittel/rm-polite_criticism-b1" class="group block" data-astro-cid-as4z3awb><div class="h-full rounded-2xl p-5 border transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-as4z3awb><div class="flex items-start justify-end mb-2" data-astro-cid-as4z3awb><span class="text-[10px] font-bold tracking-widest uppercase px-2 py-1 rounded shadow-sm border" style="color:var(--text-muted); border-color:var(--border); background-color:var(--bg);" data-astro-cid-as4z3awb>20 KARTEN</span></div><h4 class="font-bold text-lg mb-1" style="color:var(--text);" data-astro-cid-as4z3awb>Giving Polite Criticism</h4><p class="text-xs font-medium" style="color:var(--text-muted);" data-astro-cid-as4z3awb>Kritik äußern höflich</p></div></a><a href="/languagelounge/training/redemittel/rm-pros_cons-b1" class="group block" data-astro-cid-as4z3awb><div class="h-full rounded-2xl p-5 border transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-as4z3awb><div class="flex items-start justify-end mb-2" data-astro-cid-as4z3awb><span class="text-[10px] font-bold tracking-widest uppercase px-2 py-1 rounded shadow-sm border" style="color:var(--text-muted); border-color:var(--border); background-color:var(--bg);" data-astro-cid-as4z3awb>20 KARTEN</span></div><h4 class="font-bold text-lg mb-1" style="color:var(--text);" data-astro-cid-as4z3awb>Stating Pros and Cons</h4><p class="text-xs font-medium" style="color:var(--text-muted);" data-astro-cid-as4z3awb>Vor- und Nachteile nennen</p></div></a></div></div><div class="space-y-4" data-astro-cid-as4z3awb><div class="flex items-center gap-4" data-astro-cid-as4z3awb><h3 class="text-xl font-extrabold font-outfit" style="color:var(--text);" data-astro-cid-as4z3awb>B2</h3><div class="h-px flex-1" style="background-color:var(--border);" data-astro-cid-as4z3awb></div></div><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" data-astro-cid-as4z3awb><a href="/languagelounge/training/redemittel/rm-b2-besprechungen" class="group block" data-astro-cid-as4z3awb><div class="h-full rounded-2xl p-5 border transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-as4z3awb><div class="flex items-start justify-end mb-2" data-astro-cid-as4z3awb><span class="text-[10px] font-bold tracking-widest uppercase px-2 py-1 rounded shadow-sm border" style="color:var(--text-muted); border-color:var(--border); background-color:var(--bg);" data-astro-cid-as4z3awb>26 KARTEN</span></div><h4 class="font-bold text-lg mb-1" style="color:var(--text);" data-astro-cid-as4z3awb>Besprechungen &amp; Diskussionen (Fortgeschritten)</h4><p class="text-xs font-medium" style="color:var(--text-muted);" data-astro-cid-as4z3awb>Meetings &amp; Advanced Discussions</p></div></a><a href="/languagelounge/training/redemittel/rm-b2-reklamation" class="group block" data-astro-cid-as4z3awb><div class="h-full rounded-2xl p-5 border transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-as4z3awb><div class="flex items-start justify-end mb-2" data-astro-cid-as4z3awb><span class="text-[10px] font-bold tracking-widest uppercase px-2 py-1 rounded shadow-sm border" style="color:var(--text-muted); border-color:var(--border); background-color:var(--bg);" data-astro-cid-as4z3awb>16 KARTEN</span></div><h4 class="font-bold text-lg mb-1" style="color:var(--text);" data-astro-cid-as4z3awb>Reklamation &amp; Beschwerden</h4><p class="text-xs font-medium" style="color:var(--text-muted);" data-astro-cid-as4z3awb>Complaints &amp; Claims</p></div></a><a href="/languagelounge/training/redemittel/rm-complex_matters-b2" class="group block" data-astro-cid-as4z3awb><div class="h-full rounded-2xl p-5 border transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-as4z3awb><div class="flex items-start justify-end mb-2" data-astro-cid-as4z3awb><span class="text-[10px] font-bold tracking-widest uppercase px-2 py-1 rounded shadow-sm border" style="color:var(--text-muted); border-color:var(--border); background-color:var(--bg);" data-astro-cid-as4z3awb>20 KARTEN</span></div><h4 class="font-bold text-lg mb-1" style="color:var(--text);" data-astro-cid-as4z3awb>Explaining Complex Matters</h4><p class="text-xs font-medium" style="color:var(--text-muted);" data-astro-cid-as4z3awb>Komplexe Sachverhalte erklären</p></div></a><a href="/languagelounge/training/redemittel/rm-compromises-b2" class="group block" data-astro-cid-as4z3awb><div class="h-full rounded-2xl p-5 border transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-as4z3awb><div class="flex items-start justify-end mb-2" data-astro-cid-as4z3awb><span class="text-[10px] font-bold tracking-widest uppercase px-2 py-1 rounded shadow-sm border" style="color:var(--text-muted); border-color:var(--border); background-color:var(--bg);" data-astro-cid-as4z3awb>20 KARTEN</span></div><h4 class="font-bold text-lg mb-1" style="color:var(--text);" data-astro-cid-as4z3awb>Negotiating Compromises</h4><p class="text-xs font-medium" style="color:var(--text-muted);" data-astro-cid-as4z3awb>Kompromisse aushandeln</p></div></a><a href="/languagelounge/training/redemittel/rm-critical_questioning-b2" class="group block" data-astro-cid-as4z3awb><div class="h-full rounded-2xl p-5 border transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-as4z3awb><div class="flex items-start justify-end mb-2" data-astro-cid-as4z3awb><span class="text-[10px] font-bold tracking-widest uppercase px-2 py-1 rounded shadow-sm border" style="color:var(--text-muted); border-color:var(--border); background-color:var(--bg);" data-astro-cid-as4z3awb>20 KARTEN</span></div><h4 class="font-bold text-lg mb-1" style="color:var(--text);" data-astro-cid-as4z3awb>Critical Questioning</h4><p class="text-xs font-medium" style="color:var(--text-muted);" data-astro-cid-as4z3awb>Kritisch hinterfragen</p></div></a><a href="/languagelounge/training/redemittel/rm-formal_writing-b2" class="group block" data-astro-cid-as4z3awb><div class="h-full rounded-2xl p-5 border transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-as4z3awb><div class="flex items-start justify-end mb-2" data-astro-cid-as4z3awb><span class="text-[10px] font-bold tracking-widest uppercase px-2 py-1 rounded shadow-sm border" style="color:var(--text-muted); border-color:var(--border); background-color:var(--bg);" data-astro-cid-as4z3awb>20 KARTEN</span></div><h4 class="font-bold text-lg mb-1" style="color:var(--text);" data-astro-cid-as4z3awb>Formal Written Language</h4><p class="text-xs font-medium" style="color:var(--text-muted);" data-astro-cid-as4z3awb>Formelle Schriftsprache</p></div></a><a href="/languagelounge/training/redemittel/rm-strategic_arg-b2" class="group block" data-astro-cid-as4z3awb><div class="h-full rounded-2xl p-5 border transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-as4z3awb><div class="flex items-start justify-end mb-2" data-astro-cid-as4z3awb><span class="text-[10px] font-bold tracking-widest uppercase px-2 py-1 rounded shadow-sm border" style="color:var(--text-muted); border-color:var(--border); background-color:var(--bg);" data-astro-cid-as4z3awb>20 KARTEN</span></div><h4 class="font-bold text-lg mb-1" style="color:var(--text);" data-astro-cid-as4z3awb>Strategic Argumentation</h4><p class="text-xs font-medium" style="color:var(--text-muted);" data-astro-cid-as4z3awb>Strategisch argumentieren</p></div></a><a href="/languagelounge/training/redemittel/rm-b2-vorstellungsgespraech" class="group block" data-astro-cid-as4z3awb><div class="h-full rounded-2xl p-5 border transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-as4z3awb><div class="flex items-start justify-end mb-2" data-astro-cid-as4z3awb><span class="text-[10px] font-bold tracking-widest uppercase px-2 py-1 rounded shadow-sm border" style="color:var(--text-muted); border-color:var(--border); background-color:var(--bg);" data-astro-cid-as4z3awb>19 KARTEN</span></div><h4 class="font-bold text-lg mb-1" style="color:var(--text);" data-astro-cid-as4z3awb>Vorstellungsgespräch</h4><p class="text-xs font-medium" style="color:var(--text-muted);" data-astro-cid-as4z3awb>Job Interview</p></div></a></div></div></div><!-- ══ TRAIN PANEL ════════════════════════════ --><div id="train-panel" class="hidden space-y-10" data-astro-cid-as4z3awb><div class="cafe-card rounded-3xl p-8 border shadow-lg" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-as4z3awb><div class="max-w-xl mx-auto space-y-8" data-astro-cid-as4z3awb><div class="text-center" data-astro-cid-as4z3awb><h2 class="text-2xl font-extrabold font-outfit mb-2" style="color:var(--text);" data-astro-cid-as4z3awb>Setup Training</h2><p class="text-sm font-medium" style="color:var(--text-muted);" data-astro-cid-as4z3awb>Konfiguriere deine Trainingssitzung.</p></div><form action="/languagelounge/training/redemittel/train" method="GET" class="space-y-8" data-astro-cid-as4z3awb><!-- Mode selection --><div class="space-y-3" data-astro-cid-as4z3awb><p class="text-[10px] font-bold tracking-widest uppercase" style="color:var(--text-muted);" data-astro-cid-as4z3awb>Fragetyp</p><div class="grid grid-cols-2 gap-3" id="mode-group" data-astro-cid-as4z3awb><button type="button" data-group="mode" data-value="mc" class="sel-opt sel-active" data-astro-cid-as4z3awb><span class="text-xl mb-1 block" data-astro-cid-as4z3awb>🔘</span><span class="text-sm font-bold" data-astro-cid-as4z3awb>Multiple Choice</span></button><button type="button" data-group="mode" data-value="type" class="sel-opt" data-astro-cid-as4z3awb><span class="text-xl mb-1 block" data-astro-cid-as4z3awb>⌨️</span><span class="text-sm font-bold" data-astro-cid-as4z3awb>Texteingabe</span></button></div><input type="hidden" name="mode" id="mode-hidden" value="mc" data-astro-cid-as4z3awb></div><!-- Direction selection --><div class="space-y-3" data-astro-cid-as4z3awb><p class="text-[10px] font-bold tracking-widest uppercase" style="color:var(--text-muted);" data-astro-cid-as4z3awb>Richtung</p><div class="grid grid-cols-2 gap-3" id="dir-group" data-astro-cid-as4z3awb><button type="button" data-group="dir" data-value="en-de" class="sel-opt sel-active" data-astro-cid-as4z3awb><span class="text-sm font-bold" data-astro-cid-as4z3awb>🇺🇸 English → 🇩🇪 Deutsch</span></button><button type="button" data-group="dir" data-value="de-en" class="sel-opt" data-astro-cid-as4z3awb><span class="text-sm font-bold" data-astro-cid-as4z3awb>🇩🇪 Deutsch → 🇺🇸 English</span></button></div><input type="hidden" name="dir" id="dir-hidden" value="en-de" data-astro-cid-as4z3awb></div><!-- Scope (Levels) --><div class="space-y-3" data-astro-cid-as4z3awb><div class="flex justify-between items-end" data-astro-cid-as4z3awb><p class="text-[10px] font-bold tracking-widest uppercase" style="color:var(--text-muted);" data-astro-cid-as4z3awb>Level auswählen</p><span id="card-count-preview" class="text-xs font-bold" style="color:var(--espresso);" data-astro-cid-as4z3awb>0 Karten</span></div><div class="grid grid-cols-2 md:grid-cols-4 gap-3" id="level-group" data-astro-cid-as4z3awb><button type="button" data-group="level" data-value="a1" class="sel-opt sel-toggle" data-astro-cid-as4z3awb><span class="font-bold text-sm" data-astro-cid-as4z3awb>A1</span></button><button type="button" data-group="level" data-value="a2" class="sel-opt sel-toggle" data-astro-cid-as4z3awb><span class="font-bold text-sm" data-astro-cid-as4z3awb>A2</span></button><button type="button" data-group="level" data-value="b1" class="sel-opt sel-toggle" data-astro-cid-as4z3awb><span class="font-bold text-sm" data-astro-cid-as4z3awb>B1</span></button><button type="button" data-group="level" data-value="b2" class="sel-opt sel-toggle" data-astro-cid-as4z3awb><span class="font-bold text-sm" data-astro-cid-as4z3awb>B2</span></button></div></div><button type="submit" id="btn-start" disabled class="w-full py-4 rounded-xl font-bold text-base transition-all hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed mt-4 shadow-md active:scale-[0.98]" style="background-color:var(--espresso); color:#F5F2EB;" data-astro-cid-as4z3awb>Training Starten &rarr;</button></form></div></div></div></div></main><footer class="mt-auto border-t py-8" style="background-color:var(--bg);border-color:var(--border);"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-medium" style="color:var(--text-muted);"><div>&copy; 2025 - 2026 Small Talk Café Podcasts. All rights reserved.</div><div class="flex gap-4">Made in Bayern ❤️ Los Geht's!</div></div></footer><!-- Theme toggle + Language switcher script --><script>
+      // ── Theme ──────────────────────────────────────
+      function applyTheme(dark) {
+        if (dark) {
+          document.documentElement.classList.add('dark');
+          localStorage.setItem('wortschatz_theme', 'dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+          localStorage.setItem('wortschatz_theme', 'light');
+        }
+        const icon = document.getElementById('theme-icon');
+        const label = document.getElementById('theme-label');
+        if (icon) icon.textContent = dark ? '🌙' : '☀️';
+        if (label) label.textContent = dark ? 'Dark' : 'Light';
+      }
+
+      const isDark = document.documentElement.classList.contains('dark');
+      applyTheme(isDark);
+
+      document.getElementById('theme-toggle')?.addEventListener('click', () => {
+        const nowDark = !document.documentElement.classList.contains('dark');
+        applyTheme(nowDark);
+      });
+
+      // ── Language Switcher ──────────────────────────
+      const LANG_CONTENT = {
+        de: {
+          name: 'Deutsch Lounge',
+          flag: '🇩🇪',
+          code: 'DE',
+          subtitle: 'Systematisches Vokabel- und Grammatiktraining',
+          tagline: 'Deutsch Lounge',
+          welcome: 'Willkommen beim',
+          cards: [
+            { title: 'Vokabeln', desc: 'Erweitere deinen Wortschatz. Lerne Nomen, Verben und Redewendungen mit Beispielsätzen.' },
+            { title: 'Verben', desc: 'Meistere reguläre, unregelmäßige, modale und reflexive Verben mit Konjugationstabellen.' },
+            { title: 'Grammatik', desc: 'Regeln verstehen & üben: Adjektivdeklination, Fälle, Präpositionen, Konnektoren & Phrasen.' },
+            { title: 'Redemittel', desc: 'Essentielle Phrasen für den Alltag, Diskussionen und Präsentationen.' }
+          ]
+        },
+        es: {
+          name: 'Spanish Gym',
+          flag: '🇪🇸',
+          code: 'ES',
+          subtitle: 'Tu compañero para aprender Español A1 – B2',
+          tagline: 'A1–B2 Spanish Curriculum',
+          welcome: 'Bienvenido al',
+          cards: [
+            { title: 'Vocabulario', desc: 'Amplía tu vocabulario A1–B2. Aprende sustantivos, verbos y frases con ejemplos contextuales.' },
+            { title: 'Verbos', desc: 'Domina verbos regulares, irregulares y reflexivos con tablas de conjugación.' },
+            { title: 'Gramática', desc: 'Entiende y practica las reglas gramaticales, casos y conectores.' },
+            { title: 'Expresiones', desc: 'Frases esenciales para el día a día, discusiones y presentaciones.' }
+          ]
+        },
+        fr: {
+          name: 'French Gym',
+          flag: '🇫🇷',
+          code: 'FR',
+          subtitle: 'Ton compagnon pour apprendre le Français A1 – B2',
+          tagline: 'A1–B2 French Curriculum',
+          welcome: 'Bienvenue au',
+          cards: [
+            { title: 'Vocabulaire', desc: 'Élargis ton vocabulaire A1–B2. Apprends des noms, verbes et expressions avec des exemples.' },
+            { title: 'Verbes', desc: 'Maîtrise les verbes réguliers, irréguliers et réflexifs avec des tableaux de conjugaison.' },
+            { title: 'Grammaire', desc: 'Comprends et pratique les règles de grammaire, les cas et les connecteurs.' },
+            { title: 'Expressions', desc: 'Phrases essentielles pour la vie quotidienne, les discussions et les présentations.' }
+          ]
+        }
+      };
+
+      function applyLanguage(lang) {
+        const c = LANG_CONTENT[lang] || LANG_CONTENT['de'];
+        localStorage.setItem('gym_language', lang);
+
+        // Header
+        const flag = document.getElementById('lang-flag');
+        const code = document.getElementById('lang-code');
+        const siteName = document.getElementById('site-name');
+        if (flag) flag.textContent = c.flag;
+        if (code) code.textContent = c.code;
+        if (siteName) siteName.textContent = c.name;
+
+        // Footer
+        const footerName = document.getElementById('footer-gym-name');
+        const footerLevel = document.getElementById('footer-level');
+        if (footerName) footerName.textContent = c.name;
+        if (footerLevel) footerLevel.textContent = c.tagline;
+
+        const isGerman = lang === 'de';
+        const overlay = document.getElementById('coming-soon-overlay');
+        const mainContent = document.getElementById('main-content');
+        const germanNavLinks = document.querySelectorAll('[data-german-nav]');
+
+        if (isGerman) {
+          // Show normal German content
+          if (overlay) overlay.classList.add('hidden');
+          if (mainContent) mainContent.classList.remove('hidden');
+          germanNavLinks.forEach(el => el.classList.remove('hidden'));
+
+          // Hero on homepage only
+          const heroTitle = document.getElementById('hero-gym-name');
+          const heroSubtitle = document.getElementById('hero-subtitle');
+          const heroWelcome = document.getElementById('hero-welcome');
+          if (heroTitle) heroTitle.textContent = c.name;
+          if (heroSubtitle) heroSubtitle.textContent = c.subtitle;
+          if (heroWelcome) heroWelcome.textContent = c.welcome;
+
+          // Category cards
+          const cardTitles = document.querySelectorAll('[data-card-title]');
+          const cardDescs = document.querySelectorAll('[data-card-desc]');
+          cardTitles.forEach((el, i) => {
+            if (c.cards[i]) el.textContent = c.cards[i].title;
+          });
+          cardDescs.forEach((el, i) => {
+            if (c.cards[i]) el.textContent = c.cards[i].desc;
+          });
+
+          // Nav links
+          const navLabels = document.querySelectorAll('[data-nav-label]');
+          navLabels.forEach((el, i) => {
+            if (c.cards[i]) el.textContent = c.cards[i].title;
+          });
+        } else {
+          // Non-German: show coming soon overlay, hide main content and German nav
+          if (mainContent) mainContent.classList.add('hidden');
+          germanNavLinks.forEach(el => el.classList.add('hidden'));
+
+          // Populate coming soon overlay
+          const comingFlag = document.getElementById('coming-soon-flag');
+          const comingLang = document.getElementById('coming-soon-lang');
+          if (comingFlag) comingFlag.textContent = c.flag;
+          if (comingLang) comingLang.textContent = c.name + ' content';
+
+          if (overlay) {
+            overlay.classList.remove('hidden');
+            overlay.classList.add('flex');
+          }
+        }
+      }
+
+      // Restore saved language
+      const savedLang = localStorage.getItem('gym_language') || 'de';
+      applyLanguage(savedLang);
+
+      // Dropdown toggle
+      const langBtn = document.getElementById('lang-btn');
+      const langMenu = document.getElementById('lang-menu');
+
+      langBtn?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        langMenu?.classList.toggle('hidden');
+      });
+
+      document.addEventListener('click', () => {
+        langMenu?.classList.add('hidden');
+      });
+
+      document.querySelectorAll('.lang-option').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const lang = btn.dataset.lang;
+          applyLanguage(lang);
+          langMenu?.classList.add('hidden');
+        });
+      });
+
+      // Coming soon "Switch to German" button
+      document.getElementById('coming-soon-back-btn')?.addEventListener('click', () => {
+        applyLanguage('de');
+      });
+    </script></body></html><script>(function(){const allDecksJson = "[{\"level\":\"a1\",\"decks\":[{\"id\":\"redemittel-a1-greetings\",\"topic\":\"Greetings & Small Talk\",\"cardCount\":4},{\"id\":\"rm-apologies-a1\",\"topic\":\"Apologies\",\"cardCount\":20},{\"id\":\"greetings\",\"topic\":\"Begrüßung & Verabschiedung\",\"cardCount\":20},{\"id\":\"rm-help-a1\",\"topic\":\"Asking for Help\",\"cardCount\":20},{\"id\":\"introductions\",\"topic\":\"Sich vorstellen\",\"cardCount\":20},{\"id\":\"rm-prices-a1\",\"topic\":\"Asking About Prices\",\"cardCount\":20},{\"id\":\"rm-telling_time-a1\",\"topic\":\"Telling the Time\",\"cardCount\":20}]},{\"level\":\"a2\",\"decks\":[{\"id\":\"redemittel-a2-ordering-food\",\"topic\":\"Ordering Food\",\"cardCount\":4},{\"id\":\"rm-feelings-a2\",\"topic\":\"Expressing Feelings\",\"cardCount\":20},{\"id\":\"rm-invitations-a2\",\"topic\":\"Making Invitations\",\"cardCount\":20},{\"id\":\"rm-past-a2\",\"topic\":\"Talking About the Past\",\"cardCount\":20},{\"id\":\"rm-plans-a2\",\"topic\":\"Making Plans\",\"cardCount\":20},{\"id\":\"rm-problems-a2\",\"topic\":\"Describing Problems\",\"cardCount\":20}]},{\"level\":\"b1\",\"decks\":[{\"id\":\"rm-b1-diskussion\",\"topic\":\"Diskussion & Meinung äußern\",\"cardCount\":15},{\"id\":\"rm-b1-kochen-rezepte\",\"topic\":\"Rezepte & Kochen\",\"cardCount\":21},{\"id\":\"rm-comparisons-b1\",\"topic\":\"Making Comparisons\",\"cardCount\":20},{\"id\":\"rm-emotions_conv-b1\",\"topic\":\"Emotions in Conversation\",\"cardCount\":20},{\"id\":\"rm-hypotheses-b1\",\"topic\":\"Formulating Hypotheses\",\"cardCount\":20},{\"id\":\"rm-objections-b1\",\"topic\":\"Responding to Objections\",\"cardCount\":20},{\"id\":\"rm-polite_criticism-b1\",\"topic\":\"Giving Polite Criticism\",\"cardCount\":20},{\"id\":\"rm-pros_cons-b1\",\"topic\":\"Stating Pros and Cons\",\"cardCount\":20}]},{\"level\":\"b2\",\"decks\":[{\"id\":\"rm-b2-besprechungen\",\"topic\":\"Besprechungen & Diskussionen (Fortgeschritten)\",\"cardCount\":26},{\"id\":\"rm-b2-reklamation\",\"topic\":\"Reklamation & Beschwerden\",\"cardCount\":16},{\"id\":\"rm-complex_matters-b2\",\"topic\":\"Explaining Complex Matters\",\"cardCount\":20},{\"id\":\"rm-compromises-b2\",\"topic\":\"Negotiating Compromises\",\"cardCount\":20},{\"id\":\"rm-critical_questioning-b2\",\"topic\":\"Critical Questioning\",\"cardCount\":20},{\"id\":\"rm-formal_writing-b2\",\"topic\":\"Formal Written Language\",\"cardCount\":20},{\"id\":\"rm-strategic_arg-b2\",\"topic\":\"Strategic Argumentation\",\"cardCount\":20},{\"id\":\"rm-b2-vorstellungsgespraech\",\"topic\":\"Vorstellungsgespräch\",\"cardCount\":19}]}]";
+const category = "redemittel";
+
+  // ── Learn / Train panel toggle ──────────────────────
+  const btnLearn = document.getElementById('btn-mode-learn');
+  const btnTrain = document.getElementById('btn-mode-train');
+  const pnlLearn = document.getElementById('learn-panel');
+  const pnlTrain = document.getElementById('train-panel');
+
+  const STORAGE_KEY = `gym_${category}_mode`;
+  let currentMode = localStorage.getItem(STORAGE_KEY) || 'learn';
+
+  function applyMode() {
+    if (currentMode === 'learn') {
+      btnLearn.style.backgroundColor = 'var(--espresso)';
+      btnLearn.style.color = '#F5F2EB';
+      btnTrain.style.backgroundColor = 'transparent';
+      btnTrain.style.color = 'var(--text-muted)';
+      pnlLearn.classList.remove('hidden');
+      pnlTrain.classList.add('hidden');
+    } else {
+      btnTrain.style.backgroundColor = 'var(--espresso)';
+      btnTrain.style.color = '#F5F2EB';
+      btnLearn.style.backgroundColor = 'transparent';
+      btnLearn.style.color = 'var(--text-muted)';
+      pnlTrain.classList.remove('hidden');
+      pnlLearn.classList.add('hidden');
+    }
+    localStorage.setItem(STORAGE_KEY, currentMode);
+  }
+
+  btnLearn?.addEventListener('click', () => { currentMode = 'learn'; applyMode(); });
+  btnTrain?.addEventListener('click', () => { currentMode = 'train'; applyMode(); });
+  applyMode();
+
+  // ── Radio-style selectors (mode & dir) ─────────────
+  // Only one can be active at a time within a group
+  document.querySelectorAll('.sel-opt:not(.sel-toggle)').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const group = btn.dataset.group;
+      // Deactivate siblings in same group
+      document.querySelectorAll(`.sel-opt[data-group="${group}"]`).forEach(b => b.classList.remove('sel-active'));
+      btn.classList.add('sel-active');
+      // Update hidden input
+      const hidden = document.getElementById(`${group}-hidden`);
+      if (hidden) hidden.value = btn.dataset.value;
+    });
+  });
+
+  // ── Toggle (multi-select) selectors — levels ────────
+  const allDecksByLevel = JSON.parse(allDecksJson);
+  const countPreview = document.getElementById('card-count-preview');
+  const btnStart = document.getElementById('btn-start');
+  const selectedLevels = new Set();
+
+  function updateCount() {
+    let total = 0;
+    selectedLevels.forEach(lvl => {
+      const levelData = allDecksByLevel.find(l => l.level === lvl);
+      if (levelData) levelData.decks.forEach(d => total += d.cardCount);
+    });
+    countPreview.textContent = `${total} Karten`;
+    if (btnStart) btnStart.disabled = total === 0;
+  }
+
+  document.querySelectorAll('.sel-toggle').forEach((btn, i) => {
+    btn.addEventListener('click', () => {
+      const val = btn.dataset.value;
+      if (selectedLevels.has(val)) {
+        selectedLevels.delete(val);
+        btn.classList.remove('sel-active');
+      } else {
+        selectedLevels.add(val);
+        btn.classList.add('sel-active');
+      }
+      updateCount();
+    });
+    // Pre-select first level
+    if (i === 0) {
+      selectedLevels.add(btn.dataset.value);
+      btn.classList.add('sel-active');
+      updateCount();
+    }
+  });
+
+  // ── Form submit — inject selected levels as query params ─
+  document.querySelector('form')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const base = form.action;
+    const mode = document.getElementById('mode-hidden')?.value || 'mc';
+    const dir  = document.getElementById('dir-hidden')?.value || 'en-de';
+    const lvls = [...selectedLevels];
+    const params = new URLSearchParams();
+    params.set('mode', mode);
+    params.set('dir', dir);
+    lvls.forEach(l => params.append('level', l));
+    window.location.href = `${base}?${params.toString()}`;
+  });
+})();</script>

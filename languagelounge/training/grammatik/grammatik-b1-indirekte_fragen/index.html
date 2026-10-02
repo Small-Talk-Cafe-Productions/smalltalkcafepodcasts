@@ -1,0 +1,640 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="description" content="Deutsch Lounge — Language Learning Trainer"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/languagelounge/favicon.svg"><meta name="generator" content="Astro v7.3.5"><title>Indirect Questions (Wissen Sie, ob...? Ich frage mich, wer...) — Deutsch Lounge</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet"><!-- Apply theme before paint to avoid flash --><script>
+      (function() {
+        const saved = localStorage.getItem('wortschatz_theme');
+        if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script><link rel="stylesheet" href="/languagelounge/_astro/Layout.BeSASyxj.css"></head><body class="antialiased min-h-screen flex flex-col" style="background-color:var(--bg);color:var(--text);"><!-- Header --><header class="sticky top-0 z-50 border-b" style="background-color:var(--bg);border-color:var(--border);"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between gap-4" style="height:4.5rem;"><!-- Logo + Language Switcher --><div class="flex items-center gap-4 shrink-0"><a href="/languagelounge/" class="flex items-center gap-2 group"><span class="font-outfit font-extrabold text-xl sm:text-2xl tracking-tight transition-colors" style="color:var(--text);">Small Talk Café <span class="font-normal text-base hidden sm:inline" style="color:var(--text-muted);">| <span id="site-name">Deutsch Lounge</span></span></span></a><!-- Language Selector Dropdown --><div class="relative" id="lang-dropdown-wrapper"><button id="lang-btn" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-sm font-bold transition-all hover:opacity-70" style="background-color:var(--bg); border-color:var(--border); color:var(--text);"><span id="lang-flag">🇩🇪</span><span id="lang-code">DE</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"></path></svg></button><div id="lang-menu" class="hidden absolute top-full left-0 mt-2 rounded-2xl border shadow-xl overflow-hidden z-50 min-w-[160px]" style="background-color:var(--card); border-color:var(--border);"><button class="lang-option w-full flex items-center gap-3 px-4 py-3 text-sm font-semibold text-left transition-colors hover:opacity-70" data-lang="de" data-flag="🇩🇪" data-code="DE" data-name="Deutsch Lounge" data-label="German" style="color:var(--text);"><span class="text-lg">🇩🇪</span><div><div class="font-bold" style="color:var(--text);">Deutsch</div><div class="text-xs" style="color:var(--text-muted);">German Learning</div></div></button><div class="border-t" style="border-color:var(--border);"></div><button class="lang-option w-full flex items-center gap-3 px-4 py-3 text-sm font-semibold text-left transition-colors hover:opacity-70" data-lang="es" data-flag="🇪🇸" data-code="ES" data-name="Spanish Gym" data-label="Spanish" style="color:var(--text);"><span class="text-lg">🇪🇸</span><div><div class="font-bold" style="color:var(--text);">Español</div><div class="text-xs" style="color:var(--text-muted);">Spanish Learning</div></div></button><div class="border-t" style="border-color:var(--border);"></div><button class="lang-option w-full flex items-center gap-3 px-4 py-3 text-sm font-semibold text-left transition-colors hover:opacity-70" data-lang="fr" data-flag="🇫🇷" data-code="FR" data-name="French Gym" data-label="French" style="color:var(--text);"><span class="text-lg">🇫🇷</span><div><div class="font-bold" style="color:var(--text);">Français</div><div class="text-xs" style="color:var(--text-muted);">French Learning</div></div></button></div></div></div><!-- Nav Links --><nav class="hidden md:flex gap-5 items-center"><a href="https://smalltalkcafe.de/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Small Talk Café Podcasts</a><span class="text-sm font-normal" style="color:var(--border);">|</span><a href="/languagelounge/vocabulary" data-german-nav class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Vokabeln</a><a href="/languagelounge/verbs" data-german-nav class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Verben</a><a href="/languagelounge/grammatik" data-german-nav class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Grammatik</a><a href="/languagelounge/redemittel" data-german-nav class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Redemittel</a><!-- Dark/Light Toggle --><button id="theme-toggle" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-sm font-semibold transition-all hover:opacity-70" style="border-color:var(--border); color:var(--text-muted);" aria-label="Toggle dark/light mode"><span id="theme-icon">☀️</span><span id="theme-label">Light</span></button></nav></div></header><!-- Coming Soon Overlay (shown for non-German languages) --><div id="coming-soon-overlay" class="hidden flex-1 flex items-center justify-center py-20 px-4"><div class="text-center max-w-lg mx-auto"><div class="text-7xl mb-6" id="coming-soon-flag">🌍</div><h1 class="font-outfit font-extrabold text-4xl sm:text-5xl mb-4" style="color:var(--text);">Coming Soon</h1><p class="text-lg mb-3" style="color:var(--text-muted);">We're working hard on the <strong id="coming-soon-lang">new language</strong> curriculum.</p><p class="text-base mb-8" style="color:var(--text-muted);">Stay tuned — it will be available very soon! In the meantime, explore our<strong>Deutsch Lounge</strong> to sharpen your German.</p><button id="coming-soon-back-btn" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-sm transition-all hover:opacity-80" style="background-color:var(--espresso); color:#fff;">🇩🇪 Switch to German</button></div></div><main id="main-content" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-1 w-full"><div class="max-w-4xl mx-auto py-6"><!-- Deck Header --><div class="flex items-start justify-between mb-8 gap-4 flex-wrap"><div><a href="/languagelounge/grammatik" class="text-xs font-bold flex items-center gap-1 mb-2 hover:opacity-70 transition-opacity capitalize" style="color:var(--espresso);"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg>grammatik</a><h1 class="text-2xl md:text-3xl font-extrabold font-outfit" style="color:var(--text);">Indirect Questions (Wissen Sie, ob...? Ich frage mich, wer...)</h1><p class="text-xs font-bold uppercase tracking-wider mt-1" style="color:var(--text-muted);">Indirekte Fragen &bull; B1 &bull; 18 Karten</p></div><div class="flex flex-col items-end gap-4"><!-- Learn / Train mode switcher --><div class="flex rounded-xl border overflow-hidden p-1 gap-1 w-full max-w-[300px]" style="background-color:var(--bg); border-color:var(--border);"><span class="flex-1 flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold transition-all" style="background-color:var(--espresso); color:#F5F2EB;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>Lernen</span><a href="/languagelounge/training/grammatik/train?level=b1&amp;deck=grammatik-b1-indirekte_fragen&amp;count=20&amp;mode=mc&amp;dir=en-de" class="flex-1 flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold hover:opacity-70 transition-all" style="color:var(--text-muted);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>Trainieren</a></div><!-- View switcher (Cards vs List) --><div class="flex rounded-xl border overflow-hidden p-1 gap-1 w-full max-w-[300px]" style="background-color:var(--bg); border-color:var(--border);"><button id="view-cards-btn" class="view-btn flex-1 flex items-center justify-center px-4 py-2 rounded-lg text-xs font-bold transition-all bg-[var(--espresso)] text-[#F5F2EB]">Karten</button><button id="view-list-btn" class="view-btn flex-1 flex items-center justify-center px-4 py-2 rounded-lg text-xs font-bold transition-all text-[var(--text-muted)] hover:opacity-70">Liste</button></div><!-- Progress indicator --><div id="progress-container" class="flex items-center gap-3"><div class="text-xs font-semibold" style="color:var(--text-muted);">Karte <span id="current-num" class="font-extrabold" style="color:var(--text);">1</span> / 18</div><div class="w-24 h-1.5 rounded-full overflow-hidden border" style="background-color:var(--bg);border-color:var(--border);"><div id="progress-bar" class="h-full transition-all duration-500 rounded-full" style="width:0%; background-color:var(--espresso);"></div></div></div></div></div><!-- ── Universal Study Card (rendered by LearningCard component) ── --><div id="card-view-wrap"><div id="card-host"><!-- The card shell — populated client-side by renderCard() --><div class="learning-card rounded-3xl border shadow-xl overflow-hidden" style="background-color:var(--card); border-color:var(--border);"><!-- ── Top bar ─────────────────────────────────── --><div class="lc-topbar flex items-center justify-between px-6 py-3.5 border-b" style="border-color:var(--border); background-color:var(--bg);"><div class="flex items-center gap-2"><span class="lc-type-badge text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-lg" style="background-color:var(--espresso); color:#F5F2EB;">—</span><span class="lc-level-badge text-[10px] font-bold px-2.5 py-1 rounded-lg cafe-badge"></span></div><button class="lc-audio-btn flex items-center justify-center w-11 h-11 rounded-full transition-transform hover:scale-105 active:scale-95 shadow-md flex-shrink-0" title="Anhören (A)" style="background-color:var(--espresso); color:#F5F2EB;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg></button></div><!-- ── Main word display ───────────────────────── --><div class="lc-hero px-7 py-8 text-center border-b" style="border-color:var(--border);"><div class="lc-article-wrap mb-1.5"><span class="lc-article text-xl font-bold"></span></div><h2 class="lc-word text-5xl md:text-6xl font-extrabold font-outfit mb-3" style="color:var(--text);">—</h2><p class="lc-translation text-lg font-semibold italic" style="color:var(--text-muted);"></p><p class="lc-forms text-sm font-medium mt-2" style="color:var(--text-muted);"></p></div><!-- ── Meta info grid ─────────────────────────── --><div class="lc-meta-grid grid border-b" style="border-color:var(--border);"><!-- populated by JS --></div><!-- ── Grammar note ───────────────────────────── --><div class="lc-grammar-wrap hidden px-7 py-5 border-b" style="border-color:var(--border); background-color:var(--bg);"><p class="text-[10px] font-bold uppercase tracking-widest mb-2" style="color:var(--espresso);">📌 <span class="lc-grammar-label">Grammatiknotiz</span></p><p class="lc-grammar-text text-sm leading-relaxed font-medium whitespace-pre-wrap" style="color:var(--text);"></p></div><!-- ── Type-specific block ────────────────────── --><!-- Verb conjugation (hidden by default, shown for verb cards) --><div class="lc-conjugation-wrap hidden border-b overflow-x-auto" style="border-color:var(--border);"><div class="lc-conjugation-inner"><!-- populated by JS --></div></div><!-- Connector word-order block --><div class="lc-wordorder-wrap hidden px-7 py-4 border-b" style="border-color:var(--border); background-color:var(--bg);"><div class="flex items-start gap-3 text-sm font-medium" style="color:var(--text-muted);"><span class="text-base flex-shrink-0">📐</span><span class="lc-wordorder-text"></span></div></div><!-- Phrase preposition block --><div class="lc-phrase-wrap hidden px-7 py-4 border-b" style="border-color:var(--border); background-color:var(--bg);"><p class="text-[10px] font-bold uppercase tracking-widest mb-2" style="color:var(--espresso);">Struktur</p><p class="lc-phrase-rule text-sm font-semibold" style="color:var(--text);"></p></div><!-- ── Examples ───────────────────────────────── --><div class="px-7 py-6 border-b" style="border-color:var(--border);"><p class="lc-examples-label text-[10px] font-bold uppercase tracking-widest mb-5" style="color:var(--text-muted);">Beispielsätze</p><div class="lc-examples space-y-3"><!-- populated by JS --></div></div><!-- ── Tags ───────────────────────────────────── --><div class="lc-tags-row px-7 py-4 flex items-center gap-2 flex-wrap"><span class="text-[10px] font-bold uppercase tracking-wider" style="color:var(--text-muted);">Tags:</span><div class="lc-tags flex gap-2 flex-wrap"></div></div></div><script>(function(){const cardJson = "{\"id\":\"grammatik-b1-indirekte_fragen-001\",\"target\":\"Was sind indirekte Fragen?\",\"source\":\"What are indirect questions?\",\"grammar_note\":\"Indirect questions are subordinate clauses that function as the object of a main clause. They are introduced by an interrogative pronoun (W-word) or by 'ob' (if/whether) and always have the conjugated verb at the very end of the clause. They allow you to embed a question within a statement or another question.\",\"example_target\":\"Ich frage mich, wann der Zug ankommt.\",\"example_source\":\"I wonder when the train arrives.\",\"extra_examples\":[{\"de\":\"Er möchte wissen, wo du wohnst.\",\"en\":\"He wants to know where you live.\"},{\"de\":\"Sie hat gefragt, ob wir kommen.\",\"en\":\"She asked if we are coming.\"}],\"common_error\":\"Learners often use direct question word order (verb second) instead of the subordinate clause word order (verb last).\",\"tags\":[\"grammatik\",\"b1\",\"introduction\",\"word_order\"],\"type\":\"grammar\"}";
+const langConfigJson = "{\"language_pair\":\"english_german\",\"target_lang\":\"de\",\"native_lang\":\"en\",\"target_lang_name\":\"Deutsch\",\"native_lang_name\":\"English\",\"speech_lang\":\"de-DE\",\"noun_metadata_fields\":[{\"key\":\"article\",\"label\":\"Artikel\",\"render\":\"article_badge\"},{\"key\":\"gender\",\"label\":\"Genus\",\"render\":\"gender_label\"},{\"key\":\"plural\",\"label\":\"Plural\",\"render\":\"text\"}],\"article_colours\":{\"der\":\"#4A7C9E\",\"die\":\"#B05070\",\"das\":\"#4A8A5A\"},\"gender_labels\":{\"m\":\"Maskulinum\",\"f\":\"Femininum\",\"n\":\"Neutrum\"},\"verb_tenses\":[\"Präsens\",\"Präteritum\",\"Perfekt\",\"Futur I\",\"Konjunktiv II\"],\"cases\":{\"nominative\":\"Nominativ\",\"accusative\":\"Akkusativ\",\"dative\":\"Dativ\",\"genitive\":\"Genitiv\"},\"ui_labels\":{\"learn_mode\":\"Lernen\",\"train_mode\":\"Trainieren\",\"examples_heading\":\"Beispielsätze\",\"grammar_note_heading\":\"Grammatiknotiz\",\"audio_button\":\"Anhören\",\"back_link\":\"Zurück\",\"card_counter\":\"Karte {current} / {total}\",\"next_button\":\"Weiter\",\"finish_button\":\"Fertig\",\"correct\":\"Richtig!\",\"wrong\":\"Falsch\"}}";
+
+  /**
+   * Client-side card renderer.
+   * Uses the universal card-renderer logic inline (no imports in Astro is:inline).
+   */
+
+  // ── Parse data ──────────────────────────────────────────────────────────
+  const card   = JSON.parse(cardJson);
+  const config = JSON.parse(langConfigJson);
+
+  // ── Helpers ─────────────────────────────────────────────────────────────
+  function stripArticle(word) {
+    return (word || '').replace(/^(der|die|das|el|la|los|las|le|les|l')\s+/i, '').trim();
+  }
+
+  function getArticleColour(article) {
+    if (!article || !config.article_colours) return 'var(--espresso)';
+    return config.article_colours[article.toLowerCase()] || 'var(--espresso)';
+  }
+
+  function getGenderLabel(gender) {
+    if (!gender) return '';
+    return (config.gender_labels || {})[gender] || gender;
+  }
+
+  function getTypeLabel() {
+    const tags = card.tags || [];
+    if (tags.includes('noun'))       return 'Substantiv';
+    if (tags.includes('verb'))       return 'Verb';
+    if (tags.includes('adjective'))  return 'Adjektiv';
+    if (tags.includes('expression')) return 'Ausdruck';
+    const map = { vocab:'Vokabel', verb:'Verb', phrase:'Phrase', connector:'Konnektor', grammar:'Grammatik' };
+    return map[card.type] || 'Karte';
+  }
+
+  function formatHighlight(text) {
+    if (!text) return '';
+    return String(text).replace(/\*(.*?)\*/g, '<span class="highlighter">$1</span>');
+  }
+
+  function normaliseExample(ex) {
+    return {
+      target: ex.target || ex.de || '',
+      source: ex.source || ex.en || '',
+      note: ex.note,
+    };
+  }
+
+  function getMetaFacts() {
+    const meta = { ...card.metadata, article: card.article, gender: card.gender, plural: card.plural, ...card.metadata };
+    const facts = [];
+    for (const field of (config.noun_metadata_fields || [])) {
+      const raw = meta[field.key] || card[field.key];
+      if (!raw || raw === '~') continue;
+      let value = String(raw);
+      let colour;
+      if (field.render === 'gender_label') value = getGenderLabel(raw);
+      else if (field.render === 'article_badge') colour = getArticleColour(raw);
+      facts.push({ label: field.label, value, colour });
+    }
+    return facts;
+  }
+
+  // ── Render ──────────────────────────────────────────────────────────────
+  const container = document.querySelector('.learning-card');
+  if (!container) { console.error('LearningCard: container not found'); }
+
+  function sel(cls) { return container?.querySelector(cls); }
+
+  // Type badge
+  sel('.lc-type-badge').textContent = getTypeLabel();
+
+  // Level badge
+  sel('.lc-level-badge').textContent = card.level || '';
+
+  // Article
+  const article = card.article || card.metadata?.article;
+  const articleWrap = sel('.lc-article-wrap');
+  const articleEl   = sel('.lc-article');
+  if (article && card.tags?.includes('noun') && !card.plural_only) {
+    articleEl.textContent  = article;
+    articleEl.style.color  = getArticleColour(article);
+    articleWrap.style.display = '';
+  } else {
+    articleWrap.style.display = 'none';
+  }
+
+  // Word
+  sel('.lc-word').textContent = stripArticle(card.target);
+
+  // Translation
+  sel('.lc-translation').textContent = card.source || '';
+
+  // Plural / forms
+  const plural = card.plural || card.metadata?.plural;
+  const formsEl = sel('.lc-forms');
+  if (plural && !card.plural_only) formsEl.textContent = `Pl. ${plural}`;
+  else if (card.plural_only) formsEl.textContent = 'nur Plural';
+  else formsEl.textContent = '';
+
+  // Meta grid
+  const metaGrid = sel('.lc-meta-grid');
+  const facts = getMetaFacts();
+  if (facts.length) {
+    const cols = Math.min(facts.length, 4);
+    metaGrid.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
+    metaGrid.innerHTML = facts.map((f, i) => `
+      <div class="px-5 py-4 ${i < facts.length - 1 ? 'border-r' : ''}" style="border-color:var(--border);">
+        <p class="text-[9px] font-bold uppercase tracking-widest mb-1" style="color:var(--text-muted);">${f.label}</p>
+        <p class="text-sm font-bold" style="color:${f.colour || 'var(--text)'};">${f.value}</p>
+      </div>
+    `).join('');
+  } else {
+    metaGrid.style.display = 'none';
+  }
+
+  // Grammar note
+  const grammarWrap = sel('.lc-grammar-wrap');
+  if (card.grammar_note) {
+    sel('.lc-grammar-text').innerHTML = formatHighlight(card.grammar_note);
+    grammarWrap.classList.remove('hidden');
+  }
+
+  // Grammar label from config
+  const uiLabels = config.ui_labels || {};
+  if (uiLabels.grammar_note_heading) sel('.lc-grammar-label').textContent = uiLabels.grammar_note_heading;
+  if (uiLabels.examples_heading)     sel('.lc-examples-label').textContent = uiLabels.examples_heading;
+  if (uiLabels.audio_button)         sel('.lc-audio-label').textContent    = uiLabels.audio_button;
+
+  // ── Type-specific blocks ─────────────────────────────────────────────────
+
+  // Verb: conjugation table
+  const type = card.type || (card.tags?.includes('verb') ? 'verb' : 'vocab');
+  if (type === 'verb' && card.conjugations?.length) {
+    const conjWrap  = sel('.lc-conjugation-wrap');
+    const conjInner = sel('.lc-conjugation-inner');
+    conjWrap.classList.remove('hidden');
+    conjInner.innerHTML = (config.verb_tenses || card.conjugations.map(t => t.tense)).map(tense => {
+      const t = card.conjugations.find(c => c.tense === tense);
+      if (!t) return '';
+      return `
+        <div class="border-b last:border-0" style="border-color:var(--border);">
+          <p class="text-[10px] font-bold uppercase tracking-widest px-5 py-2" style="background-color:var(--bg); color:var(--espresso);">${t.tense}</p>
+          <table class="w-full text-sm">
+            <tbody>
+              ${t.forms.map((f, ri) => `
+                <tr class="${ri % 2 === 0 ? '' : ''} border-t" style="border-color:var(--border);">
+                  <td class="px-5 py-2.5 font-bold w-24" style="color:var(--espresso);">${f.pronoun}</td>
+                  <td class="px-5 py-2.5 font-semibold" style="color:var(--text);">${f.form}</td>
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+        </div>
+      `;
+    }).join('');
+  }
+
+  // Connector: word order block
+  if (type === 'connector' && card.word_order) {
+    const woWrap = sel('.lc-wordorder-wrap');
+    sel('.lc-wordorder-text').textContent = card.word_order;
+    woWrap.classList.remove('hidden');
+  }
+
+  // Phrase: preposition rule block
+  if (type === 'phrase' && card.clause_type) {
+    const phraseWrap = sel('.lc-phrase-wrap');
+    sel('.lc-phrase-rule').textContent = card.clause_type;
+    phraseWrap.classList.remove('hidden');
+  }
+
+  // ── Examples ─────────────────────────────────────────────────────────────
+  const examplesEl = sel('.lc-examples');
+  const rawExamples = card.examples || (card.example_target || card.example_de ? [{ target: card.example_target || card.example_de, source: card.example_source || card.example_en }] : []);
+
+  if (rawExamples.length) {
+    examplesEl.innerHTML = rawExamples.map(ex => {
+      const e = normaliseExample(ex);
+      return `
+        <div class="rounded-2xl border overflow-hidden" style="border-color:var(--border);">
+          <div class="px-4 py-3" style="background-color:var(--bg);">
+            <p class="font-semibold leading-snug mb-1" style="color:var(--text);">${formatHighlight(e.target)}</p>
+            <p class="text-sm italic" style="color:var(--text-muted);">${formatHighlight(e.source || '')}</p>
+          </div>
+          ${e.note ? `<div class="px-4 py-2 border-t" style="border-color:var(--border);">
+            <p class="text-[10px] font-bold font-mono" style="color:var(--espresso);">📐 ${e.note}</p>
+          </div>` : ''}
+        </div>
+      `;
+    }).join('');
+  } else {
+    examplesEl.innerHTML = `<p class="text-sm italic" style="color:var(--text-muted);">Kein Beispiel verfügbar.</p>`;
+  }
+
+  // ── Tags ─────────────────────────────────────────────────────────────────
+  const tagsEl = sel('.lc-tags');
+  tagsEl.innerHTML = (card.tags || []).map(t => `
+    <span class="text-[10px] font-bold px-2 py-0.5 rounded-md border uppercase" style="border-color:var(--border); color:var(--text-muted); background-color:var(--bg);">${t}</span>
+  `).join('');
+
+  // ── Audio button ─────────────────────────────────────────────────────────
+  sel('.lc-audio-btn')?.addEventListener('click', () => {
+    if (window.DeutschAudioEngine) {
+      window.DeutschAudioEngine.speak(card.target || '', config.speech_lang || 'de-DE', 0.85);
+    }
+  });
+})();</script></div><!-- ── Navigation ───────────────────────────── --><div class="flex items-center justify-between mt-8 gap-4"><button id="btn-prev" disabled class="flex items-center gap-2 px-6 py-3 rounded-2xl border font-bold text-sm transition-all hover:opacity-70 active:scale-95 disabled:opacity-30 disabled:cursor-not-allowed" style="border-color:var(--border); color:var(--text); background-color:var(--card);"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg>Zurück</button><!-- Dot navigation --><div id="dot-nav" class="flex items-center gap-1.5 flex-wrap justify-center max-w-xs overflow-hidden" style="max-height:2rem;"><!-- populated by JS --></div><button id="btn-next" class="flex items-center gap-2 px-6 py-3 rounded-2xl font-bold text-sm transition-all hover:opacity-80 active:scale-95" style="background-color:var(--espresso); color:#F5F2EB;">Weiter<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg></button></div><!-- Keyboard hint --><p class="text-center text-xs font-medium mt-4" style="color:var(--text-muted);">← → Pfeiltasten zum Navigieren &nbsp;·&nbsp; A zum Anhören</p></div><!-- ── List View ───────────────────────────── --><div id="list-view-wrap" class="hidden space-y-6"><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Was sind indirekte Fragen?</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">What are indirect questions?</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Indirect questions are subordinate clauses that function as the object of a main clause. They are introduced by an interrogative pronoun (W-word) or by 'ob' (if/whether) and always have the conjugated verb at the very end of the clause. They allow you to embed a question within a statement or another question.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich frage mich, wann der Zug ankommt.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I wonder when the train arrives.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Die Satzstellung: Verb am Ende</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">Sentence Structure: Verb at the End</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">The most important rule for indirect questions is that the conjugated verb always moves to the very end of the subordinate clause. This applies to all types of indirect questions, regardless of whether they are introduced by 'ob' or a W-word. This structure is typical for all German subordinate clauses.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Können Sie mir sagen, wie spät es ist?</p><p class="italic text-[13px]" style="color:var(--text-muted);">Can you tell me what time it is?</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Indirekte Ja/Nein-Fragen mit 'ob'</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">Indirect Yes/No Questions with 'ob' (if/whether)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">If the original direct question is a yes/no question (i.e., it doesn't use a W-word), the indirect question is introduced by 'ob'. 'Ob' acts as a conjunction connecting the main clause to the subordinate clause. The verb then moves to the end of the 'ob'-clause.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich möchte wissen, ob das Geschäft heute geöffnet ist.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I would like to know if the shop is open today.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Indirekte W-Fragen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">Indirect W-Questions</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">If the original direct question uses a W-word (wer, was, wann, wo, warum, wie, etc.), the indirect question is introduced by that same W-word. The W-word acts as the conjunction, and the conjugated verb moves to the very end of the subordinate clause. The W-word always comes immediately after the main clause.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich frage mich, wann der nächste Zug fährt.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I wonder when the next train departs.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Häufige Einleitungen (Aussagesätze)</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">Common Introductory Phrases (Statements)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Indirect questions are often introduced by phrases that express curiosity, uncertainty, or a desire for information. These phrases are typically statements and include expressions like 'Ich frage mich, ...' (I wonder...), 'Ich möchte wissen, ...' (I would like to know...), 'Es ist unklar, ...' (It is unclear...), or 'Ich weiß nicht, ...' (I don't know...).</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich frage mich, wie lange die Reise dauert.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I wonder how long the journey takes.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Häufige Einleitungen (Fragesätze)</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">Common Introductory Phrases (Questions)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Indirect questions can also be introduced by direct questions, asking someone else for information. Common phrases include 'Wissen Sie, ...?' (Do you know...?), 'Können Sie mir sagen, ...?' (Can you tell me...?), or 'Haben Sie eine Ahnung, ...?' (Do you have any idea...?). The main clause is a question, but the indirect question still follows subordinate clause word order.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Wissen Sie, ob der Supermarkt noch geöffnet ist?</p><p class="italic text-[13px]" style="color:var(--text-muted);">Do you know if the supermarket is still open?</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Indirekte Fragen mit Modalverben</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">Indirect Questions with Modal Verbs</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">When an indirect question contains a modal verb, the modal verb is conjugated and moves to the very end of the subordinate clause. The infinitive verb that accompanies the modal verb precedes the modal verb, forming a verb bracket at the end of the clause. This is consistent with the general rule for subordinate clauses.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich möchte wissen, ob ich hier parken darf.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I would like to know if I am allowed to park here.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Indirekte Fragen mit trennbaren Verben</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">Indirect Questions with Separable Verbs</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">In indirect questions, separable verbs are treated like any other verb in a subordinate clause. The separable prefix rejoins the verb, and the entire verb (prefix + stem) moves to the very end of the clause as a single unit. The verb is conjugated according to the subject.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich frage mich, wann der Film anfängt.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I wonder when the movie starts.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Indirekte Fragen im Perfekt</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">Indirect Questions in Perfect Tense</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">When an indirect question is in the perfect tense (Perfekt), the auxiliary verb (haben or sein) is conjugated and moves to the very end of the subordinate clause. The past participle (Partizip II) precedes the auxiliary verb, forming a verb bracket at the end. This maintains the verb-final rule for subordinate clauses.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich weiß nicht, was er gestern gemacht hat.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I don't know what he did yesterday.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Indirekte Fragen im Passiv</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">Indirect Questions in Passive Voice</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">In indirect questions using the passive voice, the conjugated form of 'werden' (the auxiliary for passive) moves to the very end of the subordinate clause. The past participle (Partizip II) precedes 'werden', forming a verb bracket. This structure ensures the verb-final rule is followed while maintaining the passive construction.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Er fragt, ob das Paket schon geliefert wurde.</p><p class="italic text-[13px]" style="color:var(--text-muted);">He asks if the package has already been delivered.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Indirekte Fragen mit Präpositionen + W-Wörtern</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">Indirect Questions with Prepositions + W-words</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">When a direct question involves a preposition, the preposition often combines with the W-word (e.g., 'worüber', 'womit', 'wovon') or precedes 'wem/wen/was'. In an indirect question, this prepositional phrase (e.g., 'worüber' or 'mit wem') acts as the W-word and introduces the subordinate clause. The verb still goes to the end.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich frage mich, worüber sie gesprochen haben.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I wonder what they talked about.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Indirekte Fragen mit 'was für ein/eine'</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">Indirect Questions with 'what kind of a/an'</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">The phrase 'was für ein/eine/einen/eines' acts as a single interrogative unit. When used in an indirect question, the entire phrase 'was für ein/eine...' introduces the subordinate clause. The noun following 'ein/eine' remains with the phrase, and the conjugated verb moves to the end of the clause, as always.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich möchte wissen, was für ein Auto er fährt.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I would like to know what kind of car he drives.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Negation in indirekten Fragen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">Negation in Indirect Questions</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">To negate an indirect question, 'nicht' is typically placed before the part of the sentence it negates. If it negates the entire verb or clause, it usually comes before the verb at the end, or before the object if the object is indefinite. If it negates a specific element (e.g., an adjective or adverb), it precedes that element.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich weiß nicht, ob er heute Abend nicht kommt.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I don't know if he isn't coming tonight.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Indirekte Fragen vs. Relativsätze</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">Indirect Questions vs. Relative Clauses</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Both indirect questions and relative clauses are subordinate clauses with verb-final word order, which can cause confusion. However, their function differs. Indirect questions ask for information and are introduced by 'ob' or a W-word. Relative clauses provide additional information about a noun and are introduced by a relative pronoun (der, die, das, welcher, welche, welches).</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich weiß nicht, wer das gesagt hat. (Indirekte Frage)</p><p class="italic text-[13px]" style="color:var(--text-muted);">I don't know who said that. (Indirect Question)</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Häufiger Fehler: 'ob' oder W-Wort vergessen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">Common Error: Forgetting 'ob' or the W-word</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">A very common mistake is to omit the introductory word ('ob' for yes/no questions or the W-word for W-questions). These words are crucial conjunctions that link the main clause to the subordinate indirect question. Without them, the sentence structure is grammatically incorrect and often unclear.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Falsch: Ich frage mich, der Zug ankommt. / Richtig: Ich frage mich, wann der Zug ankommt.</p><p class="italic text-[13px]" style="color:var(--text-muted);">Wrong: I wonder the train arrives. / Right: I wonder when the train arrives.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Häufiger Fehler: Falsche Verbposition</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">Common Error: Incorrect Verb Position</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">The most frequent error in indirect questions is failing to place the conjugated verb at the very end of the subordinate clause. Learners often apply the main clause word order (verb in second position) or place it directly after the subject. Always remember: in indirect questions, the verb is <span class="highlighter">always</span> last.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Falsch: Ich weiß nicht, wann kommt der Bus. / Richtig: Ich weiß nicht, wann der Bus kommt.</p><p class="italic text-[13px]" style="color:var(--text-muted);">Wrong: I don't know when comes the bus. / Right: I don't know when the bus comes.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Indirekte Fragen mit Konjunktiv I/II (optional)</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">Indirect Questions with Subjunctive I/II (optional)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">While B1 typically uses the indicative mood in indirect questions, especially when the information is presented as fact, Konjunktiv I or II can be used to indicate reported speech, doubt, or distance from the statement. Konjunktiv I is for reported speech, Konjunktiv II for doubt or hypothetical situations. For B1, using the indicative is generally sufficient and correct.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Er fragt, ob sie mitkäme. (Konjunktiv II, indicating doubt)</p><p class="italic text-[13px]" style="color:var(--text-muted);">He asks if she would come along. (Subjunctive II, indicating doubt)</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Indirekte Fragen mit doppelten Konjunktionen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">Indirect Questions with Double Conjunctions</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Sometimes, an introductory phrase might itself contain a conjunction, but this does not replace the 'ob' or W-word of the indirect question. For example, 'Ich bin nicht sicher, ob...' (I am not sure if...). Here, 'ob' is the conjunction for the indirect question, and 'nicht sicher' is part of the main clause. The structure remains consistent: Main clause + comma + 'ob'/W-word + subject + ... + verb.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich bin nicht sicher, ob er heute kommt.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I am not sure if he is coming today.</p></div></div></div></div></div></div></main><footer class="mt-auto border-t py-8" style="background-color:var(--bg);border-color:var(--border);"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-medium" style="color:var(--text-muted);"><div>&copy; 2025 - 2026 Small Talk Café Podcasts. All rights reserved.</div><div class="flex gap-4">Made in Bayern ❤️ Los Geht's!</div></div></footer><!-- Theme toggle + Language switcher script --><script>
+      // ── Theme ──────────────────────────────────────
+      function applyTheme(dark) {
+        if (dark) {
+          document.documentElement.classList.add('dark');
+          localStorage.setItem('wortschatz_theme', 'dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+          localStorage.setItem('wortschatz_theme', 'light');
+        }
+        const icon = document.getElementById('theme-icon');
+        const label = document.getElementById('theme-label');
+        if (icon) icon.textContent = dark ? '🌙' : '☀️';
+        if (label) label.textContent = dark ? 'Dark' : 'Light';
+      }
+
+      const isDark = document.documentElement.classList.contains('dark');
+      applyTheme(isDark);
+
+      document.getElementById('theme-toggle')?.addEventListener('click', () => {
+        const nowDark = !document.documentElement.classList.contains('dark');
+        applyTheme(nowDark);
+      });
+
+      // ── Language Switcher ──────────────────────────
+      const LANG_CONTENT = {
+        de: {
+          name: 'Deutsch Lounge',
+          flag: '🇩🇪',
+          code: 'DE',
+          subtitle: 'Systematisches Vokabel- und Grammatiktraining',
+          tagline: 'Deutsch Lounge',
+          welcome: 'Willkommen beim',
+          cards: [
+            { title: 'Vokabeln', desc: 'Erweitere deinen Wortschatz. Lerne Nomen, Verben und Redewendungen mit Beispielsätzen.' },
+            { title: 'Verben', desc: 'Meistere reguläre, unregelmäßige, modale und reflexive Verben mit Konjugationstabellen.' },
+            { title: 'Grammatik', desc: 'Regeln verstehen & üben: Adjektivdeklination, Fälle, Präpositionen, Konnektoren & Phrasen.' },
+            { title: 'Redemittel', desc: 'Essentielle Phrasen für den Alltag, Diskussionen und Präsentationen.' }
+          ]
+        },
+        es: {
+          name: 'Spanish Gym',
+          flag: '🇪🇸',
+          code: 'ES',
+          subtitle: 'Tu compañero para aprender Español A1 – B2',
+          tagline: 'A1–B2 Spanish Curriculum',
+          welcome: 'Bienvenido al',
+          cards: [
+            { title: 'Vocabulario', desc: 'Amplía tu vocabulario A1–B2. Aprende sustantivos, verbos y frases con ejemplos contextuales.' },
+            { title: 'Verbos', desc: 'Domina verbos regulares, irregulares y reflexivos con tablas de conjugación.' },
+            { title: 'Gramática', desc: 'Entiende y practica las reglas gramaticales, casos y conectores.' },
+            { title: 'Expresiones', desc: 'Frases esenciales para el día a día, discusiones y presentaciones.' }
+          ]
+        },
+        fr: {
+          name: 'French Gym',
+          flag: '🇫🇷',
+          code: 'FR',
+          subtitle: 'Ton compagnon pour apprendre le Français A1 – B2',
+          tagline: 'A1–B2 French Curriculum',
+          welcome: 'Bienvenue au',
+          cards: [
+            { title: 'Vocabulaire', desc: 'Élargis ton vocabulaire A1–B2. Apprends des noms, verbes et expressions avec des exemples.' },
+            { title: 'Verbes', desc: 'Maîtrise les verbes réguliers, irréguliers et réflexifs avec des tableaux de conjugaison.' },
+            { title: 'Grammaire', desc: 'Comprends et pratique les règles de grammaire, les cas et les connecteurs.' },
+            { title: 'Expressions', desc: 'Phrases essentielles pour la vie quotidienne, les discussions et les présentations.' }
+          ]
+        }
+      };
+
+      function applyLanguage(lang) {
+        const c = LANG_CONTENT[lang] || LANG_CONTENT['de'];
+        localStorage.setItem('gym_language', lang);
+
+        // Header
+        const flag = document.getElementById('lang-flag');
+        const code = document.getElementById('lang-code');
+        const siteName = document.getElementById('site-name');
+        if (flag) flag.textContent = c.flag;
+        if (code) code.textContent = c.code;
+        if (siteName) siteName.textContent = c.name;
+
+        // Footer
+        const footerName = document.getElementById('footer-gym-name');
+        const footerLevel = document.getElementById('footer-level');
+        if (footerName) footerName.textContent = c.name;
+        if (footerLevel) footerLevel.textContent = c.tagline;
+
+        const isGerman = lang === 'de';
+        const overlay = document.getElementById('coming-soon-overlay');
+        const mainContent = document.getElementById('main-content');
+        const germanNavLinks = document.querySelectorAll('[data-german-nav]');
+
+        if (isGerman) {
+          // Show normal German content
+          if (overlay) overlay.classList.add('hidden');
+          if (mainContent) mainContent.classList.remove('hidden');
+          germanNavLinks.forEach(el => el.classList.remove('hidden'));
+
+          // Hero on homepage only
+          const heroTitle = document.getElementById('hero-gym-name');
+          const heroSubtitle = document.getElementById('hero-subtitle');
+          const heroWelcome = document.getElementById('hero-welcome');
+          if (heroTitle) heroTitle.textContent = c.name;
+          if (heroSubtitle) heroSubtitle.textContent = c.subtitle;
+          if (heroWelcome) heroWelcome.textContent = c.welcome;
+
+          // Category cards
+          const cardTitles = document.querySelectorAll('[data-card-title]');
+          const cardDescs = document.querySelectorAll('[data-card-desc]');
+          cardTitles.forEach((el, i) => {
+            if (c.cards[i]) el.textContent = c.cards[i].title;
+          });
+          cardDescs.forEach((el, i) => {
+            if (c.cards[i]) el.textContent = c.cards[i].desc;
+          });
+
+          // Nav links
+          const navLabels = document.querySelectorAll('[data-nav-label]');
+          navLabels.forEach((el, i) => {
+            if (c.cards[i]) el.textContent = c.cards[i].title;
+          });
+        } else {
+          // Non-German: show coming soon overlay, hide main content and German nav
+          if (mainContent) mainContent.classList.add('hidden');
+          germanNavLinks.forEach(el => el.classList.add('hidden'));
+
+          // Populate coming soon overlay
+          const comingFlag = document.getElementById('coming-soon-flag');
+          const comingLang = document.getElementById('coming-soon-lang');
+          if (comingFlag) comingFlag.textContent = c.flag;
+          if (comingLang) comingLang.textContent = c.name + ' content';
+
+          if (overlay) {
+            overlay.classList.remove('hidden');
+            overlay.classList.add('flex');
+          }
+        }
+      }
+
+      // Restore saved language
+      const savedLang = localStorage.getItem('gym_language') || 'de';
+      applyLanguage(savedLang);
+
+      // Dropdown toggle
+      const langBtn = document.getElementById('lang-btn');
+      const langMenu = document.getElementById('lang-menu');
+
+      langBtn?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        langMenu?.classList.toggle('hidden');
+      });
+
+      document.addEventListener('click', () => {
+        langMenu?.classList.add('hidden');
+      });
+
+      document.querySelectorAll('.lang-option').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const lang = btn.dataset.lang;
+          applyLanguage(lang);
+          langMenu?.classList.add('hidden');
+        });
+      });
+
+      // Coming soon "Switch to German" button
+      document.getElementById('coming-soon-back-btn')?.addEventListener('click', () => {
+        applyLanguage('de');
+      });
+    </script></body></html><script type="module" src="/languagelounge/_astro/_deckId_.astro_astro_type_script_index_0_lang.B80xyaMZ.js"></script><script>(function(){const cardsJson = "[{\"id\":\"grammatik-b1-indirekte_fragen-001\",\"target\":\"Was sind indirekte Fragen?\",\"source\":\"What are indirect questions?\",\"grammar_note\":\"Indirect questions are subordinate clauses that function as the object of a main clause. They are introduced by an interrogative pronoun (W-word) or by 'ob' (if/whether) and always have the conjugated verb at the very end of the clause. They allow you to embed a question within a statement or another question.\",\"example_target\":\"Ich frage mich, wann der Zug ankommt.\",\"example_source\":\"I wonder when the train arrives.\",\"extra_examples\":[{\"de\":\"Er möchte wissen, wo du wohnst.\",\"en\":\"He wants to know where you live.\"},{\"de\":\"Sie hat gefragt, ob wir kommen.\",\"en\":\"She asked if we are coming.\"}],\"common_error\":\"Learners often use direct question word order (verb second) instead of the subordinate clause word order (verb last).\",\"tags\":[\"grammatik\",\"b1\",\"introduction\",\"word_order\"],\"type\":\"grammar\"},{\"id\":\"grammatik-b1-indirekte_fragen-002\",\"target\":\"Die Satzstellung: Verb am Ende\",\"source\":\"Sentence Structure: Verb at the End\",\"grammar_note\":\"The most important rule for indirect questions is that the conjugated verb always moves to the very end of the subordinate clause. This applies to all types of indirect questions, regardless of whether they are introduced by 'ob' or a W-word. This structure is typical for all German subordinate clauses.\",\"example_target\":\"Können Sie mir sagen, wie spät es ist?\",\"example_source\":\"Can you tell me what time it is?\",\"extra_examples\":[{\"de\":\"Ich weiß nicht, wann der Film beginnt.\",\"en\":\"I don't know when the movie starts.\"},{\"de\":\"Sie fragt, ob er ihr helfen kann.\",\"en\":\"She asks if he can help her.\"}],\"common_error\":\"Placing the verb in the second position or after the subject, as in direct questions (e.g., *wie spät ist es* instead of *wie spät es ist*).\",\"tags\":[\"grammatik\",\"b1\",\"word_order\",\"verb_position\"],\"type\":\"grammar\"},{\"id\":\"grammatik-b1-indirekte_fragen-003\",\"target\":\"Indirekte Ja/Nein-Fragen mit 'ob'\",\"source\":\"Indirect Yes/No Questions with 'ob' (if/whether)\",\"grammar_note\":\"If the original direct question is a yes/no question (i.e., it doesn't use a W-word), the indirect question is introduced by 'ob'. 'Ob' acts as a conjunction connecting the main clause to the subordinate clause. The verb then moves to the end of the 'ob'-clause.\",\"example_target\":\"Ich möchte wissen, ob das Geschäft heute geöffnet ist.\",\"example_source\":\"I would like to know if the shop is open today.\",\"extra_examples\":[{\"de\":\"Wissen Sie, ob der Bus pünktlich kommt?\",\"en\":\"Do you know if the bus is coming on time?\"},{\"de\":\"Er fragt, ob du Hunger hast.\",\"en\":\"He asks if you are hungry.\"}],\"common_error\":\"Omitting 'ob' entirely or using 'wenn' instead of 'ob'. 'Wenn' is used for temporal clauses ('when') or conditional clauses ('if'), not for indirect yes/no questions.\",\"tags\":[\"grammatik\",\"b1\",\"ob\",\"yes_no_questions\"],\"type\":\"grammar\"},{\"id\":\"grammatik-b1-indirekte_fragen-004\",\"target\":\"Indirekte W-Fragen\",\"source\":\"Indirect W-Questions\",\"grammar_note\":\"If the original direct question uses a W-word (wer, was, wann, wo, warum, wie, etc.), the indirect question is introduced by that same W-word. The W-word acts as the conjunction, and the conjugated verb moves to the very end of the subordinate clause. The W-word always comes immediately after the main clause.\",\"example_target\":\"Ich frage mich, wann der nächste Zug fährt.\",\"example_source\":\"I wonder when the next train departs.\",\"extra_examples\":[{\"de\":\"Können Sie mir sagen, wo die Post ist?\",\"en\":\"Can you tell me where the post office is?\"},{\"de\":\"Er möchte wissen, warum du so spät bist.\",\"en\":\"He wants to know why you are so late.\"}],\"common_error\":\"Forgetting to move the verb to the end of the W-clause (e.g., *wo ist die Post* instead of *wo die Post ist*).\",\"tags\":[\"grammatik\",\"b1\",\"w_questions\",\"word_order\"],\"type\":\"grammar\"},{\"id\":\"grammatik-b1-indirekte_fragen-005\",\"target\":\"Häufige Einleitungen (Aussagesätze)\",\"source\":\"Common Introductory Phrases (Statements)\",\"grammar_note\":\"Indirect questions are often introduced by phrases that express curiosity, uncertainty, or a desire for information. These phrases are typically statements and include expressions like 'Ich frage mich, ...' (I wonder...), 'Ich möchte wissen, ...' (I would like to know...), 'Es ist unklar, ...' (It is unclear...), or 'Ich weiß nicht, ...' (I don't know...).\",\"example_target\":\"Ich frage mich, wie lange die Reise dauert.\",\"example_source\":\"I wonder how long the journey takes.\",\"extra_examples\":[{\"de\":\"Es ist unklar, wann die Ergebnisse kommen.\",\"en\":\"It is unclear when the results will come.\"},{\"de\":\"Ich weiß nicht, ob er heute Abend Zeit hat.\",\"en\":\"I don't know if he has time tonight.\"}],\"common_error\":\"Incorrectly conjugating the verb in the main clause or forgetting the comma before the indirect question.\",\"tags\":[\"grammatik\",\"b1\",\"introductory_phrases\",\"statements\"],\"type\":\"grammar\"},{\"id\":\"grammatik-b1-indirekte_fragen-006\",\"target\":\"Häufige Einleitungen (Fragesätze)\",\"source\":\"Common Introductory Phrases (Questions)\",\"grammar_note\":\"Indirect questions can also be introduced by direct questions, asking someone else for information. Common phrases include 'Wissen Sie, ...?' (Do you know...?), 'Können Sie mir sagen, ...?' (Can you tell me...?), or 'Haben Sie eine Ahnung, ...?' (Do you have any idea...?). The main clause is a question, but the indirect question still follows subordinate clause word order.\",\"example_target\":\"Wissen Sie, ob der Supermarkt noch geöffnet ist?\",\"example_source\":\"Do you know if the supermarket is still open?\",\"extra_examples\":[{\"de\":\"Können Sie mir sagen, wann der nächste Bus fährt?\",\"en\":\"Can you tell me when the next bus departs?\"},{\"de\":\"Haben Sie eine Ahnung, wo mein Schlüssel ist?\",\"en\":\"Do you have any idea where my key is?\"}],\"common_error\":\"Confusing the word order of the main question with the subordinate indirect question. The main clause is a direct question, but the embedded question is a subordinate clause.\",\"tags\":[\"grammatik\",\"b1\",\"introductory_phrases\",\"questions\"],\"type\":\"grammar\"},{\"id\":\"grammatik-b1-indirekte_fragen-007\",\"target\":\"Indirekte Fragen mit Modalverben\",\"source\":\"Indirect Questions with Modal Verbs\",\"grammar_note\":\"When an indirect question contains a modal verb, the modal verb is conjugated and moves to the very end of the subordinate clause. The infinitive verb that accompanies the modal verb precedes the modal verb, forming a verb bracket at the end of the clause. This is consistent with the general rule for subordinate clauses.\",\"example_target\":\"Ich möchte wissen, ob ich hier parken darf.\",\"example_source\":\"I would like to know if I am allowed to park here.\",\"extra_examples\":[{\"de\":\"Er fragt, wann wir uns treffen können.\",\"en\":\"He asks when we can meet.\"},{\"de\":\"Sie weiß nicht, was sie kochen soll.\",\"en\":\"She doesn't know what she should cook.\"}],\"common_error\":\"Placing the infinitive after the modal verb or forgetting to move both verbs to the end (e.g., *ob ich darf parken*).\",\"tags\":[\"grammatik\",\"b1\",\"modal_verbs\",\"word_order\"],\"type\":\"grammar\"},{\"id\":\"grammatik-b1-indirekte_fragen-008\",\"target\":\"Indirekte Fragen mit trennbaren Verben\",\"source\":\"Indirect Questions with Separable Verbs\",\"grammar_note\":\"In indirect questions, separable verbs are treated like any other verb in a subordinate clause. The separable prefix rejoins the verb, and the entire verb (prefix + stem) moves to the very end of the clause as a single unit. The verb is conjugated according to the subject.\",\"example_target\":\"Ich frage mich, wann der Film anfängt.\",\"example_source\":\"I wonder when the movie starts.\",\"extra_examples\":[{\"de\":\"Können Sie mir sagen, wann der Zug abfährt?\",\"en\":\"Can you tell me when the train departs?\"},{\"de\":\"Sie möchte wissen, ob er heute Abend anruft.\",\"en\":\"She wants to know if he calls tonight.\"}],\"common_error\":\"Separating the prefix from the verb (e.g., *wann der Film an fängt* or *wann der Film fängt an*).\",\"tags\":[\"grammatik\",\"b1\",\"separable_verbs\",\"word_order\"],\"type\":\"grammar\"},{\"id\":\"grammatik-b1-indirekte_fragen-009\",\"target\":\"Indirekte Fragen im Perfekt\",\"source\":\"Indirect Questions in Perfect Tense\",\"grammar_note\":\"When an indirect question is in the perfect tense (Perfekt), the auxiliary verb (haben or sein) is conjugated and moves to the very end of the subordinate clause. The past participle (Partizip II) precedes the auxiliary verb, forming a verb bracket at the end. This maintains the verb-final rule for subordinate clauses.\",\"example_target\":\"Ich weiß nicht, was er gestern gemacht hat.\",\"example_source\":\"I don't know what he did yesterday.\",\"extra_examples\":[{\"de\":\"Sie fragt, ob du schon gegessen hast.\",\"en\":\"She asks if you have already eaten.\"},{\"de\":\"Können Sie mir sagen, wohin sie gegangen ist?\",\"en\":\"Can you tell me where she went?\"}],\"common_error\":\"Incorrectly placing the auxiliary verb (e.g., *was er hat gemacht* or *was er gemacht hat* where *hat* is not at the very end).\",\"tags\":[\"grammatik\",\"b1\",\"perfekt\",\"tense\",\"word_order\"],\"type\":\"grammar\"},{\"id\":\"grammatik-b1-indirekte_fragen-010\",\"target\":\"Indirekte Fragen im Passiv\",\"source\":\"Indirect Questions in Passive Voice\",\"grammar_note\":\"In indirect questions using the passive voice, the conjugated form of 'werden' (the auxiliary for passive) moves to the very end of the subordinate clause. The past participle (Partizip II) precedes 'werden', forming a verb bracket. This structure ensures the verb-final rule is followed while maintaining the passive construction.\",\"example_target\":\"Er fragt, ob das Paket schon geliefert wurde.\",\"example_source\":\"He asks if the package has already been delivered.\",\"extra_examples\":[{\"de\":\"Ich möchte wissen, wann die Entscheidung getroffen wird.\",\"en\":\"I would like to know when the decision will be made.\"},{\"de\":\"Es ist unklar, warum das Projekt gestoppt wurde.\",\"en\":\"It is unclear why the project was stopped.\"}],\"common_error\":\"Misplacing 'werden' or the past participle within the clause, not adhering to the verb-final rule.\",\"tags\":[\"grammatik\",\"b1\",\"passiv\",\"voice\",\"word_order\"],\"type\":\"grammar\"},{\"id\":\"grammatik-b1-indirekte_fragen-011\",\"target\":\"Indirekte Fragen mit Präpositionen + W-Wörtern\",\"source\":\"Indirect Questions with Prepositions + W-words\",\"grammar_note\":\"When a direct question involves a preposition, the preposition often combines with the W-word (e.g., 'worüber', 'womit', 'wovon') or precedes 'wem/wen/was'. In an indirect question, this prepositional phrase (e.g., 'worüber' or 'mit wem') acts as the W-word and introduces the subordinate clause. The verb still goes to the end.\",\"example_target\":\"Ich frage mich, worüber sie gesprochen haben.\",\"example_source\":\"I wonder what they talked about.\",\"extra_examples\":[{\"de\":\"Können Sie mir sagen, mit wem er telefoniert hat?\",\"en\":\"Can you tell me who he talked to on the phone?\"},{\"de\":\"Sie möchte wissen, wofür das Geld ist.\",\"en\":\"She wants to know what the money is for.\"}],\"common_error\":\"Separating the preposition from the W-word (e.g., *über was sie gesprochen haben*) or placing the preposition incorrectly.\",\"tags\":[\"grammatik\",\"b1\",\"prepositions\",\"w_questions\"],\"type\":\"grammar\"},{\"id\":\"grammatik-b1-indirekte_fragen-012\",\"target\":\"Indirekte Fragen mit 'was für ein/eine'\",\"source\":\"Indirect Questions with 'what kind of a/an'\",\"grammar_note\":\"The phrase 'was für ein/eine/einen/eines' acts as a single interrogative unit. When used in an indirect question, the entire phrase 'was für ein/eine...' introduces the subordinate clause. The noun following 'ein/eine' remains with the phrase, and the conjugated verb moves to the end of the clause, as always.\",\"example_target\":\"Ich möchte wissen, was für ein Auto er fährt.\",\"example_source\":\"I would like to know what kind of car he drives.\",\"extra_examples\":[{\"de\":\"Wissen Sie, was für eine Musik sie mag?\",\"en\":\"Do you know what kind of music she likes?\"},{\"de\":\"Er fragt, was für ein Problem du hast.\",\"en\":\"He asks what kind of problem you have.\"}],\"common_error\":\"Separating 'was' from 'für ein' or misplacing the noun (e.g., *was er für ein Auto fährt* instead of *was für ein Auto er fährt*).\",\"tags\":[\"grammatik\",\"b1\",\"w_questions\",\"was_fuer_ein\"],\"type\":\"grammar\"},{\"id\":\"grammatik-b1-indirekte_fragen-013\",\"target\":\"Negation in indirekten Fragen\",\"source\":\"Negation in Indirect Questions\",\"grammar_note\":\"To negate an indirect question, 'nicht' is typically placed before the part of the sentence it negates. If it negates the entire verb or clause, it usually comes before the verb at the end, or before the object if the object is indefinite. If it negates a specific element (e.g., an adjective or adverb), it precedes that element.\",\"example_target\":\"Ich weiß nicht, ob er heute Abend nicht kommt.\",\"example_source\":\"I don't know if he isn't coming tonight.\",\"extra_examples\":[{\"de\":\"Sie fragt, warum du nicht mitgehst.\",\"en\":\"She asks why you are not coming along.\"},{\"de\":\"Er möchte wissen, ob das Essen nicht schmeckt.\",\"en\":\"He wants to know if the food doesn't taste good.\"}],\"common_error\":\"Incorrect placement of 'nicht', often putting it too early in the clause or in the wrong position relative to other sentence elements.\",\"tags\":[\"grammatik\",\"b1\",\"negation\",\"word_order\"],\"type\":\"grammar\"},{\"id\":\"grammatik-b1-indirekte_fragen-014\",\"target\":\"Indirekte Fragen vs. Relativsätze\",\"source\":\"Indirect Questions vs. Relative Clauses\",\"grammar_note\":\"Both indirect questions and relative clauses are subordinate clauses with verb-final word order, which can cause confusion. However, their function differs. Indirect questions ask for information and are introduced by 'ob' or a W-word. Relative clauses provide additional information about a noun and are introduced by a relative pronoun (der, die, das, welcher, welche, welches).\",\"example_target\":\"Ich weiß nicht, wer das gesagt hat. (Indirekte Frage)\",\"example_source\":\"I don't know who said that. (Indirect Question)\",\"extra_examples\":[{\"de\":\"Das ist der Mann, der das gesagt hat. (Relativsatz)\",\"en\":\"That is the man who said that. (Relative Clause)\"},{\"de\":\"Ich frage mich, was du kaufst. (Indirekte Frage)\",\"en\":\"I wonder what you are buying. (Indirect Question)\"},{\"de\":\"Das ist das Buch, das ich kaufe. (Relativsatz)\",\"en\":\"That is the book that I am buying. (Relative Clause)\"}],\"common_error\":\"Using relative pronouns instead of W-words/ob for indirect questions, or vice-versa, due to the similar verb-final structure.\",\"tags\":[\"grammatik\",\"b1\",\"contrast\",\"relative_clauses\"],\"type\":\"grammar\"},{\"id\":\"grammatik-b1-indirekte_fragen-015\",\"target\":\"Häufiger Fehler: 'ob' oder W-Wort vergessen\",\"source\":\"Common Error: Forgetting 'ob' or the W-word\",\"grammar_note\":\"A very common mistake is to omit the introductory word ('ob' for yes/no questions or the W-word for W-questions). These words are crucial conjunctions that link the main clause to the subordinate indirect question. Without them, the sentence structure is grammatically incorrect and often unclear.\",\"example_target\":\"Falsch: Ich frage mich, der Zug ankommt. / Richtig: Ich frage mich, wann der Zug ankommt.\",\"example_source\":\"Wrong: I wonder the train arrives. / Right: I wonder when the train arrives.\",\"extra_examples\":[{\"de\":\"Falsch: Wissen Sie, das Geschäft geöffnet ist? / Richtig: Wissen Sie, ob das Geschäft geöffnet ist?\",\"en\":\"Wrong: Do you know the shop is open? / Right: Do you know if the shop is open?\"},{\"de\":\"Falsch: Er möchte wissen, du kommst. / Richtig: Er möchte wissen, wann du kommst.\",\"en\":\"Wrong: He wants to know you are coming. / Right: He wants to know when you are coming.\"}],\"common_error\":\"Treating the indirect question as a main clause or simply omitting the necessary conjunction, leading to a run-on sentence or grammatical error.\",\"tags\":[\"grammatik\",\"b1\",\"common_error\",\"conjunctions\"],\"type\":\"grammar\"},{\"id\":\"grammatik-b1-indirekte_fragen-016\",\"target\":\"Häufiger Fehler: Falsche Verbposition\",\"source\":\"Common Error: Incorrect Verb Position\",\"grammar_note\":\"The most frequent error in indirect questions is failing to place the conjugated verb at the very end of the subordinate clause. Learners often apply the main clause word order (verb in second position) or place it directly after the subject. Always remember: in indirect questions, the verb is *always* last.\",\"example_target\":\"Falsch: Ich weiß nicht, wann kommt der Bus. / Richtig: Ich weiß nicht, wann der Bus kommt.\",\"example_source\":\"Wrong: I don't know when comes the bus. / Right: I don't know when the bus comes.\",\"extra_examples\":[{\"de\":\"Falsch: Sie fragt, ob ist er müde. / Richtig: Sie fragt, ob er müde ist.\",\"en\":\"Wrong: She asks if is he tired. / Right: She asks if he is tired.\"},{\"de\":\"Falsch: Können Sie mir sagen, wo liegt der Bahnhof? / Richtig: Können Sie mir sagen, wo der Bahnhof liegt?\",\"en\":\"Wrong: Can you tell me where lies the station? / Right: Can you tell me where the station is located?\"}],\"common_error\":\"Applying main clause (verb-second) word order to the subordinate indirect question, which is a fundamental mistake in German subordinate clauses.\",\"tags\":[\"grammatik\",\"b1\",\"common_error\",\"word_order\",\"verb_position\"],\"type\":\"grammar\"},{\"id\":\"grammatik-b1-indirekte_fragen-017\",\"target\":\"Indirekte Fragen mit Konjunktiv I/II (optional)\",\"source\":\"Indirect Questions with Subjunctive I/II (optional)\",\"grammar_note\":\"While B1 typically uses the indicative mood in indirect questions, especially when the information is presented as fact, Konjunktiv I or II can be used to indicate reported speech, doubt, or distance from the statement. Konjunktiv I is for reported speech, Konjunktiv II for doubt or hypothetical situations. For B1, using the indicative is generally sufficient and correct.\",\"example_target\":\"Er fragt, ob sie mitkäme. (Konjunktiv II, indicating doubt)\",\"example_source\":\"He asks if she would come along. (Subjunctive II, indicating doubt)\",\"extra_examples\":[{\"de\":\"Sie sagte, sie habe keine Zeit. (Konjunktiv I, reported speech)\",\"en\":\"She said she had no time. (Subjunctive I, reported speech)\"},{\"de\":\"Ich frage mich, ob das wahr sei. (Konjunktiv I, indicating doubt)\",\"en\":\"I wonder if that is true. (Subjunctive I, indicating doubt)\"}],\"common_error\":\"Overusing Konjunktiv when indicative is appropriate, or incorrectly forming Konjunktiv forms. For B1, stick to indicative unless specifically learning reported speech nuances.\",\"tags\":[\"grammatik\",\"b1\",\"advanced\",\"konjunktiv\",\"reported_speech\"],\"type\":\"grammar\"},{\"id\":\"grammatik-b1-indirekte_fragen-018\",\"target\":\"Indirekte Fragen mit doppelten Konjunktionen\",\"source\":\"Indirect Questions with Double Conjunctions\",\"grammar_note\":\"Sometimes, an introductory phrase might itself contain a conjunction, but this does not replace the 'ob' or W-word of the indirect question. For example, 'Ich bin nicht sicher, ob...' (I am not sure if...). Here, 'ob' is the conjunction for the indirect question, and 'nicht sicher' is part of the main clause. The structure remains consistent: Main clause + comma + 'ob'/W-word + subject + ... + verb.\",\"example_target\":\"Ich bin nicht sicher, ob er heute kommt.\",\"example_source\":\"I am not sure if he is coming today.\",\"extra_examples\":[{\"de\":\"Es hängt davon ab, wann wir fertig sind.\",\"en\":\"It depends on when we are finished.\"},{\"de\":\"Sie überlegt, wohin sie fahren soll.\",\"en\":\"She considers where she should go.\"}],\"common_error\":\"Confusing the conjunctions or omitting one when both are required for clarity and grammatical correctness.\",\"tags\":[\"grammatik\",\"b1\",\"conjunctions\",\"complex_sentences\"],\"type\":\"grammar\"}]";
+const langConfigJson = "{\"language_pair\":\"english_german\",\"target_lang\":\"de\",\"native_lang\":\"en\",\"target_lang_name\":\"Deutsch\",\"native_lang_name\":\"English\",\"speech_lang\":\"de-DE\",\"noun_metadata_fields\":[{\"key\":\"article\",\"label\":\"Artikel\",\"render\":\"article_badge\"},{\"key\":\"gender\",\"label\":\"Genus\",\"render\":\"gender_label\"},{\"key\":\"plural\",\"label\":\"Plural\",\"render\":\"text\"}],\"article_colours\":{\"der\":\"#4A7C9E\",\"die\":\"#B05070\",\"das\":\"#4A8A5A\"},\"gender_labels\":{\"m\":\"Maskulinum\",\"f\":\"Femininum\",\"n\":\"Neutrum\"},\"verb_tenses\":[\"Präsens\",\"Präteritum\",\"Perfekt\",\"Futur I\",\"Konjunktiv II\"],\"cases\":{\"nominative\":\"Nominativ\",\"accusative\":\"Akkusativ\",\"dative\":\"Dativ\",\"genitive\":\"Genitiv\"},\"ui_labels\":{\"learn_mode\":\"Lernen\",\"train_mode\":\"Trainieren\",\"examples_heading\":\"Beispielsätze\",\"grammar_note_heading\":\"Grammatiknotiz\",\"audio_button\":\"Anhören\",\"back_link\":\"Zurück\",\"card_counter\":\"Karte {current} / {total}\",\"next_button\":\"Weiter\",\"finish_button\":\"Fertig\",\"correct\":\"Richtig!\",\"wrong\":\"Falsch\"}}";
+const category = "grammatik";
+
+  const cards     = JSON.parse(cardsJson);
+  const config    = JSON.parse(langConfigJson);
+  let currentIndex = 0;
+
+  const dotNav    = document.getElementById('dot-nav');
+  const currentNum = document.getElementById('current-num');
+  const progressBar = document.getElementById('progress-bar');
+  const btnPrev   = document.getElementById('btn-prev');
+  const btnNext   = document.getElementById('btn-next');
+  const cardHost  = document.getElementById('card-host');
+  const progressCont = document.getElementById('progress-container');
+
+  const cardViewWrap = document.getElementById('card-view-wrap');
+  const listViewWrap = document.getElementById('list-view-wrap');
+  const btnViewCards = document.getElementById('view-cards-btn');
+  const btnViewList  = document.getElementById('view-list-btn');
+
+  // Toggle Logic
+  function setViewMode(mode) {
+    if (mode === 'list') {
+      cardViewWrap.classList.add('hidden');
+      listViewWrap.classList.remove('hidden');
+      progressCont.classList.add('hidden');
+      btnViewList.classList.add('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewList.classList.remove('text-[var(--text-muted)]');
+      btnViewCards.classList.remove('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewCards.classList.add('text-[var(--text-muted)]');
+    } else {
+      listViewWrap.classList.add('hidden');
+      cardViewWrap.classList.remove('hidden');
+      progressCont.classList.remove('hidden');
+      btnViewCards.classList.add('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewCards.classList.remove('text-[var(--text-muted)]');
+      btnViewList.classList.remove('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewList.classList.add('text-[var(--text-muted)]');
+    }
+  }
+
+  btnViewCards.addEventListener('click', () => setViewMode('cards'));
+  btnViewList.addEventListener('click', () => setViewMode('list'));
+
+  // Default Grammatik and Redemittel to list view!
+  if (category === 'grammatik' || category === 'redemittel' || category === 'phrases') {
+    setViewMode('list');
+  }
+
+
+
+  // ── Helpers (mirror card-renderer.ts — no module imports in inline scripts) ──
+  const articleColours = config.article_colours || { der:'#4A7C9E', die:'#B05070', das:'#4A8A5A' };
+  const genderLabels   = config.gender_labels   || { m:'Maskulinum', f:'Femininum', n:'Neutrum'  };
+  const speechLang     = config.speech_lang     || 'de-DE';
+
+  function stripArticle(w) {
+    return (w || '').replace(/^(der|die|das|el|la|los|las|le|les|l')\s+/i,'').trim();
+  }
+
+  function getTypeLabel(card) {
+    const tags = card.tags || [];
+    if (tags.includes('noun'))       return 'Substantiv';
+    if (tags.includes('verb'))       return 'Verb';
+    if (tags.includes('adjective'))  return 'Adjektiv';
+    if (tags.includes('expression')) return 'Ausdruck';
+    return { vocab:'Vokabel', verb:'Verb', phrase:'Phrase', connector:'Konnektor', grammar:'Grammatik' }[card.type] || 'Vokabel';
+  }
+
+  function normaliseEx(ex) {
+    return { target: ex.target||ex.de||'', source: ex.source||ex.en||'', note: ex.note };
+  }
+
+  function getMetaFacts(card) {
+    const meta = { ...(card.metadata||{}), article:card.article, gender:card.gender, plural:card.plural };
+    const facts = [];
+    for (const field of (config.noun_metadata_fields || [])) {
+      const raw = meta[field.key];
+      if (!raw || raw==='~') continue;
+      let value = String(raw), colour;
+      if (field.render === 'gender_label')  value  = genderLabels[raw] || raw;
+      if (field.render === 'article_badge') colour = articleColours[raw.toLowerCase()] || 'var(--espresso)';
+      facts.push({ label: field.label, value, colour });
+    }
+    return facts;
+  }
+
+  // ── Card renderer ─────────────────────────────────────────────────────────
+  function renderCard(idx) {
+    const card = cards[idx];
+    if (!card || !cardHost) return;
+
+    const lc = cardHost.querySelector('.learning-card');
+    if (!lc) return;
+
+    function sel(cls) { return lc.querySelector(cls); }
+
+    // Type badge + level
+    sel('.lc-type-badge').textContent = getTypeLabel(card);
+    sel('.lc-level-badge').textContent = (card.level || '').toUpperCase();
+
+    // Article
+    const article = card.article || card.metadata?.article;
+    const articleWrap = sel('.lc-article-wrap');
+    const articleEl   = sel('.lc-article');
+    if (article && (card.tags||[]).includes('noun') && !card.plural_only) {
+      articleEl.textContent = article;
+      articleEl.style.color = articleColours[article.toLowerCase()] || 'var(--espresso)';
+      articleWrap.style.display = '';
+    } else {
+      articleWrap.style.display = 'none';
+    }
+
+    // Word / translation / forms
+    sel('.lc-word').textContent        = stripArticle(card.target);
+    sel('.lc-translation').textContent = card.source || '';
+    const plural = card.plural || card.metadata?.plural;
+    sel('.lc-forms').textContent = plural && !card.plural_only ? `Pl. ${plural}` : card.plural_only ? 'nur Plural' : '';
+
+    // Meta grid
+    const metaGrid = sel('.lc-meta-grid');
+    const facts = getMetaFacts(card);
+    if (facts.length) {
+      metaGrid.style.gridTemplateColumns = `repeat(${Math.min(facts.length,4)}, 1fr)`;
+      metaGrid.style.display = '';
+      metaGrid.innerHTML = facts.map((f, i) => `
+        <div class="px-5 py-4 ${i<facts.length-1?'border-r':''}" style="border-color:var(--border);">
+          <p class="text-[9px] font-bold uppercase tracking-widest mb-1" style="color:var(--text-muted);">${f.label}</p>
+          <p class="text-sm font-bold" style="color:${f.colour||'var(--text)'};">${f.value}</p>
+        </div>`).join('');
+    } else {
+      metaGrid.style.display = 'none';
+    }
+
+    // Grammar note
+    const grammarWrap = sel('.lc-grammar-wrap');
+    if (card.grammar_note) {
+      sel('.lc-grammar-text').innerHTML = formatHighlight(card.grammar_note);
+      grammarWrap.classList.remove('hidden');
+    } else {
+      grammarWrap.classList.add('hidden');
+    }
+
+    // Examples
+    const examplesEl = sel('.lc-examples');
+    const rawEx = card.examples || (card.example_target ? [{ target:card.example_target, source:card.example_source }] : []);
+    examplesEl.innerHTML = rawEx.length
+      ? rawEx.map(ex => { const e=normaliseEx(ex); return `
+          <div class="rounded-2xl border overflow-hidden" style="border-color:var(--border);">
+            <div class="px-4 py-3" style="background-color:var(--bg);">
+              <p class="font-semibold leading-snug mb-1" style="color:var(--text);">${e.target}</p>
+              <p class="text-sm italic" style="color:var(--text-muted);">${e.source||''}</p>
+            </div>
+            ${e.note?`<div class="px-4 py-2 border-t" style="border-color:var(--border);">
+              <p class="text-[10px] font-bold font-mono" style="color:var(--espresso);">📐 ${e.note}</p>
+            </div>`:''}
+          </div>`; }).join('')
+      : '<p class="text-sm italic" style="color:var(--text-muted);">Kein Beispiel verfügbar.</p>';
+
+    // Tags
+    sel('.lc-tags').innerHTML = (card.tags||[]).map(t =>
+      `<span class="text-[10px] font-bold px-2 py-0.5 rounded-md border" style="border-color:var(--border);color:var(--text-muted);background-color:var(--bg);">${t}</span>`
+    ).join('');
+
+    // Progress UI
+    if (currentNum)  currentNum.textContent = String(idx+1);
+    if (progressBar) progressBar.style.width = `${Math.round(((idx+1)/cards.length)*100)}%`;
+    if (btnPrev)     btnPrev.disabled = idx === 0;
+    if (btnNext)     btnNext.innerHTML = idx === cards.length-1
+      ? '✓ Fertig'
+      : 'Weiter <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>';
+
+    updateDots();
+
+    // Re-bind audio button cleanly by cloning to strip old listeners
+    const oldBtn = sel('.lc-audio-btn');
+    if (oldBtn) {
+      const newBtn = oldBtn.cloneNode(true);
+      oldBtn.parentNode.replaceChild(newBtn, oldBtn);
+      newBtn.addEventListener('click', speakCurrent);
+    }
+  }
+
+  // ── Dot navigation ────────────────────────────────────────────────────────
+  function buildDots() {
+    if (!dotNav) return;
+    dotNav.innerHTML = '';
+    const maxVisible = 20;
+    const showAll = cards.length <= maxVisible;
+    cards.forEach((_, i) => {
+      if (!showAll && i >= maxVisible) return;
+      const dot = document.createElement('button');
+      dot.className = 'dot w-2 h-2 rounded-full transition-all duration-300 flex-shrink-0';
+      dot.style.backgroundColor = 'var(--border)';
+      dot.title = `Card ${i+1}`;
+      dot.addEventListener('click', () => goTo(i));
+      dotNav.appendChild(dot);
+    });
+    if (!showAll) {
+      const el = document.createElement('span');
+      el.textContent = `+${cards.length - maxVisible}`;
+      el.className = 'text-[10px] font-bold';
+      el.style.color = 'var(--text-muted)';
+      dotNav.appendChild(el);
+    }
+  }
+
+  function updateDots() {
+    dotNav?.querySelectorAll('.dot').forEach((dot, i) => {
+      dot.style.backgroundColor = i===currentIndex ? 'var(--espresso)' : 'var(--border)';
+      dot.style.width     = i===currentIndex ? '20px' : '8px';
+      dot.style.borderRadius = '4px';
+    });
+  }
+
+  // ── Audio ─────────────────────────────────────────────────────────────────
+  function speakCurrent() {
+    const card = cards[currentIndex];
+    if (!card) return;
+    if (window.DeutschAudioEngine) {
+      window.DeutschAudioEngine.speak(card.target || '', speechLang, 0.85);
+    }
+  }
+
+  // ── Navigate ─────────────────────────────────────────────────────────────
+  function goTo(idx) {
+    if (idx < 0 || idx >= cards.length) return;
+    currentIndex = idx;
+    renderCard(currentIndex);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  btnPrev?.addEventListener('click', () => goTo(currentIndex - 1));
+  btnNext?.addEventListener('click', () => {
+    if (currentIndex === cards.length - 1) window.location.href = '/vocabulary';
+    else goTo(currentIndex + 1);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') goTo(currentIndex + 1);
+    if (e.key === 'ArrowLeft')  goTo(currentIndex - 1);
+    if (e.key === 'a' || e.key === 'A') speakCurrent();
+  });
+
+  // ── Init ─────────────────────────────────────────────────────────────────
+  buildDots();
+  // Card 0 is already rendered server-side via LearningCard component.
+  // Sync progress UI to reflect card 0 state.
+  updateDots();
+  if (progressBar) progressBar.style.width = `${Math.round(1/cards.length*100)}%`;
+  // Update card 0 using client-side config too (ensures langConfig is applied)
+  renderCard(0);
+})();</script>

@@ -1,0 +1,640 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="description" content="Deutsch Lounge — Language Learning Trainer"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/languagelounge/favicon.svg"><meta name="generator" content="Astro v7.3.5"><title>Articles: Definite, Indefinite, No Article — Deutsch Lounge</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet"><!-- Apply theme before paint to avoid flash --><script>
+      (function() {
+        const saved = localStorage.getItem('wortschatz_theme');
+        if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script><link rel="stylesheet" href="/languagelounge/_astro/Layout.BeSASyxj.css"></head><body class="antialiased min-h-screen flex flex-col" style="background-color:var(--bg);color:var(--text);"><!-- Header --><header class="sticky top-0 z-50 border-b" style="background-color:var(--bg);border-color:var(--border);"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between gap-4" style="height:4.5rem;"><!-- Logo + Language Switcher --><div class="flex items-center gap-4 shrink-0"><a href="/languagelounge/" class="flex items-center gap-2 group"><span class="font-outfit font-extrabold text-xl sm:text-2xl tracking-tight transition-colors" style="color:var(--text);">Small Talk Café <span class="font-normal text-base hidden sm:inline" style="color:var(--text-muted);">| <span id="site-name">Deutsch Lounge</span></span></span></a><!-- Language Selector Dropdown --><div class="relative" id="lang-dropdown-wrapper"><button id="lang-btn" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-sm font-bold transition-all hover:opacity-70" style="background-color:var(--bg); border-color:var(--border); color:var(--text);"><span id="lang-flag">🇩🇪</span><span id="lang-code">DE</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"></path></svg></button><div id="lang-menu" class="hidden absolute top-full left-0 mt-2 rounded-2xl border shadow-xl overflow-hidden z-50 min-w-[160px]" style="background-color:var(--card); border-color:var(--border);"><button class="lang-option w-full flex items-center gap-3 px-4 py-3 text-sm font-semibold text-left transition-colors hover:opacity-70" data-lang="de" data-flag="🇩🇪" data-code="DE" data-name="Deutsch Lounge" data-label="German" style="color:var(--text);"><span class="text-lg">🇩🇪</span><div><div class="font-bold" style="color:var(--text);">Deutsch</div><div class="text-xs" style="color:var(--text-muted);">German Learning</div></div></button><div class="border-t" style="border-color:var(--border);"></div><button class="lang-option w-full flex items-center gap-3 px-4 py-3 text-sm font-semibold text-left transition-colors hover:opacity-70" data-lang="es" data-flag="🇪🇸" data-code="ES" data-name="Spanish Gym" data-label="Spanish" style="color:var(--text);"><span class="text-lg">🇪🇸</span><div><div class="font-bold" style="color:var(--text);">Español</div><div class="text-xs" style="color:var(--text-muted);">Spanish Learning</div></div></button><div class="border-t" style="border-color:var(--border);"></div><button class="lang-option w-full flex items-center gap-3 px-4 py-3 text-sm font-semibold text-left transition-colors hover:opacity-70" data-lang="fr" data-flag="🇫🇷" data-code="FR" data-name="French Gym" data-label="French" style="color:var(--text);"><span class="text-lg">🇫🇷</span><div><div class="font-bold" style="color:var(--text);">Français</div><div class="text-xs" style="color:var(--text-muted);">French Learning</div></div></button></div></div></div><!-- Nav Links --><nav class="hidden md:flex gap-5 items-center"><a href="https://smalltalkcafe.de/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Small Talk Café Podcasts</a><span class="text-sm font-normal" style="color:var(--border);">|</span><a href="/languagelounge/vocabulary" data-german-nav class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Vokabeln</a><a href="/languagelounge/verbs" data-german-nav class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Verben</a><a href="/languagelounge/grammatik" data-german-nav class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Grammatik</a><a href="/languagelounge/redemittel" data-german-nav class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Redemittel</a><!-- Dark/Light Toggle --><button id="theme-toggle" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-sm font-semibold transition-all hover:opacity-70" style="border-color:var(--border); color:var(--text-muted);" aria-label="Toggle dark/light mode"><span id="theme-icon">☀️</span><span id="theme-label">Light</span></button></nav></div></header><!-- Coming Soon Overlay (shown for non-German languages) --><div id="coming-soon-overlay" class="hidden flex-1 flex items-center justify-center py-20 px-4"><div class="text-center max-w-lg mx-auto"><div class="text-7xl mb-6" id="coming-soon-flag">🌍</div><h1 class="font-outfit font-extrabold text-4xl sm:text-5xl mb-4" style="color:var(--text);">Coming Soon</h1><p class="text-lg mb-3" style="color:var(--text-muted);">We're working hard on the <strong id="coming-soon-lang">new language</strong> curriculum.</p><p class="text-base mb-8" style="color:var(--text-muted);">Stay tuned — it will be available very soon! In the meantime, explore our<strong>Deutsch Lounge</strong> to sharpen your German.</p><button id="coming-soon-back-btn" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-sm transition-all hover:opacity-80" style="background-color:var(--espresso); color:#fff;">🇩🇪 Switch to German</button></div></div><main id="main-content" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-1 w-full"><div class="max-w-4xl mx-auto py-6"><!-- Deck Header --><div class="flex items-start justify-between mb-8 gap-4 flex-wrap"><div><a href="/languagelounge/grammatik" class="text-xs font-bold flex items-center gap-1 mb-2 hover:opacity-70 transition-opacity capitalize" style="color:var(--espresso);"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg>grammatik</a><h1 class="text-2xl md:text-3xl font-extrabold font-outfit" style="color:var(--text);">Articles: Definite, Indefinite, No Article</h1><p class="text-xs font-bold uppercase tracking-wider mt-1" style="color:var(--text-muted);">Artikel: definit, indefinit, kein &bull; A1 &bull; 16 Karten</p></div><div class="flex flex-col items-end gap-4"><!-- Learn / Train mode switcher --><div class="flex rounded-xl border overflow-hidden p-1 gap-1 w-full max-w-[300px]" style="background-color:var(--bg); border-color:var(--border);"><span class="flex-1 flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold transition-all" style="background-color:var(--espresso); color:#F5F2EB;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>Lernen</span><a href="/languagelounge/training/grammatik/train?level=a1&amp;deck=grammatik-a1-artikel_definitheit&amp;count=20&amp;mode=mc&amp;dir=en-de" class="flex-1 flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold hover:opacity-70 transition-all" style="color:var(--text-muted);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>Trainieren</a></div><!-- View switcher (Cards vs List) --><div class="flex rounded-xl border overflow-hidden p-1 gap-1 w-full max-w-[300px]" style="background-color:var(--bg); border-color:var(--border);"><button id="view-cards-btn" class="view-btn flex-1 flex items-center justify-center px-4 py-2 rounded-lg text-xs font-bold transition-all bg-[var(--espresso)] text-[#F5F2EB]">Karten</button><button id="view-list-btn" class="view-btn flex-1 flex items-center justify-center px-4 py-2 rounded-lg text-xs font-bold transition-all text-[var(--text-muted)] hover:opacity-70">Liste</button></div><!-- Progress indicator --><div id="progress-container" class="flex items-center gap-3"><div class="text-xs font-semibold" style="color:var(--text-muted);">Karte <span id="current-num" class="font-extrabold" style="color:var(--text);">1</span> / 16</div><div class="w-24 h-1.5 rounded-full overflow-hidden border" style="background-color:var(--bg);border-color:var(--border);"><div id="progress-bar" class="h-full transition-all duration-500 rounded-full" style="width:0%; background-color:var(--espresso);"></div></div></div></div></div><!-- ── Universal Study Card (rendered by LearningCard component) ── --><div id="card-view-wrap"><div id="card-host"><!-- The card shell — populated client-side by renderCard() --><div class="learning-card rounded-3xl border shadow-xl overflow-hidden" style="background-color:var(--card); border-color:var(--border);"><!-- ── Top bar ─────────────────────────────────── --><div class="lc-topbar flex items-center justify-between px-6 py-3.5 border-b" style="border-color:var(--border); background-color:var(--bg);"><div class="flex items-center gap-2"><span class="lc-type-badge text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-lg" style="background-color:var(--espresso); color:#F5F2EB;">—</span><span class="lc-level-badge text-[10px] font-bold px-2.5 py-1 rounded-lg cafe-badge"></span></div><button class="lc-audio-btn flex items-center justify-center w-11 h-11 rounded-full transition-transform hover:scale-105 active:scale-95 shadow-md flex-shrink-0" title="Anhören (A)" style="background-color:var(--espresso); color:#F5F2EB;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg></button></div><!-- ── Main word display ───────────────────────── --><div class="lc-hero px-7 py-8 text-center border-b" style="border-color:var(--border);"><div class="lc-article-wrap mb-1.5"><span class="lc-article text-xl font-bold"></span></div><h2 class="lc-word text-5xl md:text-6xl font-extrabold font-outfit mb-3" style="color:var(--text);">—</h2><p class="lc-translation text-lg font-semibold italic" style="color:var(--text-muted);"></p><p class="lc-forms text-sm font-medium mt-2" style="color:var(--text-muted);"></p></div><!-- ── Meta info grid ─────────────────────────── --><div class="lc-meta-grid grid border-b" style="border-color:var(--border);"><!-- populated by JS --></div><!-- ── Grammar note ───────────────────────────── --><div class="lc-grammar-wrap hidden px-7 py-5 border-b" style="border-color:var(--border); background-color:var(--bg);"><p class="text-[10px] font-bold uppercase tracking-widest mb-2" style="color:var(--espresso);">📌 <span class="lc-grammar-label">Grammatiknotiz</span></p><p class="lc-grammar-text text-sm leading-relaxed font-medium whitespace-pre-wrap" style="color:var(--text);"></p></div><!-- ── Type-specific block ────────────────────── --><!-- Verb conjugation (hidden by default, shown for verb cards) --><div class="lc-conjugation-wrap hidden border-b overflow-x-auto" style="border-color:var(--border);"><div class="lc-conjugation-inner"><!-- populated by JS --></div></div><!-- Connector word-order block --><div class="lc-wordorder-wrap hidden px-7 py-4 border-b" style="border-color:var(--border); background-color:var(--bg);"><div class="flex items-start gap-3 text-sm font-medium" style="color:var(--text-muted);"><span class="text-base flex-shrink-0">📐</span><span class="lc-wordorder-text"></span></div></div><!-- Phrase preposition block --><div class="lc-phrase-wrap hidden px-7 py-4 border-b" style="border-color:var(--border); background-color:var(--bg);"><p class="text-[10px] font-bold uppercase tracking-widest mb-2" style="color:var(--espresso);">Struktur</p><p class="lc-phrase-rule text-sm font-semibold" style="color:var(--text);"></p></div><!-- ── Examples ───────────────────────────────── --><div class="px-7 py-6 border-b" style="border-color:var(--border);"><p class="lc-examples-label text-[10px] font-bold uppercase tracking-widest mb-5" style="color:var(--text-muted);">Beispielsätze</p><div class="lc-examples space-y-3"><!-- populated by JS --></div></div><!-- ── Tags ───────────────────────────────────── --><div class="lc-tags-row px-7 py-4 flex items-center gap-2 flex-wrap"><span class="text-[10px] font-bold uppercase tracking-wider" style="color:var(--text-muted);">Tags:</span><div class="lc-tags flex gap-2 flex-wrap"></div></div></div><script>(function(){const cardJson = "{\"id\":\"grammatik-a1-artikel_definitheit-001\",\"target\":\"Artikel: Definit & Indefinit\",\"source\":\"Articles: Definite & Indefinite\",\"grammar_note\":\"Articles in German indicate the gender, number, and case of a noun. They are crucial for understanding sentence structure. There are two main types: definite articles (der, die, das) for specific or known nouns, and indefinite articles (ein, eine, ein) for non-specific or first-mentioned nouns.\",\"example_target\":\"Das ist ein Buch. Das Buch ist interessant.\",\"example_source\":\"That is a book. The book is interesting.\",\"extra_examples\":[{\"de\":\"Ich habe eine Katze. Die Katze ist schwarz.\",\"en\":\"I have a cat. The cat is black.\"},{\"de\":\"Er sucht einen Stift. Der Stift ist rot.\",\"en\":\"He is looking for a pen. The pen is red.\"}],\"common_error\":\"Forgetting to use an article at all, or using the wrong gender for the article.\",\"tags\":[\"grammatik\",\"a1\",\"artikel\",\"einführung\"],\"type\":\"grammar\"}";
+const langConfigJson = "{\"language_pair\":\"english_german\",\"target_lang\":\"de\",\"native_lang\":\"en\",\"target_lang_name\":\"Deutsch\",\"native_lang_name\":\"English\",\"speech_lang\":\"de-DE\",\"noun_metadata_fields\":[{\"key\":\"article\",\"label\":\"Artikel\",\"render\":\"article_badge\"},{\"key\":\"gender\",\"label\":\"Genus\",\"render\":\"gender_label\"},{\"key\":\"plural\",\"label\":\"Plural\",\"render\":\"text\"}],\"article_colours\":{\"der\":\"#4A7C9E\",\"die\":\"#B05070\",\"das\":\"#4A8A5A\"},\"gender_labels\":{\"m\":\"Maskulinum\",\"f\":\"Femininum\",\"n\":\"Neutrum\"},\"verb_tenses\":[\"Präsens\",\"Präteritum\",\"Perfekt\",\"Futur I\",\"Konjunktiv II\"],\"cases\":{\"nominative\":\"Nominativ\",\"accusative\":\"Akkusativ\",\"dative\":\"Dativ\",\"genitive\":\"Genitiv\"},\"ui_labels\":{\"learn_mode\":\"Lernen\",\"train_mode\":\"Trainieren\",\"examples_heading\":\"Beispielsätze\",\"grammar_note_heading\":\"Grammatiknotiz\",\"audio_button\":\"Anhören\",\"back_link\":\"Zurück\",\"card_counter\":\"Karte {current} / {total}\",\"next_button\":\"Weiter\",\"finish_button\":\"Fertig\",\"correct\":\"Richtig!\",\"wrong\":\"Falsch\"}}";
+
+  /**
+   * Client-side card renderer.
+   * Uses the universal card-renderer logic inline (no imports in Astro is:inline).
+   */
+
+  // ── Parse data ──────────────────────────────────────────────────────────
+  const card   = JSON.parse(cardJson);
+  const config = JSON.parse(langConfigJson);
+
+  // ── Helpers ─────────────────────────────────────────────────────────────
+  function stripArticle(word) {
+    return (word || '').replace(/^(der|die|das|el|la|los|las|le|les|l')\s+/i, '').trim();
+  }
+
+  function getArticleColour(article) {
+    if (!article || !config.article_colours) return 'var(--espresso)';
+    return config.article_colours[article.toLowerCase()] || 'var(--espresso)';
+  }
+
+  function getGenderLabel(gender) {
+    if (!gender) return '';
+    return (config.gender_labels || {})[gender] || gender;
+  }
+
+  function getTypeLabel() {
+    const tags = card.tags || [];
+    if (tags.includes('noun'))       return 'Substantiv';
+    if (tags.includes('verb'))       return 'Verb';
+    if (tags.includes('adjective'))  return 'Adjektiv';
+    if (tags.includes('expression')) return 'Ausdruck';
+    const map = { vocab:'Vokabel', verb:'Verb', phrase:'Phrase', connector:'Konnektor', grammar:'Grammatik' };
+    return map[card.type] || 'Karte';
+  }
+
+  function formatHighlight(text) {
+    if (!text) return '';
+    return String(text).replace(/\*(.*?)\*/g, '<span class="highlighter">$1</span>');
+  }
+
+  function normaliseExample(ex) {
+    return {
+      target: ex.target || ex.de || '',
+      source: ex.source || ex.en || '',
+      note: ex.note,
+    };
+  }
+
+  function getMetaFacts() {
+    const meta = { ...card.metadata, article: card.article, gender: card.gender, plural: card.plural, ...card.metadata };
+    const facts = [];
+    for (const field of (config.noun_metadata_fields || [])) {
+      const raw = meta[field.key] || card[field.key];
+      if (!raw || raw === '~') continue;
+      let value = String(raw);
+      let colour;
+      if (field.render === 'gender_label') value = getGenderLabel(raw);
+      else if (field.render === 'article_badge') colour = getArticleColour(raw);
+      facts.push({ label: field.label, value, colour });
+    }
+    return facts;
+  }
+
+  // ── Render ──────────────────────────────────────────────────────────────
+  const container = document.querySelector('.learning-card');
+  if (!container) { console.error('LearningCard: container not found'); }
+
+  function sel(cls) { return container?.querySelector(cls); }
+
+  // Type badge
+  sel('.lc-type-badge').textContent = getTypeLabel();
+
+  // Level badge
+  sel('.lc-level-badge').textContent = card.level || '';
+
+  // Article
+  const article = card.article || card.metadata?.article;
+  const articleWrap = sel('.lc-article-wrap');
+  const articleEl   = sel('.lc-article');
+  if (article && card.tags?.includes('noun') && !card.plural_only) {
+    articleEl.textContent  = article;
+    articleEl.style.color  = getArticleColour(article);
+    articleWrap.style.display = '';
+  } else {
+    articleWrap.style.display = 'none';
+  }
+
+  // Word
+  sel('.lc-word').textContent = stripArticle(card.target);
+
+  // Translation
+  sel('.lc-translation').textContent = card.source || '';
+
+  // Plural / forms
+  const plural = card.plural || card.metadata?.plural;
+  const formsEl = sel('.lc-forms');
+  if (plural && !card.plural_only) formsEl.textContent = `Pl. ${plural}`;
+  else if (card.plural_only) formsEl.textContent = 'nur Plural';
+  else formsEl.textContent = '';
+
+  // Meta grid
+  const metaGrid = sel('.lc-meta-grid');
+  const facts = getMetaFacts();
+  if (facts.length) {
+    const cols = Math.min(facts.length, 4);
+    metaGrid.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
+    metaGrid.innerHTML = facts.map((f, i) => `
+      <div class="px-5 py-4 ${i < facts.length - 1 ? 'border-r' : ''}" style="border-color:var(--border);">
+        <p class="text-[9px] font-bold uppercase tracking-widest mb-1" style="color:var(--text-muted);">${f.label}</p>
+        <p class="text-sm font-bold" style="color:${f.colour || 'var(--text)'};">${f.value}</p>
+      </div>
+    `).join('');
+  } else {
+    metaGrid.style.display = 'none';
+  }
+
+  // Grammar note
+  const grammarWrap = sel('.lc-grammar-wrap');
+  if (card.grammar_note) {
+    sel('.lc-grammar-text').innerHTML = formatHighlight(card.grammar_note);
+    grammarWrap.classList.remove('hidden');
+  }
+
+  // Grammar label from config
+  const uiLabels = config.ui_labels || {};
+  if (uiLabels.grammar_note_heading) sel('.lc-grammar-label').textContent = uiLabels.grammar_note_heading;
+  if (uiLabels.examples_heading)     sel('.lc-examples-label').textContent = uiLabels.examples_heading;
+  if (uiLabels.audio_button)         sel('.lc-audio-label').textContent    = uiLabels.audio_button;
+
+  // ── Type-specific blocks ─────────────────────────────────────────────────
+
+  // Verb: conjugation table
+  const type = card.type || (card.tags?.includes('verb') ? 'verb' : 'vocab');
+  if (type === 'verb' && card.conjugations?.length) {
+    const conjWrap  = sel('.lc-conjugation-wrap');
+    const conjInner = sel('.lc-conjugation-inner');
+    conjWrap.classList.remove('hidden');
+    conjInner.innerHTML = (config.verb_tenses || card.conjugations.map(t => t.tense)).map(tense => {
+      const t = card.conjugations.find(c => c.tense === tense);
+      if (!t) return '';
+      return `
+        <div class="border-b last:border-0" style="border-color:var(--border);">
+          <p class="text-[10px] font-bold uppercase tracking-widest px-5 py-2" style="background-color:var(--bg); color:var(--espresso);">${t.tense}</p>
+          <table class="w-full text-sm">
+            <tbody>
+              ${t.forms.map((f, ri) => `
+                <tr class="${ri % 2 === 0 ? '' : ''} border-t" style="border-color:var(--border);">
+                  <td class="px-5 py-2.5 font-bold w-24" style="color:var(--espresso);">${f.pronoun}</td>
+                  <td class="px-5 py-2.5 font-semibold" style="color:var(--text);">${f.form}</td>
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+        </div>
+      `;
+    }).join('');
+  }
+
+  // Connector: word order block
+  if (type === 'connector' && card.word_order) {
+    const woWrap = sel('.lc-wordorder-wrap');
+    sel('.lc-wordorder-text').textContent = card.word_order;
+    woWrap.classList.remove('hidden');
+  }
+
+  // Phrase: preposition rule block
+  if (type === 'phrase' && card.clause_type) {
+    const phraseWrap = sel('.lc-phrase-wrap');
+    sel('.lc-phrase-rule').textContent = card.clause_type;
+    phraseWrap.classList.remove('hidden');
+  }
+
+  // ── Examples ─────────────────────────────────────────────────────────────
+  const examplesEl = sel('.lc-examples');
+  const rawExamples = card.examples || (card.example_target || card.example_de ? [{ target: card.example_target || card.example_de, source: card.example_source || card.example_en }] : []);
+
+  if (rawExamples.length) {
+    examplesEl.innerHTML = rawExamples.map(ex => {
+      const e = normaliseExample(ex);
+      return `
+        <div class="rounded-2xl border overflow-hidden" style="border-color:var(--border);">
+          <div class="px-4 py-3" style="background-color:var(--bg);">
+            <p class="font-semibold leading-snug mb-1" style="color:var(--text);">${formatHighlight(e.target)}</p>
+            <p class="text-sm italic" style="color:var(--text-muted);">${formatHighlight(e.source || '')}</p>
+          </div>
+          ${e.note ? `<div class="px-4 py-2 border-t" style="border-color:var(--border);">
+            <p class="text-[10px] font-bold font-mono" style="color:var(--espresso);">📐 ${e.note}</p>
+          </div>` : ''}
+        </div>
+      `;
+    }).join('');
+  } else {
+    examplesEl.innerHTML = `<p class="text-sm italic" style="color:var(--text-muted);">Kein Beispiel verfügbar.</p>`;
+  }
+
+  // ── Tags ─────────────────────────────────────────────────────────────────
+  const tagsEl = sel('.lc-tags');
+  tagsEl.innerHTML = (card.tags || []).map(t => `
+    <span class="text-[10px] font-bold px-2 py-0.5 rounded-md border uppercase" style="border-color:var(--border); color:var(--text-muted); background-color:var(--bg);">${t}</span>
+  `).join('');
+
+  // ── Audio button ─────────────────────────────────────────────────────────
+  sel('.lc-audio-btn')?.addEventListener('click', () => {
+    if (window.DeutschAudioEngine) {
+      window.DeutschAudioEngine.speak(card.target || '', config.speech_lang || 'de-DE', 0.85);
+    }
+  });
+})();</script></div><!-- ── Navigation ───────────────────────────── --><div class="flex items-center justify-between mt-8 gap-4"><button id="btn-prev" disabled class="flex items-center gap-2 px-6 py-3 rounded-2xl border font-bold text-sm transition-all hover:opacity-70 active:scale-95 disabled:opacity-30 disabled:cursor-not-allowed" style="border-color:var(--border); color:var(--text); background-color:var(--card);"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg>Zurück</button><!-- Dot navigation --><div id="dot-nav" class="flex items-center gap-1.5 flex-wrap justify-center max-w-xs overflow-hidden" style="max-height:2rem;"><!-- populated by JS --></div><button id="btn-next" class="flex items-center gap-2 px-6 py-3 rounded-2xl font-bold text-sm transition-all hover:opacity-80 active:scale-95" style="background-color:var(--espresso); color:#F5F2EB;">Weiter<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg></button></div><!-- Keyboard hint --><p class="text-center text-xs font-medium mt-4" style="color:var(--text-muted);">← → Pfeiltasten zum Navigieren &nbsp;·&nbsp; A zum Anhören</p></div><!-- ── List View ───────────────────────────── --><div id="list-view-wrap" class="hidden space-y-6"><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Artikel: Definit & Indefinit</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">Articles: Definite & Indefinite</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Articles in German indicate the gender, number, and case of a noun. They are crucial for understanding sentence structure. There are two main types: definite articles (der, die, das) for specific or known nouns, and indefinite articles (ein, eine, ein) for non-specific or first-mentioned nouns.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Das ist ein Buch. Das Buch ist interessant.</p><p class="italic text-[13px]" style="color:var(--text-muted);">That is a book. The book is interesting.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Definiter Artikel: Nominativ</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">Definite Article: Nominative Case</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">The definite article in the nominative case is used for the subject of a sentence, indicating a specific or already known noun. The forms are 'der' for masculine, 'die' for feminine, 'das' for neuter, and 'die' for plural nouns, regardless of their original gender.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Der Mann liest. Die Frau kocht. Das Kind spielt. Die Kinder lachen.</p><p class="italic text-[13px]" style="color:var(--text-muted);">The man reads. The woman cooks. The child plays. The children laugh.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Definiter Artikel: Akkusativ</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">Definite Article: Accusative Case</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">The definite article in the accusative case is used for the direct object of a sentence or after certain prepositions (e.g., 'durch', 'für', 'gegen', 'ohne', 'um'). Only masculine nouns change their article from 'der' to 'den'; feminine, neuter, and plural articles remain 'die', 'das', and 'die' respectively.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich sehe den Mann. Sie kauft die Tasche. Er trinkt das Wasser. Wir besuchen die Freunde.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I see the man. She buys the bag. He drinks the water. We visit the friends.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Definiter Artikel: Dativ</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">Definite Article: Dative Case</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">The definite article in the dative case is used for the indirect object of a sentence, after certain verbs (e.g., 'helfen', 'danken'), or after dative prepositions (e.g., 'aus', 'bei', 'mit', 'nach', 'von', 'zu'). The forms are 'dem' for masculine and neuter, 'der' for feminine, and 'den' for plural nouns, with an additional '-n' often added to the plural noun itself.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich helfe dem Mann. Er gibt der Frau ein Geschenk. Sie fährt mit dem Auto. Wir sprechen mit den Kindern.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I help the man. He gives the woman a gift. She drives with the car. We speak with the children.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Indefiniter Artikel: Nominativ</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">Indefinite Article: Nominative Case</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">The indefinite article in the nominative case is used for a non-specific or newly introduced noun that is the subject of the sentence. The forms are 'ein' for masculine and neuter, and 'eine' for feminine nouns. There is no indefinite article for plural nouns; instead, no article is used (zero article).</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ein Mann steht dort. Eine Frau singt. Ein Kind weint.</p><p class="italic text-[13px]" style="color:var(--text-muted);">A man stands there. A woman sings. A child cries.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Indefiniter Artikel: Akkusativ</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">Indefinite Article: Accusative Case</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">The indefinite article in the accusative case is used for a non-specific direct object or after accusative prepositions. Similar to definite articles, only masculine nouns change their ending from 'ein' to 'einen'. Feminine and neuter articles remain 'eine' and 'ein' respectively. No indefinite article is used for plural nouns.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich suche einen Stift. Sie kauft eine Blume. Er liest ein Buch.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I am looking for a pen. She buys a flower. He reads a book.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Indefiniter Artikel: Dativ</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">Indefinite Article: Dative Case</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">The indefinite article in the dative case is used for a non-specific indirect object or after dative prepositions. The forms are 'einem' for masculine and neuter, and 'einer' for feminine nouns. As with other cases, there is no indefinite article for plural nouns.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich helfe einem Freund. Er gibt einer Kollegin die Unterlagen. Sie fährt mit einem Fahrrad.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I help a friend. He gives the documents to a colleague (female). She rides with a bicycle.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Negativer Artikel: Nominativ (Kein)</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">Negative Article: Nominative Case (No/Not a)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">The negative article 'kein' is used to negate a noun that would otherwise take an indefinite article or no article (e.g., plural nouns). In the nominative case, the forms are 'kein' for masculine and neuter, 'keine' for feminine, and 'keine' for plural nouns. It functions similarly to 'ein' but with a negative meaning.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Das ist kein Problem. Das ist keine gute Idee. Das sind keine Äpfel.</p><p class="italic text-[13px]" style="color:var(--text-muted);">That is no problem. That is not a good idea. Those are no apples.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Negativer Artikel: Akkusativ (Kein)</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">Negative Article: Accusative Case (No/Not a)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">The negative article 'kein' in the accusative case is used to negate a direct object or a noun after an accusative preposition. Only masculine nouns change their form from 'kein' to 'keinen'. Feminine, neuter, and plural forms remain 'keine', 'kein', and 'keine' respectively, following the pattern of indefinite articles.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich habe keinen Hunger. Sie hat keine Lust. Er hat kein Geld. Wir haben keine Fragen.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I have no hunger. She has no desire. He has no money. We have no questions.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Negativer Artikel: Dativ (Kein)</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">Negative Article: Dative Case (No/Not a)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">The negative article 'kein' in the dative case is used to negate an indirect object or a noun after a dative preposition. The forms are 'keinem' for masculine and neuter, 'keiner' for feminine, and 'keinen' for plural nouns (with an additional '-n' on the plural noun itself). This follows the declension pattern of indefinite articles in the dative.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich helfe keinem Studenten. Sie gibt keiner Freundin die Adresse. Er fährt mit keinem Auto.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I help no student. She gives no friend the address. He drives with no car.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Verwendung: Definit vs. Indefinit Artikel</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">Usage: Definite vs. Indefinite Article</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Use the indefinite article (ein/eine) when introducing a noun for the first time or when it's non-specific ('a/an'). Use the definite article (der/die/das) when the noun has already been mentioned, is specific, or is generally known/unique. This distinction is crucial for clarity in German sentences.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich habe ein Problem. Das Problem ist schwierig.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I have a problem. The problem is difficult.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Kein Artikel (Nullartikel) - Allgemeine Fälle</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">No Article (Zero Article) - General Cases</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">The zero article is used in several common situations. This includes plural nouns when they are non-specific or uncountable (e.g., 'Kinder spielen'), names of professions or nationalities with 'sein' (e.g., 'Ich bin Lehrer'), materials (e.g., 'aus Holz'), and abstract concepts (e.g., 'Glück').</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich trinke Kaffee. Kinder spielen im Garten. Sie ist Ärztin.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I drink coffee. Children play in the garden. She is a doctor.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Kein Artikel bei Eigennamen & den meisten Ländern</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">No Article with Proper Nouns & Most Countries</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Generally, proper nouns like names of people, cities, and most countries do not take an article in German. This rule simplifies usage for many geographical terms. For example, you say 'Ich wohne in Berlin' and 'Er kommt aus Deutschland' without an article.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Anna wohnt in München. Ich fahre nach Frankreich. Das ist Herr Schmidt.</p><p class="italic text-[13px]" style="color:var(--text-muted);">Anna lives in Munich. I am going to France. That is Mr. Schmidt.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Länder mit Artikel</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">Countries with Articles</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">While most countries don't use an article, some do, particularly those that are plural or have a specific gender. Common examples include 'die Schweiz' (Switzerland), 'die USA' (the USA, plural), 'die Türkei' (Turkey), and 'der Irak' (Iraq). These countries always require their respective definite article, which must be declined according to case.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich fahre in die Schweiz. Die USA sind groß. Er kommt aus dem Irak.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I am going to Switzerland. The USA are big. He comes from Iraq.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Kein Artikel bei festen Ausdrücken</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">No Article with Fixed Expressions</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Many common German expressions and phrases are used without an article. These are often idiomatic and must be learned as fixed units. Examples include expressions related to feelings, states, or common activities, where adding an article would sound unnatural or change the meaning.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich habe Hunger. Er hat Durst. Wir haben Zeit. Sie spielt Klavier.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I am hungry. He is thirsty. We have time. She plays piano.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">Artikel als Geschlechts- und Kasusmarker</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">Articles as Gender and Case Markers</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Articles are not just for definiteness; they are the primary indicators of a noun's grammatical gender (masculine, feminine, neuter) and its case (nominative, accusative, dative). Since noun endings often don't change much, the article's form tells us how the noun functions in the sentence. Mastering article declension is key to understanding German grammar.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Der Mann gibt dem Kind den Ball.</p><p class="italic text-[13px]" style="color:var(--text-muted);">The man gives the child the ball.</p></div></div></div></div></div></div></main><footer class="mt-auto border-t py-8" style="background-color:var(--bg);border-color:var(--border);"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-medium" style="color:var(--text-muted);"><div>&copy; 2025 - 2026 Small Talk Café Podcasts. All rights reserved.</div><div class="flex gap-4">Made in Bayern ❤️ Los Geht's!</div></div></footer><!-- Theme toggle + Language switcher script --><script>
+      // ── Theme ──────────────────────────────────────
+      function applyTheme(dark) {
+        if (dark) {
+          document.documentElement.classList.add('dark');
+          localStorage.setItem('wortschatz_theme', 'dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+          localStorage.setItem('wortschatz_theme', 'light');
+        }
+        const icon = document.getElementById('theme-icon');
+        const label = document.getElementById('theme-label');
+        if (icon) icon.textContent = dark ? '🌙' : '☀️';
+        if (label) label.textContent = dark ? 'Dark' : 'Light';
+      }
+
+      const isDark = document.documentElement.classList.contains('dark');
+      applyTheme(isDark);
+
+      document.getElementById('theme-toggle')?.addEventListener('click', () => {
+        const nowDark = !document.documentElement.classList.contains('dark');
+        applyTheme(nowDark);
+      });
+
+      // ── Language Switcher ──────────────────────────
+      const LANG_CONTENT = {
+        de: {
+          name: 'Deutsch Lounge',
+          flag: '🇩🇪',
+          code: 'DE',
+          subtitle: 'Systematisches Vokabel- und Grammatiktraining',
+          tagline: 'Deutsch Lounge',
+          welcome: 'Willkommen beim',
+          cards: [
+            { title: 'Vokabeln', desc: 'Erweitere deinen Wortschatz. Lerne Nomen, Verben und Redewendungen mit Beispielsätzen.' },
+            { title: 'Verben', desc: 'Meistere reguläre, unregelmäßige, modale und reflexive Verben mit Konjugationstabellen.' },
+            { title: 'Grammatik', desc: 'Regeln verstehen & üben: Adjektivdeklination, Fälle, Präpositionen, Konnektoren & Phrasen.' },
+            { title: 'Redemittel', desc: 'Essentielle Phrasen für den Alltag, Diskussionen und Präsentationen.' }
+          ]
+        },
+        es: {
+          name: 'Spanish Gym',
+          flag: '🇪🇸',
+          code: 'ES',
+          subtitle: 'Tu compañero para aprender Español A1 – B2',
+          tagline: 'A1–B2 Spanish Curriculum',
+          welcome: 'Bienvenido al',
+          cards: [
+            { title: 'Vocabulario', desc: 'Amplía tu vocabulario A1–B2. Aprende sustantivos, verbos y frases con ejemplos contextuales.' },
+            { title: 'Verbos', desc: 'Domina verbos regulares, irregulares y reflexivos con tablas de conjugación.' },
+            { title: 'Gramática', desc: 'Entiende y practica las reglas gramaticales, casos y conectores.' },
+            { title: 'Expresiones', desc: 'Frases esenciales para el día a día, discusiones y presentaciones.' }
+          ]
+        },
+        fr: {
+          name: 'French Gym',
+          flag: '🇫🇷',
+          code: 'FR',
+          subtitle: 'Ton compagnon pour apprendre le Français A1 – B2',
+          tagline: 'A1–B2 French Curriculum',
+          welcome: 'Bienvenue au',
+          cards: [
+            { title: 'Vocabulaire', desc: 'Élargis ton vocabulaire A1–B2. Apprends des noms, verbes et expressions avec des exemples.' },
+            { title: 'Verbes', desc: 'Maîtrise les verbes réguliers, irréguliers et réflexifs avec des tableaux de conjugaison.' },
+            { title: 'Grammaire', desc: 'Comprends et pratique les règles de grammaire, les cas et les connecteurs.' },
+            { title: 'Expressions', desc: 'Phrases essentielles pour la vie quotidienne, les discussions et les présentations.' }
+          ]
+        }
+      };
+
+      function applyLanguage(lang) {
+        const c = LANG_CONTENT[lang] || LANG_CONTENT['de'];
+        localStorage.setItem('gym_language', lang);
+
+        // Header
+        const flag = document.getElementById('lang-flag');
+        const code = document.getElementById('lang-code');
+        const siteName = document.getElementById('site-name');
+        if (flag) flag.textContent = c.flag;
+        if (code) code.textContent = c.code;
+        if (siteName) siteName.textContent = c.name;
+
+        // Footer
+        const footerName = document.getElementById('footer-gym-name');
+        const footerLevel = document.getElementById('footer-level');
+        if (footerName) footerName.textContent = c.name;
+        if (footerLevel) footerLevel.textContent = c.tagline;
+
+        const isGerman = lang === 'de';
+        const overlay = document.getElementById('coming-soon-overlay');
+        const mainContent = document.getElementById('main-content');
+        const germanNavLinks = document.querySelectorAll('[data-german-nav]');
+
+        if (isGerman) {
+          // Show normal German content
+          if (overlay) overlay.classList.add('hidden');
+          if (mainContent) mainContent.classList.remove('hidden');
+          germanNavLinks.forEach(el => el.classList.remove('hidden'));
+
+          // Hero on homepage only
+          const heroTitle = document.getElementById('hero-gym-name');
+          const heroSubtitle = document.getElementById('hero-subtitle');
+          const heroWelcome = document.getElementById('hero-welcome');
+          if (heroTitle) heroTitle.textContent = c.name;
+          if (heroSubtitle) heroSubtitle.textContent = c.subtitle;
+          if (heroWelcome) heroWelcome.textContent = c.welcome;
+
+          // Category cards
+          const cardTitles = document.querySelectorAll('[data-card-title]');
+          const cardDescs = document.querySelectorAll('[data-card-desc]');
+          cardTitles.forEach((el, i) => {
+            if (c.cards[i]) el.textContent = c.cards[i].title;
+          });
+          cardDescs.forEach((el, i) => {
+            if (c.cards[i]) el.textContent = c.cards[i].desc;
+          });
+
+          // Nav links
+          const navLabels = document.querySelectorAll('[data-nav-label]');
+          navLabels.forEach((el, i) => {
+            if (c.cards[i]) el.textContent = c.cards[i].title;
+          });
+        } else {
+          // Non-German: show coming soon overlay, hide main content and German nav
+          if (mainContent) mainContent.classList.add('hidden');
+          germanNavLinks.forEach(el => el.classList.add('hidden'));
+
+          // Populate coming soon overlay
+          const comingFlag = document.getElementById('coming-soon-flag');
+          const comingLang = document.getElementById('coming-soon-lang');
+          if (comingFlag) comingFlag.textContent = c.flag;
+          if (comingLang) comingLang.textContent = c.name + ' content';
+
+          if (overlay) {
+            overlay.classList.remove('hidden');
+            overlay.classList.add('flex');
+          }
+        }
+      }
+
+      // Restore saved language
+      const savedLang = localStorage.getItem('gym_language') || 'de';
+      applyLanguage(savedLang);
+
+      // Dropdown toggle
+      const langBtn = document.getElementById('lang-btn');
+      const langMenu = document.getElementById('lang-menu');
+
+      langBtn?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        langMenu?.classList.toggle('hidden');
+      });
+
+      document.addEventListener('click', () => {
+        langMenu?.classList.add('hidden');
+      });
+
+      document.querySelectorAll('.lang-option').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const lang = btn.dataset.lang;
+          applyLanguage(lang);
+          langMenu?.classList.add('hidden');
+        });
+      });
+
+      // Coming soon "Switch to German" button
+      document.getElementById('coming-soon-back-btn')?.addEventListener('click', () => {
+        applyLanguage('de');
+      });
+    </script></body></html><script type="module" src="/languagelounge/_astro/_deckId_.astro_astro_type_script_index_0_lang.B80xyaMZ.js"></script><script>(function(){const cardsJson = "[{\"id\":\"grammatik-a1-artikel_definitheit-001\",\"target\":\"Artikel: Definit & Indefinit\",\"source\":\"Articles: Definite & Indefinite\",\"grammar_note\":\"Articles in German indicate the gender, number, and case of a noun. They are crucial for understanding sentence structure. There are two main types: definite articles (der, die, das) for specific or known nouns, and indefinite articles (ein, eine, ein) for non-specific or first-mentioned nouns.\",\"example_target\":\"Das ist ein Buch. Das Buch ist interessant.\",\"example_source\":\"That is a book. The book is interesting.\",\"extra_examples\":[{\"de\":\"Ich habe eine Katze. Die Katze ist schwarz.\",\"en\":\"I have a cat. The cat is black.\"},{\"de\":\"Er sucht einen Stift. Der Stift ist rot.\",\"en\":\"He is looking for a pen. The pen is red.\"}],\"common_error\":\"Forgetting to use an article at all, or using the wrong gender for the article.\",\"tags\":[\"grammatik\",\"a1\",\"artikel\",\"einführung\"],\"type\":\"grammar\"},{\"id\":\"grammatik-a1-artikel_definitheit-002\",\"target\":\"Definiter Artikel: Nominativ\",\"source\":\"Definite Article: Nominative Case\",\"grammar_note\":\"The definite article in the nominative case is used for the subject of a sentence, indicating a specific or already known noun. The forms are 'der' for masculine, 'die' for feminine, 'das' for neuter, and 'die' for plural nouns, regardless of their original gender.\",\"example_target\":\"Der Mann liest. Die Frau kocht. Das Kind spielt. Die Kinder lachen.\",\"example_source\":\"The man reads. The woman cooks. The child plays. The children laugh.\",\"extra_examples\":[{\"de\":\"Der Tisch ist neu.\",\"en\":\"The table is new.\"},{\"de\":\"Die Lampe ist hell.\",\"en\":\"The lamp is bright.\"},{\"de\":\"Das Haus ist groß.\",\"en\":\"The house is big.\"}],\"common_error\":\"Confusing the gender of the noun and thus using the wrong definite article (e.g., 'die Tisch' instead of 'der Tisch').\",\"tags\":[\"grammatik\",\"a1\",\"artikel\",\"definit\",\"nominativ\"],\"type\":\"grammar\"},{\"id\":\"grammatik-a1-artikel_definitheit-003\",\"target\":\"Definiter Artikel: Akkusativ\",\"source\":\"Definite Article: Accusative Case\",\"grammar_note\":\"The definite article in the accusative case is used for the direct object of a sentence or after certain prepositions (e.g., 'durch', 'für', 'gegen', 'ohne', 'um'). Only masculine nouns change their article from 'der' to 'den'; feminine, neuter, and plural articles remain 'die', 'das', and 'die' respectively.\",\"example_target\":\"Ich sehe den Mann. Sie kauft die Tasche. Er trinkt das Wasser. Wir besuchen die Freunde.\",\"example_source\":\"I see the man. She buys the bag. He drinks the water. We visit the friends.\",\"extra_examples\":[{\"de\":\"Ich brauche den Schlüssel.\",\"en\":\"I need the key.\"},{\"de\":\"Wir essen die Pizza.\",\"en\":\"We eat the pizza.\"},{\"de\":\"Er sucht das Buch.\",\"en\":\"He is looking for the book.\"}],\"common_error\":\"Forgetting to change 'der' to 'den' for masculine nouns in the accusative case.\",\"tags\":[\"grammatik\",\"a1\",\"artikel\",\"definit\",\"akkusativ\"],\"type\":\"grammar\"},{\"id\":\"grammatik-a1-artikel_definitheit-004\",\"target\":\"Definiter Artikel: Dativ\",\"source\":\"Definite Article: Dative Case\",\"grammar_note\":\"The definite article in the dative case is used for the indirect object of a sentence, after certain verbs (e.g., 'helfen', 'danken'), or after dative prepositions (e.g., 'aus', 'bei', 'mit', 'nach', 'von', 'zu'). The forms are 'dem' for masculine and neuter, 'der' for feminine, and 'den' for plural nouns, with an additional '-n' often added to the plural noun itself.\",\"example_target\":\"Ich helfe dem Mann. Er gibt der Frau ein Geschenk. Sie fährt mit dem Auto. Wir sprechen mit den Kindern.\",\"example_source\":\"I help the man. He gives the woman a gift. She drives with the car. We speak with the children.\",\"extra_examples\":[{\"de\":\"Ich wohne bei dem Freund.\",\"en\":\"I live with the friend.\"},{\"de\":\"Sie geht zu der Ärztin.\",\"en\":\"She goes to the doctor (female).\"},{\"de\":\"Er dankt den Lehrern.\",\"en\":\"He thanks the teachers.\"}],\"common_error\":\"Forgetting the '-n' ending on plural nouns in the dative case (e.g., 'mit den Kinder' instead of 'mit den Kindern').\",\"tags\":[\"grammatik\",\"a1\",\"artikel\",\"definit\",\"dativ\"],\"type\":\"grammar\"},{\"id\":\"grammatik-a1-artikel_definitheit-005\",\"target\":\"Indefiniter Artikel: Nominativ\",\"source\":\"Indefinite Article: Nominative Case\",\"grammar_note\":\"The indefinite article in the nominative case is used for a non-specific or newly introduced noun that is the subject of the sentence. The forms are 'ein' for masculine and neuter, and 'eine' for feminine nouns. There is no indefinite article for plural nouns; instead, no article is used (zero article).\",\"example_target\":\"Ein Mann steht dort. Eine Frau singt. Ein Kind weint.\",\"example_source\":\"A man stands there. A woman sings. A child cries.\",\"extra_examples\":[{\"de\":\"Das ist ein Hund.\",\"en\":\"That is a dog.\"},{\"de\":\"Ich habe eine Idee.\",\"en\":\"I have an idea.\"},{\"de\":\"Ein Problem ist aufgetaucht.\",\"en\":\"A problem has appeared.\"}],\"common_error\":\"Using 'ein' for feminine nouns or trying to use an indefinite article for plural nouns.\",\"tags\":[\"grammatik\",\"a1\",\"artikel\",\"indefinit\",\"nominativ\"],\"type\":\"grammar\"},{\"id\":\"grammatik-a1-artikel_definitheit-006\",\"target\":\"Indefiniter Artikel: Akkusativ\",\"source\":\"Indefinite Article: Accusative Case\",\"grammar_note\":\"The indefinite article in the accusative case is used for a non-specific direct object or after accusative prepositions. Similar to definite articles, only masculine nouns change their ending from 'ein' to 'einen'. Feminine and neuter articles remain 'eine' and 'ein' respectively. No indefinite article is used for plural nouns.\",\"example_target\":\"Ich suche einen Stift. Sie kauft eine Blume. Er liest ein Buch.\",\"example_source\":\"I am looking for a pen. She buys a flower. He reads a book.\",\"extra_examples\":[{\"de\":\"Wir haben einen Plan.\",\"en\":\"We have a plan.\"},{\"de\":\"Ich möchte eine Tasse Kaffee.\",\"en\":\"I would like a cup of coffee.\"},{\"de\":\"Sie hat ein Geschenk bekommen.\",\"en\":\"She received a gift.\"}],\"common_error\":\"Forgetting to change 'ein' to 'einen' for masculine nouns in the accusative case.\",\"tags\":[\"grammatik\",\"a1\",\"artikel\",\"indefinit\",\"akkusativ\"],\"type\":\"grammar\"},{\"id\":\"grammatik-a1-artikel_definitheit-007\",\"target\":\"Indefiniter Artikel: Dativ\",\"source\":\"Indefinite Article: Dative Case\",\"grammar_note\":\"The indefinite article in the dative case is used for a non-specific indirect object or after dative prepositions. The forms are 'einem' for masculine and neuter, and 'einer' for feminine nouns. As with other cases, there is no indefinite article for plural nouns.\",\"example_target\":\"Ich helfe einem Freund. Er gibt einer Kollegin die Unterlagen. Sie fährt mit einem Fahrrad.\",\"example_source\":\"I help a friend. He gives the documents to a colleague (female). She rides with a bicycle.\",\"extra_examples\":[{\"de\":\"Ich spreche mit einem Lehrer.\",\"en\":\"I speak with a teacher.\"},{\"de\":\"Sie wohnt bei einer Familie.\",\"en\":\"She lives with a family.\"},{\"de\":\"Er sitzt auf einem Stuhl.\",\"en\":\"He sits on a chair.\"}],\"common_error\":\"Using 'ein' or 'eine' instead of 'einem' or 'einer' in the dative case.\",\"tags\":[\"grammatik\",\"a1\",\"artikel\",\"indefinit\",\"dativ\"],\"type\":\"grammar\"},{\"id\":\"grammatik-a1-artikel_definitheit-008\",\"target\":\"Negativer Artikel: Nominativ (Kein)\",\"source\":\"Negative Article: Nominative Case (No/Not a)\",\"grammar_note\":\"The negative article 'kein' is used to negate a noun that would otherwise take an indefinite article or no article (e.g., plural nouns). In the nominative case, the forms are 'kein' for masculine and neuter, 'keine' for feminine, and 'keine' for plural nouns. It functions similarly to 'ein' but with a negative meaning.\",\"example_target\":\"Das ist kein Problem. Das ist keine gute Idee. Das sind keine Äpfel.\",\"example_source\":\"That is no problem. That is not a good idea. Those are no apples.\",\"extra_examples\":[{\"de\":\"Ich habe kein Auto.\",\"en\":\"I have no car.\"},{\"de\":\"Sie hat keine Zeit.\",\"en\":\"She has no time.\"},{\"de\":\"Es gibt keine Milch mehr.\",\"en\":\"There is no milk left.\"}],\"common_error\":\"Using 'nicht ein' instead of 'kein' to negate a noun (e.g., 'nicht ein Auto' instead of 'kein Auto').\",\"tags\":[\"grammatik\",\"a1\",\"artikel\",\"kein\",\"nominativ\",\"negation\"],\"type\":\"grammar\"},{\"id\":\"grammatik-a1-artikel_definitheit-009\",\"target\":\"Negativer Artikel: Akkusativ (Kein)\",\"source\":\"Negative Article: Accusative Case (No/Not a)\",\"grammar_note\":\"The negative article 'kein' in the accusative case is used to negate a direct object or a noun after an accusative preposition. Only masculine nouns change their form from 'kein' to 'keinen'. Feminine, neuter, and plural forms remain 'keine', 'kein', and 'keine' respectively, following the pattern of indefinite articles.\",\"example_target\":\"Ich habe keinen Hunger. Sie hat keine Lust. Er hat kein Geld. Wir haben keine Fragen.\",\"example_source\":\"I have no hunger. She has no desire. He has no money. We have no questions.\",\"extra_examples\":[{\"de\":\"Ich sehe keinen Fehler.\",\"en\":\"I see no mistake.\"},{\"de\":\"Sie kauft keine Blumen.\",\"en\":\"She buys no flowers.\"},{\"de\":\"Er liest kein Buch.\",\"en\":\"He reads no book.\"}],\"common_error\":\"Forgetting to change 'kein' to 'keinen' for masculine nouns in the accusative case.\",\"tags\":[\"grammatik\",\"a1\",\"artikel\",\"kein\",\"akkusativ\",\"negation\"],\"type\":\"grammar\"},{\"id\":\"grammatik-a1-artikel_definitheit-010\",\"target\":\"Negativer Artikel: Dativ (Kein)\",\"source\":\"Negative Article: Dative Case (No/Not a)\",\"grammar_note\":\"The negative article 'kein' in the dative case is used to negate an indirect object or a noun after a dative preposition. The forms are 'keinem' for masculine and neuter, 'keiner' for feminine, and 'keinen' for plural nouns (with an additional '-n' on the plural noun itself). This follows the declension pattern of indefinite articles in the dative.\",\"example_target\":\"Ich helfe keinem Studenten. Sie gibt keiner Freundin die Adresse. Er fährt mit keinem Auto.\",\"example_source\":\"I help no student. She gives no friend the address. He drives with no car.\",\"extra_examples\":[{\"de\":\"Ich spreche mit keinem Kollegen.\",\"en\":\"I speak with no colleague.\"},{\"de\":\"Sie wohnt bei keiner Familie.\",\"en\":\"She lives with no family.\"},{\"de\":\"Er hat keinem Kind geholfen.\",\"en\":\"He helped no child.\"}],\"common_error\":\"Incorrectly declining 'kein' in the dative, especially for feminine ('kein' instead of 'keiner') or plural nouns.\",\"tags\":[\"grammatik\",\"a1\",\"artikel\",\"kein\",\"dativ\",\"negation\"],\"type\":\"grammar\"},{\"id\":\"grammatik-a1-artikel_definitheit-011\",\"target\":\"Verwendung: Definit vs. Indefinit Artikel\",\"source\":\"Usage: Definite vs. Indefinite Article\",\"grammar_note\":\"Use the indefinite article (ein/eine) when introducing a noun for the first time or when it's non-specific ('a/an'). Use the definite article (der/die/das) when the noun has already been mentioned, is specific, or is generally known/unique. This distinction is crucial for clarity in German sentences.\",\"example_target\":\"Ich habe ein Problem. Das Problem ist schwierig.\",\"example_source\":\"I have a problem. The problem is difficult.\",\"extra_examples\":[{\"de\":\"Ein Hund bellt. Der Hund ist groß.\",\"en\":\"A dog barks. The dog is big.\"},{\"de\":\"Ich sehe eine Blume. Die Blume ist rot.\",\"en\":\"I see a flower. The flower is red.\"}],\"common_error\":\"Using the definite article for a noun's first mention, making it sound like the listener should already know what you're talking about.\",\"tags\":[\"grammatik\",\"a1\",\"artikel\",\"verwendung\",\"definit\",\"indefinit\"],\"type\":\"grammar\"},{\"id\":\"grammatik-a1-artikel_definitheit-012\",\"target\":\"Kein Artikel (Nullartikel) - Allgemeine Fälle\",\"source\":\"No Article (Zero Article) - General Cases\",\"grammar_note\":\"The zero article is used in several common situations. This includes plural nouns when they are non-specific or uncountable (e.g., 'Kinder spielen'), names of professions or nationalities with 'sein' (e.g., 'Ich bin Lehrer'), materials (e.g., 'aus Holz'), and abstract concepts (e.g., 'Glück').\",\"example_target\":\"Ich trinke Kaffee. Kinder spielen im Garten. Sie ist Ärztin.\",\"example_source\":\"I drink coffee. Children play in the garden. She is a doctor.\",\"extra_examples\":[{\"de\":\"Er spricht Deutsch.\",\"en\":\"He speaks German.\"},{\"de\":\"Ich habe Hunger.\",\"en\":\"I am hungry (I have hunger).\"},{\"de\":\"Das Hemd ist aus Baumwolle.\",\"en\":\"The shirt is made of cotton.\"}],\"common_error\":\"Using an indefinite article for professions/nationalities with 'sein' (e.g., 'Ich bin ein Lehrer') or for uncountable nouns.\",\"tags\":[\"grammatik\",\"a1\",\"artikel\",\"nullartikel\",\"verwendung\"],\"type\":\"grammar\"},{\"id\":\"grammatik-a1-artikel_definitheit-013\",\"target\":\"Kein Artikel bei Eigennamen & den meisten Ländern\",\"source\":\"No Article with Proper Nouns & Most Countries\",\"grammar_note\":\"Generally, proper nouns like names of people, cities, and most countries do not take an article in German. This rule simplifies usage for many geographical terms. For example, you say 'Ich wohne in Berlin' and 'Er kommt aus Deutschland' without an article.\",\"example_target\":\"Anna wohnt in München. Ich fahre nach Frankreich. Das ist Herr Schmidt.\",\"example_source\":\"Anna lives in Munich. I am going to France. That is Mr. Schmidt.\",\"extra_examples\":[{\"de\":\"Maria lernt Deutsch.\",\"en\":\"Maria learns German.\"},{\"de\":\"Wir fliegen nach Italien.\",\"en\":\"We fly to Italy.\"},{\"de\":\"Das Buch gehört Peter.\",\"en\":\"The book belongs to Peter.\"}],\"common_error\":\"Adding an article before a person's name or a country without an article (e.g., 'der Peter' or 'das Deutschland').\",\"tags\":[\"grammatik\",\"a1\",\"artikel\",\"nullartikel\",\"eigennamen\",\"geografie\"],\"type\":\"grammar\"},{\"id\":\"grammatik-a1-artikel_definitheit-014\",\"target\":\"Länder mit Artikel\",\"source\":\"Countries with Articles\",\"grammar_note\":\"While most countries don't use an article, some do, particularly those that are plural or have a specific gender. Common examples include 'die Schweiz' (Switzerland), 'die USA' (the USA, plural), 'die Türkei' (Turkey), and 'der Irak' (Iraq). These countries always require their respective definite article, which must be declined according to case.\",\"example_target\":\"Ich fahre in die Schweiz. Die USA sind groß. Er kommt aus dem Irak.\",\"example_source\":\"I am going to Switzerland. The USA are big. He comes from Iraq.\",\"extra_examples\":[{\"de\":\"Sie reist in die Türkei.\",\"en\":\"She travels to Turkey.\"},{\"de\":\"Die Niederlande sind schön.\",\"en\":\"The Netherlands are beautiful.\"},{\"de\":\"Ich war in der Ukraine.\",\"en\":\"I was in Ukraine.\"}],\"common_error\":\"Omitting the article for these specific countries (e.g., 'Ich fahre nach Schweiz' instead of 'Ich fahre in die Schweiz').\",\"tags\":[\"grammatik\",\"a1\",\"artikel\",\"ausnahmen\",\"geografie\"],\"type\":\"grammar\"},{\"id\":\"grammatik-a1-artikel_definitheit-015\",\"target\":\"Kein Artikel bei festen Ausdrücken\",\"source\":\"No Article with Fixed Expressions\",\"grammar_note\":\"Many common German expressions and phrases are used without an article. These are often idiomatic and must be learned as fixed units. Examples include expressions related to feelings, states, or common activities, where adding an article would sound unnatural or change the meaning.\",\"example_target\":\"Ich habe Hunger. Er hat Durst. Wir haben Zeit. Sie spielt Klavier.\",\"example_source\":\"I am hungry. He is thirsty. We have time. She plays piano.\",\"extra_examples\":[{\"de\":\"Ich fahre Rad.\",\"en\":\"I ride a bike.\"},{\"de\":\"Sie hört Musik.\",\"en\":\"She listens to music.\"},{\"de\":\"Er macht Sport.\",\"en\":\"He does sports.\"}],\"common_error\":\"Trying to insert an article into these fixed expressions, which makes them sound incorrect (e.g., 'Ich habe einen Hunger').\",\"tags\":[\"grammatik\",\"a1\",\"artikel\",\"nullartikel\",\"feste_ausdrücke\"],\"type\":\"grammar\"},{\"id\":\"grammatik-a1-artikel_definitheit-016\",\"target\":\"Artikel als Geschlechts- und Kasusmarker\",\"source\":\"Articles as Gender and Case Markers\",\"grammar_note\":\"Articles are not just for definiteness; they are the primary indicators of a noun's grammatical gender (masculine, feminine, neuter) and its case (nominative, accusative, dative). Since noun endings often don't change much, the article's form tells us how the noun functions in the sentence. Mastering article declension is key to understanding German grammar.\",\"example_target\":\"Der Mann gibt dem Kind den Ball.\",\"example_source\":\"The man gives the child the ball.\",\"extra_examples\":[{\"de\":\"Die Frau hilft der Studentin.\",\"en\":\"The woman helps the student (female).\"},{\"de\":\"Ich sehe das Haus.\",\"en\":\"I see the house.\"}],\"common_error\":\"Underestimating the importance of articles and focusing only on noun endings, which are less reliable for case and gender.\",\"tags\":[\"grammatik\",\"a1\",\"artikel\",\"funktion\",\"gender\",\"kasus\"],\"type\":\"grammar\"}]";
+const langConfigJson = "{\"language_pair\":\"english_german\",\"target_lang\":\"de\",\"native_lang\":\"en\",\"target_lang_name\":\"Deutsch\",\"native_lang_name\":\"English\",\"speech_lang\":\"de-DE\",\"noun_metadata_fields\":[{\"key\":\"article\",\"label\":\"Artikel\",\"render\":\"article_badge\"},{\"key\":\"gender\",\"label\":\"Genus\",\"render\":\"gender_label\"},{\"key\":\"plural\",\"label\":\"Plural\",\"render\":\"text\"}],\"article_colours\":{\"der\":\"#4A7C9E\",\"die\":\"#B05070\",\"das\":\"#4A8A5A\"},\"gender_labels\":{\"m\":\"Maskulinum\",\"f\":\"Femininum\",\"n\":\"Neutrum\"},\"verb_tenses\":[\"Präsens\",\"Präteritum\",\"Perfekt\",\"Futur I\",\"Konjunktiv II\"],\"cases\":{\"nominative\":\"Nominativ\",\"accusative\":\"Akkusativ\",\"dative\":\"Dativ\",\"genitive\":\"Genitiv\"},\"ui_labels\":{\"learn_mode\":\"Lernen\",\"train_mode\":\"Trainieren\",\"examples_heading\":\"Beispielsätze\",\"grammar_note_heading\":\"Grammatiknotiz\",\"audio_button\":\"Anhören\",\"back_link\":\"Zurück\",\"card_counter\":\"Karte {current} / {total}\",\"next_button\":\"Weiter\",\"finish_button\":\"Fertig\",\"correct\":\"Richtig!\",\"wrong\":\"Falsch\"}}";
+const category = "grammatik";
+
+  const cards     = JSON.parse(cardsJson);
+  const config    = JSON.parse(langConfigJson);
+  let currentIndex = 0;
+
+  const dotNav    = document.getElementById('dot-nav');
+  const currentNum = document.getElementById('current-num');
+  const progressBar = document.getElementById('progress-bar');
+  const btnPrev   = document.getElementById('btn-prev');
+  const btnNext   = document.getElementById('btn-next');
+  const cardHost  = document.getElementById('card-host');
+  const progressCont = document.getElementById('progress-container');
+
+  const cardViewWrap = document.getElementById('card-view-wrap');
+  const listViewWrap = document.getElementById('list-view-wrap');
+  const btnViewCards = document.getElementById('view-cards-btn');
+  const btnViewList  = document.getElementById('view-list-btn');
+
+  // Toggle Logic
+  function setViewMode(mode) {
+    if (mode === 'list') {
+      cardViewWrap.classList.add('hidden');
+      listViewWrap.classList.remove('hidden');
+      progressCont.classList.add('hidden');
+      btnViewList.classList.add('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewList.classList.remove('text-[var(--text-muted)]');
+      btnViewCards.classList.remove('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewCards.classList.add('text-[var(--text-muted)]');
+    } else {
+      listViewWrap.classList.add('hidden');
+      cardViewWrap.classList.remove('hidden');
+      progressCont.classList.remove('hidden');
+      btnViewCards.classList.add('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewCards.classList.remove('text-[var(--text-muted)]');
+      btnViewList.classList.remove('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewList.classList.add('text-[var(--text-muted)]');
+    }
+  }
+
+  btnViewCards.addEventListener('click', () => setViewMode('cards'));
+  btnViewList.addEventListener('click', () => setViewMode('list'));
+
+  // Default Grammatik and Redemittel to list view!
+  if (category === 'grammatik' || category === 'redemittel' || category === 'phrases') {
+    setViewMode('list');
+  }
+
+
+
+  // ── Helpers (mirror card-renderer.ts — no module imports in inline scripts) ──
+  const articleColours = config.article_colours || { der:'#4A7C9E', die:'#B05070', das:'#4A8A5A' };
+  const genderLabels   = config.gender_labels   || { m:'Maskulinum', f:'Femininum', n:'Neutrum'  };
+  const speechLang     = config.speech_lang     || 'de-DE';
+
+  function stripArticle(w) {
+    return (w || '').replace(/^(der|die|das|el|la|los|las|le|les|l')\s+/i,'').trim();
+  }
+
+  function getTypeLabel(card) {
+    const tags = card.tags || [];
+    if (tags.includes('noun'))       return 'Substantiv';
+    if (tags.includes('verb'))       return 'Verb';
+    if (tags.includes('adjective'))  return 'Adjektiv';
+    if (tags.includes('expression')) return 'Ausdruck';
+    return { vocab:'Vokabel', verb:'Verb', phrase:'Phrase', connector:'Konnektor', grammar:'Grammatik' }[card.type] || 'Vokabel';
+  }
+
+  function normaliseEx(ex) {
+    return { target: ex.target||ex.de||'', source: ex.source||ex.en||'', note: ex.note };
+  }
+
+  function getMetaFacts(card) {
+    const meta = { ...(card.metadata||{}), article:card.article, gender:card.gender, plural:card.plural };
+    const facts = [];
+    for (const field of (config.noun_metadata_fields || [])) {
+      const raw = meta[field.key];
+      if (!raw || raw==='~') continue;
+      let value = String(raw), colour;
+      if (field.render === 'gender_label')  value  = genderLabels[raw] || raw;
+      if (field.render === 'article_badge') colour = articleColours[raw.toLowerCase()] || 'var(--espresso)';
+      facts.push({ label: field.label, value, colour });
+    }
+    return facts;
+  }
+
+  // ── Card renderer ─────────────────────────────────────────────────────────
+  function renderCard(idx) {
+    const card = cards[idx];
+    if (!card || !cardHost) return;
+
+    const lc = cardHost.querySelector('.learning-card');
+    if (!lc) return;
+
+    function sel(cls) { return lc.querySelector(cls); }
+
+    // Type badge + level
+    sel('.lc-type-badge').textContent = getTypeLabel(card);
+    sel('.lc-level-badge').textContent = (card.level || '').toUpperCase();
+
+    // Article
+    const article = card.article || card.metadata?.article;
+    const articleWrap = sel('.lc-article-wrap');
+    const articleEl   = sel('.lc-article');
+    if (article && (card.tags||[]).includes('noun') && !card.plural_only) {
+      articleEl.textContent = article;
+      articleEl.style.color = articleColours[article.toLowerCase()] || 'var(--espresso)';
+      articleWrap.style.display = '';
+    } else {
+      articleWrap.style.display = 'none';
+    }
+
+    // Word / translation / forms
+    sel('.lc-word').textContent        = stripArticle(card.target);
+    sel('.lc-translation').textContent = card.source || '';
+    const plural = card.plural || card.metadata?.plural;
+    sel('.lc-forms').textContent = plural && !card.plural_only ? `Pl. ${plural}` : card.plural_only ? 'nur Plural' : '';
+
+    // Meta grid
+    const metaGrid = sel('.lc-meta-grid');
+    const facts = getMetaFacts(card);
+    if (facts.length) {
+      metaGrid.style.gridTemplateColumns = `repeat(${Math.min(facts.length,4)}, 1fr)`;
+      metaGrid.style.display = '';
+      metaGrid.innerHTML = facts.map((f, i) => `
+        <div class="px-5 py-4 ${i<facts.length-1?'border-r':''}" style="border-color:var(--border);">
+          <p class="text-[9px] font-bold uppercase tracking-widest mb-1" style="color:var(--text-muted);">${f.label}</p>
+          <p class="text-sm font-bold" style="color:${f.colour||'var(--text)'};">${f.value}</p>
+        </div>`).join('');
+    } else {
+      metaGrid.style.display = 'none';
+    }
+
+    // Grammar note
+    const grammarWrap = sel('.lc-grammar-wrap');
+    if (card.grammar_note) {
+      sel('.lc-grammar-text').innerHTML = formatHighlight(card.grammar_note);
+      grammarWrap.classList.remove('hidden');
+    } else {
+      grammarWrap.classList.add('hidden');
+    }
+
+    // Examples
+    const examplesEl = sel('.lc-examples');
+    const rawEx = card.examples || (card.example_target ? [{ target:card.example_target, source:card.example_source }] : []);
+    examplesEl.innerHTML = rawEx.length
+      ? rawEx.map(ex => { const e=normaliseEx(ex); return `
+          <div class="rounded-2xl border overflow-hidden" style="border-color:var(--border);">
+            <div class="px-4 py-3" style="background-color:var(--bg);">
+              <p class="font-semibold leading-snug mb-1" style="color:var(--text);">${e.target}</p>
+              <p class="text-sm italic" style="color:var(--text-muted);">${e.source||''}</p>
+            </div>
+            ${e.note?`<div class="px-4 py-2 border-t" style="border-color:var(--border);">
+              <p class="text-[10px] font-bold font-mono" style="color:var(--espresso);">📐 ${e.note}</p>
+            </div>`:''}
+          </div>`; }).join('')
+      : '<p class="text-sm italic" style="color:var(--text-muted);">Kein Beispiel verfügbar.</p>';
+
+    // Tags
+    sel('.lc-tags').innerHTML = (card.tags||[]).map(t =>
+      `<span class="text-[10px] font-bold px-2 py-0.5 rounded-md border" style="border-color:var(--border);color:var(--text-muted);background-color:var(--bg);">${t}</span>`
+    ).join('');
+
+    // Progress UI
+    if (currentNum)  currentNum.textContent = String(idx+1);
+    if (progressBar) progressBar.style.width = `${Math.round(((idx+1)/cards.length)*100)}%`;
+    if (btnPrev)     btnPrev.disabled = idx === 0;
+    if (btnNext)     btnNext.innerHTML = idx === cards.length-1
+      ? '✓ Fertig'
+      : 'Weiter <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>';
+
+    updateDots();
+
+    // Re-bind audio button cleanly by cloning to strip old listeners
+    const oldBtn = sel('.lc-audio-btn');
+    if (oldBtn) {
+      const newBtn = oldBtn.cloneNode(true);
+      oldBtn.parentNode.replaceChild(newBtn, oldBtn);
+      newBtn.addEventListener('click', speakCurrent);
+    }
+  }
+
+  // ── Dot navigation ────────────────────────────────────────────────────────
+  function buildDots() {
+    if (!dotNav) return;
+    dotNav.innerHTML = '';
+    const maxVisible = 20;
+    const showAll = cards.length <= maxVisible;
+    cards.forEach((_, i) => {
+      if (!showAll && i >= maxVisible) return;
+      const dot = document.createElement('button');
+      dot.className = 'dot w-2 h-2 rounded-full transition-all duration-300 flex-shrink-0';
+      dot.style.backgroundColor = 'var(--border)';
+      dot.title = `Card ${i+1}`;
+      dot.addEventListener('click', () => goTo(i));
+      dotNav.appendChild(dot);
+    });
+    if (!showAll) {
+      const el = document.createElement('span');
+      el.textContent = `+${cards.length - maxVisible}`;
+      el.className = 'text-[10px] font-bold';
+      el.style.color = 'var(--text-muted)';
+      dotNav.appendChild(el);
+    }
+  }
+
+  function updateDots() {
+    dotNav?.querySelectorAll('.dot').forEach((dot, i) => {
+      dot.style.backgroundColor = i===currentIndex ? 'var(--espresso)' : 'var(--border)';
+      dot.style.width     = i===currentIndex ? '20px' : '8px';
+      dot.style.borderRadius = '4px';
+    });
+  }
+
+  // ── Audio ─────────────────────────────────────────────────────────────────
+  function speakCurrent() {
+    const card = cards[currentIndex];
+    if (!card) return;
+    if (window.DeutschAudioEngine) {
+      window.DeutschAudioEngine.speak(card.target || '', speechLang, 0.85);
+    }
+  }
+
+  // ── Navigate ─────────────────────────────────────────────────────────────
+  function goTo(idx) {
+    if (idx < 0 || idx >= cards.length) return;
+    currentIndex = idx;
+    renderCard(currentIndex);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  btnPrev?.addEventListener('click', () => goTo(currentIndex - 1));
+  btnNext?.addEventListener('click', () => {
+    if (currentIndex === cards.length - 1) window.location.href = '/vocabulary';
+    else goTo(currentIndex + 1);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') goTo(currentIndex + 1);
+    if (e.key === 'ArrowLeft')  goTo(currentIndex - 1);
+    if (e.key === 'a' || e.key === 'A') speakCurrent();
+  });
+
+  // ── Init ─────────────────────────────────────────────────────────────────
+  buildDots();
+  // Card 0 is already rendered server-side via LearningCard component.
+  // Sync progress UI to reflect card 0 state.
+  updateDots();
+  if (progressBar) progressBar.style.width = `${Math.round(1/cards.length*100)}%`;
+  // Update card 0 using client-side config too (ensures langConfig is applied)
+  renderCard(0);
+})();</script>

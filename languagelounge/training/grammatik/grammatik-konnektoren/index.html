@@ -1,0 +1,640 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="description" content="Deutsch Lounge — Language Learning Trainer"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/languagelounge/favicon.svg"><meta name="generator" content="Astro v7.3.5"><title>Konnektoren — Deutsch Lounge</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet"><!-- Apply theme before paint to avoid flash --><script>
+      (function() {
+        const saved = localStorage.getItem('wortschatz_theme');
+        if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script><link rel="stylesheet" href="/languagelounge/_astro/Layout.BeSASyxj.css"></head><body class="antialiased min-h-screen flex flex-col" style="background-color:var(--bg);color:var(--text);"><!-- Header --><header class="sticky top-0 z-50 border-b" style="background-color:var(--bg);border-color:var(--border);"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between gap-4" style="height:4.5rem;"><!-- Logo + Language Switcher --><div class="flex items-center gap-4 shrink-0"><a href="/languagelounge/" class="flex items-center gap-2 group"><span class="font-outfit font-extrabold text-xl sm:text-2xl tracking-tight transition-colors" style="color:var(--text);">Small Talk Café <span class="font-normal text-base hidden sm:inline" style="color:var(--text-muted);">| <span id="site-name">Deutsch Lounge</span></span></span></a><!-- Language Selector Dropdown --><div class="relative" id="lang-dropdown-wrapper"><button id="lang-btn" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-sm font-bold transition-all hover:opacity-70" style="background-color:var(--bg); border-color:var(--border); color:var(--text);"><span id="lang-flag">🇩🇪</span><span id="lang-code">DE</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"></path></svg></button><div id="lang-menu" class="hidden absolute top-full left-0 mt-2 rounded-2xl border shadow-xl overflow-hidden z-50 min-w-[160px]" style="background-color:var(--card); border-color:var(--border);"><button class="lang-option w-full flex items-center gap-3 px-4 py-3 text-sm font-semibold text-left transition-colors hover:opacity-70" data-lang="de" data-flag="🇩🇪" data-code="DE" data-name="Deutsch Lounge" data-label="German" style="color:var(--text);"><span class="text-lg">🇩🇪</span><div><div class="font-bold" style="color:var(--text);">Deutsch</div><div class="text-xs" style="color:var(--text-muted);">German Learning</div></div></button><div class="border-t" style="border-color:var(--border);"></div><button class="lang-option w-full flex items-center gap-3 px-4 py-3 text-sm font-semibold text-left transition-colors hover:opacity-70" data-lang="es" data-flag="🇪🇸" data-code="ES" data-name="Spanish Gym" data-label="Spanish" style="color:var(--text);"><span class="text-lg">🇪🇸</span><div><div class="font-bold" style="color:var(--text);">Español</div><div class="text-xs" style="color:var(--text-muted);">Spanish Learning</div></div></button><div class="border-t" style="border-color:var(--border);"></div><button class="lang-option w-full flex items-center gap-3 px-4 py-3 text-sm font-semibold text-left transition-colors hover:opacity-70" data-lang="fr" data-flag="🇫🇷" data-code="FR" data-name="French Gym" data-label="French" style="color:var(--text);"><span class="text-lg">🇫🇷</span><div><div class="font-bold" style="color:var(--text);">Français</div><div class="text-xs" style="color:var(--text-muted);">French Learning</div></div></button></div></div></div><!-- Nav Links --><nav class="hidden md:flex gap-5 items-center"><a href="https://smalltalkcafe.de/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Small Talk Café Podcasts</a><span class="text-sm font-normal" style="color:var(--border);">|</span><a href="/languagelounge/vocabulary" data-german-nav class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Vokabeln</a><a href="/languagelounge/verbs" data-german-nav class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Verben</a><a href="/languagelounge/grammatik" data-german-nav class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Grammatik</a><a href="/languagelounge/redemittel" data-german-nav class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Redemittel</a><!-- Dark/Light Toggle --><button id="theme-toggle" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-sm font-semibold transition-all hover:opacity-70" style="border-color:var(--border); color:var(--text-muted);" aria-label="Toggle dark/light mode"><span id="theme-icon">☀️</span><span id="theme-label">Light</span></button></nav></div></header><!-- Coming Soon Overlay (shown for non-German languages) --><div id="coming-soon-overlay" class="hidden flex-1 flex items-center justify-center py-20 px-4"><div class="text-center max-w-lg mx-auto"><div class="text-7xl mb-6" id="coming-soon-flag">🌍</div><h1 class="font-outfit font-extrabold text-4xl sm:text-5xl mb-4" style="color:var(--text);">Coming Soon</h1><p class="text-lg mb-3" style="color:var(--text-muted);">We're working hard on the <strong id="coming-soon-lang">new language</strong> curriculum.</p><p class="text-base mb-8" style="color:var(--text-muted);">Stay tuned — it will be available very soon! In the meantime, explore our<strong>Deutsch Lounge</strong> to sharpen your German.</p><button id="coming-soon-back-btn" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-sm transition-all hover:opacity-80" style="background-color:var(--espresso); color:#fff;">🇩🇪 Switch to German</button></div></div><main id="main-content" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-1 w-full"><div class="max-w-4xl mx-auto py-6"><!-- Deck Header --><div class="flex items-start justify-between mb-8 gap-4 flex-wrap"><div><a href="/languagelounge/grammatik" class="text-xs font-bold flex items-center gap-1 mb-2 hover:opacity-70 transition-opacity capitalize" style="color:var(--espresso);"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg>grammatik</a><h1 class="text-2xl md:text-3xl font-extrabold font-outfit" style="color:var(--text);">Konnektoren</h1><p class="text-xs font-bold uppercase tracking-wider mt-1" style="color:var(--text-muted);">konnektoren &bull; B1 &bull; 30 Karten</p></div><div class="flex flex-col items-end gap-4"><!-- Learn / Train mode switcher --><div class="flex rounded-xl border overflow-hidden p-1 gap-1 w-full max-w-[300px]" style="background-color:var(--bg); border-color:var(--border);"><span class="flex-1 flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold transition-all" style="background-color:var(--espresso); color:#F5F2EB;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>Lernen</span><a href="/languagelounge/training/grammatik/train?level=b1&amp;deck=grammatik-konnektoren&amp;count=20&amp;mode=mc&amp;dir=en-de" class="flex-1 flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold hover:opacity-70 transition-all" style="color:var(--text-muted);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>Trainieren</a></div><!-- View switcher (Cards vs List) --><div class="flex rounded-xl border overflow-hidden p-1 gap-1 w-full max-w-[300px]" style="background-color:var(--bg); border-color:var(--border);"><button id="view-cards-btn" class="view-btn flex-1 flex items-center justify-center px-4 py-2 rounded-lg text-xs font-bold transition-all bg-[var(--espresso)] text-[#F5F2EB]">Karten</button><button id="view-list-btn" class="view-btn flex-1 flex items-center justify-center px-4 py-2 rounded-lg text-xs font-bold transition-all text-[var(--text-muted)] hover:opacity-70">Liste</button></div><!-- Progress indicator --><div id="progress-container" class="flex items-center gap-3"><div class="text-xs font-semibold" style="color:var(--text-muted);">Karte <span id="current-num" class="font-extrabold" style="color:var(--text);">1</span> / 30</div><div class="w-24 h-1.5 rounded-full overflow-hidden border" style="background-color:var(--bg);border-color:var(--border);"><div id="progress-bar" class="h-full transition-all duration-500 rounded-full" style="width:0%; background-color:var(--espresso);"></div></div></div></div></div><!-- ── Universal Study Card (rendered by LearningCard component) ── --><div id="card-view-wrap"><div id="card-host"><!-- The card shell — populated client-side by renderCard() --><div class="learning-card rounded-3xl border shadow-xl overflow-hidden" style="background-color:var(--card); border-color:var(--border);"><!-- ── Top bar ─────────────────────────────────── --><div class="lc-topbar flex items-center justify-between px-6 py-3.5 border-b" style="border-color:var(--border); background-color:var(--bg);"><div class="flex items-center gap-2"><span class="lc-type-badge text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-lg" style="background-color:var(--espresso); color:#F5F2EB;">—</span><span class="lc-level-badge text-[10px] font-bold px-2.5 py-1 rounded-lg cafe-badge"></span></div><button class="lc-audio-btn flex items-center justify-center w-11 h-11 rounded-full transition-transform hover:scale-105 active:scale-95 shadow-md flex-shrink-0" title="Anhören (A)" style="background-color:var(--espresso); color:#F5F2EB;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg></button></div><!-- ── Main word display ───────────────────────── --><div class="lc-hero px-7 py-8 text-center border-b" style="border-color:var(--border);"><div class="lc-article-wrap mb-1.5"><span class="lc-article text-xl font-bold"></span></div><h2 class="lc-word text-5xl md:text-6xl font-extrabold font-outfit mb-3" style="color:var(--text);">—</h2><p class="lc-translation text-lg font-semibold italic" style="color:var(--text-muted);"></p><p class="lc-forms text-sm font-medium mt-2" style="color:var(--text-muted);"></p></div><!-- ── Meta info grid ─────────────────────────── --><div class="lc-meta-grid grid border-b" style="border-color:var(--border);"><!-- populated by JS --></div><!-- ── Grammar note ───────────────────────────── --><div class="lc-grammar-wrap hidden px-7 py-5 border-b" style="border-color:var(--border); background-color:var(--bg);"><p class="text-[10px] font-bold uppercase tracking-widest mb-2" style="color:var(--espresso);">📌 <span class="lc-grammar-label">Grammatiknotiz</span></p><p class="lc-grammar-text text-sm leading-relaxed font-medium whitespace-pre-wrap" style="color:var(--text);"></p></div><!-- ── Type-specific block ────────────────────── --><!-- Verb conjugation (hidden by default, shown for verb cards) --><div class="lc-conjugation-wrap hidden border-b overflow-x-auto" style="border-color:var(--border);"><div class="lc-conjugation-inner"><!-- populated by JS --></div></div><!-- Connector word-order block --><div class="lc-wordorder-wrap hidden px-7 py-4 border-b" style="border-color:var(--border); background-color:var(--bg);"><div class="flex items-start gap-3 text-sm font-medium" style="color:var(--text-muted);"><span class="text-base flex-shrink-0">📐</span><span class="lc-wordorder-text"></span></div></div><!-- Phrase preposition block --><div class="lc-phrase-wrap hidden px-7 py-4 border-b" style="border-color:var(--border); background-color:var(--bg);"><p class="text-[10px] font-bold uppercase tracking-widest mb-2" style="color:var(--espresso);">Struktur</p><p class="lc-phrase-rule text-sm font-semibold" style="color:var(--text);"></p></div><!-- ── Examples ───────────────────────────────── --><div class="px-7 py-6 border-b" style="border-color:var(--border);"><p class="lc-examples-label text-[10px] font-bold uppercase tracking-widest mb-5" style="color:var(--text-muted);">Beispielsätze</p><div class="lc-examples space-y-3"><!-- populated by JS --></div></div><!-- ── Tags ───────────────────────────────────── --><div class="lc-tags-row px-7 py-4 flex items-center gap-2 flex-wrap"><span class="text-[10px] font-bold uppercase tracking-wider" style="color:var(--text-muted);">Tags:</span><div class="lc-tags flex gap-2 flex-wrap"></div></div></div><script>(function(){const cardJson = "{\"id\":\"con-weil\",\"connector\":\"weil\",\"translation\":\"because\",\"clause_type\":\"subordinating\",\"word_order\":\"Verb moves to the END of the clause\",\"example_de\":\"Ich lerne Deutsch, weil ich in Deutschland arbeiten moechte.\",\"example_en\":\"I'm learning German because I want to work in Germany.\",\"example2_de\":\"Er kommt nicht, weil er krank ist.\",\"example2_en\":\"He's not coming because he is sick.\",\"example3_de\":\"Sie ist gluecklich, weil sie eine neue Stelle gefunden hat.\",\"example3_en\":\"She is happy because she found a new job.\",\"cefr\":\"A2\",\"target\":\"weil\",\"source\":\"because\",\"example_target\":\"Ich lerne Deutsch, weil ich in Deutschland arbeiten moechte.\",\"example_source\":\"I'm learning German because I want to work in Germany.\",\"tags\":[\"grammatik\"],\"type\":\"vocab\"}";
+const langConfigJson = "{\"language_pair\":\"english_german\",\"target_lang\":\"de\",\"native_lang\":\"en\",\"target_lang_name\":\"Deutsch\",\"native_lang_name\":\"English\",\"speech_lang\":\"de-DE\",\"noun_metadata_fields\":[{\"key\":\"article\",\"label\":\"Artikel\",\"render\":\"article_badge\"},{\"key\":\"gender\",\"label\":\"Genus\",\"render\":\"gender_label\"},{\"key\":\"plural\",\"label\":\"Plural\",\"render\":\"text\"}],\"article_colours\":{\"der\":\"#4A7C9E\",\"die\":\"#B05070\",\"das\":\"#4A8A5A\"},\"gender_labels\":{\"m\":\"Maskulinum\",\"f\":\"Femininum\",\"n\":\"Neutrum\"},\"verb_tenses\":[\"Präsens\",\"Präteritum\",\"Perfekt\",\"Futur I\",\"Konjunktiv II\"],\"cases\":{\"nominative\":\"Nominativ\",\"accusative\":\"Akkusativ\",\"dative\":\"Dativ\",\"genitive\":\"Genitiv\"},\"ui_labels\":{\"learn_mode\":\"Lernen\",\"train_mode\":\"Trainieren\",\"examples_heading\":\"Beispielsätze\",\"grammar_note_heading\":\"Grammatiknotiz\",\"audio_button\":\"Anhören\",\"back_link\":\"Zurück\",\"card_counter\":\"Karte {current} / {total}\",\"next_button\":\"Weiter\",\"finish_button\":\"Fertig\",\"correct\":\"Richtig!\",\"wrong\":\"Falsch\"}}";
+
+  /**
+   * Client-side card renderer.
+   * Uses the universal card-renderer logic inline (no imports in Astro is:inline).
+   */
+
+  // ── Parse data ──────────────────────────────────────────────────────────
+  const card   = JSON.parse(cardJson);
+  const config = JSON.parse(langConfigJson);
+
+  // ── Helpers ─────────────────────────────────────────────────────────────
+  function stripArticle(word) {
+    return (word || '').replace(/^(der|die|das|el|la|los|las|le|les|l')\s+/i, '').trim();
+  }
+
+  function getArticleColour(article) {
+    if (!article || !config.article_colours) return 'var(--espresso)';
+    return config.article_colours[article.toLowerCase()] || 'var(--espresso)';
+  }
+
+  function getGenderLabel(gender) {
+    if (!gender) return '';
+    return (config.gender_labels || {})[gender] || gender;
+  }
+
+  function getTypeLabel() {
+    const tags = card.tags || [];
+    if (tags.includes('noun'))       return 'Substantiv';
+    if (tags.includes('verb'))       return 'Verb';
+    if (tags.includes('adjective'))  return 'Adjektiv';
+    if (tags.includes('expression')) return 'Ausdruck';
+    const map = { vocab:'Vokabel', verb:'Verb', phrase:'Phrase', connector:'Konnektor', grammar:'Grammatik' };
+    return map[card.type] || 'Karte';
+  }
+
+  function formatHighlight(text) {
+    if (!text) return '';
+    return String(text).replace(/\*(.*?)\*/g, '<span class="highlighter">$1</span>');
+  }
+
+  function normaliseExample(ex) {
+    return {
+      target: ex.target || ex.de || '',
+      source: ex.source || ex.en || '',
+      note: ex.note,
+    };
+  }
+
+  function getMetaFacts() {
+    const meta = { ...card.metadata, article: card.article, gender: card.gender, plural: card.plural, ...card.metadata };
+    const facts = [];
+    for (const field of (config.noun_metadata_fields || [])) {
+      const raw = meta[field.key] || card[field.key];
+      if (!raw || raw === '~') continue;
+      let value = String(raw);
+      let colour;
+      if (field.render === 'gender_label') value = getGenderLabel(raw);
+      else if (field.render === 'article_badge') colour = getArticleColour(raw);
+      facts.push({ label: field.label, value, colour });
+    }
+    return facts;
+  }
+
+  // ── Render ──────────────────────────────────────────────────────────────
+  const container = document.querySelector('.learning-card');
+  if (!container) { console.error('LearningCard: container not found'); }
+
+  function sel(cls) { return container?.querySelector(cls); }
+
+  // Type badge
+  sel('.lc-type-badge').textContent = getTypeLabel();
+
+  // Level badge
+  sel('.lc-level-badge').textContent = card.level || '';
+
+  // Article
+  const article = card.article || card.metadata?.article;
+  const articleWrap = sel('.lc-article-wrap');
+  const articleEl   = sel('.lc-article');
+  if (article && card.tags?.includes('noun') && !card.plural_only) {
+    articleEl.textContent  = article;
+    articleEl.style.color  = getArticleColour(article);
+    articleWrap.style.display = '';
+  } else {
+    articleWrap.style.display = 'none';
+  }
+
+  // Word
+  sel('.lc-word').textContent = stripArticle(card.target);
+
+  // Translation
+  sel('.lc-translation').textContent = card.source || '';
+
+  // Plural / forms
+  const plural = card.plural || card.metadata?.plural;
+  const formsEl = sel('.lc-forms');
+  if (plural && !card.plural_only) formsEl.textContent = `Pl. ${plural}`;
+  else if (card.plural_only) formsEl.textContent = 'nur Plural';
+  else formsEl.textContent = '';
+
+  // Meta grid
+  const metaGrid = sel('.lc-meta-grid');
+  const facts = getMetaFacts();
+  if (facts.length) {
+    const cols = Math.min(facts.length, 4);
+    metaGrid.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
+    metaGrid.innerHTML = facts.map((f, i) => `
+      <div class="px-5 py-4 ${i < facts.length - 1 ? 'border-r' : ''}" style="border-color:var(--border);">
+        <p class="text-[9px] font-bold uppercase tracking-widest mb-1" style="color:var(--text-muted);">${f.label}</p>
+        <p class="text-sm font-bold" style="color:${f.colour || 'var(--text)'};">${f.value}</p>
+      </div>
+    `).join('');
+  } else {
+    metaGrid.style.display = 'none';
+  }
+
+  // Grammar note
+  const grammarWrap = sel('.lc-grammar-wrap');
+  if (card.grammar_note) {
+    sel('.lc-grammar-text').innerHTML = formatHighlight(card.grammar_note);
+    grammarWrap.classList.remove('hidden');
+  }
+
+  // Grammar label from config
+  const uiLabels = config.ui_labels || {};
+  if (uiLabels.grammar_note_heading) sel('.lc-grammar-label').textContent = uiLabels.grammar_note_heading;
+  if (uiLabels.examples_heading)     sel('.lc-examples-label').textContent = uiLabels.examples_heading;
+  if (uiLabels.audio_button)         sel('.lc-audio-label').textContent    = uiLabels.audio_button;
+
+  // ── Type-specific blocks ─────────────────────────────────────────────────
+
+  // Verb: conjugation table
+  const type = card.type || (card.tags?.includes('verb') ? 'verb' : 'vocab');
+  if (type === 'verb' && card.conjugations?.length) {
+    const conjWrap  = sel('.lc-conjugation-wrap');
+    const conjInner = sel('.lc-conjugation-inner');
+    conjWrap.classList.remove('hidden');
+    conjInner.innerHTML = (config.verb_tenses || card.conjugations.map(t => t.tense)).map(tense => {
+      const t = card.conjugations.find(c => c.tense === tense);
+      if (!t) return '';
+      return `
+        <div class="border-b last:border-0" style="border-color:var(--border);">
+          <p class="text-[10px] font-bold uppercase tracking-widest px-5 py-2" style="background-color:var(--bg); color:var(--espresso);">${t.tense}</p>
+          <table class="w-full text-sm">
+            <tbody>
+              ${t.forms.map((f, ri) => `
+                <tr class="${ri % 2 === 0 ? '' : ''} border-t" style="border-color:var(--border);">
+                  <td class="px-5 py-2.5 font-bold w-24" style="color:var(--espresso);">${f.pronoun}</td>
+                  <td class="px-5 py-2.5 font-semibold" style="color:var(--text);">${f.form}</td>
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+        </div>
+      `;
+    }).join('');
+  }
+
+  // Connector: word order block
+  if (type === 'connector' && card.word_order) {
+    const woWrap = sel('.lc-wordorder-wrap');
+    sel('.lc-wordorder-text').textContent = card.word_order;
+    woWrap.classList.remove('hidden');
+  }
+
+  // Phrase: preposition rule block
+  if (type === 'phrase' && card.clause_type) {
+    const phraseWrap = sel('.lc-phrase-wrap');
+    sel('.lc-phrase-rule').textContent = card.clause_type;
+    phraseWrap.classList.remove('hidden');
+  }
+
+  // ── Examples ─────────────────────────────────────────────────────────────
+  const examplesEl = sel('.lc-examples');
+  const rawExamples = card.examples || (card.example_target || card.example_de ? [{ target: card.example_target || card.example_de, source: card.example_source || card.example_en }] : []);
+
+  if (rawExamples.length) {
+    examplesEl.innerHTML = rawExamples.map(ex => {
+      const e = normaliseExample(ex);
+      return `
+        <div class="rounded-2xl border overflow-hidden" style="border-color:var(--border);">
+          <div class="px-4 py-3" style="background-color:var(--bg);">
+            <p class="font-semibold leading-snug mb-1" style="color:var(--text);">${formatHighlight(e.target)}</p>
+            <p class="text-sm italic" style="color:var(--text-muted);">${formatHighlight(e.source || '')}</p>
+          </div>
+          ${e.note ? `<div class="px-4 py-2 border-t" style="border-color:var(--border);">
+            <p class="text-[10px] font-bold font-mono" style="color:var(--espresso);">📐 ${e.note}</p>
+          </div>` : ''}
+        </div>
+      `;
+    }).join('');
+  } else {
+    examplesEl.innerHTML = `<p class="text-sm italic" style="color:var(--text-muted);">Kein Beispiel verfügbar.</p>`;
+  }
+
+  // ── Tags ─────────────────────────────────────────────────────────────────
+  const tagsEl = sel('.lc-tags');
+  tagsEl.innerHTML = (card.tags || []).map(t => `
+    <span class="text-[10px] font-bold px-2 py-0.5 rounded-md border uppercase" style="border-color:var(--border); color:var(--text-muted); background-color:var(--bg);">${t}</span>
+  `).join('');
+
+  // ── Audio button ─────────────────────────────────────────────────────────
+  sel('.lc-audio-btn')?.addEventListener('click', () => {
+    if (window.DeutschAudioEngine) {
+      window.DeutschAudioEngine.speak(card.target || '', config.speech_lang || 'de-DE', 0.85);
+    }
+  });
+})();</script></div><!-- ── Navigation ───────────────────────────── --><div class="flex items-center justify-between mt-8 gap-4"><button id="btn-prev" disabled class="flex items-center gap-2 px-6 py-3 rounded-2xl border font-bold text-sm transition-all hover:opacity-70 active:scale-95 disabled:opacity-30 disabled:cursor-not-allowed" style="border-color:var(--border); color:var(--text); background-color:var(--card);"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg>Zurück</button><!-- Dot navigation --><div id="dot-nav" class="flex items-center gap-1.5 flex-wrap justify-center max-w-xs overflow-hidden" style="max-height:2rem;"><!-- populated by JS --></div><button id="btn-next" class="flex items-center gap-2 px-6 py-3 rounded-2xl font-bold text-sm transition-all hover:opacity-80 active:scale-95" style="background-color:var(--espresso); color:#F5F2EB;">Weiter<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg></button></div><!-- Keyboard hint --><p class="text-center text-xs font-medium mt-4" style="color:var(--text-muted);">← → Pfeiltasten zum Navigieren &nbsp;·&nbsp; A zum Anhören</p></div><!-- ── List View ───────────────────────────── --><div id="list-view-wrap" class="hidden space-y-6"><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">weil</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">because</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📐 Word Order</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Verb moves to the END of the clause</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich lerne Deutsch, weil ich in Deutschland arbeiten moechte.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I'm learning German because I want to work in Germany.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">denn</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">because / for (more formal)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📐 Word Order</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">No word order change - keeps Verb in position 2</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich lerne Deutsch, denn ich moechte in Deutschland arbeiten.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I'm learning German, for I want to work in Germany.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">da</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">since / as (already-known reason)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📐 Word Order</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Verb moves to the END; often used at the beginning</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Da es regnet, nehmen wir einen Regenschirm.</p><p class="italic text-[13px]" style="color:var(--text-muted);">Since it's raining, we're taking an umbrella.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">deshalb</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">therefore / that's why</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📐 Word Order</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">deshalb pushes the subject AFTER the verb (inversion)</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Es regnet. Deshalb bleiben wir zu Hause.</p><p class="italic text-[13px]" style="color:var(--text-muted);">It's raining. That's why we're staying home.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">daher</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">therefore / hence</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📐 Word Order</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Same as deshalb - causes subject-verb inversion</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Das Wetter ist schlecht. Daher fahren wir nicht ans Meer.</p><p class="italic text-[13px]" style="color:var(--text-muted);">The weather is bad. Hence we're not going to the sea.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">deswegen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">because of this / for this reason</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📐 Word Order</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Causes subject-verb inversion</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Sie hat keine Lust. Deswegen kommt sie nicht.</p><p class="italic text-[13px]" style="color:var(--text-muted);">She doesn't feel like it. Because of this she isn't coming.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">folglich</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">consequently / as a result</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📐 Word Order</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Causes subject-verb inversion</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Er hat nicht geubt. Folglich hat er die Pruefung nicht bestanden.</p><p class="italic text-[13px]" style="color:var(--text-muted);">He didn't practice. Consequently he didn't pass the exam.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">obwohl</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">although / even though</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📐 Word Order</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Verb moves to the END of the clause</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Obwohl er muede ist, arbeitet er weiter.</p><p class="italic text-[13px]" style="color:var(--text-muted);">Although he is tired, he keeps working.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">trotzdem</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">nevertheless / despite that</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📐 Word Order</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Causes subject-verb inversion</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Es regnet. Trotzdem gehen wir spazieren.</p><p class="italic text-[13px]" style="color:var(--text-muted);">It's raining. Nevertheless we go for a walk.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">aber</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">but / however</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📐 Word Order</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">No change - keeps V2 in both clauses</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich moechte kommen, aber ich habe keine Zeit.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I'd like to come, but I don't have time.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">jedoch</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">however / yet</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📐 Word Order</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Can appear in different positions; causes inversion if first</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Das war schwierig. Jedoch haben wir es geschafft.</p><p class="italic text-[13px]" style="color:var(--text-muted);">That was difficult. However we managed it.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">dennoch</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">nonetheless / still</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📐 Word Order</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Causes subject-verb inversion</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Die Aufgabe ist schwer. Dennoch versuchen wir es.</p><p class="italic text-[13px]" style="color:var(--text-muted);">The task is hard. Nonetheless we try it.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">obgleich</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">even though / although (formal)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📐 Word Order</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Verb moves to the END</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Obgleich er Erfahrung hat, macht er Fehler.</p><p class="italic text-[13px]" style="color:var(--text-muted);">Even though he has experience, he makes mistakes.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">damit</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">so that / in order that (different subjects)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📐 Word Order</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Verb moves to the END of the clause</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ich erklaere es langsam, damit du alles verstehst.</p><p class="italic text-[13px]" style="color:var(--text-muted);">I explain it slowly so that you understand everything.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">um ... zu + Infinitiv</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">in order to (same subject)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📐 Word Order</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">um at start, zu + infinitive at end of clause</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Er lernt Deutsch, um in Deutschland zu arbeiten.</p><p class="italic text-[13px]" style="color:var(--text-muted);">He learns German in order to work in Germany.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">als</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">when (single past event)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📐 Word Order</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Verb moves to the END; used for SINGLE past events</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Als ich Kind war, wohnte ich in Hamburg.</p><p class="italic text-[13px]" style="color:var(--text-muted);">When I was a child, I lived in Hamburg.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">wenn</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">when / whenever / if</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📐 Word Order</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Verb moves to the END; used for present, future, repeated events</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Wenn ich Zeit habe, lese ich ein Buch.</p><p class="italic text-[13px]" style="color:var(--text-muted);">When I have time, I read a book.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">waehrend</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">while / during</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📐 Word Order</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Verb moves to the END</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Waehrend er kochte, hoerte er Musik.</p><p class="italic text-[13px]" style="color:var(--text-muted);">While he was cooking, he listened to music.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">nachdem</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">after (an action is completed)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📐 Word Order</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Verb at END; tense must shift (Plusquamperfekt in the nachdem-clause)</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Nachdem er gegessen hatte, machte er einen Spaziergang.</p><p class="italic text-[13px]" style="color:var(--text-muted);">After he had eaten, he went for a walk.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">bevor</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">before</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📐 Word Order</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Verb moves to the END</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Bevor er schlaeft, putzt er die Zaehne.</p><p class="italic text-[13px]" style="color:var(--text-muted);">Before he sleeps, he brushes his teeth.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">seitdem</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">since (a point in time)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📐 Word Order</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Verb moves to the END</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Seitdem er in Muenchen wohnt, spricht er besser Deutsch.</p><p class="italic text-[13px]" style="color:var(--text-muted);">Since he has been living in Munich, he speaks German better.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">sobald</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">as soon as</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📐 Word Order</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Verb moves to the END</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Sobald der Zug ankommt, steigen wir ein.</p><p class="italic text-[13px]" style="color:var(--text-muted);">As soon as the train arrives, we get on.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">sondern</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">but rather / but instead (after negation)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📐 Word Order</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Used after negation (nicht / kein); no word order change</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Er ist nicht gross, sondern klein.</p><p class="italic text-[13px]" style="color:var(--text-muted);">He is not tall, but rather short.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">waehrend (adversativ)</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">while / whereas (contrast)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📐 Word Order</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Verb moves to the END</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Er mag Kaffee, waehrend sie lieber Tee trinkt.</p><p class="italic text-[13px]" style="color:var(--text-muted);">He likes coffee, whereas she prefers tea.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">sodass</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">so that (as a result)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📐 Word Order</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Verb moves to the END</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Er sprach zu leise, sodass wir ihn nicht hoeren konnten.</p><p class="italic text-[13px]" style="color:var(--text-muted);">He spoke too quietly, so that we couldn't hear him.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">so ... dass</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">so ... that</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📐 Word Order</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">so + adjective in main clause, dass + verb at END</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Das Buch ist so interessant, dass ich es nicht weglegen konnte.</p><p class="italic text-[13px]" style="color:var(--text-muted);">The book is so interesting that I couldn't put it down.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">falls</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">if / in case (conditional)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📐 Word Order</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Verb moves to the END</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Falls es regnet, nehmen wir ein Taxi.</p><p class="italic text-[13px]" style="color:var(--text-muted);">If it rains, we'll take a taxi.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">sofern</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">provided that / as long as</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📐 Word Order</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Verb moves to the END</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Sofern du puenktlich bist, koennen wir das schaffen.</p><p class="italic text-[13px]" style="color:var(--text-muted);">Provided you are on time, we can manage it.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">indem</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">by doing / by (method)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📐 Word Order</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Verb moves to the END; same subject as main clause</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Er lernt Deutsch, indem er jeden Tag Vokabeln uebst.</p><p class="italic text-[13px]" style="color:var(--text-muted);">He learns German by practising vocabulary every day.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">anstatt ... zu + Infinitiv</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">instead of (doing something)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📐 Word Order</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">anstatt at start, zu + infinitive at end</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Anstatt zu lernen, schaut er Fernsehen.</p><p class="italic text-[13px]" style="color:var(--text-muted);">Instead of studying, he watches TV.</p></div></div></div></div></div></div></main><footer class="mt-auto border-t py-8" style="background-color:var(--bg);border-color:var(--border);"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-medium" style="color:var(--text-muted);"><div>&copy; 2025 - 2026 Small Talk Café Podcasts. All rights reserved.</div><div class="flex gap-4">Made in Bayern ❤️ Los Geht's!</div></div></footer><!-- Theme toggle + Language switcher script --><script>
+      // ── Theme ──────────────────────────────────────
+      function applyTheme(dark) {
+        if (dark) {
+          document.documentElement.classList.add('dark');
+          localStorage.setItem('wortschatz_theme', 'dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+          localStorage.setItem('wortschatz_theme', 'light');
+        }
+        const icon = document.getElementById('theme-icon');
+        const label = document.getElementById('theme-label');
+        if (icon) icon.textContent = dark ? '🌙' : '☀️';
+        if (label) label.textContent = dark ? 'Dark' : 'Light';
+      }
+
+      const isDark = document.documentElement.classList.contains('dark');
+      applyTheme(isDark);
+
+      document.getElementById('theme-toggle')?.addEventListener('click', () => {
+        const nowDark = !document.documentElement.classList.contains('dark');
+        applyTheme(nowDark);
+      });
+
+      // ── Language Switcher ──────────────────────────
+      const LANG_CONTENT = {
+        de: {
+          name: 'Deutsch Lounge',
+          flag: '🇩🇪',
+          code: 'DE',
+          subtitle: 'Systematisches Vokabel- und Grammatiktraining',
+          tagline: 'Deutsch Lounge',
+          welcome: 'Willkommen beim',
+          cards: [
+            { title: 'Vokabeln', desc: 'Erweitere deinen Wortschatz. Lerne Nomen, Verben und Redewendungen mit Beispielsätzen.' },
+            { title: 'Verben', desc: 'Meistere reguläre, unregelmäßige, modale und reflexive Verben mit Konjugationstabellen.' },
+            { title: 'Grammatik', desc: 'Regeln verstehen & üben: Adjektivdeklination, Fälle, Präpositionen, Konnektoren & Phrasen.' },
+            { title: 'Redemittel', desc: 'Essentielle Phrasen für den Alltag, Diskussionen und Präsentationen.' }
+          ]
+        },
+        es: {
+          name: 'Spanish Gym',
+          flag: '🇪🇸',
+          code: 'ES',
+          subtitle: 'Tu compañero para aprender Español A1 – B2',
+          tagline: 'A1–B2 Spanish Curriculum',
+          welcome: 'Bienvenido al',
+          cards: [
+            { title: 'Vocabulario', desc: 'Amplía tu vocabulario A1–B2. Aprende sustantivos, verbos y frases con ejemplos contextuales.' },
+            { title: 'Verbos', desc: 'Domina verbos regulares, irregulares y reflexivos con tablas de conjugación.' },
+            { title: 'Gramática', desc: 'Entiende y practica las reglas gramaticales, casos y conectores.' },
+            { title: 'Expresiones', desc: 'Frases esenciales para el día a día, discusiones y presentaciones.' }
+          ]
+        },
+        fr: {
+          name: 'French Gym',
+          flag: '🇫🇷',
+          code: 'FR',
+          subtitle: 'Ton compagnon pour apprendre le Français A1 – B2',
+          tagline: 'A1–B2 French Curriculum',
+          welcome: 'Bienvenue au',
+          cards: [
+            { title: 'Vocabulaire', desc: 'Élargis ton vocabulaire A1–B2. Apprends des noms, verbes et expressions avec des exemples.' },
+            { title: 'Verbes', desc: 'Maîtrise les verbes réguliers, irréguliers et réflexifs avec des tableaux de conjugaison.' },
+            { title: 'Grammaire', desc: 'Comprends et pratique les règles de grammaire, les cas et les connecteurs.' },
+            { title: 'Expressions', desc: 'Phrases essentielles pour la vie quotidienne, les discussions et les présentations.' }
+          ]
+        }
+      };
+
+      function applyLanguage(lang) {
+        const c = LANG_CONTENT[lang] || LANG_CONTENT['de'];
+        localStorage.setItem('gym_language', lang);
+
+        // Header
+        const flag = document.getElementById('lang-flag');
+        const code = document.getElementById('lang-code');
+        const siteName = document.getElementById('site-name');
+        if (flag) flag.textContent = c.flag;
+        if (code) code.textContent = c.code;
+        if (siteName) siteName.textContent = c.name;
+
+        // Footer
+        const footerName = document.getElementById('footer-gym-name');
+        const footerLevel = document.getElementById('footer-level');
+        if (footerName) footerName.textContent = c.name;
+        if (footerLevel) footerLevel.textContent = c.tagline;
+
+        const isGerman = lang === 'de';
+        const overlay = document.getElementById('coming-soon-overlay');
+        const mainContent = document.getElementById('main-content');
+        const germanNavLinks = document.querySelectorAll('[data-german-nav]');
+
+        if (isGerman) {
+          // Show normal German content
+          if (overlay) overlay.classList.add('hidden');
+          if (mainContent) mainContent.classList.remove('hidden');
+          germanNavLinks.forEach(el => el.classList.remove('hidden'));
+
+          // Hero on homepage only
+          const heroTitle = document.getElementById('hero-gym-name');
+          const heroSubtitle = document.getElementById('hero-subtitle');
+          const heroWelcome = document.getElementById('hero-welcome');
+          if (heroTitle) heroTitle.textContent = c.name;
+          if (heroSubtitle) heroSubtitle.textContent = c.subtitle;
+          if (heroWelcome) heroWelcome.textContent = c.welcome;
+
+          // Category cards
+          const cardTitles = document.querySelectorAll('[data-card-title]');
+          const cardDescs = document.querySelectorAll('[data-card-desc]');
+          cardTitles.forEach((el, i) => {
+            if (c.cards[i]) el.textContent = c.cards[i].title;
+          });
+          cardDescs.forEach((el, i) => {
+            if (c.cards[i]) el.textContent = c.cards[i].desc;
+          });
+
+          // Nav links
+          const navLabels = document.querySelectorAll('[data-nav-label]');
+          navLabels.forEach((el, i) => {
+            if (c.cards[i]) el.textContent = c.cards[i].title;
+          });
+        } else {
+          // Non-German: show coming soon overlay, hide main content and German nav
+          if (mainContent) mainContent.classList.add('hidden');
+          germanNavLinks.forEach(el => el.classList.add('hidden'));
+
+          // Populate coming soon overlay
+          const comingFlag = document.getElementById('coming-soon-flag');
+          const comingLang = document.getElementById('coming-soon-lang');
+          if (comingFlag) comingFlag.textContent = c.flag;
+          if (comingLang) comingLang.textContent = c.name + ' content';
+
+          if (overlay) {
+            overlay.classList.remove('hidden');
+            overlay.classList.add('flex');
+          }
+        }
+      }
+
+      // Restore saved language
+      const savedLang = localStorage.getItem('gym_language') || 'de';
+      applyLanguage(savedLang);
+
+      // Dropdown toggle
+      const langBtn = document.getElementById('lang-btn');
+      const langMenu = document.getElementById('lang-menu');
+
+      langBtn?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        langMenu?.classList.toggle('hidden');
+      });
+
+      document.addEventListener('click', () => {
+        langMenu?.classList.add('hidden');
+      });
+
+      document.querySelectorAll('.lang-option').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const lang = btn.dataset.lang;
+          applyLanguage(lang);
+          langMenu?.classList.add('hidden');
+        });
+      });
+
+      // Coming soon "Switch to German" button
+      document.getElementById('coming-soon-back-btn')?.addEventListener('click', () => {
+        applyLanguage('de');
+      });
+    </script></body></html><script type="module" src="/languagelounge/_astro/_deckId_.astro_astro_type_script_index_0_lang.B80xyaMZ.js"></script><script>(function(){const cardsJson = "[{\"id\":\"con-weil\",\"connector\":\"weil\",\"translation\":\"because\",\"clause_type\":\"subordinating\",\"word_order\":\"Verb moves to the END of the clause\",\"example_de\":\"Ich lerne Deutsch, weil ich in Deutschland arbeiten moechte.\",\"example_en\":\"I'm learning German because I want to work in Germany.\",\"example2_de\":\"Er kommt nicht, weil er krank ist.\",\"example2_en\":\"He's not coming because he is sick.\",\"example3_de\":\"Sie ist gluecklich, weil sie eine neue Stelle gefunden hat.\",\"example3_en\":\"She is happy because she found a new job.\",\"cefr\":\"A2\",\"target\":\"weil\",\"source\":\"because\",\"example_target\":\"Ich lerne Deutsch, weil ich in Deutschland arbeiten moechte.\",\"example_source\":\"I'm learning German because I want to work in Germany.\",\"tags\":[\"grammatik\"],\"type\":\"vocab\"},{\"id\":\"con-denn\",\"connector\":\"denn\",\"translation\":\"because / for (more formal)\",\"clause_type\":\"coordinating\",\"word_order\":\"No word order change - keeps Verb in position 2\",\"example_de\":\"Ich lerne Deutsch, denn ich moechte in Deutschland arbeiten.\",\"example_en\":\"I'm learning German, for I want to work in Germany.\",\"example2_de\":\"Er kommt nicht, denn er ist krank.\",\"example2_en\":\"He's not coming, for he is sick.\",\"example3_de\":\"Wir fahren mit dem Zug, denn das Auto ist kaputt.\",\"example3_en\":\"We're taking the train because the car is broken.\",\"cefr\":\"A2\",\"target\":\"denn\",\"source\":\"because / for (more formal)\",\"example_target\":\"Ich lerne Deutsch, denn ich moechte in Deutschland arbeiten.\",\"example_source\":\"I'm learning German, for I want to work in Germany.\",\"tags\":[\"grammatik\"],\"type\":\"vocab\"},{\"id\":\"con-da\",\"connector\":\"da\",\"translation\":\"since / as (already-known reason)\",\"clause_type\":\"subordinating\",\"word_order\":\"Verb moves to the END; often used at the beginning\",\"example_de\":\"Da es regnet, nehmen wir einen Regenschirm.\",\"example_en\":\"Since it's raining, we're taking an umbrella.\",\"example2_de\":\"Da er schon gegessen hatte, bestellte er nur einen Kaffee.\",\"example2_en\":\"Since he had already eaten, he only ordered a coffee.\",\"example3_de\":\"Da sie Erfahrung hat, bekommt sie den Job.\",\"example3_en\":\"Since she has experience, she gets the job.\",\"cefr\":\"B1\",\"target\":\"da\",\"source\":\"since / as (already-known reason)\",\"example_target\":\"Da es regnet, nehmen wir einen Regenschirm.\",\"example_source\":\"Since it's raining, we're taking an umbrella.\",\"tags\":[\"grammatik\"],\"type\":\"vocab\"},{\"id\":\"con-deshalb\",\"connector\":\"deshalb\",\"translation\":\"therefore / that's why\",\"clause_type\":\"adverbial\",\"word_order\":\"deshalb pushes the subject AFTER the verb (inversion)\",\"example_de\":\"Es regnet. Deshalb bleiben wir zu Hause.\",\"example_en\":\"It's raining. That's why we're staying home.\",\"example2_de\":\"Er ist krank, deshalb kommt er nicht.\",\"example2_en\":\"He is sick, that's why he isn't coming.\",\"example3_de\":\"Ich habe keine Zeit, deshalb schreibe ich nur kurz.\",\"example3_en\":\"I have no time, that's why I'm writing briefly.\",\"cefr\":\"B1\",\"target\":\"deshalb\",\"source\":\"therefore / that's why\",\"example_target\":\"Es regnet. Deshalb bleiben wir zu Hause.\",\"example_source\":\"It's raining. That's why we're staying home.\",\"tags\":[\"grammatik\"],\"type\":\"vocab\"},{\"id\":\"con-daher\",\"connector\":\"daher\",\"translation\":\"therefore / hence\",\"clause_type\":\"adverbial\",\"word_order\":\"Same as deshalb - causes subject-verb inversion\",\"example_de\":\"Das Wetter ist schlecht. Daher fahren wir nicht ans Meer.\",\"example_en\":\"The weather is bad. Hence we're not going to the sea.\",\"example2_de\":\"Er hat wenig geschlafen, daher ist er muede.\",\"example2_en\":\"He slept little, hence he is tired.\",\"cefr\":\"B1\",\"target\":\"daher\",\"source\":\"therefore / hence\",\"example_target\":\"Das Wetter ist schlecht. Daher fahren wir nicht ans Meer.\",\"example_source\":\"The weather is bad. Hence we're not going to the sea.\",\"tags\":[\"grammatik\"],\"type\":\"vocab\"},{\"id\":\"con-deswegen\",\"connector\":\"deswegen\",\"translation\":\"because of this / for this reason\",\"clause_type\":\"adverbial\",\"word_order\":\"Causes subject-verb inversion\",\"example_de\":\"Sie hat keine Lust. Deswegen kommt sie nicht.\",\"example_en\":\"She doesn't feel like it. Because of this she isn't coming.\",\"example2_de\":\"Das ist teuer, deswegen kaufe ich es nicht.\",\"example2_en\":\"That's expensive, for this reason I'm not buying it.\",\"cefr\":\"B1\",\"target\":\"deswegen\",\"source\":\"because of this / for this reason\",\"example_target\":\"Sie hat keine Lust. Deswegen kommt sie nicht.\",\"example_source\":\"She doesn't feel like it. Because of this she isn't coming.\",\"tags\":[\"grammatik\"],\"type\":\"vocab\"},{\"id\":\"con-folglich\",\"connector\":\"folglich\",\"translation\":\"consequently / as a result\",\"clause_type\":\"adverbial\",\"word_order\":\"Causes subject-verb inversion\",\"example_de\":\"Er hat nicht geubt. Folglich hat er die Pruefung nicht bestanden.\",\"example_en\":\"He didn't practice. Consequently he didn't pass the exam.\",\"example2_de\":\"Die Maschine ist kaputt, folglich muss sie repariert werden.\",\"example2_en\":\"The machine is broken, consequently it must be repaired.\",\"cefr\":\"B2\",\"target\":\"folglich\",\"source\":\"consequently / as a result\",\"example_target\":\"Er hat nicht geubt. Folglich hat er die Pruefung nicht bestanden.\",\"example_source\":\"He didn't practice. Consequently he didn't pass the exam.\",\"tags\":[\"grammatik\"],\"type\":\"vocab\"},{\"id\":\"con-obwohl\",\"connector\":\"obwohl\",\"translation\":\"although / even though\",\"clause_type\":\"subordinating\",\"word_order\":\"Verb moves to the END of the clause\",\"example_de\":\"Obwohl er muede ist, arbeitet er weiter.\",\"example_en\":\"Although he is tired, he keeps working.\",\"example2_de\":\"Sie kauft das Kleid, obwohl es teuer ist.\",\"example2_en\":\"She buys the dress even though it is expensive.\",\"example3_de\":\"Wir gehen spazieren, obwohl es regnet.\",\"example3_en\":\"We go for a walk even though it's raining.\",\"cefr\":\"B1\",\"target\":\"obwohl\",\"source\":\"although / even though\",\"example_target\":\"Obwohl er muede ist, arbeitet er weiter.\",\"example_source\":\"Although he is tired, he keeps working.\",\"tags\":[\"grammatik\"],\"type\":\"vocab\"},{\"id\":\"con-trotzdem\",\"connector\":\"trotzdem\",\"translation\":\"nevertheless / despite that\",\"clause_type\":\"adverbial\",\"word_order\":\"Causes subject-verb inversion\",\"example_de\":\"Es regnet. Trotzdem gehen wir spazieren.\",\"example_en\":\"It's raining. Nevertheless we go for a walk.\",\"example2_de\":\"Er ist krank, trotzdem geht er zur Arbeit.\",\"example2_en\":\"He is sick, but he goes to work anyway.\",\"example3_de\":\"Ich bin muede, trotzdem bleibe ich wach.\",\"example3_en\":\"I'm tired, nevertheless I stay awake.\",\"cefr\":\"B1\",\"target\":\"trotzdem\",\"source\":\"nevertheless / despite that\",\"example_target\":\"Es regnet. Trotzdem gehen wir spazieren.\",\"example_source\":\"It's raining. Nevertheless we go for a walk.\",\"tags\":[\"grammatik\"],\"type\":\"vocab\"},{\"id\":\"con-aber\",\"connector\":\"aber\",\"translation\":\"but / however\",\"clause_type\":\"coordinating\",\"word_order\":\"No change - keeps V2 in both clauses\",\"example_de\":\"Ich moechte kommen, aber ich habe keine Zeit.\",\"example_en\":\"I'd like to come, but I don't have time.\",\"example2_de\":\"Das Essen war gut, aber der Service war langsam.\",\"example2_en\":\"The food was good, but the service was slow.\",\"example3_de\":\"Er ist nett, aber manchmal ungeduldig.\",\"example3_en\":\"He is nice, but sometimes impatient.\",\"cefr\":\"A1\",\"target\":\"aber\",\"source\":\"but / however\",\"example_target\":\"Ich moechte kommen, aber ich habe keine Zeit.\",\"example_source\":\"I'd like to come, but I don't have time.\",\"tags\":[\"grammatik\"],\"type\":\"vocab\"},{\"id\":\"con-jedoch\",\"connector\":\"jedoch\",\"translation\":\"however / yet\",\"clause_type\":\"adverbial\",\"word_order\":\"Can appear in different positions; causes inversion if first\",\"example_de\":\"Das war schwierig. Jedoch haben wir es geschafft.\",\"example_en\":\"That was difficult. However we managed it.\",\"example2_de\":\"Er wollte helfen, jedoch fehlte ihm die Zeit.\",\"example2_en\":\"He wanted to help, however he lacked the time.\",\"cefr\":\"B2\",\"target\":\"jedoch\",\"source\":\"however / yet\",\"example_target\":\"Das war schwierig. Jedoch haben wir es geschafft.\",\"example_source\":\"That was difficult. However we managed it.\",\"tags\":[\"grammatik\"],\"type\":\"vocab\"},{\"id\":\"con-dennoch\",\"connector\":\"dennoch\",\"translation\":\"nonetheless / still\",\"clause_type\":\"adverbial\",\"word_order\":\"Causes subject-verb inversion\",\"example_de\":\"Die Aufgabe ist schwer. Dennoch versuchen wir es.\",\"example_en\":\"The task is hard. Nonetheless we try it.\",\"example2_de\":\"Es war spaet, dennoch blieben alle.\",\"example2_en\":\"It was late, nonetheless everyone stayed.\",\"cefr\":\"B2\",\"target\":\"dennoch\",\"source\":\"nonetheless / still\",\"example_target\":\"Die Aufgabe ist schwer. Dennoch versuchen wir es.\",\"example_source\":\"The task is hard. Nonetheless we try it.\",\"tags\":[\"grammatik\"],\"type\":\"vocab\"},{\"id\":\"con-obgleich\",\"connector\":\"obgleich\",\"translation\":\"even though / although (formal)\",\"clause_type\":\"subordinating\",\"word_order\":\"Verb moves to the END\",\"example_de\":\"Obgleich er Erfahrung hat, macht er Fehler.\",\"example_en\":\"Even though he has experience, he makes mistakes.\",\"cefr\":\"B2\",\"target\":\"obgleich\",\"source\":\"even though / although (formal)\",\"example_target\":\"Obgleich er Erfahrung hat, macht er Fehler.\",\"example_source\":\"Even though he has experience, he makes mistakes.\",\"tags\":[\"grammatik\"],\"type\":\"vocab\"},{\"id\":\"con-damit\",\"connector\":\"damit\",\"translation\":\"so that / in order that (different subjects)\",\"clause_type\":\"subordinating\",\"word_order\":\"Verb moves to the END of the clause\",\"example_de\":\"Ich erklaere es langsam, damit du alles verstehst.\",\"example_en\":\"I explain it slowly so that you understand everything.\",\"example2_de\":\"Er spart Geld, damit er reisen kann.\",\"example2_en\":\"He saves money so that he can travel.\",\"example3_de\":\"Sie lernt fleissig, damit sie die Pruefung besteht.\",\"example3_en\":\"She studies hard so that she passes the exam.\",\"cefr\":\"B1\",\"target\":\"damit\",\"source\":\"so that / in order that (different subjects)\",\"example_target\":\"Ich erklaere es langsam, damit du alles verstehst.\",\"example_source\":\"I explain it slowly so that you understand everything.\",\"tags\":[\"grammatik\"],\"type\":\"vocab\"},{\"id\":\"con-um-zu\",\"connector\":\"um ... zu + Infinitiv\",\"translation\":\"in order to (same subject)\",\"clause_type\":\"infinitive\",\"word_order\":\"um at start, zu + infinitive at end of clause\",\"example_de\":\"Er lernt Deutsch, um in Deutschland zu arbeiten.\",\"example_en\":\"He learns German in order to work in Germany.\",\"example2_de\":\"Ich spare Geld, um ein Auto zu kaufen.\",\"example2_en\":\"I'm saving money in order to buy a car.\",\"example3_de\":\"Sie geht frueh schlafen, um ausgeruht zu sein.\",\"example3_en\":\"She goes to bed early in order to be well-rested.\",\"cefr\":\"B1\",\"target\":\"um ... zu + Infinitiv\",\"source\":\"in order to (same subject)\",\"example_target\":\"Er lernt Deutsch, um in Deutschland zu arbeiten.\",\"example_source\":\"He learns German in order to work in Germany.\",\"tags\":[\"grammatik\"],\"type\":\"vocab\"},{\"id\":\"con-als\",\"connector\":\"als\",\"translation\":\"when (single past event)\",\"clause_type\":\"subordinating\",\"word_order\":\"Verb moves to the END; used for SINGLE past events\",\"example_de\":\"Als ich Kind war, wohnte ich in Hamburg.\",\"example_en\":\"When I was a child, I lived in Hamburg.\",\"example2_de\":\"Als der Film begann, war das Kino voll.\",\"example2_en\":\"When the film started, the cinema was full.\",\"example3_de\":\"Als er ankam, waren alle schon da.\",\"example3_en\":\"When he arrived, everyone was already there.\",\"cefr\":\"A2\",\"target\":\"als\",\"source\":\"when (single past event)\",\"example_target\":\"Als ich Kind war, wohnte ich in Hamburg.\",\"example_source\":\"When I was a child, I lived in Hamburg.\",\"tags\":[\"grammatik\"],\"type\":\"vocab\"},{\"id\":\"con-wenn\",\"connector\":\"wenn\",\"translation\":\"when / whenever / if\",\"clause_type\":\"subordinating\",\"word_order\":\"Verb moves to the END; used for present, future, repeated events\",\"example_de\":\"Wenn ich Zeit habe, lese ich ein Buch.\",\"example_en\":\"When I have time, I read a book.\",\"example2_de\":\"Wenn es regnet, bleibe ich zu Hause.\",\"example2_en\":\"Whenever it rains, I stay at home.\",\"example3_de\":\"Ruf mich an, wenn du ankommst.\",\"example3_en\":\"Call me when you arrive.\",\"cefr\":\"A2\",\"target\":\"wenn\",\"source\":\"when / whenever / if\",\"example_target\":\"Wenn ich Zeit habe, lese ich ein Buch.\",\"example_source\":\"When I have time, I read a book.\",\"tags\":[\"grammatik\"],\"type\":\"vocab\"},{\"id\":\"con-waehrend\",\"connector\":\"waehrend\",\"translation\":\"while / during\",\"clause_type\":\"subordinating\",\"word_order\":\"Verb moves to the END\",\"example_de\":\"Waehrend er kochte, hoerte er Musik.\",\"example_en\":\"While he was cooking, he listened to music.\",\"example2_de\":\"Ich lese, waehrend du schlaefst.\",\"example2_en\":\"I read while you sleep.\",\"example3_de\":\"Waehrend der Pruefung darf man nicht sprechen.\",\"example3_en\":\"During the exam you are not allowed to speak.\",\"cefr\":\"B1\",\"target\":\"waehrend\",\"source\":\"while / during\",\"example_target\":\"Waehrend er kochte, hoerte er Musik.\",\"example_source\":\"While he was cooking, he listened to music.\",\"tags\":[\"grammatik\"],\"type\":\"vocab\"},{\"id\":\"con-nachdem\",\"connector\":\"nachdem\",\"translation\":\"after (an action is completed)\",\"clause_type\":\"subordinating\",\"word_order\":\"Verb at END; tense must shift (Plusquamperfekt in the nachdem-clause)\",\"example_de\":\"Nachdem er gegessen hatte, machte er einen Spaziergang.\",\"example_en\":\"After he had eaten, he went for a walk.\",\"example2_de\":\"Nachdem sie die Schule beendet hatte, begann sie ein Studium.\",\"example2_en\":\"After she had finished school, she started university.\",\"example3_de\":\"Ruf mich an, nachdem du die Nachricht gelesen hast.\",\"example3_en\":\"Call me after you have read the message.\",\"cefr\":\"B1\",\"target\":\"nachdem\",\"source\":\"after (an action is completed)\",\"example_target\":\"Nachdem er gegessen hatte, machte er einen Spaziergang.\",\"example_source\":\"After he had eaten, he went for a walk.\",\"tags\":[\"grammatik\"],\"type\":\"vocab\"},{\"id\":\"con-bevor\",\"connector\":\"bevor\",\"translation\":\"before\",\"clause_type\":\"subordinating\",\"word_order\":\"Verb moves to the END\",\"example_de\":\"Bevor er schlaeft, putzt er die Zaehne.\",\"example_en\":\"Before he sleeps, he brushes his teeth.\",\"example2_de\":\"Denk nach, bevor du antwortest.\",\"example2_en\":\"Think before you answer.\",\"example3_de\":\"Bevor sie reiste, hatte sie alles vorbereitet.\",\"example3_en\":\"Before she traveled, she had prepared everything.\",\"cefr\":\"B1\",\"target\":\"bevor\",\"source\":\"before\",\"example_target\":\"Bevor er schlaeft, putzt er die Zaehne.\",\"example_source\":\"Before he sleeps, he brushes his teeth.\",\"tags\":[\"grammatik\"],\"type\":\"vocab\"},{\"id\":\"con-seitdem\",\"connector\":\"seitdem\",\"translation\":\"since (a point in time)\",\"clause_type\":\"subordinating\",\"word_order\":\"Verb moves to the END\",\"example_de\":\"Seitdem er in Muenchen wohnt, spricht er besser Deutsch.\",\"example_en\":\"Since he has been living in Munich, he speaks German better.\",\"example2_de\":\"Seitdem sie einen Hund hat, geht sie taeglich spazieren.\",\"example2_en\":\"Since she got a dog, she goes for a walk every day.\",\"cefr\":\"B1\",\"target\":\"seitdem\",\"source\":\"since (a point in time)\",\"example_target\":\"Seitdem er in Muenchen wohnt, spricht er besser Deutsch.\",\"example_source\":\"Since he has been living in Munich, he speaks German better.\",\"tags\":[\"grammatik\"],\"type\":\"vocab\"},{\"id\":\"con-sobald\",\"connector\":\"sobald\",\"translation\":\"as soon as\",\"clause_type\":\"subordinating\",\"word_order\":\"Verb moves to the END\",\"example_de\":\"Sobald der Zug ankommt, steigen wir ein.\",\"example_en\":\"As soon as the train arrives, we get on.\",\"example2_de\":\"Ich rufe dich an, sobald ich zu Hause bin.\",\"example2_en\":\"I'll call you as soon as I'm home.\",\"cefr\":\"B1\",\"target\":\"sobald\",\"source\":\"as soon as\",\"example_target\":\"Sobald der Zug ankommt, steigen wir ein.\",\"example_source\":\"As soon as the train arrives, we get on.\",\"tags\":[\"grammatik\"],\"type\":\"vocab\"},{\"id\":\"con-sondern\",\"connector\":\"sondern\",\"translation\":\"but rather / but instead (after negation)\",\"clause_type\":\"coordinating\",\"word_order\":\"Used after negation (nicht / kein); no word order change\",\"example_de\":\"Er ist nicht gross, sondern klein.\",\"example_en\":\"He is not tall, but rather short.\",\"example2_de\":\"Ich fahre nicht mit dem Auto, sondern mit dem Fahrrad.\",\"example2_en\":\"I'm not going by car, but by bicycle instead.\",\"example3_de\":\"Das ist kein Fehler, sondern eine Absicht.\",\"example3_en\":\"That's not a mistake, but an intention.\",\"cefr\":\"A2\",\"target\":\"sondern\",\"source\":\"but rather / but instead (after negation)\",\"example_target\":\"Er ist nicht gross, sondern klein.\",\"example_source\":\"He is not tall, but rather short.\",\"tags\":[\"grammatik\"],\"type\":\"vocab\"},{\"id\":\"con-waehrend-adv\",\"connector\":\"waehrend (adversativ)\",\"translation\":\"while / whereas (contrast)\",\"clause_type\":\"subordinating\",\"word_order\":\"Verb moves to the END\",\"example_de\":\"Er mag Kaffee, waehrend sie lieber Tee trinkt.\",\"example_en\":\"He likes coffee, whereas she prefers tea.\",\"example2_de\":\"Waehrend ich lerne, schaut er Fernsehen.\",\"example2_en\":\"While I'm studying, he watches TV.\",\"cefr\":\"B1\",\"target\":\"waehrend (adversativ)\",\"source\":\"while / whereas (contrast)\",\"example_target\":\"Er mag Kaffee, waehrend sie lieber Tee trinkt.\",\"example_source\":\"He likes coffee, whereas she prefers tea.\",\"tags\":[\"grammatik\"],\"type\":\"vocab\"},{\"id\":\"con-sodass\",\"connector\":\"sodass\",\"translation\":\"so that (as a result)\",\"clause_type\":\"subordinating\",\"word_order\":\"Verb moves to the END\",\"example_de\":\"Er sprach zu leise, sodass wir ihn nicht hoeren konnten.\",\"example_en\":\"He spoke too quietly, so that we couldn't hear him.\",\"example2_de\":\"Es war so kalt, sodass alle Fenster eingefroren waren.\",\"example2_en\":\"It was so cold that all the windows were frozen.\",\"cefr\":\"B1\",\"target\":\"sodass\",\"source\":\"so that (as a result)\",\"example_target\":\"Er sprach zu leise, sodass wir ihn nicht hoeren konnten.\",\"example_source\":\"He spoke too quietly, so that we couldn't hear him.\",\"tags\":[\"grammatik\"],\"type\":\"vocab\"},{\"id\":\"con-so-dass\",\"connector\":\"so ... dass\",\"translation\":\"so ... that\",\"clause_type\":\"subordinating\",\"word_order\":\"so + adjective in main clause, dass + verb at END\",\"example_de\":\"Das Buch ist so interessant, dass ich es nicht weglegen konnte.\",\"example_en\":\"The book is so interesting that I couldn't put it down.\",\"example2_de\":\"Er war so erschoepft, dass er sofort einschlief.\",\"example2_en\":\"He was so exhausted that he fell asleep immediately.\",\"example3_de\":\"Die Pruefung war so schwer, dass viele durchgefallen sind.\",\"example3_en\":\"The exam was so hard that many people failed.\",\"cefr\":\"B1\",\"target\":\"so ... dass\",\"source\":\"so ... that\",\"example_target\":\"Das Buch ist so interessant, dass ich es nicht weglegen konnte.\",\"example_source\":\"The book is so interesting that I couldn't put it down.\",\"tags\":[\"grammatik\"],\"type\":\"vocab\"},{\"id\":\"con-falls\",\"connector\":\"falls\",\"translation\":\"if / in case (conditional)\",\"clause_type\":\"subordinating\",\"word_order\":\"Verb moves to the END\",\"example_de\":\"Falls es regnet, nehmen wir ein Taxi.\",\"example_en\":\"If it rains, we'll take a taxi.\",\"example2_de\":\"Ruf mich an, falls du Hilfe brauchst.\",\"example2_en\":\"Call me if you need help.\",\"example3_de\":\"Falls er nicht kommt, beginnen wir ohne ihn.\",\"example3_en\":\"If he doesn't come, we'll start without him.\",\"cefr\":\"B1\",\"target\":\"falls\",\"source\":\"if / in case (conditional)\",\"example_target\":\"Falls es regnet, nehmen wir ein Taxi.\",\"example_source\":\"If it rains, we'll take a taxi.\",\"tags\":[\"grammatik\"],\"type\":\"vocab\"},{\"id\":\"con-sofern\",\"connector\":\"sofern\",\"translation\":\"provided that / as long as\",\"clause_type\":\"subordinating\",\"word_order\":\"Verb moves to the END\",\"example_de\":\"Sofern du puenktlich bist, koennen wir das schaffen.\",\"example_en\":\"Provided you are on time, we can manage it.\",\"example2_de\":\"Das Projekt gelingt, sofern alle mithelfen.\",\"example2_en\":\"The project will succeed as long as everyone helps.\",\"cefr\":\"B2\",\"target\":\"sofern\",\"source\":\"provided that / as long as\",\"example_target\":\"Sofern du puenktlich bist, koennen wir das schaffen.\",\"example_source\":\"Provided you are on time, we can manage it.\",\"tags\":[\"grammatik\"],\"type\":\"vocab\"},{\"id\":\"con-indem\",\"connector\":\"indem\",\"translation\":\"by doing / by (method)\",\"clause_type\":\"subordinating\",\"word_order\":\"Verb moves to the END; same subject as main clause\",\"example_de\":\"Er lernt Deutsch, indem er jeden Tag Vokabeln uebst.\",\"example_en\":\"He learns German by practising vocabulary every day.\",\"example2_de\":\"Sie verbessert ihren Stil, indem sie viel liest.\",\"example2_en\":\"She improves her style by reading a lot.\",\"example3_de\":\"Man kann Stress abbauen, indem man Sport treibt.\",\"example3_en\":\"One can reduce stress by doing sport.\",\"cefr\":\"B2\",\"target\":\"indem\",\"source\":\"by doing / by (method)\",\"example_target\":\"Er lernt Deutsch, indem er jeden Tag Vokabeln uebst.\",\"example_source\":\"He learns German by practising vocabulary every day.\",\"tags\":[\"grammatik\"],\"type\":\"vocab\"},{\"id\":\"con-anstatt-zu\",\"connector\":\"anstatt ... zu + Infinitiv\",\"translation\":\"instead of (doing something)\",\"clause_type\":\"infinitive\",\"word_order\":\"anstatt at start, zu + infinitive at end\",\"example_de\":\"Anstatt zu lernen, schaut er Fernsehen.\",\"example_en\":\"Instead of studying, he watches TV.\",\"example2_de\":\"Sie arbeitet, anstatt sich zu erholen.\",\"example2_en\":\"She works instead of resting.\",\"cefr\":\"B1\",\"target\":\"anstatt ... zu + Infinitiv\",\"source\":\"instead of (doing something)\",\"example_target\":\"Anstatt zu lernen, schaut er Fernsehen.\",\"example_source\":\"Instead of studying, he watches TV.\",\"tags\":[\"grammatik\"],\"type\":\"vocab\"}]";
+const langConfigJson = "{\"language_pair\":\"english_german\",\"target_lang\":\"de\",\"native_lang\":\"en\",\"target_lang_name\":\"Deutsch\",\"native_lang_name\":\"English\",\"speech_lang\":\"de-DE\",\"noun_metadata_fields\":[{\"key\":\"article\",\"label\":\"Artikel\",\"render\":\"article_badge\"},{\"key\":\"gender\",\"label\":\"Genus\",\"render\":\"gender_label\"},{\"key\":\"plural\",\"label\":\"Plural\",\"render\":\"text\"}],\"article_colours\":{\"der\":\"#4A7C9E\",\"die\":\"#B05070\",\"das\":\"#4A8A5A\"},\"gender_labels\":{\"m\":\"Maskulinum\",\"f\":\"Femininum\",\"n\":\"Neutrum\"},\"verb_tenses\":[\"Präsens\",\"Präteritum\",\"Perfekt\",\"Futur I\",\"Konjunktiv II\"],\"cases\":{\"nominative\":\"Nominativ\",\"accusative\":\"Akkusativ\",\"dative\":\"Dativ\",\"genitive\":\"Genitiv\"},\"ui_labels\":{\"learn_mode\":\"Lernen\",\"train_mode\":\"Trainieren\",\"examples_heading\":\"Beispielsätze\",\"grammar_note_heading\":\"Grammatiknotiz\",\"audio_button\":\"Anhören\",\"back_link\":\"Zurück\",\"card_counter\":\"Karte {current} / {total}\",\"next_button\":\"Weiter\",\"finish_button\":\"Fertig\",\"correct\":\"Richtig!\",\"wrong\":\"Falsch\"}}";
+const category = "grammatik";
+
+  const cards     = JSON.parse(cardsJson);
+  const config    = JSON.parse(langConfigJson);
+  let currentIndex = 0;
+
+  const dotNav    = document.getElementById('dot-nav');
+  const currentNum = document.getElementById('current-num');
+  const progressBar = document.getElementById('progress-bar');
+  const btnPrev   = document.getElementById('btn-prev');
+  const btnNext   = document.getElementById('btn-next');
+  const cardHost  = document.getElementById('card-host');
+  const progressCont = document.getElementById('progress-container');
+
+  const cardViewWrap = document.getElementById('card-view-wrap');
+  const listViewWrap = document.getElementById('list-view-wrap');
+  const btnViewCards = document.getElementById('view-cards-btn');
+  const btnViewList  = document.getElementById('view-list-btn');
+
+  // Toggle Logic
+  function setViewMode(mode) {
+    if (mode === 'list') {
+      cardViewWrap.classList.add('hidden');
+      listViewWrap.classList.remove('hidden');
+      progressCont.classList.add('hidden');
+      btnViewList.classList.add('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewList.classList.remove('text-[var(--text-muted)]');
+      btnViewCards.classList.remove('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewCards.classList.add('text-[var(--text-muted)]');
+    } else {
+      listViewWrap.classList.add('hidden');
+      cardViewWrap.classList.remove('hidden');
+      progressCont.classList.remove('hidden');
+      btnViewCards.classList.add('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewCards.classList.remove('text-[var(--text-muted)]');
+      btnViewList.classList.remove('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewList.classList.add('text-[var(--text-muted)]');
+    }
+  }
+
+  btnViewCards.addEventListener('click', () => setViewMode('cards'));
+  btnViewList.addEventListener('click', () => setViewMode('list'));
+
+  // Default Grammatik and Redemittel to list view!
+  if (category === 'grammatik' || category === 'redemittel' || category === 'phrases') {
+    setViewMode('list');
+  }
+
+
+
+  // ── Helpers (mirror card-renderer.ts — no module imports in inline scripts) ──
+  const articleColours = config.article_colours || { der:'#4A7C9E', die:'#B05070', das:'#4A8A5A' };
+  const genderLabels   = config.gender_labels   || { m:'Maskulinum', f:'Femininum', n:'Neutrum'  };
+  const speechLang     = config.speech_lang     || 'de-DE';
+
+  function stripArticle(w) {
+    return (w || '').replace(/^(der|die|das|el|la|los|las|le|les|l')\s+/i,'').trim();
+  }
+
+  function getTypeLabel(card) {
+    const tags = card.tags || [];
+    if (tags.includes('noun'))       return 'Substantiv';
+    if (tags.includes('verb'))       return 'Verb';
+    if (tags.includes('adjective'))  return 'Adjektiv';
+    if (tags.includes('expression')) return 'Ausdruck';
+    return { vocab:'Vokabel', verb:'Verb', phrase:'Phrase', connector:'Konnektor', grammar:'Grammatik' }[card.type] || 'Vokabel';
+  }
+
+  function normaliseEx(ex) {
+    return { target: ex.target||ex.de||'', source: ex.source||ex.en||'', note: ex.note };
+  }
+
+  function getMetaFacts(card) {
+    const meta = { ...(card.metadata||{}), article:card.article, gender:card.gender, plural:card.plural };
+    const facts = [];
+    for (const field of (config.noun_metadata_fields || [])) {
+      const raw = meta[field.key];
+      if (!raw || raw==='~') continue;
+      let value = String(raw), colour;
+      if (field.render === 'gender_label')  value  = genderLabels[raw] || raw;
+      if (field.render === 'article_badge') colour = articleColours[raw.toLowerCase()] || 'var(--espresso)';
+      facts.push({ label: field.label, value, colour });
+    }
+    return facts;
+  }
+
+  // ── Card renderer ─────────────────────────────────────────────────────────
+  function renderCard(idx) {
+    const card = cards[idx];
+    if (!card || !cardHost) return;
+
+    const lc = cardHost.querySelector('.learning-card');
+    if (!lc) return;
+
+    function sel(cls) { return lc.querySelector(cls); }
+
+    // Type badge + level
+    sel('.lc-type-badge').textContent = getTypeLabel(card);
+    sel('.lc-level-badge').textContent = (card.level || '').toUpperCase();
+
+    // Article
+    const article = card.article || card.metadata?.article;
+    const articleWrap = sel('.lc-article-wrap');
+    const articleEl   = sel('.lc-article');
+    if (article && (card.tags||[]).includes('noun') && !card.plural_only) {
+      articleEl.textContent = article;
+      articleEl.style.color = articleColours[article.toLowerCase()] || 'var(--espresso)';
+      articleWrap.style.display = '';
+    } else {
+      articleWrap.style.display = 'none';
+    }
+
+    // Word / translation / forms
+    sel('.lc-word').textContent        = stripArticle(card.target);
+    sel('.lc-translation').textContent = card.source || '';
+    const plural = card.plural || card.metadata?.plural;
+    sel('.lc-forms').textContent = plural && !card.plural_only ? `Pl. ${plural}` : card.plural_only ? 'nur Plural' : '';
+
+    // Meta grid
+    const metaGrid = sel('.lc-meta-grid');
+    const facts = getMetaFacts(card);
+    if (facts.length) {
+      metaGrid.style.gridTemplateColumns = `repeat(${Math.min(facts.length,4)}, 1fr)`;
+      metaGrid.style.display = '';
+      metaGrid.innerHTML = facts.map((f, i) => `
+        <div class="px-5 py-4 ${i<facts.length-1?'border-r':''}" style="border-color:var(--border);">
+          <p class="text-[9px] font-bold uppercase tracking-widest mb-1" style="color:var(--text-muted);">${f.label}</p>
+          <p class="text-sm font-bold" style="color:${f.colour||'var(--text)'};">${f.value}</p>
+        </div>`).join('');
+    } else {
+      metaGrid.style.display = 'none';
+    }
+
+    // Grammar note
+    const grammarWrap = sel('.lc-grammar-wrap');
+    if (card.grammar_note) {
+      sel('.lc-grammar-text').innerHTML = formatHighlight(card.grammar_note);
+      grammarWrap.classList.remove('hidden');
+    } else {
+      grammarWrap.classList.add('hidden');
+    }
+
+    // Examples
+    const examplesEl = sel('.lc-examples');
+    const rawEx = card.examples || (card.example_target ? [{ target:card.example_target, source:card.example_source }] : []);
+    examplesEl.innerHTML = rawEx.length
+      ? rawEx.map(ex => { const e=normaliseEx(ex); return `
+          <div class="rounded-2xl border overflow-hidden" style="border-color:var(--border);">
+            <div class="px-4 py-3" style="background-color:var(--bg);">
+              <p class="font-semibold leading-snug mb-1" style="color:var(--text);">${e.target}</p>
+              <p class="text-sm italic" style="color:var(--text-muted);">${e.source||''}</p>
+            </div>
+            ${e.note?`<div class="px-4 py-2 border-t" style="border-color:var(--border);">
+              <p class="text-[10px] font-bold font-mono" style="color:var(--espresso);">📐 ${e.note}</p>
+            </div>`:''}
+          </div>`; }).join('')
+      : '<p class="text-sm italic" style="color:var(--text-muted);">Kein Beispiel verfügbar.</p>';
+
+    // Tags
+    sel('.lc-tags').innerHTML = (card.tags||[]).map(t =>
+      `<span class="text-[10px] font-bold px-2 py-0.5 rounded-md border" style="border-color:var(--border);color:var(--text-muted);background-color:var(--bg);">${t}</span>`
+    ).join('');
+
+    // Progress UI
+    if (currentNum)  currentNum.textContent = String(idx+1);
+    if (progressBar) progressBar.style.width = `${Math.round(((idx+1)/cards.length)*100)}%`;
+    if (btnPrev)     btnPrev.disabled = idx === 0;
+    if (btnNext)     btnNext.innerHTML = idx === cards.length-1
+      ? '✓ Fertig'
+      : 'Weiter <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>';
+
+    updateDots();
+
+    // Re-bind audio button cleanly by cloning to strip old listeners
+    const oldBtn = sel('.lc-audio-btn');
+    if (oldBtn) {
+      const newBtn = oldBtn.cloneNode(true);
+      oldBtn.parentNode.replaceChild(newBtn, oldBtn);
+      newBtn.addEventListener('click', speakCurrent);
+    }
+  }
+
+  // ── Dot navigation ────────────────────────────────────────────────────────
+  function buildDots() {
+    if (!dotNav) return;
+    dotNav.innerHTML = '';
+    const maxVisible = 20;
+    const showAll = cards.length <= maxVisible;
+    cards.forEach((_, i) => {
+      if (!showAll && i >= maxVisible) return;
+      const dot = document.createElement('button');
+      dot.className = 'dot w-2 h-2 rounded-full transition-all duration-300 flex-shrink-0';
+      dot.style.backgroundColor = 'var(--border)';
+      dot.title = `Card ${i+1}`;
+      dot.addEventListener('click', () => goTo(i));
+      dotNav.appendChild(dot);
+    });
+    if (!showAll) {
+      const el = document.createElement('span');
+      el.textContent = `+${cards.length - maxVisible}`;
+      el.className = 'text-[10px] font-bold';
+      el.style.color = 'var(--text-muted)';
+      dotNav.appendChild(el);
+    }
+  }
+
+  function updateDots() {
+    dotNav?.querySelectorAll('.dot').forEach((dot, i) => {
+      dot.style.backgroundColor = i===currentIndex ? 'var(--espresso)' : 'var(--border)';
+      dot.style.width     = i===currentIndex ? '20px' : '8px';
+      dot.style.borderRadius = '4px';
+    });
+  }
+
+  // ── Audio ─────────────────────────────────────────────────────────────────
+  function speakCurrent() {
+    const card = cards[currentIndex];
+    if (!card) return;
+    if (window.DeutschAudioEngine) {
+      window.DeutschAudioEngine.speak(card.target || '', speechLang, 0.85);
+    }
+  }
+
+  // ── Navigate ─────────────────────────────────────────────────────────────
+  function goTo(idx) {
+    if (idx < 0 || idx >= cards.length) return;
+    currentIndex = idx;
+    renderCard(currentIndex);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  btnPrev?.addEventListener('click', () => goTo(currentIndex - 1));
+  btnNext?.addEventListener('click', () => {
+    if (currentIndex === cards.length - 1) window.location.href = '/vocabulary';
+    else goTo(currentIndex + 1);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') goTo(currentIndex + 1);
+    if (e.key === 'ArrowLeft')  goTo(currentIndex - 1);
+    if (e.key === 'a' || e.key === 'A') speakCurrent();
+  });
+
+  // ── Init ─────────────────────────────────────────────────────────────────
+  buildDots();
+  // Card 0 is already rendered server-side via LearningCard component.
+  // Sync progress UI to reflect card 0 state.
+  updateDots();
+  if (progressBar) progressBar.style.width = `${Math.round(1/cards.length*100)}%`;
+  // Update card 0 using client-side config too (ensures langConfig is applied)
+  renderCard(0);
+})();</script>

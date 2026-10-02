@@ -1,0 +1,640 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="description" content="Deutsch Lounge — Language Learning Trainer"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/languagelounge/favicon.svg"><meta name="generator" content="Astro v7.3.5"><title>B2 Verbs of Construction &amp; Design — Deutsch Lounge</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet"><!-- Apply theme before paint to avoid flash --><script>
+      (function() {
+        const saved = localStorage.getItem('wortschatz_theme');
+        if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script><link rel="stylesheet" href="/languagelounge/_astro/Layout.BeSASyxj.css"></head><body class="antialiased min-h-screen flex flex-col" style="background-color:var(--bg);color:var(--text);"><!-- Header --><header class="sticky top-0 z-50 border-b" style="background-color:var(--bg);border-color:var(--border);"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between gap-4" style="height:4.5rem;"><!-- Logo + Language Switcher --><div class="flex items-center gap-4 shrink-0"><a href="/languagelounge/" class="flex items-center gap-2 group"><span class="font-outfit font-extrabold text-xl sm:text-2xl tracking-tight transition-colors" style="color:var(--text);">Small Talk Café <span class="font-normal text-base hidden sm:inline" style="color:var(--text-muted);">| <span id="site-name">Deutsch Lounge</span></span></span></a><!-- Language Selector Dropdown --><div class="relative" id="lang-dropdown-wrapper"><button id="lang-btn" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-sm font-bold transition-all hover:opacity-70" style="background-color:var(--bg); border-color:var(--border); color:var(--text);"><span id="lang-flag">🇩🇪</span><span id="lang-code">DE</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"></path></svg></button><div id="lang-menu" class="hidden absolute top-full left-0 mt-2 rounded-2xl border shadow-xl overflow-hidden z-50 min-w-[160px]" style="background-color:var(--card); border-color:var(--border);"><button class="lang-option w-full flex items-center gap-3 px-4 py-3 text-sm font-semibold text-left transition-colors hover:opacity-70" data-lang="de" data-flag="🇩🇪" data-code="DE" data-name="Deutsch Lounge" data-label="German" style="color:var(--text);"><span class="text-lg">🇩🇪</span><div><div class="font-bold" style="color:var(--text);">Deutsch</div><div class="text-xs" style="color:var(--text-muted);">German Learning</div></div></button><div class="border-t" style="border-color:var(--border);"></div><button class="lang-option w-full flex items-center gap-3 px-4 py-3 text-sm font-semibold text-left transition-colors hover:opacity-70" data-lang="es" data-flag="🇪🇸" data-code="ES" data-name="Spanish Gym" data-label="Spanish" style="color:var(--text);"><span class="text-lg">🇪🇸</span><div><div class="font-bold" style="color:var(--text);">Español</div><div class="text-xs" style="color:var(--text-muted);">Spanish Learning</div></div></button><div class="border-t" style="border-color:var(--border);"></div><button class="lang-option w-full flex items-center gap-3 px-4 py-3 text-sm font-semibold text-left transition-colors hover:opacity-70" data-lang="fr" data-flag="🇫🇷" data-code="FR" data-name="French Gym" data-label="French" style="color:var(--text);"><span class="text-lg">🇫🇷</span><div><div class="font-bold" style="color:var(--text);">Français</div><div class="text-xs" style="color:var(--text-muted);">French Learning</div></div></button></div></div></div><!-- Nav Links --><nav class="hidden md:flex gap-5 items-center"><a href="https://smalltalkcafe.de/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Small Talk Café Podcasts</a><span class="text-sm font-normal" style="color:var(--border);">|</span><a href="/languagelounge/vocabulary" data-german-nav class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Vokabeln</a><a href="/languagelounge/verbs" data-german-nav class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Verben</a><a href="/languagelounge/grammatik" data-german-nav class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Grammatik</a><a href="/languagelounge/redemittel" data-german-nav class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Redemittel</a><!-- Dark/Light Toggle --><button id="theme-toggle" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-sm font-semibold transition-all hover:opacity-70" style="border-color:var(--border); color:var(--text-muted);" aria-label="Toggle dark/light mode"><span id="theme-icon">☀️</span><span id="theme-label">Light</span></button></nav></div></header><!-- Coming Soon Overlay (shown for non-German languages) --><div id="coming-soon-overlay" class="hidden flex-1 flex items-center justify-center py-20 px-4"><div class="text-center max-w-lg mx-auto"><div class="text-7xl mb-6" id="coming-soon-flag">🌍</div><h1 class="font-outfit font-extrabold text-4xl sm:text-5xl mb-4" style="color:var(--text);">Coming Soon</h1><p class="text-lg mb-3" style="color:var(--text-muted);">We're working hard on the <strong id="coming-soon-lang">new language</strong> curriculum.</p><p class="text-base mb-8" style="color:var(--text-muted);">Stay tuned — it will be available very soon! In the meantime, explore our<strong>Deutsch Lounge</strong> to sharpen your German.</p><button id="coming-soon-back-btn" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-sm transition-all hover:opacity-80" style="background-color:var(--espresso); color:#fff;">🇩🇪 Switch to German</button></div></div><main id="main-content" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-1 w-full"><div class="max-w-4xl mx-auto py-6"><!-- Deck Header --><div class="flex items-start justify-between mb-8 gap-4 flex-wrap"><div><a href="/languagelounge/verbs" class="text-xs font-bold flex items-center gap-1 mb-2 hover:opacity-70 transition-opacity capitalize" style="color:var(--espresso);"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg>verbs</a><h1 class="text-2xl md:text-3xl font-extrabold font-outfit" style="color:var(--text);">B2 Verbs of Construction &amp; Design</h1><p class="text-xs font-bold uppercase tracking-wider mt-1" style="color:var(--text-muted);">B2 Bau- und Designverben &bull; B2 &bull; 25 Karten</p></div><div class="flex flex-col items-end gap-4"><!-- Learn / Train mode switcher --><div class="flex rounded-xl border overflow-hidden p-1 gap-1 w-full max-w-[300px]" style="background-color:var(--bg); border-color:var(--border);"><span class="flex-1 flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold transition-all" style="background-color:var(--espresso); color:#F5F2EB;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>Lernen</span><a href="/languagelounge/training/verbs/train?level=b2&amp;deck=verbs-b2_construction&amp;count=20&amp;mode=mc&amp;dir=en-de" class="flex-1 flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold hover:opacity-70 transition-all" style="color:var(--text-muted);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>Trainieren</a></div><!-- View switcher (Cards vs List) --><div class="flex rounded-xl border overflow-hidden p-1 gap-1 w-full max-w-[300px]" style="background-color:var(--bg); border-color:var(--border);"><button id="view-cards-btn" class="view-btn flex-1 flex items-center justify-center px-4 py-2 rounded-lg text-xs font-bold transition-all bg-[var(--espresso)] text-[#F5F2EB]">Karten</button><button id="view-list-btn" class="view-btn flex-1 flex items-center justify-center px-4 py-2 rounded-lg text-xs font-bold transition-all text-[var(--text-muted)] hover:opacity-70">Liste</button></div><!-- Progress indicator --><div id="progress-container" class="flex items-center gap-3"><div class="text-xs font-semibold" style="color:var(--text-muted);">Karte <span id="current-num" class="font-extrabold" style="color:var(--text);">1</span> / 25</div><div class="w-24 h-1.5 rounded-full overflow-hidden border" style="background-color:var(--bg);border-color:var(--border);"><div id="progress-bar" class="h-full transition-all duration-500 rounded-full" style="width:0%; background-color:var(--espresso);"></div></div></div></div></div><!-- ── Universal Study Card (rendered by LearningCard component) ── --><div id="card-view-wrap"><div id="card-host"><!-- The card shell — populated client-side by renderCard() --><div class="learning-card rounded-3xl border shadow-xl overflow-hidden" style="background-color:var(--card); border-color:var(--border);"><!-- ── Top bar ─────────────────────────────────── --><div class="lc-topbar flex items-center justify-between px-6 py-3.5 border-b" style="border-color:var(--border); background-color:var(--bg);"><div class="flex items-center gap-2"><span class="lc-type-badge text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-lg" style="background-color:var(--espresso); color:#F5F2EB;">—</span><span class="lc-level-badge text-[10px] font-bold px-2.5 py-1 rounded-lg cafe-badge"></span></div><button class="lc-audio-btn flex items-center justify-center w-11 h-11 rounded-full transition-transform hover:scale-105 active:scale-95 shadow-md flex-shrink-0" title="Anhören (A)" style="background-color:var(--espresso); color:#F5F2EB;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg></button></div><!-- ── Main word display ───────────────────────── --><div class="lc-hero px-7 py-8 text-center border-b" style="border-color:var(--border);"><div class="lc-article-wrap mb-1.5"><span class="lc-article text-xl font-bold"></span></div><h2 class="lc-word text-5xl md:text-6xl font-extrabold font-outfit mb-3" style="color:var(--text);">—</h2><p class="lc-translation text-lg font-semibold italic" style="color:var(--text-muted);"></p><p class="lc-forms text-sm font-medium mt-2" style="color:var(--text-muted);"></p></div><!-- ── Meta info grid ─────────────────────────── --><div class="lc-meta-grid grid border-b" style="border-color:var(--border);"><!-- populated by JS --></div><!-- ── Grammar note ───────────────────────────── --><div class="lc-grammar-wrap hidden px-7 py-5 border-b" style="border-color:var(--border); background-color:var(--bg);"><p class="text-[10px] font-bold uppercase tracking-widest mb-2" style="color:var(--espresso);">📌 <span class="lc-grammar-label">Grammatiknotiz</span></p><p class="lc-grammar-text text-sm leading-relaxed font-medium whitespace-pre-wrap" style="color:var(--text);"></p></div><!-- ── Type-specific block ────────────────────── --><!-- Verb conjugation (hidden by default, shown for verb cards) --><div class="lc-conjugation-wrap hidden border-b overflow-x-auto" style="border-color:var(--border);"><div class="lc-conjugation-inner"><!-- populated by JS --></div></div><!-- Connector word-order block --><div class="lc-wordorder-wrap hidden px-7 py-4 border-b" style="border-color:var(--border); background-color:var(--bg);"><div class="flex items-start gap-3 text-sm font-medium" style="color:var(--text-muted);"><span class="text-base flex-shrink-0">📐</span><span class="lc-wordorder-text"></span></div></div><!-- Phrase preposition block --><div class="lc-phrase-wrap hidden px-7 py-4 border-b" style="border-color:var(--border); background-color:var(--bg);"><p class="text-[10px] font-bold uppercase tracking-widest mb-2" style="color:var(--espresso);">Struktur</p><p class="lc-phrase-rule text-sm font-semibold" style="color:var(--text);"></p></div><!-- ── Examples ───────────────────────────────── --><div class="px-7 py-6 border-b" style="border-color:var(--border);"><p class="lc-examples-label text-[10px] font-bold uppercase tracking-widest mb-5" style="color:var(--text-muted);">Beispielsätze</p><div class="lc-examples space-y-3"><!-- populated by JS --></div></div><!-- ── Tags ───────────────────────────────────── --><div class="lc-tags-row px-7 py-4 flex items-center gap-2 flex-wrap"><span class="text-[10px] font-bold uppercase tracking-wider" style="color:var(--text-muted);">Tags:</span><div class="lc-tags flex gap-2 flex-wrap"></div></div></div><script>(function(){const cardJson = "{\"id\":\"verbs-b2-b2_construction-001\",\"infinitive\":\"bauen\",\"translation\":\"to build\",\"type\":\"verb\",\"cefr\":\"B2\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb. Weak conjugation. Uses 'haben' for Perfekt.\",\"examples\":[{\"de\":\"Sie wollen ein neues Haus bauen.\",\"en\":\"They want to build a new house.\"},{\"de\":\"Der Architekt hat viele Gebäude in der Stadt gebaut.\",\"en\":\"The architect has built many buildings in the city.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"baute\",\"du\":\"bautest\",\"er_sie_es\":\"baute\",\"wir\":\"bauten\",\"ihr\":\"bautet\",\"sie_Sie\":\"bauten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe gebaut\",\"du\":\"hast gebaut\",\"er_sie_es\":\"hat gebaut\",\"wir\":\"haben gebaut\",\"ihr\":\"habt gebaut\",\"sie_Sie\":\"haben gebaut\"}],\"target\":\"bauen\",\"source\":\"to build\",\"example_target\":\"\",\"example_source\":\"\"}";
+const langConfigJson = "{\"language_pair\":\"english_german\",\"target_lang\":\"de\",\"native_lang\":\"en\",\"target_lang_name\":\"Deutsch\",\"native_lang_name\":\"English\",\"speech_lang\":\"de-DE\",\"noun_metadata_fields\":[{\"key\":\"article\",\"label\":\"Artikel\",\"render\":\"article_badge\"},{\"key\":\"gender\",\"label\":\"Genus\",\"render\":\"gender_label\"},{\"key\":\"plural\",\"label\":\"Plural\",\"render\":\"text\"}],\"article_colours\":{\"der\":\"#4A7C9E\",\"die\":\"#B05070\",\"das\":\"#4A8A5A\"},\"gender_labels\":{\"m\":\"Maskulinum\",\"f\":\"Femininum\",\"n\":\"Neutrum\"},\"verb_tenses\":[\"Präsens\",\"Präteritum\",\"Perfekt\",\"Futur I\",\"Konjunktiv II\"],\"cases\":{\"nominative\":\"Nominativ\",\"accusative\":\"Akkusativ\",\"dative\":\"Dativ\",\"genitive\":\"Genitiv\"},\"ui_labels\":{\"learn_mode\":\"Lernen\",\"train_mode\":\"Trainieren\",\"examples_heading\":\"Beispielsätze\",\"grammar_note_heading\":\"Grammatiknotiz\",\"audio_button\":\"Anhören\",\"back_link\":\"Zurück\",\"card_counter\":\"Karte {current} / {total}\",\"next_button\":\"Weiter\",\"finish_button\":\"Fertig\",\"correct\":\"Richtig!\",\"wrong\":\"Falsch\"}}";
+
+  /**
+   * Client-side card renderer.
+   * Uses the universal card-renderer logic inline (no imports in Astro is:inline).
+   */
+
+  // ── Parse data ──────────────────────────────────────────────────────────
+  const card   = JSON.parse(cardJson);
+  const config = JSON.parse(langConfigJson);
+
+  // ── Helpers ─────────────────────────────────────────────────────────────
+  function stripArticle(word) {
+    return (word || '').replace(/^(der|die|das|el|la|los|las|le|les|l')\s+/i, '').trim();
+  }
+
+  function getArticleColour(article) {
+    if (!article || !config.article_colours) return 'var(--espresso)';
+    return config.article_colours[article.toLowerCase()] || 'var(--espresso)';
+  }
+
+  function getGenderLabel(gender) {
+    if (!gender) return '';
+    return (config.gender_labels || {})[gender] || gender;
+  }
+
+  function getTypeLabel() {
+    const tags = card.tags || [];
+    if (tags.includes('noun'))       return 'Substantiv';
+    if (tags.includes('verb'))       return 'Verb';
+    if (tags.includes('adjective'))  return 'Adjektiv';
+    if (tags.includes('expression')) return 'Ausdruck';
+    const map = { vocab:'Vokabel', verb:'Verb', phrase:'Phrase', connector:'Konnektor', grammar:'Grammatik' };
+    return map[card.type] || 'Karte';
+  }
+
+  function formatHighlight(text) {
+    if (!text) return '';
+    return String(text).replace(/\*(.*?)\*/g, '<span class="highlighter">$1</span>');
+  }
+
+  function normaliseExample(ex) {
+    return {
+      target: ex.target || ex.de || '',
+      source: ex.source || ex.en || '',
+      note: ex.note,
+    };
+  }
+
+  function getMetaFacts() {
+    const meta = { ...card.metadata, article: card.article, gender: card.gender, plural: card.plural, ...card.metadata };
+    const facts = [];
+    for (const field of (config.noun_metadata_fields || [])) {
+      const raw = meta[field.key] || card[field.key];
+      if (!raw || raw === '~') continue;
+      let value = String(raw);
+      let colour;
+      if (field.render === 'gender_label') value = getGenderLabel(raw);
+      else if (field.render === 'article_badge') colour = getArticleColour(raw);
+      facts.push({ label: field.label, value, colour });
+    }
+    return facts;
+  }
+
+  // ── Render ──────────────────────────────────────────────────────────────
+  const container = document.querySelector('.learning-card');
+  if (!container) { console.error('LearningCard: container not found'); }
+
+  function sel(cls) { return container?.querySelector(cls); }
+
+  // Type badge
+  sel('.lc-type-badge').textContent = getTypeLabel();
+
+  // Level badge
+  sel('.lc-level-badge').textContent = card.level || '';
+
+  // Article
+  const article = card.article || card.metadata?.article;
+  const articleWrap = sel('.lc-article-wrap');
+  const articleEl   = sel('.lc-article');
+  if (article && card.tags?.includes('noun') && !card.plural_only) {
+    articleEl.textContent  = article;
+    articleEl.style.color  = getArticleColour(article);
+    articleWrap.style.display = '';
+  } else {
+    articleWrap.style.display = 'none';
+  }
+
+  // Word
+  sel('.lc-word').textContent = stripArticle(card.target);
+
+  // Translation
+  sel('.lc-translation').textContent = card.source || '';
+
+  // Plural / forms
+  const plural = card.plural || card.metadata?.plural;
+  const formsEl = sel('.lc-forms');
+  if (plural && !card.plural_only) formsEl.textContent = `Pl. ${plural}`;
+  else if (card.plural_only) formsEl.textContent = 'nur Plural';
+  else formsEl.textContent = '';
+
+  // Meta grid
+  const metaGrid = sel('.lc-meta-grid');
+  const facts = getMetaFacts();
+  if (facts.length) {
+    const cols = Math.min(facts.length, 4);
+    metaGrid.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
+    metaGrid.innerHTML = facts.map((f, i) => `
+      <div class="px-5 py-4 ${i < facts.length - 1 ? 'border-r' : ''}" style="border-color:var(--border);">
+        <p class="text-[9px] font-bold uppercase tracking-widest mb-1" style="color:var(--text-muted);">${f.label}</p>
+        <p class="text-sm font-bold" style="color:${f.colour || 'var(--text)'};">${f.value}</p>
+      </div>
+    `).join('');
+  } else {
+    metaGrid.style.display = 'none';
+  }
+
+  // Grammar note
+  const grammarWrap = sel('.lc-grammar-wrap');
+  if (card.grammar_note) {
+    sel('.lc-grammar-text').innerHTML = formatHighlight(card.grammar_note);
+    grammarWrap.classList.remove('hidden');
+  }
+
+  // Grammar label from config
+  const uiLabels = config.ui_labels || {};
+  if (uiLabels.grammar_note_heading) sel('.lc-grammar-label').textContent = uiLabels.grammar_note_heading;
+  if (uiLabels.examples_heading)     sel('.lc-examples-label').textContent = uiLabels.examples_heading;
+  if (uiLabels.audio_button)         sel('.lc-audio-label').textContent    = uiLabels.audio_button;
+
+  // ── Type-specific blocks ─────────────────────────────────────────────────
+
+  // Verb: conjugation table
+  const type = card.type || (card.tags?.includes('verb') ? 'verb' : 'vocab');
+  if (type === 'verb' && card.conjugations?.length) {
+    const conjWrap  = sel('.lc-conjugation-wrap');
+    const conjInner = sel('.lc-conjugation-inner');
+    conjWrap.classList.remove('hidden');
+    conjInner.innerHTML = (config.verb_tenses || card.conjugations.map(t => t.tense)).map(tense => {
+      const t = card.conjugations.find(c => c.tense === tense);
+      if (!t) return '';
+      return `
+        <div class="border-b last:border-0" style="border-color:var(--border);">
+          <p class="text-[10px] font-bold uppercase tracking-widest px-5 py-2" style="background-color:var(--bg); color:var(--espresso);">${t.tense}</p>
+          <table class="w-full text-sm">
+            <tbody>
+              ${t.forms.map((f, ri) => `
+                <tr class="${ri % 2 === 0 ? '' : ''} border-t" style="border-color:var(--border);">
+                  <td class="px-5 py-2.5 font-bold w-24" style="color:var(--espresso);">${f.pronoun}</td>
+                  <td class="px-5 py-2.5 font-semibold" style="color:var(--text);">${f.form}</td>
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+        </div>
+      `;
+    }).join('');
+  }
+
+  // Connector: word order block
+  if (type === 'connector' && card.word_order) {
+    const woWrap = sel('.lc-wordorder-wrap');
+    sel('.lc-wordorder-text').textContent = card.word_order;
+    woWrap.classList.remove('hidden');
+  }
+
+  // Phrase: preposition rule block
+  if (type === 'phrase' && card.clause_type) {
+    const phraseWrap = sel('.lc-phrase-wrap');
+    sel('.lc-phrase-rule').textContent = card.clause_type;
+    phraseWrap.classList.remove('hidden');
+  }
+
+  // ── Examples ─────────────────────────────────────────────────────────────
+  const examplesEl = sel('.lc-examples');
+  const rawExamples = card.examples || (card.example_target || card.example_de ? [{ target: card.example_target || card.example_de, source: card.example_source || card.example_en }] : []);
+
+  if (rawExamples.length) {
+    examplesEl.innerHTML = rawExamples.map(ex => {
+      const e = normaliseExample(ex);
+      return `
+        <div class="rounded-2xl border overflow-hidden" style="border-color:var(--border);">
+          <div class="px-4 py-3" style="background-color:var(--bg);">
+            <p class="font-semibold leading-snug mb-1" style="color:var(--text);">${formatHighlight(e.target)}</p>
+            <p class="text-sm italic" style="color:var(--text-muted);">${formatHighlight(e.source || '')}</p>
+          </div>
+          ${e.note ? `<div class="px-4 py-2 border-t" style="border-color:var(--border);">
+            <p class="text-[10px] font-bold font-mono" style="color:var(--espresso);">📐 ${e.note}</p>
+          </div>` : ''}
+        </div>
+      `;
+    }).join('');
+  } else {
+    examplesEl.innerHTML = `<p class="text-sm italic" style="color:var(--text-muted);">Kein Beispiel verfügbar.</p>`;
+  }
+
+  // ── Tags ─────────────────────────────────────────────────────────────────
+  const tagsEl = sel('.lc-tags');
+  tagsEl.innerHTML = (card.tags || []).map(t => `
+    <span class="text-[10px] font-bold px-2 py-0.5 rounded-md border uppercase" style="border-color:var(--border); color:var(--text-muted); background-color:var(--bg);">${t}</span>
+  `).join('');
+
+  // ── Audio button ─────────────────────────────────────────────────────────
+  sel('.lc-audio-btn')?.addEventListener('click', () => {
+    if (window.DeutschAudioEngine) {
+      window.DeutschAudioEngine.speak(card.target || '', config.speech_lang || 'de-DE', 0.85);
+    }
+  });
+})();</script></div><!-- ── Navigation ───────────────────────────── --><div class="flex items-center justify-between mt-8 gap-4"><button id="btn-prev" disabled class="flex items-center gap-2 px-6 py-3 rounded-2xl border font-bold text-sm transition-all hover:opacity-70 active:scale-95 disabled:opacity-30 disabled:cursor-not-allowed" style="border-color:var(--border); color:var(--text); background-color:var(--card);"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg>Zurück</button><!-- Dot navigation --><div id="dot-nav" class="flex items-center gap-1.5 flex-wrap justify-center max-w-xs overflow-hidden" style="max-height:2rem;"><!-- populated by JS --></div><button id="btn-next" class="flex items-center gap-2 px-6 py-3 rounded-2xl font-bold text-sm transition-all hover:opacity-80 active:scale-95" style="background-color:var(--espresso); color:#F5F2EB;">Weiter<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg></button></div><!-- Keyboard hint --><p class="text-center text-xs font-medium mt-4" style="color:var(--text-muted);">← → Pfeiltasten zum Navigieren &nbsp;·&nbsp; A zum Anhören</p></div><!-- ── List View ───────────────────────────── --><div id="list-view-wrap" class="hidden space-y-6"><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">bauen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to build</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Regular verb. Weak conjugation. Uses 'haben' for Perfekt.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Sie wollen ein neues Haus bauen.</p><p class="italic text-[13px]" style="color:var(--text-muted);">They want to build a new house.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">entwerfen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to design, to draft</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Irregular (strong) verb. Inseparable prefix 'ent-'. Uses 'haben' for Perfekt. Partizip II without 'ge-'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Der Designer entwirft innovative Möbelstücke.</p><p class="italic text-[13px]" style="color:var(--text-muted);">The designer designs innovative furniture pieces.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">gestalten</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to shape, to design, to create</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Regular verb. Weak conjugation. Uses 'haben' for Perfekt.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Wir wollen den Garten modern gestalten.</p><p class="italic text-[13px]" style="color:var(--text-muted);">We want to design the garden in a modern way.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">errichten</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to erect, to construct</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Regular verb. Inseparable prefix 'er-'. Uses 'haben' for Perfekt. Partizip II without 'ge-'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Ein neues Einkaufszentrum soll dort errichtet werden.</p><p class="italic text-[13px]" style="color:var(--text-muted);">A new shopping center is to be erected there.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">sanieren</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to renovate, to refurbish (e.g., a building)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Regular verb. Weak conjugation. Uses 'haben' for Perfekt.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Das alte Gebäude muss dringend saniert werden.</p><p class="italic text-[13px]" style="color:var(--text-muted);">The old building urgently needs to be renovated.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">planen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to plan</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Regular verb. Weak conjugation. Uses 'haben' for Perfekt.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Wir müssen das Projekt sorgfältig planen.</p><p class="italic text-[13px]" style="color:var(--text-muted);">We need to plan the project carefully.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">montieren</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to assemble, to mount</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Regular verb. Weak conjugation. Uses 'haben' for Perfekt.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Die Arbeiter montieren die neuen Fenster.</p><p class="italic text-[13px]" style="color:var(--text-muted);">The workers are assembling the new windows.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">installieren</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to install</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Regular verb. Weak conjugation. Uses 'haben' for Perfekt.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Wir müssen noch die Heizungsanlage installieren.</p><p class="italic text-[13px]" style="color:var(--text-muted);">We still need to install the heating system.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">verlegen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to lay (cables, tiles, floor), to postpone</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Regular verb. Inseparable prefix 'ver-'. Uses 'haben' for Perfekt. Partizip II without 'ge-'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Sie werden den neuen Teppichboden verlegen.</p><p class="italic text-[13px]" style="color:var(--text-muted);">They will lay the new carpet.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">streichen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to paint (a wall), to cross out</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Irregular (strong) verb. Uses 'haben' for Perfekt.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Wir müssen die Wände im Wohnzimmer streichen.</p><p class="italic text-[13px]" style="color:var(--text-muted);">We need to paint the walls in the living room.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">mauern</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to brick, to wall</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Regular verb. Weak conjugation. Uses 'haben' for Perfekt.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Der Maurer mauert die Außenwände des Hauses.</p><p class="italic text-[13px]" style="color:var(--text-muted);">The bricklayer is bricking the outer walls of the house.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">gießen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to pour (e.g., concrete), to water (plants)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Irregular (strong) verb. Uses 'haben' for Perfekt.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Die Arbeiter gießen den Beton für das Fundament.</p><p class="italic text-[13px]" style="color:var(--text-muted);">The workers are pouring the concrete for the foundation.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">abdichten</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to seal, to waterproof</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Regular verb. Separable prefix 'ab-'. Uses 'haben' for Perfekt.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Man muss das Dach sorgfältig abdichten.</p><p class="italic text-[13px]" style="color:var(--text-muted);">One must carefully seal the roof.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">verankern</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to anchor</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Regular verb. Inseparable prefix 'ver-'. Uses 'haben' for Perfekt. Partizip II without 'ge-'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Die Stützbalken müssen fest im Boden verankert werden.</p><p class="italic text-[13px]" style="color:var(--text-muted);">The support beams must be firmly anchored in the ground.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">abreißen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to demolish, to tear down</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Irregular (strong) verb. Separable prefix 'ab-'. Uses 'haben' for Perfekt.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Das alte Fabrikgebäude soll abgerissen werden.</p><p class="italic text-[13px]" style="color:var(--text-muted);">The old factory building is to be demolished.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">einrichten</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to furnish, to set up, to arrange</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Regular verb. Separable prefix 'ein-'. Uses 'haben' for Perfekt.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Wir wollen unser neues Büro modern einrichten.</p><p class="italic text-[13px]" style="color:var(--text-muted);">We want to furnish our new office in a modern way.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">ausstatten</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to equip, to furnish (with equipment)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Regular verb. Separable prefix 'aus-'. Uses 'haben' for Perfekt.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Das Labor muss mit neuen Geräten ausgestattet werden.</p><p class="italic text-[13px]" style="color:var(--text-muted);">The laboratory must be equipped with new devices.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">modifizieren</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to modify</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Regular verb. Weak conjugation. Uses 'haben' for Perfekt.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Wir müssen den Entwurf noch leicht modifizieren.</p><p class="italic text-[13px]" style="color:var(--text-muted);">We still need to slightly modify the design.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">optimieren</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to optimize</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Regular verb. Weak conjugation. Uses 'haben' for Perfekt.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Es ist wichtig, den Energieverbrauch zu optimieren.</p><p class="italic text-[13px]" style="color:var(--text-muted);">It is important to optimize energy consumption.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">verstärken</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to reinforce, to strengthen</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Regular verb. Inseparable prefix 'ver-'. Uses 'haben' for Perfekt. Partizip II without 'ge-'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Man muss die Decke des alten Kellers verstärken.</p><p class="italic text-[13px]" style="color:var(--text-muted);">One must reinforce the ceiling of the old cellar.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">isolieren</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to insulate</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Regular verb. Weak conjugation. Uses 'haben' for Perfekt.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Das Haus muss gut isoliert werden, um Energie zu sparen.</p><p class="italic text-[13px]" style="color:var(--text-muted);">The house must be well insulated to save energy.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">vermessen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to survey, to measure (land)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Irregular (strong) verb. Inseparable prefix 'ver-'. Uses 'haben' for Perfekt. Partizip II without 'ge-'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Vor dem Bau muss das Grundstück genau vermessen werden.</p><p class="italic text-[13px]" style="color:var(--text-muted);">Before construction, the plot must be precisely surveyed.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">skizzieren</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to sketch</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Regular verb. Weak conjugation. Uses 'haben' for Perfekt.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Der Architekt skizziert erste Ideen für das Gebäude.</p><p class="italic text-[13px]" style="color:var(--text-muted);">The architect sketches initial ideas for the building.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">fertigstellen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to complete, to finish (a project)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Regular verb. Separable prefix 'fertig-'. Uses 'haben' for Perfekt.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Wir müssen das Projekt bis Ende des Monats fertigstellen.</p><p class="italic text-[13px]" style="color:var(--text-muted);">We need to complete the project by the end of the month.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);"><div class="flex flex-col md:flex-row md:items-start gap-6"><div class="flex-1"><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);">bebauen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);">to build on, to develop (a plot of land)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);">📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);">Regular verb. Inseparable prefix 'be-'. Uses 'haben' for Perfekt. Partizip II without 'ge-'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);"><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);">Beispielsatz</p><div class="space-y-1 text-sm"><p class="font-bold text-base mb-1" style="color:var(--text);">Das Grundstück darf nur mit einem Einfamilienhaus bebaut werden.</p><p class="italic text-[13px]" style="color:var(--text-muted);">The plot of land may only be built on with a single-family house.</p></div></div></div></div></div></div></main><footer class="mt-auto border-t py-8" style="background-color:var(--bg);border-color:var(--border);"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-medium" style="color:var(--text-muted);"><div>&copy; 2025 - 2026 Small Talk Café Podcasts. All rights reserved.</div><div class="flex gap-4">Made in Bayern ❤️ Los Geht's!</div></div></footer><!-- Theme toggle + Language switcher script --><script>
+      // ── Theme ──────────────────────────────────────
+      function applyTheme(dark) {
+        if (dark) {
+          document.documentElement.classList.add('dark');
+          localStorage.setItem('wortschatz_theme', 'dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+          localStorage.setItem('wortschatz_theme', 'light');
+        }
+        const icon = document.getElementById('theme-icon');
+        const label = document.getElementById('theme-label');
+        if (icon) icon.textContent = dark ? '🌙' : '☀️';
+        if (label) label.textContent = dark ? 'Dark' : 'Light';
+      }
+
+      const isDark = document.documentElement.classList.contains('dark');
+      applyTheme(isDark);
+
+      document.getElementById('theme-toggle')?.addEventListener('click', () => {
+        const nowDark = !document.documentElement.classList.contains('dark');
+        applyTheme(nowDark);
+      });
+
+      // ── Language Switcher ──────────────────────────
+      const LANG_CONTENT = {
+        de: {
+          name: 'Deutsch Lounge',
+          flag: '🇩🇪',
+          code: 'DE',
+          subtitle: 'Systematisches Vokabel- und Grammatiktraining',
+          tagline: 'Deutsch Lounge',
+          welcome: 'Willkommen beim',
+          cards: [
+            { title: 'Vokabeln', desc: 'Erweitere deinen Wortschatz. Lerne Nomen, Verben und Redewendungen mit Beispielsätzen.' },
+            { title: 'Verben', desc: 'Meistere reguläre, unregelmäßige, modale und reflexive Verben mit Konjugationstabellen.' },
+            { title: 'Grammatik', desc: 'Regeln verstehen & üben: Adjektivdeklination, Fälle, Präpositionen, Konnektoren & Phrasen.' },
+            { title: 'Redemittel', desc: 'Essentielle Phrasen für den Alltag, Diskussionen und Präsentationen.' }
+          ]
+        },
+        es: {
+          name: 'Spanish Gym',
+          flag: '🇪🇸',
+          code: 'ES',
+          subtitle: 'Tu compañero para aprender Español A1 – B2',
+          tagline: 'A1–B2 Spanish Curriculum',
+          welcome: 'Bienvenido al',
+          cards: [
+            { title: 'Vocabulario', desc: 'Amplía tu vocabulario A1–B2. Aprende sustantivos, verbos y frases con ejemplos contextuales.' },
+            { title: 'Verbos', desc: 'Domina verbos regulares, irregulares y reflexivos con tablas de conjugación.' },
+            { title: 'Gramática', desc: 'Entiende y practica las reglas gramaticales, casos y conectores.' },
+            { title: 'Expresiones', desc: 'Frases esenciales para el día a día, discusiones y presentaciones.' }
+          ]
+        },
+        fr: {
+          name: 'French Gym',
+          flag: '🇫🇷',
+          code: 'FR',
+          subtitle: 'Ton compagnon pour apprendre le Français A1 – B2',
+          tagline: 'A1–B2 French Curriculum',
+          welcome: 'Bienvenue au',
+          cards: [
+            { title: 'Vocabulaire', desc: 'Élargis ton vocabulaire A1–B2. Apprends des noms, verbes et expressions avec des exemples.' },
+            { title: 'Verbes', desc: 'Maîtrise les verbes réguliers, irréguliers et réflexifs avec des tableaux de conjugaison.' },
+            { title: 'Grammaire', desc: 'Comprends et pratique les règles de grammaire, les cas et les connecteurs.' },
+            { title: 'Expressions', desc: 'Phrases essentielles pour la vie quotidienne, les discussions et les présentations.' }
+          ]
+        }
+      };
+
+      function applyLanguage(lang) {
+        const c = LANG_CONTENT[lang] || LANG_CONTENT['de'];
+        localStorage.setItem('gym_language', lang);
+
+        // Header
+        const flag = document.getElementById('lang-flag');
+        const code = document.getElementById('lang-code');
+        const siteName = document.getElementById('site-name');
+        if (flag) flag.textContent = c.flag;
+        if (code) code.textContent = c.code;
+        if (siteName) siteName.textContent = c.name;
+
+        // Footer
+        const footerName = document.getElementById('footer-gym-name');
+        const footerLevel = document.getElementById('footer-level');
+        if (footerName) footerName.textContent = c.name;
+        if (footerLevel) footerLevel.textContent = c.tagline;
+
+        const isGerman = lang === 'de';
+        const overlay = document.getElementById('coming-soon-overlay');
+        const mainContent = document.getElementById('main-content');
+        const germanNavLinks = document.querySelectorAll('[data-german-nav]');
+
+        if (isGerman) {
+          // Show normal German content
+          if (overlay) overlay.classList.add('hidden');
+          if (mainContent) mainContent.classList.remove('hidden');
+          germanNavLinks.forEach(el => el.classList.remove('hidden'));
+
+          // Hero on homepage only
+          const heroTitle = document.getElementById('hero-gym-name');
+          const heroSubtitle = document.getElementById('hero-subtitle');
+          const heroWelcome = document.getElementById('hero-welcome');
+          if (heroTitle) heroTitle.textContent = c.name;
+          if (heroSubtitle) heroSubtitle.textContent = c.subtitle;
+          if (heroWelcome) heroWelcome.textContent = c.welcome;
+
+          // Category cards
+          const cardTitles = document.querySelectorAll('[data-card-title]');
+          const cardDescs = document.querySelectorAll('[data-card-desc]');
+          cardTitles.forEach((el, i) => {
+            if (c.cards[i]) el.textContent = c.cards[i].title;
+          });
+          cardDescs.forEach((el, i) => {
+            if (c.cards[i]) el.textContent = c.cards[i].desc;
+          });
+
+          // Nav links
+          const navLabels = document.querySelectorAll('[data-nav-label]');
+          navLabels.forEach((el, i) => {
+            if (c.cards[i]) el.textContent = c.cards[i].title;
+          });
+        } else {
+          // Non-German: show coming soon overlay, hide main content and German nav
+          if (mainContent) mainContent.classList.add('hidden');
+          germanNavLinks.forEach(el => el.classList.add('hidden'));
+
+          // Populate coming soon overlay
+          const comingFlag = document.getElementById('coming-soon-flag');
+          const comingLang = document.getElementById('coming-soon-lang');
+          if (comingFlag) comingFlag.textContent = c.flag;
+          if (comingLang) comingLang.textContent = c.name + ' content';
+
+          if (overlay) {
+            overlay.classList.remove('hidden');
+            overlay.classList.add('flex');
+          }
+        }
+      }
+
+      // Restore saved language
+      const savedLang = localStorage.getItem('gym_language') || 'de';
+      applyLanguage(savedLang);
+
+      // Dropdown toggle
+      const langBtn = document.getElementById('lang-btn');
+      const langMenu = document.getElementById('lang-menu');
+
+      langBtn?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        langMenu?.classList.toggle('hidden');
+      });
+
+      document.addEventListener('click', () => {
+        langMenu?.classList.add('hidden');
+      });
+
+      document.querySelectorAll('.lang-option').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const lang = btn.dataset.lang;
+          applyLanguage(lang);
+          langMenu?.classList.add('hidden');
+        });
+      });
+
+      // Coming soon "Switch to German" button
+      document.getElementById('coming-soon-back-btn')?.addEventListener('click', () => {
+        applyLanguage('de');
+      });
+    </script></body></html><script type="module" src="/languagelounge/_astro/_deckId_.astro_astro_type_script_index_0_lang.B80xyaMZ.js"></script><script>(function(){const cardsJson = "[{\"id\":\"verbs-b2-b2_construction-001\",\"infinitive\":\"bauen\",\"translation\":\"to build\",\"type\":\"verb\",\"cefr\":\"B2\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb. Weak conjugation. Uses 'haben' for Perfekt.\",\"examples\":[{\"de\":\"Sie wollen ein neues Haus bauen.\",\"en\":\"They want to build a new house.\"},{\"de\":\"Der Architekt hat viele Gebäude in der Stadt gebaut.\",\"en\":\"The architect has built many buildings in the city.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"baute\",\"du\":\"bautest\",\"er_sie_es\":\"baute\",\"wir\":\"bauten\",\"ihr\":\"bautet\",\"sie_Sie\":\"bauten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe gebaut\",\"du\":\"hast gebaut\",\"er_sie_es\":\"hat gebaut\",\"wir\":\"haben gebaut\",\"ihr\":\"habt gebaut\",\"sie_Sie\":\"haben gebaut\"}],\"target\":\"bauen\",\"source\":\"to build\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b2-b2_construction-002\",\"infinitive\":\"entwerfen\",\"translation\":\"to design, to draft\",\"type\":\"verb\",\"cefr\":\"B2\",\"tags\":[\"verb\"],\"grammar_note\":\"Irregular (strong) verb. Inseparable prefix 'ent-'. Uses 'haben' for Perfekt. Partizip II without 'ge-'.\",\"examples\":[{\"de\":\"Der Designer entwirft innovative Möbelstücke.\",\"en\":\"The designer designs innovative furniture pieces.\"},{\"de\":\"Sie hat den gesamten Stadtplan neu entworfen.\",\"en\":\"She has redesigned the entire city plan.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"entwarf\",\"du\":\"entwarfst\",\"er_sie_es\":\"entwarf\",\"wir\":\"entwarfen\",\"ihr\":\"entwarft\",\"sie_Sie\":\"entwarfen\"},{\"tense\":\"Perfekt\",\"ich\":\"habe entworfen\",\"du\":\"hast entworfen\",\"er_sie_es\":\"hat entworfen\",\"wir\":\"haben entworfen\",\"ihr\":\"habt entworfen\",\"sie_Sie\":\"haben entworfen\"}],\"target\":\"entwerfen\",\"source\":\"to design, to draft\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b2-b2_construction-003\",\"infinitive\":\"gestalten\",\"translation\":\"to shape, to design, to create\",\"type\":\"verb\",\"cefr\":\"B2\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb. Weak conjugation. Uses 'haben' for Perfekt.\",\"examples\":[{\"de\":\"Wir wollen den Garten modern gestalten.\",\"en\":\"We want to design the garden in a modern way.\"},{\"de\":\"Das Team hat die neue Benutzeroberfläche sehr ansprechend gestaltet.\",\"en\":\"The team has designed the new user interface very appealingly.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"gestaltete\",\"du\":\"gestaltetest\",\"er_sie_es\":\"gestaltete\",\"wir\":\"gestalteten\",\"ihr\":\"gestaltetet\",\"sie_Sie\":\"gestalteten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe gestaltet\",\"du\":\"hast gestaltet\",\"er_sie_es\":\"hat gestaltet\",\"wir\":\"haben gestaltet\",\"ihr\":\"habt gestaltet\",\"sie_Sie\":\"haben gestaltet\"}],\"target\":\"gestalten\",\"source\":\"to shape, to design, to create\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b2-b2_construction-004\",\"infinitive\":\"errichten\",\"translation\":\"to erect, to construct\",\"type\":\"verb\",\"cefr\":\"B2\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb. Inseparable prefix 'er-'. Uses 'haben' for Perfekt. Partizip II without 'ge-'.\",\"examples\":[{\"de\":\"Ein neues Einkaufszentrum soll dort errichtet werden.\",\"en\":\"A new shopping center is to be erected there.\"},{\"de\":\"Die Ingenieure haben eine stabile Brücke errichtet.\",\"en\":\"The engineers have constructed a stable bridge.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"errichtete\",\"du\":\"errichtetest\",\"er_sie_es\":\"errichtete\",\"wir\":\"errichteten\",\"ihr\":\"errichtetet\",\"sie_Sie\":\"errichteten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe errichtet\",\"du\":\"hast errichtet\",\"er_sie_es\":\"hat errichtet\",\"wir\":\"haben errichtet\",\"ihr\":\"habt errichtet\",\"sie_Sie\":\"haben errichtet\"}],\"target\":\"errichten\",\"source\":\"to erect, to construct\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b2-b2_construction-005\",\"infinitive\":\"sanieren\",\"translation\":\"to renovate, to refurbish (e.g., a building)\",\"type\":\"verb\",\"cefr\":\"B2\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb. Weak conjugation. Uses 'haben' for Perfekt.\",\"examples\":[{\"de\":\"Das alte Gebäude muss dringend saniert werden.\",\"en\":\"The old building urgently needs to be renovated.\"},{\"de\":\"Sie haben das gesamte Viertel energetisch saniert.\",\"en\":\"They have energetically refurbished the entire district.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"sanierte\",\"du\":\"saniertest\",\"er_sie_es\":\"sanierte\",\"wir\":\"sanierten\",\"ihr\":\"saniertet\",\"sie_Sie\":\"sanierten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe saniert\",\"du\":\"hast saniert\",\"er_sie_es\":\"hat saniert\",\"wir\":\"haben saniert\",\"ihr\":\"habt saniert\",\"sie_Sie\":\"haben saniert\"}],\"target\":\"sanieren\",\"source\":\"to renovate, to refurbish (e.g., a building)\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b2-b2_construction-006\",\"infinitive\":\"planen\",\"translation\":\"to plan\",\"type\":\"verb\",\"cefr\":\"B2\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb. Weak conjugation. Uses 'haben' for Perfekt.\",\"examples\":[{\"de\":\"Wir müssen das Projekt sorgfältig planen.\",\"en\":\"We need to plan the project carefully.\"},{\"de\":\"Der Architekt hat den Bauablauf genau geplant.\",\"en\":\"The architect has precisely planned the construction process.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"plante\",\"du\":\"plantest\",\"er_sie_es\":\"plante\",\"wir\":\"planten\",\"ihr\":\"plantet\",\"sie_Sie\":\"planten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe geplant\",\"du\":\"hast geplant\",\"er_sie_es\":\"hat geplant\",\"wir\":\"haben geplant\",\"ihr\":\"habt geplant\",\"sie_Sie\":\"haben geplant\"}],\"target\":\"planen\",\"source\":\"to plan\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b2-b2_construction-007\",\"infinitive\":\"montieren\",\"translation\":\"to assemble, to mount\",\"type\":\"verb\",\"cefr\":\"B2\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb. Weak conjugation. Uses 'haben' for Perfekt.\",\"examples\":[{\"de\":\"Die Arbeiter montieren die neuen Fenster.\",\"en\":\"The workers are assembling the new windows.\"},{\"de\":\"Er hat die Solarpaneele auf dem Dach montiert.\",\"en\":\"He has mounted the solar panels on the roof.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"montierte\",\"du\":\"montiertest\",\"er_sie_es\":\"montierte\",\"wir\":\"montierten\",\"ihr\":\"montiertet\",\"sie_Sie\":\"montierten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe montiert\",\"du\":\"hast montiert\",\"er_sie_es\":\"hat montiert\",\"wir\":\"haben montiert\",\"ihr\":\"habt montiert\",\"sie_Sie\":\"haben montiert\"}],\"target\":\"montieren\",\"source\":\"to assemble, to mount\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b2-b2_construction-008\",\"infinitive\":\"installieren\",\"translation\":\"to install\",\"type\":\"verb\",\"cefr\":\"B2\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb. Weak conjugation. Uses 'haben' for Perfekt.\",\"examples\":[{\"de\":\"Wir müssen noch die Heizungsanlage installieren.\",\"en\":\"We still need to install the heating system.\"},{\"de\":\"Der Elektriker hat alle Steckdosen installiert.\",\"en\":\"The electrician has installed all the power outlets.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"installierte\",\"du\":\"installiertest\",\"er_sie_es\":\"installierte\",\"wir\":\"installierten\",\"ihr\":\"installiertet\",\"sie_Sie\":\"installierten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe installiert\",\"du\":\"hast installiert\",\"er_sie_es\":\"hat installiert\",\"wir\":\"haben installiert\",\"ihr\":\"habt installiert\",\"sie_Sie\":\"haben installiert\"}],\"target\":\"installieren\",\"source\":\"to install\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b2-b2_construction-009\",\"infinitive\":\"verlegen\",\"translation\":\"to lay (cables, tiles, floor), to postpone\",\"type\":\"verb\",\"cefr\":\"B2\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb. Inseparable prefix 'ver-'. Uses 'haben' for Perfekt. Partizip II without 'ge-'.\",\"examples\":[{\"de\":\"Sie werden den neuen Teppichboden verlegen.\",\"en\":\"They will lay the new carpet.\"},{\"de\":\"Der Techniker hat alle Kabel professionell verlegt.\",\"en\":\"The technician has professionally laid all the cables.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"verlegte\",\"du\":\"verlegtest\",\"er_sie_es\":\"verlegte\",\"wir\":\"verlegten\",\"ihr\":\"verlegtet\",\"sie_Sie\":\"verlegten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe verlegt\",\"du\":\"hast verlegt\",\"er_sie_es\":\"hat verlegt\",\"wir\":\"haben verlegt\",\"ihr\":\"habt verlegt\",\"sie_Sie\":\"haben verlegt\"}],\"target\":\"verlegen\",\"source\":\"to lay (cables, tiles, floor), to postpone\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b2-b2_construction-010\",\"infinitive\":\"streichen\",\"translation\":\"to paint (a wall), to cross out\",\"type\":\"verb\",\"cefr\":\"B2\",\"tags\":[\"verb\"],\"grammar_note\":\"Irregular (strong) verb. Uses 'haben' for Perfekt.\",\"examples\":[{\"de\":\"Wir müssen die Wände im Wohnzimmer streichen.\",\"en\":\"We need to paint the walls in the living room.\"},{\"de\":\"Sie hat die ganze Fassade neu gestrichen.\",\"en\":\"She has repainted the entire facade.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"strich\",\"du\":\"strichst\",\"er_sie_es\":\"strich\",\"wir\":\"strichen\",\"ihr\":\"strichet\",\"sie_Sie\":\"strichen\"},{\"tense\":\"Perfekt\",\"ich\":\"habe gestrichen\",\"du\":\"hast gestrichen\",\"er_sie_es\":\"hat gestrichen\",\"wir\":\"haben gestrichen\",\"ihr\":\"habt gestrichen\",\"sie_Sie\":\"haben gestrichen\"}],\"target\":\"streichen\",\"source\":\"to paint (a wall), to cross out\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b2-b2_construction-011\",\"infinitive\":\"mauern\",\"translation\":\"to brick, to wall\",\"type\":\"verb\",\"cefr\":\"B2\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb. Weak conjugation. Uses 'haben' for Perfekt.\",\"examples\":[{\"de\":\"Der Maurer mauert die Außenwände des Hauses.\",\"en\":\"The bricklayer is bricking the outer walls of the house.\"},{\"de\":\"Sie haben eine neue Gartenmauer gemauert.\",\"en\":\"They have bricked a new garden wall.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"mauerte\",\"du\":\"mauertest\",\"er_sie_es\":\"mauerte\",\"wir\":\"mauerten\",\"ihr\":\"mauertet\",\"sie_Sie\":\"mauerten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe gemauert\",\"du\":\"hast gemauert\",\"er_sie_es\":\"hat gemauert\",\"wir\":\"haben gemauert\",\"ihr\":\"habt gemauert\",\"sie_Sie\":\"haben gemauert\"}],\"target\":\"mauern\",\"source\":\"to brick, to wall\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b2-b2_construction-012\",\"infinitive\":\"gießen\",\"translation\":\"to pour (e.g., concrete), to water (plants)\",\"type\":\"verb\",\"cefr\":\"B2\",\"tags\":[\"verb\"],\"grammar_note\":\"Irregular (strong) verb. Uses 'haben' for Perfekt.\",\"examples\":[{\"de\":\"Die Arbeiter gießen den Beton für das Fundament.\",\"en\":\"The workers are pouring the concrete for the foundation.\"},{\"de\":\"Sie haben die Säulen aus Stahlbeton gegossen.\",\"en\":\"They have cast the reinforced concrete columns.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"goss\",\"du\":\"gossest\",\"er_sie_es\":\"goss\",\"wir\":\"gossen\",\"ihr\":\"gosset\",\"sie_Sie\":\"gossen\"},{\"tense\":\"Perfekt\",\"ich\":\"habe gegossen\",\"du\":\"hast gegossen\",\"er_sie_es\":\"hat gegossen\",\"wir\":\"haben gegossen\",\"ihr\":\"habt gegossen\",\"sie_Sie\":\"haben gegossen\"}],\"target\":\"gießen\",\"source\":\"to pour (e.g., concrete), to water (plants)\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b2-b2_construction-013\",\"infinitive\":\"abdichten\",\"translation\":\"to seal, to waterproof\",\"type\":\"verb\",\"cefr\":\"B2\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb. Separable prefix 'ab-'. Uses 'haben' for Perfekt.\",\"examples\":[{\"de\":\"Man muss das Dach sorgfältig abdichten.\",\"en\":\"One must carefully seal the roof.\"},{\"de\":\"Der Keller wurde gegen Feuchtigkeit abgedichtet.\",\"en\":\"The cellar was waterproofed against moisture.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"dichtete ab\",\"du\":\"dichtetest ab\",\"er_sie_es\":\"dichtete ab\",\"wir\":\"dichteten ab\",\"ihr\":\"dichtetet ab\",\"sie_Sie\":\"dichteten ab\"},{\"tense\":\"Perfekt\",\"ich\":\"habe abgedichtet\",\"du\":\"hast abgedichtet\",\"er_sie_es\":\"hat abgedichtet\",\"wir\":\"haben abgedichtet\",\"ihr\":\"habt abgedichtet\",\"sie_Sie\":\"haben abgedichtet\"}],\"target\":\"abdichten\",\"source\":\"to seal, to waterproof\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b2-b2_construction-014\",\"infinitive\":\"verankern\",\"translation\":\"to anchor\",\"type\":\"verb\",\"cefr\":\"B2\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb. Inseparable prefix 'ver-'. Uses 'haben' for Perfekt. Partizip II without 'ge-'.\",\"examples\":[{\"de\":\"Die Stützbalken müssen fest im Boden verankert werden.\",\"en\":\"The support beams must be firmly anchored in the ground.\"},{\"de\":\"Der Mast wurde sicher im Felsen verankert.\",\"en\":\"The mast was securely anchored in the rock.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"verankerte\",\"du\":\"verankertest\",\"er_sie_es\":\"verankerte\",\"wir\":\"verankerten\",\"ihr\":\"verankertet\",\"sie_Sie\":\"verankerten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe verankert\",\"du\":\"hast verankert\",\"er_sie_es\":\"hat verankert\",\"wir\":\"haben verankert\",\"ihr\":\"habt verankert\",\"sie_Sie\":\"haben verankert\"}],\"target\":\"verankern\",\"source\":\"to anchor\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b2-b2_construction-015\",\"infinitive\":\"abreißen\",\"translation\":\"to demolish, to tear down\",\"type\":\"verb\",\"cefr\":\"B2\",\"tags\":[\"verb\"],\"grammar_note\":\"Irregular (strong) verb. Separable prefix 'ab-'. Uses 'haben' for Perfekt.\",\"examples\":[{\"de\":\"Das alte Fabrikgebäude soll abgerissen werden.\",\"en\":\"The old factory building is to be demolished.\"},{\"de\":\"Sie haben die alte Mauer in wenigen Stunden abgerissen.\",\"en\":\"They tore down the old wall in a few hours.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"riss ab\",\"du\":\"rissest ab\",\"er_sie_es\":\"riss ab\",\"wir\":\"rissen ab\",\"ihr\":\"risset ab\",\"sie_Sie\":\"rissen ab\"},{\"tense\":\"Perfekt\",\"ich\":\"habe abgerissen\",\"du\":\"hast abgerissen\",\"er_sie_es\":\"hat abgerissen\",\"wir\":\"haben abgerissen\",\"ihr\":\"habt abgerissen\",\"sie_Sie\":\"haben abgerissen\"}],\"target\":\"abreißen\",\"source\":\"to demolish, to tear down\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b2-b2_construction-016\",\"infinitive\":\"einrichten\",\"translation\":\"to furnish, to set up, to arrange\",\"type\":\"verb\",\"cefr\":\"B2\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb. Separable prefix 'ein-'. Uses 'haben' for Perfekt.\",\"examples\":[{\"de\":\"Wir wollen unser neues Büro modern einrichten.\",\"en\":\"We want to furnish our new office in a modern way.\"},{\"de\":\"Sie hat die Wohnung sehr geschmackvoll eingerichtet.\",\"en\":\"She has furnished the apartment very tastefully.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"richtete ein\",\"du\":\"richtetest ein\",\"er_sie_es\":\"richtete ein\",\"wir\":\"richteten ein\",\"ihr\":\"richtetet ein\",\"sie_Sie\":\"richteten ein\"},{\"tense\":\"Perfekt\",\"ich\":\"habe eingerichtet\",\"du\":\"hast eingerichtet\",\"er_sie_es\":\"hat eingerichtet\",\"wir\":\"haben eingerichtet\",\"ihr\":\"habt eingerichtet\",\"sie_Sie\":\"haben eingerichtet\"}],\"target\":\"einrichten\",\"source\":\"to furnish, to set up, to arrange\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b2-b2_construction-017\",\"infinitive\":\"ausstatten\",\"translation\":\"to equip, to furnish (with equipment)\",\"type\":\"verb\",\"cefr\":\"B2\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb. Separable prefix 'aus-'. Uses 'haben' for Perfekt.\",\"examples\":[{\"de\":\"Das Labor muss mit neuen Geräten ausgestattet werden.\",\"en\":\"The laboratory must be equipped with new devices.\"},{\"de\":\"Sie haben das Hotel mit modernster Technik ausgestattet.\",\"en\":\"They have equipped the hotel with the latest technology.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"stattete aus\",\"du\":\"stattetest aus\",\"er_sie_es\":\"stattete aus\",\"wir\":\"statteten aus\",\"ihr\":\"stattetet aus\",\"sie_Sie\":\"statteten aus\"},{\"tense\":\"Perfekt\",\"ich\":\"habe ausgestattet\",\"du\":\"hast ausgestattet\",\"er_sie_es\":\"hat ausgestattet\",\"wir\":\"haben ausgestattet\",\"ihr\":\"habt ausgestattet\",\"sie_Sie\":\"haben ausgestattet\"}],\"target\":\"ausstatten\",\"source\":\"to equip, to furnish (with equipment)\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b2-b2_construction-018\",\"infinitive\":\"modifizieren\",\"translation\":\"to modify\",\"type\":\"verb\",\"cefr\":\"B2\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb. Weak conjugation. Uses 'haben' for Perfekt.\",\"examples\":[{\"de\":\"Wir müssen den Entwurf noch leicht modifizieren.\",\"en\":\"We still need to slightly modify the design.\"},{\"de\":\"Die Ingenieure haben das System erfolgreich modifiziert.\",\"en\":\"The engineers have successfully modified the system.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"modifizierte\",\"du\":\"modifiziertest\",\"er_sie_es\":\"modifizierte\",\"wir\":\"modifizierten\",\"ihr\":\"modifiziertet\",\"sie_Sie\":\"modifizierten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe modifiziert\",\"du\":\"hast modifiziert\",\"er_sie_es\":\"hat modifiziert\",\"wir\":\"haben modifiziert\",\"ihr\":\"habt modifiziert\",\"sie_Sie\":\"haben modifiziert\"}],\"target\":\"modifizieren\",\"source\":\"to modify\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b2-b2_construction-019\",\"infinitive\":\"optimieren\",\"translation\":\"to optimize\",\"type\":\"verb\",\"cefr\":\"B2\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb. Weak conjugation. Uses 'haben' for Perfekt.\",\"examples\":[{\"de\":\"Es ist wichtig, den Energieverbrauch zu optimieren.\",\"en\":\"It is important to optimize energy consumption.\"},{\"de\":\"Sie haben den Produktionsprozess optimiert, um Kosten zu sparen.\",\"en\":\"They have optimized the production process to save costs.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"optimierte\",\"du\":\"optimiertest\",\"er_sie_es\":\"optimierte\",\"wir\":\"optimierten\",\"ihr\":\"optimiertet\",\"sie_Sie\":\"optimierten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe optimiert\",\"du\":\"hast optimiert\",\"er_sie_es\":\"hat optimiert\",\"wir\":\"haben optimiert\",\"ihr\":\"habt optimiert\",\"sie_Sie\":\"haben optimiert\"}],\"target\":\"optimieren\",\"source\":\"to optimize\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b2-b2_construction-020\",\"infinitive\":\"verstärken\",\"translation\":\"to reinforce, to strengthen\",\"type\":\"verb\",\"cefr\":\"B2\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb. Inseparable prefix 'ver-'. Uses 'haben' for Perfekt. Partizip II without 'ge-'.\",\"examples\":[{\"de\":\"Man muss die Decke des alten Kellers verstärken.\",\"en\":\"One must reinforce the ceiling of the old cellar.\"},{\"de\":\"Sie haben die Fundamente mit Stahlträgern verstärkt.\",\"en\":\"They have reinforced the foundations with steel beams.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"verstärkte\",\"du\":\"verstärktst\",\"er_sie_es\":\"verstärkte\",\"wir\":\"verstärkten\",\"ihr\":\"verstärktet\",\"sie_Sie\":\"verstärkten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe verstärkt\",\"du\":\"hast verstärkt\",\"er_sie_es\":\"hat verstärkt\",\"wir\":\"haben verstärkt\",\"ihr\":\"habt verstärkt\",\"sie_Sie\":\"haben verstärkt\"}],\"target\":\"verstärken\",\"source\":\"to reinforce, to strengthen\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b2-b2_construction-021\",\"infinitive\":\"isolieren\",\"translation\":\"to insulate\",\"type\":\"verb\",\"cefr\":\"B2\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb. Weak conjugation. Uses 'haben' for Perfekt.\",\"examples\":[{\"de\":\"Das Haus muss gut isoliert werden, um Energie zu sparen.\",\"en\":\"The house must be well insulated to save energy.\"},{\"de\":\"Sie haben die Wände und das Dach isoliert.\",\"en\":\"They have insulated the walls and the roof.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"isolierte\",\"du\":\"isoliertest\",\"er_sie_es\":\"isolierte\",\"wir\":\"isolierten\",\"ihr\":\"isoliertet\",\"sie_Sie\":\"isolierten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe isoliert\",\"du\":\"hast isoliert\",\"er_sie_es\":\"hat isoliert\",\"wir\":\"haben isoliert\",\"ihr\":\"habt isoliert\",\"sie_Sie\":\"haben isoliert\"}],\"target\":\"isolieren\",\"source\":\"to insulate\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b2-b2_construction-022\",\"infinitive\":\"vermessen\",\"translation\":\"to survey, to measure (land)\",\"type\":\"verb\",\"cefr\":\"B2\",\"tags\":[\"verb\"],\"grammar_note\":\"Irregular (strong) verb. Inseparable prefix 'ver-'. Uses 'haben' for Perfekt. Partizip II without 'ge-'.\",\"examples\":[{\"de\":\"Vor dem Bau muss das Grundstück genau vermessen werden.\",\"en\":\"Before construction, the plot must be precisely surveyed.\"},{\"de\":\"Der Geodät hat das Gelände neu vermessen.\",\"en\":\"The surveyor has re-measured the terrain.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"vermaß\",\"du\":\"vermaßest\",\"er_sie_es\":\"vermaß\",\"wir\":\"vermaßen\",\"ihr\":\"vermaßt\",\"sie_Sie\":\"vermaßen\"},{\"tense\":\"Perfekt\",\"ich\":\"habe vermessen\",\"du\":\"hast vermessen\",\"er_sie_es\":\"hat vermessen\",\"wir\":\"haben vermessen\",\"ihr\":\"habt vermessen\",\"sie_Sie\":\"haben vermessen\"}],\"target\":\"vermessen\",\"source\":\"to survey, to measure (land)\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b2-b2_construction-023\",\"infinitive\":\"skizzieren\",\"translation\":\"to sketch\",\"type\":\"verb\",\"cefr\":\"B2\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb. Weak conjugation. Uses 'haben' for Perfekt.\",\"examples\":[{\"de\":\"Der Architekt skizziert erste Ideen für das Gebäude.\",\"en\":\"The architect sketches initial ideas for the building.\"},{\"de\":\"Sie hat ihre Vision in einer schnellen Skizze skizziert.\",\"en\":\"She sketched her vision in a quick drawing.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"skizzierte\",\"du\":\"skizziertes\",\"er_sie_es\":\"skizzierte\",\"wir\":\"skizzierten\",\"ihr\":\"skizziertet\",\"sie_Sie\":\"skizzierten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe skizziert\",\"du\":\"hast skizziert\",\"er_sie_es\":\"hat skizziert\",\"wir\":\"haben skizziert\",\"ihr\":\"habt skizziert\",\"sie_Sie\":\"haben skizziert\"}],\"target\":\"skizzieren\",\"source\":\"to sketch\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b2-b2_construction-024\",\"infinitive\":\"fertigstellen\",\"translation\":\"to complete, to finish (a project)\",\"type\":\"verb\",\"cefr\":\"B2\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb. Separable prefix 'fertig-'. Uses 'haben' for Perfekt.\",\"examples\":[{\"de\":\"Wir müssen das Projekt bis Ende des Monats fertigstellen.\",\"en\":\"We need to complete the project by the end of the month.\"},{\"de\":\"Die Bauarbeiten wurden pünktlich fertiggestellt.\",\"en\":\"The construction work was completed on time.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"stellte fertig\",\"du\":\"stelltest fertig\",\"er_sie_es\":\"stellte fertig\",\"wir\":\"stellten fertig\",\"ihr\":\"stelltet fertig\",\"sie_Sie\":\"stellten fertig\"},{\"tense\":\"Perfekt\",\"ich\":\"habe fertiggestellt\",\"du\":\"hast fertiggestellt\",\"er_sie_es\":\"hat fertiggestellt\",\"wir\":\"haben fertiggestellt\",\"ihr\":\"habt fertiggestellt\",\"sie_Sie\":\"haben fertiggestellt\"}],\"target\":\"fertigstellen\",\"source\":\"to complete, to finish (a project)\",\"example_target\":\"\",\"example_source\":\"\"},{\"id\":\"verbs-b2-b2_construction-025\",\"infinitive\":\"bebauen\",\"translation\":\"to build on, to develop (a plot of land)\",\"type\":\"verb\",\"cefr\":\"B2\",\"tags\":[\"verb\"],\"grammar_note\":\"Regular verb. Inseparable prefix 'be-'. Uses 'haben' for Perfekt. Partizip II without 'ge-'.\",\"examples\":[{\"de\":\"Das Grundstück darf nur mit einem Einfamilienhaus bebaut werden.\",\"en\":\"The plot of land may only be built on with a single-family house.\"},{\"de\":\"Die Stadt hat beschlossen, das Gelände neu zu bebauen.\",\"en\":\"The city has decided to redevelop the area.\"}],\"conjugations\":[{\"tense\":\"Präteritum\",\"ich\":\"bebaute\",\"du\":\"bebautest\",\"er_sie_es\":\"bebaute\",\"wir\":\"bebauten\",\"ihr\":\"bebautet\",\"sie_Sie\":\"bebauten\"},{\"tense\":\"Perfekt\",\"ich\":\"habe bebaut\",\"du\":\"hast bebaut\",\"er_sie_es\":\"hat bebaut\",\"wir\":\"haben bebaut\",\"ihr\":\"habt bebaut\",\"sie_Sie\":\"haben bebaut\"}],\"target\":\"bebauen\",\"source\":\"to build on, to develop (a plot of land)\",\"example_target\":\"\",\"example_source\":\"\"}]";
+const langConfigJson = "{\"language_pair\":\"english_german\",\"target_lang\":\"de\",\"native_lang\":\"en\",\"target_lang_name\":\"Deutsch\",\"native_lang_name\":\"English\",\"speech_lang\":\"de-DE\",\"noun_metadata_fields\":[{\"key\":\"article\",\"label\":\"Artikel\",\"render\":\"article_badge\"},{\"key\":\"gender\",\"label\":\"Genus\",\"render\":\"gender_label\"},{\"key\":\"plural\",\"label\":\"Plural\",\"render\":\"text\"}],\"article_colours\":{\"der\":\"#4A7C9E\",\"die\":\"#B05070\",\"das\":\"#4A8A5A\"},\"gender_labels\":{\"m\":\"Maskulinum\",\"f\":\"Femininum\",\"n\":\"Neutrum\"},\"verb_tenses\":[\"Präsens\",\"Präteritum\",\"Perfekt\",\"Futur I\",\"Konjunktiv II\"],\"cases\":{\"nominative\":\"Nominativ\",\"accusative\":\"Akkusativ\",\"dative\":\"Dativ\",\"genitive\":\"Genitiv\"},\"ui_labels\":{\"learn_mode\":\"Lernen\",\"train_mode\":\"Trainieren\",\"examples_heading\":\"Beispielsätze\",\"grammar_note_heading\":\"Grammatiknotiz\",\"audio_button\":\"Anhören\",\"back_link\":\"Zurück\",\"card_counter\":\"Karte {current} / {total}\",\"next_button\":\"Weiter\",\"finish_button\":\"Fertig\",\"correct\":\"Richtig!\",\"wrong\":\"Falsch\"}}";
+const category = "verbs";
+
+  const cards     = JSON.parse(cardsJson);
+  const config    = JSON.parse(langConfigJson);
+  let currentIndex = 0;
+
+  const dotNav    = document.getElementById('dot-nav');
+  const currentNum = document.getElementById('current-num');
+  const progressBar = document.getElementById('progress-bar');
+  const btnPrev   = document.getElementById('btn-prev');
+  const btnNext   = document.getElementById('btn-next');
+  const cardHost  = document.getElementById('card-host');
+  const progressCont = document.getElementById('progress-container');
+
+  const cardViewWrap = document.getElementById('card-view-wrap');
+  const listViewWrap = document.getElementById('list-view-wrap');
+  const btnViewCards = document.getElementById('view-cards-btn');
+  const btnViewList  = document.getElementById('view-list-btn');
+
+  // Toggle Logic
+  function setViewMode(mode) {
+    if (mode === 'list') {
+      cardViewWrap.classList.add('hidden');
+      listViewWrap.classList.remove('hidden');
+      progressCont.classList.add('hidden');
+      btnViewList.classList.add('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewList.classList.remove('text-[var(--text-muted)]');
+      btnViewCards.classList.remove('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewCards.classList.add('text-[var(--text-muted)]');
+    } else {
+      listViewWrap.classList.add('hidden');
+      cardViewWrap.classList.remove('hidden');
+      progressCont.classList.remove('hidden');
+      btnViewCards.classList.add('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewCards.classList.remove('text-[var(--text-muted)]');
+      btnViewList.classList.remove('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewList.classList.add('text-[var(--text-muted)]');
+    }
+  }
+
+  btnViewCards.addEventListener('click', () => setViewMode('cards'));
+  btnViewList.addEventListener('click', () => setViewMode('list'));
+
+  // Default Grammatik and Redemittel to list view!
+  if (category === 'grammatik' || category === 'redemittel' || category === 'phrases') {
+    setViewMode('list');
+  }
+
+
+
+  // ── Helpers (mirror card-renderer.ts — no module imports in inline scripts) ──
+  const articleColours = config.article_colours || { der:'#4A7C9E', die:'#B05070', das:'#4A8A5A' };
+  const genderLabels   = config.gender_labels   || { m:'Maskulinum', f:'Femininum', n:'Neutrum'  };
+  const speechLang     = config.speech_lang     || 'de-DE';
+
+  function stripArticle(w) {
+    return (w || '').replace(/^(der|die|das|el|la|los|las|le|les|l')\s+/i,'').trim();
+  }
+
+  function getTypeLabel(card) {
+    const tags = card.tags || [];
+    if (tags.includes('noun'))       return 'Substantiv';
+    if (tags.includes('verb'))       return 'Verb';
+    if (tags.includes('adjective'))  return 'Adjektiv';
+    if (tags.includes('expression')) return 'Ausdruck';
+    return { vocab:'Vokabel', verb:'Verb', phrase:'Phrase', connector:'Konnektor', grammar:'Grammatik' }[card.type] || 'Vokabel';
+  }
+
+  function normaliseEx(ex) {
+    return { target: ex.target||ex.de||'', source: ex.source||ex.en||'', note: ex.note };
+  }
+
+  function getMetaFacts(card) {
+    const meta = { ...(card.metadata||{}), article:card.article, gender:card.gender, plural:card.plural };
+    const facts = [];
+    for (const field of (config.noun_metadata_fields || [])) {
+      const raw = meta[field.key];
+      if (!raw || raw==='~') continue;
+      let value = String(raw), colour;
+      if (field.render === 'gender_label')  value  = genderLabels[raw] || raw;
+      if (field.render === 'article_badge') colour = articleColours[raw.toLowerCase()] || 'var(--espresso)';
+      facts.push({ label: field.label, value, colour });
+    }
+    return facts;
+  }
+
+  // ── Card renderer ─────────────────────────────────────────────────────────
+  function renderCard(idx) {
+    const card = cards[idx];
+    if (!card || !cardHost) return;
+
+    const lc = cardHost.querySelector('.learning-card');
+    if (!lc) return;
+
+    function sel(cls) { return lc.querySelector(cls); }
+
+    // Type badge + level
+    sel('.lc-type-badge').textContent = getTypeLabel(card);
+    sel('.lc-level-badge').textContent = (card.level || '').toUpperCase();
+
+    // Article
+    const article = card.article || card.metadata?.article;
+    const articleWrap = sel('.lc-article-wrap');
+    const articleEl   = sel('.lc-article');
+    if (article && (card.tags||[]).includes('noun') && !card.plural_only) {
+      articleEl.textContent = article;
+      articleEl.style.color = articleColours[article.toLowerCase()] || 'var(--espresso)';
+      articleWrap.style.display = '';
+    } else {
+      articleWrap.style.display = 'none';
+    }
+
+    // Word / translation / forms
+    sel('.lc-word').textContent        = stripArticle(card.target);
+    sel('.lc-translation').textContent = card.source || '';
+    const plural = card.plural || card.metadata?.plural;
+    sel('.lc-forms').textContent = plural && !card.plural_only ? `Pl. ${plural}` : card.plural_only ? 'nur Plural' : '';
+
+    // Meta grid
+    const metaGrid = sel('.lc-meta-grid');
+    const facts = getMetaFacts(card);
+    if (facts.length) {
+      metaGrid.style.gridTemplateColumns = `repeat(${Math.min(facts.length,4)}, 1fr)`;
+      metaGrid.style.display = '';
+      metaGrid.innerHTML = facts.map((f, i) => `
+        <div class="px-5 py-4 ${i<facts.length-1?'border-r':''}" style="border-color:var(--border);">
+          <p class="text-[9px] font-bold uppercase tracking-widest mb-1" style="color:var(--text-muted);">${f.label}</p>
+          <p class="text-sm font-bold" style="color:${f.colour||'var(--text)'};">${f.value}</p>
+        </div>`).join('');
+    } else {
+      metaGrid.style.display = 'none';
+    }
+
+    // Grammar note
+    const grammarWrap = sel('.lc-grammar-wrap');
+    if (card.grammar_note) {
+      sel('.lc-grammar-text').innerHTML = formatHighlight(card.grammar_note);
+      grammarWrap.classList.remove('hidden');
+    } else {
+      grammarWrap.classList.add('hidden');
+    }
+
+    // Examples
+    const examplesEl = sel('.lc-examples');
+    const rawEx = card.examples || (card.example_target ? [{ target:card.example_target, source:card.example_source }] : []);
+    examplesEl.innerHTML = rawEx.length
+      ? rawEx.map(ex => { const e=normaliseEx(ex); return `
+          <div class="rounded-2xl border overflow-hidden" style="border-color:var(--border);">
+            <div class="px-4 py-3" style="background-color:var(--bg);">
+              <p class="font-semibold leading-snug mb-1" style="color:var(--text);">${e.target}</p>
+              <p class="text-sm italic" style="color:var(--text-muted);">${e.source||''}</p>
+            </div>
+            ${e.note?`<div class="px-4 py-2 border-t" style="border-color:var(--border);">
+              <p class="text-[10px] font-bold font-mono" style="color:var(--espresso);">📐 ${e.note}</p>
+            </div>`:''}
+          </div>`; }).join('')
+      : '<p class="text-sm italic" style="color:var(--text-muted);">Kein Beispiel verfügbar.</p>';
+
+    // Tags
+    sel('.lc-tags').innerHTML = (card.tags||[]).map(t =>
+      `<span class="text-[10px] font-bold px-2 py-0.5 rounded-md border" style="border-color:var(--border);color:var(--text-muted);background-color:var(--bg);">${t}</span>`
+    ).join('');
+
+    // Progress UI
+    if (currentNum)  currentNum.textContent = String(idx+1);
+    if (progressBar) progressBar.style.width = `${Math.round(((idx+1)/cards.length)*100)}%`;
+    if (btnPrev)     btnPrev.disabled = idx === 0;
+    if (btnNext)     btnNext.innerHTML = idx === cards.length-1
+      ? '✓ Fertig'
+      : 'Weiter <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>';
+
+    updateDots();
+
+    // Re-bind audio button cleanly by cloning to strip old listeners
+    const oldBtn = sel('.lc-audio-btn');
+    if (oldBtn) {
+      const newBtn = oldBtn.cloneNode(true);
+      oldBtn.parentNode.replaceChild(newBtn, oldBtn);
+      newBtn.addEventListener('click', speakCurrent);
+    }
+  }
+
+  // ── Dot navigation ────────────────────────────────────────────────────────
+  function buildDots() {
+    if (!dotNav) return;
+    dotNav.innerHTML = '';
+    const maxVisible = 20;
+    const showAll = cards.length <= maxVisible;
+    cards.forEach((_, i) => {
+      if (!showAll && i >= maxVisible) return;
+      const dot = document.createElement('button');
+      dot.className = 'dot w-2 h-2 rounded-full transition-all duration-300 flex-shrink-0';
+      dot.style.backgroundColor = 'var(--border)';
+      dot.title = `Card ${i+1}`;
+      dot.addEventListener('click', () => goTo(i));
+      dotNav.appendChild(dot);
+    });
+    if (!showAll) {
+      const el = document.createElement('span');
+      el.textContent = `+${cards.length - maxVisible}`;
+      el.className = 'text-[10px] font-bold';
+      el.style.color = 'var(--text-muted)';
+      dotNav.appendChild(el);
+    }
+  }
+
+  function updateDots() {
+    dotNav?.querySelectorAll('.dot').forEach((dot, i) => {
+      dot.style.backgroundColor = i===currentIndex ? 'var(--espresso)' : 'var(--border)';
+      dot.style.width     = i===currentIndex ? '20px' : '8px';
+      dot.style.borderRadius = '4px';
+    });
+  }
+
+  // ── Audio ─────────────────────────────────────────────────────────────────
+  function speakCurrent() {
+    const card = cards[currentIndex];
+    if (!card) return;
+    if (window.DeutschAudioEngine) {
+      window.DeutschAudioEngine.speak(card.target || '', speechLang, 0.85);
+    }
+  }
+
+  // ── Navigate ─────────────────────────────────────────────────────────────
+  function goTo(idx) {
+    if (idx < 0 || idx >= cards.length) return;
+    currentIndex = idx;
+    renderCard(currentIndex);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  btnPrev?.addEventListener('click', () => goTo(currentIndex - 1));
+  btnNext?.addEventListener('click', () => {
+    if (currentIndex === cards.length - 1) window.location.href = '/vocabulary';
+    else goTo(currentIndex + 1);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') goTo(currentIndex + 1);
+    if (e.key === 'ArrowLeft')  goTo(currentIndex - 1);
+    if (e.key === 'a' || e.key === 'A') speakCurrent();
+  });
+
+  // ── Init ─────────────────────────────────────────────────────────────────
+  buildDots();
+  // Card 0 is already rendered server-side via LearningCard component.
+  // Sync progress UI to reflect card 0 state.
+  updateDots();
+  if (progressBar) progressBar.style.width = `${Math.round(1/cards.length*100)}%`;
+  // Update card 0 using client-side config too (ensures langConfig is applied)
+  renderCard(0);
+})();</script>
