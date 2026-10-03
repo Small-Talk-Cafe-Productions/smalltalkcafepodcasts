@@ -1,0 +1,580 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="description" content="Deutsch Lounge — Ein gezieltes Trainingswerkzeug für deutschen Wortschatz und Grammatik."><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/languagelounge/favicon.svg"><meta name="generator" content="Astro v7.3.5"><title>Two Fixed Positions in the Sentence — Deutsch Lounge</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet"><script>
+      (function() {
+        const saved = localStorage.getItem('wortschatz_theme');
+        if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script><link rel="stylesheet" href="/languagelounge/_astro/Layout.BK5KHINQ.css"><style>.sel-opt[data-astro-cid-5tabbh6g]{border:2px solid var(--border);background-color:var(--card);color:var(--text);cursor:pointer;text-align:center;border-radius:12px;flex-direction:column;justify-content:center;align-items:center;width:100%;padding:14px 12px;transition:border-color .15s,background-color .15s,color .15s,box-shadow .15s;display:flex}.sel-opt[data-astro-cid-5tabbh6g]:hover{border-color:var(--border-hover);box-shadow:0 2px 8px #00000014}.sel-opt[data-astro-cid-5tabbh6g].sel-active{border-color:var(--espresso);background-color:var(--espresso);color:#f5f2eb;box-shadow:0 2px 12px #0000002e}
+</style></head><body class="antialiased min-h-screen flex flex-col" style="background-color:var(--bg);color:var(--text);"><!-- Header --><header class="sticky top-0 z-50 border-b" style="background-color:var(--bg);border-color:var(--border);"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between gap-4" style="height:4.5rem;"><!-- Logo + Language Switcher --><div class="flex items-center gap-4 shrink-0"><a href="/languagelounge/en-de/" class="flex items-center gap-2 group"><span class="font-outfit font-extrabold text-xl sm:text-2xl tracking-tight transition-colors" style="color:var(--text);">Small Talk Café <span class="font-normal text-base hidden sm:inline" style="color:var(--text-muted);">| <span id="site-name">Deutsch Lounge</span></span></span></a><!-- Language Selector Dropdown --><div class="relative" id="lang-dropdown-wrapper"><button id="lang-btn" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-sm font-bold transition-all hover:opacity-70" style="background-color:var(--bg); border-color:var(--border); color:var(--text);"><span id="lang-flag">🇩🇪</span><span id="lang-code">DE</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"></path></svg></button><div id="lang-menu" class="hidden absolute top-full left-0 mt-2 rounded-2xl border shadow-xl overflow-hidden z-50 min-w-[160px]" style="background-color:var(--card); border-color:var(--border);"><div><a href="/languagelounge/en-de/" class="w-full flex items-center gap-3 px-4 py-3 text-sm font-semibold text-left transition-colors hover:opacity-70" style="color:var(--text);"><span class="text-lg">🇩🇪</span><div><div class="font-bold" style="color:var(--text);">Deutsch Lounge</div></div></a></div></div></div></div><!-- Dynamic Nav Links --><nav class="hidden md:flex gap-5 items-center"><a href="https://smalltalkcafe.de/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Small Talk Café Podcasts</a><span class="text-sm font-normal" style="color:var(--border);">|</span><a href="/languagelounge/en-de/vocabulary/" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Vokabeln</a><a href="/languagelounge/en-de/verbs/" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Verben</a><a href="/languagelounge/en-de/grammatik/" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Grammatik</a><a href="/languagelounge/en-de/redemittel/" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Redemittel</a><!-- Dark/Light Toggle --><button id="theme-toggle" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-sm font-semibold transition-all hover:opacity-70" style="border-color:var(--border); color:var(--text-muted);" aria-label="Toggle dark/light mode"><span id="theme-icon">☀️</span><span id="theme-label">Light</span></button></nav></div></header><main id="main-content" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-1 w-full"><div class="max-w-4xl mx-auto py-6" data-astro-cid-5tabbh6g><!-- Deck Header --><div class="flex items-start justify-between mb-8 gap-4 flex-wrap" data-astro-cid-5tabbh6g><div data-astro-cid-5tabbh6g><a href="/languagelounge/en-de/grammatik/" class="text-xs font-bold flex items-center gap-1 mb-2 hover:opacity-70 transition-opacity" style="color:var(--espresso);" data-astro-cid-5tabbh6g><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><path d="m15 18-6-6 6-6" data-astro-cid-5tabbh6g></path></svg>Grammatik</a><h1 class="text-2xl md:text-3xl font-extrabold font-outfit" style="color:var(--text);" data-astro-cid-5tabbh6g>Two Fixed Positions in the Sentence</h1><p class="text-xs font-bold uppercase tracking-wider mt-1" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Zwei feste Positionen im Satz • A2 • 15 Karten</p></div><div class="flex flex-col items-end gap-4 w-full md:w-auto mt-4 md:mt-0" data-astro-cid-5tabbh6g><!-- ── Mode Toggle ───────────────────────────── --><div class="flex rounded-xl border overflow-hidden p-1 gap-1 w-full max-w-[300px]" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><button id="btn-mode-learn" class="mode-btn flex-1 flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold transition-all" data-astro-cid-5tabbh6g><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" data-astro-cid-5tabbh6g></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" data-astro-cid-5tabbh6g></path></svg>Lernen</button><button id="btn-mode-train" class="mode-btn flex-1 flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold transition-all" data-astro-cid-5tabbh6g><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><circle cx="12" cy="12" r="10" data-astro-cid-5tabbh6g></circle><polyline points="12 6 12 12 16 14" data-astro-cid-5tabbh6g></polyline></svg>Trainieren</button></div><div id="learn-toolbar" class="flex flex-col items-end gap-4 w-full" data-astro-cid-5tabbh6g><!-- View switcher (Cards vs List) --><div class="flex rounded-xl border overflow-hidden p-1 gap-1 w-full max-w-[300px]" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><button id="view-cards-btn" class="view-btn flex-1 flex items-center justify-center px-4 py-2 rounded-lg text-xs font-bold transition-all bg-[var(--espresso)] text-[#F5F2EB]" data-astro-cid-5tabbh6g>Karten</button><button id="view-list-btn" class="view-btn flex-1 flex items-center justify-center px-4 py-2 rounded-lg text-xs font-bold transition-all text-[var(--text-muted)] hover:opacity-70" data-astro-cid-5tabbh6g>Liste</button></div><!-- Progress indicator --><div id="progress-container" class="flex items-center gap-3" data-astro-cid-5tabbh6g><div class="text-xs font-semibold" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Karte <span id="current-num" class="font-extrabold" style="color:var(--text);" data-astro-cid-5tabbh6g>1</span> / 15</div><div class="w-24 h-1.5 rounded-full overflow-hidden border" style="background-color:var(--bg);border-color:var(--border);" data-astro-cid-5tabbh6g><div id="progress-bar" class="h-full transition-all duration-500 rounded-full" style="width:0%; background-color:var(--espresso);" data-astro-cid-5tabbh6g></div></div></div></div></div></div><!-- ══ LEARN PANEL ════════════════════════════ --><div id="learn-panel" class="space-y-6" data-astro-cid-5tabbh6g><!-- ── Universal Study Card (rendered by LearningCard component) ── --><div id="card-view-wrap" data-astro-cid-5tabbh6g><div id="card-host" data-astro-cid-5tabbh6g><!-- The card shell — populated client-side by renderCard() --><div class="learning-card rounded-3xl border shadow-xl overflow-hidden" style="background-color:var(--card); border-color:var(--border);"><!-- ── Top bar ─────────────────────────────────── --><div class="lc-topbar flex items-center justify-between px-6 py-3.5 border-b" style="border-color:var(--border); background-color:var(--bg);"><div class="flex items-center gap-2"><span class="lc-type-badge text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-lg" style="background-color:var(--espresso); color:#F5F2EB;">—</span><span class="lc-level-badge text-[10px] font-bold px-2.5 py-1 rounded-lg cafe-badge"></span></div><button class="lc-audio-btn flex items-center justify-center w-11 h-11 rounded-full transition-transform hover:scale-105 active:scale-95 shadow-md flex-shrink-0" title="Anhören (A)" style="background-color:var(--espresso); color:#F5F2EB;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg></button></div><!-- ── Main word display ───────────────────────── --><div class="lc-hero px-7 py-8 text-center border-b" style="border-color:var(--border);"><div class="lc-article-wrap mb-1.5"><span class="lc-article text-xl font-bold"></span></div><h2 class="lc-word text-5xl md:text-6xl font-extrabold font-outfit mb-3" style="color:var(--text);">—</h2><p class="lc-translation text-lg font-semibold italic" style="color:var(--text-muted);"></p><p class="lc-forms text-sm font-medium mt-2" style="color:var(--text-muted);"></p></div><!-- ── Meta info grid ─────────────────────────── --><div class="lc-meta-grid grid border-b" style="border-color:var(--border);"><!-- populated by JS --></div><!-- ── Grammar note ───────────────────────────── --><div class="lc-grammar-wrap hidden px-7 py-5 border-b" style="border-color:var(--border); background-color:var(--bg);"><p class="text-[10px] font-bold uppercase tracking-widest mb-2" style="color:var(--espresso);">📌 <span class="lc-grammar-label">Grammatiknotiz</span></p><p class="lc-grammar-text text-sm leading-relaxed font-medium whitespace-pre-wrap" style="color:var(--text);"></p></div><!-- ── Type-specific block ────────────────────── --><!-- Verb conjugation (hidden by default, shown for verb cards) --><div class="lc-conjugation-wrap hidden border-b overflow-x-auto" style="border-color:var(--border);"><div class="lc-conjugation-inner"><!-- populated by JS --></div></div><!-- Connector word-order block --><div class="lc-wordorder-wrap hidden px-7 py-4 border-b" style="border-color:var(--border); background-color:var(--bg);"><div class="flex items-start gap-3 text-sm font-medium" style="color:var(--text-muted);"><span class="text-base flex-shrink-0">📐</span><span class="lc-wordorder-text"></span></div></div><!-- Phrase preposition block --><div class="lc-phrase-wrap hidden px-7 py-4 border-b" style="border-color:var(--border); background-color:var(--bg);"><p class="text-[10px] font-bold uppercase tracking-widest mb-2" style="color:var(--espresso);">Struktur</p><p class="lc-phrase-rule text-sm font-semibold" style="color:var(--text);"></p></div><!-- ── Examples ───────────────────────────────── --><div class="px-7 py-6 border-b" style="border-color:var(--border);"><p class="lc-examples-label text-[10px] font-bold uppercase tracking-widest mb-5" style="color:var(--text-muted);">Beispielsätze</p><div class="lc-examples space-y-3"><!-- populated by JS --></div></div><!-- ── Tags ───────────────────────────────────── --><div class="lc-tags-row px-7 py-4 flex items-center gap-2 flex-wrap"><span class="text-[10px] font-bold uppercase tracking-wider" style="color:var(--text-muted);">Tags:</span><div class="lc-tags flex gap-2 flex-wrap"></div></div></div><script>(function(){const cardJson = "{\"id\":\"grammatik-a2-zwei_positionen_satz-001\",\"target\":\"Satzbau: Die Satzglieder und ihre Positionen\",\"source\":\"Sentence Structure: Sentence parts and their positions\",\"grammar_note\":\"In German, sentences have a relatively flexible word order for most elements, but certain parts, especially verb components, occupy fixed positions. Understanding these fixed positions is crucial for correct sentence construction. This concept often refers to the finite verb and the topic/subject, as well as the non-finite verb parts that form the 'Satzklammer'.\",\"extra_examples\":[{\"de\":\"Ich habe gestern einen Film gesehen.\",\"en\":\"I watched a movie yesterday.\"},{\"de\":\"Wir müssen morgen arbeiten.\",\"en\":\"We have to work tomorrow.\"}],\"tags\":[\"grammatik\",\"a2\",\"satzbau\",\"grundlagen\",\"positionen\"],\"type\":\"grammar\",\"examples\":[{\"target\":\"Der Student lernt heute in der Bibliothek Deutsch.\",\"source\":\"The student is learning German today in the library.\"}]}";
+const langConfigJson = "{\"language_pair\":\"english_german\",\"target_lang\":\"de\",\"native_lang\":\"en\",\"target_lang_name\":\"Deutsch\",\"native_lang_name\":\"English\",\"speech_lang\":\"de-DE\",\"noun_metadata_fields\":[{\"key\":\"article\",\"label\":\"Artikel\",\"render\":\"article_badge\"},{\"key\":\"gender\",\"label\":\"Genus\",\"render\":\"gender_label\"},{\"key\":\"plural\",\"label\":\"Plural\",\"render\":\"text\"}],\"article_colours\":{\"der\":\"#4A7C9E\",\"die\":\"#B05070\",\"das\":\"#4A8A5A\"},\"gender_labels\":{\"m\":\"Maskulinum\",\"f\":\"Femininum\",\"n\":\"Neutrum\"},\"verb_tenses\":[\"Präsens\",\"Präteritum\",\"Perfekt\",\"Futur I\",\"Konjunktiv II\"],\"cases\":{\"nominative\":\"Nominativ\",\"accusative\":\"Akkusativ\",\"dative\":\"Dativ\",\"genitive\":\"Genitiv\"},\"ui_labels\":{\"learn_mode\":\"Lernen\",\"train_mode\":\"Trainieren\",\"examples_heading\":\"Beispielsätze\",\"grammar_note_heading\":\"Grammatiknotiz\",\"audio_button\":\"Anhören\",\"back_link\":\"Zurück\",\"card_counter\":\"Karte {current} / {total}\",\"next_button\":\"Weiter\",\"finish_button\":\"Fertig\",\"correct\":\"Richtig!\",\"wrong\":\"Falsch\",\"dashboard_link\":\"Dashboard\",\"library_prompt\":\"Wähle ein Deck aus der Bibliothek und lerne alle Informationen auf den Karten.\",\"cards_badge\":\"{count} KARTEN\",\"cards_count\":\"{count} Karten\",\"deck_meta\":\"{topic} • {level} • {count} Karten\",\"no_decks\":\"Noch keine Decks in dieser Kategorie.\",\"setup_title\":\"Setup Training\",\"setup_subtitle\":\"Konfiguriere deine Trainingssitzung.\",\"question_type\":\"Fragetyp\",\"mode_multiple_choice\":\"Multiple Choice\",\"mode_typing\":\"Texteingabe\",\"mode_typing_short\":\"Eingabe\",\"direction\":\"Richtung\",\"direction_forward\":\"🇺🇸 English → 🇩🇪 Deutsch\",\"direction_reverse\":\"🇩🇪 Deutsch → 🇺🇸 English\",\"select_level\":\"Level auswählen\",\"start_training\":\"Training Starten\",\"view_cards\":\"Karten\",\"view_list\":\"Liste\",\"card_word\":\"Karte\",\"keyboard_hint_study\":\"← → Pfeiltasten zum Navigieren · A zum Anhören\",\"example_single_heading\":\"Beispielsatz\",\"no_example\":\"Kein Beispiel verfügbar.\",\"tags_label\":\"Tags:\",\"type_vocab\":\"Vokabel\",\"type_verb\":\"Verb\",\"type_phrase\":\"Phrase\",\"type_connector\":\"Konnektor\",\"type_grammar\":\"Grammatik\",\"type_noun\":\"Substantiv\",\"type_adjective\":\"Adjektiv\",\"type_expression\":\"Ausdruck\",\"plural_prefix\":\"Pl. {plural}\",\"plural_only\":\"nur Plural\",\"word_order_heading\":\"Word Order\",\"structure_heading\":\"Struktur\",\"training_title\":\"Training\",\"all_levels\":\"Alle Niveaus\",\"type_placeholder\":\"Schreibe das Wort auf Deutsch...\",\"check_button\":\"Überprüfen\",\"keyboard_hint_train\":\"Enter / Space = bestätigen · A = Anhören\",\"audio_title\":\"Anhören (A)\",\"training_finished\":\"Training beendet!\",\"missed_heading\":\"Falsch beantwortet — zum Wiederholen\",\"retry_missed\":\"Falsche nochmal\",\"new_config\":\"Neue Konfiguration\",\"plural_hint\":\"Pl: {plural}\",\"results_pct\":\"{pct}% richtig\",\"result_excellent\":\"Ausgezeichnet! Du hast das Niveau gemeistert.\",\"result_good\":\"Sehr gut! Noch ein bisschen üben und du schaffst es!\",\"result_ok\":\"Guter Anfang! Wiederhole die Karten nochmal.\",\"result_retry\":\"Kein Problem — Übung macht den Meister!\",\"no_cards_title\":\"Keine Karten gefunden\",\"no_cards_hint\":\"Bitte wähle ein anderes Niveau oder Deck.\"},\"answer_normalisation\":{\"strip_leading_words\":[\"der\",\"die\",\"das\",\"ein\",\"eine\",\"einem\",\"einen\",\"einer\",\"dem\",\"den\",\"des\"],\"alt_spellings\":{\"ü\":\"ue\",\"ä\":\"ae\",\"ö\":\"oe\",\"ß\":\"ss\"}}}";
+
+  /**
+   * Client-side card renderer.
+   * Uses the universal card-renderer logic inline (no imports in Astro is:inline).
+   */
+
+  // ── Parse data ──────────────────────────────────────────────────────────
+  const card   = JSON.parse(cardJson);
+  const config = JSON.parse(langConfigJson);
+
+  // ── Helpers ─────────────────────────────────────────────────────────────
+  // Articles come from the language config (keys of article_colours), never hardcoded
+  const articleList = Object.keys(config.article_colours || {});
+  const articleRe = articleList.length
+    ? new RegExp('^(' + articleList.map(a => a.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|') + ')\\s+', 'i')
+    : null;
+
+  function stripArticle(word) {
+    return articleRe ? (word || '').replace(articleRe, '').trim() : (word || '').trim();
+  }
+
+  function getArticleColour(article) {
+    if (!article || !config.article_colours) return 'var(--espresso)';
+    return config.article_colours[article.toLowerCase()] || 'var(--espresso)';
+  }
+
+  function getGenderLabel(gender) {
+    if (!gender) return '';
+    return (config.gender_labels || {})[gender] || gender;
+  }
+
+  function getTypeLabel() {
+    const tags = card.tags || [];
+    if (tags.includes('noun'))       return 'Substantiv';
+    if (tags.includes('verb'))       return 'Verb';
+    if (tags.includes('adjective'))  return 'Adjektiv';
+    if (tags.includes('expression')) return 'Ausdruck';
+    const map = { vocab:'Vokabel', verb:'Verb', phrase:'Phrase', connector:'Konnektor', grammar:'Grammatik' };
+    return map[card.type] || 'Karte';
+  }
+
+  function formatHighlight(text) {
+    if (!text) return '';
+    return String(text).replace(/\*(.*?)\*/g, '<span class="highlighter">$1</span>');
+  }
+
+  function getMetaFacts() {
+    const meta = card.metadata || {};
+    const facts = [];
+    for (const field of (config.noun_metadata_fields || [])) {
+      const raw = meta[field.key] || card[field.key];
+      if (!raw || raw === '~') continue;
+      let value = String(raw);
+      let colour;
+      if (field.render === 'gender_label') value = getGenderLabel(raw);
+      else if (field.render === 'article_badge') colour = getArticleColour(raw);
+      facts.push({ label: field.label, value, colour });
+    }
+    return facts;
+  }
+
+  // ── Render ──────────────────────────────────────────────────────────────
+  const container = document.querySelector('.learning-card');
+  if (!container) { console.error('LearningCard: container not found'); }
+
+  function sel(cls) { return container?.querySelector(cls); }
+
+  // Type badge
+  sel('.lc-type-badge').textContent = getTypeLabel();
+
+  // Level badge
+  sel('.lc-level-badge').textContent = card.level || '';
+
+  // Article
+  const article = card.metadata?.article;
+  const articleWrap = sel('.lc-article-wrap');
+  const articleEl   = sel('.lc-article');
+  if (article && card.tags?.includes('noun') && !card.metadata?.plural_only) {
+    articleEl.textContent  = article;
+    articleEl.style.color  = getArticleColour(article);
+    articleWrap.style.display = '';
+  } else {
+    articleWrap.style.display = 'none';
+  }
+
+  // Word
+  sel('.lc-word').textContent = stripArticle(card.target);
+
+  // Translation
+  sel('.lc-translation').textContent = card.source || '';
+
+  // Plural / forms
+  const plural = card.metadata?.plural;
+  const formsEl = sel('.lc-forms');
+  if (plural && !card.metadata?.plural_only) formsEl.textContent = `Pl. ${plural}`;
+  else if (card.metadata?.plural_only) formsEl.textContent = 'nur Plural';
+  else formsEl.textContent = '';
+
+  // Meta grid
+  const metaGrid = sel('.lc-meta-grid');
+  const facts = getMetaFacts();
+  if (facts.length) {
+    const cols = Math.min(facts.length, 4);
+    metaGrid.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
+    metaGrid.innerHTML = facts.map((f, i) => `
+      <div class="px-5 py-4 ${i < facts.length - 1 ? 'border-r' : ''}" style="border-color:var(--border);">
+        <p class="text-[9px] font-bold uppercase tracking-widest mb-1" style="color:var(--text-muted);">${f.label}</p>
+        <p class="text-sm font-bold" style="color:${f.colour || 'var(--text)'};">${f.value}</p>
+      </div>
+    `).join('');
+  } else {
+    metaGrid.style.display = 'none';
+  }
+
+  // Grammar note
+  const grammarWrap = sel('.lc-grammar-wrap');
+  if (card.grammar_note) {
+    sel('.lc-grammar-text').innerHTML = formatHighlight(card.grammar_note);
+    grammarWrap.classList.remove('hidden');
+  }
+
+  // Grammar label from config
+  const uiLabels = config.ui_labels || {};
+  if (uiLabels.grammar_note_heading) sel('.lc-grammar-label').textContent = uiLabels.grammar_note_heading;
+  if (uiLabels.examples_heading)     sel('.lc-examples-label').textContent = uiLabels.examples_heading;
+  if (uiLabels.audio_button)         { const el = sel('.lc-audio-label'); if (el) el.textContent = uiLabels.audio_button; }
+
+  // ── Type-specific blocks ─────────────────────────────────────────────────
+
+  // Verb: conjugation table
+  const type = card.type || (card.tags?.includes('verb') ? 'verb' : 'vocab');
+  if (type === 'verb' && card.conjugations?.length) {
+    const conjWrap  = sel('.lc-conjugation-wrap');
+    const conjInner = sel('.lc-conjugation-inner');
+    conjWrap.classList.remove('hidden');
+    conjInner.innerHTML = (config.verb_tenses || card.conjugations.map(t => t.tense)).map(tense => {
+      const t = card.conjugations.find(c => c.tense === tense);
+      if (!t) return '';
+      return `
+        <div class="border-b last:border-0" style="border-color:var(--border);">
+          <p class="text-[10px] font-bold uppercase tracking-widest px-5 py-2" style="background-color:var(--bg); color:var(--espresso);">${t.tense}</p>
+          <table class="w-full text-sm">
+            <tbody>
+              ${t.forms.map((f, ri) => `
+                <tr class="${ri % 2 === 0 ? '' : ''} border-t" style="border-color:var(--border);">
+                  <td class="px-5 py-2.5 font-bold w-24" style="color:var(--espresso);">${f.pronoun}</td>
+                  <td class="px-5 py-2.5 font-semibold" style="color:var(--text);">${f.form}</td>
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+        </div>
+      `;
+    }).join('');
+  }
+
+  // Connector: word order block
+  if (type === 'connector' && card.word_order) {
+    const woWrap = sel('.lc-wordorder-wrap');
+    sel('.lc-wordorder-text').textContent = card.word_order;
+    woWrap.classList.remove('hidden');
+  }
+
+  // Phrase: preposition rule block
+  if (type === 'phrase' && card.clause_type) {
+    const phraseWrap = sel('.lc-phrase-wrap');
+    sel('.lc-phrase-rule').textContent = card.clause_type;
+    phraseWrap.classList.remove('hidden');
+  }
+
+  // ── Examples ─────────────────────────────────────────────────────────────
+  const examplesEl = sel('.lc-examples');
+  const rawExamples = card.examples || [];
+
+  if (rawExamples.length) {
+    examplesEl.innerHTML = rawExamples.map(e => `
+        <div class="rounded-2xl border overflow-hidden" style="border-color:var(--border);">
+          <div class="px-4 py-3" style="background-color:var(--bg);">
+            <p class="font-semibold leading-snug mb-1" style="color:var(--text);">${formatHighlight(e.target)}</p>
+            <p class="text-sm italic" style="color:var(--text-muted);">${formatHighlight(e.source || '')}</p>
+          </div>
+          ${e.note ? `<div class="px-4 py-2 border-t" style="border-color:var(--border);">
+            <p class="text-[10px] font-bold font-mono" style="color:var(--espresso);">📐 ${e.note}</p>
+          </div>` : ''}
+        </div>
+      `).join('');
+  } else {
+    examplesEl.innerHTML = `<p class="text-sm italic" style="color:var(--text-muted);">${uiLabels.no_example || ''}</p>`;
+  }
+
+  // ── Tags ─────────────────────────────────────────────────────────────────
+  const tagsEl = sel('.lc-tags');
+  tagsEl.innerHTML = (card.tags || []).map(t => `
+    <span class="text-[10px] font-bold px-2 py-0.5 rounded-md border uppercase" style="border-color:var(--border); color:var(--text-muted); background-color:var(--bg);">${t}</span>
+  `).join('');
+
+  // ── Audio button ─────────────────────────────────────────────────────────
+  sel('.lc-audio-btn')?.addEventListener('click', () => {
+    if (window.LoungeAudioEngine) {
+      window.LoungeAudioEngine.speak(card.target || '', config.speech_lang, 0.85);
+    }
+  });
+})();</script></div><!-- ── Navigation ───────────────────────────── --><div class="flex items-center justify-between mt-8 gap-4" data-astro-cid-5tabbh6g><button id="btn-prev" disabled class="flex items-center gap-2 px-6 py-3 rounded-2xl border font-bold text-sm transition-all hover:opacity-70 active:scale-95 disabled:opacity-30 disabled:cursor-not-allowed" style="border-color:var(--border); color:var(--text); background-color:var(--card);" data-astro-cid-5tabbh6g><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><path d="m15 18-6-6 6-6" data-astro-cid-5tabbh6g></path></svg>Zurück</button><!-- Dot navigation --><div id="dot-nav" class="flex items-center gap-1.5 flex-wrap justify-center max-w-xs overflow-hidden" style="max-height:2rem;" data-astro-cid-5tabbh6g><!-- populated by JS --></div><button id="btn-next" class="flex items-center gap-2 px-6 py-3 rounded-2xl font-bold text-sm transition-all hover:opacity-80 active:scale-95" style="background-color:var(--espresso); color:#F5F2EB;" data-astro-cid-5tabbh6g>Weiter<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><path d="m9 18 6-6-6-6" data-astro-cid-5tabbh6g></path></svg></button></div><!-- Keyboard hint --><p class="text-center text-xs font-medium mt-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>← → Pfeiltasten zum Navigieren · A zum Anhören</p></div><!-- ── List View ───────────────────────────── --><div id="list-view-wrap" class="hidden space-y-6" data-astro-cid-5tabbh6g><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Satzbau: Die Satzglieder und ihre Positionen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Sentence Structure: Sentence parts and their positions</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>In German, sentences have a relatively flexible word order for most elements, but certain parts, especially verb components, occupy fixed positions. Understanding these fixed positions is crucial for correct sentence construction. This concept often refers to the finite verb and the topic/subject, as well as the non-finite verb parts that form the 'Satzklammer'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Beispielsatz</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Der Student lernt heute in der Bibliothek Deutsch.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The student is learning German today in the library.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Das finite Verb auf Position 2 (V2-Stellung) im Hauptsatz</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The finite verb in position 2 (V2-position) in the main clause</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>This is the fundamental rule for German main clauses (Hauptsätze). The conjugated verb form (finite verb) <span class="highlighter">always</span> occupies the second position. Position 1 is for the topic, which can be almost any sentence part, while the rest of the sentence follows after the verb.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Beispielsatz</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Morgen <span class="highlighter"></span>fährt<span class="highlighter"></span> er nach Berlin.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Tomorrow he is driving to Berlin.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Position 1 (Vorfeld) im Hauptsatz</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Position 1 (Pre-field) in the main clause</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Position 1 is the 'topic position' in a main clause and can be filled by a single word or a group of words (phrase). It sets the context or emphasis for the sentence. Common elements in Position 1 include the subject, an adverbial expression (time, place, manner), or an object.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Beispielsatz</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g><span class="highlighter"></span>Der Lehrer<span class="highlighter"></span> erklärt die Grammatik sehr gut.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The teacher explains the grammar very well.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Position 3 (Mittelfeld) im Hauptsatz: TeKaMoLo</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Position 3 (Mid-field) in the main clause: TeKaMoLo</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>The Mittelfeld is the part of the sentence between the finite verb (P2) and any non-finite verb parts at the end. It contains most other sentence elements like subjects (if not in P1), objects, and adverbials. A common order for adverbials is TeKaMoLo (Temporal, Kausal, Modal, Lokal – time, reason, manner, place), with objects generally preceding adverbials.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Beispielsatz</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Er fährt <span class="highlighter"></span>heute wegen der Arbeit schnell nach Hause<span class="highlighter"></span>.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>He is driving home quickly today because of work.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Die Satzklammer: Nicht-finite Verbteile am Satzende</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The Sentence Bracket: Non-finite verb parts at the end of the sentence</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>In many German sentences, the verb is split into two parts: the finite part (always in P2 in main clauses) and a non-finite part (infinitive, Partizip II, or separable prefix) at the very end of the sentence. This structure creates a 'sentence bracket' (Satzklammer) that encloses the Mittelfeld, providing a fixed end position for these verb components.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Beispielsatz</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Ich <span class="highlighter"></span>habe<span class="highlighter"></span> den Film gestern <span class="highlighter"></span>gesehen<span class="highlighter"></span>.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>I watched the movie yesterday.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Aussagesätze: Subjekt in P1 oder P3</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Declarative Sentences: Subject in P1 or P3</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>In declarative sentences, the finite verb is always in Position 2. The subject typically occupies Position 1 for a neutral word order. However, if another element (e.g., an adverbial or an object) is emphasized by being placed in Position 1, the subject moves to Position 3, directly after the finite verb.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Beispielsatz</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g><span class="highlighter"></span>Der Student<span class="highlighter"></span> lernt Deutsch. / Heute lernt <span class="highlighter"></span>der Student<span class="highlighter"></span> Deutsch.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The student is learning German. / Today the student is learning German.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Ja/Nein-Fragen: Finites Verb auf Position 1 (V1-Stellung)</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Yes/No Questions: Finite verb in position 1 (V1-position)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>In yes/no questions, the finite verb moves to the very first position in the sentence. There is no W-word or other element preceding the verb. The subject typically follows immediately after the verb, creating a clear V1-structure that signals a question requiring a 'yes' or 'no' answer.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Beispielsatz</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g><span class="highlighter"></span>Kommst<span class="highlighter"></span> du heute Abend?</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Are you coming tonight?</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>W-Fragen: W-Wort in P1, finites Verb in P2</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>W-Questions: W-word in P1, finite verb in P2</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>W-questions begin with a W-word (wer, was, wann, wo, wie, warum, etc.) which occupies Position 1. The finite verb then <span class="highlighter">always</span> follows in Position 2, just like in a declarative main clause. This structure is consistent for all W-questions, regardless of which W-word is used.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Beispielsatz</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g><span class="highlighter"></span>Wann<span class="highlighter"></span> kommst du nach Hause?</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>When are you coming home?</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Imperativsätze: Finites Verb auf Position 1 (V1-Stellung)</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Imperative Sentences: Finite verb in position 1 (V1-position)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Imperative sentences (commands or requests) also place the finite verb in Position 1. The subject (du, ihr, Sie) is often omitted for the informal 'du' and 'ihr' forms, but it is always present for the formal 'Sie' form. This V1-structure clearly signals a direct instruction or plea.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Beispielsatz</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g><span class="highlighter"></span>Komm<span class="highlighter"></span> bitte her! (du-form)</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Come here, please!</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Modalverben: Finites Modalverb in P2, Infinitiv am Ende</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Modal Verbs: Finite modal verb in P2, infinitive at the end</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>When a modal verb (können, müssen, wollen, dürfen, sollen, mögen) is used in a main clause, the conjugated modal verb takes Position 2. The main verb, in its infinitive form, is placed at the very end of the sentence, forming the second part of the 'Satzklammer'. This structure is consistent across all modal verbs.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Beispielsatz</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Ich <span class="highlighter"></span>muss<span class="highlighter"></span> heute viel <span class="highlighter"></span>arbeiten<span class="highlighter"></span>.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>I have to work a lot today.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Perfekt: Finites Hilfsverb in P2, Partizip II am Ende</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Perfect Tense: Finite auxiliary verb in P2, Participle II at the end</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>In the Perfect tense, the conjugated auxiliary verb (`haben` or `sein`) occupies Position 2 in a main clause. The Partizip II (past participle) of the main verb is placed at the very end of the sentence, completing the 'Satzklammer'. The choice of `haben` or `sein` depends on the main verb's transitivity or motion/change of state.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Beispielsatz</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Ich <span class="highlighter"></span>habe<span class="highlighter"></span> gestern einen Film <span class="highlighter"></span>gesehen<span class="highlighter"></span>.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>I watched a movie yesterday.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Futur I: Finites 'werden' in P2, Infinitiv am Ende</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Future Tense: Finite 'werden' in P2, infinitive at the end</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>For the Future I tense, the conjugated form of the auxiliary verb `werden` is in Position 2 in a main clause. The main verb, in its infinitive form, is placed at the very end of the sentence, forming the 'Satzklammer'. This structure expresses future actions or assumptions about the present/future.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Beispielsatz</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Ich <span class="highlighter"></span>werde<span class="highlighter"></span> morgen <span class="highlighter"></span>anrufen<span class="highlighter"></span>.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>I will call tomorrow.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Trennbare Verben: Präfix am Satzende</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Separable Verbs: Prefix at the end of the sentence</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>In main clauses, the separable prefix of a verb (e.g., an-, auf-, mit-, zu-) detaches from the verb stem. The conjugated verb stem is in Position 2, and the prefix moves to the very end of the sentence, forming the second part of the 'Satzklammer'. This separation is a key characteristic of separable verbs in main clauses.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Beispielsatz</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Ich <span class="highlighter"></span>rufe<span class="highlighter"></span> dich später <span class="highlighter"></span>an<span class="highlighter"></span>.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>I will call you later.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Nebensätze: Konjunktion in P1, finites Verb am Ende</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Subordinate Clauses: Conjunction in P1, finite verb at the end</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Subordinate clauses (Nebensätze) are introduced by a subordinating conjunction (e.g., `dass`, `weil`, `wenn`, `obwohl`) or a relative pronoun. The conjunction/pronoun takes Position 1, and <span class="highlighter">all</span> verb parts (finite and non-finite) move to the very end of the clause. The finite verb is always the absolute last element in a simple subordinate clause.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Beispielsatz</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Ich weiß, <span class="highlighter"></span>dass<span class="highlighter"></span> er heute <span class="highlighter"></span>kommt<span class="highlighter"></span>.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>I know that he is coming today.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Nebensätze mit Modalverben / Perfekt / Futur I</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Subordinate Clauses with Modal Verbs / Perfect Tense / Future I</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>In subordinate clauses, <span class="highlighter">all</span> verb parts go to the end. If there's a modal verb, perfect tense, or future tense, the finite auxiliary/modal verb is <span class="highlighter">last</span>, preceded by the infinitive or Partizip II. This creates a specific order at the end: (non-finite verb) + (finite auxiliary/modal verb). For modal verbs in the perfect, it's often 'double infinitive' (e.g., 'gesehen haben muss').</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Beispielsatz</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Ich weiß, dass er viel <span class="highlighter"></span>arbeiten muss<span class="highlighter"></span>.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>I know that he has to work a lot.</p></div></div></div></div></div></div><!-- ══ TRAIN PANEL ════════════════════════════ --><div id="train-panel" class="hidden space-y-10" data-astro-cid-5tabbh6g><div class="cafe-card rounded-3xl p-8 border shadow-lg max-w-xl mx-auto" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="text-center mb-8" data-astro-cid-5tabbh6g><h2 class="text-2xl font-extrabold font-outfit mb-2" style="color:var(--text);" data-astro-cid-5tabbh6g>Setup Training</h2><p class="text-sm font-medium" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Konfiguriere deine Trainingssitzung.</p></div><form action="/languagelounge/en-de/training/grammatik/train/" method="GET" class="space-y-8" id="deck-train-form" data-astro-cid-5tabbh6g><input type="hidden" name="level" value="a2" data-astro-cid-5tabbh6g><input type="hidden" name="deck" value="grammatik-a2-zwei_positionen_satz" data-astro-cid-5tabbh6g><!-- Mode selection --><div class="space-y-3" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold tracking-widest uppercase" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Fragetyp</p><div class="grid grid-cols-2 gap-3" data-astro-cid-5tabbh6g><button type="button" data-group="mode" data-value="mc" class="sel-opt sel-active" data-astro-cid-5tabbh6g><span class="text-xl mb-1 block" data-astro-cid-5tabbh6g>🔘</span><span class="text-sm font-bold" data-astro-cid-5tabbh6g>Multiple Choice</span></button><button type="button" data-group="mode" data-value="type" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-xl mb-1 block" data-astro-cid-5tabbh6g>⌨️</span><span class="text-sm font-bold" data-astro-cid-5tabbh6g>Texteingabe</span></button></div><input type="hidden" name="mode" id="mode-hidden" value="mc" data-astro-cid-5tabbh6g></div><!-- Direction selection --><div class="space-y-3" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold tracking-widest uppercase" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Richtung</p><div class="grid grid-cols-2 gap-3" data-astro-cid-5tabbh6g><button type="button" data-group="dir" data-value="en-de" class="sel-opt sel-active" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>🇺🇸 English → 🇩🇪 Deutsch</span></button><button type="button" data-group="dir" data-value="de-en" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>🇩🇪 Deutsch → 🇺🇸 English</span></button></div><input type="hidden" name="dir" id="dir-hidden" value="en-de" data-astro-cid-5tabbh6g></div><!-- Count Selection --><div class="space-y-3" data-astro-cid-5tabbh6g><div class="flex justify-between items-end" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold tracking-widest uppercase" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Anzahl (Count)</p><span class="text-xs font-bold" style="color:var(--espresso);" data-astro-cid-5tabbh6g>15 Karten in Deck</span></div><div class="grid grid-cols-4 gap-3" data-astro-cid-5tabbh6g><button type="button" data-group="count" data-value="30" class="sel-opt sel-active" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>30</span></button><button type="button" data-group="count" data-value="60" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>60</span></button><button type="button" data-group="count" data-value="90" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>90</span></button><button type="button" data-group="count" data-value="1000" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>All</span></button></div><input type="hidden" name="count" id="count-hidden" value="30" data-astro-cid-5tabbh6g></div><button type="submit" class="w-full py-4 rounded-xl font-bold text-base transition-all hover:opacity-90 mt-4 shadow-md active:scale-[0.98]" style="background-color:var(--espresso); color:#F5F2EB;" data-astro-cid-5tabbh6g>Training Starten &rarr;</button></form></div></div></div></main><footer class="mt-auto border-t py-8" style="background-color:var(--bg);border-color:var(--border);"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-medium" style="color:var(--text-muted);"><div>&copy; 2025 - 2026 Small Talk Café Podcasts. All rights reserved.</div><div class="flex gap-4">Made in Bayern ❤️ Los Geht's!</div></div></footer><!-- Minimal script for Theme and Dropdown toggle --><script>
+      // ── Theme ──────────────────────────────────────
+      function applyTheme(dark) {
+        if (dark) {
+          document.documentElement.classList.add('dark');
+          localStorage.setItem('wortschatz_theme', 'dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+          localStorage.setItem('wortschatz_theme', 'light');
+        }
+        const icon = document.getElementById('theme-icon');
+        const label = document.getElementById('theme-label');
+        if (icon) icon.textContent = dark ? '🌙' : '☀️';
+        if (label) label.textContent = dark ? 'Dark' : 'Light';
+      }
+
+      const isDark = document.documentElement.classList.contains('dark');
+      applyTheme(isDark);
+
+      document.getElementById('theme-toggle')?.addEventListener('click', () => {
+        const nowDark = !document.documentElement.classList.contains('dark');
+        applyTheme(nowDark);
+      });
+
+      // ── Dropdown Toggle ──────────────────────────
+      const langBtn = document.getElementById('lang-btn');
+      const langMenu = document.getElementById('lang-menu');
+
+      langBtn?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        langMenu?.classList.toggle('hidden');
+      });
+
+      document.addEventListener('click', () => {
+        langMenu?.classList.add('hidden');
+      });
+    </script></body></html><script type="module" src="/languagelounge/_astro/_deckId_.astro_astro_type_script_index_0_lang.DQkRtrTk.js"></script><script>(function(){const cardsJson = "[{\"id\":\"grammatik-a2-zwei_positionen_satz-001\",\"target\":\"Satzbau: Die Satzglieder und ihre Positionen\",\"source\":\"Sentence Structure: Sentence parts and their positions\",\"grammar_note\":\"In German, sentences have a relatively flexible word order for most elements, but certain parts, especially verb components, occupy fixed positions. Understanding these fixed positions is crucial for correct sentence construction. This concept often refers to the finite verb and the topic/subject, as well as the non-finite verb parts that form the 'Satzklammer'.\",\"extra_examples\":[{\"de\":\"Ich habe gestern einen Film gesehen.\",\"en\":\"I watched a movie yesterday.\"},{\"de\":\"Wir müssen morgen arbeiten.\",\"en\":\"We have to work tomorrow.\"}],\"tags\":[\"grammatik\",\"a2\",\"satzbau\",\"grundlagen\",\"positionen\"],\"type\":\"grammar\",\"examples\":[{\"target\":\"Der Student lernt heute in der Bibliothek Deutsch.\",\"source\":\"The student is learning German today in the library.\"}]},{\"id\":\"grammatik-a2-zwei_positionen_satz-002\",\"target\":\"Das finite Verb auf Position 2 (V2-Stellung) im Hauptsatz\",\"source\":\"The finite verb in position 2 (V2-position) in the main clause\",\"grammar_note\":\"This is the fundamental rule for German main clauses (Hauptsätze). The conjugated verb form (finite verb) *always* occupies the second position. Position 1 is for the topic, which can be almost any sentence part, while the rest of the sentence follows after the verb.\",\"extra_examples\":[{\"de\":\"Ich **gehe** jetzt nach Hause.\",\"en\":\"I am going home now.\"},{\"de\":\"Einen Kaffee **trinke** ich gern.\",\"en\":\"I like to drink coffee.\"}],\"common_error\":\"Learners often place the verb after the subject even if the subject is not in Position 1, e.g., 'Morgen er fährt nach Berlin.'\",\"tags\":[\"grammatik\",\"a2\",\"hauptsatz\",\"v2-stellung\",\"finites_verb\"],\"type\":\"grammar\",\"examples\":[{\"target\":\"Morgen **fährt** er nach Berlin.\",\"source\":\"Tomorrow he is driving to Berlin.\"}]},{\"id\":\"grammatik-a2-zwei_positionen_satz-003\",\"target\":\"Position 1 (Vorfeld) im Hauptsatz\",\"source\":\"Position 1 (Pre-field) in the main clause\",\"grammar_note\":\"Position 1 is the 'topic position' in a main clause and can be filled by a single word or a group of words (phrase). It sets the context or emphasis for the sentence. Common elements in Position 1 include the subject, an adverbial expression (time, place, manner), or an object.\",\"extra_examples\":[{\"de\":\"**Heute** habe ich viel zu tun.\",\"en\":\"Today I have a lot to do.\"},{\"de\":\"**Meinen Freunden** helfe ich immer gern.\",\"en\":\"I always like to help my friends.\"}],\"common_error\":\"Putting multiple, unrelated elements in Position 1, e.g., 'Heute ich habe viel zu tun.'\",\"tags\":[\"grammatik\",\"a2\",\"vorfeld\",\"topic\",\"hauptsatz\",\"satzglieder\"],\"type\":\"grammar\",\"examples\":[{\"target\":\"**Der Lehrer** erklärt die Grammatik sehr gut.\",\"source\":\"The teacher explains the grammar very well.\"}]},{\"id\":\"grammatik-a2-zwei_positionen_satz-004\",\"target\":\"Position 3 (Mittelfeld) im Hauptsatz: TeKaMoLo\",\"source\":\"Position 3 (Mid-field) in the main clause: TeKaMoLo\",\"grammar_note\":\"The Mittelfeld is the part of the sentence between the finite verb (P2) and any non-finite verb parts at the end. It contains most other sentence elements like subjects (if not in P1), objects, and adverbials. A common order for adverbials is TeKaMoLo (Temporal, Kausal, Modal, Lokal – time, reason, manner, place), with objects generally preceding adverbials.\",\"extra_examples\":[{\"de\":\"Ich habe **dir gestern im Café ein Buch gegeben**.\",\"en\":\"I gave you a book yesterday in the café.\"},{\"de\":\"Wir müssen **deshalb pünktlich am Bahnhof sein**.\",\"en\":\"Therefore, we have to be on time at the station.\"}],\"tags\":[\"grammatik\",\"a2\",\"mittelfeld\",\"tekamolo\",\"satzglieder\",\"hauptsatz\"],\"type\":\"grammar\",\"examples\":[{\"target\":\"Er fährt **heute wegen der Arbeit schnell nach Hause**.\",\"source\":\"He is driving home quickly today because of work.\"}]},{\"id\":\"grammatik-a2-zwei_positionen_satz-005\",\"target\":\"Die Satzklammer: Nicht-finite Verbteile am Satzende\",\"source\":\"The Sentence Bracket: Non-finite verb parts at the end of the sentence\",\"grammar_note\":\"In many German sentences, the verb is split into two parts: the finite part (always in P2 in main clauses) and a non-finite part (infinitive, Partizip II, or separable prefix) at the very end of the sentence. This structure creates a 'sentence bracket' (Satzklammer) that encloses the Mittelfeld, providing a fixed end position for these verb components.\",\"extra_examples\":[{\"de\":\"Wir **müssen** morgen **arbeiten**.\",\"en\":\"We have to work tomorrow.\"},{\"de\":\"Er **ruft** seine Mutter später **an**.\",\"en\":\"He will call his mother later.\"}],\"tags\":[\"grammatik\",\"a2\",\"satzklammer\",\"infinitiv\",\"partizip_ii\",\"trennbare_verben\"],\"type\":\"grammar\",\"examples\":[{\"target\":\"Ich **habe** den Film gestern **gesehen**.\",\"source\":\"I watched the movie yesterday.\"}]},{\"id\":\"grammatik-a2-zwei_positionen_satz-006\",\"target\":\"Aussagesätze: Subjekt in P1 oder P3\",\"source\":\"Declarative Sentences: Subject in P1 or P3\",\"grammar_note\":\"In declarative sentences, the finite verb is always in Position 2. The subject typically occupies Position 1 for a neutral word order. However, if another element (e.g., an adverbial or an object) is emphasized by being placed in Position 1, the subject moves to Position 3, directly after the finite verb.\",\"extra_examples\":[{\"de\":\"Ich trinke gern Kaffee. / Gern trinke **ich** Kaffee.\",\"en\":\"I like to drink coffee. / I like to drink coffee.\"},{\"de\":\"Meine Freunde kommen heute. / Heute kommen **meine Freunde**.\",\"en\":\"My friends are coming today. / Today my friends are coming.\"}],\"tags\":[\"grammatik\",\"a2\",\"aussagesatz\",\"subjekt\",\"v2-stellung\"],\"type\":\"grammar\",\"examples\":[{\"target\":\"**Der Student** lernt Deutsch. / Heute lernt **der Student** Deutsch.\",\"source\":\"The student is learning German. / Today the student is learning German.\"}]},{\"id\":\"grammatik-a2-zwei_positionen_satz-007\",\"target\":\"Ja/Nein-Fragen: Finites Verb auf Position 1 (V1-Stellung)\",\"source\":\"Yes/No Questions: Finite verb in position 1 (V1-position)\",\"grammar_note\":\"In yes/no questions, the finite verb moves to the very first position in the sentence. There is no W-word or other element preceding the verb. The subject typically follows immediately after the verb, creating a clear V1-structure that signals a question requiring a 'yes' or 'no' answer.\",\"extra_examples\":[{\"de\":\"**Hast** du die Hausaufgaben gemacht?\",\"en\":\"Did you do the homework?\"},{\"de\":\"**Ist** das dein Buch?\",\"en\":\"Is that your book?\"}],\"common_error\":\"Forgetting to move the verb to Position 1, e.g., 'Du kommst heute Abend?' (This is a declarative sentence with rising intonation, not a proper V1 question).\",\"tags\":[\"grammatik\",\"a2\",\"frage\",\"ja-nein-frage\",\"v1-stellung\"],\"type\":\"grammar\",\"examples\":[{\"target\":\"**Kommst** du heute Abend?\",\"source\":\"Are you coming tonight?\"}]},{\"id\":\"grammatik-a2-zwei_positionen_satz-008\",\"target\":\"W-Fragen: W-Wort in P1, finites Verb in P2\",\"source\":\"W-Questions: W-word in P1, finite verb in P2\",\"grammar_note\":\"W-questions begin with a W-word (wer, was, wann, wo, wie, warum, etc.) which occupies Position 1. The finite verb then *always* follows in Position 2, just like in a declarative main clause. This structure is consistent for all W-questions, regardless of which W-word is used.\",\"extra_examples\":[{\"de\":\"**Wer** hat das gesagt?\",\"en\":\"Who said that?\"},{\"de\":\"**Wo** wohnst du?\",\"en\":\"Where do you live?\"}],\"common_error\":\"Placing the verb in Position 1 after the W-word, e.g., 'Wann kommst du nach Hause?' (Incorrect: 'Wann kommst du nach Hause?').\",\"tags\":[\"grammatik\",\"a2\",\"frage\",\"w-frage\",\"v2-stellung\"],\"type\":\"grammar\",\"examples\":[{\"target\":\"**Wann** kommst du nach Hause?\",\"source\":\"When are you coming home?\"}]},{\"id\":\"grammatik-a2-zwei_positionen_satz-009\",\"target\":\"Imperativsätze: Finites Verb auf Position 1 (V1-Stellung)\",\"source\":\"Imperative Sentences: Finite verb in position 1 (V1-position)\",\"grammar_note\":\"Imperative sentences (commands or requests) also place the finite verb in Position 1. The subject (du, ihr, Sie) is often omitted for the informal 'du' and 'ihr' forms, but it is always present for the formal 'Sie' form. This V1-structure clearly signals a direct instruction or plea.\",\"extra_examples\":[{\"de\":\"**Gehen** Sie nach Hause! (Sie-form)\",\"en\":\"Go home!\"},{\"de\":\"**Macht** die Tür zu! (ihr-form)\",\"en\":\"Close the door!\"}],\"tags\":[\"grammatik\",\"a2\",\"imperativ\",\"befehl\",\"v1-stellung\"],\"type\":\"grammar\",\"examples\":[{\"target\":\"**Komm** bitte her! (du-form)\",\"source\":\"Come here, please!\"}]},{\"id\":\"grammatik-a2-zwei_positionen_satz-010\",\"target\":\"Modalverben: Finites Modalverb in P2, Infinitiv am Ende\",\"source\":\"Modal Verbs: Finite modal verb in P2, infinitive at the end\",\"grammar_note\":\"When a modal verb (können, müssen, wollen, dürfen, sollen, mögen) is used in a main clause, the conjugated modal verb takes Position 2. The main verb, in its infinitive form, is placed at the very end of the sentence, forming the second part of the 'Satzklammer'. This structure is consistent across all modal verbs.\",\"extra_examples\":[{\"de\":\"Er **kann** sehr gut Deutsch **sprechen**.\",\"en\":\"He can speak German very well.\"},{\"de\":\"Wir **wollen** am Wochenende ins Kino **gehen**.\",\"en\":\"We want to go to the cinema on the weekend.\"}],\"tags\":[\"grammatik\",\"a2\",\"modalverb\",\"infinitiv\",\"satzklammer\",\"v2-stellung\"],\"type\":\"grammar\",\"examples\":[{\"target\":\"Ich **muss** heute viel **arbeiten**.\",\"source\":\"I have to work a lot today.\"}]},{\"id\":\"grammatik-a2-zwei_positionen_satz-011\",\"target\":\"Perfekt: Finites Hilfsverb in P2, Partizip II am Ende\",\"source\":\"Perfect Tense: Finite auxiliary verb in P2, Participle II at the end\",\"grammar_note\":\"In the Perfect tense, the conjugated auxiliary verb (`haben` or `sein`) occupies Position 2 in a main clause. The Partizip II (past participle) of the main verb is placed at the very end of the sentence, completing the 'Satzklammer'. The choice of `haben` or `sein` depends on the main verb's transitivity or motion/change of state.\",\"extra_examples\":[{\"de\":\"Sie **ist** nach Berlin **gefahren**.\",\"en\":\"She drove to Berlin.\"},{\"de\":\"Wir **haben** die Aufgabe **gemacht**.\",\"en\":\"We did the task.\"}],\"tags\":[\"grammatik\",\"a2\",\"perfekt\",\"partizip_ii\",\"hilfsverb\",\"satzklammer\",\"v2-stellung\"],\"type\":\"grammar\",\"examples\":[{\"target\":\"Ich **habe** gestern einen Film **gesehen**.\",\"source\":\"I watched a movie yesterday.\"}]},{\"id\":\"grammatik-a2-zwei_positionen_satz-012\",\"target\":\"Futur I: Finites 'werden' in P2, Infinitiv am Ende\",\"source\":\"Future Tense: Finite 'werden' in P2, infinitive at the end\",\"grammar_note\":\"For the Future I tense, the conjugated form of the auxiliary verb `werden` is in Position 2 in a main clause. The main verb, in its infinitive form, is placed at the very end of the sentence, forming the 'Satzklammer'. This structure expresses future actions or assumptions about the present/future.\",\"extra_examples\":[{\"de\":\"Er **wird** bald Arzt **sein**.\",\"en\":\"He will soon be a doctor.\"},{\"de\":\"Wir **werden** das Problem **lösen**.\",\"en\":\"We will solve the problem.\"}],\"tags\":[\"grammatik\",\"a2\",\"futur_i\",\"werden\",\"infinitiv\",\"satzklammer\",\"v2-stellung\"],\"type\":\"grammar\",\"examples\":[{\"target\":\"Ich **werde** morgen **anrufen**.\",\"source\":\"I will call tomorrow.\"}]},{\"id\":\"grammatik-a2-zwei_positionen_satz-013\",\"target\":\"Trennbare Verben: Präfix am Satzende\",\"source\":\"Separable Verbs: Prefix at the end of the sentence\",\"grammar_note\":\"In main clauses, the separable prefix of a verb (e.g., an-, auf-, mit-, zu-) detaches from the verb stem. The conjugated verb stem is in Position 2, and the prefix moves to the very end of the sentence, forming the second part of the 'Satzklammer'. This separation is a key characteristic of separable verbs in main clauses.\",\"extra_examples\":[{\"de\":\"Er **macht** das Fenster **auf**.\",\"en\":\"He opens the window.\"},{\"de\":\"Wir **kaufen** heute Abend **ein**.\",\"en\":\"We are shopping tonight.\"}],\"common_error\":\"Keeping the prefix attached to the verb in main clauses, e.g., 'Ich anrufe dich später.'\",\"tags\":[\"grammatik\",\"a2\",\"trennbare_verben\",\"präfix\",\"satzklammer\",\"v2-stellung\"],\"type\":\"grammar\",\"examples\":[{\"target\":\"Ich **rufe** dich später **an**.\",\"source\":\"I will call you later.\"}]},{\"id\":\"grammatik-a2-zwei_positionen_satz-014\",\"target\":\"Nebensätze: Konjunktion in P1, finites Verb am Ende\",\"source\":\"Subordinate Clauses: Conjunction in P1, finite verb at the end\",\"grammar_note\":\"Subordinate clauses (Nebensätze) are introduced by a subordinating conjunction (e.g., `dass`, `weil`, `wenn`, `obwohl`) or a relative pronoun. The conjunction/pronoun takes Position 1, and *all* verb parts (finite and non-finite) move to the very end of the clause. The finite verb is always the absolute last element in a simple subordinate clause.\",\"extra_examples\":[{\"de\":\"Sie fragt, **ob** du Zeit **hast**.\",\"en\":\"She asks if you have time.\"},{\"de\":\"Er ist müde, **weil** er viel **arbeitet**.\",\"en\":\"He is tired because he works a lot.\"}],\"common_error\":\"Placing the finite verb in Position 2 in subordinate clauses, e.g., 'Ich weiß, dass er kommt heute.'\",\"tags\":[\"grammatik\",\"a2\",\"nebensatz\",\"satzende\",\"konjunktion\",\"verbstellung\"],\"type\":\"grammar\",\"examples\":[{\"target\":\"Ich weiß, **dass** er heute **kommt**.\",\"source\":\"I know that he is coming today.\"}]},{\"id\":\"grammatik-a2-zwei_positionen_satz-015\",\"target\":\"Nebensätze mit Modalverben / Perfekt / Futur I\",\"source\":\"Subordinate Clauses with Modal Verbs / Perfect Tense / Future I\",\"grammar_note\":\"In subordinate clauses, *all* verb parts go to the end. If there's a modal verb, perfect tense, or future tense, the finite auxiliary/modal verb is *last*, preceded by the infinitive or Partizip II. This creates a specific order at the end: (non-finite verb) + (finite auxiliary/modal verb). For modal verbs in the perfect, it's often 'double infinitive' (e.g., 'gesehen haben muss').\",\"extra_examples\":[{\"de\":\"Ich weiß, dass er den Film **gesehen hat**.\",\"en\":\"I know that he watched the movie.\"},{\"de\":\"Sie sagt, dass sie nicht **kommen kann**.\",\"en\":\"She says that she cannot come.\"},{\"de\":\"Er hofft, dass sie bald **ankommen wird**.\",\"en\":\"He hopes that she will arrive soon.\"}],\"common_error\":\"Incorrect order of verb parts at the end, e.g., 'dass er hat gesehen' instead of 'dass er gesehen hat'.\",\"tags\":[\"grammatik\",\"a2\",\"nebensatz\",\"modalverb\",\"perfekt\",\"futur_i\",\"satzende\",\"verbstellung\"],\"type\":\"grammar\",\"examples\":[{\"target\":\"Ich weiß, dass er viel **arbeiten muss**.\",\"source\":\"I know that he has to work a lot.\"}]}]";
+const langConfigJson = "{\"language_pair\":\"english_german\",\"target_lang\":\"de\",\"native_lang\":\"en\",\"target_lang_name\":\"Deutsch\",\"native_lang_name\":\"English\",\"speech_lang\":\"de-DE\",\"noun_metadata_fields\":[{\"key\":\"article\",\"label\":\"Artikel\",\"render\":\"article_badge\"},{\"key\":\"gender\",\"label\":\"Genus\",\"render\":\"gender_label\"},{\"key\":\"plural\",\"label\":\"Plural\",\"render\":\"text\"}],\"article_colours\":{\"der\":\"#4A7C9E\",\"die\":\"#B05070\",\"das\":\"#4A8A5A\"},\"gender_labels\":{\"m\":\"Maskulinum\",\"f\":\"Femininum\",\"n\":\"Neutrum\"},\"verb_tenses\":[\"Präsens\",\"Präteritum\",\"Perfekt\",\"Futur I\",\"Konjunktiv II\"],\"cases\":{\"nominative\":\"Nominativ\",\"accusative\":\"Akkusativ\",\"dative\":\"Dativ\",\"genitive\":\"Genitiv\"},\"ui_labels\":{\"learn_mode\":\"Lernen\",\"train_mode\":\"Trainieren\",\"examples_heading\":\"Beispielsätze\",\"grammar_note_heading\":\"Grammatiknotiz\",\"audio_button\":\"Anhören\",\"back_link\":\"Zurück\",\"card_counter\":\"Karte {current} / {total}\",\"next_button\":\"Weiter\",\"finish_button\":\"Fertig\",\"correct\":\"Richtig!\",\"wrong\":\"Falsch\",\"dashboard_link\":\"Dashboard\",\"library_prompt\":\"Wähle ein Deck aus der Bibliothek und lerne alle Informationen auf den Karten.\",\"cards_badge\":\"{count} KARTEN\",\"cards_count\":\"{count} Karten\",\"deck_meta\":\"{topic} • {level} • {count} Karten\",\"no_decks\":\"Noch keine Decks in dieser Kategorie.\",\"setup_title\":\"Setup Training\",\"setup_subtitle\":\"Konfiguriere deine Trainingssitzung.\",\"question_type\":\"Fragetyp\",\"mode_multiple_choice\":\"Multiple Choice\",\"mode_typing\":\"Texteingabe\",\"mode_typing_short\":\"Eingabe\",\"direction\":\"Richtung\",\"direction_forward\":\"🇺🇸 English → 🇩🇪 Deutsch\",\"direction_reverse\":\"🇩🇪 Deutsch → 🇺🇸 English\",\"select_level\":\"Level auswählen\",\"start_training\":\"Training Starten\",\"view_cards\":\"Karten\",\"view_list\":\"Liste\",\"card_word\":\"Karte\",\"keyboard_hint_study\":\"← → Pfeiltasten zum Navigieren · A zum Anhören\",\"example_single_heading\":\"Beispielsatz\",\"no_example\":\"Kein Beispiel verfügbar.\",\"tags_label\":\"Tags:\",\"type_vocab\":\"Vokabel\",\"type_verb\":\"Verb\",\"type_phrase\":\"Phrase\",\"type_connector\":\"Konnektor\",\"type_grammar\":\"Grammatik\",\"type_noun\":\"Substantiv\",\"type_adjective\":\"Adjektiv\",\"type_expression\":\"Ausdruck\",\"plural_prefix\":\"Pl. {plural}\",\"plural_only\":\"nur Plural\",\"word_order_heading\":\"Word Order\",\"structure_heading\":\"Struktur\",\"training_title\":\"Training\",\"all_levels\":\"Alle Niveaus\",\"type_placeholder\":\"Schreibe das Wort auf Deutsch...\",\"check_button\":\"Überprüfen\",\"keyboard_hint_train\":\"Enter / Space = bestätigen · A = Anhören\",\"audio_title\":\"Anhören (A)\",\"training_finished\":\"Training beendet!\",\"missed_heading\":\"Falsch beantwortet — zum Wiederholen\",\"retry_missed\":\"Falsche nochmal\",\"new_config\":\"Neue Konfiguration\",\"plural_hint\":\"Pl: {plural}\",\"results_pct\":\"{pct}% richtig\",\"result_excellent\":\"Ausgezeichnet! Du hast das Niveau gemeistert.\",\"result_good\":\"Sehr gut! Noch ein bisschen üben und du schaffst es!\",\"result_ok\":\"Guter Anfang! Wiederhole die Karten nochmal.\",\"result_retry\":\"Kein Problem — Übung macht den Meister!\",\"no_cards_title\":\"Keine Karten gefunden\",\"no_cards_hint\":\"Bitte wähle ein anderes Niveau oder Deck.\"},\"answer_normalisation\":{\"strip_leading_words\":[\"der\",\"die\",\"das\",\"ein\",\"eine\",\"einem\",\"einen\",\"einer\",\"dem\",\"den\",\"des\"],\"alt_spellings\":{\"ü\":\"ue\",\"ä\":\"ae\",\"ö\":\"oe\",\"ß\":\"ss\"}}}";
+const category = "grammatik";
+const lang = "en-de";
+const base = "/languagelounge/";
+const defaultView = "list";
+
+  const cards     = JSON.parse(cardsJson);
+  const config    = JSON.parse(langConfigJson);
+  let currentIndex = 0;
+
+  const dotNav    = document.getElementById('dot-nav');
+  const currentNum = document.getElementById('current-num');
+  const progressBar = document.getElementById('progress-bar');
+  const btnPrev   = document.getElementById('btn-prev');
+  const btnNext   = document.getElementById('btn-next');
+  const cardHost  = document.getElementById('card-host');
+  const progressCont = document.getElementById('progress-container');
+
+  const cardViewWrap = document.getElementById('card-view-wrap');
+  const listViewWrap = document.getElementById('list-view-wrap');
+  const btnViewCards = document.getElementById('view-cards-btn');
+  const btnViewList  = document.getElementById('view-list-btn');
+
+  // Toggle Logic
+  function setViewMode(mode) {
+    if (mode === 'list') {
+      cardViewWrap.classList.add('hidden');
+      listViewWrap.classList.remove('hidden');
+      progressCont.classList.add('hidden');
+      btnViewList.classList.add('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewList.classList.remove('text-[var(--text-muted)]');
+      btnViewCards.classList.remove('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewCards.classList.add('text-[var(--text-muted)]');
+    } else {
+      listViewWrap.classList.add('hidden');
+      cardViewWrap.classList.remove('hidden');
+      progressCont.classList.remove('hidden');
+      btnViewCards.classList.add('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewCards.classList.remove('text-[var(--text-muted)]');
+      btnViewList.classList.remove('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewList.classList.add('text-[var(--text-muted)]');
+    }
+  }
+
+  btnViewCards.addEventListener('click', () => setViewMode('cards'));
+  btnViewList.addEventListener('click', () => setViewMode('list'));
+
+  // Initial view is configured per category (config/language_pairs/*.yaml → categories[].default_view)
+  if (defaultView === 'list') {
+    setViewMode('list');
+  }
+
+
+
+  // ── Helpers (mirror card-renderer.ts — no module imports in inline scripts) ──
+  const articleColours = config.article_colours || {};
+  const genderLabels   = config.gender_labels   || {};
+  const speechLang     = config.speech_lang;
+  const ui             = config.ui_labels || {};
+  const fmt = (tpl, vars) => String(tpl).replace(/\{(\w+)\}/g, (m, k) => (k in vars ? vars[k] : m));
+  const formatHighlight = (text) => text ? String(text).replace(/\*(.*?)\*/g, '<span class="highlighter">$1</span>') : '';
+  // Articles come from the language config (keys of article_colours), never hardcoded
+  const articleList = Object.keys(articleColours);
+  const articleRe = articleList.length
+    ? new RegExp('^(' + articleList.map(a => a.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|') + ")\\s+", 'i')
+    : null;
+
+  function stripArticle(w) {
+    return articleRe ? (w || '').replace(articleRe, '').trim() : (w || '').trim();
+  }
+
+  function getTypeLabel(card) {
+    const tags = card.tags || [];
+    if (tags.includes('noun'))       return ui.type_noun;
+    if (tags.includes('verb'))       return ui.type_verb;
+    if (tags.includes('adjective'))  return ui.type_adjective;
+    if (tags.includes('expression')) return ui.type_expression;
+    const byType = { vocab: ui.type_vocab, verb: ui.type_verb, phrase: ui.type_phrase, connector: ui.type_connector, grammar: ui.type_grammar };
+    return byType[card.type] || ui.type_vocab;
+  }
+
+  function normaliseEx(ex) {
+    return { target: ex.target||'', source: ex.source||'', note: ex.note };
+  }
+
+  function getMetaFacts(card) {
+    const meta = card.metadata || {};
+    const facts = [];
+    for (const field of (config.noun_metadata_fields || [])) {
+      const raw = meta[field.key];
+      if (!raw || raw==='~') continue;
+      let value = String(raw), colour;
+      if (field.render === 'gender_label')  value  = genderLabels[raw] || raw;
+      if (field.render === 'article_badge') colour = articleColours[raw.toLowerCase()] || 'var(--espresso)';
+      facts.push({ label: field.label, value, colour });
+    }
+    return facts;
+  }
+
+  // ── Card renderer ─────────────────────────────────────────────────────────
+  function renderCard(idx) {
+    const card = cards[idx];
+    if (!card || !cardHost) return;
+
+    const lc = cardHost.querySelector('.learning-card');
+    if (!lc) return;
+
+    function sel(cls) { return lc.querySelector(cls); }
+
+    // Type badge + level
+    sel('.lc-type-badge').textContent = getTypeLabel(card);
+    sel('.lc-level-badge').textContent = (card.level || '').toUpperCase();
+
+    // Article
+    const article = card.metadata?.article;
+    const articleWrap = sel('.lc-article-wrap');
+    const articleEl   = sel('.lc-article');
+    if (article && (card.tags||[]).includes('noun') && !card.metadata?.plural_only) {
+      articleEl.textContent = article;
+      articleEl.style.color = articleColours[article.toLowerCase()] || 'var(--espresso)';
+      articleWrap.style.display = '';
+    } else {
+      articleWrap.style.display = 'none';
+    }
+
+    // Word / translation / forms
+    sel('.lc-word').textContent        = stripArticle(card.target);
+    sel('.lc-translation').textContent = card.source || '';
+    const plural = card.metadata?.plural;
+    sel('.lc-forms').textContent = plural && !card.metadata?.plural_only ? fmt(ui.plural_prefix, { plural }) : card.metadata?.plural_only ? ui.plural_only : '';
+
+    // Meta grid
+    const metaGrid = sel('.lc-meta-grid');
+    const facts = getMetaFacts(card);
+    if (facts.length) {
+      metaGrid.style.gridTemplateColumns = `repeat(${Math.min(facts.length,4)}, 1fr)`;
+      metaGrid.style.display = '';
+      metaGrid.innerHTML = facts.map((f, i) => `
+        <div class="px-5 py-4 ${i<facts.length-1?'border-r':''}" style="border-color:var(--border);">
+          <p class="text-[9px] font-bold uppercase tracking-widest mb-1" style="color:var(--text-muted);">${f.label}</p>
+          <p class="text-sm font-bold" style="color:${f.colour||'var(--text)'};">${f.value}</p>
+        </div>`).join('');
+    } else {
+      metaGrid.style.display = 'none';
+    }
+
+    // Grammar note
+    const grammarWrap = sel('.lc-grammar-wrap');
+    if (card.grammar_note) {
+      sel('.lc-grammar-text').innerHTML = formatHighlight(card.grammar_note);
+      grammarWrap.classList.remove('hidden');
+    } else {
+      grammarWrap.classList.add('hidden');
+    }
+
+    // Examples
+    const examplesEl = sel('.lc-examples');
+    const rawEx = card.examples || [];
+    examplesEl.innerHTML = rawEx.length
+      ? rawEx.map(ex => { const e=normaliseEx(ex); return `
+          <div class="rounded-2xl border overflow-hidden" style="border-color:var(--border);">
+            <div class="px-4 py-3" style="background-color:var(--bg);">
+              <p class="font-semibold leading-snug mb-1" style="color:var(--text);">${e.target}</p>
+              <p class="text-sm italic" style="color:var(--text-muted);">${e.source||''}</p>
+            </div>
+            ${e.note?`<div class="px-4 py-2 border-t" style="border-color:var(--border);">
+              <p class="text-[10px] font-bold font-mono" style="color:var(--espresso);">📐 ${e.note}</p>
+            </div>`:''}
+          </div>`; }).join('')
+      : '<p class="text-sm italic" style="color:var(--text-muted);">' + ui.no_example + '</p>';
+
+    // Tags
+    sel('.lc-tags').innerHTML = (card.tags||[]).map(t =>
+      `<span class="text-[10px] font-bold px-2 py-0.5 rounded-md border" style="border-color:var(--border);color:var(--text-muted);background-color:var(--bg);">${t}</span>`
+    ).join('');
+
+    // Progress UI
+    if (currentNum)  currentNum.textContent = String(idx+1);
+    if (progressBar) progressBar.style.width = `${Math.round(((idx+1)/cards.length)*100)}%`;
+    if (btnPrev)     btnPrev.disabled = idx === 0;
+    if (btnNext)     btnNext.innerHTML = idx === cards.length-1
+      ? '✓ ' + ui.finish_button
+      : ui.next_button + ' <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>';
+
+    updateDots();
+
+    // Re-bind audio button cleanly by cloning to strip old listeners
+    const oldBtn = sel('.lc-audio-btn');
+    if (oldBtn) {
+      const newBtn = oldBtn.cloneNode(true);
+      oldBtn.parentNode.replaceChild(newBtn, oldBtn);
+      newBtn.addEventListener('click', speakCurrent);
+    }
+  }
+
+  // ── Dot navigation ────────────────────────────────────────────────────────
+  function buildDots() {
+    if (!dotNav) return;
+    dotNav.innerHTML = '';
+    const maxVisible = 20;
+    const showAll = cards.length <= maxVisible;
+    cards.forEach((_, i) => {
+      if (!showAll && i >= maxVisible) return;
+      const dot = document.createElement('button');
+      dot.className = 'dot w-2 h-2 rounded-full transition-all duration-300 flex-shrink-0';
+      dot.style.backgroundColor = 'var(--border)';
+      dot.title = `${ui.card_word} ${i+1}`;
+      dot.addEventListener('click', () => goTo(i));
+      dotNav.appendChild(dot);
+    });
+    if (!showAll) {
+      const el = document.createElement('span');
+      el.textContent = `+${cards.length - maxVisible}`;
+      el.className = 'text-[10px] font-bold';
+      el.style.color = 'var(--text-muted)';
+      dotNav.appendChild(el);
+    }
+  }
+
+  function updateDots() {
+    dotNav?.querySelectorAll('.dot').forEach((dot, i) => {
+      dot.style.backgroundColor = i===currentIndex ? 'var(--espresso)' : 'var(--border)';
+      dot.style.width     = i===currentIndex ? '20px' : '8px';
+      dot.style.borderRadius = '4px';
+    });
+  }
+
+  // ── Audio ─────────────────────────────────────────────────────────────────
+  function speakCurrent() {
+    const card = cards[currentIndex];
+    if (!card) return;
+    if (window.LoungeAudioEngine) {
+      window.LoungeAudioEngine.speak(card.target || '', speechLang, 0.85);
+    }
+  }
+
+  // ── Navigate ─────────────────────────────────────────────────────────────
+  function goTo(idx) {
+    if (idx < 0 || idx >= cards.length) return;
+    currentIndex = idx;
+    renderCard(currentIndex);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  btnPrev?.addEventListener('click', () => goTo(currentIndex - 1));
+  btnNext?.addEventListener('click', () => {
+    if (currentIndex === cards.length - 1) window.location.href = `${base}${lang}/${category}/`;
+    else goTo(currentIndex + 1);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') goTo(currentIndex + 1);
+    if (e.key === 'ArrowLeft')  goTo(currentIndex - 1);
+    if (e.key === 'a' || e.key === 'A') speakCurrent();
+  });
+
+  // ── Learn / Train panel toggle ──────────────────────
+  const btnLearn = document.getElementById('btn-mode-learn');
+  const btnTrain = document.getElementById('btn-mode-train');
+  const pnlLearn = document.getElementById('learn-panel');
+  const pnlTrain = document.getElementById('train-panel');
+  const toolbar  = document.getElementById('learn-toolbar');
+
+  const STORAGE_KEY = `lounge:${lang}:${category}:deck:mode`;
+  let currentMode = localStorage.getItem(STORAGE_KEY) || 'learn';
+
+  function applyMode() {
+    if (currentMode === 'learn') {
+      btnLearn.style.backgroundColor = 'var(--espresso)';
+      btnLearn.style.color = '#F5F2EB';
+      btnTrain.style.backgroundColor = 'transparent';
+      btnTrain.style.color = 'var(--text-muted)';
+      pnlLearn.classList.remove('hidden');
+      toolbar.classList.remove('hidden');
+      pnlTrain.classList.add('hidden');
+    } else {
+      btnTrain.style.backgroundColor = 'var(--espresso)';
+      btnTrain.style.color = '#F5F2EB';
+      btnLearn.style.backgroundColor = 'transparent';
+      btnLearn.style.color = 'var(--text-muted)';
+      pnlTrain.classList.remove('hidden');
+      pnlLearn.classList.add('hidden');
+      toolbar.classList.add('hidden');
+    }
+    localStorage.setItem(STORAGE_KEY, currentMode);
+  }
+
+  btnLearn?.addEventListener('click', () => { currentMode = 'learn'; applyMode(); });
+  btnTrain?.addEventListener('click', () => { currentMode = 'train'; applyMode(); });
+  applyMode();
+
+  // ── Radio-style selectors (mode & dir & count) ─────────────
+  document.querySelectorAll('.sel-opt').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const group = btn.dataset.group;
+      document.querySelectorAll(`.sel-opt[data-group="${group}"]`).forEach(b => b.classList.remove('sel-active'));
+      btn.classList.add('sel-active');
+      const hidden = document.getElementById(`${group}-hidden`);
+      if (hidden) hidden.value = btn.dataset.value;
+    });
+  });
+
+  document.getElementById('deck-train-form')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const base = form.action;
+    const mode = document.getElementById('mode-hidden')?.value || 'mc';
+    const dir  = document.getElementById('dir-hidden')?.value || `${config.language_pair.source_code}-${config.language_pair.target_code}`.toLowerCase();
+    const count = document.getElementById('count-hidden')?.value || '30';
+    const level = form.querySelector('[name="level"]')?.value || '';
+    const deck = form.querySelector('[name="deck"]')?.value || '';
+    
+    const params = new URLSearchParams();
+    if(level) params.set('level', level);
+    params.set('deck', deck);
+    params.set('mode', mode);
+    params.set('dir', dir);
+    params.set('count', count);
+    
+    window.location.href = `${base}?${params.toString()}`;
+  });
+
+  // ── Init ─────────────────────────────────────────────────────────────────
+  buildDots();
+  // Card 0 is already rendered server-side via LearningCard component.
+  // Sync progress UI to reflect card 0 state.
+  updateDots();
+  if (progressBar) progressBar.style.width = `${Math.round(1/cards.length*100)}%`;
+  // Update card 0 using client-side config too (ensures langConfig is applied)
+  renderCard(0);
+})();</script>

@@ -1,0 +1,580 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="description" content="Deutsch Lounge — Ein gezieltes Trainingswerkzeug für deutschen Wortschatz und Grammatik."><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/languagelounge/favicon.svg"><meta name="generator" content="Astro v7.3.5"><title>Formal Written Language — Deutsch Lounge</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet"><script>
+      (function() {
+        const saved = localStorage.getItem('wortschatz_theme');
+        if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script><link rel="stylesheet" href="/languagelounge/_astro/Layout.BK5KHINQ.css"><style>.sel-opt[data-astro-cid-5tabbh6g]{border:2px solid var(--border);background-color:var(--card);color:var(--text);cursor:pointer;text-align:center;border-radius:12px;flex-direction:column;justify-content:center;align-items:center;width:100%;padding:14px 12px;transition:border-color .15s,background-color .15s,color .15s,box-shadow .15s;display:flex}.sel-opt[data-astro-cid-5tabbh6g]:hover{border-color:var(--border-hover);box-shadow:0 2px 8px #00000014}.sel-opt[data-astro-cid-5tabbh6g].sel-active{border-color:var(--espresso);background-color:var(--espresso);color:#f5f2eb;box-shadow:0 2px 12px #0000002e}
+</style></head><body class="antialiased min-h-screen flex flex-col" style="background-color:var(--bg);color:var(--text);"><!-- Header --><header class="sticky top-0 z-50 border-b" style="background-color:var(--bg);border-color:var(--border);"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between gap-4" style="height:4.5rem;"><!-- Logo + Language Switcher --><div class="flex items-center gap-4 shrink-0"><a href="/languagelounge/en-de/" class="flex items-center gap-2 group"><span class="font-outfit font-extrabold text-xl sm:text-2xl tracking-tight transition-colors" style="color:var(--text);">Small Talk Café <span class="font-normal text-base hidden sm:inline" style="color:var(--text-muted);">| <span id="site-name">Deutsch Lounge</span></span></span></a><!-- Language Selector Dropdown --><div class="relative" id="lang-dropdown-wrapper"><button id="lang-btn" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-sm font-bold transition-all hover:opacity-70" style="background-color:var(--bg); border-color:var(--border); color:var(--text);"><span id="lang-flag">🇩🇪</span><span id="lang-code">DE</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"></path></svg></button><div id="lang-menu" class="hidden absolute top-full left-0 mt-2 rounded-2xl border shadow-xl overflow-hidden z-50 min-w-[160px]" style="background-color:var(--card); border-color:var(--border);"><div><a href="/languagelounge/en-de/" class="w-full flex items-center gap-3 px-4 py-3 text-sm font-semibold text-left transition-colors hover:opacity-70" style="color:var(--text);"><span class="text-lg">🇩🇪</span><div><div class="font-bold" style="color:var(--text);">Deutsch Lounge</div></div></a></div></div></div></div><!-- Dynamic Nav Links --><nav class="hidden md:flex gap-5 items-center"><a href="https://smalltalkcafe.de/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Small Talk Café Podcasts</a><span class="text-sm font-normal" style="color:var(--border);">|</span><a href="/languagelounge/en-de/vocabulary/" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Vokabeln</a><a href="/languagelounge/en-de/verbs/" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Verben</a><a href="/languagelounge/en-de/grammatik/" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Grammatik</a><a href="/languagelounge/en-de/redemittel/" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Redemittel</a><!-- Dark/Light Toggle --><button id="theme-toggle" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-sm font-semibold transition-all hover:opacity-70" style="border-color:var(--border); color:var(--text-muted);" aria-label="Toggle dark/light mode"><span id="theme-icon">☀️</span><span id="theme-label">Light</span></button></nav></div></header><main id="main-content" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-1 w-full"><div class="max-w-4xl mx-auto py-6" data-astro-cid-5tabbh6g><!-- Deck Header --><div class="flex items-start justify-between mb-8 gap-4 flex-wrap" data-astro-cid-5tabbh6g><div data-astro-cid-5tabbh6g><a href="/languagelounge/en-de/redemittel/" class="text-xs font-bold flex items-center gap-1 mb-2 hover:opacity-70 transition-opacity" style="color:var(--espresso);" data-astro-cid-5tabbh6g><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><path d="m15 18-6-6 6-6" data-astro-cid-5tabbh6g></path></svg>Redemittel</a><h1 class="text-2xl md:text-3xl font-extrabold font-outfit" style="color:var(--text);" data-astro-cid-5tabbh6g>Formal Written Language</h1><p class="text-xs font-bold uppercase tracking-wider mt-1" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Formelle Schriftsprache • B2 • 20 Karten</p></div><div class="flex flex-col items-end gap-4 w-full md:w-auto mt-4 md:mt-0" data-astro-cid-5tabbh6g><!-- ── Mode Toggle ───────────────────────────── --><div class="flex rounded-xl border overflow-hidden p-1 gap-1 w-full max-w-[300px]" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><button id="btn-mode-learn" class="mode-btn flex-1 flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold transition-all" data-astro-cid-5tabbh6g><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" data-astro-cid-5tabbh6g></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" data-astro-cid-5tabbh6g></path></svg>Lernen</button><button id="btn-mode-train" class="mode-btn flex-1 flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold transition-all" data-astro-cid-5tabbh6g><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><circle cx="12" cy="12" r="10" data-astro-cid-5tabbh6g></circle><polyline points="12 6 12 12 16 14" data-astro-cid-5tabbh6g></polyline></svg>Trainieren</button></div><div id="learn-toolbar" class="flex flex-col items-end gap-4 w-full" data-astro-cid-5tabbh6g><!-- View switcher (Cards vs List) --><div class="flex rounded-xl border overflow-hidden p-1 gap-1 w-full max-w-[300px]" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><button id="view-cards-btn" class="view-btn flex-1 flex items-center justify-center px-4 py-2 rounded-lg text-xs font-bold transition-all bg-[var(--espresso)] text-[#F5F2EB]" data-astro-cid-5tabbh6g>Karten</button><button id="view-list-btn" class="view-btn flex-1 flex items-center justify-center px-4 py-2 rounded-lg text-xs font-bold transition-all text-[var(--text-muted)] hover:opacity-70" data-astro-cid-5tabbh6g>Liste</button></div><!-- Progress indicator --><div id="progress-container" class="flex items-center gap-3" data-astro-cid-5tabbh6g><div class="text-xs font-semibold" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Karte <span id="current-num" class="font-extrabold" style="color:var(--text);" data-astro-cid-5tabbh6g>1</span> / 20</div><div class="w-24 h-1.5 rounded-full overflow-hidden border" style="background-color:var(--bg);border-color:var(--border);" data-astro-cid-5tabbh6g><div id="progress-bar" class="h-full transition-all duration-500 rounded-full" style="width:0%; background-color:var(--espresso);" data-astro-cid-5tabbh6g></div></div></div></div></div></div><!-- ══ LEARN PANEL ════════════════════════════ --><div id="learn-panel" class="space-y-6" data-astro-cid-5tabbh6g><!-- ── Universal Study Card (rendered by LearningCard component) ── --><div id="card-view-wrap" data-astro-cid-5tabbh6g><div id="card-host" data-astro-cid-5tabbh6g><!-- The card shell — populated client-side by renderCard() --><div class="learning-card rounded-3xl border shadow-xl overflow-hidden" style="background-color:var(--card); border-color:var(--border);"><!-- ── Top bar ─────────────────────────────────── --><div class="lc-topbar flex items-center justify-between px-6 py-3.5 border-b" style="border-color:var(--border); background-color:var(--bg);"><div class="flex items-center gap-2"><span class="lc-type-badge text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-lg" style="background-color:var(--espresso); color:#F5F2EB;">—</span><span class="lc-level-badge text-[10px] font-bold px-2.5 py-1 rounded-lg cafe-badge"></span></div><button class="lc-audio-btn flex items-center justify-center w-11 h-11 rounded-full transition-transform hover:scale-105 active:scale-95 shadow-md flex-shrink-0" title="Anhören (A)" style="background-color:var(--espresso); color:#F5F2EB;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg></button></div><!-- ── Main word display ───────────────────────── --><div class="lc-hero px-7 py-8 text-center border-b" style="border-color:var(--border);"><div class="lc-article-wrap mb-1.5"><span class="lc-article text-xl font-bold"></span></div><h2 class="lc-word text-5xl md:text-6xl font-extrabold font-outfit mb-3" style="color:var(--text);">—</h2><p class="lc-translation text-lg font-semibold italic" style="color:var(--text-muted);"></p><p class="lc-forms text-sm font-medium mt-2" style="color:var(--text-muted);"></p></div><!-- ── Meta info grid ─────────────────────────── --><div class="lc-meta-grid grid border-b" style="border-color:var(--border);"><!-- populated by JS --></div><!-- ── Grammar note ───────────────────────────── --><div class="lc-grammar-wrap hidden px-7 py-5 border-b" style="border-color:var(--border); background-color:var(--bg);"><p class="text-[10px] font-bold uppercase tracking-widest mb-2" style="color:var(--espresso);">📌 <span class="lc-grammar-label">Grammatiknotiz</span></p><p class="lc-grammar-text text-sm leading-relaxed font-medium whitespace-pre-wrap" style="color:var(--text);"></p></div><!-- ── Type-specific block ────────────────────── --><!-- Verb conjugation (hidden by default, shown for verb cards) --><div class="lc-conjugation-wrap hidden border-b overflow-x-auto" style="border-color:var(--border);"><div class="lc-conjugation-inner"><!-- populated by JS --></div></div><!-- Connector word-order block --><div class="lc-wordorder-wrap hidden px-7 py-4 border-b" style="border-color:var(--border); background-color:var(--bg);"><div class="flex items-start gap-3 text-sm font-medium" style="color:var(--text-muted);"><span class="text-base flex-shrink-0">📐</span><span class="lc-wordorder-text"></span></div></div><!-- Phrase preposition block --><div class="lc-phrase-wrap hidden px-7 py-4 border-b" style="border-color:var(--border); background-color:var(--bg);"><p class="text-[10px] font-bold uppercase tracking-widest mb-2" style="color:var(--espresso);">Struktur</p><p class="lc-phrase-rule text-sm font-semibold" style="color:var(--text);"></p></div><!-- ── Examples ───────────────────────────────── --><div class="px-7 py-6 border-b" style="border-color:var(--border);"><p class="lc-examples-label text-[10px] font-bold uppercase tracking-widest mb-5" style="color:var(--text-muted);">Beispielsätze</p><div class="lc-examples space-y-3"><!-- populated by JS --></div></div><!-- ── Tags ───────────────────────────────────── --><div class="lc-tags-row px-7 py-4 flex items-center gap-2 flex-wrap"><span class="text-[10px] font-bold uppercase tracking-wider" style="color:var(--text-muted);">Tags:</span><div class="lc-tags flex gap-2 flex-wrap"></div></div></div><script>(function(){const cardJson = "{\"id\":\"rm-formal_writing-001\",\"target\":\"Bezugnehmend auf Ihr Schreiben vom...\",\"source\":\"Referring to your letter of...\",\"tags\":[\"redemittel\"],\"grammar_note\":\"Participle construction, commonly used at the beginning of formal correspondence. The date follows 'vom'.\",\"examples\":[{\"target\":\"Bezugnehmend auf Ihr Schreiben vom 15. Mai möchten wir Ihnen mitteilen, dass...\",\"source\":\"Referring to your letter of May 15th, we would like to inform you that...\"},{\"target\":\"Bezugnehmend auf Ihr Schreiben vom letzten Monat haben wir die notwendigen Schritte eingeleitet.\",\"source\":\"Referring to your letter from last month, we have initiated the necessary steps.\"},{\"target\":\"Bezugnehmend auf Ihr Schreiben vom 2. Januar können wir Ihre Anfrage bestätigen.\",\"source\":\"Referring to your letter of January 2nd, we can confirm your request.\"},{\"target\":\"Bezugnehmend auf Ihr Schreiben vom 10. April bitten wir um weitere Klärung.\",\"source\":\"Referring to your letter of April 10th, we request further clarification.\"}]}";
+const langConfigJson = "{\"language_pair\":\"english_german\",\"target_lang\":\"de\",\"native_lang\":\"en\",\"target_lang_name\":\"Deutsch\",\"native_lang_name\":\"English\",\"speech_lang\":\"de-DE\",\"noun_metadata_fields\":[{\"key\":\"article\",\"label\":\"Artikel\",\"render\":\"article_badge\"},{\"key\":\"gender\",\"label\":\"Genus\",\"render\":\"gender_label\"},{\"key\":\"plural\",\"label\":\"Plural\",\"render\":\"text\"}],\"article_colours\":{\"der\":\"#4A7C9E\",\"die\":\"#B05070\",\"das\":\"#4A8A5A\"},\"gender_labels\":{\"m\":\"Maskulinum\",\"f\":\"Femininum\",\"n\":\"Neutrum\"},\"verb_tenses\":[\"Präsens\",\"Präteritum\",\"Perfekt\",\"Futur I\",\"Konjunktiv II\"],\"cases\":{\"nominative\":\"Nominativ\",\"accusative\":\"Akkusativ\",\"dative\":\"Dativ\",\"genitive\":\"Genitiv\"},\"ui_labels\":{\"learn_mode\":\"Lernen\",\"train_mode\":\"Trainieren\",\"examples_heading\":\"Beispielsätze\",\"grammar_note_heading\":\"Grammatiknotiz\",\"audio_button\":\"Anhören\",\"back_link\":\"Zurück\",\"card_counter\":\"Karte {current} / {total}\",\"next_button\":\"Weiter\",\"finish_button\":\"Fertig\",\"correct\":\"Richtig!\",\"wrong\":\"Falsch\",\"dashboard_link\":\"Dashboard\",\"library_prompt\":\"Wähle ein Deck aus der Bibliothek und lerne alle Informationen auf den Karten.\",\"cards_badge\":\"{count} KARTEN\",\"cards_count\":\"{count} Karten\",\"deck_meta\":\"{topic} • {level} • {count} Karten\",\"no_decks\":\"Noch keine Decks in dieser Kategorie.\",\"setup_title\":\"Setup Training\",\"setup_subtitle\":\"Konfiguriere deine Trainingssitzung.\",\"question_type\":\"Fragetyp\",\"mode_multiple_choice\":\"Multiple Choice\",\"mode_typing\":\"Texteingabe\",\"mode_typing_short\":\"Eingabe\",\"direction\":\"Richtung\",\"direction_forward\":\"🇺🇸 English → 🇩🇪 Deutsch\",\"direction_reverse\":\"🇩🇪 Deutsch → 🇺🇸 English\",\"select_level\":\"Level auswählen\",\"start_training\":\"Training Starten\",\"view_cards\":\"Karten\",\"view_list\":\"Liste\",\"card_word\":\"Karte\",\"keyboard_hint_study\":\"← → Pfeiltasten zum Navigieren · A zum Anhören\",\"example_single_heading\":\"Beispielsatz\",\"no_example\":\"Kein Beispiel verfügbar.\",\"tags_label\":\"Tags:\",\"type_vocab\":\"Vokabel\",\"type_verb\":\"Verb\",\"type_phrase\":\"Phrase\",\"type_connector\":\"Konnektor\",\"type_grammar\":\"Grammatik\",\"type_noun\":\"Substantiv\",\"type_adjective\":\"Adjektiv\",\"type_expression\":\"Ausdruck\",\"plural_prefix\":\"Pl. {plural}\",\"plural_only\":\"nur Plural\",\"word_order_heading\":\"Word Order\",\"structure_heading\":\"Struktur\",\"training_title\":\"Training\",\"all_levels\":\"Alle Niveaus\",\"type_placeholder\":\"Schreibe das Wort auf Deutsch...\",\"check_button\":\"Überprüfen\",\"keyboard_hint_train\":\"Enter / Space = bestätigen · A = Anhören\",\"audio_title\":\"Anhören (A)\",\"training_finished\":\"Training beendet!\",\"missed_heading\":\"Falsch beantwortet — zum Wiederholen\",\"retry_missed\":\"Falsche nochmal\",\"new_config\":\"Neue Konfiguration\",\"plural_hint\":\"Pl: {plural}\",\"results_pct\":\"{pct}% richtig\",\"result_excellent\":\"Ausgezeichnet! Du hast das Niveau gemeistert.\",\"result_good\":\"Sehr gut! Noch ein bisschen üben und du schaffst es!\",\"result_ok\":\"Guter Anfang! Wiederhole die Karten nochmal.\",\"result_retry\":\"Kein Problem — Übung macht den Meister!\",\"no_cards_title\":\"Keine Karten gefunden\",\"no_cards_hint\":\"Bitte wähle ein anderes Niveau oder Deck.\"},\"answer_normalisation\":{\"strip_leading_words\":[\"der\",\"die\",\"das\",\"ein\",\"eine\",\"einem\",\"einen\",\"einer\",\"dem\",\"den\",\"des\"],\"alt_spellings\":{\"ü\":\"ue\",\"ä\":\"ae\",\"ö\":\"oe\",\"ß\":\"ss\"}}}";
+
+  /**
+   * Client-side card renderer.
+   * Uses the universal card-renderer logic inline (no imports in Astro is:inline).
+   */
+
+  // ── Parse data ──────────────────────────────────────────────────────────
+  const card   = JSON.parse(cardJson);
+  const config = JSON.parse(langConfigJson);
+
+  // ── Helpers ─────────────────────────────────────────────────────────────
+  // Articles come from the language config (keys of article_colours), never hardcoded
+  const articleList = Object.keys(config.article_colours || {});
+  const articleRe = articleList.length
+    ? new RegExp('^(' + articleList.map(a => a.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|') + ')\\s+', 'i')
+    : null;
+
+  function stripArticle(word) {
+    return articleRe ? (word || '').replace(articleRe, '').trim() : (word || '').trim();
+  }
+
+  function getArticleColour(article) {
+    if (!article || !config.article_colours) return 'var(--espresso)';
+    return config.article_colours[article.toLowerCase()] || 'var(--espresso)';
+  }
+
+  function getGenderLabel(gender) {
+    if (!gender) return '';
+    return (config.gender_labels || {})[gender] || gender;
+  }
+
+  function getTypeLabel() {
+    const tags = card.tags || [];
+    if (tags.includes('noun'))       return 'Substantiv';
+    if (tags.includes('verb'))       return 'Verb';
+    if (tags.includes('adjective'))  return 'Adjektiv';
+    if (tags.includes('expression')) return 'Ausdruck';
+    const map = { vocab:'Vokabel', verb:'Verb', phrase:'Phrase', connector:'Konnektor', grammar:'Grammatik' };
+    return map[card.type] || 'Karte';
+  }
+
+  function formatHighlight(text) {
+    if (!text) return '';
+    return String(text).replace(/\*(.*?)\*/g, '<span class="highlighter">$1</span>');
+  }
+
+  function getMetaFacts() {
+    const meta = card.metadata || {};
+    const facts = [];
+    for (const field of (config.noun_metadata_fields || [])) {
+      const raw = meta[field.key] || card[field.key];
+      if (!raw || raw === '~') continue;
+      let value = String(raw);
+      let colour;
+      if (field.render === 'gender_label') value = getGenderLabel(raw);
+      else if (field.render === 'article_badge') colour = getArticleColour(raw);
+      facts.push({ label: field.label, value, colour });
+    }
+    return facts;
+  }
+
+  // ── Render ──────────────────────────────────────────────────────────────
+  const container = document.querySelector('.learning-card');
+  if (!container) { console.error('LearningCard: container not found'); }
+
+  function sel(cls) { return container?.querySelector(cls); }
+
+  // Type badge
+  sel('.lc-type-badge').textContent = getTypeLabel();
+
+  // Level badge
+  sel('.lc-level-badge').textContent = card.level || '';
+
+  // Article
+  const article = card.metadata?.article;
+  const articleWrap = sel('.lc-article-wrap');
+  const articleEl   = sel('.lc-article');
+  if (article && card.tags?.includes('noun') && !card.metadata?.plural_only) {
+    articleEl.textContent  = article;
+    articleEl.style.color  = getArticleColour(article);
+    articleWrap.style.display = '';
+  } else {
+    articleWrap.style.display = 'none';
+  }
+
+  // Word
+  sel('.lc-word').textContent = stripArticle(card.target);
+
+  // Translation
+  sel('.lc-translation').textContent = card.source || '';
+
+  // Plural / forms
+  const plural = card.metadata?.plural;
+  const formsEl = sel('.lc-forms');
+  if (plural && !card.metadata?.plural_only) formsEl.textContent = `Pl. ${plural}`;
+  else if (card.metadata?.plural_only) formsEl.textContent = 'nur Plural';
+  else formsEl.textContent = '';
+
+  // Meta grid
+  const metaGrid = sel('.lc-meta-grid');
+  const facts = getMetaFacts();
+  if (facts.length) {
+    const cols = Math.min(facts.length, 4);
+    metaGrid.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
+    metaGrid.innerHTML = facts.map((f, i) => `
+      <div class="px-5 py-4 ${i < facts.length - 1 ? 'border-r' : ''}" style="border-color:var(--border);">
+        <p class="text-[9px] font-bold uppercase tracking-widest mb-1" style="color:var(--text-muted);">${f.label}</p>
+        <p class="text-sm font-bold" style="color:${f.colour || 'var(--text)'};">${f.value}</p>
+      </div>
+    `).join('');
+  } else {
+    metaGrid.style.display = 'none';
+  }
+
+  // Grammar note
+  const grammarWrap = sel('.lc-grammar-wrap');
+  if (card.grammar_note) {
+    sel('.lc-grammar-text').innerHTML = formatHighlight(card.grammar_note);
+    grammarWrap.classList.remove('hidden');
+  }
+
+  // Grammar label from config
+  const uiLabels = config.ui_labels || {};
+  if (uiLabels.grammar_note_heading) sel('.lc-grammar-label').textContent = uiLabels.grammar_note_heading;
+  if (uiLabels.examples_heading)     sel('.lc-examples-label').textContent = uiLabels.examples_heading;
+  if (uiLabels.audio_button)         { const el = sel('.lc-audio-label'); if (el) el.textContent = uiLabels.audio_button; }
+
+  // ── Type-specific blocks ─────────────────────────────────────────────────
+
+  // Verb: conjugation table
+  const type = card.type || (card.tags?.includes('verb') ? 'verb' : 'vocab');
+  if (type === 'verb' && card.conjugations?.length) {
+    const conjWrap  = sel('.lc-conjugation-wrap');
+    const conjInner = sel('.lc-conjugation-inner');
+    conjWrap.classList.remove('hidden');
+    conjInner.innerHTML = (config.verb_tenses || card.conjugations.map(t => t.tense)).map(tense => {
+      const t = card.conjugations.find(c => c.tense === tense);
+      if (!t) return '';
+      return `
+        <div class="border-b last:border-0" style="border-color:var(--border);">
+          <p class="text-[10px] font-bold uppercase tracking-widest px-5 py-2" style="background-color:var(--bg); color:var(--espresso);">${t.tense}</p>
+          <table class="w-full text-sm">
+            <tbody>
+              ${t.forms.map((f, ri) => `
+                <tr class="${ri % 2 === 0 ? '' : ''} border-t" style="border-color:var(--border);">
+                  <td class="px-5 py-2.5 font-bold w-24" style="color:var(--espresso);">${f.pronoun}</td>
+                  <td class="px-5 py-2.5 font-semibold" style="color:var(--text);">${f.form}</td>
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+        </div>
+      `;
+    }).join('');
+  }
+
+  // Connector: word order block
+  if (type === 'connector' && card.word_order) {
+    const woWrap = sel('.lc-wordorder-wrap');
+    sel('.lc-wordorder-text').textContent = card.word_order;
+    woWrap.classList.remove('hidden');
+  }
+
+  // Phrase: preposition rule block
+  if (type === 'phrase' && card.clause_type) {
+    const phraseWrap = sel('.lc-phrase-wrap');
+    sel('.lc-phrase-rule').textContent = card.clause_type;
+    phraseWrap.classList.remove('hidden');
+  }
+
+  // ── Examples ─────────────────────────────────────────────────────────────
+  const examplesEl = sel('.lc-examples');
+  const rawExamples = card.examples || [];
+
+  if (rawExamples.length) {
+    examplesEl.innerHTML = rawExamples.map(e => `
+        <div class="rounded-2xl border overflow-hidden" style="border-color:var(--border);">
+          <div class="px-4 py-3" style="background-color:var(--bg);">
+            <p class="font-semibold leading-snug mb-1" style="color:var(--text);">${formatHighlight(e.target)}</p>
+            <p class="text-sm italic" style="color:var(--text-muted);">${formatHighlight(e.source || '')}</p>
+          </div>
+          ${e.note ? `<div class="px-4 py-2 border-t" style="border-color:var(--border);">
+            <p class="text-[10px] font-bold font-mono" style="color:var(--espresso);">📐 ${e.note}</p>
+          </div>` : ''}
+        </div>
+      `).join('');
+  } else {
+    examplesEl.innerHTML = `<p class="text-sm italic" style="color:var(--text-muted);">${uiLabels.no_example || ''}</p>`;
+  }
+
+  // ── Tags ─────────────────────────────────────────────────────────────────
+  const tagsEl = sel('.lc-tags');
+  tagsEl.innerHTML = (card.tags || []).map(t => `
+    <span class="text-[10px] font-bold px-2 py-0.5 rounded-md border uppercase" style="border-color:var(--border); color:var(--text-muted); background-color:var(--bg);">${t}</span>
+  `).join('');
+
+  // ── Audio button ─────────────────────────────────────────────────────────
+  sel('.lc-audio-btn')?.addEventListener('click', () => {
+    if (window.LoungeAudioEngine) {
+      window.LoungeAudioEngine.speak(card.target || '', config.speech_lang, 0.85);
+    }
+  });
+})();</script></div><!-- ── Navigation ───────────────────────────── --><div class="flex items-center justify-between mt-8 gap-4" data-astro-cid-5tabbh6g><button id="btn-prev" disabled class="flex items-center gap-2 px-6 py-3 rounded-2xl border font-bold text-sm transition-all hover:opacity-70 active:scale-95 disabled:opacity-30 disabled:cursor-not-allowed" style="border-color:var(--border); color:var(--text); background-color:var(--card);" data-astro-cid-5tabbh6g><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><path d="m15 18-6-6 6-6" data-astro-cid-5tabbh6g></path></svg>Zurück</button><!-- Dot navigation --><div id="dot-nav" class="flex items-center gap-1.5 flex-wrap justify-center max-w-xs overflow-hidden" style="max-height:2rem;" data-astro-cid-5tabbh6g><!-- populated by JS --></div><button id="btn-next" class="flex items-center gap-2 px-6 py-3 rounded-2xl font-bold text-sm transition-all hover:opacity-80 active:scale-95" style="background-color:var(--espresso); color:#F5F2EB;" data-astro-cid-5tabbh6g>Weiter<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><path d="m9 18 6-6-6-6" data-astro-cid-5tabbh6g></path></svg></button></div><!-- Keyboard hint --><p class="text-center text-xs font-medium mt-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>← → Pfeiltasten zum Navigieren · A zum Anhören</p></div><!-- ── List View ───────────────────────────── --><div id="list-view-wrap" class="hidden space-y-6" data-astro-cid-5tabbh6g><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Bezugnehmend auf Ihr Schreiben vom...</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Referring to your letter of...</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Participle construction, commonly used at the beginning of formal correspondence. The date follows 'vom'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Beispielsatz</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Bezugnehmend auf Ihr Schreiben vom 15. Mai möchten wir Ihnen mitteilen, dass...</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Referring to your letter of May 15th, we would like to inform you that...</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Wir sind der Auffassung, dass...</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>We are of the opinion that... / We believe that...</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Formal way to express an opinion. Uses the dative noun 'der Auffassung' with 'sein' and a 'dass'-clause.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Beispielsatz</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Wir sind der Auffassung, dass die vorgeschlagene Lösung die beste ist.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>We are of the opinion that the proposed solution is the best one.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Es ist festzuhalten, dass...</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>It should be noted that... / It is important to state that...</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Impersonal passive construction, often used to introduce an important fact or observation. 'festzuhalten' means 'to hold firmly' or 'to note'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Beispielsatz</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Es ist festzuhalten, dass die Frist nicht eingehalten wurde.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>It should be noted that the deadline was not met.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Daraus ergibt sich die Frage, ob...</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>This raises the question of whether...</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Formal way to introduce a question or problem resulting from previous information. 'sich ergeben' means 'to result' or 'to arise'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Beispielsatz</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Daraus ergibt sich die Frage, ob die Ressourcen ausreichend sind.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>This raises the question of whether the resources are sufficient.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Ein weiterer wichtiger Aspekt ist...</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Another important aspect is...</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Connects ideas and introduces new points in a structured, formal way.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Beispielsatz</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Ein weiterer wichtiger Aspekt ist die Nachhaltigkeit des Projekts.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Another important aspect is the sustainability of the project.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Zusammenfassend lässt sich sagen, dass...</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>In summary, it can be said that...</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Impersonal passive construction using 'sich lassen' + infinitive, commonly used for summarizing information or arguments.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Beispielsatz</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Zusammenfassend lässt sich sagen, dass das Projekt erfolgreich war.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>In summary, it can be said that the project was successful.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Abschließend möchten wir betonen, dass...</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Finally, we would like to emphasize that...</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Formal closing statement, often used to highlight a key point or final thought. 'betonen' means 'to emphasize'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Beispielsatz</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Abschließend möchten wir betonen, dass uns die Kundenzufriedenheit sehr wichtig ist.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Finally, we would like to emphasize that customer satisfaction is very important to us.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Wir bitten Sie höflich um...</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>We kindly ask you for...</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Formal way to make a request. Uses the verb 'bitten' with the preposition 'um' (to ask for something).</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Beispielsatz</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Wir bitten Sie höflich um Ihr Verständnis in dieser Angelegenheit.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>We kindly ask for your understanding in this matter.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Es wäre wünschenswert, wenn...</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>It would be desirable if...</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Uses Konjunktiv II to express a polite wish or suggestion. 'wünschenswert' means 'desirable'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Beispielsatz</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Es wäre wünschenswert, wenn wir uns nächste Woche treffen könnten.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>It would be desirable if we could meet next week.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Demzufolge ist anzunehmen, dass...</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Consequently, it can be assumed that...</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Connects cause and effect. 'demzufolge' means 'consequently'. Uses the impersonal passive 'ist anzunehmen' (it is to be assumed).</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Beispielsatz</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Die Daten zeigen einen Rückgang der Verkaufszahlen; demzufolge ist anzunehmen, dass die Marketingstrategie angepasst werden muss.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The data show a decline in sales; consequently, it can be assumed that the marketing strategy needs to be adjusted.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Dies führt zu der Schlussfolgerung, dass...</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>This leads to the conclusion that...</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Connects premises to a conclusion. 'führen zu' means 'to lead to'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Beispielsatz</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Die vorliegenden Ergebnisse sind eindeutig; dies führt zu der Schlussfolgerung, dass die Hypothese bestätigt wurde.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The present results are unambiguous; this leads to the conclusion that the hypothesis has been confirmed.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Daher ist es von Bedeutung, dass...</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Therefore, it is important that...</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Emphasizes importance. 'von Bedeutung sein' means 'to be important' or 'to be of significance'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Beispielsatz</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Daher ist es von Bedeutung, dass alle Mitarbeiter geschult werden.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Therefore, it is important that all employees are trained.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>In Anbetracht der oben genannten Punkte...</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>In view of the above-mentioned points...</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Formal transition, referring back to previous statements. 'in Anbetracht' means 'in view of' or 'considering'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Beispielsatz</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>In Anbetracht der oben genannten Punkte schlagen wir folgende Maßnahmen vor.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>In view of the above-mentioned points, we propose the following measures.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Diesbezüglich möchten wir Sie informieren, dass...</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>In this regard, we would like to inform you that...</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Formal way to introduce new information related to a previous topic. 'diesbezüglich' means 'in this regard' or 'concerning this'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Beispielsatz</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Diesbezüglich möchten wir Sie informieren, dass sich die Lieferzeit verlängern wird.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>In this regard, we would like to inform you that the delivery time will be extended.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Im Folgenden wird dargelegt, dass...</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>In the following, it will be demonstrated that... / The following will show that...</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Formal way to announce what will be presented or argued next in a text. Uses the impersonal passive 'wird dargelegt'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Beispielsatz</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Im Folgenden wird dargelegt, dass die vorgeschlagene Methode effektiver ist.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>In the following, it will be demonstrated that the proposed method is more effective.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Wir würden es begrüßen, wenn...</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>We would appreciate it if...</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Polite expression of a wish or preference, using Konjunktiv II. 'begrüßen' means 'to welcome' or 'to appreciate'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Beispielsatz</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Wir würden es begrüßen, wenn Sie uns Ihre Vorschläge bald zusenden würden.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>We would appreciate it if you would send us your suggestions soon.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Aus unserer Sicht ist es unerlässlich,... zu...</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>From our point of view, it is essential... to...</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Formal way to express a strong opinion or necessity. 'unerlässlich' means 'essential' or 'indispensable'. Often followed by an infinitive clause with 'zu'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Beispielsatz</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Aus unserer Sicht ist es unerlässlich, die Sicherheitsmaßnahmen zu verstärken.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>From our point of view, it is essential to strengthen the security measures.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Aufgrund der vorliegenden Informationen...</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Based on the available information...</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Formal way to introduce a statement or conclusion based on given data. 'aufgrund' is a preposition meaning 'on the basis of' or 'due to', requiring the genitive case.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Beispielsatz</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Aufgrund der vorliegenden Informationen müssen wir unsere Pläne anpassen.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Based on the available information, we must adjust our plans.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Es ist zu berücksichtigen, dass...</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>It must be taken into account that... / It should be considered that...</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Impersonal passive construction, expressing necessity or importance of consideration. 'zu berücksichtigen' means 'to be considered'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Beispielsatz</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Es ist zu berücksichtigen, dass die Kosten erheblich steigen könnten.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>It must be taken into account that costs could rise considerably.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>In diesem Zusammenhang ist zu erwähnen, dass...</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>In this context, it should be mentioned that...</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammatiknotiz</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Formal way to introduce related information. 'in diesem Zusammenhang' means 'in this context'. Uses the impersonal passive 'ist zu erwähnen'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Beispielsatz</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>In diesem Zusammenhang ist zu erwähnen, dass die Fristen sehr eng sind.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>In this context, it should be mentioned that the deadlines are very tight.</p></div></div></div></div></div></div><!-- ══ TRAIN PANEL ════════════════════════════ --><div id="train-panel" class="hidden space-y-10" data-astro-cid-5tabbh6g><div class="cafe-card rounded-3xl p-8 border shadow-lg max-w-xl mx-auto" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="text-center mb-8" data-astro-cid-5tabbh6g><h2 class="text-2xl font-extrabold font-outfit mb-2" style="color:var(--text);" data-astro-cid-5tabbh6g>Setup Training</h2><p class="text-sm font-medium" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Konfiguriere deine Trainingssitzung.</p></div><form action="/languagelounge/en-de/training/redemittel/train/" method="GET" class="space-y-8" id="deck-train-form" data-astro-cid-5tabbh6g><input type="hidden" name="level" value="b2" data-astro-cid-5tabbh6g><input type="hidden" name="deck" value="rm-formal_writing-b2" data-astro-cid-5tabbh6g><!-- Mode selection --><div class="space-y-3" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold tracking-widest uppercase" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Fragetyp</p><div class="grid grid-cols-2 gap-3" data-astro-cid-5tabbh6g><button type="button" data-group="mode" data-value="mc" class="sel-opt sel-active" data-astro-cid-5tabbh6g><span class="text-xl mb-1 block" data-astro-cid-5tabbh6g>🔘</span><span class="text-sm font-bold" data-astro-cid-5tabbh6g>Multiple Choice</span></button><button type="button" data-group="mode" data-value="type" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-xl mb-1 block" data-astro-cid-5tabbh6g>⌨️</span><span class="text-sm font-bold" data-astro-cid-5tabbh6g>Texteingabe</span></button></div><input type="hidden" name="mode" id="mode-hidden" value="mc" data-astro-cid-5tabbh6g></div><!-- Direction selection --><div class="space-y-3" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold tracking-widest uppercase" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Richtung</p><div class="grid grid-cols-2 gap-3" data-astro-cid-5tabbh6g><button type="button" data-group="dir" data-value="en-de" class="sel-opt sel-active" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>🇺🇸 English → 🇩🇪 Deutsch</span></button><button type="button" data-group="dir" data-value="de-en" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>🇩🇪 Deutsch → 🇺🇸 English</span></button></div><input type="hidden" name="dir" id="dir-hidden" value="en-de" data-astro-cid-5tabbh6g></div><!-- Count Selection --><div class="space-y-3" data-astro-cid-5tabbh6g><div class="flex justify-between items-end" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold tracking-widest uppercase" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Anzahl (Count)</p><span class="text-xs font-bold" style="color:var(--espresso);" data-astro-cid-5tabbh6g>20 Karten in Deck</span></div><div class="grid grid-cols-4 gap-3" data-astro-cid-5tabbh6g><button type="button" data-group="count" data-value="30" class="sel-opt sel-active" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>30</span></button><button type="button" data-group="count" data-value="60" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>60</span></button><button type="button" data-group="count" data-value="90" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>90</span></button><button type="button" data-group="count" data-value="1000" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>All</span></button></div><input type="hidden" name="count" id="count-hidden" value="30" data-astro-cid-5tabbh6g></div><button type="submit" class="w-full py-4 rounded-xl font-bold text-base transition-all hover:opacity-90 mt-4 shadow-md active:scale-[0.98]" style="background-color:var(--espresso); color:#F5F2EB;" data-astro-cid-5tabbh6g>Training Starten &rarr;</button></form></div></div></div></main><footer class="mt-auto border-t py-8" style="background-color:var(--bg);border-color:var(--border);"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-medium" style="color:var(--text-muted);"><div>&copy; 2025 - 2026 Small Talk Café Podcasts. All rights reserved.</div><div class="flex gap-4">Made in Bayern ❤️ Los Geht's!</div></div></footer><!-- Minimal script for Theme and Dropdown toggle --><script>
+      // ── Theme ──────────────────────────────────────
+      function applyTheme(dark) {
+        if (dark) {
+          document.documentElement.classList.add('dark');
+          localStorage.setItem('wortschatz_theme', 'dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+          localStorage.setItem('wortschatz_theme', 'light');
+        }
+        const icon = document.getElementById('theme-icon');
+        const label = document.getElementById('theme-label');
+        if (icon) icon.textContent = dark ? '🌙' : '☀️';
+        if (label) label.textContent = dark ? 'Dark' : 'Light';
+      }
+
+      const isDark = document.documentElement.classList.contains('dark');
+      applyTheme(isDark);
+
+      document.getElementById('theme-toggle')?.addEventListener('click', () => {
+        const nowDark = !document.documentElement.classList.contains('dark');
+        applyTheme(nowDark);
+      });
+
+      // ── Dropdown Toggle ──────────────────────────
+      const langBtn = document.getElementById('lang-btn');
+      const langMenu = document.getElementById('lang-menu');
+
+      langBtn?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        langMenu?.classList.toggle('hidden');
+      });
+
+      document.addEventListener('click', () => {
+        langMenu?.classList.add('hidden');
+      });
+    </script></body></html><script type="module" src="/languagelounge/_astro/_deckId_.astro_astro_type_script_index_0_lang.DQkRtrTk.js"></script><script>(function(){const cardsJson = "[{\"id\":\"rm-formal_writing-001\",\"target\":\"Bezugnehmend auf Ihr Schreiben vom...\",\"source\":\"Referring to your letter of...\",\"tags\":[\"redemittel\"],\"grammar_note\":\"Participle construction, commonly used at the beginning of formal correspondence. The date follows 'vom'.\",\"examples\":[{\"target\":\"Bezugnehmend auf Ihr Schreiben vom 15. Mai möchten wir Ihnen mitteilen, dass...\",\"source\":\"Referring to your letter of May 15th, we would like to inform you that...\"},{\"target\":\"Bezugnehmend auf Ihr Schreiben vom letzten Monat haben wir die notwendigen Schritte eingeleitet.\",\"source\":\"Referring to your letter from last month, we have initiated the necessary steps.\"},{\"target\":\"Bezugnehmend auf Ihr Schreiben vom 2. Januar können wir Ihre Anfrage bestätigen.\",\"source\":\"Referring to your letter of January 2nd, we can confirm your request.\"},{\"target\":\"Bezugnehmend auf Ihr Schreiben vom 10. April bitten wir um weitere Klärung.\",\"source\":\"Referring to your letter of April 10th, we request further clarification.\"}]},{\"id\":\"rm-formal_writing-002\",\"target\":\"Wir sind der Auffassung, dass...\",\"source\":\"We are of the opinion that... / We believe that...\",\"tags\":[\"redemittel\"],\"grammar_note\":\"Formal way to express an opinion. Uses the dative noun 'der Auffassung' with 'sein' and a 'dass'-clause.\",\"examples\":[{\"target\":\"Wir sind der Auffassung, dass die vorgeschlagene Lösung die beste ist.\",\"source\":\"We are of the opinion that the proposed solution is the best one.\"},{\"target\":\"Die Geschäftsleitung ist der Auffassung, dass weitere Maßnahmen erforderlich sind.\",\"source\":\"The management is of the opinion that further measures are required.\"},{\"target\":\"Wir sind der Auffassung, dass dieser Ansatz langfristig erfolgreicher sein wird.\",\"source\":\"We believe that this approach will be more successful in the long term.\"},{\"target\":\"Sind Sie auch der Auffassung, dass dies der richtige Weg ist?\",\"source\":\"Are you also of the opinion that this is the right way?\"}]},{\"id\":\"rm-formal_writing-003\",\"target\":\"Es ist festzuhalten, dass...\",\"source\":\"It should be noted that... / It is important to state that...\",\"tags\":[\"redemittel\"],\"grammar_note\":\"Impersonal passive construction, often used to introduce an important fact or observation. 'festzuhalten' means 'to hold firmly' or 'to note'.\",\"examples\":[{\"target\":\"Es ist festzuhalten, dass die Frist nicht eingehalten wurde.\",\"source\":\"It should be noted that the deadline was not met.\"},{\"target\":\"Es ist festzuhalten, dass die Ergebnisse unsere Erwartungen übertroffen haben.\",\"source\":\"It is important to state that the results exceeded our expectations.\"},{\"target\":\"In diesem Zusammenhang ist festzuhalten, dass die Kosten erheblich gestiegen sind.\",\"source\":\"In this context, it should be noted that costs have risen considerably.\"},{\"target\":\"Es ist festzuhalten, dass eine detaillierte Analyse noch aussteht.\",\"source\":\"It should be noted that a detailed analysis is still pending.\"}]},{\"id\":\"rm-formal_writing-004\",\"target\":\"Daraus ergibt sich die Frage, ob...\",\"source\":\"This raises the question of whether...\",\"tags\":[\"redemittel\"],\"grammar_note\":\"Formal way to introduce a question or problem resulting from previous information. 'sich ergeben' means 'to result' or 'to arise'.\",\"examples\":[{\"target\":\"Daraus ergibt sich die Frage, ob die Ressourcen ausreichend sind.\",\"source\":\"This raises the question of whether the resources are sufficient.\"},{\"target\":\"Angesichts dieser Entwicklung ergibt sich die Frage, ob der Zeitplan realistisch ist.\",\"source\":\"In view of this development, the question arises whether the timetable is realistic.\"},{\"target\":\"Aus den neuen Daten ergibt sich die Frage, ob die ursprüngliche Hypothese noch gültig ist.\",\"source\":\"From the new data, the question arises whether the original hypothesis is still valid.\"},{\"target\":\"Daraus ergibt sich die Frage, ob eine Anpassung der Strategie notwendig ist.\",\"source\":\"This raises the question of whether an adjustment of the strategy is necessary.\"}]},{\"id\":\"rm-formal_writing-005\",\"target\":\"Ein weiterer wichtiger Aspekt ist...\",\"source\":\"Another important aspect is...\",\"tags\":[\"redemittel\"],\"grammar_note\":\"Connects ideas and introduces new points in a structured, formal way.\",\"examples\":[{\"target\":\"Ein weiterer wichtiger Aspekt ist die Nachhaltigkeit des Projekts.\",\"source\":\"Another important aspect is the sustainability of the project.\"},{\"target\":\"Neben der Kosteneffizienz ist ein weiterer wichtiger Aspekt die Benutzerfreundlichkeit.\",\"source\":\"Besides cost-efficiency, another important aspect is user-friendliness.\"},{\"target\":\"Ein weiterer wichtiger Aspekt, der berücksichtigt werden muss, ist der Datenschutz.\",\"source\":\"Another important aspect that must be considered is data protection.\"},{\"target\":\"Ein weiterer wichtiger Aspekt betrifft die Mitarbeiterschulung.\",\"source\":\"Another important aspect concerns employee training.\"}]},{\"id\":\"rm-formal_writing-006\",\"target\":\"Zusammenfassend lässt sich sagen, dass...\",\"source\":\"In summary, it can be said that...\",\"tags\":[\"redemittel\"],\"grammar_note\":\"Impersonal passive construction using 'sich lassen' + infinitive, commonly used for summarizing information or arguments.\",\"examples\":[{\"target\":\"Zusammenfassend lässt sich sagen, dass das Projekt erfolgreich war.\",\"source\":\"In summary, it can be said that the project was successful.\"},{\"target\":\"Zusammenfassend lässt sich sagen, dass die Ergebnisse vielversprechend sind.\",\"source\":\"In summary, it can be said that the results are promising.\"},{\"target\":\"Aus den vorliegenden Daten zusammenfassend lässt sich sagen, dass Handlungsbedarf besteht.\",\"source\":\"Summarizing the available data, it can be said that there is a need for action.\"},{\"target\":\"Zusammenfassend lässt sich sagen, dass die Kooperation von Vorteil war.\",\"source\":\"In summary, it can be said that the cooperation was beneficial.\"}]},{\"id\":\"rm-formal_writing-007\",\"target\":\"Abschließend möchten wir betonen, dass...\",\"source\":\"Finally, we would like to emphasize that...\",\"tags\":[\"redemittel\"],\"grammar_note\":\"Formal closing statement, often used to highlight a key point or final thought. 'betonen' means 'to emphasize'.\",\"examples\":[{\"target\":\"Abschließend möchten wir betonen, dass uns die Kundenzufriedenheit sehr wichtig ist.\",\"source\":\"Finally, we would like to emphasize that customer satisfaction is very important to us.\"},{\"target\":\"Abschließend möchten wir betonen, dass eine schnelle Lösung angestrebt wird.\",\"source\":\"Finally, we would like to emphasize that a quick solution is being sought.\"},{\"target\":\"Abschließend möchten wir betonen, dass alle Beteiligten ihr Bestes gegeben haben.\",\"source\":\"Finally, we would like to emphasize that all parties involved have done their best.\"},{\"target\":\"Abschließend möchten wir betonen, dass wir für Rückfragen jederzeit zur Verfügung stehen.\",\"source\":\"Finally, we would like to emphasize that we are available for questions at any time.\"}]},{\"id\":\"rm-formal_writing-008\",\"target\":\"Wir bitten Sie höflich um...\",\"source\":\"We kindly ask you for...\",\"tags\":[\"redemittel\"],\"grammar_note\":\"Formal way to make a request. Uses the verb 'bitten' with the preposition 'um' (to ask for something).\",\"examples\":[{\"target\":\"Wir bitten Sie höflich um Ihr Verständnis in dieser Angelegenheit.\",\"source\":\"We kindly ask for your understanding in this matter.\"},{\"target\":\"Wir bitten Sie höflich um eine baldige Rückmeldung.\",\"source\":\"We kindly ask for a prompt reply.\"},{\"target\":\"Wir bitten Sie höflich um die Zusendung der fehlenden Unterlagen.\",\"source\":\"We kindly ask for the submission of the missing documents.\"},{\"target\":\"Wir bitten Sie höflich um Ihre Mithilfe bei der Lösung dieses Problems.\",\"source\":\"We kindly ask for your help in solving this problem.\"}]},{\"id\":\"rm-formal_writing-009\",\"target\":\"Es wäre wünschenswert, wenn...\",\"source\":\"It would be desirable if...\",\"tags\":[\"redemittel\"],\"grammar_note\":\"Uses Konjunktiv II to express a polite wish or suggestion. 'wünschenswert' means 'desirable'.\",\"examples\":[{\"target\":\"Es wäre wünschenswert, wenn wir uns nächste Woche treffen könnten.\",\"source\":\"It would be desirable if we could meet next week.\"},{\"target\":\"Es wäre wünschenswert, wenn die Kosten gesenkt werden könnten.\",\"source\":\"It would be desirable if the costs could be reduced.\"},{\"target\":\"Es wäre wünschenswert, wenn die Kommunikation verbessert würde.\",\"source\":\"It would be desirable if communication were improved.\"},{\"target\":\"Es wäre wünschenswert, wenn alle Parteien eine Einigung erzielen würden.\",\"source\":\"It would be desirable if all parties would reach an agreement.\"}]},{\"id\":\"rm-formal_writing-010\",\"target\":\"Demzufolge ist anzunehmen, dass...\",\"source\":\"Consequently, it can be assumed that...\",\"tags\":[\"redemittel\"],\"grammar_note\":\"Connects cause and effect. 'demzufolge' means 'consequently'. Uses the impersonal passive 'ist anzunehmen' (it is to be assumed).\",\"examples\":[{\"target\":\"Die Daten zeigen einen Rückgang der Verkaufszahlen; demzufolge ist anzunehmen, dass die Marketingstrategie angepasst werden muss.\",\"source\":\"The data show a decline in sales; consequently, it can be assumed that the marketing strategy needs to be adjusted.\"},{\"target\":\"Die Wettervorhersage meldet starken Schneefall; demzufolge ist anzunehmen, dass es zu Verkehrsbehinderungen kommen wird.\",\"source\":\"The weather forecast reports heavy snowfall; consequently, it can be assumed that there will be traffic disruptions.\"},{\"target\":\"Demzufolge ist anzunehmen, dass die Nachfrage nach diesem Produkt steigen wird.\",\"source\":\"Consequently, it can be assumed that the demand for this product will increase.\"},{\"target\":\"Demzufolge ist anzunehmen, dass weitere Untersuchungen notwendig sind.\",\"source\":\"Consequently, it can be assumed that further investigations are necessary.\"}]},{\"id\":\"rm-formal_writing-011\",\"target\":\"Dies führt zu der Schlussfolgerung, dass...\",\"source\":\"This leads to the conclusion that...\",\"tags\":[\"redemittel\"],\"grammar_note\":\"Connects premises to a conclusion. 'führen zu' means 'to lead to'.\",\"examples\":[{\"target\":\"Die vorliegenden Ergebnisse sind eindeutig; dies führt zu der Schlussfolgerung, dass die Hypothese bestätigt wurde.\",\"source\":\"The present results are unambiguous; this leads to the conclusion that the hypothesis has been confirmed.\"},{\"target\":\"Die Analyse der Daten führt zu der Schlussfolgerung, dass der Marktanteil gestiegen ist.\",\"source\":\"The analysis of the data leads to the conclusion that the market share has increased.\"},{\"target\":\"Die anhaltende Preiserhöhung führt zu der Schlussfolgerung, dass die Nachfrage hoch bleibt.\",\"source\":\"The continuous price increase leads to the conclusion that demand remains high.\"},{\"target\":\"Dies führt zu der Schlussfolgerung, dass dringend Maßnahmen ergriffen werden müssen.\",\"source\":\"This leads to the conclusion that urgent measures must be taken.\"}]},{\"id\":\"rm-formal_writing-012\",\"target\":\"Daher ist es von Bedeutung, dass...\",\"source\":\"Therefore, it is important that...\",\"tags\":[\"redemittel\"],\"grammar_note\":\"Emphasizes importance. 'von Bedeutung sein' means 'to be important' or 'to be of significance'.\",\"examples\":[{\"target\":\"Daher ist es von Bedeutung, dass alle Mitarbeiter geschult werden.\",\"source\":\"Therefore, it is important that all employees are trained.\"},{\"target\":\"Daher ist es von Bedeutung, dass die Qualitätsstandards eingehalten werden.\",\"source\":\"Therefore, it is important that quality standards are maintained.\"},{\"target\":\"Daher ist es von Bedeutung, dass die Ergebnisse transparent kommuniziert werden.\",\"source\":\"Therefore, it is important that the results are communicated transparently.\"},{\"target\":\"Daher ist es von Bedeutung, dass wir flexibel auf Änderungen reagieren können.\",\"source\":\"Therefore, it is important that we can react flexibly to changes.\"}]},{\"id\":\"rm-formal_writing-013\",\"target\":\"In Anbetracht der oben genannten Punkte...\",\"source\":\"In view of the above-mentioned points...\",\"tags\":[\"redemittel\"],\"grammar_note\":\"Formal transition, referring back to previous statements. 'in Anbetracht' means 'in view of' or 'considering'.\",\"examples\":[{\"target\":\"In Anbetracht der oben genannten Punkte schlagen wir folgende Maßnahmen vor.\",\"source\":\"In view of the above-mentioned points, we propose the following measures.\"},{\"target\":\"In Anbetracht der oben genannten Punkte ist eine Überarbeitung des Plans notwendig.\",\"source\":\"In view of the above-mentioned points, a revision of the plan is necessary.\"},{\"target\":\"In Anbetracht der oben genannten Punkte bitten wir um Ihr Verständnis.\",\"source\":\"In view of the above-mentioned points, we ask for your understanding.\"},{\"target\":\"In Anbetracht der oben genannten Punkte erachten wir eine persönliche Besprechung als sinnvoll.\",\"source\":\"In view of the above-mentioned points, we consider a personal meeting to be useful.\"}]},{\"id\":\"rm-formal_writing-014\",\"target\":\"Diesbezüglich möchten wir Sie informieren, dass...\",\"source\":\"In this regard, we would like to inform you that...\",\"tags\":[\"redemittel\"],\"grammar_note\":\"Formal way to introduce new information related to a previous topic. 'diesbezüglich' means 'in this regard' or 'concerning this'.\",\"examples\":[{\"target\":\"Diesbezüglich möchten wir Sie informieren, dass sich die Lieferzeit verlängern wird.\",\"source\":\"In this regard, we would like to inform you that the delivery time will be extended.\"},{\"target\":\"Diesbezüglich möchten wir Sie informieren, dass die Veranstaltung verschoben wurde.\",\"source\":\"In this regard, we would like to inform you that the event has been postponed.\"},{\"target\":\"Diesbezüglich möchten wir Sie informieren, dass Ihr Antrag genehmigt wurde.\",\"source\":\"In this regard, we would like to inform you that your application has been approved.\"},{\"target\":\"Diesbezüglich möchten wir Sie informieren, dass wir die Angelegenheit prüfen.\",\"source\":\"In this regard, we would like to inform you that we are reviewing the matter.\"}]},{\"id\":\"rm-formal_writing-015\",\"target\":\"Im Folgenden wird dargelegt, dass...\",\"source\":\"In the following, it will be demonstrated that... / The following will show that...\",\"tags\":[\"redemittel\"],\"grammar_note\":\"Formal way to announce what will be presented or argued next in a text. Uses the impersonal passive 'wird dargelegt'.\",\"examples\":[{\"target\":\"Im Folgenden wird dargelegt, dass die vorgeschlagene Methode effektiver ist.\",\"source\":\"In the following, it will be demonstrated that the proposed method is more effective.\"},{\"target\":\"Im Folgenden wird dargelegt, welche Schritte zur Implementierung notwendig sind.\",\"source\":\"In the following, it will be outlined which steps are necessary for implementation.\"},{\"target\":\"Im Folgenden wird dargelegt, wie die Ergebnisse interpretiert werden können.\",\"source\":\"In the following, it will be demonstrated how the results can be interpreted.\"},{\"target\":\"Im Folgenden wird dargelegt, warum diese Entscheidung getroffen wurde.\",\"source\":\"In the following, it will be explained why this decision was made.\"}]},{\"id\":\"rm-formal_writing-016\",\"target\":\"Wir würden es begrüßen, wenn...\",\"source\":\"We would appreciate it if...\",\"tags\":[\"redemittel\"],\"grammar_note\":\"Polite expression of a wish or preference, using Konjunktiv II. 'begrüßen' means 'to welcome' or 'to appreciate'.\",\"examples\":[{\"target\":\"Wir würden es begrüßen, wenn Sie uns Ihre Vorschläge bald zusenden würden.\",\"source\":\"We would appreciate it if you would send us your suggestions soon.\"},{\"target\":\"Wir würden es begrüßen, wenn die Zusammenarbeit fortgesetzt würde.\",\"source\":\"We would appreciate it if the cooperation were continued.\"},{\"target\":\"Wir würden es begrüßen, wenn wir eine schnelle Rückmeldung erhalten könnten.\",\"source\":\"We would appreciate it if we could receive a quick response.\"},{\"target\":\"Wir würden es begrüßen, wenn diese Angelegenheit diskret behandelt würde.\",\"source\":\"We would appreciate it if this matter were handled discreetly.\"}]},{\"id\":\"rm-formal_writing-017\",\"target\":\"Aus unserer Sicht ist es unerlässlich,... zu...\",\"source\":\"From our point of view, it is essential... to...\",\"tags\":[\"redemittel\"],\"grammar_note\":\"Formal way to express a strong opinion or necessity. 'unerlässlich' means 'essential' or 'indispensable'. Often followed by an infinitive clause with 'zu'.\",\"examples\":[{\"target\":\"Aus unserer Sicht ist es unerlässlich, die Sicherheitsmaßnahmen zu verstärken.\",\"source\":\"From our point of view, it is essential to strengthen the security measures.\"},{\"target\":\"Aus unserer Sicht ist es unerlässlich, die Meinungen aller Beteiligten einzuholen.\",\"source\":\"From our point of view, it is essential to gather the opinions of all involved parties.\"},{\"target\":\"Aus unserer Sicht ist es unerlässlich, eine langfristige Strategie zu entwickeln.\",\"source\":\"From our point of view, it is essential to develop a long-term strategy.\"},{\"target\":\"Aus unserer Sicht ist es unerlässlich, auf diese Herausforderungen angemessen zu reagieren.\",\"source\":\"From our point of view, it is essential to respond appropriately to these challenges.\"}]},{\"id\":\"rm-formal_writing-018\",\"target\":\"Aufgrund der vorliegenden Informationen...\",\"source\":\"Based on the available information...\",\"tags\":[\"redemittel\"],\"grammar_note\":\"Formal way to introduce a statement or conclusion based on given data. 'aufgrund' is a preposition meaning 'on the basis of' or 'due to', requiring the genitive case.\",\"examples\":[{\"target\":\"Aufgrund der vorliegenden Informationen müssen wir unsere Pläne anpassen.\",\"source\":\"Based on the available information, we must adjust our plans.\"},{\"target\":\"Aufgrund der vorliegenden Informationen ist eine schnelle Entscheidung erforderlich.\",\"source\":\"Based on the available information, a quick decision is required.\"},{\"target\":\"Aufgrund der vorliegenden Informationen können wir Ihre Anfrage nicht positiv beantworten.\",\"source\":\"Based on the available information, we cannot answer your request positively.\"},{\"target\":\"Aufgrund der vorliegenden Informationen scheint die Situation kritisch zu sein.\",\"source\":\"Based on the available information, the situation appears to be critical.\"}]},{\"id\":\"rm-formal_writing-019\",\"target\":\"Es ist zu berücksichtigen, dass...\",\"source\":\"It must be taken into account that... / It should be considered that...\",\"tags\":[\"redemittel\"],\"grammar_note\":\"Impersonal passive construction, expressing necessity or importance of consideration. 'zu berücksichtigen' means 'to be considered'.\",\"examples\":[{\"target\":\"Es ist zu berücksichtigen, dass die Kosten erheblich steigen könnten.\",\"source\":\"It must be taken into account that costs could rise considerably.\"},{\"target\":\"Es ist zu berücksichtigen, dass verschiedene Faktoren die Entscheidung beeinflussen.\",\"source\":\"It should be considered that various factors influence the decision.\"},{\"target\":\"Es ist zu berücksichtigen, dass die Umsetzung Zeit in Anspruch nehmen wird.\",\"source\":\"It must be taken into account that the implementation will take time.\"},{\"target\":\"Es ist zu berücksichtigen, dass die Meinungen geteilt sind.\",\"source\":\"It should be considered that opinions are divided.\"}]},{\"id\":\"rm-formal_writing-020\",\"target\":\"In diesem Zusammenhang ist zu erwähnen, dass...\",\"source\":\"In this context, it should be mentioned that...\",\"tags\":[\"redemittel\"],\"grammar_note\":\"Formal way to introduce related information. 'in diesem Zusammenhang' means 'in this context'. Uses the impersonal passive 'ist zu erwähnen'.\",\"examples\":[{\"target\":\"In diesem Zusammenhang ist zu erwähnen, dass die Fristen sehr eng sind.\",\"source\":\"In this context, it should be mentioned that the deadlines are very tight.\"},{\"target\":\"In diesem Zusammenhang ist zu erwähnen, dass ähnliche Projekte bereits erfolgreich umgesetzt wurden.\",\"source\":\"In this context, it should be mentioned that similar projects have already been successfully implemented.\"},{\"target\":\"In diesem Zusammenhang ist zu erwähnen, dass die Finanzierung noch nicht gesichert ist.\",\"source\":\"In this context, it should be mentioned that the financing is not yet secured.\"},{\"target\":\"In diesem Zusammenhang ist zu erwähnen, dass die Meinungen der Experten variieren.\",\"source\":\"In this context, it should be mentioned that expert opinions vary.\"}]}]";
+const langConfigJson = "{\"language_pair\":\"english_german\",\"target_lang\":\"de\",\"native_lang\":\"en\",\"target_lang_name\":\"Deutsch\",\"native_lang_name\":\"English\",\"speech_lang\":\"de-DE\",\"noun_metadata_fields\":[{\"key\":\"article\",\"label\":\"Artikel\",\"render\":\"article_badge\"},{\"key\":\"gender\",\"label\":\"Genus\",\"render\":\"gender_label\"},{\"key\":\"plural\",\"label\":\"Plural\",\"render\":\"text\"}],\"article_colours\":{\"der\":\"#4A7C9E\",\"die\":\"#B05070\",\"das\":\"#4A8A5A\"},\"gender_labels\":{\"m\":\"Maskulinum\",\"f\":\"Femininum\",\"n\":\"Neutrum\"},\"verb_tenses\":[\"Präsens\",\"Präteritum\",\"Perfekt\",\"Futur I\",\"Konjunktiv II\"],\"cases\":{\"nominative\":\"Nominativ\",\"accusative\":\"Akkusativ\",\"dative\":\"Dativ\",\"genitive\":\"Genitiv\"},\"ui_labels\":{\"learn_mode\":\"Lernen\",\"train_mode\":\"Trainieren\",\"examples_heading\":\"Beispielsätze\",\"grammar_note_heading\":\"Grammatiknotiz\",\"audio_button\":\"Anhören\",\"back_link\":\"Zurück\",\"card_counter\":\"Karte {current} / {total}\",\"next_button\":\"Weiter\",\"finish_button\":\"Fertig\",\"correct\":\"Richtig!\",\"wrong\":\"Falsch\",\"dashboard_link\":\"Dashboard\",\"library_prompt\":\"Wähle ein Deck aus der Bibliothek und lerne alle Informationen auf den Karten.\",\"cards_badge\":\"{count} KARTEN\",\"cards_count\":\"{count} Karten\",\"deck_meta\":\"{topic} • {level} • {count} Karten\",\"no_decks\":\"Noch keine Decks in dieser Kategorie.\",\"setup_title\":\"Setup Training\",\"setup_subtitle\":\"Konfiguriere deine Trainingssitzung.\",\"question_type\":\"Fragetyp\",\"mode_multiple_choice\":\"Multiple Choice\",\"mode_typing\":\"Texteingabe\",\"mode_typing_short\":\"Eingabe\",\"direction\":\"Richtung\",\"direction_forward\":\"🇺🇸 English → 🇩🇪 Deutsch\",\"direction_reverse\":\"🇩🇪 Deutsch → 🇺🇸 English\",\"select_level\":\"Level auswählen\",\"start_training\":\"Training Starten\",\"view_cards\":\"Karten\",\"view_list\":\"Liste\",\"card_word\":\"Karte\",\"keyboard_hint_study\":\"← → Pfeiltasten zum Navigieren · A zum Anhören\",\"example_single_heading\":\"Beispielsatz\",\"no_example\":\"Kein Beispiel verfügbar.\",\"tags_label\":\"Tags:\",\"type_vocab\":\"Vokabel\",\"type_verb\":\"Verb\",\"type_phrase\":\"Phrase\",\"type_connector\":\"Konnektor\",\"type_grammar\":\"Grammatik\",\"type_noun\":\"Substantiv\",\"type_adjective\":\"Adjektiv\",\"type_expression\":\"Ausdruck\",\"plural_prefix\":\"Pl. {plural}\",\"plural_only\":\"nur Plural\",\"word_order_heading\":\"Word Order\",\"structure_heading\":\"Struktur\",\"training_title\":\"Training\",\"all_levels\":\"Alle Niveaus\",\"type_placeholder\":\"Schreibe das Wort auf Deutsch...\",\"check_button\":\"Überprüfen\",\"keyboard_hint_train\":\"Enter / Space = bestätigen · A = Anhören\",\"audio_title\":\"Anhören (A)\",\"training_finished\":\"Training beendet!\",\"missed_heading\":\"Falsch beantwortet — zum Wiederholen\",\"retry_missed\":\"Falsche nochmal\",\"new_config\":\"Neue Konfiguration\",\"plural_hint\":\"Pl: {plural}\",\"results_pct\":\"{pct}% richtig\",\"result_excellent\":\"Ausgezeichnet! Du hast das Niveau gemeistert.\",\"result_good\":\"Sehr gut! Noch ein bisschen üben und du schaffst es!\",\"result_ok\":\"Guter Anfang! Wiederhole die Karten nochmal.\",\"result_retry\":\"Kein Problem — Übung macht den Meister!\",\"no_cards_title\":\"Keine Karten gefunden\",\"no_cards_hint\":\"Bitte wähle ein anderes Niveau oder Deck.\"},\"answer_normalisation\":{\"strip_leading_words\":[\"der\",\"die\",\"das\",\"ein\",\"eine\",\"einem\",\"einen\",\"einer\",\"dem\",\"den\",\"des\"],\"alt_spellings\":{\"ü\":\"ue\",\"ä\":\"ae\",\"ö\":\"oe\",\"ß\":\"ss\"}}}";
+const category = "redemittel";
+const lang = "en-de";
+const base = "/languagelounge/";
+const defaultView = "list";
+
+  const cards     = JSON.parse(cardsJson);
+  const config    = JSON.parse(langConfigJson);
+  let currentIndex = 0;
+
+  const dotNav    = document.getElementById('dot-nav');
+  const currentNum = document.getElementById('current-num');
+  const progressBar = document.getElementById('progress-bar');
+  const btnPrev   = document.getElementById('btn-prev');
+  const btnNext   = document.getElementById('btn-next');
+  const cardHost  = document.getElementById('card-host');
+  const progressCont = document.getElementById('progress-container');
+
+  const cardViewWrap = document.getElementById('card-view-wrap');
+  const listViewWrap = document.getElementById('list-view-wrap');
+  const btnViewCards = document.getElementById('view-cards-btn');
+  const btnViewList  = document.getElementById('view-list-btn');
+
+  // Toggle Logic
+  function setViewMode(mode) {
+    if (mode === 'list') {
+      cardViewWrap.classList.add('hidden');
+      listViewWrap.classList.remove('hidden');
+      progressCont.classList.add('hidden');
+      btnViewList.classList.add('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewList.classList.remove('text-[var(--text-muted)]');
+      btnViewCards.classList.remove('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewCards.classList.add('text-[var(--text-muted)]');
+    } else {
+      listViewWrap.classList.add('hidden');
+      cardViewWrap.classList.remove('hidden');
+      progressCont.classList.remove('hidden');
+      btnViewCards.classList.add('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewCards.classList.remove('text-[var(--text-muted)]');
+      btnViewList.classList.remove('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewList.classList.add('text-[var(--text-muted)]');
+    }
+  }
+
+  btnViewCards.addEventListener('click', () => setViewMode('cards'));
+  btnViewList.addEventListener('click', () => setViewMode('list'));
+
+  // Initial view is configured per category (config/language_pairs/*.yaml → categories[].default_view)
+  if (defaultView === 'list') {
+    setViewMode('list');
+  }
+
+
+
+  // ── Helpers (mirror card-renderer.ts — no module imports in inline scripts) ──
+  const articleColours = config.article_colours || {};
+  const genderLabels   = config.gender_labels   || {};
+  const speechLang     = config.speech_lang;
+  const ui             = config.ui_labels || {};
+  const fmt = (tpl, vars) => String(tpl).replace(/\{(\w+)\}/g, (m, k) => (k in vars ? vars[k] : m));
+  const formatHighlight = (text) => text ? String(text).replace(/\*(.*?)\*/g, '<span class="highlighter">$1</span>') : '';
+  // Articles come from the language config (keys of article_colours), never hardcoded
+  const articleList = Object.keys(articleColours);
+  const articleRe = articleList.length
+    ? new RegExp('^(' + articleList.map(a => a.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|') + ")\\s+", 'i')
+    : null;
+
+  function stripArticle(w) {
+    return articleRe ? (w || '').replace(articleRe, '').trim() : (w || '').trim();
+  }
+
+  function getTypeLabel(card) {
+    const tags = card.tags || [];
+    if (tags.includes('noun'))       return ui.type_noun;
+    if (tags.includes('verb'))       return ui.type_verb;
+    if (tags.includes('adjective'))  return ui.type_adjective;
+    if (tags.includes('expression')) return ui.type_expression;
+    const byType = { vocab: ui.type_vocab, verb: ui.type_verb, phrase: ui.type_phrase, connector: ui.type_connector, grammar: ui.type_grammar };
+    return byType[card.type] || ui.type_vocab;
+  }
+
+  function normaliseEx(ex) {
+    return { target: ex.target||'', source: ex.source||'', note: ex.note };
+  }
+
+  function getMetaFacts(card) {
+    const meta = card.metadata || {};
+    const facts = [];
+    for (const field of (config.noun_metadata_fields || [])) {
+      const raw = meta[field.key];
+      if (!raw || raw==='~') continue;
+      let value = String(raw), colour;
+      if (field.render === 'gender_label')  value  = genderLabels[raw] || raw;
+      if (field.render === 'article_badge') colour = articleColours[raw.toLowerCase()] || 'var(--espresso)';
+      facts.push({ label: field.label, value, colour });
+    }
+    return facts;
+  }
+
+  // ── Card renderer ─────────────────────────────────────────────────────────
+  function renderCard(idx) {
+    const card = cards[idx];
+    if (!card || !cardHost) return;
+
+    const lc = cardHost.querySelector('.learning-card');
+    if (!lc) return;
+
+    function sel(cls) { return lc.querySelector(cls); }
+
+    // Type badge + level
+    sel('.lc-type-badge').textContent = getTypeLabel(card);
+    sel('.lc-level-badge').textContent = (card.level || '').toUpperCase();
+
+    // Article
+    const article = card.metadata?.article;
+    const articleWrap = sel('.lc-article-wrap');
+    const articleEl   = sel('.lc-article');
+    if (article && (card.tags||[]).includes('noun') && !card.metadata?.plural_only) {
+      articleEl.textContent = article;
+      articleEl.style.color = articleColours[article.toLowerCase()] || 'var(--espresso)';
+      articleWrap.style.display = '';
+    } else {
+      articleWrap.style.display = 'none';
+    }
+
+    // Word / translation / forms
+    sel('.lc-word').textContent        = stripArticle(card.target);
+    sel('.lc-translation').textContent = card.source || '';
+    const plural = card.metadata?.plural;
+    sel('.lc-forms').textContent = plural && !card.metadata?.plural_only ? fmt(ui.plural_prefix, { plural }) : card.metadata?.plural_only ? ui.plural_only : '';
+
+    // Meta grid
+    const metaGrid = sel('.lc-meta-grid');
+    const facts = getMetaFacts(card);
+    if (facts.length) {
+      metaGrid.style.gridTemplateColumns = `repeat(${Math.min(facts.length,4)}, 1fr)`;
+      metaGrid.style.display = '';
+      metaGrid.innerHTML = facts.map((f, i) => `
+        <div class="px-5 py-4 ${i<facts.length-1?'border-r':''}" style="border-color:var(--border);">
+          <p class="text-[9px] font-bold uppercase tracking-widest mb-1" style="color:var(--text-muted);">${f.label}</p>
+          <p class="text-sm font-bold" style="color:${f.colour||'var(--text)'};">${f.value}</p>
+        </div>`).join('');
+    } else {
+      metaGrid.style.display = 'none';
+    }
+
+    // Grammar note
+    const grammarWrap = sel('.lc-grammar-wrap');
+    if (card.grammar_note) {
+      sel('.lc-grammar-text').innerHTML = formatHighlight(card.grammar_note);
+      grammarWrap.classList.remove('hidden');
+    } else {
+      grammarWrap.classList.add('hidden');
+    }
+
+    // Examples
+    const examplesEl = sel('.lc-examples');
+    const rawEx = card.examples || [];
+    examplesEl.innerHTML = rawEx.length
+      ? rawEx.map(ex => { const e=normaliseEx(ex); return `
+          <div class="rounded-2xl border overflow-hidden" style="border-color:var(--border);">
+            <div class="px-4 py-3" style="background-color:var(--bg);">
+              <p class="font-semibold leading-snug mb-1" style="color:var(--text);">${e.target}</p>
+              <p class="text-sm italic" style="color:var(--text-muted);">${e.source||''}</p>
+            </div>
+            ${e.note?`<div class="px-4 py-2 border-t" style="border-color:var(--border);">
+              <p class="text-[10px] font-bold font-mono" style="color:var(--espresso);">📐 ${e.note}</p>
+            </div>`:''}
+          </div>`; }).join('')
+      : '<p class="text-sm italic" style="color:var(--text-muted);">' + ui.no_example + '</p>';
+
+    // Tags
+    sel('.lc-tags').innerHTML = (card.tags||[]).map(t =>
+      `<span class="text-[10px] font-bold px-2 py-0.5 rounded-md border" style="border-color:var(--border);color:var(--text-muted);background-color:var(--bg);">${t}</span>`
+    ).join('');
+
+    // Progress UI
+    if (currentNum)  currentNum.textContent = String(idx+1);
+    if (progressBar) progressBar.style.width = `${Math.round(((idx+1)/cards.length)*100)}%`;
+    if (btnPrev)     btnPrev.disabled = idx === 0;
+    if (btnNext)     btnNext.innerHTML = idx === cards.length-1
+      ? '✓ ' + ui.finish_button
+      : ui.next_button + ' <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>';
+
+    updateDots();
+
+    // Re-bind audio button cleanly by cloning to strip old listeners
+    const oldBtn = sel('.lc-audio-btn');
+    if (oldBtn) {
+      const newBtn = oldBtn.cloneNode(true);
+      oldBtn.parentNode.replaceChild(newBtn, oldBtn);
+      newBtn.addEventListener('click', speakCurrent);
+    }
+  }
+
+  // ── Dot navigation ────────────────────────────────────────────────────────
+  function buildDots() {
+    if (!dotNav) return;
+    dotNav.innerHTML = '';
+    const maxVisible = 20;
+    const showAll = cards.length <= maxVisible;
+    cards.forEach((_, i) => {
+      if (!showAll && i >= maxVisible) return;
+      const dot = document.createElement('button');
+      dot.className = 'dot w-2 h-2 rounded-full transition-all duration-300 flex-shrink-0';
+      dot.style.backgroundColor = 'var(--border)';
+      dot.title = `${ui.card_word} ${i+1}`;
+      dot.addEventListener('click', () => goTo(i));
+      dotNav.appendChild(dot);
+    });
+    if (!showAll) {
+      const el = document.createElement('span');
+      el.textContent = `+${cards.length - maxVisible}`;
+      el.className = 'text-[10px] font-bold';
+      el.style.color = 'var(--text-muted)';
+      dotNav.appendChild(el);
+    }
+  }
+
+  function updateDots() {
+    dotNav?.querySelectorAll('.dot').forEach((dot, i) => {
+      dot.style.backgroundColor = i===currentIndex ? 'var(--espresso)' : 'var(--border)';
+      dot.style.width     = i===currentIndex ? '20px' : '8px';
+      dot.style.borderRadius = '4px';
+    });
+  }
+
+  // ── Audio ─────────────────────────────────────────────────────────────────
+  function speakCurrent() {
+    const card = cards[currentIndex];
+    if (!card) return;
+    if (window.LoungeAudioEngine) {
+      window.LoungeAudioEngine.speak(card.target || '', speechLang, 0.85);
+    }
+  }
+
+  // ── Navigate ─────────────────────────────────────────────────────────────
+  function goTo(idx) {
+    if (idx < 0 || idx >= cards.length) return;
+    currentIndex = idx;
+    renderCard(currentIndex);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  btnPrev?.addEventListener('click', () => goTo(currentIndex - 1));
+  btnNext?.addEventListener('click', () => {
+    if (currentIndex === cards.length - 1) window.location.href = `${base}${lang}/${category}/`;
+    else goTo(currentIndex + 1);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') goTo(currentIndex + 1);
+    if (e.key === 'ArrowLeft')  goTo(currentIndex - 1);
+    if (e.key === 'a' || e.key === 'A') speakCurrent();
+  });
+
+  // ── Learn / Train panel toggle ──────────────────────
+  const btnLearn = document.getElementById('btn-mode-learn');
+  const btnTrain = document.getElementById('btn-mode-train');
+  const pnlLearn = document.getElementById('learn-panel');
+  const pnlTrain = document.getElementById('train-panel');
+  const toolbar  = document.getElementById('learn-toolbar');
+
+  const STORAGE_KEY = `lounge:${lang}:${category}:deck:mode`;
+  let currentMode = localStorage.getItem(STORAGE_KEY) || 'learn';
+
+  function applyMode() {
+    if (currentMode === 'learn') {
+      btnLearn.style.backgroundColor = 'var(--espresso)';
+      btnLearn.style.color = '#F5F2EB';
+      btnTrain.style.backgroundColor = 'transparent';
+      btnTrain.style.color = 'var(--text-muted)';
+      pnlLearn.classList.remove('hidden');
+      toolbar.classList.remove('hidden');
+      pnlTrain.classList.add('hidden');
+    } else {
+      btnTrain.style.backgroundColor = 'var(--espresso)';
+      btnTrain.style.color = '#F5F2EB';
+      btnLearn.style.backgroundColor = 'transparent';
+      btnLearn.style.color = 'var(--text-muted)';
+      pnlTrain.classList.remove('hidden');
+      pnlLearn.classList.add('hidden');
+      toolbar.classList.add('hidden');
+    }
+    localStorage.setItem(STORAGE_KEY, currentMode);
+  }
+
+  btnLearn?.addEventListener('click', () => { currentMode = 'learn'; applyMode(); });
+  btnTrain?.addEventListener('click', () => { currentMode = 'train'; applyMode(); });
+  applyMode();
+
+  // ── Radio-style selectors (mode & dir & count) ─────────────
+  document.querySelectorAll('.sel-opt').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const group = btn.dataset.group;
+      document.querySelectorAll(`.sel-opt[data-group="${group}"]`).forEach(b => b.classList.remove('sel-active'));
+      btn.classList.add('sel-active');
+      const hidden = document.getElementById(`${group}-hidden`);
+      if (hidden) hidden.value = btn.dataset.value;
+    });
+  });
+
+  document.getElementById('deck-train-form')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const base = form.action;
+    const mode = document.getElementById('mode-hidden')?.value || 'mc';
+    const dir  = document.getElementById('dir-hidden')?.value || `${config.language_pair.source_code}-${config.language_pair.target_code}`.toLowerCase();
+    const count = document.getElementById('count-hidden')?.value || '30';
+    const level = form.querySelector('[name="level"]')?.value || '';
+    const deck = form.querySelector('[name="deck"]')?.value || '';
+    
+    const params = new URLSearchParams();
+    if(level) params.set('level', level);
+    params.set('deck', deck);
+    params.set('mode', mode);
+    params.set('dir', dir);
+    params.set('count', count);
+    
+    window.location.href = `${base}?${params.toString()}`;
+  });
+
+  // ── Init ─────────────────────────────────────────────────────────────────
+  buildDots();
+  // Card 0 is already rendered server-side via LearningCard component.
+  // Sync progress UI to reflect card 0 state.
+  updateDots();
+  if (progressBar) progressBar.style.width = `${Math.round(1/cards.length*100)}%`;
+  // Update card 0 using client-side config too (ensures langConfig is applied)
+  renderCard(0);
+})();</script>

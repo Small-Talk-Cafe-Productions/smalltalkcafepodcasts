@@ -1,0 +1,580 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="description" content="Deutsch Lounge — Ein gezieltes Trainingswerkzeug für deutschen Wortschatz und Grammatik."><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/languagelounge/favicon.svg"><meta name="generator" content="Astro v7.3.5"><title>Legacy irregular — Deutsch Lounge</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet"><script>
+      (function() {
+        const saved = localStorage.getItem('wortschatz_theme');
+        if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script><link rel="stylesheet" href="/languagelounge/_astro/Layout.BK5KHINQ.css"><style>.sel-opt[data-astro-cid-5tabbh6g]{border:2px solid var(--border);background-color:var(--card);color:var(--text);cursor:pointer;text-align:center;border-radius:12px;flex-direction:column;justify-content:center;align-items:center;width:100%;padding:14px 12px;transition:border-color .15s,background-color .15s,color .15s,box-shadow .15s;display:flex}.sel-opt[data-astro-cid-5tabbh6g]:hover{border-color:var(--border-hover);box-shadow:0 2px 8px #00000014}.sel-opt[data-astro-cid-5tabbh6g].sel-active{border-color:var(--espresso);background-color:var(--espresso);color:#f5f2eb;box-shadow:0 2px 12px #0000002e}
+</style></head><body class="antialiased min-h-screen flex flex-col" style="background-color:var(--bg);color:var(--text);"><!-- Header --><header class="sticky top-0 z-50 border-b" style="background-color:var(--bg);border-color:var(--border);"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between gap-4" style="height:4.5rem;"><!-- Logo + Language Switcher --><div class="flex items-center gap-4 shrink-0"><a href="/languagelounge/en-de/" class="flex items-center gap-2 group"><span class="font-outfit font-extrabold text-xl sm:text-2xl tracking-tight transition-colors" style="color:var(--text);">Small Talk Café <span class="font-normal text-base hidden sm:inline" style="color:var(--text-muted);">| <span id="site-name">Deutsch Lounge</span></span></span></a><!-- Language Selector Dropdown --><div class="relative" id="lang-dropdown-wrapper"><button id="lang-btn" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-sm font-bold transition-all hover:opacity-70" style="background-color:var(--bg); border-color:var(--border); color:var(--text);"><span id="lang-flag">🇩🇪</span><span id="lang-code">DE</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"></path></svg></button><div id="lang-menu" class="hidden absolute top-full left-0 mt-2 rounded-2xl border shadow-xl overflow-hidden z-50 min-w-[160px]" style="background-color:var(--card); border-color:var(--border);"><div><a href="/languagelounge/en-de/" class="w-full flex items-center gap-3 px-4 py-3 text-sm font-semibold text-left transition-colors hover:opacity-70" style="color:var(--text);"><span class="text-lg">🇩🇪</span><div><div class="font-bold" style="color:var(--text);">Deutsch Lounge</div></div></a></div></div></div></div><!-- Dynamic Nav Links --><nav class="hidden md:flex gap-5 items-center"><a href="https://smalltalkcafe.de/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Small Talk Café Podcasts</a><span class="text-sm font-normal" style="color:var(--border);">|</span><a href="/languagelounge/en-de/vocabulary/" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Vokabeln</a><a href="/languagelounge/en-de/verbs/" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Verben</a><a href="/languagelounge/en-de/grammatik/" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Grammatik</a><a href="/languagelounge/en-de/redemittel/" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Redemittel</a><!-- Dark/Light Toggle --><button id="theme-toggle" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-sm font-semibold transition-all hover:opacity-70" style="border-color:var(--border); color:var(--text-muted);" aria-label="Toggle dark/light mode"><span id="theme-icon">☀️</span><span id="theme-label">Light</span></button></nav></div></header><main id="main-content" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-1 w-full"><div class="max-w-4xl mx-auto py-6" data-astro-cid-5tabbh6g><!-- Deck Header --><div class="flex items-start justify-between mb-8 gap-4 flex-wrap" data-astro-cid-5tabbh6g><div data-astro-cid-5tabbh6g><a href="/languagelounge/en-de/verbs/" class="text-xs font-bold flex items-center gap-1 mb-2 hover:opacity-70 transition-opacity" style="color:var(--espresso);" data-astro-cid-5tabbh6g><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><path d="m15 18-6-6 6-6" data-astro-cid-5tabbh6g></path></svg>Verben</a><h1 class="text-2xl md:text-3xl font-extrabold font-outfit" style="color:var(--text);" data-astro-cid-5tabbh6g>Legacy irregular</h1><p class="text-xs font-bold uppercase tracking-wider mt-1" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>irregular • A1 • 10 Karten</p></div><div class="flex flex-col items-end gap-4 w-full md:w-auto mt-4 md:mt-0" data-astro-cid-5tabbh6g><!-- ── Mode Toggle ───────────────────────────── --><div class="flex rounded-xl border overflow-hidden p-1 gap-1 w-full max-w-[300px]" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><button id="btn-mode-learn" class="mode-btn flex-1 flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold transition-all" data-astro-cid-5tabbh6g><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" data-astro-cid-5tabbh6g></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" data-astro-cid-5tabbh6g></path></svg>Lernen</button><button id="btn-mode-train" class="mode-btn flex-1 flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold transition-all" data-astro-cid-5tabbh6g><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><circle cx="12" cy="12" r="10" data-astro-cid-5tabbh6g></circle><polyline points="12 6 12 12 16 14" data-astro-cid-5tabbh6g></polyline></svg>Trainieren</button></div><div id="learn-toolbar" class="flex flex-col items-end gap-4 w-full" data-astro-cid-5tabbh6g><!-- View switcher (Cards vs List) --><div class="flex rounded-xl border overflow-hidden p-1 gap-1 w-full max-w-[300px]" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><button id="view-cards-btn" class="view-btn flex-1 flex items-center justify-center px-4 py-2 rounded-lg text-xs font-bold transition-all bg-[var(--espresso)] text-[#F5F2EB]" data-astro-cid-5tabbh6g>Karten</button><button id="view-list-btn" class="view-btn flex-1 flex items-center justify-center px-4 py-2 rounded-lg text-xs font-bold transition-all text-[var(--text-muted)] hover:opacity-70" data-astro-cid-5tabbh6g>Liste</button></div><!-- Progress indicator --><div id="progress-container" class="flex items-center gap-3" data-astro-cid-5tabbh6g><div class="text-xs font-semibold" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Karte <span id="current-num" class="font-extrabold" style="color:var(--text);" data-astro-cid-5tabbh6g>1</span> / 10</div><div class="w-24 h-1.5 rounded-full overflow-hidden border" style="background-color:var(--bg);border-color:var(--border);" data-astro-cid-5tabbh6g><div id="progress-bar" class="h-full transition-all duration-500 rounded-full" style="width:0%; background-color:var(--espresso);" data-astro-cid-5tabbh6g></div></div></div></div></div></div><!-- ══ LEARN PANEL ════════════════════════════ --><div id="learn-panel" class="space-y-6" data-astro-cid-5tabbh6g><!-- ── Universal Study Card (rendered by LearningCard component) ── --><div id="card-view-wrap" data-astro-cid-5tabbh6g><div id="card-host" data-astro-cid-5tabbh6g><!-- The card shell — populated client-side by renderCard() --><div class="learning-card rounded-3xl border shadow-xl overflow-hidden" style="background-color:var(--card); border-color:var(--border);"><!-- ── Top bar ─────────────────────────────────── --><div class="lc-topbar flex items-center justify-between px-6 py-3.5 border-b" style="border-color:var(--border); background-color:var(--bg);"><div class="flex items-center gap-2"><span class="lc-type-badge text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-lg" style="background-color:var(--espresso); color:#F5F2EB;">—</span><span class="lc-level-badge text-[10px] font-bold px-2.5 py-1 rounded-lg cafe-badge"></span></div><button class="lc-audio-btn flex items-center justify-center w-11 h-11 rounded-full transition-transform hover:scale-105 active:scale-95 shadow-md flex-shrink-0" title="Anhören (A)" style="background-color:var(--espresso); color:#F5F2EB;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg></button></div><!-- ── Main word display ───────────────────────── --><div class="lc-hero px-7 py-8 text-center border-b" style="border-color:var(--border);"><div class="lc-article-wrap mb-1.5"><span class="lc-article text-xl font-bold"></span></div><h2 class="lc-word text-5xl md:text-6xl font-extrabold font-outfit mb-3" style="color:var(--text);">—</h2><p class="lc-translation text-lg font-semibold italic" style="color:var(--text-muted);"></p><p class="lc-forms text-sm font-medium mt-2" style="color:var(--text-muted);"></p></div><!-- ── Meta info grid ─────────────────────────── --><div class="lc-meta-grid grid border-b" style="border-color:var(--border);"><!-- populated by JS --></div><!-- ── Grammar note ───────────────────────────── --><div class="lc-grammar-wrap hidden px-7 py-5 border-b" style="border-color:var(--border); background-color:var(--bg);"><p class="text-[10px] font-bold uppercase tracking-widest mb-2" style="color:var(--espresso);">📌 <span class="lc-grammar-label">Grammatiknotiz</span></p><p class="lc-grammar-text text-sm leading-relaxed font-medium whitespace-pre-wrap" style="color:var(--text);"></p></div><!-- ── Type-specific block ────────────────────── --><!-- Verb conjugation (hidden by default, shown for verb cards) --><div class="lc-conjugation-wrap hidden border-b overflow-x-auto" style="border-color:var(--border);"><div class="lc-conjugation-inner"><!-- populated by JS --></div></div><!-- Connector word-order block --><div class="lc-wordorder-wrap hidden px-7 py-4 border-b" style="border-color:var(--border); background-color:var(--bg);"><div class="flex items-start gap-3 text-sm font-medium" style="color:var(--text-muted);"><span class="text-base flex-shrink-0">📐</span><span class="lc-wordorder-text"></span></div></div><!-- Phrase preposition block --><div class="lc-phrase-wrap hidden px-7 py-4 border-b" style="border-color:var(--border); background-color:var(--bg);"><p class="text-[10px] font-bold uppercase tracking-widest mb-2" style="color:var(--espresso);">Struktur</p><p class="lc-phrase-rule text-sm font-semibold" style="color:var(--text);"></p></div><!-- ── Examples ───────────────────────────────── --><div class="px-7 py-6 border-b" style="border-color:var(--border);"><p class="lc-examples-label text-[10px] font-bold uppercase tracking-widest mb-5" style="color:var(--text-muted);">Beispielsätze</p><div class="lc-examples space-y-3"><!-- populated by JS --></div></div><!-- ── Tags ───────────────────────────────────── --><div class="lc-tags-row px-7 py-4 flex items-center gap-2 flex-wrap"><span class="text-[10px] font-bold uppercase tracking-wider" style="color:var(--text-muted);">Tags:</span><div class="lc-tags flex gap-2 flex-wrap"></div></div></div><script>(function(){const cardJson = "{\"id\":\"v-sein\",\"type\":\"verb\",\"drill_sentence\":\"Ich ___ glücklich.\",\"cefr\":\"A1\",\"conjugations\":{\"präsens\":{\"ich\":\"bin\",\"du\":\"bist\",\"er/sie/es\":\"ist\",\"wir\":\"sind\",\"ihr\":\"seid\",\"sie/Sie\":\"sind\"},\"präteritum\":{\"ich\":\"war\",\"du\":\"warst\",\"er/sie/es\":\"war\",\"wir\":\"waren\",\"ihr\":\"wart\",\"sie/Sie\":\"waren\"},\"perfekt\":\"ist gewesen\"},\"target\":\"sein\",\"source\":\"to be\",\"examples\":[{\"target\":\"Ich bin glücklich.\"}],\"metadata\":{},\"tags\":[\"verbs\"]}";
+const langConfigJson = "{\"language_pair\":\"english_german\",\"target_lang\":\"de\",\"native_lang\":\"en\",\"target_lang_name\":\"Deutsch\",\"native_lang_name\":\"English\",\"speech_lang\":\"de-DE\",\"noun_metadata_fields\":[{\"key\":\"article\",\"label\":\"Artikel\",\"render\":\"article_badge\"},{\"key\":\"gender\",\"label\":\"Genus\",\"render\":\"gender_label\"},{\"key\":\"plural\",\"label\":\"Plural\",\"render\":\"text\"}],\"article_colours\":{\"der\":\"#4A7C9E\",\"die\":\"#B05070\",\"das\":\"#4A8A5A\"},\"gender_labels\":{\"m\":\"Maskulinum\",\"f\":\"Femininum\",\"n\":\"Neutrum\"},\"verb_tenses\":[\"Präsens\",\"Präteritum\",\"Perfekt\",\"Futur I\",\"Konjunktiv II\"],\"cases\":{\"nominative\":\"Nominativ\",\"accusative\":\"Akkusativ\",\"dative\":\"Dativ\",\"genitive\":\"Genitiv\"},\"ui_labels\":{\"learn_mode\":\"Lernen\",\"train_mode\":\"Trainieren\",\"examples_heading\":\"Beispielsätze\",\"grammar_note_heading\":\"Grammatiknotiz\",\"audio_button\":\"Anhören\",\"back_link\":\"Zurück\",\"card_counter\":\"Karte {current} / {total}\",\"next_button\":\"Weiter\",\"finish_button\":\"Fertig\",\"correct\":\"Richtig!\",\"wrong\":\"Falsch\",\"dashboard_link\":\"Dashboard\",\"library_prompt\":\"Wähle ein Deck aus der Bibliothek und lerne alle Informationen auf den Karten.\",\"cards_badge\":\"{count} KARTEN\",\"cards_count\":\"{count} Karten\",\"deck_meta\":\"{topic} • {level} • {count} Karten\",\"no_decks\":\"Noch keine Decks in dieser Kategorie.\",\"setup_title\":\"Setup Training\",\"setup_subtitle\":\"Konfiguriere deine Trainingssitzung.\",\"question_type\":\"Fragetyp\",\"mode_multiple_choice\":\"Multiple Choice\",\"mode_typing\":\"Texteingabe\",\"mode_typing_short\":\"Eingabe\",\"direction\":\"Richtung\",\"direction_forward\":\"🇺🇸 English → 🇩🇪 Deutsch\",\"direction_reverse\":\"🇩🇪 Deutsch → 🇺🇸 English\",\"select_level\":\"Level auswählen\",\"start_training\":\"Training Starten\",\"view_cards\":\"Karten\",\"view_list\":\"Liste\",\"card_word\":\"Karte\",\"keyboard_hint_study\":\"← → Pfeiltasten zum Navigieren · A zum Anhören\",\"example_single_heading\":\"Beispielsatz\",\"no_example\":\"Kein Beispiel verfügbar.\",\"tags_label\":\"Tags:\",\"type_vocab\":\"Vokabel\",\"type_verb\":\"Verb\",\"type_phrase\":\"Phrase\",\"type_connector\":\"Konnektor\",\"type_grammar\":\"Grammatik\",\"type_noun\":\"Substantiv\",\"type_adjective\":\"Adjektiv\",\"type_expression\":\"Ausdruck\",\"plural_prefix\":\"Pl. {plural}\",\"plural_only\":\"nur Plural\",\"word_order_heading\":\"Word Order\",\"structure_heading\":\"Struktur\",\"training_title\":\"Training\",\"all_levels\":\"Alle Niveaus\",\"type_placeholder\":\"Schreibe das Wort auf Deutsch...\",\"check_button\":\"Überprüfen\",\"keyboard_hint_train\":\"Enter / Space = bestätigen · A = Anhören\",\"audio_title\":\"Anhören (A)\",\"training_finished\":\"Training beendet!\",\"missed_heading\":\"Falsch beantwortet — zum Wiederholen\",\"retry_missed\":\"Falsche nochmal\",\"new_config\":\"Neue Konfiguration\",\"plural_hint\":\"Pl: {plural}\",\"results_pct\":\"{pct}% richtig\",\"result_excellent\":\"Ausgezeichnet! Du hast das Niveau gemeistert.\",\"result_good\":\"Sehr gut! Noch ein bisschen üben und du schaffst es!\",\"result_ok\":\"Guter Anfang! Wiederhole die Karten nochmal.\",\"result_retry\":\"Kein Problem — Übung macht den Meister!\",\"no_cards_title\":\"Keine Karten gefunden\",\"no_cards_hint\":\"Bitte wähle ein anderes Niveau oder Deck.\"},\"answer_normalisation\":{\"strip_leading_words\":[\"der\",\"die\",\"das\",\"ein\",\"eine\",\"einem\",\"einen\",\"einer\",\"dem\",\"den\",\"des\"],\"alt_spellings\":{\"ü\":\"ue\",\"ä\":\"ae\",\"ö\":\"oe\",\"ß\":\"ss\"}}}";
+
+  /**
+   * Client-side card renderer.
+   * Uses the universal card-renderer logic inline (no imports in Astro is:inline).
+   */
+
+  // ── Parse data ──────────────────────────────────────────────────────────
+  const card   = JSON.parse(cardJson);
+  const config = JSON.parse(langConfigJson);
+
+  // ── Helpers ─────────────────────────────────────────────────────────────
+  // Articles come from the language config (keys of article_colours), never hardcoded
+  const articleList = Object.keys(config.article_colours || {});
+  const articleRe = articleList.length
+    ? new RegExp('^(' + articleList.map(a => a.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|') + ')\\s+', 'i')
+    : null;
+
+  function stripArticle(word) {
+    return articleRe ? (word || '').replace(articleRe, '').trim() : (word || '').trim();
+  }
+
+  function getArticleColour(article) {
+    if (!article || !config.article_colours) return 'var(--espresso)';
+    return config.article_colours[article.toLowerCase()] || 'var(--espresso)';
+  }
+
+  function getGenderLabel(gender) {
+    if (!gender) return '';
+    return (config.gender_labels || {})[gender] || gender;
+  }
+
+  function getTypeLabel() {
+    const tags = card.tags || [];
+    if (tags.includes('noun'))       return 'Substantiv';
+    if (tags.includes('verb'))       return 'Verb';
+    if (tags.includes('adjective'))  return 'Adjektiv';
+    if (tags.includes('expression')) return 'Ausdruck';
+    const map = { vocab:'Vokabel', verb:'Verb', phrase:'Phrase', connector:'Konnektor', grammar:'Grammatik' };
+    return map[card.type] || 'Karte';
+  }
+
+  function formatHighlight(text) {
+    if (!text) return '';
+    return String(text).replace(/\*(.*?)\*/g, '<span class="highlighter">$1</span>');
+  }
+
+  function getMetaFacts() {
+    const meta = card.metadata || {};
+    const facts = [];
+    for (const field of (config.noun_metadata_fields || [])) {
+      const raw = meta[field.key] || card[field.key];
+      if (!raw || raw === '~') continue;
+      let value = String(raw);
+      let colour;
+      if (field.render === 'gender_label') value = getGenderLabel(raw);
+      else if (field.render === 'article_badge') colour = getArticleColour(raw);
+      facts.push({ label: field.label, value, colour });
+    }
+    return facts;
+  }
+
+  // ── Render ──────────────────────────────────────────────────────────────
+  const container = document.querySelector('.learning-card');
+  if (!container) { console.error('LearningCard: container not found'); }
+
+  function sel(cls) { return container?.querySelector(cls); }
+
+  // Type badge
+  sel('.lc-type-badge').textContent = getTypeLabel();
+
+  // Level badge
+  sel('.lc-level-badge').textContent = card.level || '';
+
+  // Article
+  const article = card.metadata?.article;
+  const articleWrap = sel('.lc-article-wrap');
+  const articleEl   = sel('.lc-article');
+  if (article && card.tags?.includes('noun') && !card.metadata?.plural_only) {
+    articleEl.textContent  = article;
+    articleEl.style.color  = getArticleColour(article);
+    articleWrap.style.display = '';
+  } else {
+    articleWrap.style.display = 'none';
+  }
+
+  // Word
+  sel('.lc-word').textContent = stripArticle(card.target);
+
+  // Translation
+  sel('.lc-translation').textContent = card.source || '';
+
+  // Plural / forms
+  const plural = card.metadata?.plural;
+  const formsEl = sel('.lc-forms');
+  if (plural && !card.metadata?.plural_only) formsEl.textContent = `Pl. ${plural}`;
+  else if (card.metadata?.plural_only) formsEl.textContent = 'nur Plural';
+  else formsEl.textContent = '';
+
+  // Meta grid
+  const metaGrid = sel('.lc-meta-grid');
+  const facts = getMetaFacts();
+  if (facts.length) {
+    const cols = Math.min(facts.length, 4);
+    metaGrid.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
+    metaGrid.innerHTML = facts.map((f, i) => `
+      <div class="px-5 py-4 ${i < facts.length - 1 ? 'border-r' : ''}" style="border-color:var(--border);">
+        <p class="text-[9px] font-bold uppercase tracking-widest mb-1" style="color:var(--text-muted);">${f.label}</p>
+        <p class="text-sm font-bold" style="color:${f.colour || 'var(--text)'};">${f.value}</p>
+      </div>
+    `).join('');
+  } else {
+    metaGrid.style.display = 'none';
+  }
+
+  // Grammar note
+  const grammarWrap = sel('.lc-grammar-wrap');
+  if (card.grammar_note) {
+    sel('.lc-grammar-text').innerHTML = formatHighlight(card.grammar_note);
+    grammarWrap.classList.remove('hidden');
+  }
+
+  // Grammar label from config
+  const uiLabels = config.ui_labels || {};
+  if (uiLabels.grammar_note_heading) sel('.lc-grammar-label').textContent = uiLabels.grammar_note_heading;
+  if (uiLabels.examples_heading)     sel('.lc-examples-label').textContent = uiLabels.examples_heading;
+  if (uiLabels.audio_button)         { const el = sel('.lc-audio-label'); if (el) el.textContent = uiLabels.audio_button; }
+
+  // ── Type-specific blocks ─────────────────────────────────────────────────
+
+  // Verb: conjugation table
+  const type = card.type || (card.tags?.includes('verb') ? 'verb' : 'vocab');
+  if (type === 'verb' && card.conjugations?.length) {
+    const conjWrap  = sel('.lc-conjugation-wrap');
+    const conjInner = sel('.lc-conjugation-inner');
+    conjWrap.classList.remove('hidden');
+    conjInner.innerHTML = (config.verb_tenses || card.conjugations.map(t => t.tense)).map(tense => {
+      const t = card.conjugations.find(c => c.tense === tense);
+      if (!t) return '';
+      return `
+        <div class="border-b last:border-0" style="border-color:var(--border);">
+          <p class="text-[10px] font-bold uppercase tracking-widest px-5 py-2" style="background-color:var(--bg); color:var(--espresso);">${t.tense}</p>
+          <table class="w-full text-sm">
+            <tbody>
+              ${t.forms.map((f, ri) => `
+                <tr class="${ri % 2 === 0 ? '' : ''} border-t" style="border-color:var(--border);">
+                  <td class="px-5 py-2.5 font-bold w-24" style="color:var(--espresso);">${f.pronoun}</td>
+                  <td class="px-5 py-2.5 font-semibold" style="color:var(--text);">${f.form}</td>
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+        </div>
+      `;
+    }).join('');
+  }
+
+  // Connector: word order block
+  if (type === 'connector' && card.word_order) {
+    const woWrap = sel('.lc-wordorder-wrap');
+    sel('.lc-wordorder-text').textContent = card.word_order;
+    woWrap.classList.remove('hidden');
+  }
+
+  // Phrase: preposition rule block
+  if (type === 'phrase' && card.clause_type) {
+    const phraseWrap = sel('.lc-phrase-wrap');
+    sel('.lc-phrase-rule').textContent = card.clause_type;
+    phraseWrap.classList.remove('hidden');
+  }
+
+  // ── Examples ─────────────────────────────────────────────────────────────
+  const examplesEl = sel('.lc-examples');
+  const rawExamples = card.examples || [];
+
+  if (rawExamples.length) {
+    examplesEl.innerHTML = rawExamples.map(e => `
+        <div class="rounded-2xl border overflow-hidden" style="border-color:var(--border);">
+          <div class="px-4 py-3" style="background-color:var(--bg);">
+            <p class="font-semibold leading-snug mb-1" style="color:var(--text);">${formatHighlight(e.target)}</p>
+            <p class="text-sm italic" style="color:var(--text-muted);">${formatHighlight(e.source || '')}</p>
+          </div>
+          ${e.note ? `<div class="px-4 py-2 border-t" style="border-color:var(--border);">
+            <p class="text-[10px] font-bold font-mono" style="color:var(--espresso);">📐 ${e.note}</p>
+          </div>` : ''}
+        </div>
+      `).join('');
+  } else {
+    examplesEl.innerHTML = `<p class="text-sm italic" style="color:var(--text-muted);">${uiLabels.no_example || ''}</p>`;
+  }
+
+  // ── Tags ─────────────────────────────────────────────────────────────────
+  const tagsEl = sel('.lc-tags');
+  tagsEl.innerHTML = (card.tags || []).map(t => `
+    <span class="text-[10px] font-bold px-2 py-0.5 rounded-md border uppercase" style="border-color:var(--border); color:var(--text-muted); background-color:var(--bg);">${t}</span>
+  `).join('');
+
+  // ── Audio button ─────────────────────────────────────────────────────────
+  sel('.lc-audio-btn')?.addEventListener('click', () => {
+    if (window.LoungeAudioEngine) {
+      window.LoungeAudioEngine.speak(card.target || '', config.speech_lang, 0.85);
+    }
+  });
+})();</script></div><!-- ── Navigation ───────────────────────────── --><div class="flex items-center justify-between mt-8 gap-4" data-astro-cid-5tabbh6g><button id="btn-prev" disabled class="flex items-center gap-2 px-6 py-3 rounded-2xl border font-bold text-sm transition-all hover:opacity-70 active:scale-95 disabled:opacity-30 disabled:cursor-not-allowed" style="border-color:var(--border); color:var(--text); background-color:var(--card);" data-astro-cid-5tabbh6g><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><path d="m15 18-6-6 6-6" data-astro-cid-5tabbh6g></path></svg>Zurück</button><!-- Dot navigation --><div id="dot-nav" class="flex items-center gap-1.5 flex-wrap justify-center max-w-xs overflow-hidden" style="max-height:2rem;" data-astro-cid-5tabbh6g><!-- populated by JS --></div><button id="btn-next" class="flex items-center gap-2 px-6 py-3 rounded-2xl font-bold text-sm transition-all hover:opacity-80 active:scale-95" style="background-color:var(--espresso); color:#F5F2EB;" data-astro-cid-5tabbh6g>Weiter<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><path d="m9 18 6-6-6-6" data-astro-cid-5tabbh6g></path></svg></button></div><!-- Keyboard hint --><p class="text-center text-xs font-medium mt-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>← → Pfeiltasten zum Navigieren · A zum Anhören</p></div><!-- ── List View ───────────────────────────── --><div id="list-view-wrap" class="hidden space-y-6" data-astro-cid-5tabbh6g><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>sein</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to be</p></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Beispielsatz</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Ich bin glücklich.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g></p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>haben</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to have</p></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Beispielsatz</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Wir haben viel Zeit.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g></p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>gehen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to go / walk</p></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Beispielsatz</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Wohin gehst du heute Abend?</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g></p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>kommen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to come</p></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Beispielsatz</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Er kommt aus Deutschland.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g></p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>sehen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to see</p></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Beispielsatz</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Sieht du den Vogel dort?</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g></p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>geben</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to give</p></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Beispielsatz</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Er gibt mir den Schlüssel.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g></p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>nehmen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to take</p></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Beispielsatz</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Ich nehme einen Kaffee, bitte.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g></p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>sprechen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to speak</p></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Beispielsatz</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Sprechen Sie Deutsch?</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g></p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>fahren</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to drive / ride</p></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Beispielsatz</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Fährst du mit dem Zug?</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g></p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>lesen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to read</p></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Beispielsatz</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Er liest ein interessantes Buch.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g></p></div></div></div></div></div></div><!-- ══ TRAIN PANEL ════════════════════════════ --><div id="train-panel" class="hidden space-y-10" data-astro-cid-5tabbh6g><div class="cafe-card rounded-3xl p-8 border shadow-lg max-w-xl mx-auto" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="text-center mb-8" data-astro-cid-5tabbh6g><h2 class="text-2xl font-extrabold font-outfit mb-2" style="color:var(--text);" data-astro-cid-5tabbh6g>Setup Training</h2><p class="text-sm font-medium" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Konfiguriere deine Trainingssitzung.</p></div><form action="/languagelounge/en-de/training/verbs/train/" method="GET" class="space-y-8" id="deck-train-form" data-astro-cid-5tabbh6g><input type="hidden" name="level" value="a1" data-astro-cid-5tabbh6g><input type="hidden" name="deck" value="verbs-irregular" data-astro-cid-5tabbh6g><!-- Mode selection --><div class="space-y-3" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold tracking-widest uppercase" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Fragetyp</p><div class="grid grid-cols-2 gap-3" data-astro-cid-5tabbh6g><button type="button" data-group="mode" data-value="mc" class="sel-opt sel-active" data-astro-cid-5tabbh6g><span class="text-xl mb-1 block" data-astro-cid-5tabbh6g>🔘</span><span class="text-sm font-bold" data-astro-cid-5tabbh6g>Multiple Choice</span></button><button type="button" data-group="mode" data-value="type" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-xl mb-1 block" data-astro-cid-5tabbh6g>⌨️</span><span class="text-sm font-bold" data-astro-cid-5tabbh6g>Texteingabe</span></button></div><input type="hidden" name="mode" id="mode-hidden" value="mc" data-astro-cid-5tabbh6g></div><!-- Direction selection --><div class="space-y-3" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold tracking-widest uppercase" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Richtung</p><div class="grid grid-cols-2 gap-3" data-astro-cid-5tabbh6g><button type="button" data-group="dir" data-value="en-de" class="sel-opt sel-active" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>🇺🇸 English → 🇩🇪 Deutsch</span></button><button type="button" data-group="dir" data-value="de-en" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>🇩🇪 Deutsch → 🇺🇸 English</span></button></div><input type="hidden" name="dir" id="dir-hidden" value="en-de" data-astro-cid-5tabbh6g></div><!-- Count Selection --><div class="space-y-3" data-astro-cid-5tabbh6g><div class="flex justify-between items-end" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold tracking-widest uppercase" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Anzahl (Count)</p><span class="text-xs font-bold" style="color:var(--espresso);" data-astro-cid-5tabbh6g>10 Karten in Deck</span></div><div class="grid grid-cols-4 gap-3" data-astro-cid-5tabbh6g><button type="button" data-group="count" data-value="30" class="sel-opt sel-active" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>30</span></button><button type="button" data-group="count" data-value="60" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>60</span></button><button type="button" data-group="count" data-value="90" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>90</span></button><button type="button" data-group="count" data-value="1000" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>All</span></button></div><input type="hidden" name="count" id="count-hidden" value="30" data-astro-cid-5tabbh6g></div><button type="submit" class="w-full py-4 rounded-xl font-bold text-base transition-all hover:opacity-90 mt-4 shadow-md active:scale-[0.98]" style="background-color:var(--espresso); color:#F5F2EB;" data-astro-cid-5tabbh6g>Training Starten &rarr;</button></form></div></div></div></main><footer class="mt-auto border-t py-8" style="background-color:var(--bg);border-color:var(--border);"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-medium" style="color:var(--text-muted);"><div>&copy; 2025 - 2026 Small Talk Café Podcasts. All rights reserved.</div><div class="flex gap-4">Made in Bayern ❤️ Los Geht's!</div></div></footer><!-- Minimal script for Theme and Dropdown toggle --><script>
+      // ── Theme ──────────────────────────────────────
+      function applyTheme(dark) {
+        if (dark) {
+          document.documentElement.classList.add('dark');
+          localStorage.setItem('wortschatz_theme', 'dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+          localStorage.setItem('wortschatz_theme', 'light');
+        }
+        const icon = document.getElementById('theme-icon');
+        const label = document.getElementById('theme-label');
+        if (icon) icon.textContent = dark ? '🌙' : '☀️';
+        if (label) label.textContent = dark ? 'Dark' : 'Light';
+      }
+
+      const isDark = document.documentElement.classList.contains('dark');
+      applyTheme(isDark);
+
+      document.getElementById('theme-toggle')?.addEventListener('click', () => {
+        const nowDark = !document.documentElement.classList.contains('dark');
+        applyTheme(nowDark);
+      });
+
+      // ── Dropdown Toggle ──────────────────────────
+      const langBtn = document.getElementById('lang-btn');
+      const langMenu = document.getElementById('lang-menu');
+
+      langBtn?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        langMenu?.classList.toggle('hidden');
+      });
+
+      document.addEventListener('click', () => {
+        langMenu?.classList.add('hidden');
+      });
+    </script></body></html><script type="module" src="/languagelounge/_astro/_deckId_.astro_astro_type_script_index_0_lang.DQkRtrTk.js"></script><script>(function(){const cardsJson = "[{\"id\":\"v-sein\",\"type\":\"verb\",\"drill_sentence\":\"Ich ___ glücklich.\",\"cefr\":\"A1\",\"conjugations\":{\"präsens\":{\"ich\":\"bin\",\"du\":\"bist\",\"er/sie/es\":\"ist\",\"wir\":\"sind\",\"ihr\":\"seid\",\"sie/Sie\":\"sind\"},\"präteritum\":{\"ich\":\"war\",\"du\":\"warst\",\"er/sie/es\":\"war\",\"wir\":\"waren\",\"ihr\":\"wart\",\"sie/Sie\":\"waren\"},\"perfekt\":\"ist gewesen\"},\"target\":\"sein\",\"source\":\"to be\",\"examples\":[{\"target\":\"Ich bin glücklich.\"}],\"metadata\":{},\"tags\":[\"verbs\"]},{\"id\":\"v-haben\",\"type\":\"verb\",\"drill_sentence\":\"Wir ___ viel Zeit.\",\"cefr\":\"A1\",\"conjugations\":{\"präsens\":{\"ich\":\"habe\",\"du\":\"hast\",\"er/sie/es\":\"hat\",\"wir\":\"haben\",\"ihr\":\"habt\",\"sie/Sie\":\"haben\"},\"präteritum\":{\"ich\":\"hatte\",\"du\":\"hattest\",\"er/sie/es\":\"hatte\",\"wir\":\"hatten\",\"ihr\":\"hattet\",\"sie/Sie\":\"hatten\"},\"perfekt\":\"hat gehabt\"},\"target\":\"haben\",\"source\":\"to have\",\"examples\":[{\"target\":\"Wir haben viel Zeit.\"}],\"metadata\":{},\"tags\":[\"verbs\"]},{\"id\":\"v-gehen\",\"type\":\"verb\",\"drill_sentence\":\"Wohin ___ du heute Abend?\",\"cefr\":\"A1\",\"conjugations\":{\"präsens\":{\"ich\":\"gehe\",\"du\":\"gehst\",\"er/sie/es\":\"geht\",\"wir\":\"gehen\",\"ihr\":\"geht\",\"sie/Sie\":\"gehen\"},\"präteritum\":{\"ich\":\"ging\",\"du\":\"gingst\",\"er/sie/es\":\"ging\",\"wir\":\"gingen\",\"ihr\":\"gingt\",\"sie/Sie\":\"gingen\"},\"perfekt\":\"ist gegangen\"},\"target\":\"gehen\",\"source\":\"to go / walk\",\"examples\":[{\"target\":\"Wohin gehst du heute Abend?\"}],\"metadata\":{},\"tags\":[\"verbs\"]},{\"id\":\"v-kommen\",\"type\":\"verb\",\"drill_sentence\":\"Er ___ aus Deutschland.\",\"cefr\":\"A1\",\"conjugations\":{\"präsens\":{\"ich\":\"komme\",\"du\":\"kommst\",\"er/sie/es\":\"kommt\",\"wir\":\"kommen\",\"ihr\":\"kommt\",\"sie/Sie\":\"kommen\"},\"präteritum\":{\"ich\":\"kam\",\"du\":\"kamst\",\"er/sie/es\":\"kam\",\"wir\":\"kamen\",\"ihr\":\"kamt\",\"sie/Sie\":\"kamen\"},\"perfekt\":\"ist gekommen\"},\"target\":\"kommen\",\"source\":\"to come\",\"examples\":[{\"target\":\"Er kommt aus Deutschland.\"}],\"metadata\":{},\"tags\":[\"verbs\"]},{\"id\":\"v-sehen\",\"type\":\"verb\",\"drill_sentence\":\"___ du den Vogel dort?\",\"cefr\":\"A1\",\"conjugations\":{\"präsens\":{\"ich\":\"sehe\",\"du\":\"siehst\",\"er/sie/es\":\"sieht\",\"wir\":\"sehen\",\"ihr\":\"seht\",\"sie/Sie\":\"sehen\"},\"präteritum\":{\"ich\":\"sah\",\"du\":\"sahst\",\"er/sie/es\":\"sah\",\"wir\":\"sahen\",\"ihr\":\"saht\",\"sie/Sie\":\"sahen\"},\"perfekt\":\"hat gesehen\"},\"target\":\"sehen\",\"source\":\"to see\",\"examples\":[{\"target\":\"Sieht du den Vogel dort?\"}],\"metadata\":{},\"tags\":[\"verbs\"]},{\"id\":\"v-geben\",\"type\":\"verb\",\"drill_sentence\":\"Er ___ mir den Schlüssel.\",\"cefr\":\"A1\",\"conjugations\":{\"präsens\":{\"ich\":\"gebe\",\"du\":\"gibst\",\"er/sie/es\":\"gibt\",\"wir\":\"geben\",\"ihr\":\"gebt\",\"sie/Sie\":\"geben\"},\"präteritum\":{\"ich\":\"gab\",\"du\":\"gabst\",\"er/sie/es\":\"gab\",\"wir\":\"gaben\",\"ihr\":\"gabt\",\"sie/Sie\":\"gaben\"},\"perfekt\":\"hat gegeben\"},\"target\":\"geben\",\"source\":\"to give\",\"examples\":[{\"target\":\"Er gibt mir den Schlüssel.\"}],\"metadata\":{},\"tags\":[\"verbs\"]},{\"id\":\"v-nehmen\",\"type\":\"verb\",\"drill_sentence\":\"Ich ___ einen Kaffee, bitte.\",\"cefr\":\"A1\",\"conjugations\":{\"präsens\":{\"ich\":\"nehme\",\"du\":\"nimmst\",\"er/sie/es\":\"nimmt\",\"wir\":\"nehmen\",\"ihr\":\"nehmt\",\"sie/Sie\":\"nehmen\"},\"präteritum\":{\"ich\":\"nahm\",\"du\":\"nahmst\",\"er/sie/es\":\"nahm\",\"wir\":\"nahmen\",\"ihr\":\"nahmt\",\"sie/Sie\":\"nahmen\"},\"perfekt\":\"hat genommen\"},\"target\":\"nehmen\",\"source\":\"to take\",\"examples\":[{\"target\":\"Ich nehme einen Kaffee, bitte.\"}],\"metadata\":{},\"tags\":[\"verbs\"]},{\"id\":\"v-sprechen\",\"type\":\"verb\",\"drill_sentence\":\"___ Sie Deutsch?\",\"cefr\":\"A1\",\"conjugations\":{\"präsens\":{\"ich\":\"spreche\",\"du\":\"sprichst\",\"er/sie/es\":\"spricht\",\"wir\":\"sprechen\",\"ihr\":\"sprecht\",\"sie/Sie\":\"sprechen\"},\"präteritum\":{\"ich\":\"sprach\",\"du\":\"sprachst\",\"er/sie/es\":\"sprach\",\"wir\":\"sprachen\",\"ihr\":\"spracht\",\"sie/Sie\":\"sprachen\"},\"perfekt\":\"hat gesprochen\"},\"target\":\"sprechen\",\"source\":\"to speak\",\"examples\":[{\"target\":\"Sprechen Sie Deutsch?\"}],\"metadata\":{},\"tags\":[\"verbs\"]},{\"id\":\"v-fahren\",\"type\":\"verb\",\"drill_sentence\":\"___ du mit dem Zug?\",\"cefr\":\"A1\",\"conjugations\":{\"präsens\":{\"ich\":\"fahre\",\"du\":\"fährst\",\"er/sie/es\":\"fährt\",\"wir\":\"fahren\",\"ihr\":\"fahrt\",\"sie/Sie\":\"fahren\"},\"präteritum\":{\"ich\":\"fuhr\",\"du\":\"fuhrst\",\"er/sie/es\":\"fuhr\",\"wir\":\"fuhren\",\"ihr\":\"fuhrt\",\"sie/Sie\":\"fuhren\"},\"perfekt\":\"ist gefahren\"},\"target\":\"fahren\",\"source\":\"to drive / ride\",\"examples\":[{\"target\":\"Fährst du mit dem Zug?\"}],\"metadata\":{},\"tags\":[\"verbs\"]},{\"id\":\"v-lesen\",\"type\":\"verb\",\"drill_sentence\":\"Er ___ ein interessantes Buch.\",\"cefr\":\"A1\",\"conjugations\":{\"präsens\":{\"ich\":\"lese\",\"du\":\"liest\",\"er/sie/es\":\"liest\",\"wir\":\"lesen\",\"ihr\":\"lest\",\"sie/Sie\":\"lesen\"},\"präteritum\":{\"ich\":\"las\",\"du\":\"last\",\"er/sie/es\":\"las\",\"wir\":\"lasen\",\"ihr\":\"last\",\"sie/Sie\":\"lasen\"},\"perfekt\":\"hat gelesen\"},\"target\":\"lesen\",\"source\":\"to read\",\"examples\":[{\"target\":\"Er liest ein interessantes Buch.\"}],\"metadata\":{},\"tags\":[\"verbs\"]}]";
+const langConfigJson = "{\"language_pair\":\"english_german\",\"target_lang\":\"de\",\"native_lang\":\"en\",\"target_lang_name\":\"Deutsch\",\"native_lang_name\":\"English\",\"speech_lang\":\"de-DE\",\"noun_metadata_fields\":[{\"key\":\"article\",\"label\":\"Artikel\",\"render\":\"article_badge\"},{\"key\":\"gender\",\"label\":\"Genus\",\"render\":\"gender_label\"},{\"key\":\"plural\",\"label\":\"Plural\",\"render\":\"text\"}],\"article_colours\":{\"der\":\"#4A7C9E\",\"die\":\"#B05070\",\"das\":\"#4A8A5A\"},\"gender_labels\":{\"m\":\"Maskulinum\",\"f\":\"Femininum\",\"n\":\"Neutrum\"},\"verb_tenses\":[\"Präsens\",\"Präteritum\",\"Perfekt\",\"Futur I\",\"Konjunktiv II\"],\"cases\":{\"nominative\":\"Nominativ\",\"accusative\":\"Akkusativ\",\"dative\":\"Dativ\",\"genitive\":\"Genitiv\"},\"ui_labels\":{\"learn_mode\":\"Lernen\",\"train_mode\":\"Trainieren\",\"examples_heading\":\"Beispielsätze\",\"grammar_note_heading\":\"Grammatiknotiz\",\"audio_button\":\"Anhören\",\"back_link\":\"Zurück\",\"card_counter\":\"Karte {current} / {total}\",\"next_button\":\"Weiter\",\"finish_button\":\"Fertig\",\"correct\":\"Richtig!\",\"wrong\":\"Falsch\",\"dashboard_link\":\"Dashboard\",\"library_prompt\":\"Wähle ein Deck aus der Bibliothek und lerne alle Informationen auf den Karten.\",\"cards_badge\":\"{count} KARTEN\",\"cards_count\":\"{count} Karten\",\"deck_meta\":\"{topic} • {level} • {count} Karten\",\"no_decks\":\"Noch keine Decks in dieser Kategorie.\",\"setup_title\":\"Setup Training\",\"setup_subtitle\":\"Konfiguriere deine Trainingssitzung.\",\"question_type\":\"Fragetyp\",\"mode_multiple_choice\":\"Multiple Choice\",\"mode_typing\":\"Texteingabe\",\"mode_typing_short\":\"Eingabe\",\"direction\":\"Richtung\",\"direction_forward\":\"🇺🇸 English → 🇩🇪 Deutsch\",\"direction_reverse\":\"🇩🇪 Deutsch → 🇺🇸 English\",\"select_level\":\"Level auswählen\",\"start_training\":\"Training Starten\",\"view_cards\":\"Karten\",\"view_list\":\"Liste\",\"card_word\":\"Karte\",\"keyboard_hint_study\":\"← → Pfeiltasten zum Navigieren · A zum Anhören\",\"example_single_heading\":\"Beispielsatz\",\"no_example\":\"Kein Beispiel verfügbar.\",\"tags_label\":\"Tags:\",\"type_vocab\":\"Vokabel\",\"type_verb\":\"Verb\",\"type_phrase\":\"Phrase\",\"type_connector\":\"Konnektor\",\"type_grammar\":\"Grammatik\",\"type_noun\":\"Substantiv\",\"type_adjective\":\"Adjektiv\",\"type_expression\":\"Ausdruck\",\"plural_prefix\":\"Pl. {plural}\",\"plural_only\":\"nur Plural\",\"word_order_heading\":\"Word Order\",\"structure_heading\":\"Struktur\",\"training_title\":\"Training\",\"all_levels\":\"Alle Niveaus\",\"type_placeholder\":\"Schreibe das Wort auf Deutsch...\",\"check_button\":\"Überprüfen\",\"keyboard_hint_train\":\"Enter / Space = bestätigen · A = Anhören\",\"audio_title\":\"Anhören (A)\",\"training_finished\":\"Training beendet!\",\"missed_heading\":\"Falsch beantwortet — zum Wiederholen\",\"retry_missed\":\"Falsche nochmal\",\"new_config\":\"Neue Konfiguration\",\"plural_hint\":\"Pl: {plural}\",\"results_pct\":\"{pct}% richtig\",\"result_excellent\":\"Ausgezeichnet! Du hast das Niveau gemeistert.\",\"result_good\":\"Sehr gut! Noch ein bisschen üben und du schaffst es!\",\"result_ok\":\"Guter Anfang! Wiederhole die Karten nochmal.\",\"result_retry\":\"Kein Problem — Übung macht den Meister!\",\"no_cards_title\":\"Keine Karten gefunden\",\"no_cards_hint\":\"Bitte wähle ein anderes Niveau oder Deck.\"},\"answer_normalisation\":{\"strip_leading_words\":[\"der\",\"die\",\"das\",\"ein\",\"eine\",\"einem\",\"einen\",\"einer\",\"dem\",\"den\",\"des\"],\"alt_spellings\":{\"ü\":\"ue\",\"ä\":\"ae\",\"ö\":\"oe\",\"ß\":\"ss\"}}}";
+const category = "verbs";
+const lang = "en-de";
+const base = "/languagelounge/";
+const defaultView = "cards";
+
+  const cards     = JSON.parse(cardsJson);
+  const config    = JSON.parse(langConfigJson);
+  let currentIndex = 0;
+
+  const dotNav    = document.getElementById('dot-nav');
+  const currentNum = document.getElementById('current-num');
+  const progressBar = document.getElementById('progress-bar');
+  const btnPrev   = document.getElementById('btn-prev');
+  const btnNext   = document.getElementById('btn-next');
+  const cardHost  = document.getElementById('card-host');
+  const progressCont = document.getElementById('progress-container');
+
+  const cardViewWrap = document.getElementById('card-view-wrap');
+  const listViewWrap = document.getElementById('list-view-wrap');
+  const btnViewCards = document.getElementById('view-cards-btn');
+  const btnViewList  = document.getElementById('view-list-btn');
+
+  // Toggle Logic
+  function setViewMode(mode) {
+    if (mode === 'list') {
+      cardViewWrap.classList.add('hidden');
+      listViewWrap.classList.remove('hidden');
+      progressCont.classList.add('hidden');
+      btnViewList.classList.add('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewList.classList.remove('text-[var(--text-muted)]');
+      btnViewCards.classList.remove('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewCards.classList.add('text-[var(--text-muted)]');
+    } else {
+      listViewWrap.classList.add('hidden');
+      cardViewWrap.classList.remove('hidden');
+      progressCont.classList.remove('hidden');
+      btnViewCards.classList.add('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewCards.classList.remove('text-[var(--text-muted)]');
+      btnViewList.classList.remove('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewList.classList.add('text-[var(--text-muted)]');
+    }
+  }
+
+  btnViewCards.addEventListener('click', () => setViewMode('cards'));
+  btnViewList.addEventListener('click', () => setViewMode('list'));
+
+  // Initial view is configured per category (config/language_pairs/*.yaml → categories[].default_view)
+  if (defaultView === 'list') {
+    setViewMode('list');
+  }
+
+
+
+  // ── Helpers (mirror card-renderer.ts — no module imports in inline scripts) ──
+  const articleColours = config.article_colours || {};
+  const genderLabels   = config.gender_labels   || {};
+  const speechLang     = config.speech_lang;
+  const ui             = config.ui_labels || {};
+  const fmt = (tpl, vars) => String(tpl).replace(/\{(\w+)\}/g, (m, k) => (k in vars ? vars[k] : m));
+  const formatHighlight = (text) => text ? String(text).replace(/\*(.*?)\*/g, '<span class="highlighter">$1</span>') : '';
+  // Articles come from the language config (keys of article_colours), never hardcoded
+  const articleList = Object.keys(articleColours);
+  const articleRe = articleList.length
+    ? new RegExp('^(' + articleList.map(a => a.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|') + ")\\s+", 'i')
+    : null;
+
+  function stripArticle(w) {
+    return articleRe ? (w || '').replace(articleRe, '').trim() : (w || '').trim();
+  }
+
+  function getTypeLabel(card) {
+    const tags = card.tags || [];
+    if (tags.includes('noun'))       return ui.type_noun;
+    if (tags.includes('verb'))       return ui.type_verb;
+    if (tags.includes('adjective'))  return ui.type_adjective;
+    if (tags.includes('expression')) return ui.type_expression;
+    const byType = { vocab: ui.type_vocab, verb: ui.type_verb, phrase: ui.type_phrase, connector: ui.type_connector, grammar: ui.type_grammar };
+    return byType[card.type] || ui.type_vocab;
+  }
+
+  function normaliseEx(ex) {
+    return { target: ex.target||'', source: ex.source||'', note: ex.note };
+  }
+
+  function getMetaFacts(card) {
+    const meta = card.metadata || {};
+    const facts = [];
+    for (const field of (config.noun_metadata_fields || [])) {
+      const raw = meta[field.key];
+      if (!raw || raw==='~') continue;
+      let value = String(raw), colour;
+      if (field.render === 'gender_label')  value  = genderLabels[raw] || raw;
+      if (field.render === 'article_badge') colour = articleColours[raw.toLowerCase()] || 'var(--espresso)';
+      facts.push({ label: field.label, value, colour });
+    }
+    return facts;
+  }
+
+  // ── Card renderer ─────────────────────────────────────────────────────────
+  function renderCard(idx) {
+    const card = cards[idx];
+    if (!card || !cardHost) return;
+
+    const lc = cardHost.querySelector('.learning-card');
+    if (!lc) return;
+
+    function sel(cls) { return lc.querySelector(cls); }
+
+    // Type badge + level
+    sel('.lc-type-badge').textContent = getTypeLabel(card);
+    sel('.lc-level-badge').textContent = (card.level || '').toUpperCase();
+
+    // Article
+    const article = card.metadata?.article;
+    const articleWrap = sel('.lc-article-wrap');
+    const articleEl   = sel('.lc-article');
+    if (article && (card.tags||[]).includes('noun') && !card.metadata?.plural_only) {
+      articleEl.textContent = article;
+      articleEl.style.color = articleColours[article.toLowerCase()] || 'var(--espresso)';
+      articleWrap.style.display = '';
+    } else {
+      articleWrap.style.display = 'none';
+    }
+
+    // Word / translation / forms
+    sel('.lc-word').textContent        = stripArticle(card.target);
+    sel('.lc-translation').textContent = card.source || '';
+    const plural = card.metadata?.plural;
+    sel('.lc-forms').textContent = plural && !card.metadata?.plural_only ? fmt(ui.plural_prefix, { plural }) : card.metadata?.plural_only ? ui.plural_only : '';
+
+    // Meta grid
+    const metaGrid = sel('.lc-meta-grid');
+    const facts = getMetaFacts(card);
+    if (facts.length) {
+      metaGrid.style.gridTemplateColumns = `repeat(${Math.min(facts.length,4)}, 1fr)`;
+      metaGrid.style.display = '';
+      metaGrid.innerHTML = facts.map((f, i) => `
+        <div class="px-5 py-4 ${i<facts.length-1?'border-r':''}" style="border-color:var(--border);">
+          <p class="text-[9px] font-bold uppercase tracking-widest mb-1" style="color:var(--text-muted);">${f.label}</p>
+          <p class="text-sm font-bold" style="color:${f.colour||'var(--text)'};">${f.value}</p>
+        </div>`).join('');
+    } else {
+      metaGrid.style.display = 'none';
+    }
+
+    // Grammar note
+    const grammarWrap = sel('.lc-grammar-wrap');
+    if (card.grammar_note) {
+      sel('.lc-grammar-text').innerHTML = formatHighlight(card.grammar_note);
+      grammarWrap.classList.remove('hidden');
+    } else {
+      grammarWrap.classList.add('hidden');
+    }
+
+    // Examples
+    const examplesEl = sel('.lc-examples');
+    const rawEx = card.examples || [];
+    examplesEl.innerHTML = rawEx.length
+      ? rawEx.map(ex => { const e=normaliseEx(ex); return `
+          <div class="rounded-2xl border overflow-hidden" style="border-color:var(--border);">
+            <div class="px-4 py-3" style="background-color:var(--bg);">
+              <p class="font-semibold leading-snug mb-1" style="color:var(--text);">${e.target}</p>
+              <p class="text-sm italic" style="color:var(--text-muted);">${e.source||''}</p>
+            </div>
+            ${e.note?`<div class="px-4 py-2 border-t" style="border-color:var(--border);">
+              <p class="text-[10px] font-bold font-mono" style="color:var(--espresso);">📐 ${e.note}</p>
+            </div>`:''}
+          </div>`; }).join('')
+      : '<p class="text-sm italic" style="color:var(--text-muted);">' + ui.no_example + '</p>';
+
+    // Tags
+    sel('.lc-tags').innerHTML = (card.tags||[]).map(t =>
+      `<span class="text-[10px] font-bold px-2 py-0.5 rounded-md border" style="border-color:var(--border);color:var(--text-muted);background-color:var(--bg);">${t}</span>`
+    ).join('');
+
+    // Progress UI
+    if (currentNum)  currentNum.textContent = String(idx+1);
+    if (progressBar) progressBar.style.width = `${Math.round(((idx+1)/cards.length)*100)}%`;
+    if (btnPrev)     btnPrev.disabled = idx === 0;
+    if (btnNext)     btnNext.innerHTML = idx === cards.length-1
+      ? '✓ ' + ui.finish_button
+      : ui.next_button + ' <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>';
+
+    updateDots();
+
+    // Re-bind audio button cleanly by cloning to strip old listeners
+    const oldBtn = sel('.lc-audio-btn');
+    if (oldBtn) {
+      const newBtn = oldBtn.cloneNode(true);
+      oldBtn.parentNode.replaceChild(newBtn, oldBtn);
+      newBtn.addEventListener('click', speakCurrent);
+    }
+  }
+
+  // ── Dot navigation ────────────────────────────────────────────────────────
+  function buildDots() {
+    if (!dotNav) return;
+    dotNav.innerHTML = '';
+    const maxVisible = 20;
+    const showAll = cards.length <= maxVisible;
+    cards.forEach((_, i) => {
+      if (!showAll && i >= maxVisible) return;
+      const dot = document.createElement('button');
+      dot.className = 'dot w-2 h-2 rounded-full transition-all duration-300 flex-shrink-0';
+      dot.style.backgroundColor = 'var(--border)';
+      dot.title = `${ui.card_word} ${i+1}`;
+      dot.addEventListener('click', () => goTo(i));
+      dotNav.appendChild(dot);
+    });
+    if (!showAll) {
+      const el = document.createElement('span');
+      el.textContent = `+${cards.length - maxVisible}`;
+      el.className = 'text-[10px] font-bold';
+      el.style.color = 'var(--text-muted)';
+      dotNav.appendChild(el);
+    }
+  }
+
+  function updateDots() {
+    dotNav?.querySelectorAll('.dot').forEach((dot, i) => {
+      dot.style.backgroundColor = i===currentIndex ? 'var(--espresso)' : 'var(--border)';
+      dot.style.width     = i===currentIndex ? '20px' : '8px';
+      dot.style.borderRadius = '4px';
+    });
+  }
+
+  // ── Audio ─────────────────────────────────────────────────────────────────
+  function speakCurrent() {
+    const card = cards[currentIndex];
+    if (!card) return;
+    if (window.LoungeAudioEngine) {
+      window.LoungeAudioEngine.speak(card.target || '', speechLang, 0.85);
+    }
+  }
+
+  // ── Navigate ─────────────────────────────────────────────────────────────
+  function goTo(idx) {
+    if (idx < 0 || idx >= cards.length) return;
+    currentIndex = idx;
+    renderCard(currentIndex);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  btnPrev?.addEventListener('click', () => goTo(currentIndex - 1));
+  btnNext?.addEventListener('click', () => {
+    if (currentIndex === cards.length - 1) window.location.href = `${base}${lang}/${category}/`;
+    else goTo(currentIndex + 1);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') goTo(currentIndex + 1);
+    if (e.key === 'ArrowLeft')  goTo(currentIndex - 1);
+    if (e.key === 'a' || e.key === 'A') speakCurrent();
+  });
+
+  // ── Learn / Train panel toggle ──────────────────────
+  const btnLearn = document.getElementById('btn-mode-learn');
+  const btnTrain = document.getElementById('btn-mode-train');
+  const pnlLearn = document.getElementById('learn-panel');
+  const pnlTrain = document.getElementById('train-panel');
+  const toolbar  = document.getElementById('learn-toolbar');
+
+  const STORAGE_KEY = `lounge:${lang}:${category}:deck:mode`;
+  let currentMode = localStorage.getItem(STORAGE_KEY) || 'learn';
+
+  function applyMode() {
+    if (currentMode === 'learn') {
+      btnLearn.style.backgroundColor = 'var(--espresso)';
+      btnLearn.style.color = '#F5F2EB';
+      btnTrain.style.backgroundColor = 'transparent';
+      btnTrain.style.color = 'var(--text-muted)';
+      pnlLearn.classList.remove('hidden');
+      toolbar.classList.remove('hidden');
+      pnlTrain.classList.add('hidden');
+    } else {
+      btnTrain.style.backgroundColor = 'var(--espresso)';
+      btnTrain.style.color = '#F5F2EB';
+      btnLearn.style.backgroundColor = 'transparent';
+      btnLearn.style.color = 'var(--text-muted)';
+      pnlTrain.classList.remove('hidden');
+      pnlLearn.classList.add('hidden');
+      toolbar.classList.add('hidden');
+    }
+    localStorage.setItem(STORAGE_KEY, currentMode);
+  }
+
+  btnLearn?.addEventListener('click', () => { currentMode = 'learn'; applyMode(); });
+  btnTrain?.addEventListener('click', () => { currentMode = 'train'; applyMode(); });
+  applyMode();
+
+  // ── Radio-style selectors (mode & dir & count) ─────────────
+  document.querySelectorAll('.sel-opt').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const group = btn.dataset.group;
+      document.querySelectorAll(`.sel-opt[data-group="${group}"]`).forEach(b => b.classList.remove('sel-active'));
+      btn.classList.add('sel-active');
+      const hidden = document.getElementById(`${group}-hidden`);
+      if (hidden) hidden.value = btn.dataset.value;
+    });
+  });
+
+  document.getElementById('deck-train-form')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const base = form.action;
+    const mode = document.getElementById('mode-hidden')?.value || 'mc';
+    const dir  = document.getElementById('dir-hidden')?.value || `${config.language_pair.source_code}-${config.language_pair.target_code}`.toLowerCase();
+    const count = document.getElementById('count-hidden')?.value || '30';
+    const level = form.querySelector('[name="level"]')?.value || '';
+    const deck = form.querySelector('[name="deck"]')?.value || '';
+    
+    const params = new URLSearchParams();
+    if(level) params.set('level', level);
+    params.set('deck', deck);
+    params.set('mode', mode);
+    params.set('dir', dir);
+    params.set('count', count);
+    
+    window.location.href = `${base}?${params.toString()}`;
+  });
+
+  // ── Init ─────────────────────────────────────────────────────────────────
+  buildDots();
+  // Card 0 is already rendered server-side via LearningCard component.
+  // Sync progress UI to reflect card 0 state.
+  updateDots();
+  if (progressBar) progressBar.style.width = `${Math.round(1/cards.length*100)}%`;
+  // Update card 0 using client-side config too (ensures langConfig is applied)
+  renderCard(0);
+})();</script>
