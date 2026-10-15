@@ -187,6 +187,27 @@
   }
   .cafe-input:focus { outline: none; border-color: var(--input-focus); }
   .cafe-input::placeholder { color: var(--text-muted); }
+
+  /* ── Platform pill buttons (Spotify, Apple Podcasts) ── */
+  .show-platform-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.375rem;
+    font-family: var(--font-heading, 'Poppins', sans-serif);
+    font-weight: 700;
+    font-size: 0.8125rem;
+    padding: 0.5rem 1.125rem;
+    border-radius: 9999px;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: opacity 0.2s;
+    background: var(--espresso);
+    color: var(--bg);
+  }
+  .show-platform-btn:hover {
+    opacity: 0.85;
+  }
 }
 
 /* ── Scrollbar ── */
