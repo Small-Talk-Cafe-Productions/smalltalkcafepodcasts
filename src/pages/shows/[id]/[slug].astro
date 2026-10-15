@@ -209,6 +209,11 @@ const hreflangLinks = [
     border-radius: 16px;
     padding: 1.25rem;
     box-shadow: 0 4px 12px rgba(82, 62, 38, 0.1);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+  }
+  :global(html.dark) .audio-player-wrap {
+    background: linear-gradient(135deg, #251A0E 0%, #1C1208 100%);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   }
   .audio-player-wrap audio {
     border-radius: 8px;
@@ -217,7 +222,7 @@ const hreflangLinks = [
 
   /* Rendered HTML show website content */
   .episode-notes {
-    color: #2d2019;
+    color: var(--text);
     line-height: 1.75;
     font-size: 1rem;
   }
@@ -226,7 +231,7 @@ const hreflangLinks = [
   .episode-notes :global(h4) {
     font-family: "Poppins", "Helvetica Neue", sans-serif;
     font-weight: 700;
-    color: #523E26;
+    color: var(--text);
     margin: 1.5em 0 0.5em;
   }
   .episode-notes :global(h2) { font-size: 1.35rem; }
@@ -239,22 +244,22 @@ const hreflangLinks = [
   }
   .episode-notes :global(li) { margin-bottom: 0.4em; }
   .episode-notes :global(a) {
-    color: #F39C12;
+    color: var(--amber);
     text-decoration: underline;
     text-underline-offset: 2px;
   }
   .episode-notes :global(a:hover) { opacity: 0.75; }
-  .episode-notes :global(strong) { font-weight: 700; color: #523E26; }
+  .episode-notes :global(strong) { font-weight: 700; color: var(--text); }
   .episode-notes :global(blockquote) {
-    border-left: 3px solid #F39C12;
+    border-left: 3px solid var(--amber);
     margin: 1em 0;
     padding: 0.5em 1em;
     font-style: italic;
-    color: rgba(82, 62, 38, 0.7);
+    color: var(--text-muted);
   }
   .episode-notes :global(hr) {
     border: none;
-    border-top: 1px solid rgba(82, 62, 38, 0.15);
+    border-top: 1px solid var(--border);
     margin: 1.5em 0;
   }
 
@@ -267,15 +272,20 @@ const hreflangLinks = [
     border-radius: 999px;
     font-size: 0.875rem;
     font-weight: 600;
-    background: #523E26;
-    color: #F5F1E8;
+    background: var(--espresso);
+    color: var(--bg);
     text-decoration: none;
     transition: opacity 0.15s;
   }
   .platform-btn:hover { opacity: 0.82; }
   .platform-btn--ghost {
     background: transparent;
-    border: 1.5px solid rgba(82, 62, 38, 0.25);
-    color: #523E26;
+    border: 1.5px solid var(--border);
+    color: var(--text);
+    transition: border-color 0.15s, background-color 0.15s;
+  }
+  :global(html.dark) .platform-btn--ghost:hover {
+    border-color: var(--border-hover);
+    background: var(--card);
   }
 </style>

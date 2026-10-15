@@ -15,9 +15,10 @@ interface Props {
   href: string;
   label: string;
   class?: string;
+  style?: string;
 }
 
-const { href, label, class: className = '' } = Astro.props;
+const { href, label, class: className = '', style } = Astro.props;
 ---
 
 <a
@@ -26,6 +27,7 @@ const { href, label, class: className = '' } = Astro.props;
   rel="noopener noreferrer"
   aria-label={label}
   class={`inline-flex items-center gap-2 transition-colors ${className}`}
+  style={style}
 >
   <slot />
 </a>

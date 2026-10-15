@@ -1,5 +1,15 @@
+function withOpacity(variableName) {
+  return ({ opacityValue }) => {
+    if (opacityValue !== undefined) {
+      return `rgba(var(${variableName}), ${opacityValue})`;
+    }
+    return `rgb(var(${variableName}))`;
+  };
+}
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class',
   content: [
     './src/pages/**/*.{astro,html,js,jsx,ts,tsx,md,mdx}',
     './src/components/**/*.{astro,html,js,jsx,ts,tsx}',
@@ -12,13 +22,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Brand colors from site config
+        // Brand colors driven by CSS variables for seamless light/dark theming
         brand: {
-          primary: '#F5F1E8',    // Light beige
-          secondary: '#523E26',  // Dark brown
-          accent: '#F39C12',     // Warm orange
-          background: '#F5F1E8', // Light beige
-          text: '#121212',       // Almost black
+          primary: withOpacity('--color-brand-primary-rgb'),
+          secondary: withOpacity('--color-brand-secondary-rgb'),
+          accent: withOpacity('--color-brand-accent-rgb'),
+          background: withOpacity('--color-brand-background-rgb'),
+          text: withOpacity('--color-brand-text-rgb'),
         },
       },
       fontFamily: {

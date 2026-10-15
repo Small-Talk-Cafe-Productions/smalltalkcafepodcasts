@@ -38,5 +38,11 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     background: linear-gradient(135deg, #fdf8f3 0%, #fef3e2 100%);
     border-top: 1px solid rgba(243, 156, 18, 0.2);
     border-bottom: 1px solid rgba(243, 156, 18, 0.1);
+    transition: background 0.3s ease, border-color 0.3s ease;
+  }
+  :global(html.dark) .merch-cta {
+    background: linear-gradient(135deg, #251A0E 0%, #1C1208 100%);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
   }
 </style>

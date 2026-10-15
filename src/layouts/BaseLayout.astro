@@ -68,7 +68,17 @@ const twitterTags = generateTwitterTags(seo);
     <link rel="icon" type="image/svg+xml" href="/images/podcasts.svg" />
     <meta name="generator" content={Astro.generator} />
     <!-- Brand colour for Chrome/Edge Android address bar -->
-    <meta name="theme-color" content="#F5F1E8" />
+    <meta name="theme-color" content="#F5F1E8" id="meta-theme-color" />
+
+    <!-- Anti-FOUC Theme Script (matches Deutsch-Wortschatz-Trainer) -->
+    <script is:inline>
+      (function() {
+        const saved = localStorage.getItem('theme') || localStorage.getItem('wortschatz_theme');
+        if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
 
     <!-- Primary Meta Tags -->
     <title>{pageTitle}</title>
@@ -174,12 +184,49 @@ const twitterTags = generateTwitterTags(seo);
     </noscript>
     <!-- Inline critical CSS (minimal: background and container) to reduce render-blocking CSS for above-the-fold content -->
     <style>
-      html, body { background: #F5F1E8; color: #121212; }
+      html, body { background: var(--bg, #F5F1E8); color: var(--text, #121212); }
+      html.dark, html.dark body { background: #1C1208; color: #F0EBE1; }
       .container-custom { max-width: 1200px; margin-left: auto; margin-right: auto; padding-left: 1rem; padding-right: 1rem; }
       .min-h-screen { min-height: 100vh; }
     </style>
   </head>
   <body>
     <slot />
+
+    <!-- Theme Controller (matches Deutsch-Wortschatz-Trainer) -->
+    <script is:inline>
+      function applyTheme(dark) {
+        if (dark) {
+          document.documentElement.classList.add('dark');
+          localStorage.setItem('theme', 'dark');
+          localStorage.setItem('wortschatz_theme', 'dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+          localStorage.setItem('theme', 'light');
+          localStorage.setItem('wortschatz_theme', 'light');
+        }
+        const icon = document.getElementById('theme-icon');
+        const label = document.getElementById('theme-label');
+        if (icon) icon.textContent = dark ? '🌙' : '☀️';
+        if (label) label.textContent = dark ? 'Dark' : 'Light';
+
+        const metaTheme = document.getElementById('meta-theme-color');
+        if (metaTheme) metaTheme.setAttribute('content', dark ? '#1C1208' : '#F5F2EB');
+      }
+
+      const isDark = document.documentElement.classList.contains('dark');
+      applyTheme(isDark);
+
+      document.getElementById('theme-toggle')?.addEventListener('click', () => {
+        const nowDark = !document.documentElement.classList.contains('dark');
+        applyTheme(nowDark);
+      });
+
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+        if (!localStorage.getItem('theme') && !localStorage.getItem('wortschatz_theme')) {
+          applyTheme(e.matches);
+        }
+      });
+    </script>
   </body>
 </html>

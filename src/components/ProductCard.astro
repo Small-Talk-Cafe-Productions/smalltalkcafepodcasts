@@ -95,17 +95,18 @@ const onSale = product.compareAtPrice &&
   .product-card {
     display: flex;
     flex-direction: column;
-    background: white;
-    border: 1.5px solid rgba(82, 62, 38, 0.08);
+    background: var(--card);
+    border: 1.5px solid var(--border);
     border-radius: 20px;
     overflow: hidden;
     text-decoration: none;
     color: inherit;
-    transition: box-shadow 0.2s, transform 0.2s;
+    transition: box-shadow 0.2s, transform 0.2s, background-color 0.3s ease, border-color 0.3s ease;
     height: 100%;
   }
   .product-card:hover {
-    box-shadow: 0 8px 30px rgba(82, 62, 38, 0.12);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    border-color: var(--border-hover);
     transform: translateY(-2px);
   }
 
@@ -113,7 +114,7 @@ const onSale = product.compareAtPrice &&
     position: relative;
     aspect-ratio: 1 / 1;
     overflow: hidden;
-    background: #f5f1e8;
+    background: var(--bg);
   }
   .product-img {
     width: 100%;
@@ -146,11 +147,11 @@ const onSale = product.compareAtPrice &&
     border-radius: 99px;
   }
   .sale-badge {
-    background: #F39C12;
+    background: var(--amber);
     color: white;
   }
   .sold-out-badge {
-    background: rgba(82, 62, 38, 0.65);
+    background: var(--espresso);
     color: white;
   }
 
@@ -167,7 +168,7 @@ const onSale = product.compareAtPrice &&
     font-weight: 600;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: #F39C12;
+    color: var(--amber);
     margin: 0;
   }
 
@@ -175,14 +176,14 @@ const onSale = product.compareAtPrice &&
     font-family: "Poppins", "Helvetica Neue", sans-serif;
     font-size: 0.975rem;
     font-weight: 700;
-    color: #523E26;
+    color: var(--text);
     margin: 0;
     line-height: 1.35;
   }
 
   .product-teaser {
     font-size: 0.8rem;
-    color: rgba(82, 62, 38, 0.6);
+    color: var(--text-muted);
     margin: 0;
     line-height: 1.5;
     flex-grow: 1;
@@ -204,12 +205,12 @@ const onSale = product.compareAtPrice &&
     font-family: "Poppins", "Helvetica Neue", sans-serif;
     font-size: 1rem;
     font-weight: 700;
-    color: #523E26;
+    color: var(--text);
   }
 
   .product-compare-price {
     font-size: 0.8rem;
-    color: rgba(82, 62, 38, 0.45);
+    color: var(--text-muted);
     text-decoration: line-through;
   }
 
@@ -218,7 +219,7 @@ const onSale = product.compareAtPrice &&
     align-items: center;
     font-size: 0.8rem;
     font-weight: 600;
-    color: #F39C12;
+    color: var(--amber);
     margin-top: 0.5rem;
     transition: gap 0.15s;
   }

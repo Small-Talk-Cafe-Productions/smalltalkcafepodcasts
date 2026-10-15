@@ -5,13 +5,76 @@
 @tailwind utilities;
 
 @layer base {
-  /* CSS Variables for brand colors (populated from site config) */
+  /* ── Light mode tokens (default) ── */
   :root {
+    --bg:           #F5F2EB;
+    --bg-subtle:    #EFECE5;
+    --card:         #FFFFFF;
+    --border:       #E6E0D5;
+    --border-hover: #D6C8B4;
+    --text:         #3A2718;
+    --text-muted:   #8C7A6B;
+    --espresso:     #4A3B32;
+    --espresso-deep:#3A2718;
+    --amber:        #C27A44;
+    --amber-hover:  #A66536;
+    --badge-bg:     #F5F2EB;
+    --badge-text:   #523E26;
+    --input-bg:     #FFFFFF;
+    --input-border: #E6E0D5;
+    --input-focus:  #4A3B32;
+    --surface:      #EFECE5;
+    --accent:       #C27A44;
+
+    /* Tailwind RGB channels (Light mode) */
+    --color-brand-primary-rgb: 245, 241, 232;
+    --color-brand-secondary-rgb: 82, 62, 38;
+    --color-brand-accent-rgb: 243, 156, 18;
+    --color-brand-background-rgb: 245, 241, 232;
+    --color-brand-text-rgb: 58, 39, 24;
+
+    /* CSS Variables for brand colors */
     --color-brand-primary: #F5F1E8;
     --color-brand-secondary: #523E26;
     --color-brand-accent: #F39C12;
     --color-brand-background: #F5F1E8;
     --color-brand-text: #121212;
+  }
+
+  /* ── Dark mode tokens ── */
+  html.dark {
+    --bg:           #1C1208;
+    --bg-subtle:    #251A0E;
+    --card:         #2A1E11;
+    --border:       #3D2D1A;
+    --border-hover: #5A4028;
+    --text:         #F0EBE1;
+    --text-muted:   #A89880;
+    --espresso:     #967D65;
+    --espresso-deep:#B59E85;
+    --amber:        #B07D5A;
+    --amber-hover:  #C79573;
+    --badge-bg:     #2A1E11;
+    --badge-text:   #B59E85;
+    --input-bg:     #1C1208;
+    --input-border: #3D2D1A;
+    --input-focus:  #967D65;
+    --surface:      #251A0E;
+    --accent:       #B07D5A;
+
+    /* Tailwind RGB channels (Dark mode) */
+    --color-brand-primary-rgb: 28, 18, 8;
+    --color-brand-secondary-rgb: 240, 235, 225;
+    --color-brand-accent-rgb: 176, 125, 90;
+    --color-brand-background-rgb: 28, 18, 8;
+    --color-brand-text-rgb: 240, 235, 225;
+
+    /* CSS Variables for brand colors */
+    --color-brand-primary: #1C1208;
+    --color-brand-secondary: #F0EBE1;
+    --color-brand-accent: #B07D5A;
+    --color-brand-background: #1C1208;
+    --color-brand-text: #F0EBE1;
   }
   
   /* Base typography */
@@ -19,28 +82,27 @@
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
   }
   
   body {
-    @apply bg-brand-background text-brand-text;
+    background-color: var(--bg);
+    color: var(--text);
     margin: 0;
     padding: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
   
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Poppins', 'Helvetica Neue', sans-serif;
     font-weight: 700;
+    color: var(--text);
   }
   
   /* Ensure all interactive elements have focus indicators */
   a:focus,
   button:focus {
     @apply outline-2 outline-offset-2 outline-blue-500;
-  }
-  
-  /* Smooth scrolling */
-  html {
-    scroll-behavior: smooth;
   }
 }
 
@@ -51,17 +113,91 @@
   }
   
   .btn-primary {
-    @apply bg-brand-secondary text-white hover:bg-brand-text hover:shadow-lg;
+    @apply bg-brand-secondary text-white dark:text-[#1C1208] hover:opacity-90 hover:shadow-lg;
   }
   
   .btn-secondary {
-    @apply bg-brand-secondary text-white hover:bg-brand-text hover:shadow-lg;
+    @apply bg-brand-secondary text-white dark:text-[#1C1208] hover:opacity-90 hover:shadow-lg;
   }
   
   /* Card component */
   .card {
-    @apply bg-white rounded-lg shadow-md p-6;
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    transition: background-color 0.3s ease, border-color 0.2s ease, box-shadow 0.2s ease;
   }
+
+  /* ── Toggle button (identical to Deutsch-Wortschatz-Trainer) ── */
+  #theme-toggle {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    border-radius: 9999px;
+    border: 1px solid var(--border);
+    background-color: var(--card);
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+  }
+  #theme-toggle:hover {
+    border-color: var(--border-hover);
+    color: var(--text);
+  }
+
+  /* ── Utility classes from Deutsch-Wortschatz-Trainer ── */
+  .cafe-card {
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+    transition: background-color 0.3s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .cafe-card:hover {
+    border-color: var(--border-hover);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  }
+
+  .cafe-badge {
+    background-color: var(--badge-bg);
+    border: 1px solid var(--border);
+    color: var(--badge-text);
+  }
+
+  .highlighter {
+    text-decoration: underline;
+    text-decoration-color: var(--espresso);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+    font-weight: 700;
+    color: var(--text);
+  }
+
+  .cafe-input {
+    background-color: var(--input-bg);
+    border: 1px solid var(--input-border);
+    color: var(--text);
+    transition: border-color 0.2s ease;
+  }
+  .cafe-input:focus { outline: none; border-color: var(--input-focus); }
+  .cafe-input::placeholder { color: var(--text-muted); }
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 9999px; }
+::-webkit-scrollbar-thumb:hover { background: var(--espresso); }
+
+/* Ensure card surfaces adapt cleanly in dark mode */
+html.dark .bg-white {
+  background-color: var(--card) !important;
 }
 
 @layer utilities {

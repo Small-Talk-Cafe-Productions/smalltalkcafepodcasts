@@ -15,7 +15,6 @@ import ShowDisplay from '@/components/ShowDisplay.astro';
 import { siteConfig } from '@/config/site';
 
 const { shows, seo } = siteConfig;
-const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 // SEO metadata
 const title = 'Language Podcast Shows | Small Talk Café — Learn Spanish, French, Italian, Portuguese, Dutch, Swedish, Japanese, Korean, Mandarin, German';
@@ -211,7 +210,7 @@ const collectionSchema = {
     font-family: 'Poppins', sans-serif;
     font-size: 1.375rem;
     font-weight: 800;
-    color: #523E26;
+    color: var(--text);
     margin: 0;
     line-height: 1.2;
   }
@@ -220,15 +219,20 @@ const collectionSchema = {
   }
   .cell-tagline {
     font-size: 0.875rem;
-    color: rgba(82, 62, 38, 0.60);
+    color: var(--text-muted);
     margin: 0;
     line-height: 1.5;
   }
 
   /* ── German section ───────────────────────────────────────────── */
   .german-section {
-    background: rgba(243, 156, 18, 0.04);
-    border-top: 2px solid rgba(243, 156, 18, 0.15);
+    background: rgba(194, 122, 68, 0.05);
+    border-top: 2px solid var(--border);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+  :global(html.dark) .german-section {
+    background: rgba(176, 125, 90, 0.08);
+    border-top-color: var(--border);
   }
   .german-grid {
     display: grid;
@@ -243,18 +247,23 @@ const collectionSchema = {
   .german-badge {
     display: inline-flex;
     align-items: center;
-    background: rgba(243, 156, 18, 0.15);
-    color: #b37800;
+    background: rgba(194, 122, 68, 0.15);
+    color: var(--amber);
     font-size: 0.75rem;
     font-weight: 700;
     padding: 0.2rem 0.65rem;
     border-radius: 9999px;
-    border: 1px solid rgba(243, 156, 18, 0.3);
+    border: 1px solid var(--border);
     white-space: nowrap;
+  }
+  :global(html.dark) .german-badge {
+    background: rgba(176, 125, 90, 0.2);
+    color: var(--amber-hover);
+    border-color: var(--border);
   }
   .german-note {
     font-size: 0.875rem;
-    color: rgba(82, 62, 38, 0.55);
+    color: var(--text-muted);
     margin: 0.25rem 0 0;
     line-height: 1.55;
     max-width: 60ch;
