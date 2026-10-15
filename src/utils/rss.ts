@@ -207,19 +207,37 @@ export async function fetchEpisodes(rssUrl: string): Promise<RssEpisode[]> {
 
   const fetchPromise = (async () => {
     try {
-      const response = await fetch(rssUrl, {
-        signal: AbortSignal.timeout(10000),
-        headers: {
-          'User-Agent': 'SmallTalkCafe/1.0 (+https://smalltalkcafe.de)',
-          'Accept': 'application/rss+xml, application/xml, text/xml; q=0.9, */*; q=0.8',
-        },
-      });
+      let xmlText = '';
+      let lastError: Error | null = null;
+      const MAX_RETRIES = 3;
 
-      if (!response.ok) {
-        throw new Error(`HTTP ${response.status} ${response.statusText}`);
+      for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
+        try {
+          const response = await fetch(rssUrl, {
+            signal: AbortSignal.timeout(30000),
+            headers: {
+              'User-Agent': 'SmallTalkCafe/1.0 (+https://smalltalkcafe.de)',
+              'Accept': 'application/rss+xml, application/xml, text/xml; q=0.9, */*; q=0.8',
+            },
+          });
+
+          if (!response.ok) {
+            throw new Error(`HTTP ${response.status} ${response.statusText}`);
+          }
+
+          xmlText = await response.text();
+          break;
+        } catch (err) {
+          lastError = err as Error;
+          if (attempt < MAX_RETRIES) {
+            await new Promise((resolve) => setTimeout(resolve, 1500 * attempt));
+          }
+        }
       }
 
-      const xmlText = await response.text();
+      if (!xmlText) {
+        throw lastError || new Error(`Failed to fetch RSS feed from ${rssUrl}`);
+      }
       const parser = new Parser<Record<string, unknown>, CustomItem>({
         customFields: {
           item: [['content:encoded', 'content:encoded']],
