@@ -32,13 +32,21 @@ function getSpotifyEmbedUrl(url: string): string | null {
   return showId ? `https://open.spotify.com/embed/show/${showId}` : null;
 }
 
+/**
+ * Converts an Apple Podcasts URL to an embed URL.
+ *
+ * Uses the canonical slug-less form (the slugged form 301-redirects to it) and
+ * `size=small`, Apple's compact show card (~175px tall). The default "large"
+ * layout is ~370px tall with the description overlapping the artwork, which
+ * leaves a dead gap inside a fixed-height iframe.
+ */
 function getApplePodcastsEmbedUrl(url: string): string | null {
   try {
     if (url.includes('podcasts.apple.com')) {
       const idMatch = url.match(/id(\d+)/);
       const podcastId = idMatch ? idMatch[1] : '';
       if (podcastId) {
-        return `https://embed.podcasts.apple.com/us/podcast/${podcastId}`;
+        return `https://embed.podcasts.apple.com/us/podcast/${podcastId}?size=small`;
       }
       return url.replace('podcasts.apple.com', 'embed.podcasts.apple.com');
     }

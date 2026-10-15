@@ -131,7 +131,7 @@ const hreflangLinks = [
               id="embedPlayer"
               src={embedUrl}
               width="100%"
-              height="450"
+              height="175"
               title={`${show.title} - ${show.subtitle || 'Player'}`}
               allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
               allowfullscreen
@@ -266,44 +266,28 @@ const hreflangLinks = [
   }
   
   .player-inner {
-    max-width: 660px;
-    margin: 0 auto;
-    background: #ffffff;
-    border-radius: 16px;
+    width: 100%;
+    background: transparent;
+    border-radius: 14px;
     overflow: hidden;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-    transition: background-color 0.3s ease;
   }
-  :global(html.dark) .player-inner {
-    background: var(--card);
-  }
-  
+
+  /* Apple's compact (size=small) show card is a fixed ~175px tall at every width.
+     Do NOT set color-scheme on this iframe: the embed is light-only, and a
+     mismatch makes the browser paint an opaque white canvas behind it. */
   .podcast-player {
     border: 0;
     display: block;
     width: 100%;
-    max-width: 660px;
-    height: 450px;
-    color-scheme: light;
-  }
-  :global(html.dark) .podcast-player {
-    color-scheme: dark;
+    height: 175px;
+    background: transparent;
+    border-radius: 14px;
   }
   
   @media (max-width: 768px) {
     .player-container {
-      padding: 1.25rem;
+      padding: 1rem;
       border-radius: 20px;
-    }
-    
-    .podcast-player {
-      height: 450px !important;
-    }
-  }
-  
-  @media (min-width: 769px) {
-    .podcast-player {
-      height: 450px;
     }
   }
 
