@@ -382,7 +382,7 @@ export const siteConfig: SiteConfig = {
 };
 
 // Validate configuration in development
-if (import.meta.env.DEV) {
+if (import.meta.env?.DEV) {
   const { validateSiteConfig } = await import('./types');
   try {
     validateSiteConfig(siteConfig);

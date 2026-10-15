@@ -8,6 +8,7 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "images:generate": "node ./scripts/convert-images.mjs",
+    "episodes:fetch": "npx tsx ./scripts/fetch-latest-episodes.mjs",
     "preview": "astro preview",
     "check": "astro check",
     "astro": "astro"
