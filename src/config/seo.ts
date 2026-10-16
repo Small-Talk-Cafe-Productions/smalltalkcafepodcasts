@@ -6,7 +6,6 @@
 
 import type { SEOConfig, ShowConfig, SocialLinksConfig } from './types';
 import type { RssEpisode } from '@/utils/rss';
-import type { ShopifyProduct } from '@/utils/shopify';
 
 /**
  * Generate Schema.org PodcastSeries structured data for a show.
@@ -66,13 +65,6 @@ export function generateOrganizationSchema(
       email: 'smalltalkcafe.productions@gmail.com',
       availableLanguage: ['English', 'German'],
     },
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: 'Kistlerhof Straße 84',
-      postalCode: '81379',
-      addressLocality: 'Munich',
-      addressCountry: 'DE',
-    },
     sameAs: [socialLinks.youtube, socialLinks.instagram],
   };
 }
@@ -91,85 +83,7 @@ export function generateWebSiteSchema(seo: SEOConfig) {
   };
 }
 
-/**
- * Generate a Schema.org ItemList of Products for the shop page.
- * Enables Google Shopping Free Listings and Product Rich Results.
- */
-export function generateProductListSchema(
-  products: ShopifyProduct[],
-  seo: SEOConfig
-) {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'ItemList',
-    name: 'Small Talk Café Merchandise — German Learning Gear',
-    url: `${seo.siteUrl}/shop/`,
-    itemListElement: products.map((p, i) => ({
-      '@type': 'ListItem',
-      position: i + 1,
-      item: {
-        '@type': 'Product',
-        name: p.title,
-        description: p.teaser || undefined,
-        image: p.images[0]?.src,
-        url: p.url,
-        brand: { '@type': 'Brand', name: p.vendor || 'Small Talk Café' },
-        offers: {
-          '@type': 'Offer',
-          price: p.price,
-          priceCurrency: 'EUR',
-          availability: p.available
-            ? 'https://schema.org/InStock'
-            : 'https://schema.org/OutOfStock',
-          url: p.url,
-          hasMerchantReturnPolicy: {
-            '@type': 'MerchantReturnPolicy',
-            applicableCountry: 'DE',
-            returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
-            merchantReturnDays: 14,
-            url: 'https://smalltalkcafe.de/returns/',
-          },
-          shippingDetails: {
-            '@type': 'OfferShippingDetails',
-            shippingRate: {
-              '@type': 'MonetaryAmount',
-              value: '0',
-              currency: 'EUR',
-            },
-            shippingOrigin: {
-              '@type': 'DefinedRegion',
-              addressCountry: 'DE',
-            },
-            shippingDestination: [
-              'AT', 'BE', 'BG', 'CY', 'CZ', 'DE', 'DK', 'EE', 'ES', 'FI',
-              'FR', 'GR', 'HR', 'HU', 'IE', 'IT', 'LT', 'LU', 'LV', 'MT',
-              'NL', 'PL', 'PT', 'RO', 'SE', 'SI', 'SK',
-            ].map(code => ({ '@type': 'DefinedRegion', addressCountry: code })),
-            deliveryTime: {
-              '@type': 'ShippingDeliveryTime',
-              businessDays: {
-                '@type': 'OpeningHoursSpecification',
-                dayOfWeek: [
-                  'https://schema.org/Monday',
-                  'https://schema.org/Tuesday',
-                  'https://schema.org/Wednesday',
-                  'https://schema.org/Thursday',
-                  'https://schema.org/Friday',
-                ],
-              },
-              transitTime: {
-                '@type': 'QuantitativeValue',
-                minValue: 2,
-                maxValue: 7,
-                unitCode: 'DAY',
-              },
-            },
-          },
-        },
-      },
-    })),
-  };
-}
+
 
 /**
  * Generate Open Graph meta tags

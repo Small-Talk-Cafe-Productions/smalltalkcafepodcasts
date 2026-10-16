@@ -167,8 +167,8 @@ export interface SocialLinksConfig {
   /** Instagram profile URL */
   instagram: string;
   
-  /** Shopify store URL */
-  shopify: string;
+  /** Shopify store URL (optional) */
+  shopify?: string;
 }
 
 /**
@@ -343,7 +343,7 @@ export function validateSiteConfig(config: SiteConfig): void {
   if (!isValidHttpsUrl(config.socialLinks.instagram)) {
     errors.push('socialLinks.instagram must be a valid HTTPS URL');
   }
-  if (!isValidHttpsUrl(config.socialLinks.shopify) && !config.socialLinks.shopify.startsWith('/')) {
+  if (config.socialLinks.shopify && !isValidHttpsUrl(config.socialLinks.shopify) && !config.socialLinks.shopify.startsWith('/')) {
     errors.push('socialLinks.shopify must be a valid HTTPS URL or relative path starting with /');
   }
   

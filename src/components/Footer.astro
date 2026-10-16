@@ -2,9 +2,7 @@
 /**
  * Footer Component
  *
- * Site footer with navigation links, policy pages, contact, and copyright.
- * Links to About, Contact, Privacy Policy, Returns, and Impressum are required by
- * Google's Misrepresentation policy and German law.
+ * Site footer with navigation links, privacy policy, contact, and copyright.
  */
 
 import { siteConfig } from '@/config/site';
@@ -25,11 +23,10 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         <a href={`${base}/`} class="text-base font-semibold text-brand-secondary hover:opacity-70 transition-opacity">
           Small Talk Café Podcasts
         </a>
-        <p class="text-brand-secondary/50 text-xs mt-2 leading-relaxed">
+        <p class="text-brand-secondary/50 text-xs mt-2 leading-relaxed mb-2">
           Bite-sized podcast lessons to learn Spanish, French, Italian, Portuguese, Dutch, Swedish, Japanese, Korean, Mandarin &amp; German — in minutes a day.
         </p>
-        <p class="text-brand-secondary/50 text-xs mt-1">Small Talk Café Productions</p>
-        <p class="text-brand-secondary/50 text-xs mt-1">Kistlerhof Straße 84, Munich 81379, Germany</p>
+        <p class="text-brand-secondary/50 text-xs mb-1">Munich, Germany</p>
         <a href="mailto:smalltalkcafe.productions@gmail.com" class="text-brand-secondary/50 text-xs underline underline-offset-2 hover:opacity-70 transition-opacity break-all">
           smalltalkcafe.productions@gmail.com
         </a>
@@ -40,7 +37,6 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         <p class="text-xs font-semibold uppercase tracking-wider text-brand-secondary/50 mb-3">Explore</p>
         <ul class="space-y-2 text-sm">
           <li><a href={`${base}/shows/`} class="text-brand-secondary/70 hover:text-brand-secondary transition-colors">Shows</a></li>
-          <li><a href={`${base}/shop/`} class="text-brand-secondary/70 hover:text-brand-secondary transition-colors">Shop</a></li>
           <li><a href={`${base}/about/`} class="text-brand-secondary/70 hover:text-brand-secondary transition-colors">About Us</a></li>
           <li><a href={`${base}/contact/`} class="text-brand-secondary/70 hover:text-brand-secondary transition-colors">Contact</a></li>
         </ul>
@@ -51,7 +47,6 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         <p class="text-xs font-semibold uppercase tracking-wider text-brand-secondary/50 mb-3">Legal</p>
         <ul class="space-y-2 text-sm">
           <li><a href={`${base}/privacy-policy/`} class="text-brand-secondary/70 hover:text-brand-secondary transition-colors">Privacy Policy</a></li>
-          <li><a href={`${base}/returns/`} class="text-brand-secondary/70 hover:text-brand-secondary transition-colors">Returns &amp; Refunds</a></li>
           <li><a href={`${base}/impressum/`} class="text-brand-secondary/70 hover:text-brand-secondary transition-colors">Impressum</a></li>
         </ul>
       </div>
@@ -70,13 +65,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
               YouTube
             </a>
           </li>
-          <li>
-            <a href={socialLinks.shopify} class="text-brand-secondary/70 hover:text-brand-secondary transition-colors">
-              Shop
-            </a>
-          </li>
         </ul>
-        <!-- email moved to bottom footer per design request -->
       </div>
 
     </div>

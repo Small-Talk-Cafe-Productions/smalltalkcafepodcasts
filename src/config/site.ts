@@ -318,7 +318,6 @@ export const siteConfig: SiteConfig = {
   socialLinks: {
     youtube: 'https://www.youtube.com/@smalltalkcafe.podcasts',
     instagram: 'https://www.instagram.com/smalltalkcafe.podcasts',
-    shopify: '/shop/',
   },
   
   seo: {

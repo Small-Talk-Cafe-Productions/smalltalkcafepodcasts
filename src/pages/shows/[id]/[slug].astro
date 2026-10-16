@@ -15,7 +15,6 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
-import RelatedMerch from '@/components/RelatedMerch.astro';
 import { siteConfig } from '@/config/site';
 import { fetchEpisodes, type RssEpisode } from '@/utils/rss';
 import { generateEpisodeSchema, generateBreadcrumbSchema, formatDate } from '@/config/seo';
@@ -194,9 +193,6 @@ const hreflangLinks = [
 
       </div>
     </main>
-
-    <!-- Related Merch CTA -->
-    <RelatedMerch />
 
     <Footer />
   </div>
