@@ -2,8 +2,7 @@
 /**
  * About Page
  *
- * Business identity page required by Google's Misrepresentation policy.
- * Explains who we are, where we're based, and our business model.
+ * Explains who we are, our mission, and our podcasts.
  */
 
 import BaseLayout from '@/layouts/BaseLayout.astro';
@@ -68,36 +67,103 @@ const description =
         </div>
       </section>
 
-      <!-- Our Business Model -->
-      <section class="py-6 md:py-10 px-4 border-t border-brand-secondary/10">
+      <!-- The Language Lounge -->
+      <section class="py-8 md:py-12 px-4 border-t border-brand-secondary/10">
         <div class="container-custom max-w-3xl mx-auto">
-          <h2 class="text-2xl md:text-3xl font-bold text-brand-secondary mb-4">How We Operate</h2>
-          <div class="grid md:grid-cols-2 gap-6">
-            <div class="bg-white rounded-2xl p-6 shadow-sm border border-brand-secondary/10">
-              <h3 class="text-lg font-bold text-brand-secondary mb-2">Free Podcasts</h3>
-              <p class="text-brand-secondary/70 leading-relaxed text-sm">
-                All our podcast episodes are completely free to listen to on Spotify and Apple Podcasts.
-                We publish new episodes every day so there is always fresh content to practice with.
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xl" aria-hidden="true">☕</span>
+            <span class="text-xs font-bold uppercase tracking-wider text-brand-accent">Interactive Companion</span>
+          </div>
+          <h2 class="text-2xl md:text-3xl font-bold text-brand-secondary mb-4">
+            The Language Lounge: Daily Practice Made Simple
+          </h2>
+          <p class="text-brand-secondary/80 leading-relaxed mb-6">
+            Listening builds comprehension, but active practice builds fluency. The <strong>Language Lounge</strong> is our free interactive companion tool designed to reinforce what you hear in our podcast episodes through structured daily practice.
+          </p>
+
+          <!-- 4 Pillars Grid -->
+          <div class="grid sm:grid-cols-2 gap-4 mb-8">
+            <div class="rounded-2xl p-5 border shadow-sm transition-colors" style="background-color:var(--card); border-color:var(--border);">
+              <div class="w-9 h-9 rounded-xl flex items-center justify-center mb-3 text-base" style="background-color:var(--bg); border:1.5px solid var(--border);">
+                📖
+              </div>
+              <h3 class="text-base font-bold text-brand-secondary mb-1">Targeted Vocabulary</h3>
+              <p class="text-brand-secondary/70 text-xs leading-relaxed">
+                Expand your vocabulary from A1 to B2 with high-frequency nouns, verbs, and idioms presented in real-world contextual sentences.
               </p>
             </div>
-            <div class="bg-white rounded-2xl p-6 shadow-sm border border-brand-secondary/10">
-              <h3 class="text-lg font-bold text-brand-secondary mb-2">Merchandise Shop</h3>
-              <p class="text-brand-secondary/70 leading-relaxed text-sm">
-                We previously ran a merch shop selling language learner merchandise — mugs, t-shirts, tote bags and more. The shop is now closed.
+
+            <div class="rounded-2xl p-5 border shadow-sm transition-colors" style="background-color:var(--card); border-color:var(--border);">
+              <div class="w-9 h-9 rounded-xl flex items-center justify-center mb-3 text-base" style="background-color:var(--bg); border:1.5px solid var(--border);">
+                ⚡
+              </div>
+              <h3 class="text-base font-bold text-brand-secondary mb-1">Verb Conjugations</h3>
+              <p class="text-brand-secondary/70 text-xs leading-relaxed">
+                Master regular, irregular, modal, and reflexive verbs with clear, easy-to-reference conjugation tables.
+              </p>
+            </div>
+
+            <div class="rounded-2xl p-5 border shadow-sm transition-colors" style="background-color:var(--card); border-color:var(--border);">
+              <div class="w-9 h-9 rounded-xl flex items-center justify-center mb-3 text-base" style="background-color:var(--bg); border:1.5px solid var(--border);">
+                🧩
+              </div>
+              <h3 class="text-base font-bold text-brand-secondary mb-1">Grammar Demystified</h3>
+              <p class="text-brand-secondary/70 text-xs leading-relaxed">
+                Bite-sized rules for cases (Akkusativ, Dativ), adjective declension, connectors, and sentence structures without academic jargon.
+              </p>
+            </div>
+
+            <div class="rounded-2xl p-5 border shadow-sm transition-colors" style="background-color:var(--card); border-color:var(--border);">
+              <div class="w-9 h-9 rounded-xl flex items-center justify-center mb-3 text-base" style="background-color:var(--bg); border:1.5px solid var(--border);">
+                💬
+              </div>
+              <h3 class="text-base font-bold text-brand-secondary mb-1">Redemittel (Key Phrases)</h3>
+              <p class="text-brand-secondary/70 text-xs leading-relaxed">
+                Essential conversational phrases and speech patterns for cafes, work, travel, and natural everyday dialogues.
               </p>
             </div>
           </div>
+
+          <!-- The Daily Routine Callout -->
+          <div class="rounded-2xl p-6 border mb-4 flex flex-col sm:flex-row items-center justify-between gap-4" style="background-color:var(--bg-subtle); border-color:var(--border);">
+            <div>
+              <p class="font-bold text-brand-secondary text-sm mb-1">The 10-Minute Daily Habit</p>
+              <p class="text-brand-secondary/70 text-xs leading-relaxed max-w-md">
+                Listen to a 3-minute episode on your commute, then spend 5 minutes in the Language Lounge reinforcing what you heard. Small daily doses build lasting confidence.
+              </p>
+            </div>
+            <a
+              href={`${base}/languagelounge/`}
+              class="inline-flex items-center gap-2 bg-brand-secondary text-brand-background font-heading font-bold px-6 py-3 rounded-full hover:opacity-85 transition-opacity text-sm whitespace-nowrap flex-shrink-0"
+            >
+              Enter Language Lounge
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+              </svg>
+            </a>
+          </div>
+
         </div>
       </section>
 
-      <!-- Where We Are Based -->
-      <section class="py-6 md:py-10 px-4 border-t border-brand-secondary/10">
+      <!-- How We Operate -->
+      <section class="py-8 md:py-12 px-4 border-t border-brand-secondary/10">
         <div class="container-custom max-w-3xl mx-auto">
-          <h2 class="text-2xl md:text-3xl font-bold text-brand-secondary mb-4">Where We Are Based</h2>
-          <p class="text-brand-secondary/80 leading-relaxed">
-            Small Talk Café Productions is based in <strong>Munich, Germany</strong>.
-            Our address is Kistlerhof Straße 84, Munich 81379.
-          </p>
+          <h2 class="text-2xl md:text-3xl font-bold text-brand-secondary mb-4">How We Operate</h2>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="rounded-2xl p-6 shadow-sm border transition-colors" style="background-color:var(--card); border-color:var(--border);">
+              <h3 class="text-lg font-bold text-brand-secondary mb-2">100% Free &amp; Accessible</h3>
+              <p class="text-brand-secondary/70 leading-relaxed text-sm">
+                All our podcast episodes and learning tools are free to access on Spotify, Apple Podcasts, and our website. No subscriptions or paywalls.
+              </p>
+            </div>
+            <div class="rounded-2xl p-6 shadow-sm border transition-colors" style="background-color:var(--card); border-color:var(--border);">
+              <h3 class="text-lg font-bold text-brand-secondary mb-2">Clear Audio for Learning</h3>
+              <p class="text-brand-secondary/70 leading-relaxed text-sm">
+                Our bite-sized language lessons use AI text-to-speech voices carefully tuned for natural, clear pronunciation and everyday conversational practice.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
