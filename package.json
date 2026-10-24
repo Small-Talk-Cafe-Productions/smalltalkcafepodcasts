@@ -10,6 +10,7 @@
     "images:generate": "node ./scripts/convert-images.mjs",
     "episodes:fetch": "npx tsx ./scripts/fetch-latest-episodes.mjs",
     "transcripts:import": "python3 ./scripts/import_transcripts.py",
+    "transcripts:validate": "python3 ./scripts/validate_transcripts.py",
     "preview": "astro preview",
     "check": "astro check",
     "astro": "astro"
@@ -23,6 +24,7 @@
     "@astrojs/check": "^0.9.2",
     "@types/node": "^20.17.10",
     "autoprefixer": "^10.5.2",
+    "compromise": "^14.19.0",
     "postcss": "^8.5.19",
     "sharp": "^0.32.0",
     "tailwindcss": "^3.4.19",
