@@ -15,23 +15,48 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
+import VocabularyTable from '@/components/VocabularyTable.astro';
+import EpisodeTranscript from '@/components/EpisodeTranscript.astro';
 import { siteConfig } from '@/config/site';
 import { fetchEpisodes, type RssEpisode } from '@/utils/rss';
+import { getTranscriptForEpisode } from '@/utils/transcripts';
 import { generateEpisodeSchema, generateBreadcrumbSchema, formatDate } from '@/config/seo';
 
 export async function getStaticPaths() {
   const allPaths: Array<{
     params: { id: string; slug: string };
-    props: { episode: RssEpisode; showId: string };
+    props: {
+      episode: RssEpisode;
+      showId: string;
+      prevEpisode?: { slug: string; title: string; episodeNumber?: string } | null;
+      nextEpisode?: { slug: string; title: string; episodeNumber?: string } | null;
+    };
   }> = [];
 
   for (const show of siteConfig.shows) {
     if (!show.rssUrl) continue;
     const episodes = await fetchEpisodes(show.rssUrl);
-    for (const episode of episodes) {
+    for (let i = 0; i < episodes.length; i++) {
+      const episode = episodes[i];
+      // Episodes in RSS are ordered newest to oldest.
+      // Chronological navigation:
+      // - Older episode (previous in series): episodes[i + 1]
+      // - Newer episode (next in series): episodes[i - 1]
+      const prevEp = i < episodes.length - 1
+        ? { slug: episodes[i + 1].slug, title: episodes[i + 1].title, episodeNumber: episodes[i + 1].episodeNumber }
+        : null;
+      const nextEp = i > 0
+        ? { slug: episodes[i - 1].slug, title: episodes[i - 1].title, episodeNumber: episodes[i - 1].episodeNumber }
+        : null;
+
       allPaths.push({
         params: { id: show.id, slug: episode.slug },
-        props: { episode, showId: show.id },
+        props: {
+          episode,
+          showId: show.id,
+          prevEpisode: prevEp,
+          nextEpisode: nextEp,
+        },
       });
     }
   }
@@ -39,7 +64,12 @@ export async function getStaticPaths() {
 }
 
 const { id, slug } = Astro.params;
-const { episode, showId } = Astro.props as { episode: RssEpisode; showId: string };
+const { episode, showId, prevEpisode, nextEpisode } = Astro.props as {
+  episode: RssEpisode;
+  showId: string;
+  prevEpisode?: { slug: string; title: string; episodeNumber?: string } | null;
+  nextEpisode?: { slug: string; title: string; episodeNumber?: string } | null;
+};
 
 const show = siteConfig.shows.find((s) => s.id === showId)!;
 const { seo } = siteConfig;
@@ -71,6 +101,27 @@ const hreflangLinks = [
   { lang: show.language || 'en', href: canonicalUrl },
   { lang: 'x-default', href: `${seo.siteUrl}/` },
 ];
+
+const languageNames: Record<string, string> = {
+  de: 'German',
+  es: 'Spanish',
+  fr: 'French',
+  it: 'Italian',
+  tr: 'Turkish',
+  pt: 'Portuguese',
+  nl: 'Dutch',
+  ja: 'Japanese',
+  ko: 'Korean',
+  zh: 'Mandarin',
+  sv: 'Swedish',
+  en: 'English',
+};
+
+// Retrieve pre-imported transcript and vocabulary data
+const transcriptData = getTranscriptForEpisode(show.id, episode);
+const hasTranscript = Boolean(transcriptData?.transcript);
+const hasVocabulary = Boolean(transcriptData?.vocabulary && transcriptData.vocabulary.length > 0);
+const targetLangName = show.targetLanguage ? languageNames[show.targetLanguage] : undefined;
 ---
 
 <BaseLayout
@@ -114,19 +165,47 @@ const hreflangLinks = [
           <h1 class="text-2xl md:text-4xl font-bold text-brand-secondary leading-tight mb-4">
             {episode.title}
           </h1>
-          <!-- Episode meta row -->
-          <div class="flex flex-wrap items-center gap-3 text-sm text-brand-secondary/55">
-            {episode.episodeNumber && (
-              <span class="bg-brand-secondary/8 px-2.5 py-0.5 rounded-full font-medium">
-                Episode {episode.episodeNumber}
-              </span>
-            )}
-            <time datetime={episode.pubDate}>{formatDate(episode.pubDate)}</time>
-            {episode.duration && (
-              <>
-                <span aria-hidden="true">·</span>
-                <span>{episode.duration}</span>
-              </>
+          <!-- Episode meta row + Quick Prev/Next Navigation -->
+          <div class="flex flex-wrap items-center justify-between gap-3 text-sm text-brand-secondary/55">
+            <div class="flex flex-wrap items-center gap-3">
+              {episode.episodeNumber && (
+                <span class="bg-brand-secondary/8 px-2.5 py-0.5 rounded-full font-medium">
+                  Episode {episode.episodeNumber}
+                </span>
+              )}
+              <time datetime={episode.pubDate}>{formatDate(episode.pubDate)}</time>
+              {episode.duration && (
+                <>
+                  <span aria-hidden="true">·</span>
+                  <span>{episode.duration}</span>
+                </>
+              )}
+            </div>
+
+            <!-- Quick Prev / Next links in header -->
+            {(prevEpisode || nextEpisode) && (
+              <div class="flex items-center gap-1.5" aria-label="Quick episode navigation">
+                {prevEpisode && (
+                  <a
+                    href={`${base}/shows/${id}/${prevEpisode.slug}/`}
+                    class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold border border-brand-secondary/15 hover:border-brand-accent hover:text-brand-accent text-brand-secondary/70 transition-colors"
+                    title={`Previous: ${prevEpisode.title}`}
+                    rel="prev"
+                  >
+                    ← Prev
+                  </a>
+                )}
+                {nextEpisode && (
+                  <a
+                    href={`${base}/shows/${id}/${nextEpisode.slug}/`}
+                    class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold border border-brand-secondary/15 hover:border-brand-accent hover:text-brand-accent text-brand-secondary/70 transition-colors"
+                    title={`Next: ${nextEpisode.title}`}
+                    rel="next"
+                  >
+                    Next →
+                  </a>
+                )}
+              </div>
             )}
           </div>
         </header>
@@ -146,17 +225,118 @@ const hreflangLinks = [
           </div>
         )}
 
-        <!-- Episode Show Website -->
-        {episode.contentHtml ? (
-          <article class="episode-notes" set:html={episode.contentHtml} />
-        ) : episode.description ? (
-          <p class="text-brand-secondary/80 leading-relaxed text-base md:text-lg">
-            {episode.description}
-          </p>
+        <!-- Full Episode Transcript -->
+        {hasTranscript && transcriptData ? (
+          <EpisodeTranscript
+            transcript={transcriptData.transcript}
+            episodeTitle={episode.title}
+          />
         ) : null}
 
+        <!-- Key Vocabulary Table (Target Language Words) -->
+        {hasVocabulary && transcriptData && (
+          <VocabularyTable
+            vocabulary={transcriptData.vocabulary}
+            targetLanguageName={targetLangName}
+          />
+        )}
+
+        <!-- Show Notes & Episode Details (Collapsible when transcript is present, direct fallback when not) -->
+        {hasTranscript && (episode.contentHtml || episode.description) ? (
+          <details class="episode-notes-details rounded-2xl border border-brand-secondary/10 bg-brand-secondary/[0.02] dark:bg-brand-secondary/[0.03] p-5 text-sm text-brand-secondary/80 mb-8 transition-all">
+            <summary class="cursor-pointer font-semibold text-brand-secondary hover:text-brand-accent transition-colors flex items-center justify-between list-none">
+              <span class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-brand-secondary/60" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                Episode Information & Show Notes
+              </span>
+              <span class="text-xs font-normal text-brand-secondary/50 bg-brand-secondary/8 px-2.5 py-1 rounded-full">
+                View Show Notes
+              </span>
+            </summary>
+            <div class="mt-4 pt-4 border-t border-brand-secondary/10 episode-notes">
+              {episode.contentHtml ? (
+                <article set:html={episode.contentHtml} />
+              ) : (
+                <p class="leading-relaxed">{episode.description}</p>
+              )}
+            </div>
+          </details>
+        ) : !hasTranscript ? (
+          <div class="rounded-2xl border border-brand-secondary/15 bg-brand-secondary/[0.025] dark:bg-brand-secondary/[0.04] p-5 md:p-6 mb-8">
+            <div class="flex items-start gap-3.5 mb-4">
+              <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-amber-500/15 text-amber-600 dark:text-amber-400 font-bold shrink-0 text-base">
+                ℹ
+              </span>
+              <div>
+                <h3 class="font-bold text-base md:text-lg text-brand-secondary mb-1">
+                  Transcript & Vocabulary Not Available
+                </h3>
+                <p class="text-sm text-brand-secondary/70 leading-relaxed">
+                  A transcript has not been added for this episode yet. You can listen to the audio above and view the episode notes below.
+                </p>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-brand-secondary/10 episode-notes">
+              {episode.contentHtml ? (
+                <article set:html={episode.contentHtml} />
+              ) : episode.description ? (
+                <p class="text-brand-secondary/85 leading-relaxed text-base whitespace-pre-line">
+                  {episode.description}
+                </p>
+              ) : null}
+            </div>
+          </div>
+        ) : null}
+
+        <!-- Previous / Next Episode Navigation Cards -->
+        {(prevEpisode || nextEpisode) && (
+          <nav aria-label="Episode Navigation" class="mt-10 pt-8 border-t border-brand-secondary/15">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {prevEpisode ? (
+                <a
+                  href={`${base}/shows/${id}/${prevEpisode.slug}/`}
+                  class="group flex flex-col p-4 md:p-5 rounded-2xl border border-brand-secondary/10 bg-white/60 dark:bg-brand-background/60 hover:border-brand-accent/50 hover:bg-brand-secondary/[0.04] transition-all text-left shadow-sm"
+                  rel="prev"
+                >
+                  <span class="text-xs font-semibold uppercase tracking-wider text-brand-accent flex items-center gap-1.5 mb-1.5">
+                    <svg class="w-4 h-4 transform group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                    Previous Episode {prevEpisode.episodeNumber ? `· Ep. ${prevEpisode.episodeNumber}` : ''}
+                  </span>
+                  <span class="font-bold text-sm md:text-base text-brand-secondary group-hover:text-brand-accent transition-colors line-clamp-2">
+                    {prevEpisode.title}
+                  </span>
+                </a>
+              ) : (
+                <div class="hidden sm:block" />
+              )}
+
+              {nextEpisode ? (
+                <a
+                  href={`${base}/shows/${id}/${nextEpisode.slug}/`}
+                  class="group flex flex-col p-4 md:p-5 rounded-2xl border border-brand-secondary/10 bg-white/60 dark:bg-brand-background/60 hover:border-brand-accent/50 hover:bg-brand-secondary/[0.04] transition-all text-left sm:text-right sm:items-end sm:ml-auto w-full shadow-sm"
+                  rel="next"
+                >
+                  <span class="text-xs font-semibold uppercase tracking-wider text-brand-accent flex items-center sm:justify-end gap-1.5 mb-1.5">
+                    Next Episode {nextEpisode.episodeNumber ? `· Ep. ${nextEpisode.episodeNumber}` : ''}
+                    <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                  </span>
+                  <span class="font-bold text-sm md:text-base text-brand-secondary group-hover:text-brand-accent transition-colors line-clamp-2">
+                    {nextEpisode.title}
+                  </span>
+                </a>
+              ) : null}
+            </div>
+          </nav>
+        )}
+
         <!-- Listen on Platforms -->
-        <div class="mt-10 pt-8 border-t border-brand-secondary/10 flex flex-wrap gap-3">
+        <div class="mt-8 pt-8 border-t border-brand-secondary/10 flex flex-wrap gap-3">
           {show.spotifyUrl && (
             <a
               href={show.spotifyUrl}
