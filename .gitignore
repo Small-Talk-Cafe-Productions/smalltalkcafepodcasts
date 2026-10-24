@@ -6,3 +6,8 @@ dist/
 
 # Generated types
 .astro/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
