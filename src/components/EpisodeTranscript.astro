@@ -1,0 +1,135 @@
+---
+/**
+ * EpisodeTranscript Component
+ *
+ * Renders the clean, formatted full episode transcript so listeners
+ * can follow along while listening to the audio.
+ */
+
+export interface Props {
+  transcript: string;
+  episodeTitle: string;
+}
+
+const { transcript, episodeTitle } = Astro.props;
+
+if (!transcript) {
+  return null;
+}
+
+// Split transcript into paragraphs
+const rawParagraphs = transcript.split(/\n\s*\n/);
+const paragraphs = rawParagraphs
+  .map((p) => p.trim())
+  .filter((p) => p.length > 0);
+---
+
+<section class="transcript-section mb-12" aria-label={`Full Episode Transcript: ${episodeTitle}`}>
+  <div class="flex items-center justify-between gap-3 mb-4">
+    <div>
+      <h2 class="text-xl md:text-2xl font-bold text-brand-secondary">
+        Full Transcript
+      </h2>
+    </div>
+
+    <!-- Copy transcript button -->
+    <button
+      type="button"
+      id="copy-transcript-btn"
+      class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold border border-brand-secondary/15 hover:border-brand-accent text-brand-secondary/75 hover:text-brand-secondary transition-colors"
+      aria-label="Copy transcript to clipboard"
+    >
+      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+      </svg>
+      <span id="copy-text">Copy Transcript</span>
+    </button>
+  </div>
+
+  <!-- Transcript Content Container -->
+  <article
+    id="transcript-content"
+    class="transcript-card rounded-2xl border border-brand-secondary/10 bg-white/70 dark:bg-brand-background/60 p-6 md:p-8 backdrop-blur-sm shadow-sm"
+  >
+    <div class="space-y-5 text-base md:text-lg leading-relaxed text-brand-secondary/90">
+      {paragraphs.map((para) => {
+        // If paragraph contains bullet list items
+        if (para.includes('\n- ') || para.startsWith('- ')) {
+          const lines = para.split('\n');
+          const headerLines = [];
+          const listItems = [];
+          for (const line of lines) {
+            const trimmed = line.trim();
+            if (trimmed.startsWith('- ') || trimmed.startsWith('* ') || trimmed.startsWith('• ')) {
+              listItems.push(trimmed.replace(/^[\-\*\•]\s*/, ''));
+            } else if (trimmed.length > 0) {
+              headerLines.push(trimmed);
+            }
+          }
+          return (
+            <div class="transcript-list-block rounded-xl bg-brand-secondary/[0.025] dark:bg-brand-secondary/[0.04] p-4 border-l-4 border-brand-accent my-4">
+              {headerLines.map((hl) => (
+                <p class="font-medium text-brand-secondary mb-2">{hl}</p>
+              ))}
+              <ul class="space-y-1.5 list-disc pl-5 text-sm md:text-base text-brand-secondary/85">
+                {listItems.map((item) => (
+                  <li class="leading-relaxed">{item}</li>
+                ))}
+              </ul>
+            </div>
+          );
+        }
+
+        // Standard narrative paragraph
+        return (
+          <p class="font-normal font-sans tracking-normal leading-[1.8]">
+            {para}
+          </p>
+        );
+      })}
+    </div>
+  </article>
+</section>
+
+<style>
+  .transcript-card {
+    box-shadow: 0 4px 16px -2px rgba(82, 62, 38, 0.05);
+  }
+  :global(html.dark) .transcript-card {
+    box-shadow: 0 4px 16px -2px rgba(0, 0, 0, 0.4);
+  }
+</style>
+
+<script>
+  function setupCopyButton() {
+    const btn = document.getElementById('copy-transcript-btn');
+    const label = document.getElementById('copy-text');
+    const content = document.getElementById('transcript-content');
+
+    if (!btn || !label || !content) return;
+
+    btn.addEventListener('click', async () => {
+      try {
+        const textToCopy = content.innerText;
+        await navigator.clipboard.writeText(textToCopy);
+        const originalText = label.textContent;
+        label.textContent = 'Copied!';
+        btn.classList.add('border-emerald-500', 'text-emerald-600');
+
+        setTimeout(() => {
+          label.textContent = originalText;
+          btn.classList.remove('border-emerald-500', 'text-emerald-600');
+        }, 2000);
+      } catch (err) {
+        console.error('Failed to copy transcript:', err);
+      }
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupCopyButton);
+  } else {
+    setupCopyButton();
+  }
+  document.addEventListener('astro:page-load', setupCopyButton);
+</script>

@@ -1,0 +1,245 @@
+---
+/**
+ * VocabularyTable Component
+ *
+ * Renders an interactive, responsive vocabulary table showcasing target language words
+ * (nouns, verbs, adjectives, key phrases) alongside their meanings and practical example sentences.
+ */
+
+import type { VocabularyItem } from '@/utils/transcripts';
+
+export interface Props {
+  vocabulary: VocabularyItem[];
+  targetLanguageName?: string;
+}
+
+const { vocabulary, targetLanguageName } = Astro.props;
+
+if (!vocabulary || vocabulary.length === 0) {
+  return null;
+}
+
+// Compute counts for each category
+const counts = {
+  all: vocabulary.length,
+  noun: vocabulary.filter((v) => v.pos === 'noun').length,
+  verb: vocabulary.filter((v) => v.pos === 'verb').length,
+  adjective: vocabulary.filter((v) => v.pos === 'adjective').length,
+  phrase: vocabulary.filter((v) => v.pos === 'phrase').length,
+};
+
+const posLabels: Record<string, { label: string; class: string }> = {
+  noun: {
+    label: 'Noun',
+    class: 'bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-200 border-blue-200 dark:border-blue-800/60',
+  },
+  verb: {
+    label: 'Verb',
+    class: 'bg-amber-100 text-amber-800 dark:bg-amber-900/50 dark:text-amber-200 border-amber-200 dark:border-amber-800/60',
+  },
+  adjective: {
+    label: 'Adjective',
+    class: 'bg-purple-100 text-purple-800 dark:bg-purple-900/50 dark:text-purple-200 border-purple-200 dark:border-purple-800/60',
+  },
+  phrase: {
+    label: 'Phrase',
+    class: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/50 dark:text-emerald-200 border-emerald-200 dark:border-emerald-800/60',
+  },
+  other: {
+    label: 'Word',
+    class: 'bg-stone-100 text-stone-800 dark:bg-stone-800/60 dark:text-stone-300 border-stone-200 dark:border-stone-700',
+  },
+};
+---
+
+<section class="vocab-section mb-10" aria-label="Key Vocabulary Table">
+  <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-3 mb-4">
+    <div>
+      <div class="mb-1">
+        <h2 class="text-xl md:text-2xl font-bold text-brand-secondary">
+          Key Vocabulary & Learning Words
+        </h2>
+      </div>
+      <p class="text-sm text-brand-secondary/70">
+        Important {targetLanguageName || 'target language'} words from this episode with meanings and examples in context.
+      </p>
+    </div>
+
+    <!-- Category filter buttons -->
+    <div class="flex flex-wrap gap-1.5 text-xs font-medium" id="vocab-filter-group" role="tablist" aria-label="Filter words by category">
+      <button
+        type="button"
+        class="filter-btn active"
+        data-filter="all"
+        role="tab"
+        aria-selected="true"
+      >
+        All ({counts.all})
+      </button>
+      {counts.noun > 0 && (
+        <button
+          type="button"
+          class="filter-btn"
+          data-filter="noun"
+          role="tab"
+          aria-selected="false"
+        >
+          Nouns ({counts.noun})
+        </button>
+      )}
+      {counts.verb > 0 && (
+        <button
+          type="button"
+          class="filter-btn"
+          data-filter="verb"
+          role="tab"
+          aria-selected="false"
+        >
+          Verbs ({counts.verb})
+        </button>
+      )}
+      {counts.adjective > 0 && (
+        <button
+          type="button"
+          class="filter-btn"
+          data-filter="adjective"
+          role="tab"
+          aria-selected="false"
+        >
+          Adjectives ({counts.adjective})
+        </button>
+      )}
+      {counts.phrase > 0 && (
+        <button
+          type="button"
+          class="filter-btn"
+          data-filter="phrase"
+          role="tab"
+          aria-selected="false"
+        >
+          Phrases ({counts.phrase})
+        </button>
+      )}
+    </div>
+  </div>
+
+  <!-- Responsive Table Card -->
+  <div class="vocab-card overflow-hidden rounded-2xl border border-brand-secondary/10 bg-white/70 dark:bg-brand-background/60 backdrop-blur-sm shadow-sm transition-all">
+    <div class="overflow-x-auto">
+      <table class="w-full text-left border-collapse" id="vocab-table">
+        <thead>
+          <tr class="border-b border-brand-secondary/10 bg-brand-secondary/[0.03] text-xs font-semibold uppercase tracking-wider text-brand-secondary/60">
+            <th scope="col" class="py-3 px-4 md:px-5">Target Word</th>
+            <th scope="col" class="py-3 px-3">Type</th>
+            <th scope="col" class="py-3 px-4 md:px-5">Meaning</th>
+            <th scope="col" class="py-3 px-4 md:px-5 hidden sm:table-cell">Example in Context</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-brand-secondary/8 text-sm">
+          {vocabulary.map((item) => {
+            const posMeta = posLabels[item.pos] || posLabels.other;
+            return (
+              <tr class="vocab-row transition-colors hover:bg-brand-secondary/[0.02]" data-pos={item.pos}>
+                <td class="py-3.5 px-4 md:px-5 align-top">
+                  <span class="font-bold text-base md:text-lg text-brand-secondary tracking-tight block">
+                    {item.target}
+                  </span>
+                  {item.example && (
+                    <span class="sm:hidden block text-xs text-brand-secondary/70 italic mt-1 font-serif">
+                      "{item.example}"
+                    </span>
+                  )}
+                </td>
+                <td class="py-3.5 px-3 align-top whitespace-nowrap">
+                  <span class={`inline-block px-2.5 py-0.5 rounded-full text-[11px] font-semibold border ${posMeta.class}`}>
+                    {posMeta.label}
+                  </span>
+                </td>
+                <td class="py-3.5 px-4 md:px-5 align-top font-medium text-brand-secondary/85 leading-snug">
+                  {item.meaning}
+                </td>
+                <td class="py-3.5 px-4 md:px-5 align-top text-brand-secondary/75 italic font-serif hidden sm:table-cell leading-relaxed">
+                  {item.example ? `"${item.example}"` : '—'}
+                </td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<style>
+  .filter-btn {
+    padding: 0.35rem 0.75rem;
+    border-radius: 9999px;
+    background: transparent;
+    border: 1px solid rgba(82, 62, 38, 0.15);
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+  :global(html.dark) .filter-btn {
+    border-color: rgba(240, 235, 225, 0.15);
+  }
+  .filter-btn:hover {
+    border-color: var(--amber);
+    color: var(--text);
+  }
+  .filter-btn.active {
+    background: var(--amber);
+    border-color: var(--amber);
+    color: #ffffff;
+    font-weight: 600;
+  }
+
+  /* Table styling */
+  .vocab-card {
+    box-shadow: 0 4px 16px -2px rgba(82, 62, 38, 0.05);
+  }
+  :global(html.dark) .vocab-card {
+    box-shadow: 0 4px 16px -2px rgba(0, 0, 0, 0.4);
+  }
+</style>
+
+<script>
+  // Interactive filtering by Part of Speech
+  function setupVocabFilters() {
+    const filterGroup = document.getElementById('vocab-filter-group');
+    const table = document.getElementById('vocab-table');
+    if (!filterGroup || !table) return;
+
+    const buttons = filterGroup.querySelectorAll<HTMLButtonElement>('.filter-btn');
+    const rows = table.querySelectorAll<HTMLTableRowElement>('.vocab-row');
+
+    buttons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const filter = btn.getAttribute('data-filter') || 'all';
+
+        buttons.forEach((b) => {
+          b.classList.remove('active');
+          b.setAttribute('aria-selected', 'false');
+        });
+        btn.classList.add('active');
+        btn.setAttribute('aria-selected', 'true');
+
+        rows.forEach((row) => {
+          const rowPos = row.getAttribute('data-pos') || '';
+          if (filter === 'all' || rowPos === filter) {
+            row.style.display = '';
+          } else {
+            row.style.display = 'none';
+          }
+        });
+      });
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupVocabFilters);
+  } else {
+    setupVocabFilters();
+  }
+  document.addEventListener('astro:page-load', setupVocabFilters);
+</script>
