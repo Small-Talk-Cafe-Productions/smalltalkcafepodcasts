@@ -1,0 +1,758 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="description" content="Lounge Español — Tu espacio dedicado a la lengua española — amplía tu vocabulario, domina la gramática y perfecciona tu español de A1 a B2."><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/languagelounge/favicon.svg"><meta name="generator" content="Astro v7.3.5"><title>Reflexive Verbs, Part 2 — Lounge Español</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet"><script>
+      (function() {
+        const saved = localStorage.getItem('wortschatz_theme');
+        if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script><link rel="stylesheet" href="/languagelounge/_astro/Layout.Cr1varBg.css"><style>.sel-opt[data-astro-cid-5tabbh6g]{border:2px solid var(--border);background-color:var(--card);color:var(--text);cursor:pointer;text-align:center;border-radius:12px;flex-direction:column;justify-content:center;align-items:center;width:100%;padding:14px 12px;transition:border-color .15s,background-color .15s,color .15s,box-shadow .15s;display:flex}.sel-opt[data-astro-cid-5tabbh6g]:hover{border-color:var(--border-hover);box-shadow:0 2px 8px #00000014}.sel-opt[data-astro-cid-5tabbh6g].sel-active{border-color:var(--espresso);background-color:var(--espresso);color:#f5f2eb;box-shadow:0 2px 12px #0000002e}
+</style></head><body class="antialiased min-h-screen flex flex-col" style="background-color:var(--bg);color:var(--text);"><!-- Header --><header class="sticky top-0 z-50 border-b" style="background-color:var(--bg);border-color:var(--border);"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between gap-4" style="height:4.5rem;"><!-- Logo + Language Switcher --><div class="flex items-center gap-4 shrink-0"><a href="/languagelounge/en-es/" class="flex items-center gap-2 group"><span class="font-outfit font-extrabold text-xl sm:text-2xl tracking-tight transition-colors" style="color:var(--text);">Small Talk Café<span class="font-normal text-base hidden sm:inline" style="color:var(--text-muted);"> | <span id="site-name">Lounge Español</span></span></span></a><!-- Language Selector Dropdown --><div class="relative" id="lang-dropdown-wrapper"><button id="lang-btn" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-sm font-bold transition-all hover:opacity-70" style="background-color:var(--bg); border-color:var(--border); color:var(--text);"><span id="lang-flag">🇪🇸</span><span id="lang-code">ES</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"></path></svg></button><div id="lang-menu" class="hidden absolute top-full left-0 mt-2 rounded-2xl border shadow-2xl overflow-hidden z-50 min-w-[260px] sm:min-w-[300px]" style="background-color:var(--card); border-color:var(--border);"><div class="px-3.5 py-2 text-[11px] font-bold uppercase tracking-wider border-b" style="background-color:var(--surface); border-color:var(--border); color:var(--text-muted);">Language Lounges</div><div><a href="/languagelounge/en-de/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇩🇪</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Deutsch Lounge</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">Der Raum für die deutsche Sprache</div></div></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-es/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-bold" style="color:var(--text); background-color:var(--surface);"><span class="text-2xl shrink-0">🇪🇸</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Lounge Español</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">El espacio para la lengua española</div></div><span class="shrink-0 text-[10px] font-extrabold uppercase px-1.5 py-0.5 rounded" style="background-color:var(--accent); color:var(--bg);">Active</span></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-fr/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇫🇷</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Lounge Français</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">Le salon de la langue française</div></div></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-it/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇮🇹</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Lounge Italiano</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">Il salotto per la lingua italiana</div></div></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-nl/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇳🇱</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Nederlands Lounge</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">Dé ontmoetingsplek voor de Nederlandse taal</div></div></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-pt/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇵🇹</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Lounge Português</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">O espaço para a língua portuguesa</div></div></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-sv/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇸🇪</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Svenska Lounge</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">Mötesplatsen för det svenska språket</div></div></a></div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/" class="w-full flex items-center gap-2.5 px-4 py-2.5 text-xs font-semibold hover:opacity-80 transition-colors " style="color:var(--text); "><span class="text-base">🏛️</span><span>Language Lounge Hub</span><span class="ml-auto text-[11px]" style="color:var(--text-muted);">Overview &rarr;</span></a></div></div></div><!-- Dynamic Nav Links --><nav class="hidden md:flex gap-5 items-center"><a href="https://smalltalkcafe.de/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Small Talk Café Podcasts</a><span class="text-sm font-normal" style="color:var(--border);">|</span><a href="/languagelounge/en-es/vocabulary/" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Vocabulario</a><a href="/languagelounge/en-es/verbs/" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Verbos</a><a href="/languagelounge/en-es/grammatik/" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Gramática</a><a href="/languagelounge/en-es/redemittel/" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Expresiones</a><!-- Dark/Light Toggle --><button id="theme-toggle" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-sm font-semibold transition-all hover:opacity-70" style="border-color:var(--border); color:var(--text-muted);" aria-label="Toggle dark/light mode"><span id="theme-icon">☀️</span><span id="theme-label">Light</span></button></nav></div></header><main id="main-content" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-1 w-full"><div class="max-w-4xl mx-auto py-6" data-astro-cid-5tabbh6g><!-- Deck Header --><div class="flex items-start justify-between mb-8 gap-4 flex-wrap" data-astro-cid-5tabbh6g><div data-astro-cid-5tabbh6g><a href="/languagelounge/en-es/verbs/" class="text-xs font-bold flex items-center gap-1 mb-2 hover:opacity-70 transition-opacity" style="color:var(--espresso);" data-astro-cid-5tabbh6g><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><path d="m15 18-6-6 6-6" data-astro-cid-5tabbh6g></path></svg>Verbos</a><h1 class="text-2xl md:text-3xl font-extrabold font-outfit" style="color:var(--text);" data-astro-cid-5tabbh6g>Reflexive Verbs, Part 2</h1><p class="text-xs font-bold uppercase tracking-wider mt-1" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Verbos reflexivos, parte 2 • A2 • 20 tarjetas</p></div><div class="flex flex-col items-end gap-4 w-full md:w-auto mt-4 md:mt-0" data-astro-cid-5tabbh6g><!-- ── Mode Toggle ───────────────────────────── --><div class="flex rounded-xl border overflow-hidden p-1 gap-1 w-full max-w-[300px]" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><button id="btn-mode-learn" class="mode-btn flex-1 flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold transition-all" data-astro-cid-5tabbh6g><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" data-astro-cid-5tabbh6g></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" data-astro-cid-5tabbh6g></path></svg>Aprender</button><button id="btn-mode-train" class="mode-btn flex-1 flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold transition-all" data-astro-cid-5tabbh6g><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><circle cx="12" cy="12" r="10" data-astro-cid-5tabbh6g></circle><polyline points="12 6 12 12 16 14" data-astro-cid-5tabbh6g></polyline></svg>Entrenar</button></div><div id="learn-toolbar" class="flex flex-col items-end gap-4 w-full" data-astro-cid-5tabbh6g><!-- View switcher (Cards vs List) --><div class="flex rounded-xl border overflow-hidden p-1 gap-1 w-full max-w-[300px]" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><button id="view-cards-btn" class="view-btn flex-1 flex items-center justify-center px-4 py-2 rounded-lg text-xs font-bold transition-all bg-[var(--espresso)] text-[#F5F2EB]" data-astro-cid-5tabbh6g>Tarjetas</button><button id="view-list-btn" class="view-btn flex-1 flex items-center justify-center px-4 py-2 rounded-lg text-xs font-bold transition-all text-[var(--text-muted)] hover:opacity-70" data-astro-cid-5tabbh6g>Lista</button></div><!-- Progress indicator --><div id="progress-container" class="flex items-center gap-3" data-astro-cid-5tabbh6g><div class="text-xs font-semibold" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Tarjeta <span id="current-num" class="font-extrabold" style="color:var(--text);" data-astro-cid-5tabbh6g>1</span> / 20</div><div class="w-24 h-1.5 rounded-full overflow-hidden border" style="background-color:var(--bg);border-color:var(--border);" data-astro-cid-5tabbh6g><div id="progress-bar" class="h-full transition-all duration-500 rounded-full" style="width:0%; background-color:var(--espresso);" data-astro-cid-5tabbh6g></div></div></div></div></div></div><!-- ══ LEARN PANEL ════════════════════════════ --><div id="learn-panel" class="space-y-6" data-astro-cid-5tabbh6g><!-- ── Universal Study Card (rendered by LearningCard component) ── --><div id="card-view-wrap" data-astro-cid-5tabbh6g><div id="card-host" data-astro-cid-5tabbh6g><!-- The card shell — populated client-side by renderCard() --><div class="learning-card rounded-3xl border shadow-xl overflow-hidden" style="background-color:var(--card); border-color:var(--border);"><!-- ── Top bar ─────────────────────────────────── --><div class="lc-topbar flex items-center justify-between px-6 py-3.5 border-b" style="border-color:var(--border); background-color:var(--bg);"><div class="flex items-center gap-2"><span class="lc-type-badge text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-lg" style="background-color:var(--espresso); color:#F5F2EB;">—</span><span class="lc-level-badge text-[10px] font-bold px-2.5 py-1 rounded-lg cafe-badge"></span></div><button class="lc-audio-btn flex items-center justify-center w-11 h-11 rounded-full transition-transform hover:scale-105 active:scale-95 shadow-md flex-shrink-0" title="Escuchar (A)" style="background-color:var(--espresso); color:#F5F2EB;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg></button></div><!-- ── Main word display ───────────────────────── --><div class="lc-hero px-7 py-8 text-center border-b" style="border-color:var(--border);"><div class="lc-article-wrap mb-1.5"><span class="lc-article text-xl font-bold"></span></div><h2 class="lc-word text-5xl md:text-6xl font-extrabold font-outfit mb-3" style="color:var(--text);">—</h2><p class="lc-translation text-lg font-semibold italic" style="color:var(--text-muted);"></p><p class="lc-forms text-sm font-medium mt-2" style="color:var(--text-muted);"></p></div><!-- ── Meta info grid ─────────────────────────── --><div class="lc-meta-grid grid border-b" style="border-color:var(--border);"><!-- populated by JS --></div><!-- ── Grammar note ───────────────────────────── --><div class="lc-grammar-wrap hidden px-7 py-5 border-b" style="border-color:var(--border); background-color:var(--bg);"><p class="text-[10px] font-bold uppercase tracking-widest mb-2" style="color:var(--espresso);">📌 <span class="lc-grammar-label">Nota gramatical</span></p><p class="lc-grammar-text text-sm leading-relaxed font-medium whitespace-pre-wrap" style="color:var(--text);"></p></div><!-- ── Type-specific block ────────────────────── --><!-- Connector word-order block --><div class="lc-wordorder-wrap hidden px-7 py-4 border-b" style="border-color:var(--border); background-color:var(--bg);"><div class="flex items-start gap-3 text-sm font-medium" style="color:var(--text-muted);"><span class="text-base flex-shrink-0">📐</span><span class="lc-wordorder-text"></span></div></div><!-- Phrase preposition block --><div class="lc-phrase-wrap hidden px-7 py-4 border-b" style="border-color:var(--border); background-color:var(--bg);"><p class="text-[10px] font-bold uppercase tracking-widest mb-2" style="color:var(--espresso);">Estructura</p><p class="lc-phrase-rule text-sm font-semibold" style="color:var(--text);"></p></div><!-- ── Examples ───────────────────────────────── --><div class="px-7 py-6 border-b" style="border-color:var(--border);"><p class="lc-examples-label text-[10px] font-bold uppercase tracking-widest mb-5" style="color:var(--text-muted);">Frases de ejemplo</p><div class="lc-examples space-y-3"><!-- populated by JS --></div></div><!-- Verb conjugation (hidden by default, shown for verb cards) --><div class="lc-conjugation-wrap hidden border-b px-7 py-6" style="border-color:var(--border);"><div class="lc-conjugation-inner flex flex-wrap gap-4"><!-- populated by JS --></div></div><!-- ── Tags ───────────────────────────────────── --><div class="lc-tags-row px-7 py-4 flex items-center gap-2 flex-wrap"><span class="text-[10px] font-bold uppercase tracking-wider" style="color:var(--text-muted);">Etiquetas:</span><div class="lc-tags flex gap-2 flex-wrap"></div></div></div><script>(function(){const cardJson = "{\"id\":\"verbs-a2-reflexive_2-001\",\"target\":\"acostar-se\",\"source\":\"to go to bed\",\"type\":\"reflexive\",\"cefr\":\"A2\",\"grammar_note\":\"Stem-changing -ar verb (o>ue), reflexive.\",\"examples\":[{\"target\":\"Siempre me acuesto temprano los lunes.\",\"source\":\"I always go to bed early on Mondays.\"},{\"target\":\"¿A qué hora te acuestas normalmente?\",\"source\":\"What time do you usually go to bed?\"}],\"conjugations\":{\"presente\":{\"yo\":\"me acuesto\",\"tú\":\"te acuestas\",\"él/ella/usted\":\"se acuesta\",\"nosotros\":\"nos acostamos\",\"vosotros\":\"os acostáis\",\"ellos/ellas/ustedes\":\"se acuestan\"},\"pretérito_indefinido\":{\"yo\":\"me acosté\",\"tú\":\"te acostaste\",\"él/ella/usted\":\"se acostó\",\"nosotros\":\"nos acostamos\",\"vosotros\":\"os acostasteis\",\"ellos/ellas/ustedes\":\"se acostaron\"},\"pretérito_imperfecto\":{\"yo\":\"me acostaba\",\"tú\":\"te acostabas\",\"él/ella/usted\":\"se acostaba\",\"nosotros\":\"nos acostábamos\",\"vosotros\":\"os acostabais\",\"ellos/ellas/ustedes\":\"se acostaban\"},\"futuro_simple\":{\"yo\":\"me acostaré\",\"tú\":\"te acostarás\",\"él/ella/usted\":\"se acostará\",\"nosotros\":\"nos acostaremos\",\"vosotros\":\"os acostaréis\",\"ellos/ellas/ustedes\":\"se acostarán\"},\"condicional_simple\":{\"yo\":\"me acostaría\",\"tú\":\"te acostarías\",\"él/ella/usted\":\"me acostaría\",\"nosotros\":\"nos acostaríamos\",\"vosotros\":\"os acostaríais\",\"ellos/ellas/ustedes\":\"se acostarían\"},\"pretérito_perfecto\":\"se ha acostado\",\"participio\":\"acostado\"},\"tags\":[\"verb\",\"a2\"],\"metadata\":{}}";
+const langConfigJson = "{\"language_pair\":\"english_spanish\",\"target_lang\":\"es\",\"native_lang\":\"en\",\"target_lang_name\":\"Español\",\"native_lang_name\":\"English\",\"speech_lang\":\"es-ES\",\"noun_metadata_fields\":[{\"key\":\"article\",\"label\":\"Artículo\",\"render\":\"article_badge\"},{\"key\":\"gender\",\"label\":\"Género\",\"render\":\"gender_label\"},{\"key\":\"plural\",\"label\":\"Plural\",\"render\":\"text\"}],\"article_colours\":{\"el\":\"#4A7C9E\",\"la\":\"#B05070\"},\"gender_labels\":{\"m\":\"Masculino\",\"f\":\"Femenino\"},\"verb_tenses\":[\"presente\",\"pretérito_indefinido\",\"pretérito_imperfecto\",\"pretérito_perfecto\",\"participio\",\"futuro_simple\",\"condicional_simple\"],\"cases\":{},\"ui_labels\":{\"learn_mode\":\"Aprender\",\"train_mode\":\"Entrenar\",\"examples_heading\":\"Frases de ejemplo\",\"grammar_note_heading\":\"Nota gramatical\",\"audio_button\":\"Escuchar\",\"back_link\":\"Volver\",\"card_counter\":\"Tarjeta {current} / {total}\",\"next_button\":\"Siguiente\",\"finish_button\":\"Terminar\",\"correct\":\"¡Correcto!\",\"wrong\":\"Incorrecto\",\"dashboard_link\":\"Panel principal\",\"library_prompt\":\"Elige un mazo de la biblioteca y aprende todo el contenido de las tarjetas.\",\"cards_badge\":\"{count} TARJETAS\",\"cards_count\":\"{count} tarjetas\",\"deck_meta\":\"{topic} • {level} • {count} tarjetas\",\"no_decks\":\"Aún no hay mazos en esta categoría.\",\"setup_title\":\"Configurar entrenamiento\",\"setup_subtitle\":\"Configura tu sesión de entrenamiento.\",\"question_type\":\"Tipo de pregunta\",\"mode_multiple_choice\":\"Opción múltiple\",\"mode_typing\":\"Entrada de texto\",\"mode_typing_short\":\"Escritura\",\"direction\":\"Dirección\",\"direction_forward\":\"🇺🇸 English → 🇪🇸 Español\",\"direction_reverse\":\"🇪🇸 Español → 🇺🇸 English\",\"select_level\":\"Seleccionar nivel\",\"start_training\":\"Iniciar entrenamiento\",\"count_label\":\"Cantidad\",\"all_cards\":\"Todas\",\"in_deck\":\"en el mazo\",\"view_cards\":\"Tarjetas\",\"view_list\":\"Lista\",\"card_word\":\"Tarjeta\",\"keyboard_hint_study\":\"← → Flechas para navegar · A para escuchar\",\"example_single_heading\":\"Ejemplo\",\"no_example\":\"No hay ejemplo disponible.\",\"tags_label\":\"Etiquetas:\",\"type_vocab\":\"Vocabulario\",\"type_verb\":\"Verbo\",\"type_phrase\":\"Expresión\",\"type_connector\":\"Conector\",\"type_grammar\":\"Gramática\",\"type_noun\":\"Sustantivo\",\"type_adjective\":\"Adjetivo\",\"type_expression\":\"Locución\",\"plural_prefix\":\"Pl. {plural}\",\"plural_only\":\"solo plural\",\"word_order_heading\":\"Orden de palabras\",\"structure_heading\":\"Estructura\",\"training_title\":\"Entrenamiento\",\"all_levels\":\"Todos los niveles\",\"type_placeholder\":\"Escribe la palabra en español...\",\"check_button\":\"Comprobar\",\"keyboard_hint_train\":\"Intro / Espacio = confirmar · A = Escuchar\",\"audio_title\":\"Escuchar (A)\",\"training_finished\":\"¡Entrenamiento completado!\",\"missed_heading\":\"Respuestas incorrectas — para repetir\",\"retry_missed\":\"Repetir fallos\",\"new_config\":\"Nueva configuración\",\"plural_hint\":\"Pl: {plural}\",\"results_pct\":\"{pct}% de acierto\",\"result_excellent\":\"¡Excelente! Has dominado este nivel.\",\"result_good\":\"¡Muy bien! Un poco más de práctica y lo tendrás dominado.\",\"result_ok\":\"¡Buen comienzo! Repasa las tarjetas una vez más.\",\"result_retry\":\"¡Sin problema! La práctica hace al maestro.\",\"no_cards_title\":\"No se encontraron tarjetas\",\"no_cards_hint\":\"Por favor, elige otro nivel o mazo.\"},\"answer_normalisation\":{\"strip_leading_words\":[\"el\",\"la\",\"los\",\"las\",\"un\",\"una\",\"unos\",\"unas\"],\"alt_spellings\":{\"á\":\"a\",\"é\":\"e\",\"í\":\"i\",\"ó\":\"o\",\"ú\":\"u\",\"ñ\":\"n\",\"ü\":\"u\"}}}";
+
+  /**
+   * Client-side card renderer.
+   * Uses the universal card-renderer logic inline (no imports in Astro is:inline).
+   */
+
+  // ── Parse data ──────────────────────────────────────────────────────────
+  const card   = JSON.parse(cardJson);
+  const config = JSON.parse(langConfigJson);
+
+  // ── Helpers ─────────────────────────────────────────────────────────────
+  // Articles come from the language config (keys of article_colours), never hardcoded
+  const articleList = Object.keys(config.article_colours || {});
+  const articlePatterns = articleList.map(a => {
+    const esc = a.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    return esc.endsWith("'") ? esc : `${esc}\\s+`;
+  });
+  const articleRe = articlePatterns.length
+    ? new RegExp('^(?:' + articlePatterns.join('|') + ')', 'i')
+    : null;
+
+  function stripArticle(word) {
+    return articleRe ? (word || '').replace(articleRe, '').trim() : (word || '').trim();
+  }
+
+  function getArticleColour(article) {
+    if (!article || !config.article_colours) return 'var(--espresso)';
+    return config.article_colours[article.toLowerCase()] || 'var(--espresso)';
+  }
+
+  function getGenderLabel(gender) {
+    if (!gender) return '';
+    return (config.gender_labels || {})[gender] || gender;
+  }
+
+  const uiLabels = config.ui_labels || {};
+
+  function getTypeLabel() {
+    const tags = card.tags || [];
+    if (tags.includes('noun'))       return uiLabels.type_noun || 'Noun';
+    if (tags.includes('verb'))       return uiLabels.type_verb || 'Verb';
+    if (tags.includes('adjective'))  return uiLabels.type_adjective || 'Adjective';
+    if (tags.includes('expression')) return uiLabels.type_expression || 'Expression';
+    const map = {
+      vocab: uiLabels.type_vocab || 'Vocab',
+      verb: uiLabels.type_verb || 'Verb',
+      phrase: uiLabels.type_phrase || 'Phrase',
+      connector: uiLabels.type_connector || 'Connector',
+      grammar: uiLabels.type_grammar || 'Grammar'
+    };
+    return map[card.type] || uiLabels.card_word || 'Card';
+  }
+
+  function formatHighlight(text) {
+    if (!text) return '';
+    return String(text).replace(/\*(.*?)\*/g, '<span class="highlighter">$1</span>');
+  }
+
+  function getMetaFacts() {
+    const meta = card.metadata || {};
+    const facts = [];
+    for (const field of (config.noun_metadata_fields || [])) {
+      const raw = meta[field.key] || card[field.key];
+      if (!raw || raw === '~') continue;
+      let value = String(raw);
+      let colour;
+      if (field.render === 'gender_label') value = getGenderLabel(raw);
+      else if (field.render === 'article_badge') colour = getArticleColour(raw);
+      facts.push({ label: field.label, value, colour });
+    }
+    return facts;
+  }
+
+  // ── Render ──────────────────────────────────────────────────────────────
+  const container = document.querySelector('.learning-card');
+  if (!container) { console.error('LearningCard: container not found'); }
+
+  function sel(cls) { return container?.querySelector(cls); }
+
+  // Type badge
+  sel('.lc-type-badge').textContent = getTypeLabel();
+
+  // Level badge
+  sel('.lc-level-badge').textContent = card.level || '';
+
+  // Article
+  const article = card.metadata?.article;
+  const articleWrap = sel('.lc-article-wrap');
+  const articleEl   = sel('.lc-article');
+  if (article && card.tags?.includes('noun') && !card.metadata?.plural_only) {
+    articleEl.textContent  = article;
+    articleEl.style.color  = getArticleColour(article);
+    articleWrap.style.display = '';
+  } else {
+    articleWrap.style.display = 'none';
+  }
+
+  // Word
+  sel('.lc-word').textContent = stripArticle(card.target);
+
+  // Translation
+  sel('.lc-translation').textContent = card.source || '';
+
+  // Plural / forms
+  const plural = card.metadata?.plural;
+  const formsEl = sel('.lc-forms');
+  const prefix = uiLabels.plural_prefix || 'Pl.';
+  const pluralOnly = uiLabels.plural_only || 'Plural only';
+  if (plural && !card.metadata?.plural_only) formsEl.textContent = `${prefix} ${plural}`;
+  else if (card.metadata?.plural_only) formsEl.textContent = pluralOnly;
+  else formsEl.textContent = '';
+
+  // Meta grid
+  const metaGrid = sel('.lc-meta-grid');
+  const facts = getMetaFacts();
+  if (facts.length) {
+    const cols = Math.min(facts.length, 4);
+    metaGrid.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
+    metaGrid.innerHTML = facts.map((f, i) => `
+      <div class="px-5 py-4 ${i < facts.length - 1 ? 'border-r' : ''}" style="border-color:var(--border);">
+        <p class="text-[9px] font-bold uppercase tracking-widest mb-1" style="color:var(--text-muted);">${f.label}</p>
+        <p class="text-sm font-bold" style="color:${f.colour || 'var(--text)'};">${f.value}</p>
+      </div>
+    `).join('');
+  } else {
+    metaGrid.style.display = 'none';
+  }
+
+  // Grammar note
+  const grammarWrap = sel('.lc-grammar-wrap');
+  if (card.grammar_note) {
+    sel('.lc-grammar-text').innerHTML = formatHighlight(card.grammar_note);
+    grammarWrap.classList.remove('hidden');
+  }
+
+  // Grammar label from config
+  const uiLabels = config.ui_labels || {};
+  if (uiLabels.grammar_note_heading) sel('.lc-grammar-label').textContent = uiLabels.grammar_note_heading;
+  if (uiLabels.examples_heading)     sel('.lc-examples-label').textContent = uiLabels.examples_heading;
+  if (uiLabels.audio_button)         { const el = sel('.lc-audio-label'); if (el) el.textContent = uiLabels.audio_button; }
+
+  // ── Type-specific blocks ─────────────────────────────────────────────────
+
+  // Verb: conjugation table
+  const type = card.type || (card.tags?.includes('verb') ? 'verb' : 'vocab');
+  if (type === 'verb' && card.conjugations) {
+    const conjWrap  = sel('.lc-conjugation-wrap');
+    const conjInner = sel('.lc-conjugation-inner');
+    conjWrap.classList.remove('hidden');
+
+    let conjArray = [];
+    if (Array.isArray(card.conjugations)) {
+      conjArray = card.conjugations;
+    } else {
+      for (const [tense, forms] of Object.entries(card.conjugations)) {
+        if (typeof forms === 'string') {
+          conjArray.push({ tense, stringForm: forms });
+        } else {
+          const formsArr = Object.entries(forms).map(([pronoun, form]) => ({ pronoun, form }));
+          conjArray.push({ tense, forms: formsArr });
+        }
+      }
+    }
+
+    const tensesToRender = config.verb_tenses || conjArray.map(t => t.tense);
+
+    const stringTenses = [];
+    const tableTenses = [];
+
+    tensesToRender.forEach(tense => {
+      const t = conjArray.find(c => c.tense === tense);
+      if (!t) return;
+      if (t.stringForm) stringTenses.push(t);
+      else tableTenses.push(t);
+    });
+
+    let html = '';
+
+    // Render simple string forms (e.g. Perfekt, Partizip II) as pill-like tags at the top
+    if (stringTenses.length > 0) {
+      html += `
+        <div class="flex flex-wrap gap-3 mb-6">
+          ${stringTenses.map(t => `
+            <div class="rounded-xl border px-4 py-2.5 flex items-center gap-3 shadow-sm" style="border-color:var(--border); background-color:var(--bg);">
+              <span class="text-[10px] font-bold uppercase tracking-widest opacity-80" style="color:var(--espresso);">${t.tense.replace(/_/g, ' ')}</span>
+              <span class="font-bold text-sm" style="color:var(--text);">${t.stringForm}</span>
+            </div>
+          `).join('')}
+        </div>
+      `;
+    }
+
+    // Render full tables (e.g. Präsens, Präteritum) as a unified table
+    if (tableTenses.length > 0) {
+      // Collect all pronouns from the first available table tense
+      const pronouns = tableTenses[0].forms.map(f => f.pronoun);
+
+      html += `
+        <div class="rounded-xl border overflow-x-auto shadow-sm w-full" style="border-color:var(--border);">
+          <table class="w-full text-sm text-left">
+            <thead>
+              <tr style="background-color:var(--bg); border-bottom: 1px solid var(--border);">
+                <th class="px-4 py-3 font-bold uppercase tracking-widest text-[10px] w-[1%]" style="color:var(--espresso); border-right: 1px solid var(--border);"></th>
+                ${tableTenses.map(t => `
+                  <th class="px-4 py-3 font-bold uppercase tracking-widest text-[10px]" style="color:var(--espresso);">${t.tense.replace(/_/g, ' ')}</th>
+                `).join('')}
+              </tr>
+            </thead>
+            <tbody>
+              ${pronouns.map((pronoun, ri) => `
+                <tr class="${ri < pronouns.length - 1 ? 'border-b' : ''}" style="border-color:var(--border);">
+                  <td class="px-4 py-3 font-bold text-xs whitespace-nowrap" style="color:var(--espresso); background-color:var(--bg); border-right: 1px solid var(--border);">${pronoun}</td>
+                  ${tableTenses.map(t => {
+                    const formObj = t.forms.find(f => f.pronoun === pronoun);
+                    return `<td class="px-4 py-3 font-semibold whitespace-nowrap" style="color:var(--text);">${formObj ? formObj.form : '-'}</td>`;
+                  }).join('')}
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+        </div>
+      `;
+    }
+
+    conjInner.innerHTML = html;
+  }
+
+  // Connector: word order block
+  if (type === 'connector' && card.word_order) {
+    const woWrap = sel('.lc-wordorder-wrap');
+    sel('.lc-wordorder-text').textContent = card.word_order;
+    woWrap.classList.remove('hidden');
+  }
+
+  // Phrase: preposition rule block
+  if (type === 'phrase' && card.clause_type) {
+    const phraseWrap = sel('.lc-phrase-wrap');
+    sel('.lc-phrase-rule').textContent = card.clause_type;
+    phraseWrap.classList.remove('hidden');
+  }
+
+  // ── Examples ─────────────────────────────────────────────────────────────
+  const examplesEl = sel('.lc-examples');
+  const rawExamples = card.examples || [];
+
+  if (rawExamples.length) {
+    examplesEl.innerHTML = rawExamples.map(e => `
+        <div class="rounded-2xl border overflow-hidden" style="border-color:var(--border);">
+          <div class="px-4 py-3" style="background-color:var(--bg);">
+            <p class="font-semibold leading-snug mb-1" style="color:var(--text);">${formatHighlight(e.target)}</p>
+            <p class="text-sm italic" style="color:var(--text-muted);">${formatHighlight(e.source || '')}</p>
+          </div>
+          ${e.note ? `<div class="px-4 py-2 border-t" style="border-color:var(--border);">
+            <p class="text-[10px] font-bold font-mono" style="color:var(--espresso);">📐 ${e.note}</p>
+          </div>` : ''}
+        </div>
+      `).join('');
+  } else {
+    examplesEl.innerHTML = `<p class="text-sm italic" style="color:var(--text-muted);">${uiLabels.no_example || ''}</p>`;
+  }
+
+  // ── Tags ─────────────────────────────────────────────────────────────────
+  const tagsEl = sel('.lc-tags');
+  tagsEl.innerHTML = (card.tags || []).map(t => `
+    <span class="text-[10px] font-bold px-2 py-0.5 rounded-md border uppercase" style="border-color:var(--border); color:var(--text-muted); background-color:var(--bg);">${t}</span>
+  `).join('');
+
+  // ── Audio button ─────────────────────────────────────────────────────────
+  sel('.lc-audio-btn')?.addEventListener('click', () => {
+    if (window.LoungeAudioEngine) {
+      window.LoungeAudioEngine.speak(card.target || '', config.speech_lang, 0.85);
+    }
+  });
+})();</script></div><!-- ── Navigation ───────────────────────────── --><div class="flex items-center justify-between mt-8 gap-4" data-astro-cid-5tabbh6g><button id="btn-prev" disabled class="flex items-center gap-2 px-6 py-3 rounded-2xl border font-bold text-sm transition-all hover:opacity-70 active:scale-95 disabled:opacity-30 disabled:cursor-not-allowed" style="border-color:var(--border); color:var(--text); background-color:var(--card);" data-astro-cid-5tabbh6g><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><path d="m15 18-6-6 6-6" data-astro-cid-5tabbh6g></path></svg>Volver</button><!-- Dot navigation --><div id="dot-nav" class="flex items-center gap-1.5 flex-wrap justify-center max-w-xs overflow-hidden" style="max-height:2rem;" data-astro-cid-5tabbh6g><!-- populated by JS --></div><button id="btn-next" class="flex items-center gap-2 px-6 py-3 rounded-2xl font-bold text-sm transition-all hover:opacity-80 active:scale-95" style="background-color:var(--espresso); color:#F5F2EB;" data-astro-cid-5tabbh6g>Siguiente<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><path d="m9 18 6-6-6-6" data-astro-cid-5tabbh6g></path></svg></button></div><!-- Keyboard hint --><p class="text-center text-xs font-medium mt-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>← → Flechas para navegar · A para escuchar</p></div><!-- ── List View ───────────────────────────── --><div id="list-view-wrap" class="hidden space-y-6" data-astro-cid-5tabbh6g><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>acostar-se</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to go to bed</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Stem-changing -ar verb (o>ue), reflexive.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Ejemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Siempre me acuesto temprano los lunes.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>I always go to bed early on Mondays.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>afeitar-se</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to shave</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -ar verb, reflexive.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Ejemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Mi padre se afeita todas las mañanas.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>My father shaves every morning.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>bañar-se</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to bathe</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -ar verb, reflexive.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Ejemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Los niños se bañan en el mar.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The children bathe in the sea.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>cepillar-se</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to brush</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -ar verb, reflexive.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Ejemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Me cepillo los dientes después de comer.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>I brush my teeth after eating.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>despertar-se</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to wake up</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Stem-changing -ar verb (e>ie), reflexive.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Ejemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Me despierto a las siete de la mañana.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>I wake up at seven in the morning.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>divertirse</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to have fun</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Stem-changing -ir verb (e>ie), reflexive.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Ejemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Nos divertimos mucho en la fiesta de ayer.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>We had a lot of fun at yesterday's party.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>duchar-se</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to shower</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -ar verb, reflexive.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Ejemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Me ducho todas las noches antes de dormir.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>I shower every night before sleeping.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>enfermar-se</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to get sick</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -ar verb, reflexive. Also commonly 'ponerse enfermo'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Ejemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Muchos niños se enferman en invierno.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Many children get sick in winter.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>enojar-se</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to get angry</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -ar verb, reflexive. Also used as 'enfadarse'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Ejemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Mi hermano se enoja cuando pierdo sus cosas.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>My brother gets angry when I lose his things.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>lavar-se</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to wash (oneself)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -ar verb, reflexive.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Ejemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Me lavo las manos antes de comer.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>I wash my hands before eating.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>levantar-se</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to get up</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -ar verb, reflexive.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Ejemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Me levanto temprano para ir a trabajar.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>I get up early to go to work.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>maquillar-se</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to put on makeup</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -ar verb, reflexive.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Ejemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Ella se maquilla antes de ir a la oficina.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>She puts on makeup before going to the office.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>mirar-se</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to look at oneself</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -ar verb, reflexive.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Ejemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Me miré en el espejo antes de salir.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>I looked at myself in the mirror before leaving.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>peinar-se</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to comb one's hair</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -ar verb, reflexive.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Ejemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Me peino rápidamente por la mañana.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>I comb my hair quickly in the morning.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>ponerse</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to put on (clothing)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Irregular -er verb (yo-go, stem change), reflexive.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Ejemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Me pongo un abrigo porque hace frío.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>I put on a coat because it's cold.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>preocupar-se</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to worry</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -ar verb, reflexive. Takes preposition 'por'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Ejemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>No te preocupes por el examen.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Don't worry about the exam.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>quitar-se</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to take off (clothing)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -ar verb, reflexive.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Ejemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Me quito los zapatos al entrar en casa.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>I take off my shoes when entering the house.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>secar-se</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to dry oneself</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -ar verb, reflexive (c>qu spelling change in preterite yo: sequé).</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Ejemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Me seco con una toalla grande.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>I dry myself with a big towel.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>sentar-se</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to sit down</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Stem-changing -ar verb (e>ie), reflexive.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Ejemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Me siento en la silla cerca de la ventana.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>I sit down on the chair near the window.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>vestir-se</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to get dressed</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Stem-changing -ir verb (e>i), reflexive.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Ejemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Me visto rápidamente para no llegar tarde.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>I get dressed quickly so as not to be late.</p></div></div></div></div></div></div><!-- ══ TRAIN PANEL ════════════════════════════ --><div id="train-panel" class="hidden space-y-10" data-astro-cid-5tabbh6g><div class="cafe-card rounded-3xl p-8 border shadow-lg max-w-xl mx-auto" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="text-center mb-8" data-astro-cid-5tabbh6g><h2 class="text-2xl font-extrabold font-outfit mb-2" style="color:var(--text);" data-astro-cid-5tabbh6g>Configurar entrenamiento</h2><p class="text-sm font-medium" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Configura tu sesión de entrenamiento.</p></div><form action="/languagelounge/en-es/training/verbs/train/" method="GET" class="space-y-8" id="deck-train-form" data-astro-cid-5tabbh6g><input type="hidden" name="level" value="a2" data-astro-cid-5tabbh6g><input type="hidden" name="deck" value="verbs-a2-reflexive_2" data-astro-cid-5tabbh6g><!-- Mode selection --><div class="space-y-3" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold tracking-widest uppercase" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Tipo de pregunta</p><div class="grid grid-cols-2 gap-3" data-astro-cid-5tabbh6g><button type="button" data-group="mode" data-value="mc" class="sel-opt sel-active" data-astro-cid-5tabbh6g><span class="text-xl mb-1 block" data-astro-cid-5tabbh6g>🔘</span><span class="text-sm font-bold" data-astro-cid-5tabbh6g>Opción múltiple</span></button><button type="button" data-group="mode" data-value="type" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-xl mb-1 block" data-astro-cid-5tabbh6g>⌨️</span><span class="text-sm font-bold" data-astro-cid-5tabbh6g>Entrada de texto</span></button></div><input type="hidden" name="mode" id="mode-hidden" value="mc" data-astro-cid-5tabbh6g></div><!-- Direction selection --><div class="space-y-3" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold tracking-widest uppercase" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Dirección</p><div class="grid grid-cols-2 gap-3" data-astro-cid-5tabbh6g><button type="button" data-group="dir" data-value="en-es" class="sel-opt sel-active" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>🇺🇸 English → 🇪🇸 Español</span></button><button type="button" data-group="dir" data-value="es-en" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>🇪🇸 Español → 🇺🇸 English</span></button></div><input type="hidden" name="dir" id="dir-hidden" value="en-es" data-astro-cid-5tabbh6g></div><!-- Count Selection --><div class="space-y-3" data-astro-cid-5tabbh6g><div class="flex justify-between items-end" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold tracking-widest uppercase" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Cantidad</p><span class="text-xs font-bold" style="color:var(--espresso);" data-astro-cid-5tabbh6g>20 tarjetas en el mazo</span></div><div class="grid grid-cols-4 gap-3" data-astro-cid-5tabbh6g><button type="button" data-group="count" data-value="30" class="sel-opt sel-active" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>30</span></button><button type="button" data-group="count" data-value="60" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>60</span></button><button type="button" data-group="count" data-value="90" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>90</span></button><button type="button" data-group="count" data-value="1000" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>Todas</span></button></div><input type="hidden" name="count" id="count-hidden" value="30" data-astro-cid-5tabbh6g></div><button type="submit" class="w-full py-4 rounded-xl font-bold text-base transition-all hover:opacity-90 mt-4 shadow-md active:scale-[0.98]" style="background-color:var(--espresso); color:#F5F2EB;" data-astro-cid-5tabbh6g>Iniciar entrenamiento &rarr;</button></form></div></div></div></main><footer class="mt-auto border-t py-8" style="background-color:var(--bg);border-color:var(--border);"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-medium" style="color:var(--text-muted);"><div>&copy; 2025 - 2026 Small Talk Café Podcasts. All rights reserved.</div><div class="flex gap-4">Made in Bayern ❤️ Los Geht's!</div></div></footer><!-- Minimal script for Theme and Dropdown toggle --><script>
+      // ── Theme ──────────────────────────────────────
+      function applyTheme(dark) {
+        if (dark) {
+          document.documentElement.classList.add('dark');
+          localStorage.setItem('wortschatz_theme', 'dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+          localStorage.setItem('wortschatz_theme', 'light');
+        }
+        const icon = document.getElementById('theme-icon');
+        const label = document.getElementById('theme-label');
+        if (icon) icon.textContent = dark ? '🌙' : '☀️';
+        if (label) label.textContent = dark ? 'Dark' : 'Light';
+      }
+
+      const isDark = document.documentElement.classList.contains('dark');
+      applyTheme(isDark);
+
+      document.getElementById('theme-toggle')?.addEventListener('click', () => {
+        const nowDark = !document.documentElement.classList.contains('dark');
+        applyTheme(nowDark);
+      });
+
+      // ── Dropdown Toggle ──────────────────────────
+      const langBtn = document.getElementById('lang-btn');
+      const langMenu = document.getElementById('lang-menu');
+
+      langBtn?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        langMenu?.classList.toggle('hidden');
+      });
+
+      document.addEventListener('click', () => {
+        langMenu?.classList.add('hidden');
+      });
+    </script></body></html><script type="module" src="/languagelounge/_astro/_deckId_.astro_astro_type_script_index_0_lang.DwXABuW8.js"></script><script>(function(){const cardsJson = "[{\"id\":\"verbs-a2-reflexive_2-001\",\"target\":\"acostar-se\",\"source\":\"to go to bed\",\"type\":\"reflexive\",\"cefr\":\"A2\",\"grammar_note\":\"Stem-changing -ar verb (o>ue), reflexive.\",\"examples\":[{\"target\":\"Siempre me acuesto temprano los lunes.\",\"source\":\"I always go to bed early on Mondays.\"},{\"target\":\"¿A qué hora te acuestas normalmente?\",\"source\":\"What time do you usually go to bed?\"}],\"conjugations\":{\"presente\":{\"yo\":\"me acuesto\",\"tú\":\"te acuestas\",\"él/ella/usted\":\"se acuesta\",\"nosotros\":\"nos acostamos\",\"vosotros\":\"os acostáis\",\"ellos/ellas/ustedes\":\"se acuestan\"},\"pretérito_indefinido\":{\"yo\":\"me acosté\",\"tú\":\"te acostaste\",\"él/ella/usted\":\"se acostó\",\"nosotros\":\"nos acostamos\",\"vosotros\":\"os acostasteis\",\"ellos/ellas/ustedes\":\"se acostaron\"},\"pretérito_imperfecto\":{\"yo\":\"me acostaba\",\"tú\":\"te acostabas\",\"él/ella/usted\":\"se acostaba\",\"nosotros\":\"nos acostábamos\",\"vosotros\":\"os acostabais\",\"ellos/ellas/ustedes\":\"se acostaban\"},\"futuro_simple\":{\"yo\":\"me acostaré\",\"tú\":\"te acostarás\",\"él/ella/usted\":\"se acostará\",\"nosotros\":\"nos acostaremos\",\"vosotros\":\"os acostaréis\",\"ellos/ellas/ustedes\":\"se acostarán\"},\"condicional_simple\":{\"yo\":\"me acostaría\",\"tú\":\"te acostarías\",\"él/ella/usted\":\"me acostaría\",\"nosotros\":\"nos acostaríamos\",\"vosotros\":\"os acostaríais\",\"ellos/ellas/ustedes\":\"se acostarían\"},\"pretérito_perfecto\":\"se ha acostado\",\"participio\":\"acostado\"},\"tags\":[\"verb\",\"a2\"],\"metadata\":{}},{\"id\":\"verbs-a2-reflexive_2-002\",\"target\":\"afeitar-se\",\"source\":\"to shave\",\"type\":\"reflexive\",\"cefr\":\"A2\",\"grammar_note\":\"Regular -ar verb, reflexive.\",\"examples\":[{\"target\":\"Mi padre se afeita todas las mañanas.\",\"source\":\"My father shaves every morning.\"},{\"target\":\"Me afeité antes de salir a la fiesta.\",\"source\":\"I shaved before going out to the party.\"}],\"conjugations\":{\"presente\":{\"yo\":\"me afeito\",\"tú\":\"te afeitas\",\"él/ella/usted\":\"se afeita\",\"nosotros\":\"nos afeitamos\",\"vosotros\":\"os afeitáis\",\"ellos/ellas/ustedes\":\"se afeitan\"},\"pretérito_indefinido\":{\"yo\":\"me afeité\",\"tú\":\"te afeitaste\",\"él/ella/usted\":\"se afeitó\",\"nosotros\":\"nos afeitamos\",\"vosotros\":\"os afeitasteis\",\"ellos/ellas/ustedes\":\"se afeitaron\"},\"pretérito_imperfecto\":{\"yo\":\"me afeitaba\",\"tú\":\"te afeitabas\",\"él/ella/usted\":\"se afeitaba\",\"nosotros\":\"nos afeitábamos\",\"vosotros\":\"os afeitabais\",\"ellos/ellas/ustedes\":\"se afeitaban\"},\"futuro_simple\":{\"yo\":\"me afeitaré\",\"tú\":\"te afeitarás\",\"él/ella/usted\":\"se afeitará\",\"nosotros\":\"nos afeitaremos\",\"vosotros\":\"os afeitaréis\",\"ellos/ellas/ustedes\":\"se afeitarán\"},\"condicional_simple\":{\"yo\":\"me afeitaría\",\"tú\":\"te afeitarías\",\"él/ella/usted\":\"se afeitaría\",\"nosotros\":\"nos afeitaríamos\",\"vosotros\":\"os afeitaríais\",\"ellos/ellas/ustedes\":\"se afeitarían\"},\"pretérito_perfecto\":\"se ha afeitado\",\"participio\":\"afeitado\"},\"tags\":[\"verb\",\"a2\"],\"metadata\":{}},{\"id\":\"verbs-a2-reflexive_2-003\",\"target\":\"bañar-se\",\"source\":\"to bathe\",\"type\":\"reflexive\",\"cefr\":\"A2\",\"grammar_note\":\"Regular -ar verb, reflexive.\",\"examples\":[{\"target\":\"Los niños se bañan en el mar.\",\"source\":\"The children bathe in the sea.\"},{\"target\":\"¿Te bañaste en la piscina ayer?\",\"source\":\"Did you bathe in the pool yesterday?\"}],\"conjugations\":{\"presente\":{\"yo\":\"me baño\",\"tú\":\"te bañas\",\"él/ella/usted\":\"se baña\",\"nosotros\":\"nos bañamos\",\"vosotros\":\"os bañáis\",\"ellos/ellas/ustedes\":\"se bañan\"},\"pretérito_indefinido\":{\"yo\":\"me bañé\",\"tú\":\"te bañaste\",\"él/ella/usted\":\"se bañó\",\"nosotros\":\"nos bañamos\",\"vosotros\":\"os bañasteis\",\"ellos/ellas/ustedes\":\"se bañaron\"},\"pretérito_imperfecto\":{\"yo\":\"me bañaba\",\"tú\":\"te bañabas\",\"él/ella/usted\":\"se bañaba\",\"nosotros\":\"nos bañábamos\",\"vosotros\":\"os bañabais\",\"ellos/ellas/ustedes\":\"se bañaban\"},\"futuro_simple\":{\"yo\":\"me bañaré\",\"tú\":\"te bañarás\",\"él/ella/usted\":\"se bañará\",\"nosotros\":\"nos bañaremos\",\"vosotros\":\"os bañaréis\",\"ellos/ellas/ustedes\":\"se bañarán\"},\"condicional_simple\":{\"yo\":\"me bañaría\",\"tú\":\"te bañarías\",\"él/ella/usted\":\"se bañaría\",\"nosotros\":\"nos bañaríamos\",\"vosotros\":\"os bañaríais\",\"ellos/ellas/ustedes\":\"se bañarían\"},\"pretérito_perfecto\":\"se ha bañado\",\"participio\":\"bañado\"},\"tags\":[\"verb\",\"a2\"],\"metadata\":{}},{\"id\":\"verbs-a2-reflexive_2-004\",\"target\":\"cepillar-se\",\"source\":\"to brush\",\"type\":\"reflexive\",\"cefr\":\"A2\",\"grammar_note\":\"Regular -ar verb, reflexive.\",\"examples\":[{\"target\":\"Me cepillo los dientes después de comer.\",\"source\":\"I brush my teeth after eating.\"},{\"target\":\"Ella se cepilla el pelo con cuidado.\",\"source\":\"She brushes her hair carefully.\"}],\"conjugations\":{\"presente\":{\"yo\":\"me cepillo\",\"tú\":\"te cepillas\",\"él/ella/usted\":\"se cepilla\",\"nosotros\":\"nos cepillamos\",\"vosotros\":\"os cepilláis\",\"ellos/ellas/ustedes\":\"se cepillan\"},\"pretérito_indefinido\":{\"yo\":\"me cepillé\",\"tú\":\"te cepillaste\",\"él/ella/usted\":\"se cepilló\",\"nosotros\":\"nos cepillamos\",\"vosotros\":\"os cepillasteis\",\"ellos/ellas/ustedes\":\"se cepillaron\"},\"pretérito_imperfecto\":{\"yo\":\"me cepillaba\",\"tú\":\"te cepillabas\",\"él/ella/usted\":\"se cepillaba\",\"nosotros\":\"nos cepillábamos\",\"vosotros\":\"os cepillabais\",\"ellos/ellas/ustedes\":\"se cepillaban\"},\"futuro_simple\":{\"yo\":\"me cepillaré\",\"tú\":\"te cepillarás\",\"él/ella/usted\":\"se cepillará\",\"nosotros\":\"nos cepillaremos\",\"vosotros\":\"os cepillaréis\",\"ellos/ellas/ustedes\":\"se cepillarán\"},\"condicional_simple\":{\"yo\":\"me cepillaría\",\"tú\":\"te cepillarías\",\"él/ella/usted\":\"se cepillaría\",\"nosotros\":\"nos cepillaríamos\",\"vosotros\":\"os cepillaríais\",\"ellos/ellas/ustedes\":\"se cepillarían\"},\"pretérito_perfecto\":\"se ha cepillado\",\"participio\":\"cepillado\"},\"tags\":[\"verb\",\"a2\"],\"metadata\":{}},{\"id\":\"verbs-a2-reflexive_2-005\",\"target\":\"despertar-se\",\"source\":\"to wake up\",\"type\":\"reflexive\",\"cefr\":\"A2\",\"grammar_note\":\"Stem-changing -ar verb (e>ie), reflexive.\",\"examples\":[{\"target\":\"Me despierto a las siete de la mañana.\",\"source\":\"I wake up at seven in the morning.\"},{\"target\":\"¿A qué hora te despertaste ayer?\",\"source\":\"What time did you wake up yesterday?\"}],\"conjugations\":{\"presente\":{\"yo\":\"me despierto\",\"tú\":\"te despiertas\",\"él/ella/usted\":\"se despierta\",\"nosotros\":\"nos despertamos\",\"vosotros\":\"os despertáis\",\"ellos/ellas/ustedes\":\"se despiertan\"},\"pretérito_indefinido\":{\"yo\":\"me desperté\",\"tú\":\"te despertaste\",\"él/ella/usted\":\"se despertó\",\"nosotros\":\"nos despertamos\",\"vosotros\":\"os despertasteis\",\"ellos/ellas/ustedes\":\"se despertaron\"},\"pretérito_imperfecto\":{\"yo\":\"me despertaba\",\"tú\":\"te despertabas\",\"él/ella/usted\":\"se despertaba\",\"nosotros\":\"nos despertabamos\",\"vosotros\":\"os despertabais\",\"ellos/ellas/ustedes\":\"se despertaban\"},\"futuro_simple\":{\"yo\":\"me despertaré\",\"tú\":\"te despertarás\",\"él/ella/usted\":\"se despertará\",\"nosotros\":\"nos despertaremos\",\"vosotros\":\"os despertaréis\",\"ellos/ellas/ustedes\":\"se despertarán\"},\"condicional_simple\":{\"yo\":\"me despertaría\",\"tú\":\"te despertarías\",\"él/ella/usted\":\"se despertaría\",\"nosotros\":\"nos despertaríamos\",\"vosotros\":\"os despertaríais\",\"ellos/ellas/ustedes\":\"se despertarían\"},\"pretérito_perfecto\":\"se ha despertado\",\"participio\":\"despertado\"},\"tags\":[\"verb\",\"a2\"],\"metadata\":{}},{\"id\":\"verbs-a2-reflexive_2-006\",\"target\":\"divertirse\",\"source\":\"to have fun\",\"type\":\"reflexive\",\"cefr\":\"A2\",\"grammar_note\":\"Stem-changing -ir verb (e>ie), reflexive.\",\"examples\":[{\"target\":\"Nos divertimos mucho en la fiesta de ayer.\",\"source\":\"We had a lot of fun at yesterday's party.\"},{\"target\":\"¿Te diviertes estudiando español?\",\"source\":\"Do you have fun studying Spanish?\"}],\"conjugations\":{\"presente\":{\"yo\":\"me divierto\",\"tú\":\"te diviertes\",\"él/ella/usted\":\"se divierte\",\"nosotros\":\"nos divertimos\",\"vosotros\":\"os divertís\",\"ellos/ellas/ustedes\":\"se divierten\"},\"pretérito_indefinido\":{\"yo\":\"me divertí\",\"tú\":\"te divertiste\",\"él/ella/usted\":\"se divirtió\",\"nosotros\":\"nos divertimos\",\"vosotros\":\"os divertisteis\",\"ellos/ellas/ustedes\":\"se divirtieron\"},\"pretérito_imperfecto\":{\"yo\":\"me divertía\",\"tú\":\"te divertías\",\"él/ella/usted\":\"se divertía\",\"nosotros\":\"nos divertíamos\",\"vosotros\":\"os divertíais\",\"ellos/ellas/ustedes\":\"se divertían\"},\"futuro_simple\":{\"yo\":\"me divertiré\",\"tú\":\"te divertirás\",\"él/ella/usted\":\"se divertirá\",\"nosotros\":\"nos divertiremos\",\"vosotros\":\"os divertiréis\",\"ellos/ellas/ustedes\":\"se divertirán\"},\"condicional_simple\":{\"yo\":\"me divertiría\",\"tú\":\"te divertirías\",\"él/ella/usted\":\"se divertiría\",\"nosotros\":\"nos divertiríamos\",\"vosotros\":\"os divertiríais\",\"ellos/ellas/ustedes\":\"se divertirían\"},\"pretérito_perfecto\":\"se ha divertido\",\"participio\":\"divertido\"},\"tags\":[\"verb\",\"a2\"],\"metadata\":{}},{\"id\":\"verbs-a2-reflexive_2-007\",\"target\":\"duchar-se\",\"source\":\"to shower\",\"type\":\"reflexive\",\"cefr\":\"A2\",\"grammar_note\":\"Regular -ar verb, reflexive.\",\"examples\":[{\"target\":\"Me ducho todas las noches antes de dormir.\",\"source\":\"I shower every night before sleeping.\"},{\"target\":\"¿Te duchaste esta mañana?\",\"source\":\"Did you shower this morning?\"}],\"conjugations\":{\"presente\":{\"yo\":\"me ducho\",\"tú\":\"te duchas\",\"él/ella/usted\":\"se ducha\",\"nosotros\":\"nos duchamos\",\"vosotros\":\"os ducháis\",\"ellos/ellas/ustedes\":\"se duchan\"},\"pretérito_indefinido\":{\"yo\":\"me duché\",\"tú\":\"te duchaste\",\"él/ella/usted\":\"se duchó\",\"nosotros\":\"nos duchamos\",\"vosotros\":\"os duchasteis\",\"ellos/ellas/ustedes\":\"se ducharon\"},\"pretérito_imperfecto\":{\"yo\":\"me duchaba\",\"tú\":\"te duchabas\",\"él/ella/usted\":\"se duchaba\",\"nosotros\":\"nos duchábamos\",\"vosotros\":\"os duchabais\",\"ellos/ellas/ustedes\":\"se duchaban\"},\"futuro_simple\":{\"yo\":\"me ducharé\",\"tú\":\"te ducharás\",\"él/ella/usted\":\"se duchará\",\"nosotros\":\"nos ducharemos\",\"vosotros\":\"os ducharéis\",\"ellos/ellas/ustedes\":\"se ducharán\"},\"condicional_simple\":{\"yo\":\"me ducharía\",\"tú\":\"te ducharías\",\"él/ella/usted\":\"se ducharía\",\"nosotros\":\"nos ducharíamos\",\"vosotros\":\"os ducharíais\",\"ellos/ellas/ustedes\":\"se ducharían\"},\"pretérito_perfecto\":\"se ha duchado\",\"participio\":\"duchado\"},\"tags\":[\"verb\",\"a2\"],\"metadata\":{}},{\"id\":\"verbs-a2-reflexive_2-008\",\"target\":\"enfermar-se\",\"source\":\"to get sick\",\"type\":\"reflexive\",\"cefr\":\"A2\",\"grammar_note\":\"Regular -ar verb, reflexive. Also commonly 'ponerse enfermo'.\",\"examples\":[{\"target\":\"Muchos niños se enferman en invierno.\",\"source\":\"Many children get sick in winter.\"},{\"target\":\"Me enfermé porque comí algo malo.\",\"source\":\"I got sick because I ate something bad.\"}],\"conjugations\":{\"presente\":{\"yo\":\"me enfermo\",\"tú\":\"te enfermas\",\"él/ella/usted\":\"se enferma\",\"nosotros\":\"nos enfermamos\",\"vosotros\":\"os enfermáis\",\"ellos/ellas/ustedes\":\"se enferman\"},\"pretérito_indefinido\":{\"yo\":\"me enfermé\",\"tú\":\"te enfermaste\",\"él/ella/usted\":\"se enfermó\",\"nosotros\":\"nos enfermamos\",\"vosotros\":\"os enfermasteis\",\"ellos/ellas/ustedes\":\"se enfermaron\"},\"pretérito_imperfecto\":{\"yo\":\"me enfermaba\",\"tú\":\"te enfermabas\",\"él/ella/usted\":\"se enfermaba\",\"nosotros\":\"nos enfermábamos\",\"vosotros\":\"os enfermabais\",\"ellos/ellas/ustedes\":\"se enfermaban\"},\"futuro_simple\":{\"yo\":\"me enfermaré\",\"tú\":\"te enfermarás\",\"él/ella/usted\":\"se enfermará\",\"nosotros\":\"nos enfermaremos\",\"vosotros\":\"os enfermaréis\",\"ellos/ellas/ustedes\":\"se enfermarán\"},\"condicional_simple\":{\"yo\":\"me enfermaría\",\"tú\":\"te enfermarías\",\"él/ella/usted\":\"se enfermaría\",\"nosotros\":\"nos enfermaríamos\",\"vosotros\":\"os enfermaríais\",\"ellos/ellas/ustedes\":\"se enfermarían\"},\"pretérito_perfecto\":\"se ha enfermado\",\"participio\":\"enfermado\"},\"tags\":[\"verb\",\"a2\"],\"metadata\":{}},{\"id\":\"verbs-a2-reflexive_2-009\",\"target\":\"enojar-se\",\"source\":\"to get angry\",\"type\":\"reflexive\",\"cefr\":\"A2\",\"grammar_note\":\"Regular -ar verb, reflexive. Also used as 'enfadarse'.\",\"examples\":[{\"target\":\"Mi hermano se enoja cuando pierdo sus cosas.\",\"source\":\"My brother gets angry when I lose his things.\"},{\"target\":\"¿Por qué te enojaste con ella?\",\"source\":\"Why did you get angry with her?\"}],\"conjugations\":{\"presente\":{\"yo\":\"me enojo\",\"tú\":\"te enojas\",\"él/ella/usted\":\"se enoja\",\"nosotros\":\"nos enojamos\",\"vosotros\":\"os enojáis\",\"ellos/ellas/ustedes\":\"se enojan\"},\"pretérito_indefinido\":{\"yo\":\"me enojé\",\"tú\":\"te enojaste\",\"él/ella/usted\":\"se enojó\",\"nosotros\":\"nos enojamos\",\"vosotros\":\"os enojasteis\",\"ellos/ellas/ustedes\":\"se enojaron\"},\"pretérito_imperfecto\":{\"yo\":\"me enojaba\",\"tú\":\"te enojabas\",\"él/ella/usted\":\"se enojaba\",\"nosotros\":\"nos enojábamos\",\"vosotros\":\"os enojabais\",\"ellos/ellas/ustedes\":\"se enojaban\"},\"futuro_simple\":{\"yo\":\"me enojaré\",\"tú\":\"te enojarás\",\"él/ella/usted\":\"se enojará\",\"nosotros\":\"nos enojaremos\",\"vosotros\":\"os enojaréis\",\"ellos/ellas/ustedes\":\"se enojarán\"},\"condicional_simple\":{\"yo\":\"me enojaría\",\"tú\":\"te enojarías\",\"él/ella/usted\":\"se enojaría\",\"nosotros\":\"nos enojaríamos\",\"vosotros\":\"os enojaríais\",\"ellos/ellas/ustedes\":\"se enojarían\"},\"pretérito_perfecto\":\"se ha enojado\",\"participio\":\"enojado\"},\"tags\":[\"verb\",\"a2\"],\"metadata\":{}},{\"id\":\"verbs-a2-reflexive_2-010\",\"target\":\"lavar-se\",\"source\":\"to wash (oneself)\",\"type\":\"reflexive\",\"cefr\":\"A2\",\"grammar_note\":\"Regular -ar verb, reflexive.\",\"examples\":[{\"target\":\"Me lavo las manos antes de comer.\",\"source\":\"I wash my hands before eating.\"},{\"target\":\"¿Te lavaste la cara esta mañana?\",\"source\":\"Did you wash your face this morning?\"}],\"conjugations\":{\"presente\":{\"yo\":\"me lavo\",\"tú\":\"te lavas\",\"él/ella/usted\":\"se lava\",\"nosotros\":\"nos lavamos\",\"vosotros\":\"os laváis\",\"ellos/ellas/ustedes\":\"se lavan\"},\"pretérito_indefinido\":{\"yo\":\"me lavé\",\"tú\":\"te lavaste\",\"él/ella/usted\":\"se lavó\",\"nosotros\":\"nos lavamos\",\"vosotros\":\"os lavasteis\",\"ellos/ellas/ustedes\":\"se lavaron\"},\"pretérito_imperfecto\":{\"yo\":\"me lavaba\",\"tú\":\"te lavabas\",\"él/ella/usted\":\"se lavaba\",\"nosotros\":\"nos lavábamos\",\"vosotros\":\"os lavabais\",\"ellos/ellas/ustedes\":\"se lavaban\"},\"futuro_simple\":{\"yo\":\"me lavaré\",\"tú\":\"te lavarás\",\"él/ella/usted\":\"se lavará\",\"nosotros\":\"nos lavaremos\",\"vosotros\":\"os lavaréis\",\"ellos/ellas/ustedes\":\"se lavarán\"},\"condicional_simple\":{\"yo\":\"me lavaría\",\"tú\":\"te lavarías\",\"él/ella/usted\":\"se lavaría\",\"nosotros\":\"nos lavaríamos\",\"vosotros\":\"os lavaríais\",\"ellos/ellas/ustedes\":\"se lavarían\"},\"pretérito_perfecto\":\"se ha lavado\",\"participio\":\"lavado\"},\"tags\":[\"verb\",\"a2\"],\"metadata\":{}},{\"id\":\"verbs-a2-reflexive_2-011\",\"target\":\"levantar-se\",\"source\":\"to get up\",\"type\":\"reflexive\",\"cefr\":\"A2\",\"grammar_note\":\"Regular -ar verb, reflexive.\",\"examples\":[{\"target\":\"Me levanto temprano para ir a trabajar.\",\"source\":\"I get up early to go to work.\"},{\"target\":\"¿A qué hora te levantaste hoy?\",\"source\":\"What time did you get up today?\"}],\"conjugations\":{\"presente\":{\"yo\":\"me levanto\",\"tú\":\"te levantas\",\"él/ella/usted\":\"se levanta\",\"nosotros\":\"nos levantamos\",\"vosotros\":\"os levantáis\",\"ellos/ellas/ustedes\":\"se levantan\"},\"pretérito_indefinido\":{\"yo\":\"me levanté\",\"tú\":\"te levantaste\",\"él/ella/usted\":\"se levantó\",\"nosotros\":\"nos levantamos\",\"vosotros\":\"os levantasteis\",\"ellos/ellas/ustedes\":\"se levantaron\"},\"pretérito_imperfecto\":{\"yo\":\"me levantaba\",\"tú\":\"te levantabas\",\"él/ella/usted\":\"se levantaba\",\"nosotros\":\"nos levantábamos\",\"vosotros\":\"os levantabais\",\"ellos/ellas/ustedes\":\"se levantaban\"},\"futuro_simple\":{\"yo\":\"me levantaré\",\"tú\":\"te levantarás\",\"él/ella/usted\":\"se levantará\",\"nosotros\":\"nos levantaremos\",\"vosotros\":\"os levantaréis\",\"ellos/ellas/ustedes\":\"se levantarán\"},\"condicional_simple\":{\"yo\":\"me levantaría\",\"tú\":\"te levantarías\",\"él/ella/usted\":\"se levantaría\",\"nosotros\":\"nos levantaríamos\",\"vosotros\":\"os levantaríais\",\"ellos/ellas/ustedes\":\"se levantarían\"},\"pretérito_perfecto\":\"se ha levantado\",\"participio\":\"levantado\"},\"tags\":[\"verb\",\"a2\"],\"metadata\":{}},{\"id\":\"verbs-a2-reflexive_2-012\",\"target\":\"maquillar-se\",\"source\":\"to put on makeup\",\"type\":\"reflexive\",\"cefr\":\"A2\",\"grammar_note\":\"Regular -ar verb, reflexive.\",\"examples\":[{\"target\":\"Ella se maquilla antes de ir a la oficina.\",\"source\":\"She puts on makeup before going to the office.\"},{\"target\":\"No me maquillo para estar en casa.\",\"source\":\"I don't put on makeup to stay at home.\"}],\"conjugations\":{\"presente\":{\"yo\":\"me maquillo\",\"tú\":\"te maquillas\",\"él/ella/usted\":\"se maquilla\",\"nosotros\":\"nos maquillamos\",\"vosotros\":\"os maquilláis\",\"ellos/ellas/ustedes\":\"se maquillan\"},\"pretérito_indefinido\":{\"yo\":\"me maquillé\",\"tú\":\"te maquillaste\",\"él/ella/usted\":\"se maquilló\",\"nosotros\":\"nos maquillamos\",\"vosotros\":\"os maquillasteis\",\"ellos/ellas/ustedes\":\"se maquillaron\"},\"pretérito_imperfecto\":{\"yo\":\"me maquillaba\",\"tú\":\"te maquillabas\",\"él/ella/usted\":\"se maquillaba\",\"nosotros\":\"nos maquillábamos\",\"vosotros\":\"os maquillabais\",\"ellos/ellas/ustedes\":\"se maquillaban\"},\"futuro_simple\":{\"yo\":\"me maquillaré\",\"tú\":\"te maquillarás\",\"él/ella/usted\":\"se maquillará\",\"nosotros\":\"nos maquillaremos\",\"vosotros\":\"os maquillaréis\",\"ellos/ellas/ustedes\":\"se maquillarán\"},\"condicional_simple\":{\"yo\":\"me maquillaría\",\"tú\":\"te maquillarías\",\"él/ella/usted\":\"se maquillaría\",\"nosotros\":\"nos maquillaríamos\",\"vosotros\":\"os maquillaríais\",\"ellos/ellas/ustedes\":\"se maquillarían\"},\"pretérito_perfecto\":\"se ha maquillado\",\"participio\":\"maquillado\"},\"tags\":[\"verb\",\"a2\"],\"metadata\":{}},{\"id\":\"verbs-a2-reflexive_2-013\",\"target\":\"mirar-se\",\"source\":\"to look at oneself\",\"type\":\"reflexive\",\"cefr\":\"A2\",\"grammar_note\":\"Regular -ar verb, reflexive.\",\"examples\":[{\"target\":\"Me miré en el espejo antes de salir.\",\"source\":\"I looked at myself in the mirror before leaving.\"},{\"target\":\"¿Por qué te miras tanto en el espejo?\",\"source\":\"Why do you look at yourself so much in the mirror?\"}],\"conjugations\":{\"presente\":{\"yo\":\"me miro\",\"tú\":\"te miras\",\"él/ella/usted\":\"se mira\",\"nosotros\":\"nos miramos\",\"vosotros\":\"os miráis\",\"ellos/ellas/ustedes\":\"se miran\"},\"pretérito_indefinido\":{\"yo\":\"me miré\",\"tú\":\"te miraste\",\"él/ella/usted\":\"se miró\",\"nosotros\":\"nos miramos\",\"vosotros\":\"os mirasteis\",\"ellos/ellas/ustedes\":\"se miraron\"},\"pretérito_imperfecto\":{\"yo\":\"me miraba\",\"tú\":\"te mirabas\",\"él/ella/usted\":\"se miraba\",\"nosotros\":\"nos mirábamos\",\"vosotros\":\"os mirabais\",\"ellos/ellas/ustedes\":\"se miraban\"},\"futuro_simple\":{\"yo\":\"me miraré\",\"tú\":\"te mirarás\",\"él/ella/usted\":\"se mirará\",\"nosotros\":\"nos miraremos\",\"vosotros\":\"os miraréis\",\"ellos/ellas/ustedes\":\"se mirarán\"},\"condicional_simple\":{\"yo\":\"me miraría\",\"tú\":\"te mirarías\",\"él/ella/usted\":\"se miraría\",\"nosotros\":\"nos miraríamos\",\"vosotros\":\"os miraríais\",\"ellos/ellas/ustedes\":\"se mirarían\"},\"pretérito_perfecto\":\"se ha mirado\",\"participio\":\"mirado\"},\"tags\":[\"verb\",\"a2\"],\"metadata\":{}},{\"id\":\"verbs-a2-reflexive_2-014\",\"target\":\"peinar-se\",\"source\":\"to comb one's hair\",\"type\":\"reflexive\",\"cefr\":\"A2\",\"grammar_note\":\"Regular -ar verb, reflexive.\",\"examples\":[{\"target\":\"Me peino rápidamente por la mañana.\",\"source\":\"I comb my hair quickly in the morning.\"},{\"target\":\"¿Te peinaste antes de venir?\",\"source\":\"Did you comb your hair before coming?\"}],\"conjugations\":{\"presente\":{\"yo\":\"me peino\",\"tú\":\"te peinas\",\"él/ella/usted\":\"se peina\",\"nosotros\":\"nos peinamos\",\"vosotros\":\"os peináis\",\"ellos/ellas/ustedes\":\"se peinan\"},\"pretérito_indefinido\":{\"yo\":\"me peiné\",\"tú\":\"te peinaste\",\"él/ella/usted\":\"se peinó\",\"nosotros\":\"nos peinamos\",\"vosotros\":\"os peinasteis\",\"ellos/ellas/ustedes\":\"se peinaron\"},\"pretérito_imperfecto\":{\"yo\":\"me peinaba\",\"tú\":\"te peinabas\",\"él/ella/usted\":\"se peinaba\",\"nosotros\":\"nos peinábamos\",\"vosotros\":\"os peinabais\",\"ellos/ellas/ustedes\":\"se peinaban\"},\"futuro_simple\":{\"yo\":\"me peinaré\",\"tú\":\"te peinarás\",\"él/ella/usted\":\"se peinará\",\"nosotros\":\"nos peinaremos\",\"vosotros\":\"os peinaréis\",\"ellos/ellas/ustedes\":\"se peinarán\"},\"condicional_simple\":{\"yo\":\"me peinaría\",\"tú\":\"te peinarías\",\"él/ella/usted\":\"se peinaría\",\"nosotros\":\"nos peinaríamos\",\"vosotros\":\"os peinaríais\",\"ellos/ellas/ustedes\":\"se peinarían\"},\"pretérito_perfecto\":\"se ha peinado\",\"participio\":\"peinado\"},\"tags\":[\"verb\",\"a2\"],\"metadata\":{}},{\"id\":\"verbs-a2-reflexive_2-015\",\"target\":\"ponerse\",\"source\":\"to put on (clothing)\",\"type\":\"reflexive\",\"cefr\":\"A2\",\"grammar_note\":\"Irregular -er verb (yo-go, stem change), reflexive.\",\"examples\":[{\"target\":\"Me pongo un abrigo porque hace frío.\",\"source\":\"I put on a coat because it's cold.\"},{\"target\":\"¿Qué te pusiste para la fiesta?\",\"source\":\"What did you put on for the party?\"}],\"conjugations\":{\"presente\":{\"yo\":\"me pongo\",\"tú\":\"te pones\",\"él/ella/usted\":\"se pone\",\"nosotros\":\"nos ponemos\",\"vosotros\":\"os ponéis\",\"ellos/ellas/ustedes\":\"se ponen\"},\"pretérito_indefinido\":{\"yo\":\"me puse\",\"tú\":\"te pusiste\",\"él/ella/usted\":\"se puso\",\"nosotros\":\"nos pusimos\",\"vosotros\":\"os pusisteis\",\"ellos/ellas/ustedes\":\"se pusieron\"},\"pretérito_imperfecto\":{\"yo\":\"me ponía\",\"tú\":\"te ponías\",\"él/ella/usted\":\"se ponía\",\"nosotros\":\"nos poníamos\",\"vosotros\":\"os poníais\",\"ellos/ellas/ustedes\":\"se ponían\"},\"futuro_simple\":{\"yo\":\"me pondré\",\"tú\":\"te pondrás\",\"él/ella/usted\":\"se pondrá\",\"nosotros\":\"nos pondremos\",\"vosotros\":\"os pondréis\",\"ellos/ellas/ustedes\":\"se pondrán\"},\"condicional_simple\":{\"yo\":\"me pondría\",\"tú\":\"te pondrías\",\"él/ella/usted\":\"se pondría\",\"nosotros\":\"nos pondríamos\",\"vosotros\":\"os pondríais\",\"ellos/ellas/ustedes\":\"se pondrían\"},\"pretérito_perfecto\":\"se ha puesto\",\"participio\":\"puesto\"},\"tags\":[\"verb\",\"a2\"],\"metadata\":{}},{\"id\":\"verbs-a2-reflexive_2-016\",\"target\":\"preocupar-se\",\"source\":\"to worry\",\"type\":\"reflexive\",\"cefr\":\"A2\",\"grammar_note\":\"Regular -ar verb, reflexive. Takes preposition 'por'.\",\"examples\":[{\"target\":\"No te preocupes por el examen.\",\"source\":\"Don't worry about the exam.\"},{\"target\":\"Mi madre siempre se preocupa por mí.\\\"\",\"source\":\"My mother always worries about me.\"}],\"conjugations\":{\"presente\":{\"yo\":\"me preocupo\",\"tú\":\"te preocupas\",\"él/ella/usted\":\"se preocupa\",\"nosotros\":\"nos preocupamos\",\"vosotros\":\"os preocupáis\",\"ellos/ellas/ustedes\":\"se preocupan\"},\"pretérito_indefinido\":{\"yo\":\"me preocupé\",\"tú\":\"te preocupaste\",\"él/ella/usted\":\"se preocupó\",\"nosotros\":\"nos preocupamos\",\"vosotros\":\"os preocupasteis\",\"ellos/ellas/ustedes\":\"se preocuparon\"},\"pretérito_imperfecto\":{\"yo\":\"me preocupaba\",\"tú\":\"te preocupabas\",\"él/ella/usted\":\"se preocupaba\",\"nosotros\":\"nos preocupábamos\",\"vosotros\":\"os preocupabais\",\"ellos/ellas/ustedes\":\"se preocupaban\"},\"futuro_simple\":{\"yo\":\"me preocuparé\",\"tú\":\"te preocuparás\",\"él/ella/usted\":\"se preocupará\",\"nosotros\":\"nos preocuparemos\",\"vosotros\":\"os preocuparéis\",\"ellos/ellas/ustedes\":\"se preocuparán\"},\"condicional_simple\":{\"yo\":\"me preocuparía\",\"tú\":\"te preocuparías\",\"él/ella/usted\":\"se preocuparía\",\"nosotros\":\"nos preocuparíamos\",\"vosotros\":\"os preocuparíais\",\"ellos/ellas/ustedes\":\"se preocuparían\"},\"pretérito_perfecto\":\"se ha preocupado\",\"participio\":\"preocupado\"},\"tags\":[\"verb\",\"a2\"],\"metadata\":{}},{\"id\":\"verbs-a2-reflexive_2-017\",\"target\":\"quitar-se\",\"source\":\"to take off (clothing)\",\"type\":\"reflexive\",\"cefr\":\"A2\",\"grammar_note\":\"Regular -ar verb, reflexive.\",\"examples\":[{\"target\":\"Me quito los zapatos al entrar en casa.\",\"source\":\"I take off my shoes when entering the house.\"},{\"target\":\"Ella se quitó el abrigo porque hacía calor.\",\"source\":\"She took off her coat because it was hot.\"}],\"conjugations\":{\"presente\":{\"yo\":\"me quito\",\"tú\":\"te quitas\",\"él/ella/usted\":\"se quita\",\"nosotros\":\"nos quitamos\",\"vosotros\":\"os quitáis\",\"ellos/ellas/ustedes\":\"se quitan\"},\"pretérito_indefinido\":{\"yo\":\"me quité\",\"tú\":\"te quitaste\",\"él/ella/usted\":\"se quitó\",\"nosotros\":\"nos quitamos\",\"vosotros\":\"os quitasteis\",\"ellos/ellas/ustedes\":\"se quitaron\"},\"pretérito_imperfecto\":{\"yo\":\"me quitaba\",\"tú\":\"te quitabas\",\"él/ella/usted\":\"se quitaba\",\"nosotros\":\"nos quitábamos\",\"vosotros\":\"os quitabais\",\"ellos/ellas/ustedes\":\"se quitaban\"},\"futuro_simple\":{\"yo\":\"me quitaré\",\"tú\":\"te quitarás\",\"él/ella/usted\":\"se quitará\",\"nosotros\":\"nos quitaremos\",\"vosotros\":\"os quitaréis\",\"ellos/ellas/ustedes\":\"se quitarán\"},\"condicional_simple\":{\"yo\":\"me quitaría\",\"tú\":\"te quitarías\",\"él/ella/usted\":\"se quitaría\",\"nosotros\":\"nos quitaríamos\",\"vosotros\":\"os quitaríais\",\"ellos/ellas/ustedes\":\"se quitarían\"},\"pretérito_perfecto\":\"se ha quitado\",\"participio\":\"quitado\"},\"tags\":[\"verb\",\"a2\"],\"metadata\":{}},{\"id\":\"verbs-a2-reflexive_2-018\",\"target\":\"secar-se\",\"source\":\"to dry oneself\",\"type\":\"reflexive\",\"cefr\":\"A2\",\"grammar_note\":\"Regular -ar verb, reflexive (c>qu spelling change in preterite yo: sequé).\",\"examples\":[{\"target\":\"Me seco con una toalla grande.\",\"source\":\"I dry myself with a big towel.\"},{\"target\":\"¿Te secaste el pelo después de la ducha?\",\"source\":\"Did you dry your hair after the shower?\"}],\"conjugations\":{\"presente\":{\"yo\":\"me seco\",\"tú\":\"te secas\",\"él/ella/usted\":\"se seca\",\"nosotros\":\"nos secamos\",\"vosotros\":\"os secáis\",\"ellos/ellas/ustedes\":\"se secan\"},\"pretérito_indefinido\":{\"yo\":\"me sequé\",\"tú\":\"te secaste\",\"él/ella/usted\":\"se secó\",\"nosotros\":\"nos secamos\",\"vosotros\":\"os secasteis\",\"ellos/ellas/ustedes\":\"se secaron\"},\"pretérito_imperfecto\":{\"yo\":\"me secaba\",\"tú\":\"te secabas\",\"él/ella/usted\":\"se secaba\",\"nosotros\":\"nos secábamos\",\"vosotros\":\"os secabais\",\"ellos/ellas/ustedes\":\"se secaban\"},\"futuro_simple\":{\"yo\":\"me secaré\",\"tú\":\"te secarás\",\"él/ella/usted\":\"se secará\",\"nosotros\":\"nos secaremos\",\"vosotros\":\"os secaréis\",\"ellos/ellas/ustedes\":\"se secarán\"},\"condicional_simple\":{\"yo\":\"me secaría\",\"tú\":\"te secarías\",\"él/ella/usted\":\"se secaría\",\"nosotros\":\"nos secaríamos\",\"vosotros\":\"os secaríais\",\"ellos/ellas/ustedes\":\"se secarían\"},\"pretérito_perfecto\":\"se ha secado\",\"participio\":\"secado\"},\"tags\":[\"verb\",\"a2\"],\"metadata\":{}},{\"id\":\"verbs-a2-reflexive_2-019\",\"target\":\"sentar-se\",\"source\":\"to sit down\",\"type\":\"reflexive\",\"cefr\":\"A2\",\"grammar_note\":\"Stem-changing -ar verb (e>ie), reflexive.\",\"examples\":[{\"target\":\"Me siento en la silla cerca de la ventana.\",\"source\":\"I sit down on the chair near the window.\"},{\"target\":\"¿Por qué no te sientas un momento?\",\"source\":\"Why don't you sit down for a moment?\"}],\"conjugations\":{\"presente\":{\"yo\":\"me siento\",\"tú\":\"te sientas\",\"él/ella/usted\":\"se sienta\",\"nosotros\":\"nos sentamos\",\"vosotros\":\"os sentáis\",\"ellos/ellas/ustedes\":\"se sientan\"},\"pretérito_indefinido\":{\"yo\":\"me senté\",\"tú\":\"te sentaste\",\"él/ella/usted\":\"se sentó\",\"nosotros\":\"nos sentamos\",\"vosotros\":\"os sentasteis\",\"ellos/ellas/ustedes\":\"se sentaron\"},\"pretérito_imperfecto\":{\"yo\":\"me sentaba\",\"tú\":\"te sentabas\",\"él/ella/usted\":\"se sentaba\",\"nosotros\":\"nos sentábamos\",\"vosotros\":\"os sentabais\",\"ellos/ellas/ustedes\":\"se sentaban\"},\"futuro_simple\":{\"yo\":\"me sentaré\",\"tú\":\"te sentarás\",\"él/ella/usted\":\"se sentará\",\"nosotros\":\"nos sentaremos\",\"vosotros\":\"os sentaréis\",\"ellos/ellas/ustedes\":\"se sentarán\"},\"condicional_simple\":{\"yo\":\"me sentaría\",\"tú\":\"te sentarías\",\"él/ella/usted\":\"se sentaría\",\"nosotros\":\"nos sentaríamos\",\"vosotros\":\"os sentaríais\",\"ellos/ellas/ustedes\":\"se sentarían\"},\"pretérito_perfecto\":\"se ha sentado\",\"participio\":\"sentado\"},\"tags\":[\"verb\",\"a2\"],\"metadata\":{}},{\"id\":\"verbs-a2-reflexive_2-020\",\"target\":\"vestir-se\",\"source\":\"to get dressed\",\"type\":\"reflexive\",\"cefr\":\"A2\",\"grammar_note\":\"Stem-changing -ir verb (e>i), reflexive.\",\"examples\":[{\"target\":\"Me visto rápidamente para no llegar tarde.\",\"source\":\"I get dressed quickly so as not to be late.\"},{\"target\":\"¿Cómo te vestiste para la cena?\",\"source\":\"How did you get dressed for dinner?\"}],\"conjugations\":{\"presente\":{\"yo\":\"me visto\",\"tú\":\"te vistes\",\"él/ella/usted\":\"se viste\",\"nosotros\":\"nos vestimos\",\"vosotros\":\"os vestís\",\"ellos/ellas/ustedes\":\"se visten\"},\"pretérito_indefinido\":{\"yo\":\"me vestí\",\"tú\":\"te vestiste\",\"él/ella/usted\":\"se vistió\",\"nosotros\":\"nos vestimos\",\"vosotros\":\"os vestisteis\",\"ellos/ellas/ustedes\":\"se vistieron\"},\"pretérito_imperfecto\":{\"yo\":\"me vestía\",\"tú\":\"te vestías\",\"él/ella/usted\":\"se vestía\",\"nosotros\":\"nos vestíamos\",\"vosotros\":\"os vestíais\",\"ellos/ellas/ustedes\":\"se vestían\"},\"futuro_simple\":{\"yo\":\"me vestiré\",\"tú\":\"te vestirás\",\"él/ella/usted\":\"se vestirá\",\"nosotros\":\"nos vestiremos\",\"vosotros\":\"os vestiréis\",\"ellos/ellas/ustedes\":\"se vestirán\"},\"condicional_simple\":{\"yo\":\"me vestiría\",\"tú\":\"te vestirías\",\"él/ella/usted\":\"se vestiría\",\"nosotros\":\"nos vestiríamos\",\"vosotros\":\"os vestiríais\",\"ellos/ellas/ustedes\":\"se vestirían\"},\"pretérito_perfecto\":\"se ha vestido\",\"participio\":\"vestido\"},\"tags\":[\"verb\",\"a2\"],\"metadata\":{}}]";
+const langConfigJson = "{\"language_pair\":\"english_spanish\",\"target_lang\":\"es\",\"native_lang\":\"en\",\"target_lang_name\":\"Español\",\"native_lang_name\":\"English\",\"speech_lang\":\"es-ES\",\"noun_metadata_fields\":[{\"key\":\"article\",\"label\":\"Artículo\",\"render\":\"article_badge\"},{\"key\":\"gender\",\"label\":\"Género\",\"render\":\"gender_label\"},{\"key\":\"plural\",\"label\":\"Plural\",\"render\":\"text\"}],\"article_colours\":{\"el\":\"#4A7C9E\",\"la\":\"#B05070\"},\"gender_labels\":{\"m\":\"Masculino\",\"f\":\"Femenino\"},\"verb_tenses\":[\"presente\",\"pretérito_indefinido\",\"pretérito_imperfecto\",\"pretérito_perfecto\",\"participio\",\"futuro_simple\",\"condicional_simple\"],\"cases\":{},\"ui_labels\":{\"learn_mode\":\"Aprender\",\"train_mode\":\"Entrenar\",\"examples_heading\":\"Frases de ejemplo\",\"grammar_note_heading\":\"Nota gramatical\",\"audio_button\":\"Escuchar\",\"back_link\":\"Volver\",\"card_counter\":\"Tarjeta {current} / {total}\",\"next_button\":\"Siguiente\",\"finish_button\":\"Terminar\",\"correct\":\"¡Correcto!\",\"wrong\":\"Incorrecto\",\"dashboard_link\":\"Panel principal\",\"library_prompt\":\"Elige un mazo de la biblioteca y aprende todo el contenido de las tarjetas.\",\"cards_badge\":\"{count} TARJETAS\",\"cards_count\":\"{count} tarjetas\",\"deck_meta\":\"{topic} • {level} • {count} tarjetas\",\"no_decks\":\"Aún no hay mazos en esta categoría.\",\"setup_title\":\"Configurar entrenamiento\",\"setup_subtitle\":\"Configura tu sesión de entrenamiento.\",\"question_type\":\"Tipo de pregunta\",\"mode_multiple_choice\":\"Opción múltiple\",\"mode_typing\":\"Entrada de texto\",\"mode_typing_short\":\"Escritura\",\"direction\":\"Dirección\",\"direction_forward\":\"🇺🇸 English → 🇪🇸 Español\",\"direction_reverse\":\"🇪🇸 Español → 🇺🇸 English\",\"select_level\":\"Seleccionar nivel\",\"start_training\":\"Iniciar entrenamiento\",\"count_label\":\"Cantidad\",\"all_cards\":\"Todas\",\"in_deck\":\"en el mazo\",\"view_cards\":\"Tarjetas\",\"view_list\":\"Lista\",\"card_word\":\"Tarjeta\",\"keyboard_hint_study\":\"← → Flechas para navegar · A para escuchar\",\"example_single_heading\":\"Ejemplo\",\"no_example\":\"No hay ejemplo disponible.\",\"tags_label\":\"Etiquetas:\",\"type_vocab\":\"Vocabulario\",\"type_verb\":\"Verbo\",\"type_phrase\":\"Expresión\",\"type_connector\":\"Conector\",\"type_grammar\":\"Gramática\",\"type_noun\":\"Sustantivo\",\"type_adjective\":\"Adjetivo\",\"type_expression\":\"Locución\",\"plural_prefix\":\"Pl. {plural}\",\"plural_only\":\"solo plural\",\"word_order_heading\":\"Orden de palabras\",\"structure_heading\":\"Estructura\",\"training_title\":\"Entrenamiento\",\"all_levels\":\"Todos los niveles\",\"type_placeholder\":\"Escribe la palabra en español...\",\"check_button\":\"Comprobar\",\"keyboard_hint_train\":\"Intro / Espacio = confirmar · A = Escuchar\",\"audio_title\":\"Escuchar (A)\",\"training_finished\":\"¡Entrenamiento completado!\",\"missed_heading\":\"Respuestas incorrectas — para repetir\",\"retry_missed\":\"Repetir fallos\",\"new_config\":\"Nueva configuración\",\"plural_hint\":\"Pl: {plural}\",\"results_pct\":\"{pct}% de acierto\",\"result_excellent\":\"¡Excelente! Has dominado este nivel.\",\"result_good\":\"¡Muy bien! Un poco más de práctica y lo tendrás dominado.\",\"result_ok\":\"¡Buen comienzo! Repasa las tarjetas una vez más.\",\"result_retry\":\"¡Sin problema! La práctica hace al maestro.\",\"no_cards_title\":\"No se encontraron tarjetas\",\"no_cards_hint\":\"Por favor, elige otro nivel o mazo.\"},\"answer_normalisation\":{\"strip_leading_words\":[\"el\",\"la\",\"los\",\"las\",\"un\",\"una\",\"unos\",\"unas\"],\"alt_spellings\":{\"á\":\"a\",\"é\":\"e\",\"í\":\"i\",\"ó\":\"o\",\"ú\":\"u\",\"ñ\":\"n\",\"ü\":\"u\"}}}";
+const category = "verbs";
+const lang = "en-es";
+const base = "/languagelounge/";
+const defaultView = "cards";
+
+  const cards     = JSON.parse(cardsJson);
+  const config    = JSON.parse(langConfigJson);
+  let currentIndex = 0;
+
+  const dotNav    = document.getElementById('dot-nav');
+  const currentNum = document.getElementById('current-num');
+  const progressBar = document.getElementById('progress-bar');
+  const btnPrev   = document.getElementById('btn-prev');
+  const btnNext   = document.getElementById('btn-next');
+  const cardHost  = document.getElementById('card-host');
+  const progressCont = document.getElementById('progress-container');
+
+  const cardViewWrap = document.getElementById('card-view-wrap');
+  const listViewWrap = document.getElementById('list-view-wrap');
+  const btnViewCards = document.getElementById('view-cards-btn');
+  const btnViewList  = document.getElementById('view-list-btn');
+
+  // Toggle Logic
+  function setViewMode(mode) {
+    if (mode === 'list') {
+      cardViewWrap.classList.add('hidden');
+      listViewWrap.classList.remove('hidden');
+      progressCont.classList.add('hidden');
+      btnViewList.classList.add('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewList.classList.remove('text-[var(--text-muted)]');
+      btnViewCards.classList.remove('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewCards.classList.add('text-[var(--text-muted)]');
+    } else {
+      listViewWrap.classList.add('hidden');
+      cardViewWrap.classList.remove('hidden');
+      progressCont.classList.remove('hidden');
+      btnViewCards.classList.add('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewCards.classList.remove('text-[var(--text-muted)]');
+      btnViewList.classList.remove('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewList.classList.add('text-[var(--text-muted)]');
+    }
+  }
+
+  btnViewCards.addEventListener('click', () => setViewMode('cards'));
+  btnViewList.addEventListener('click', () => setViewMode('list'));
+
+  // Initial view is configured per category (config/language_pairs/*.yaml → categories[].default_view)
+  if (defaultView === 'list') {
+    setViewMode('list');
+  }
+
+
+
+  // ── Helpers (mirror card-renderer.ts — no module imports in inline scripts) ──
+  const articleColours = config.article_colours || {};
+  const genderLabels   = config.gender_labels   || {};
+  const speechLang     = config.speech_lang;
+  const ui             = config.ui_labels || {};
+  const fmt = (tpl, vars) => String(tpl).replace(/\{(\w+)\}/g, (m, k) => (k in vars ? vars[k] : m));
+  const formatHighlight = (text) => text ? String(text).replace(/\*(.*?)\*/g, '<span class="highlighter">$1</span>') : '';
+  // Articles come from the language config (keys of article_colours), never hardcoded
+  const articleList = Object.keys(articleColours);
+  const articlePatterns = articleList.map(a => {
+    const esc = a.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    return esc.endsWith("'") ? esc : `${esc}\\s+`;
+  });
+  const articleRe = articlePatterns.length
+    ? new RegExp('^(?:' + articlePatterns.join('|') + ')', 'i')
+    : null;
+
+  function stripArticle(w) {
+    return articleRe ? (w || '').replace(articleRe, '').trim() : (w || '').trim();
+  }
+
+  function getTypeLabel(card) {
+    const tags = card.tags || [];
+    if (tags.includes('noun'))       return ui.type_noun;
+    if (tags.includes('verb'))       return ui.type_verb;
+    if (tags.includes('adjective'))  return ui.type_adjective;
+    if (tags.includes('expression')) return ui.type_expression;
+    const byType = { vocab: ui.type_vocab, verb: ui.type_verb, phrase: ui.type_phrase, connector: ui.type_connector, grammar: ui.type_grammar };
+    return byType[card.type] || ui.type_vocab;
+  }
+
+  function normaliseEx(ex) {
+    return { target: ex.target||'', source: ex.source||'', note: ex.note };
+  }
+
+  function getMetaFacts(card) {
+    const meta = card.metadata || {};
+    const facts = [];
+    for (const field of (config.noun_metadata_fields || [])) {
+      const raw = meta[field.key];
+      if (!raw || raw==='~') continue;
+      let value = String(raw), colour;
+      if (field.render === 'gender_label')  value  = genderLabels[raw] || raw;
+      if (field.render === 'article_badge') colour = articleColours[raw.toLowerCase()] || 'var(--espresso)';
+      facts.push({ label: field.label, value, colour });
+    }
+    return facts;
+  }
+
+  // ── Card renderer ─────────────────────────────────────────────────────────
+  function renderCard(idx) {
+    const card = cards[idx];
+    if (!card || !cardHost) return;
+
+    const lc = cardHost.querySelector('.learning-card');
+    if (!lc) return;
+
+    function sel(cls) { return lc.querySelector(cls); }
+
+    // Type badge + level
+    sel('.lc-type-badge').textContent = getTypeLabel(card);
+    sel('.lc-level-badge').textContent = (card.level || '').toUpperCase();
+
+    // Article
+    const article = card.metadata?.article;
+    const articleWrap = sel('.lc-article-wrap');
+    const articleEl   = sel('.lc-article');
+    if (article && (card.tags||[]).includes('noun') && !card.metadata?.plural_only) {
+      articleEl.textContent = article;
+      articleEl.style.color = articleColours[article.toLowerCase()] || 'var(--espresso)';
+      articleWrap.style.display = '';
+    } else {
+      articleWrap.style.display = 'none';
+    }
+
+    // Word / translation / forms
+    sel('.lc-word').textContent        = stripArticle(card.target);
+    sel('.lc-translation').textContent = card.source || '';
+    const plural = card.metadata?.plural;
+    sel('.lc-forms').textContent = plural && !card.metadata?.plural_only ? fmt(ui.plural_prefix, { plural }) : card.metadata?.plural_only ? ui.plural_only : '';
+
+    // Meta grid
+    const metaGrid = sel('.lc-meta-grid');
+    const facts = getMetaFacts(card);
+    if (facts.length) {
+      metaGrid.style.gridTemplateColumns = `repeat(${Math.min(facts.length,4)}, 1fr)`;
+      metaGrid.style.display = '';
+      metaGrid.innerHTML = facts.map((f, i) => `
+        <div class="px-5 py-4 ${i<facts.length-1?'border-r':''}" style="border-color:var(--border);">
+          <p class="text-[9px] font-bold uppercase tracking-widest mb-1" style="color:var(--text-muted);">${f.label}</p>
+          <p class="text-sm font-bold" style="color:${f.colour||'var(--text)'};">${f.value}</p>
+        </div>`).join('');
+    } else {
+      metaGrid.style.display = 'none';
+    }
+
+    // Grammar note
+    const grammarWrap = sel('.lc-grammar-wrap');
+    if (card.grammar_note) {
+      sel('.lc-grammar-text').innerHTML = formatHighlight(card.grammar_note);
+      grammarWrap.classList.remove('hidden');
+    } else {
+      grammarWrap.classList.add('hidden');
+    }
+
+    // Examples
+    const examplesEl = sel('.lc-examples');
+    const rawEx = card.examples || [];
+    examplesEl.innerHTML = rawEx.length
+      ? rawEx.map(ex => { const e=normaliseEx(ex); return `
+          <div class="rounded-2xl border overflow-hidden" style="border-color:var(--border);">
+            <div class="px-4 py-3" style="background-color:var(--bg);">
+              <p class="font-semibold leading-snug mb-1" style="color:var(--text);">${e.target}</p>
+              <p class="text-sm italic" style="color:var(--text-muted);">${e.source||''}</p>
+            </div>
+            ${e.note?`<div class="px-4 py-2 border-t" style="border-color:var(--border);">
+              <p class="text-[10px] font-bold font-mono" style="color:var(--espresso);">📐 ${e.note}</p>
+            </div>`:''}
+          </div>`; }).join('')
+      : '<p class="text-sm italic" style="color:var(--text-muted);">' + ui.no_example + '</p>';
+
+    // Verb: conjugation table
+    const conjWrap  = sel('.lc-conjugation-wrap');
+    const conjInner = sel('.lc-conjugation-inner');
+    const cardType = card.type || (card.tags?.includes('verb') ? 'verb' : 'vocab');
+    if (conjWrap && conjInner) {
+      if (cardType === 'verb' && card.conjugations) {
+        conjWrap.classList.remove('hidden');
+        let conjArray = [];
+        if (Array.isArray(card.conjugations)) {
+          conjArray = card.conjugations;
+        } else {
+          for (const [tense, forms] of Object.entries(card.conjugations)) {
+            if (typeof forms === 'string') {
+              conjArray.push({ tense, stringForm: forms });
+            } else {
+              const formsArr = Object.entries(forms).map(([pronoun, form]) => ({ pronoun, form }));
+              conjArray.push({ tense, forms: formsArr });
+            }
+          }
+        }
+
+        const tensesToRender = config.verb_tenses || conjArray.map(t => t.tense);
+        const stringTenses = [];
+        const tableTenses = [];
+
+        tensesToRender.forEach(tense => {
+          const t = conjArray.find(c => c.tense === tense);
+          if (!t) return;
+          if (t.stringForm) stringTenses.push(t);
+          else tableTenses.push(t);
+        });
+
+        let html = '';
+        if (stringTenses.length > 0) {
+          html += `
+            <div class="flex flex-wrap gap-3 mb-6">
+              ${stringTenses.map(t => `
+                <div class="rounded-xl border px-4 py-2.5 flex items-center gap-3 shadow-sm" style="border-color:var(--border); background-color:var(--bg);">
+                  <span class="text-[10px] font-bold uppercase tracking-widest opacity-80" style="color:var(--espresso);">${t.tense.replace(/_/g, ' ')}</span>
+                  <span class="font-bold text-sm" style="color:var(--text);">${t.stringForm}</span>
+                </div>
+              `).join('')}
+            </div>
+          `;
+        }
+
+        if (tableTenses.length > 0) {
+          const pronouns = tableTenses[0].forms.map(f => f.pronoun);
+          html += `
+            <div class="rounded-xl border overflow-x-auto shadow-sm w-full" style="border-color:var(--border);">
+              <table class="w-full text-sm text-left">
+                <thead>
+                  <tr style="background-color:var(--bg); border-bottom: 1px solid var(--border);">
+                    <th class="px-4 py-3 font-bold uppercase tracking-widest text-[10px] w-[1%]" style="color:var(--espresso); border-right: 1px solid var(--border);"></th>
+                    ${tableTenses.map(t => `
+                      <th class="px-4 py-3 font-bold uppercase tracking-widest text-[10px]" style="color:var(--espresso);">${t.tense.replace(/_/g, ' ')}</th>
+                    `).join('')}
+                  </tr>
+                </thead>
+                <tbody>
+                  ${pronouns.map((pronoun, ri) => `
+                    <tr class="${ri < pronouns.length - 1 ? 'border-b' : ''}" style="border-color:var(--border);">
+                      <td class="px-4 py-3 font-bold text-xs whitespace-nowrap" style="color:var(--espresso); background-color:var(--bg); border-right: 1px solid var(--border);">${pronoun}</td>
+                      ${tableTenses.map(t => {
+                        const formObj = t.forms.find(f => f.pronoun === pronoun);
+                        return `<td class="px-4 py-3 font-semibold whitespace-nowrap" style="color:var(--text);">${formObj ? formObj.form : '-'}</td>`;
+                      }).join('')}
+                    </tr>
+                  `).join('')}
+                </tbody>
+              </table>
+            </div>
+          `;
+        }
+        conjInner.innerHTML = html;
+      } else {
+        conjWrap.classList.add('hidden');
+        conjInner.innerHTML = '';
+      }
+    }
+
+    // Connector: word order block
+    const woWrap = sel('.lc-wordorder-wrap');
+    if (woWrap) {
+      if (cardType === 'connector' && card.word_order) {
+        sel('.lc-wordorder-text').textContent = card.word_order;
+        woWrap.classList.remove('hidden');
+      } else {
+        woWrap.classList.add('hidden');
+      }
+    }
+
+    // Phrase: preposition rule block
+    const phraseWrap = sel('.lc-phrase-wrap');
+    if (phraseWrap) {
+      if (cardType === 'phrase' && card.clause_type) {
+        sel('.lc-phrase-rule').textContent = card.clause_type;
+        phraseWrap.classList.remove('hidden');
+      } else {
+        phraseWrap.classList.add('hidden');
+      }
+    }
+
+    // Tags
+    sel('.lc-tags').innerHTML = (card.tags||[]).map(t =>
+      `<span class="text-[10px] font-bold px-2 py-0.5 rounded-md border" style="border-color:var(--border);color:var(--text-muted);background-color:var(--bg);">${t}</span>`
+    ).join('');
+
+    // Progress UI
+    if (currentNum)  currentNum.textContent = String(idx+1);
+    if (progressBar) progressBar.style.width = `${Math.round(((idx+1)/cards.length)*100)}%`;
+    if (btnPrev)     btnPrev.disabled = idx === 0;
+    if (btnNext)     btnNext.innerHTML = idx === cards.length-1
+      ? '✓ ' + ui.finish_button
+      : ui.next_button + ' <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>';
+
+    updateDots();
+
+    // Re-bind audio button cleanly by cloning to strip old listeners
+    const oldBtn = sel('.lc-audio-btn');
+    if (oldBtn) {
+      const newBtn = oldBtn.cloneNode(true);
+      oldBtn.parentNode.replaceChild(newBtn, oldBtn);
+      newBtn.addEventListener('click', speakCurrent);
+    }
+  }
+
+  // ── Dot navigation ────────────────────────────────────────────────────────
+  function buildDots() {
+    if (!dotNav) return;
+    dotNav.innerHTML = '';
+    const maxVisible = 20;
+    const showAll = cards.length <= maxVisible;
+    cards.forEach((_, i) => {
+      if (!showAll && i >= maxVisible) return;
+      const dot = document.createElement('button');
+      dot.className = 'dot w-2 h-2 rounded-full transition-all duration-300 flex-shrink-0';
+      dot.style.backgroundColor = 'var(--border)';
+      dot.title = `${ui.card_word} ${i+1}`;
+      dot.addEventListener('click', () => goTo(i));
+      dotNav.appendChild(dot);
+    });
+    if (!showAll) {
+      const el = document.createElement('span');
+      el.textContent = `+${cards.length - maxVisible}`;
+      el.className = 'text-[10px] font-bold';
+      el.style.color = 'var(--text-muted)';
+      dotNav.appendChild(el);
+    }
+  }
+
+  function updateDots() {
+    dotNav?.querySelectorAll('.dot').forEach((dot, i) => {
+      dot.style.backgroundColor = i===currentIndex ? 'var(--espresso)' : 'var(--border)';
+      dot.style.width     = i===currentIndex ? '20px' : '8px';
+      dot.style.borderRadius = '4px';
+    });
+  }
+
+  // ── Audio ─────────────────────────────────────────────────────────────────
+  function speakCurrent() {
+    const card = cards[currentIndex];
+    if (!card) return;
+    if (window.LoungeAudioEngine) {
+      window.LoungeAudioEngine.speak(card.target || '', speechLang, 0.85);
+    }
+  }
+
+  // ── Navigate ─────────────────────────────────────────────────────────────
+  function goTo(idx) {
+    if (idx < 0 || idx >= cards.length) return;
+    currentIndex = idx;
+    renderCard(currentIndex);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  btnPrev?.addEventListener('click', () => goTo(currentIndex - 1));
+  btnNext?.addEventListener('click', () => {
+    if (currentIndex === cards.length - 1) window.location.href = `${base}${lang}/${category}/`;
+    else goTo(currentIndex + 1);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') goTo(currentIndex + 1);
+    if (e.key === 'ArrowLeft')  goTo(currentIndex - 1);
+    if (e.key === 'a' || e.key === 'A') speakCurrent();
+  });
+
+  // ── Learn / Train panel toggle ──────────────────────
+  const btnLearn = document.getElementById('btn-mode-learn');
+  const btnTrain = document.getElementById('btn-mode-train');
+  const pnlLearn = document.getElementById('learn-panel');
+  const pnlTrain = document.getElementById('train-panel');
+  const toolbar  = document.getElementById('learn-toolbar');
+
+  const STORAGE_KEY = `lounge:${lang}:${category}:deck:mode`;
+  let currentMode = localStorage.getItem(STORAGE_KEY) || 'learn';
+
+  function applyMode() {
+    if (currentMode === 'learn') {
+      btnLearn.style.backgroundColor = 'var(--espresso)';
+      btnLearn.style.color = '#F5F2EB';
+      btnTrain.style.backgroundColor = 'transparent';
+      btnTrain.style.color = 'var(--text-muted)';
+      pnlLearn.classList.remove('hidden');
+      toolbar.classList.remove('hidden');
+      pnlTrain.classList.add('hidden');
+    } else {
+      btnTrain.style.backgroundColor = 'var(--espresso)';
+      btnTrain.style.color = '#F5F2EB';
+      btnLearn.style.backgroundColor = 'transparent';
+      btnLearn.style.color = 'var(--text-muted)';
+      pnlTrain.classList.remove('hidden');
+      pnlLearn.classList.add('hidden');
+      toolbar.classList.add('hidden');
+    }
+    localStorage.setItem(STORAGE_KEY, currentMode);
+  }
+
+  btnLearn?.addEventListener('click', () => { currentMode = 'learn'; applyMode(); });
+  btnTrain?.addEventListener('click', () => { currentMode = 'train'; applyMode(); });
+  applyMode();
+
+  // ── Radio-style selectors (mode & dir & count) ─────────────
+  document.querySelectorAll('.sel-opt').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const group = btn.dataset.group;
+      document.querySelectorAll(`.sel-opt[data-group="${group}"]`).forEach(b => b.classList.remove('sel-active'));
+      btn.classList.add('sel-active');
+      const hidden = document.getElementById(`${group}-hidden`);
+      if (hidden) hidden.value = btn.dataset.value;
+    });
+  });
+
+  document.getElementById('deck-train-form')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const base = form.action;
+    const mode = document.getElementById('mode-hidden')?.value || 'mc';
+    const dir  = document.getElementById('dir-hidden')?.value || `${config.language_pair.source_code}-${config.language_pair.target_code}`.toLowerCase();
+    const count = document.getElementById('count-hidden')?.value || '30';
+    const level = form.querySelector('[name="level"]')?.value || '';
+    const deck = form.querySelector('[name="deck"]')?.value || '';
+    
+    const params = new URLSearchParams();
+    if(level) params.set('level', level);
+    params.set('deck', deck);
+    params.set('mode', mode);
+    params.set('dir', dir);
+    params.set('count', count);
+    
+    window.location.href = `${base}?${params.toString()}`;
+  });
+
+  // ── Init ─────────────────────────────────────────────────────────────────
+  buildDots();
+  // Card 0 is already rendered server-side via LearningCard component.
+  // Sync progress UI to reflect card 0 state.
+  updateDots();
+  if (progressBar) progressBar.style.width = `${Math.round(1/cards.length*100)}%`;
+  // Update card 0 using client-side config too (ensures langConfig is applied)
+  renderCard(0);
+})();</script>

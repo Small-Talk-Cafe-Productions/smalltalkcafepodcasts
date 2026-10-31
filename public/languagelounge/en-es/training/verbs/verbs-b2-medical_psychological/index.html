@@ -1,0 +1,758 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="description" content="Lounge Español — Tu espacio dedicado a la lengua española — amplía tu vocabulario, domina la gramática y perfecciona tu español de A1 a B2."><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/languagelounge/favicon.svg"><meta name="generator" content="Astro v7.3.5"><title>Medical &amp; Psychological — Lounge Español</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet"><script>
+      (function() {
+        const saved = localStorage.getItem('wortschatz_theme');
+        if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script><link rel="stylesheet" href="/languagelounge/_astro/Layout.Cr1varBg.css"><style>.sel-opt[data-astro-cid-5tabbh6g]{border:2px solid var(--border);background-color:var(--card);color:var(--text);cursor:pointer;text-align:center;border-radius:12px;flex-direction:column;justify-content:center;align-items:center;width:100%;padding:14px 12px;transition:border-color .15s,background-color .15s,color .15s,box-shadow .15s;display:flex}.sel-opt[data-astro-cid-5tabbh6g]:hover{border-color:var(--border-hover);box-shadow:0 2px 8px #00000014}.sel-opt[data-astro-cid-5tabbh6g].sel-active{border-color:var(--espresso);background-color:var(--espresso);color:#f5f2eb;box-shadow:0 2px 12px #0000002e}
+</style></head><body class="antialiased min-h-screen flex flex-col" style="background-color:var(--bg);color:var(--text);"><!-- Header --><header class="sticky top-0 z-50 border-b" style="background-color:var(--bg);border-color:var(--border);"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between gap-4" style="height:4.5rem;"><!-- Logo + Language Switcher --><div class="flex items-center gap-4 shrink-0"><a href="/languagelounge/en-es/" class="flex items-center gap-2 group"><span class="font-outfit font-extrabold text-xl sm:text-2xl tracking-tight transition-colors" style="color:var(--text);">Small Talk Café<span class="font-normal text-base hidden sm:inline" style="color:var(--text-muted);"> | <span id="site-name">Lounge Español</span></span></span></a><!-- Language Selector Dropdown --><div class="relative" id="lang-dropdown-wrapper"><button id="lang-btn" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-sm font-bold transition-all hover:opacity-70" style="background-color:var(--bg); border-color:var(--border); color:var(--text);"><span id="lang-flag">🇪🇸</span><span id="lang-code">ES</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"></path></svg></button><div id="lang-menu" class="hidden absolute top-full left-0 mt-2 rounded-2xl border shadow-2xl overflow-hidden z-50 min-w-[260px] sm:min-w-[300px]" style="background-color:var(--card); border-color:var(--border);"><div class="px-3.5 py-2 text-[11px] font-bold uppercase tracking-wider border-b" style="background-color:var(--surface); border-color:var(--border); color:var(--text-muted);">Language Lounges</div><div><a href="/languagelounge/en-de/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇩🇪</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Deutsch Lounge</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">Der Raum für die deutsche Sprache</div></div></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-es/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-bold" style="color:var(--text); background-color:var(--surface);"><span class="text-2xl shrink-0">🇪🇸</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Lounge Español</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">El espacio para la lengua española</div></div><span class="shrink-0 text-[10px] font-extrabold uppercase px-1.5 py-0.5 rounded" style="background-color:var(--accent); color:var(--bg);">Active</span></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-fr/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇫🇷</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Lounge Français</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">Le salon de la langue française</div></div></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-it/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇮🇹</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Lounge Italiano</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">Il salotto per la lingua italiana</div></div></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-nl/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇳🇱</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Nederlands Lounge</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">Dé ontmoetingsplek voor de Nederlandse taal</div></div></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-pt/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇵🇹</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Lounge Português</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">O espaço para a língua portuguesa</div></div></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-sv/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇸🇪</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Svenska Lounge</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">Mötesplatsen för det svenska språket</div></div></a></div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/" class="w-full flex items-center gap-2.5 px-4 py-2.5 text-xs font-semibold hover:opacity-80 transition-colors " style="color:var(--text); "><span class="text-base">🏛️</span><span>Language Lounge Hub</span><span class="ml-auto text-[11px]" style="color:var(--text-muted);">Overview &rarr;</span></a></div></div></div><!-- Dynamic Nav Links --><nav class="hidden md:flex gap-5 items-center"><a href="https://smalltalkcafe.de/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Small Talk Café Podcasts</a><span class="text-sm font-normal" style="color:var(--border);">|</span><a href="/languagelounge/en-es/vocabulary/" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Vocabulario</a><a href="/languagelounge/en-es/verbs/" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Verbos</a><a href="/languagelounge/en-es/grammatik/" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Gramática</a><a href="/languagelounge/en-es/redemittel/" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Expresiones</a><!-- Dark/Light Toggle --><button id="theme-toggle" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-sm font-semibold transition-all hover:opacity-70" style="border-color:var(--border); color:var(--text-muted);" aria-label="Toggle dark/light mode"><span id="theme-icon">☀️</span><span id="theme-label">Light</span></button></nav></div></header><main id="main-content" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-1 w-full"><div class="max-w-4xl mx-auto py-6" data-astro-cid-5tabbh6g><!-- Deck Header --><div class="flex items-start justify-between mb-8 gap-4 flex-wrap" data-astro-cid-5tabbh6g><div data-astro-cid-5tabbh6g><a href="/languagelounge/en-es/verbs/" class="text-xs font-bold flex items-center gap-1 mb-2 hover:opacity-70 transition-opacity" style="color:var(--espresso);" data-astro-cid-5tabbh6g><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><path d="m15 18-6-6 6-6" data-astro-cid-5tabbh6g></path></svg>Verbos</a><h1 class="text-2xl md:text-3xl font-extrabold font-outfit" style="color:var(--text);" data-astro-cid-5tabbh6g>Medical &amp; Psychological</h1><p class="text-xs font-bold uppercase tracking-wider mt-1" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Médico y Psicológico • B2 • 20 tarjetas</p></div><div class="flex flex-col items-end gap-4 w-full md:w-auto mt-4 md:mt-0" data-astro-cid-5tabbh6g><!-- ── Mode Toggle ───────────────────────────── --><div class="flex rounded-xl border overflow-hidden p-1 gap-1 w-full max-w-[300px]" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><button id="btn-mode-learn" class="mode-btn flex-1 flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold transition-all" data-astro-cid-5tabbh6g><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" data-astro-cid-5tabbh6g></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" data-astro-cid-5tabbh6g></path></svg>Aprender</button><button id="btn-mode-train" class="mode-btn flex-1 flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold transition-all" data-astro-cid-5tabbh6g><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><circle cx="12" cy="12" r="10" data-astro-cid-5tabbh6g></circle><polyline points="12 6 12 12 16 14" data-astro-cid-5tabbh6g></polyline></svg>Entrenar</button></div><div id="learn-toolbar" class="flex flex-col items-end gap-4 w-full" data-astro-cid-5tabbh6g><!-- View switcher (Cards vs List) --><div class="flex rounded-xl border overflow-hidden p-1 gap-1 w-full max-w-[300px]" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><button id="view-cards-btn" class="view-btn flex-1 flex items-center justify-center px-4 py-2 rounded-lg text-xs font-bold transition-all bg-[var(--espresso)] text-[#F5F2EB]" data-astro-cid-5tabbh6g>Tarjetas</button><button id="view-list-btn" class="view-btn flex-1 flex items-center justify-center px-4 py-2 rounded-lg text-xs font-bold transition-all text-[var(--text-muted)] hover:opacity-70" data-astro-cid-5tabbh6g>Lista</button></div><!-- Progress indicator --><div id="progress-container" class="flex items-center gap-3" data-astro-cid-5tabbh6g><div class="text-xs font-semibold" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Tarjeta <span id="current-num" class="font-extrabold" style="color:var(--text);" data-astro-cid-5tabbh6g>1</span> / 20</div><div class="w-24 h-1.5 rounded-full overflow-hidden border" style="background-color:var(--bg);border-color:var(--border);" data-astro-cid-5tabbh6g><div id="progress-bar" class="h-full transition-all duration-500 rounded-full" style="width:0%; background-color:var(--espresso);" data-astro-cid-5tabbh6g></div></div></div></div></div></div><!-- ══ LEARN PANEL ════════════════════════════ --><div id="learn-panel" class="space-y-6" data-astro-cid-5tabbh6g><!-- ── Universal Study Card (rendered by LearningCard component) ── --><div id="card-view-wrap" data-astro-cid-5tabbh6g><div id="card-host" data-astro-cid-5tabbh6g><!-- The card shell — populated client-side by renderCard() --><div class="learning-card rounded-3xl border shadow-xl overflow-hidden" style="background-color:var(--card); border-color:var(--border);"><!-- ── Top bar ─────────────────────────────────── --><div class="lc-topbar flex items-center justify-between px-6 py-3.5 border-b" style="border-color:var(--border); background-color:var(--bg);"><div class="flex items-center gap-2"><span class="lc-type-badge text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-lg" style="background-color:var(--espresso); color:#F5F2EB;">—</span><span class="lc-level-badge text-[10px] font-bold px-2.5 py-1 rounded-lg cafe-badge"></span></div><button class="lc-audio-btn flex items-center justify-center w-11 h-11 rounded-full transition-transform hover:scale-105 active:scale-95 shadow-md flex-shrink-0" title="Escuchar (A)" style="background-color:var(--espresso); color:#F5F2EB;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg></button></div><!-- ── Main word display ───────────────────────── --><div class="lc-hero px-7 py-8 text-center border-b" style="border-color:var(--border);"><div class="lc-article-wrap mb-1.5"><span class="lc-article text-xl font-bold"></span></div><h2 class="lc-word text-5xl md:text-6xl font-extrabold font-outfit mb-3" style="color:var(--text);">—</h2><p class="lc-translation text-lg font-semibold italic" style="color:var(--text-muted);"></p><p class="lc-forms text-sm font-medium mt-2" style="color:var(--text-muted);"></p></div><!-- ── Meta info grid ─────────────────────────── --><div class="lc-meta-grid grid border-b" style="border-color:var(--border);"><!-- populated by JS --></div><!-- ── Grammar note ───────────────────────────── --><div class="lc-grammar-wrap hidden px-7 py-5 border-b" style="border-color:var(--border); background-color:var(--bg);"><p class="text-[10px] font-bold uppercase tracking-widest mb-2" style="color:var(--espresso);">📌 <span class="lc-grammar-label">Nota gramatical</span></p><p class="lc-grammar-text text-sm leading-relaxed font-medium whitespace-pre-wrap" style="color:var(--text);"></p></div><!-- ── Type-specific block ────────────────────── --><!-- Connector word-order block --><div class="lc-wordorder-wrap hidden px-7 py-4 border-b" style="border-color:var(--border); background-color:var(--bg);"><div class="flex items-start gap-3 text-sm font-medium" style="color:var(--text-muted);"><span class="text-base flex-shrink-0">📐</span><span class="lc-wordorder-text"></span></div></div><!-- Phrase preposition block --><div class="lc-phrase-wrap hidden px-7 py-4 border-b" style="border-color:var(--border); background-color:var(--bg);"><p class="text-[10px] font-bold uppercase tracking-widest mb-2" style="color:var(--espresso);">Estructura</p><p class="lc-phrase-rule text-sm font-semibold" style="color:var(--text);"></p></div><!-- ── Examples ───────────────────────────────── --><div class="px-7 py-6 border-b" style="border-color:var(--border);"><p class="lc-examples-label text-[10px] font-bold uppercase tracking-widest mb-5" style="color:var(--text-muted);">Frases de ejemplo</p><div class="lc-examples space-y-3"><!-- populated by JS --></div></div><!-- Verb conjugation (hidden by default, shown for verb cards) --><div class="lc-conjugation-wrap hidden border-b px-7 py-6" style="border-color:var(--border);"><div class="lc-conjugation-inner flex flex-wrap gap-4"><!-- populated by JS --></div></div><!-- ── Tags ───────────────────────────────────── --><div class="lc-tags-row px-7 py-4 flex items-center gap-2 flex-wrap"><span class="text-[10px] font-bold uppercase tracking-wider" style="color:var(--text-muted);">Etiquetas:</span><div class="lc-tags flex gap-2 flex-wrap"></div></div></div><script>(function(){const cardJson = "{\"id\":\"verbs-b2-medical_psychological-001\",\"target\":\"aconsejar\",\"source\":\"to advise / to counsel\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"First conjugation (-ar) regular verb; often takes the subjunctive mood in subordinate clauses when giving professional recommendations.\",\"examples\":[{\"target\":\"El especialista me aconsejó que descansara al menos una semana después de la intervención quirúrgica.\",\"source\":\"The specialist advised me to rest for at least a week after the surgical procedure.\"},{\"target\":\"La psicóloga suele aconsejar técnicas de respiración profunda para controlar los ataques de pánico.\",\"source\":\"The psychologist usually counsels deep breathing techniques to manage panic attacks.\"}],\"conjugations\":{\"presente\":{\"yo\":\"aconsejo\",\"tú\":\"aconsejas\",\"él/ella/usted\":\"aconseja\",\"nosotros\":\"aconsejamos\",\"vosotros\":\"aconsejáis\",\"ellos/ellas/ustedes\":\"aconsejan\"},\"pretérito_indefinido\":{\"yo\":\"aconsejé\",\"tú\":\"aconsejaste\",\"él/ella/usted\":\"aconsejó\",\"nosotros\":\"aconsejamos\",\"vosotros\":\"aconsejasteis\",\"ellos/ellas/ustedes\":\"aconsejaron\"},\"pretérito_imperfecto\":{\"yo\":\"aconsejaba\",\"tú\":\"aconsejabas\",\"él/ella/usted\":\"aconsejaba\",\"nosotros\":\"aconsejábamos\",\"vosotros\":\"aconsejabais\",\"ellos/ellas/ustedes\":\"aconsejaban\"},\"futuro_simple\":{\"yo\":\"aconsejaré\",\"tú\":\"aconsejarás\",\"él/ella/usted\":\"aconsejará\",\"nosotros\":\"aconsejaremos\",\"vosotros\":\"aconsejaréis\",\"ellos/ellas/ustedes\":\"aconsejarán\"},\"condicional_simple\":{\"yo\":\"aconsejaría\",\"tú\":\"aconsejarías\",\"él/ella/usted\":\"aconsejaría\",\"nosotros\":\"aconsejaríamos\",\"vosotros\":\"aconsejaríais\",\"ellos/ellas/ustedes\":\"aconsejarían\"},\"pretérito_perfecto\":\"ha aconsejado\",\"participio\":\"aconsejado\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}}";
+const langConfigJson = "{\"language_pair\":\"english_spanish\",\"target_lang\":\"es\",\"native_lang\":\"en\",\"target_lang_name\":\"Español\",\"native_lang_name\":\"English\",\"speech_lang\":\"es-ES\",\"noun_metadata_fields\":[{\"key\":\"article\",\"label\":\"Artículo\",\"render\":\"article_badge\"},{\"key\":\"gender\",\"label\":\"Género\",\"render\":\"gender_label\"},{\"key\":\"plural\",\"label\":\"Plural\",\"render\":\"text\"}],\"article_colours\":{\"el\":\"#4A7C9E\",\"la\":\"#B05070\"},\"gender_labels\":{\"m\":\"Masculino\",\"f\":\"Femenino\"},\"verb_tenses\":[\"presente\",\"pretérito_indefinido\",\"pretérito_imperfecto\",\"pretérito_perfecto\",\"participio\",\"futuro_simple\",\"condicional_simple\"],\"cases\":{},\"ui_labels\":{\"learn_mode\":\"Aprender\",\"train_mode\":\"Entrenar\",\"examples_heading\":\"Frases de ejemplo\",\"grammar_note_heading\":\"Nota gramatical\",\"audio_button\":\"Escuchar\",\"back_link\":\"Volver\",\"card_counter\":\"Tarjeta {current} / {total}\",\"next_button\":\"Siguiente\",\"finish_button\":\"Terminar\",\"correct\":\"¡Correcto!\",\"wrong\":\"Incorrecto\",\"dashboard_link\":\"Panel principal\",\"library_prompt\":\"Elige un mazo de la biblioteca y aprende todo el contenido de las tarjetas.\",\"cards_badge\":\"{count} TARJETAS\",\"cards_count\":\"{count} tarjetas\",\"deck_meta\":\"{topic} • {level} • {count} tarjetas\",\"no_decks\":\"Aún no hay mazos en esta categoría.\",\"setup_title\":\"Configurar entrenamiento\",\"setup_subtitle\":\"Configura tu sesión de entrenamiento.\",\"question_type\":\"Tipo de pregunta\",\"mode_multiple_choice\":\"Opción múltiple\",\"mode_typing\":\"Entrada de texto\",\"mode_typing_short\":\"Escritura\",\"direction\":\"Dirección\",\"direction_forward\":\"🇺🇸 English → 🇪🇸 Español\",\"direction_reverse\":\"🇪🇸 Español → 🇺🇸 English\",\"select_level\":\"Seleccionar nivel\",\"start_training\":\"Iniciar entrenamiento\",\"count_label\":\"Cantidad\",\"all_cards\":\"Todas\",\"in_deck\":\"en el mazo\",\"view_cards\":\"Tarjetas\",\"view_list\":\"Lista\",\"card_word\":\"Tarjeta\",\"keyboard_hint_study\":\"← → Flechas para navegar · A para escuchar\",\"example_single_heading\":\"Ejemplo\",\"no_example\":\"No hay ejemplo disponible.\",\"tags_label\":\"Etiquetas:\",\"type_vocab\":\"Vocabulario\",\"type_verb\":\"Verbo\",\"type_phrase\":\"Expresión\",\"type_connector\":\"Conector\",\"type_grammar\":\"Gramática\",\"type_noun\":\"Sustantivo\",\"type_adjective\":\"Adjetivo\",\"type_expression\":\"Locución\",\"plural_prefix\":\"Pl. {plural}\",\"plural_only\":\"solo plural\",\"word_order_heading\":\"Orden de palabras\",\"structure_heading\":\"Estructura\",\"training_title\":\"Entrenamiento\",\"all_levels\":\"Todos los niveles\",\"type_placeholder\":\"Escribe la palabra en español...\",\"check_button\":\"Comprobar\",\"keyboard_hint_train\":\"Intro / Espacio = confirmar · A = Escuchar\",\"audio_title\":\"Escuchar (A)\",\"training_finished\":\"¡Entrenamiento completado!\",\"missed_heading\":\"Respuestas incorrectas — para repetir\",\"retry_missed\":\"Repetir fallos\",\"new_config\":\"Nueva configuración\",\"plural_hint\":\"Pl: {plural}\",\"results_pct\":\"{pct}% de acierto\",\"result_excellent\":\"¡Excelente! Has dominado este nivel.\",\"result_good\":\"¡Muy bien! Un poco más de práctica y lo tendrás dominado.\",\"result_ok\":\"¡Buen comienzo! Repasa las tarjetas una vez más.\",\"result_retry\":\"¡Sin problema! La práctica hace al maestro.\",\"no_cards_title\":\"No se encontraron tarjetas\",\"no_cards_hint\":\"Por favor, elige otro nivel o mazo.\"},\"answer_normalisation\":{\"strip_leading_words\":[\"el\",\"la\",\"los\",\"las\",\"un\",\"una\",\"unos\",\"unas\"],\"alt_spellings\":{\"á\":\"a\",\"é\":\"e\",\"í\":\"i\",\"ó\":\"o\",\"ú\":\"u\",\"ñ\":\"n\",\"ü\":\"u\"}}}";
+
+  /**
+   * Client-side card renderer.
+   * Uses the universal card-renderer logic inline (no imports in Astro is:inline).
+   */
+
+  // ── Parse data ──────────────────────────────────────────────────────────
+  const card   = JSON.parse(cardJson);
+  const config = JSON.parse(langConfigJson);
+
+  // ── Helpers ─────────────────────────────────────────────────────────────
+  // Articles come from the language config (keys of article_colours), never hardcoded
+  const articleList = Object.keys(config.article_colours || {});
+  const articlePatterns = articleList.map(a => {
+    const esc = a.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    return esc.endsWith("'") ? esc : `${esc}\\s+`;
+  });
+  const articleRe = articlePatterns.length
+    ? new RegExp('^(?:' + articlePatterns.join('|') + ')', 'i')
+    : null;
+
+  function stripArticle(word) {
+    return articleRe ? (word || '').replace(articleRe, '').trim() : (word || '').trim();
+  }
+
+  function getArticleColour(article) {
+    if (!article || !config.article_colours) return 'var(--espresso)';
+    return config.article_colours[article.toLowerCase()] || 'var(--espresso)';
+  }
+
+  function getGenderLabel(gender) {
+    if (!gender) return '';
+    return (config.gender_labels || {})[gender] || gender;
+  }
+
+  const uiLabels = config.ui_labels || {};
+
+  function getTypeLabel() {
+    const tags = card.tags || [];
+    if (tags.includes('noun'))       return uiLabels.type_noun || 'Noun';
+    if (tags.includes('verb'))       return uiLabels.type_verb || 'Verb';
+    if (tags.includes('adjective'))  return uiLabels.type_adjective || 'Adjective';
+    if (tags.includes('expression')) return uiLabels.type_expression || 'Expression';
+    const map = {
+      vocab: uiLabels.type_vocab || 'Vocab',
+      verb: uiLabels.type_verb || 'Verb',
+      phrase: uiLabels.type_phrase || 'Phrase',
+      connector: uiLabels.type_connector || 'Connector',
+      grammar: uiLabels.type_grammar || 'Grammar'
+    };
+    return map[card.type] || uiLabels.card_word || 'Card';
+  }
+
+  function formatHighlight(text) {
+    if (!text) return '';
+    return String(text).replace(/\*(.*?)\*/g, '<span class="highlighter">$1</span>');
+  }
+
+  function getMetaFacts() {
+    const meta = card.metadata || {};
+    const facts = [];
+    for (const field of (config.noun_metadata_fields || [])) {
+      const raw = meta[field.key] || card[field.key];
+      if (!raw || raw === '~') continue;
+      let value = String(raw);
+      let colour;
+      if (field.render === 'gender_label') value = getGenderLabel(raw);
+      else if (field.render === 'article_badge') colour = getArticleColour(raw);
+      facts.push({ label: field.label, value, colour });
+    }
+    return facts;
+  }
+
+  // ── Render ──────────────────────────────────────────────────────────────
+  const container = document.querySelector('.learning-card');
+  if (!container) { console.error('LearningCard: container not found'); }
+
+  function sel(cls) { return container?.querySelector(cls); }
+
+  // Type badge
+  sel('.lc-type-badge').textContent = getTypeLabel();
+
+  // Level badge
+  sel('.lc-level-badge').textContent = card.level || '';
+
+  // Article
+  const article = card.metadata?.article;
+  const articleWrap = sel('.lc-article-wrap');
+  const articleEl   = sel('.lc-article');
+  if (article && card.tags?.includes('noun') && !card.metadata?.plural_only) {
+    articleEl.textContent  = article;
+    articleEl.style.color  = getArticleColour(article);
+    articleWrap.style.display = '';
+  } else {
+    articleWrap.style.display = 'none';
+  }
+
+  // Word
+  sel('.lc-word').textContent = stripArticle(card.target);
+
+  // Translation
+  sel('.lc-translation').textContent = card.source || '';
+
+  // Plural / forms
+  const plural = card.metadata?.plural;
+  const formsEl = sel('.lc-forms');
+  const prefix = uiLabels.plural_prefix || 'Pl.';
+  const pluralOnly = uiLabels.plural_only || 'Plural only';
+  if (plural && !card.metadata?.plural_only) formsEl.textContent = `${prefix} ${plural}`;
+  else if (card.metadata?.plural_only) formsEl.textContent = pluralOnly;
+  else formsEl.textContent = '';
+
+  // Meta grid
+  const metaGrid = sel('.lc-meta-grid');
+  const facts = getMetaFacts();
+  if (facts.length) {
+    const cols = Math.min(facts.length, 4);
+    metaGrid.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
+    metaGrid.innerHTML = facts.map((f, i) => `
+      <div class="px-5 py-4 ${i < facts.length - 1 ? 'border-r' : ''}" style="border-color:var(--border);">
+        <p class="text-[9px] font-bold uppercase tracking-widest mb-1" style="color:var(--text-muted);">${f.label}</p>
+        <p class="text-sm font-bold" style="color:${f.colour || 'var(--text)'};">${f.value}</p>
+      </div>
+    `).join('');
+  } else {
+    metaGrid.style.display = 'none';
+  }
+
+  // Grammar note
+  const grammarWrap = sel('.lc-grammar-wrap');
+  if (card.grammar_note) {
+    sel('.lc-grammar-text').innerHTML = formatHighlight(card.grammar_note);
+    grammarWrap.classList.remove('hidden');
+  }
+
+  // Grammar label from config
+  const uiLabels = config.ui_labels || {};
+  if (uiLabels.grammar_note_heading) sel('.lc-grammar-label').textContent = uiLabels.grammar_note_heading;
+  if (uiLabels.examples_heading)     sel('.lc-examples-label').textContent = uiLabels.examples_heading;
+  if (uiLabels.audio_button)         { const el = sel('.lc-audio-label'); if (el) el.textContent = uiLabels.audio_button; }
+
+  // ── Type-specific blocks ─────────────────────────────────────────────────
+
+  // Verb: conjugation table
+  const type = card.type || (card.tags?.includes('verb') ? 'verb' : 'vocab');
+  if (type === 'verb' && card.conjugations) {
+    const conjWrap  = sel('.lc-conjugation-wrap');
+    const conjInner = sel('.lc-conjugation-inner');
+    conjWrap.classList.remove('hidden');
+
+    let conjArray = [];
+    if (Array.isArray(card.conjugations)) {
+      conjArray = card.conjugations;
+    } else {
+      for (const [tense, forms] of Object.entries(card.conjugations)) {
+        if (typeof forms === 'string') {
+          conjArray.push({ tense, stringForm: forms });
+        } else {
+          const formsArr = Object.entries(forms).map(([pronoun, form]) => ({ pronoun, form }));
+          conjArray.push({ tense, forms: formsArr });
+        }
+      }
+    }
+
+    const tensesToRender = config.verb_tenses || conjArray.map(t => t.tense);
+
+    const stringTenses = [];
+    const tableTenses = [];
+
+    tensesToRender.forEach(tense => {
+      const t = conjArray.find(c => c.tense === tense);
+      if (!t) return;
+      if (t.stringForm) stringTenses.push(t);
+      else tableTenses.push(t);
+    });
+
+    let html = '';
+
+    // Render simple string forms (e.g. Perfekt, Partizip II) as pill-like tags at the top
+    if (stringTenses.length > 0) {
+      html += `
+        <div class="flex flex-wrap gap-3 mb-6">
+          ${stringTenses.map(t => `
+            <div class="rounded-xl border px-4 py-2.5 flex items-center gap-3 shadow-sm" style="border-color:var(--border); background-color:var(--bg);">
+              <span class="text-[10px] font-bold uppercase tracking-widest opacity-80" style="color:var(--espresso);">${t.tense.replace(/_/g, ' ')}</span>
+              <span class="font-bold text-sm" style="color:var(--text);">${t.stringForm}</span>
+            </div>
+          `).join('')}
+        </div>
+      `;
+    }
+
+    // Render full tables (e.g. Präsens, Präteritum) as a unified table
+    if (tableTenses.length > 0) {
+      // Collect all pronouns from the first available table tense
+      const pronouns = tableTenses[0].forms.map(f => f.pronoun);
+
+      html += `
+        <div class="rounded-xl border overflow-x-auto shadow-sm w-full" style="border-color:var(--border);">
+          <table class="w-full text-sm text-left">
+            <thead>
+              <tr style="background-color:var(--bg); border-bottom: 1px solid var(--border);">
+                <th class="px-4 py-3 font-bold uppercase tracking-widest text-[10px] w-[1%]" style="color:var(--espresso); border-right: 1px solid var(--border);"></th>
+                ${tableTenses.map(t => `
+                  <th class="px-4 py-3 font-bold uppercase tracking-widest text-[10px]" style="color:var(--espresso);">${t.tense.replace(/_/g, ' ')}</th>
+                `).join('')}
+              </tr>
+            </thead>
+            <tbody>
+              ${pronouns.map((pronoun, ri) => `
+                <tr class="${ri < pronouns.length - 1 ? 'border-b' : ''}" style="border-color:var(--border);">
+                  <td class="px-4 py-3 font-bold text-xs whitespace-nowrap" style="color:var(--espresso); background-color:var(--bg); border-right: 1px solid var(--border);">${pronoun}</td>
+                  ${tableTenses.map(t => {
+                    const formObj = t.forms.find(f => f.pronoun === pronoun);
+                    return `<td class="px-4 py-3 font-semibold whitespace-nowrap" style="color:var(--text);">${formObj ? formObj.form : '-'}</td>`;
+                  }).join('')}
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+        </div>
+      `;
+    }
+
+    conjInner.innerHTML = html;
+  }
+
+  // Connector: word order block
+  if (type === 'connector' && card.word_order) {
+    const woWrap = sel('.lc-wordorder-wrap');
+    sel('.lc-wordorder-text').textContent = card.word_order;
+    woWrap.classList.remove('hidden');
+  }
+
+  // Phrase: preposition rule block
+  if (type === 'phrase' && card.clause_type) {
+    const phraseWrap = sel('.lc-phrase-wrap');
+    sel('.lc-phrase-rule').textContent = card.clause_type;
+    phraseWrap.classList.remove('hidden');
+  }
+
+  // ── Examples ─────────────────────────────────────────────────────────────
+  const examplesEl = sel('.lc-examples');
+  const rawExamples = card.examples || [];
+
+  if (rawExamples.length) {
+    examplesEl.innerHTML = rawExamples.map(e => `
+        <div class="rounded-2xl border overflow-hidden" style="border-color:var(--border);">
+          <div class="px-4 py-3" style="background-color:var(--bg);">
+            <p class="font-semibold leading-snug mb-1" style="color:var(--text);">${formatHighlight(e.target)}</p>
+            <p class="text-sm italic" style="color:var(--text-muted);">${formatHighlight(e.source || '')}</p>
+          </div>
+          ${e.note ? `<div class="px-4 py-2 border-t" style="border-color:var(--border);">
+            <p class="text-[10px] font-bold font-mono" style="color:var(--espresso);">📐 ${e.note}</p>
+          </div>` : ''}
+        </div>
+      `).join('');
+  } else {
+    examplesEl.innerHTML = `<p class="text-sm italic" style="color:var(--text-muted);">${uiLabels.no_example || ''}</p>`;
+  }
+
+  // ── Tags ─────────────────────────────────────────────────────────────────
+  const tagsEl = sel('.lc-tags');
+  tagsEl.innerHTML = (card.tags || []).map(t => `
+    <span class="text-[10px] font-bold px-2 py-0.5 rounded-md border uppercase" style="border-color:var(--border); color:var(--text-muted); background-color:var(--bg);">${t}</span>
+  `).join('');
+
+  // ── Audio button ─────────────────────────────────────────────────────────
+  sel('.lc-audio-btn')?.addEventListener('click', () => {
+    if (window.LoungeAudioEngine) {
+      window.LoungeAudioEngine.speak(card.target || '', config.speech_lang, 0.85);
+    }
+  });
+})();</script></div><!-- ── Navigation ───────────────────────────── --><div class="flex items-center justify-between mt-8 gap-4" data-astro-cid-5tabbh6g><button id="btn-prev" disabled class="flex items-center gap-2 px-6 py-3 rounded-2xl border font-bold text-sm transition-all hover:opacity-70 active:scale-95 disabled:opacity-30 disabled:cursor-not-allowed" style="border-color:var(--border); color:var(--text); background-color:var(--card);" data-astro-cid-5tabbh6g><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><path d="m15 18-6-6 6-6" data-astro-cid-5tabbh6g></path></svg>Volver</button><!-- Dot navigation --><div id="dot-nav" class="flex items-center gap-1.5 flex-wrap justify-center max-w-xs overflow-hidden" style="max-height:2rem;" data-astro-cid-5tabbh6g><!-- populated by JS --></div><button id="btn-next" class="flex items-center gap-2 px-6 py-3 rounded-2xl font-bold text-sm transition-all hover:opacity-80 active:scale-95" style="background-color:var(--espresso); color:#F5F2EB;" data-astro-cid-5tabbh6g>Siguiente<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><path d="m9 18 6-6-6-6" data-astro-cid-5tabbh6g></path></svg></button></div><!-- Keyboard hint --><p class="text-center text-xs font-medium mt-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>← → Flechas para navegar · A para escuchar</p></div><!-- ── List View ───────────────────────────── --><div id="list-view-wrap" class="hidden space-y-6" data-astro-cid-5tabbh6g><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>aconsejar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to advise / to counsel</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>First conjugation (-ar) regular verb; often takes the subjunctive mood in subordinate clauses when giving professional recommendations.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Ejemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>El especialista me aconsejó que descansara al menos una semana después de la intervención quirúrgica.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The specialist advised me to rest for at least a week after the surgical procedure.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>agobiar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to overwhelm / to weigh down</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>First conjugation (-ar) regular verb; frequently used reflexively ('agobiarse') to describe feeling overwhelmed or stressed.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Ejemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>La acumulación de trabajo y las exigencias diarias pueden agobiar la salud mental del paciente.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The accumulation of work and daily demands can overwhelm the patient's mental health.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>atenuar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to alleviate / to mitigate / to tone down</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>First conjugation (-ar) verb with a written accent on the weak vowel in certain present forms (atenúo, atenúa) to maintain hiatus, though standard conjugation patterns apply.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Ejemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Este nuevo fármaco analgésico ayuda a atenuar el dolor crónico sin causar efectos secundarios graves.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>This new analgesic drug helps to alleviate chronic pain without causing severe side effects.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>carecer</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to lack / to be devoid of</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Third conjugation (-er/-ir group pattern, specifically -ecer) irregular verb with a 'zc' mutation in the first-person singular present (carezco) and present subjunctive.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Ejemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Muchos pacientes con trastornos depresivos graves suelen carecer de motivación para realizar actividades cotidianas.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Many patients with severe depressive disorders tend to lack motivation to carry out daily activities.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>cohibirse</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to inhibit oneself / to feel awkward</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Third conjugation (-ir) reflexive verb; requires reflexive pronouns and features written accents on the 'i' in various present and imperfect subjunctive forms to indicate hiatus.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Ejemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>La paciente tendía a cohibirse durante las primeras sesiones de terapia debido a su timidez extrema.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The female patient tended to inhibit herself during the first therapy sessions due to her extreme shyness.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>diagnosticar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to diagnose</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>First conjugation (-ar) regular verb; orthographic change in the preterite yo form (diagnostiqué) to preserve the hard /k/ sound before 'e'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Ejemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>El neurólogo le diagnosticó una migraña crónica tras analizar exhaustivamente todos sus síntomas.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The neurologist diagnosed him with chronic migraine after exhaustively analyzing all his symptoms.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>descompensarse</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to become destabilized / to decompensate</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>First conjugation (-ar) reflexive verb; commonly used in medicine when chronic conditions (like diabetes or hypertension) lose stability.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Ejemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Si el paciente diabético no sigue la dieta estricta, su nivel de glucosa en sangre puede descompensarse rápidamente.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>If the diabetic patient does not follow the strict diet, their blood glucose level can quickly become destabilized.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>disminuir</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to decrease / to diminish / to reduce</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Third conjugation (-ir) verb with a yod spelling change (adding 'y' between vowels in certain forms: disminuye, disminuyen) and written accents.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Ejemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Los analgésicos recetados lograron disminuir la inflamación en las articulaciones del paciente reumático.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The prescribed painkillers managed to decrease the inflammation in the rheumatic patient's joints.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>enfrentarse</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to face / to confront</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>First conjugation (-ar) reflexive verb; typically used with the preposition 'a' ('enfrentarse a') when confronting difficulties or psychological traumas.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Ejemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Muchos veteranos de guerra tienen que enfrentarse al trastorno de estrés postraumático al volver.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Many war veterans have to face post-traumatic stress disorder upon returning.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>fallecer</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to pass away / to die</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Third conjugation (-ecer) irregular verb; uses the 'zc' mutation in the first-person singular present (fallezco) and throughout the present subjunctive.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Ejemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>El anciano lamentablemente falleció en el hospital tras una larga enfermedad degenerativa.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The elderly man unfortunately passed away in the hospital after a long degenerative illness.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>inhibir</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to inhibit / to block</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Third conjugation (-ir) regular verb; often used in pharmacology regarding neurotransmitters or enzyme actions.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Ejemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Este medicamento está diseñado para inhibir la recaptación de serotonina en el sistema nervioso central.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>This medication is designed to inhibit serotonin reuptake in the central nervous system.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>internalizar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to internalize</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>First conjugation (-ar) regular verb; frequently applied in psychological contexts regarding emotions, behaviors, or social norms.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Ejemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Durante la infancia, las personas tienden a internalizar las expectativas críticas de sus padres de manera inconsciente.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>During childhood, people tend to internalize the critical expectations of their parents unconsciously.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>medicarse</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to medicate oneself / to take medication</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>First conjugation (-ar) reflexive verb; used when individuals take drugs for health issues, sometimes carrying a warning against self-medication ('automedicarse').</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Ejemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Los médicos advierten que nunca se debe medicarse sin la supervisión previa de un profesional sanitario.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Doctors warn that one must never medicate oneself without the prior supervision of a health professional.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>paralizarse</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to become paralyzed / to freeze up</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>First conjugation (-ar) reflexive verb; used both literally (neurological paralysis) and metaphorically (psychological freezing under extreme fear or shock).</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Ejemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Ante una situación de peligro extremo, algunas personas tienden a paralizarse por completo debido al pánico.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Faced with a situation of extreme danger, some people tend to freeze up completely due to panic.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>paliar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to alleviate / to palliate / to ease</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>First conjugation (-ar) regular verb; frequently used in palliative care ('cuidados paliativos') to describe easing symptoms without curing the root cause.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Ejemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Los cuidados paliativos buscan paliar el sufrimiento físico y emocional de los enfermos terminales.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Palliative care seeks to ease the physical and emotional suffering of terminally ill patients.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>prescribir</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to prescribe</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Third conjugation (-ir) regular verb; shares the exact same participle irregular form history as escribir ('prescrito'), though 'prescripto' is also found in some regions.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Ejemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>El psiquiatra le prescribió un tratamiento farmacológico innovador para regular sus cambios de humor.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The psychiatrist prescribed him an innovative pharmacological treatment to regulate his mood swings.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>recaer</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to relapse / to fall back</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Second conjugation (-er) irregular verb; compound of 'caer', adding an extra 'y' in the preterite 3rd person (recayó, recayeron) and present subjunctive.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Ejemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Desafortunadamente, el paciente volvió a consumir sustancias adictivas y experimentó una fuerte recaída; es decir, volvió a recaer.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Unfortunately, the patient started using addictive substances again and experienced a strong relapse; that is, he relapsed again.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>reprimir</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to repress / to suppress</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Third conjugation (-ir) regular verb; frequently used in psychoanalysis regarding emotions or memories kept out of conscious awareness.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Ejemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Según la teoría freudiana, reprimir los traumas infantiles puede generar trastornos psicológicos graves en la edad adulta.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>According to Freudian theory, repressing childhood traumas can generate serious psychological disorders in adulthood.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>somatizar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to somatize</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>First conjugation (-ar) regular verb; takes a spelling change in the preterite 'yo' form (somatisé -> somaticé) to preserve pronunciation.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Ejemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Muchas personas estresadas suelen somatizar sus problemas emocionales sufriendo dolores físicos inexplicables.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Many stressed people tend to somatize their emotional problems by suffering inexplicable physical pains.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>superar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to overcome / to get over</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>First conjugation (-ar) regular verb; extensively used in psychological recovery, coping mechanisms, and successfully dealing with clinical disorders.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Ejemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Con la ayuda de un buen terapeuta, logró superar sus ataques de pánico en menos de un año.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>With the help of a good therapist, she managed to overcome her panic attacks in less than a year.</p></div></div></div></div></div></div><!-- ══ TRAIN PANEL ════════════════════════════ --><div id="train-panel" class="hidden space-y-10" data-astro-cid-5tabbh6g><div class="cafe-card rounded-3xl p-8 border shadow-lg max-w-xl mx-auto" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="text-center mb-8" data-astro-cid-5tabbh6g><h2 class="text-2xl font-extrabold font-outfit mb-2" style="color:var(--text);" data-astro-cid-5tabbh6g>Configurar entrenamiento</h2><p class="text-sm font-medium" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Configura tu sesión de entrenamiento.</p></div><form action="/languagelounge/en-es/training/verbs/train/" method="GET" class="space-y-8" id="deck-train-form" data-astro-cid-5tabbh6g><input type="hidden" name="level" value="b2" data-astro-cid-5tabbh6g><input type="hidden" name="deck" value="verbs-b2-medical_psychological" data-astro-cid-5tabbh6g><!-- Mode selection --><div class="space-y-3" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold tracking-widest uppercase" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Tipo de pregunta</p><div class="grid grid-cols-2 gap-3" data-astro-cid-5tabbh6g><button type="button" data-group="mode" data-value="mc" class="sel-opt sel-active" data-astro-cid-5tabbh6g><span class="text-xl mb-1 block" data-astro-cid-5tabbh6g>🔘</span><span class="text-sm font-bold" data-astro-cid-5tabbh6g>Opción múltiple</span></button><button type="button" data-group="mode" data-value="type" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-xl mb-1 block" data-astro-cid-5tabbh6g>⌨️</span><span class="text-sm font-bold" data-astro-cid-5tabbh6g>Entrada de texto</span></button></div><input type="hidden" name="mode" id="mode-hidden" value="mc" data-astro-cid-5tabbh6g></div><!-- Direction selection --><div class="space-y-3" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold tracking-widest uppercase" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Dirección</p><div class="grid grid-cols-2 gap-3" data-astro-cid-5tabbh6g><button type="button" data-group="dir" data-value="en-es" class="sel-opt sel-active" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>🇺🇸 English → 🇪🇸 Español</span></button><button type="button" data-group="dir" data-value="es-en" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>🇪🇸 Español → 🇺🇸 English</span></button></div><input type="hidden" name="dir" id="dir-hidden" value="en-es" data-astro-cid-5tabbh6g></div><!-- Count Selection --><div class="space-y-3" data-astro-cid-5tabbh6g><div class="flex justify-between items-end" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold tracking-widest uppercase" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Cantidad</p><span class="text-xs font-bold" style="color:var(--espresso);" data-astro-cid-5tabbh6g>20 tarjetas en el mazo</span></div><div class="grid grid-cols-4 gap-3" data-astro-cid-5tabbh6g><button type="button" data-group="count" data-value="30" class="sel-opt sel-active" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>30</span></button><button type="button" data-group="count" data-value="60" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>60</span></button><button type="button" data-group="count" data-value="90" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>90</span></button><button type="button" data-group="count" data-value="1000" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>Todas</span></button></div><input type="hidden" name="count" id="count-hidden" value="30" data-astro-cid-5tabbh6g></div><button type="submit" class="w-full py-4 rounded-xl font-bold text-base transition-all hover:opacity-90 mt-4 shadow-md active:scale-[0.98]" style="background-color:var(--espresso); color:#F5F2EB;" data-astro-cid-5tabbh6g>Iniciar entrenamiento &rarr;</button></form></div></div></div></main><footer class="mt-auto border-t py-8" style="background-color:var(--bg);border-color:var(--border);"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-medium" style="color:var(--text-muted);"><div>&copy; 2025 - 2026 Small Talk Café Podcasts. All rights reserved.</div><div class="flex gap-4">Made in Bayern ❤️ Los Geht's!</div></div></footer><!-- Minimal script for Theme and Dropdown toggle --><script>
+      // ── Theme ──────────────────────────────────────
+      function applyTheme(dark) {
+        if (dark) {
+          document.documentElement.classList.add('dark');
+          localStorage.setItem('wortschatz_theme', 'dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+          localStorage.setItem('wortschatz_theme', 'light');
+        }
+        const icon = document.getElementById('theme-icon');
+        const label = document.getElementById('theme-label');
+        if (icon) icon.textContent = dark ? '🌙' : '☀️';
+        if (label) label.textContent = dark ? 'Dark' : 'Light';
+      }
+
+      const isDark = document.documentElement.classList.contains('dark');
+      applyTheme(isDark);
+
+      document.getElementById('theme-toggle')?.addEventListener('click', () => {
+        const nowDark = !document.documentElement.classList.contains('dark');
+        applyTheme(nowDark);
+      });
+
+      // ── Dropdown Toggle ──────────────────────────
+      const langBtn = document.getElementById('lang-btn');
+      const langMenu = document.getElementById('lang-menu');
+
+      langBtn?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        langMenu?.classList.toggle('hidden');
+      });
+
+      document.addEventListener('click', () => {
+        langMenu?.classList.add('hidden');
+      });
+    </script></body></html><script type="module" src="/languagelounge/_astro/_deckId_.astro_astro_type_script_index_0_lang.DwXABuW8.js"></script><script>(function(){const cardsJson = "[{\"id\":\"verbs-b2-medical_psychological-001\",\"target\":\"aconsejar\",\"source\":\"to advise / to counsel\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"First conjugation (-ar) regular verb; often takes the subjunctive mood in subordinate clauses when giving professional recommendations.\",\"examples\":[{\"target\":\"El especialista me aconsejó que descansara al menos una semana después de la intervención quirúrgica.\",\"source\":\"The specialist advised me to rest for at least a week after the surgical procedure.\"},{\"target\":\"La psicóloga suele aconsejar técnicas de respiración profunda para controlar los ataques de pánico.\",\"source\":\"The psychologist usually counsels deep breathing techniques to manage panic attacks.\"}],\"conjugations\":{\"presente\":{\"yo\":\"aconsejo\",\"tú\":\"aconsejas\",\"él/ella/usted\":\"aconseja\",\"nosotros\":\"aconsejamos\",\"vosotros\":\"aconsejáis\",\"ellos/ellas/ustedes\":\"aconsejan\"},\"pretérito_indefinido\":{\"yo\":\"aconsejé\",\"tú\":\"aconsejaste\",\"él/ella/usted\":\"aconsejó\",\"nosotros\":\"aconsejamos\",\"vosotros\":\"aconsejasteis\",\"ellos/ellas/ustedes\":\"aconsejaron\"},\"pretérito_imperfecto\":{\"yo\":\"aconsejaba\",\"tú\":\"aconsejabas\",\"él/ella/usted\":\"aconsejaba\",\"nosotros\":\"aconsejábamos\",\"vosotros\":\"aconsejabais\",\"ellos/ellas/ustedes\":\"aconsejaban\"},\"futuro_simple\":{\"yo\":\"aconsejaré\",\"tú\":\"aconsejarás\",\"él/ella/usted\":\"aconsejará\",\"nosotros\":\"aconsejaremos\",\"vosotros\":\"aconsejaréis\",\"ellos/ellas/ustedes\":\"aconsejarán\"},\"condicional_simple\":{\"yo\":\"aconsejaría\",\"tú\":\"aconsejarías\",\"él/ella/usted\":\"aconsejaría\",\"nosotros\":\"aconsejaríamos\",\"vosotros\":\"aconsejaríais\",\"ellos/ellas/ustedes\":\"aconsejarían\"},\"pretérito_perfecto\":\"ha aconsejado\",\"participio\":\"aconsejado\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-medical_psychological-002\",\"target\":\"agobiar\",\"source\":\"to overwhelm / to weigh down\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"First conjugation (-ar) regular verb; frequently used reflexively ('agobiarse') to describe feeling overwhelmed or stressed.\",\"examples\":[{\"target\":\"La acumulación de trabajo y las exigencias diarias pueden agobiar la salud mental del paciente.\",\"source\":\"The accumulation of work and daily demands can overwhelm the patient's mental health.\"},{\"target\":\"No te dejes agobiar por los resultados negativos de las pruebas médicas antes de hablar con el doctor.\",\"source\":\"Don't let yourself get overwhelmed by the negative medical test results before talking to the doctor.\"}],\"conjugations\":{\"presente\":{\"yo\":\"agobio\",\"tú\":\"agobias\",\"él/ella/usted\":\"agobia\",\"nosotros\":\"agobiamos\",\"vosotros\":\"agobiáis\",\"ellos/ellas/ustedes\":\"agobian\"},\"pretérito_indefinido\":{\"yo\":\"agobié\",\"tú\":\"agobiaste\",\"él/ella/usted\":\"agobió\",\"nosotros\":\"agobiamos\",\"vosotros\":\"agobiasteis\",\"ellos/ellas/ustedes\":\"agobiaron\"},\"pretérito_imperfecto\":{\"yo\":\"agobiaba\",\"tú\":\"agobiabas\",\"él/ella/usted\":\"agobiaba\",\"nosotros\":\"agobiábamos\",\"vosotros\":\"agobiabais\",\"ellos/ellas/ustedes\":\"agobiaban\"},\"futuro_simple\":{\"yo\":\"agobiaré\",\"tú\":\"agobiarás\",\"él/ella/usted\":\"agobiará\",\"nosotros\":\"agobiaremos\",\"vosotros\":\"agobiaréis\",\"ellos/ellas/ustedes\":\"agobiarán\"},\"condicional_simple\":{\"yo\":\"agobiaría\",\"tú\":\"agobiarías\",\"él/ella/usted\":\"agobiaría\",\"nosotros\":\"agobiaríamos\",\"vosotros\":\"agobiaríais\",\"ellos/ellas/ustedes\":\"agobiarían\"},\"pretérito_perfecto\":\"ha agobiado\",\"participio\":\"agobiado\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-medical_psychological-003\",\"target\":\"atenuar\",\"source\":\"to alleviate / to mitigate / to tone down\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"First conjugation (-ar) verb with a written accent on the weak vowel in certain present forms (atenúo, atenúa) to maintain hiatus, though standard conjugation patterns apply.\",\"examples\":[{\"target\":\"Este nuevo fármaco analgésico ayuda a atenuar el dolor crónico sin causar efectos secundarios graves.\",\"source\":\"This new analgesic drug helps to alleviate chronic pain without causing severe side effects.\"},{\"target\":\"La terapia cognitivo-conductual sirve para atenuar los síntomas persistentes de la ansiedad social.\",\"source\":\"Cognitive-behavioral therapy serves to mitigate the persistent symptoms of social anxiety.\"}],\"conjugations\":{\"presente\":{\"yo\":\"atenúo\",\"tú\":\"atenúas\",\"él/ella/usted\":\"atenúa\",\"nosotros\":\"atenuamos\",\"vosotros\":\"atenuáis\",\"ellos/ellas/ustedes\":\"atenúan\"},\"pretérito_indefinido\":{\"yo\":\"atenué\",\"tú\":\"atenuaste\",\"él/ella/usted\":\"atenuó\",\"nosotros\":\"atenuamos\",\"vosotros\":\"atenuasteis\",\"ellos/ellas/ustedes\":\"atenuaron\"},\"pretérito_imperfecto\":{\"yo\":\"atenuaba\",\"tú\":\"atenuabas\",\"él/ella/usted\":\"atenuaba\",\"nosotros\":\"atenuábamos\",\"vosotros\":\"atenuabais\",\"ellos/ellas/ustedes\":\"atenuaban\"},\"futuro_simple\":{\"yo\":\"atenuaré\",\"tú\":\"atenuarás\",\"él/ella/usted\":\"atenuará\",\"nosotros\":\"atenuaremos\",\"vosotros\":\"atenuaréis\",\"ellos/ellas/ustedes\":\"atenuarán\"},\"condicional_simple\":{\"yo\":\"atenuaría\",\"tú\":\"atenuarías\",\"él/ella/usted\":\"atenuaría\",\"nosotros\":\"atenuaríamos\",\"vosotros\":\"atenuaríais\",\"ellos/ellas/ustedes\":\"atenuarían\"},\"pretérito_perfecto\":\"ha atenuado\",\"participio\":\"atenuado\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-medical_psychological-004\",\"target\":\"carecer\",\"source\":\"to lack / to be devoid of\",\"type\":\"irregular\",\"cefr\":\"B2\",\"grammar_note\":\"Third conjugation (-er/-ir group pattern, specifically -ecer) irregular verb with a 'zc' mutation in the first-person singular present (carezco) and present subjunctive.\",\"examples\":[{\"target\":\"Muchos pacientes con trastornos depresivos graves suelen carecer de motivación para realizar actividades cotidianas.\",\"source\":\"Many patients with severe depressive disorders tend to lack motivation to carry out daily activities.\"},{\"target\":\"El informe médico parecía carecer de información crucial sobre el historial clínico del paciente.\",\"source\":\"The medical report seemed to lack crucial information about the patient's clinical history.\"}],\"conjugations\":{\"presente\":{\"yo\":\"carezco\",\"tú\":\"careces\",\"él/ella/usted\":\"carece\",\"nosotros\":\"carecemos\",\"vosotros\":\"carecéis\",\"ellos/ellas/ustedes\":\"carecen\"},\"pretérito_indefinido\":{\"yo\":\"carecí\",\"tú\":\"careciste\",\"él/ella/usted\":\"careció\",\"nosotros\":\"carecemos\",\"vosotros\":\"carecisteis\",\"ellos/ellas/ustedes\":\"carecieron\"},\"pretérito_imperfecto\":{\"yo\":\"carecía\",\"tú\":\"carecías\",\"él/ella/usted\":\"carecía\",\"nosotros\":\"carecíamos\",\"vosotros\":\"carecíais\",\"ellos/ellas/ustedes\":\"carecían\"},\"futuro_simple\":{\"yo\":\"careceré\",\"tú\":\"carecerás\",\"él/ella/usted\":\"carecerá\",\"nosotros\":\"careceremos\",\"vosotros\":\"careceréis\",\"ellos/ellas/ustedes\":\"carecerán\"},\"condicional_simple\":{\"yo\":\"carecería\",\"tú\":\"carecerías\",\"él/ella/usted\":\"carecería\",\"nosotros\":\"careceríamos\",\"vosotros\":\"careceríais\",\"ellos/ellas/ustedes\":\"carecerían\"},\"pretérito_perfecto\":\"ha carecido\",\"participio\":\"carecido\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-medical_psychological-005\",\"target\":\"cohibirse\",\"source\":\"to inhibit oneself / to feel awkward\",\"type\":\"reflexive\",\"cefr\":\"B2\",\"grammar_note\":\"Third conjugation (-ir) reflexive verb; requires reflexive pronouns and features written accents on the 'i' in various present and imperfect subjunctive forms to indicate hiatus.\",\"examples\":[{\"target\":\"La paciente tendía a cohibirse durante las primeras sesiones de terapia debido a su timidez extrema.\",\"source\":\"The female patient tended to inhibit herself during the first therapy sessions due to her extreme shyness.\"},{\"target\":\"Es completamente normal no cohibirse cuando uno busca ayuda psicológica profesional por primera vez.\",\"source\":\"It is completely normal not to hold back when seeking professional psychological help for the first time.\"}],\"conjugations\":{\"presente\":{\"yo\":\"me cohíbo\",\"tú\":\"te cohíbes\",\"él/ella/usted\":\"se cohíbe\",\"nosotros\":\"nos cohibimos\",\"vosotros\":\"os cohibís\",\"ellos/ellas/ustedes\":\"se cohíben\"},\"pretérito_indefinido\":{\"yo\":\"me cohibí\",\"tú\":\"te cohibiste\",\"él/ella/usted\":\"se cohibió\",\"nosotros\":\"nos cohibimos\",\"vosotros\":\"os cohibisteis\",\"ellos/ellas/ustedes\":\"se cohibieron\"},\"pretérito_imperfecto\":{\"yo\":\"me cohibía\",\"tú\":\"te cohibías\",\"él/ella/usted\":\"se cohibía\",\"nosotros\":\"nos cohibíamos\",\"vosotros\":\"os cohibíais\",\"ellos/ellas/ustedes\":\"se cohibían\"},\"futuro_simple\":{\"yo\":\"me cohibiré\",\"tú\":\"te cohibirás\",\"él/ella/usted\":\"se cohibirá\",\"nosotros\":\"nos cohibiremos\",\"vosotros\":\"os cohibiréis\",\"ellos/ellas/ustedes\":\"se cohibirán\"},\"condicional_simple\":{\"yo\":\"me cohibiría\",\"tú\":\"te cohibirías\",\"él/ella/usted\":\"se cohibiría\",\"nosotros\":\"nos cohibiríamos\",\"vosotros\":\"os cohibiríais\",\"ellos/ellas/ustedes\":\"se cohibirían\"},\"pretérito_perfecto\":\"se ha cohibido\",\"participio\":\"cohibido\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-medical_psychological-006\",\"target\":\"diagnosticar\",\"source\":\"to diagnose\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"First conjugation (-ar) regular verb; orthographic change in the preterite yo form (diagnostiqué) to preserve the hard /k/ sound before 'e'.\",\"examples\":[{\"target\":\"El neurólogo le diagnosticó una migraña crónica tras analizar exhaustivamente todos sus síntomas.\",\"source\":\"The neurologist diagnosed him with chronic migraine after exhaustively analyzing all his symptoms.\"},{\"target\":\"Pudieron diagnosticar el trastorno de ansiedad generalizada antes de que la situación empeorara.\",\"source\":\"They were able to diagnose generalized anxiety disorder before the situation worsened.\"}],\"conjugations\":{\"presente\":{\"yo\":\"diagnostico\",\"tú\":\"diagnosticas\",\"él/ella/usted\":\"diagnostica\",\"nosotros\":\"diagnosticamos\",\"vosotros\":\"diagnosticáis\",\"ellos/ellas/ustedes\":\"diagnostican\"},\"pretérito_indefinido\":{\"yo\":\"diagnostiqué\",\"tú\":\"diagnosticaste\",\"él/ella/usted\":\"diagnosticó\",\"nosotros\":\"diagnosticamos\",\"vosotros\":\"diagnosticasteis\",\"ellos/ellas/ustedes\":\"diagnosticaron\"},\"pretérito_imperfecto\":{\"yo\":\"diagnosticaba\",\"tú\":\"diagnosticabas\",\"él/ella/usted\":\"diagnosticaba\",\"nosotros\":\"diagnosticábamos\",\"vosotros\":\"diagnosticabais\",\"ellos/ellas/ustedes\":\"diagnosticaban\"},\"futuro_simple\":{\"yo\":\"diagnosticaré\",\"tú\":\"diagnosticarás\",\"él/ella/usted\":\"diagnosticará\",\"nosotros\":\"diagnosticaremos\",\"vosotros\":\"diagnosticaréis\",\"ellos/ellas/ustedes\":\"diagnosticarán\"},\"condicional_simple\":{\"yo\":\"diagnosticaría\",\"tú\":\"diagnosticarías\",\"él/ella/usted\":\"diagnosticaría\",\"nosotros\":\"diagnosticaríamos\",\"vosotros\":\"diagnosticaríais\",\"ellos/ellas/ustedes\":\"diagnosticarían\"},\"pretérito_perfecto\":\"ha diagnosticado\",\"participio\":\"diagnosticado\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-medical_psychological-007\",\"target\":\"descompensarse\",\"source\":\"to become destabilized / to decompensate\",\"type\":\"reflexive\",\"cefr\":\"B2\",\"grammar_note\":\"First conjugation (-ar) reflexive verb; commonly used in medicine when chronic conditions (like diabetes or hypertension) lose stability.\",\"examples\":[{\"target\":\"Si el paciente diabético no sigue la dieta estricta, su nivel de glucosa en sangre puede descompensarse rápidamente.\",\"source\":\"If the diabetic patient does not follow the strict diet, their blood glucose level can quickly become destabilized.\"},{\"target\":\"La salud mental del enfermo se descompensó debido a una fuerte carga de estrés emocional.\",\"source\":\"The patient's mental health decompensated due to a heavy burden of emotional stress.\"}],\"conjugations\":{\"presente\":{\"yo\":\"me despenso\",\"tú\":\"te descompensas\",\"él/ella/usted\":\"se descompensa\",\"nosotros\":\"nos descompensamos\",\"vosotros\":\"os descompensáis\",\"ellos/ellas/ustedes\":\"se descompensan\"},\"pretérito_indefinido\":{\"yo\":\"me descompensé\",\"tú\":\"te descompensaste\",\"él/ella/usted\":\"se descompensó\",\"nosotros\":\"nos descompensamos\",\"vosotros\":\"os descompensasteis\",\"ellos/ellas/ustedes\":\"se descompensaron\"},\"pretérito_imperfecto\":{\"yo\":\"me descompensaba\",\"tú\":\"te descompensabas\",\"él/ella/usted\":\"se descompensaba\",\"nosotros\":\"nos descompensábamos\",\"vosotros\":\"os descompensabais\",\"ellos/ellas/ustedes\":\"se descompensaban\"},\"futuro_simple\":{\"yo\":\"me descompensaré\",\"tú\":\"te descompensarás\",\"él/ella/usted\":\"se descompensará\",\"nosotros\":\"nos descompensaremos\",\"vosotros\":\"os descompensaréis\",\"ellos/ellas/ustedes\":\"se descompensarán\"},\"condicional_simple\":{\"yo\":\"me descompensaría\",\"tú\":\"te descompensarías\",\"él/ella/usted\":\"se descompensaría\",\"nosotros\":\"nos descompensaríamos\",\"vosotros\":\"os descompensaríais\",\"ellos/ellas/ustedes\":\"se descompensarían\"},\"pretérito_perfecto\":\"se ha descompensado\",\"participio\":\"descompensado\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-medical_psychological-008\",\"target\":\"disminuir\",\"source\":\"to decrease / to diminish / to reduce\",\"type\":\"irregular\",\"cefr\":\"B2\",\"grammar_note\":\"Third conjugation (-ir) verb with a yod spelling change (adding 'y' between vowels in certain forms: disminuye, disminuyen) and written accents.\",\"examples\":[{\"target\":\"Los analgésicos recetados lograron disminuir la inflamación en las articulaciones del paciente reumático.\",\"source\":\"The prescribed painkillers managed to decrease the inflammation in the rheumatic patient's joints.\"},{\"target\":\"La terapia psicológica ayuda a disminuir los niveles de cortisol asociados con el estrés crónico.\",\"source\":\"Psychological therapy helps to reduce the cortisol levels associated with chronic stress.\"}],\"conjugations\":{\"presente\":{\"yo\":\"disminuyo\",\"tú\":\"disminuyes\",\"él/ella/usted\":\"disminuye\",\"nosotros\":\"disminuimos\",\"vosotros\":\"disminuís\",\"ellos/ellas/ustedes\":\"disminuyen\"},\"pretérito_indefinido\":{\"yo\":\"disminuí\",\"tú\":\"disminuiste\",\"él/ella/usted\":\"disminuyó\",\"nosotros\":\"disminuimos\",\"vosotros\":\"disminuisteis\",\"ellos/ellas/ustedes\":\"disminuyeron\"},\"pretérito_imperfecto\":{\"yo\":\"disminuía\",\"tú\":\"disminuías\",\"él/ella/usted\":\"disminuía\",\"nosotros\":\"disminuíamos\",\"vosotros\":\"disminuíais\",\"ellos/ellas/ustedes\":\"disminuían\"},\"futuro_simple\":{\"yo\":\"disminuiré\",\"tú\":\"disminuirás\",\"él/ella/usted\":\"disminuirá\",\"nosotros\":\"disminuiremos\",\"vosotros\":\"disminuiréis\",\"ellos/ellas/ustedes\":\"disminuirán\"},\"condicional_simple\":{\"yo\":\"disminuiría\",\"tú\":\"disminuirías\",\"él/ella/usted\":\"disminuiría\",\"nosotros\":\"disminuiríamos\",\"vosotros\":\"disminuiríais\",\"ellos/ellas/ustedes\":\"disminuirían\"},\"pretérito_perfecto\":\"ha disminuido\",\"participio\":\"disminuido\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-medical_psychological-009\",\"target\":\"enfrentarse\",\"source\":\"to face / to confront\",\"type\":\"reflexive\",\"cefr\":\"B2\",\"grammar_note\":\"First conjugation (-ar) reflexive verb; typically used with the preposition 'a' ('enfrentarse a') when confronting difficulties or psychological traumas.\",\"examples\":[{\"target\":\"Muchos veteranos de guerra tienen que enfrentarse al trastorno de estrés postraumático al volver.\",\"source\":\"Many war veterans have to face post-traumatic stress disorder upon returning.\"},{\"target\":\"Es fundamental que el paciente aprenda a enfrentarse a sus fobias mediante la terapia de exposición.\",\"source\":\"It is essential that the patient learns to confront their phobias through exposure therapy.\"}],\"conjugations\":{\"presente\":{\"yo\":\"me enfrento\",\"tú\":\"te enfrentas\",\"él/ella/usted\":\"se enfrenta\",\"nosotros\":\"nos enfrentamos\",\"vosotros\":\"os enfrentáis\",\"ellos/ellas/ustedes\":\"se enfrentan\"},\"pretérito_indefinido\":{\"yo\":\"me enfrenté\",\"tú\":\"te enfrentaste\",\"él/ella/usted\":\"se enfrentó\",\"nosotros\":\"nos enfrentamos\",\"vosotros\":\"os enfrentasteis\",\"ellos/ellas/ustedes\":\"se enfrentaron\"},\"pretérito_imperfecto\":{\"yo\":\"me enfrentaba\",\"tú\":\"te enfrentabas\",\"él/ella/usted\":\"se enfrentaba\",\"nosotros\":\"nos enfrentábamos\",\"vosotros\":\"os enfrentabais\",\"ellos/ellas/ustedes\":\"se enfrentaban\"},\"futuro_simple\":{\"yo\":\"me enfrentaré\",\"tú\":\"te enfrentarás\",\"él/ella/usted\":\"se enfrentará\",\"nosotros\":\"nos enfrentaremos\",\"vosotros\":\"os enfrentaréis\",\"ellos/ellas/ustedes\":\"se enfrentarán\"},\"condicional_simple\":{\"yo\":\"me enfrentaría\",\"tú\":\"te enfrentarías\",\"él/ella/usted\":\"se enfrentaría\",\"nosotros\":\"nos enfrentaríamos\",\"vosotros\":\"os enfrentaríais\",\"ellos/ellas/ustedes\":\"se enfrentarían\"},\"pretérito_perfecto\":\"se ha enfrentado\",\"participio\":\"enfrentado\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-medical_psychological-010\",\"target\":\"fallecer\",\"source\":\"to pass away / to die\",\"type\":\"irregular\",\"cefr\":\"B2\",\"grammar_note\":\"Third conjugation (-ecer) irregular verb; uses the 'zc' mutation in the first-person singular present (fallezco) and throughout the present subjunctive.\",\"examples\":[{\"target\":\"El anciano lamentablemente falleció en el hospital tras una larga enfermedad degenerativa.\",\"source\":\"The elderly man unfortunately passed away in the hospital after a long degenerative illness.\"},{\"target\":\"La pérdida repentina de un ser querido puede hacer que la persona fallezca emocionalmente por dentro.\",\"source\":\"The sudden loss of a loved one can cause a person to perish emotionally inside.\"}],\"conjugations\":{\"presente\":{\"yo\":\"fallezco\",\"tú\":\"falleces\",\"él/ella/usted\":\"fallece\",\"nosotros\":\"fallecemos\",\"vosotros\":\"fallecéis\",\"ellos/ellas/ustedes\":\"fallecen\"},\"pretérito_indefinido\":{\"yo\":\"fallecí\",\"tú\":\"falleciste\",\"él/ella/usted\":\"falleció\",\"nosotros\":\"fallecemos\",\"vosotros\":\"fallecisteis\",\"ellos/ellas/ustedes\":\"fallecieron\"},\"pretérito_imperfecto\":{\"yo\":\"fallecía\",\"tú\":\"fallecías\",\"él/ella/usted\":\"fallecía\",\"nosotros\":\"fallecíamos\",\"vosotros\":\"fallecíais\",\"ellos/ellas/ustedes\":\"fallecían\"},\"futuro_simple\":{\"yo\":\"falleceré\",\"tú\":\"fallecerás\",\"él/ella/usted\":\"fallecerá\",\"nosotros\":\"falleceremos\",\"vosotros\":\"falleceréis\",\"ellos/ellas/ustedes\":\"fallecerán\"},\"condicional_simple\":{\"yo\":\"fallecería\",\"tú\":\"fallecerías\",\"él/ella/usted\":\"fallecería\",\"nosotros\":\"falleceríamos\",\"vosotros\":\"falleceríais\",\"ellos/ellas/ustedes\":\"fallecerían\"},\"pretérito_perfecto\":\"ha fallecido\",\"participio\":\"fallecido\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-medical_psychological-011\",\"target\":\"inhibir\",\"source\":\"to inhibit / to block\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Third conjugation (-ir) regular verb; often used in pharmacology regarding neurotransmitters or enzyme actions.\",\"examples\":[{\"target\":\"Este medicamento está diseñado para inhibir la recaptación de serotonina en el sistema nervioso central.\",\"source\":\"This medication is designed to inhibit serotonin reuptake in the central nervous system.\"},{\"target\":\"Los altos niveles de estrés pueden inhibir temporalmente la capacidad de concentración del individuo.\",\"source\":\"High stress levels can temporarily inhibit an individual's ability to concentrate.\"}],\"conjugations\":{\"presente\":{\"yo\":\"inhibo\",\"tú\":\"inhibes\",\"él/ella/usted\":\"inhibe\",\"nosotros\":\"inhibimos\",\"vosotros\":\"inhibís\",\"ellos/ellas/ustedes\":\"inhiben\"},\"pretérito_indefinido\":{\"yo\":\"inhibí\",\"tú\":\"inhibiste\",\"él/ella/usted\":\"inhibió\",\"nosotros\":\"inhibimos\",\"vosotros\":\"inhibisteis\",\"ellos/ellas/ustedes\":\"inhibieron\"},\"pretérito_imperfecto\":{\"yo\":\"inhibía\",\"tú\":\"inhibías\",\"él/ella/usted\":\"inhibía\",\"nosotros\":\"inhibíamos\",\"vosotros\":\"inhibíais\",\"ellos/ellas/ustedes\":\"inhibían\"},\"futuro_simple\":{\"yo\":\"inhibiré\",\"tú\":\"inhibirás\",\"él/ella/usted\":\"inhibirá\",\"nosotros\":\"inhibiremos\",\"vosotros\":\"inhibiréis\",\"ellos/ellas/ustedes\":\"inhibirán\"},\"condicional_simple\":{\"yo\":\"inhibiría\",\"tú\":\"inhibirías\",\"él/ella/usted\":\"inhibiría\",\"nosotros\":\"inhibiríamos\",\"vosotros\":\"inhibiríais\",\"ellos/ellas/ustedes\":\"inhibirían\"},\"pretérito_perfecto\":\"ha inhibido\",\"participio\":\"inhibido\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-medical_psychological-012\",\"target\":\"internalizar\",\"source\":\"to internalize\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"First conjugation (-ar) regular verb; frequently applied in psychological contexts regarding emotions, behaviors, or social norms.\",\"examples\":[{\"target\":\"Durante la infancia, las personas tienden a internalizar las expectativas críticas de sus padres de manera inconsciente.\",\"source\":\"During childhood, people tend to internalize the critical expectations of their parents unconsciously.\"},{\"target\":\"El paciente logró internalizar las herramientas terapéuticas aprendidas durante su tratamiento psicológico.\",\"source\":\"The patient managed to internalize the therapeutic tools learned during their psychological treatment.\"}],\"conjugations\":{\"presente\":{\"yo\":\"internalizo\",\"tú\":\"internalizas\",\"él/ella/usted\":\"internaliza\",\"nosotros\":\"internalizamos\",\"vosotros\":\"internalizáis\",\"ellos/ellas/ustedes\":\"internalizan\"},\"pretérito_indefinido\":{\"yo\":\"internalicé\",\"tú\":\"internalizaste\",\"él/ella/usted\":\"internalizó\",\"nosotros\":\"internalizamos\",\"vosotros\":\"internalizasteis\",\"ellos/ellas/ustedes\":\"internalizaron\"},\"pretérito_imperfecto\":{\"yo\":\"internalizaba\",\"tú\":\"internalizabas\",\"él/ella/usted\":\"internalizaba\",\"nosotros\":\"internalizábamos\",\"vosotros\":\"internalizabais\",\"ellos/ellas/ustedes\":\"internalizaban\"},\"futuro_simple\":{\"yo\":\"internalizaré\",\"tú\":\"internalizarás\",\"él/ella/usted\":\"internalizará\",\"nosotros\":\"internalizaremos\",\"vosotros\":\"internalizaréis\",\"ellos/ellas/ustedes\":\"internalizarán\"},\"condicional_simple\":{\"yo\":\"internalizaría\",\"tú\":\"internalizarías\",\"él/ella/usted\":\"internalizaría\",\"nosotros\":\"internalizaríamos\",\"vosotros\":\"internalizaríais\",\"ellos/ellas/ustedes\":\"internalizarían\"},\"pretérito_perfecto\":\"ha internalizado\",\"participio\":\"internalizado\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-medical_psychological-013\",\"target\":\"medicarse\",\"source\":\"to medicate oneself / to take medication\",\"type\":\"reflexive\",\"cefr\":\"B2\",\"grammar_note\":\"First conjugation (-ar) reflexive verb; used when individuals take drugs for health issues, sometimes carrying a warning against self-medication ('automedicarse').\",\"examples\":[{\"target\":\"Los médicos advierten que nunca se debe medicarse sin la supervisión previa de un profesional sanitario.\",\"source\":\"Doctors warn that one must never medicate oneself without the prior supervision of a health professional.\"},{\"target\":\"Desde que empezó a medicarse para la depresión, el paciente muestra una notable mejoría en su ánimo.\",\"source\":\"Since he started taking medication for depression, the patient shows a remarkable improvement in his mood.\"}],\"conjugations\":{\"presente\":{\"yo\":\"me medico\",\"tú\":\"te medicas\",\"él/ella/usted\":\"se medica\",\"nosotros\":\"nos medicamos\",\"vosotros\":\"os medicáis\",\"ellos/ellas/ustedes\":\"se medican\"},\"pretérito_indefinido\":{\"yo\":\"me medicé\",\"tú\":\"te medicaste\",\"él/ella/usted\":\"se medicó\",\"nosotros\":\"nos medicamos\",\"vosotros\":\"os medicasteis\",\"ellos/ellas/ustedes\":\"se medicaron\"},\"pretérito_imperfecto\":{\"yo\":\"me medicaba\",\"tú\":\"te medicabas\",\"él/ella/usted\":\"se medicaba\",\"nosotros\":\"nos medicábamos\",\"vosotros\":\"os medicabais\",\"ellos/ellas/ustedes\":\"se medicaban\"},\"futuro_simple\":{\"yo\":\"me medicaré\",\"tú\":\"te medicarás\",\"él/ella/usted\":\"se medicará\",\"nosotros\":\"nos medicaremos\",\"vosotros\":\"os medicaréis\",\"ellos/ellas/ustedes\":\"se medicarán\"},\"condicional_simple\":{\"yo\":\"me medicaría\",\"tú\":\"te medicarías\",\"él/ella/usted\":\"se medicaría\",\"nosotros\":\"nos medicaríamos\",\"vosotros\":\"os medicaríais\",\"ellos/ellas/ustedes\":\"se medicarían\"},\"pretérito_perfecto\":\"se ha medicado\",\"participio\":\"medicado\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-medical_psychological-014\",\"target\":\"paralizarse\",\"source\":\"to become paralyzed / to freeze up\",\"type\":\"reflexive\",\"cefr\":\"B2\",\"grammar_note\":\"First conjugation (-ar) reflexive verb; used both literally (neurological paralysis) and metaphorically (psychological freezing under extreme fear or shock).\",\"examples\":[{\"target\":\"Ante una situación de peligro extremo, algunas personas tienden a paralizarse por completo debido al pánico.\",\"source\":\"Faced with a situation of extreme danger, some people tend to freeze up completely due to panic.\"},{\"target\":\"El miembro inferior del paciente comenzó a paralizarse tras el accidente cerebrovascular.\",\"source\":\"The patient's lower limb began to become paralyzed following the stroke.\"}],\"conjugations\":{\"presente\":{\"yo\":\"me paralizo\",\"tú\":\"te paralizas\",\"él/ella/usted\":\"se paraliza\",\"nosotros\":\"nos paralizamos\",\"vosotros\":\"os paralizáis\",\"ellos/ellas/ustedes\":\"se paralizan\"},\"pretérito_indefinido\":{\"yo\":\"me paralicé\",\"tú\":\"te paralizaste\",\"él/ella/usted\":\"se paralizó\",\"nosotros\":\"nos paralizamos\",\"vosotros\":\"os paralizasteis\",\"ellos/ellas/ustedes\":\"se paralizaron\"},\"pretérito_imperfecto\":{\"yo\":\"me paralizaba\",\"tú\":\"te paralizabas\",\"él/ella/usted\":\"se paralizaba\",\"nosotros\":\"nos paralizábamos\",\"vosotros\":\"os paralizabais\",\"ellos/ellas/ustedes\":\"se paralizaban\"},\"futuro_simple\":{\"yo\":\"me paralizaré\",\"tú\":\"te paralizarás\",\"él/ella/usted\":\"se paralizará\",\"nosotros\":\"nos paralizaremos\",\"vosotros\":\"os paralizaréis\",\"ellos/ellas/ustedes\":\"se paralizarán\"},\"condicional_simple\":{\"yo\":\"me paralizaría\",\"tú\":\"me paralizarías\",\"él/ella/usted\":\"se paralizaría\",\"nosotros\":\"nos paralizaríamos\",\"vosotros\":\"os paralizaríais\",\"ellos/ellas/ustedes\":\"se paralizarían\"},\"pretérito_perfecto\":\"se ha paralizado\",\"participio\":\"paralizado\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-medical_psychological-015\",\"target\":\"paliar\",\"source\":\"to alleviate / to palliate / to ease\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"First conjugation (-ar) regular verb; frequently used in palliative care ('cuidados paliativos') to describe easing symptoms without curing the root cause.\",\"examples\":[{\"target\":\"Los cuidados paliativos buscan paliar el sufrimiento físico y emocional de los enfermos terminales.\",\"source\":\"Palliative care seeks to ease the physical and emotional suffering of terminally ill patients.\"},{\"target\":\"El uso de esta pomada servirá para paliar el picor intenso provocado por la reacción alérgica.\",\"source\":\"The use of this ointment will serve to alleviate the intense itching caused by the allergic reaction.\"}],\"conjugations\":{\"presente\":{\"yo\":\"palio\",\"tú\":\"palias\",\"él/ella/usted\":\"palia\",\"nosotros\":\"paliamos\",\"vosotros\":\"paliáis\",\"ellos/ellas/ustedes\":\"palian\"},\"pretérito_indefinido\":{\"yo\":\"palié\",\"tú\":\"paliaste\",\"él/ella/usted\":\"palió\",\"nosotros\":\"paliamos\",\"vosotros\":\"paliasteis\",\"ellos/ellas/ustedes\":\"paliaron\"},\"pretérito_imperfecto\":{\"yo\":\"paliaba\",\"tú\":\"paliabas\",\"él/ella/usted\":\"paliaba\",\"nosotros\":\"paliábamos\",\"vosotros\":\"paliabais\",\"ellos/ellas/ustedes\":\"paliaban\"},\"futuro_simple\":{\"yo\":\"paliaré\",\"tú\":\"paliarás\",\"él/ella/usted\":\"paliará\",\"nosotros\":\"paliaremos\",\"vosotros\":\"paliaréis\",\"ellos/ellas/ustedes\":\"paliarán\"},\"condicional_simple\":{\"yo\":\"paliaría\",\"tú\":\"paliarías\",\"él/ella/usted\":\"paliaría\",\"nosotros\":\"paliaríamos\",\"vosotros\":\"paliaríais\",\"ellos/ellas/ustedes\":\"paliarían\"},\"pretérito_perfecto\":\"ha paliado\",\"participio\":\"paliado\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-medical_psychological-016\",\"target\":\"prescribir\",\"source\":\"to prescribe\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Third conjugation (-ir) regular verb; shares the exact same participle irregular form history as escribir ('prescrito'), though 'prescripto' is also found in some regions.\",\"examples\":[{\"target\":\"El psiquiatra le prescribió un tratamiento farmacológico innovador para regular sus cambios de humor.\",\"source\":\"The psychiatrist prescribed him an innovative pharmacological treatment to regulate his mood swings.\"},{\"target\":\"Solo un médico colegiado tiene la autoridad legal para prescribir medicamentos controlados.\",\"source\":\"Only a licensed doctor has the legal authority to prescribe controlled medications.\"}],\"conjugations\":{\"presente\":{\"yo\":\"prescribo\",\"tú\":\"prescribes\",\"él/ella/usted\":\"prescribe\",\"nosotros\":\"prescribimos\",\"vosotros\":\"prescribís\",\"ellos/ellas/ustedes\":\"prescriben\"},\"pretérito_indefinido\":{\"yo\":\"prescribí\",\"tú\":\"prescribiste\",\"él/ella/usted\":\"prescribió\",\"nosotros\":\"prescribimos\",\"vosotros\":\"prescribisteis\",\"ellos/ellas/ustedes\":\"prescribieron\"},\"pretérito_imperfecto\":{\"yo\":\"prescribía\",\"tú\":\"prescribías\",\"él/ella/usted\":\"prescribía\",\"nosotros\":\"prescribíamos\",\"vosotros\":\"prescribíais\",\"ellos/ellas/ustedes\":\"prescribían\"},\"futuro_simple\":{\"yo\":\"prescribiré\",\"tú\":\"prescribirás\",\"él/ella/usted\":\"prescribirá\",\"nosotros\":\"prescribiremos\",\"vosotros\":\"prescribiréis\",\"ellos/ellas/ustedes\":\"prescribirán\"},\"condicional_simple\":{\"yo\":\"prescribiría\",\"tú\":\"prescribirías\",\"él/ella/usted\":\"prescribiría\",\"nosotros\":\"prescribiríamos\",\"vosotros\":\"prescribiríais\",\"ellos/ellas/ustedes\":\"prescribirían\"},\"pretérito_perfecto\":\"ha prescrito\",\"participio\":\"prescrito\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-medical_psychological-017\",\"target\":\"recaer\",\"source\":\"to relapse / to fall back\",\"type\":\"irregular\",\"cefr\":\"B2\",\"grammar_note\":\"Second conjugation (-er) irregular verb; compound of 'caer', adding an extra 'y' in the preterite 3rd person (recayó, recayeron) and present subjunctive.\",\"examples\":[{\"target\":\"Desafortunadamente, el paciente volvió a consumir sustancias adictivas y experimentó una fuerte recaída; es decir, volvió a recaer.\",\"source\":\"Unfortunately, the patient started using addictive substances again and experienced a strong relapse; that is, he relapsed again.\"},{\"target\":\"Si dejas el tratamiento antibiótico demasiado pronto, es muy probable que vuelvas a recaer en la infección.\",\"source\":\"If you stop the antibiotic treatment too early, it is very likely that you will relapse into the infection.\"}],\"conjugations\":{\"presente\":{\"yo\":\"recaigo\",\"tú\":\"recaes\",\"él/ella/usted\":\"recae\",\"nosotros\":\"recaemos\",\"vosotros\":\"recaéis\",\"ellos/ellas/ustedes\":\"recaen\"},\"pretérito_indefinido\":{\"yo\":\"recaí\",\"tú\":\"recaíste\",\"él/ella/usted\":\"recayó\",\"nosotros\":\"recaímos\",\"vosotros\":\"recaísteis\",\"ellos/ellas/ustedes\":\"recayeron\"},\"pretérito_imperfecto\":{\"yo\":\"recaía\",\"tú\":\"recaías\",\"él/ella/usted\":\"recaía\",\"nosotros\":\"recaíamos\",\"vosotros\":\"recaíais\",\"ellos/ellas/ustedes\":\"recaían\"},\"futuro_simple\":{\"yo\":\"recaeré\",\"tú\":\"recaerás\",\"él/ella/usted\":\"recaerá\",\"nosotros\":\"recaeremos\",\"vosotros\":\"recaeréis\",\"ellos/ellas/ustedes\":\"recaerán\"},\"condicional_simple\":{\"yo\":\"recaería\",\"tú\":\"recaerías\",\"él/ella/usted\":\"recaería\",\"nosotros\":\"recaeríamos\",\"vosotros\":\"recaeríais\",\"ellos/ellas/ustedes\":\"recaerían\"},\"pretérito_perfecto\":\"ha recaído\",\"participio\":\"recaído\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-medical_psychological-018\",\"target\":\"reprimir\",\"source\":\"to repress / to suppress\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Third conjugation (-ir) regular verb; frequently used in psychoanalysis regarding emotions or memories kept out of conscious awareness.\",\"examples\":[{\"target\":\"Según la teoría freudiana, reprimir los traumas infantiles puede generar trastornos psicológicos graves en la edad adulta.\",\"source\":\"According to Freudian theory, repressing childhood traumas can generate serious psychological disorders in adulthood.\"},{\"target\":\"El terapeuta animó al joven a no reprimir sus lágrimas durante la sesión de duelo.\",\"source\":\"The therapist encouraged the young man not to repress his tears during the grief session.\"}],\"conjugations\":{\"presente\":{\"yo\":\"reprimo\",\"tú\":\"reprimes\",\"él/ella/usted\":\"reprime\",\"nosotros\":\"reprimimos\",\"vosotros\":\"reprimís\",\"ellos/ellas/ustedes\":\"reprimen\"},\"pretérito_indefinido\":{\"yo\":\"reprimí\",\"tú\":\"reprimiste\",\"él/ella/usted\":\"reprimió\",\"nosotros\":\"reprimimos\",\"vosotros\":\"reprimisteis\",\"ellos/ellas/ustedes\":\"reprimieron\"},\"pretérito_imperfecto\":{\"yo\":\"reprimía\",\"tú\":\"reprimías\",\"él/ella/usted\":\"reprimía\",\"nosotros\":\"reprimíamos\",\"vosotros\":\"reprimíais\",\"ellos/ellas/ustedes\":\"reprimían\"},\"futuro_simple\":{\"yo\":\"reprimiré\",\"tú\":\"reprimirás\",\"él/ella/usted\":\"reprimirá\",\"nosotros\":\"reprimiremos\",\"vosotros\":\"reprimiréis\",\"ellos/ellas/ustedes\":\"reprimirán\"},\"condicional_simple\":{\"yo\":\"reprimiría\",\"tú\":\"reprimirías\",\"él/ella/usted\":\"reprimiría\",\"nosotros\":\"reprimiríamos\",\"vosotros\":\"reprimiríais\",\"ellos/ellas/ustedes\":\"reprimirían\"},\"pretérito_perfecto\":\"ha reprimido\",\"participio\":\"reprimido\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-medical_psychological-019\",\"target\":\"somatizar\",\"source\":\"to somatize\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"First conjugation (-ar) regular verb; takes a spelling change in the preterite 'yo' form (somatisé -> somaticé) to preserve pronunciation.\",\"examples\":[{\"target\":\"Muchas personas estresadas suelen somatizar sus problemas emocionales sufriendo dolores físicos inexplicables.\",\"source\":\"Many stressed people tend to somatize their emotional problems by suffering inexplicable physical pains.\"},{\"target\":\"El médico confirmó que sus dolores de estómago eran una forma de somatizar la ansiedad laboral.\",\"source\":\"The doctor confirmed that his stomach aches were a way of somatizing work anxiety.\"}],\"conjugations\":{\"presente\":{\"yo\":\"somatizo\",\"tú\":\"somatizas\",\"él/ella/usted\":\"somatiza\",\"nosotros\":\"somatizamos\",\"vosotros\":\"somatizáis\",\"ellos/ellas/ustedes\":\"somatizan\"},\"pretérito_indefinido\":{\"yo\":\"somaticé\",\"tú\":\"somatizaste\",\"él/ella/usted\":\"somatizó\",\"nosotros\":\"somatizamos\",\"vosotros\":\"somatizasteis\",\"ellos/ellas/ustedes\":\"somatizaron\"},\"pretérito_imperfecto\":{\"yo\":\"somatizaba\",\"tú\":\"somatizabas\",\"él/ella/usted\":\"somatizaba\",\"nosotros\":\"somatizábamos\",\"vosotros\":\"somatizabais\",\"ellos/ellas/ustedes\":\"somatizaban\"},\"futuro_simple\":{\"yo\":\"somatizaré\",\"tú\":\"somatizarás\",\"él/ella/usted\":\"somatizará\",\"nosotros\":\"somatizaremos\",\"vosotros\":\"somatizaréis\",\"ellos/ellas/ustedes\":\"somatizarán\"},\"condicional_simple\":{\"yo\":\"somatizaría\",\"tú\":\"somatizarías\",\"él/ella/usted\":\"somatizaría\",\"nosotros\":\"somatizaríamos\",\"vosotros\":\"somatizaríais\",\"ellos/ellas/ustedes\":\"somatizarían\"},\"pretérito_perfecto\":\"ha somatizado\",\"participio\":\"somatizado\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-medical_psychological-020\",\"target\":\"superar\",\"source\":\"to overcome / to get over\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"First conjugation (-ar) regular verb; extensively used in psychological recovery, coping mechanisms, and successfully dealing with clinical disorders.\",\"examples\":[{\"target\":\"Con la ayuda de un buen terapeuta, logró superar sus ataques de pánico en menos de un año.\",\"source\":\"With the help of a good therapist, she managed to overcome her panic attacks in less than a year.\"},{\"target\":\"El paciente necesita tiempo y apoyo familiar para superar el duelo tras la trágica pérdida.\",\"source\":\"The patient needs time and family support to get over the grief after the tragic loss.\"}],\"conjugations\":{\"presente\":{\"yo\":\"supero\",\"tú\":\"superas\",\"él/ella/usted\":\"supera\",\"nosotros\":\"superamos\",\"vosotros\":\"superáis\",\"ellos/ellas/ustedes\":\"superan\"},\"pretérito_indefinido\":{\"yo\":\"superé\",\"tú\":\"superaste\",\"él/ella/usted\":\"superó\",\"nosotros\":\"superamos\",\"vosotros\":\"superasteis\",\"ellos/ellas/ustedes\":\"superaron\"},\"pretérito_imperfecto\":{\"yo\":\"superaba\",\"tú\":\"superabas\",\"él/ella/usted\":\"superaba\",\"nosotros\":\"superábamos\",\"vosotros\":\"superabais\",\"ellos/ellas/ustedes\":\"superaban\"},\"futuro_simple\":{\"yo\":\"superaré\",\"tú\":\"superarás\",\"él/ella/usted\":\"superará\",\"nosotros\":\"superaremos\",\"vosotros\":\"superaréis\",\"ellos/ellas/ustedes\":\"superarán\"},\"condicional_simple\":{\"yo\":\"superaría\",\"tú\":\"superarías\",\"él/ella/usted\":\"superaría\",\"nosotros\":\"superaríamos\",\"vosotros\":\"superaríais\",\"ellos/ellas/ustedes\":\"superarían\"},\"pretérito_perfecto\":\"ha superado\",\"participio\":\"superado\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}}]";
+const langConfigJson = "{\"language_pair\":\"english_spanish\",\"target_lang\":\"es\",\"native_lang\":\"en\",\"target_lang_name\":\"Español\",\"native_lang_name\":\"English\",\"speech_lang\":\"es-ES\",\"noun_metadata_fields\":[{\"key\":\"article\",\"label\":\"Artículo\",\"render\":\"article_badge\"},{\"key\":\"gender\",\"label\":\"Género\",\"render\":\"gender_label\"},{\"key\":\"plural\",\"label\":\"Plural\",\"render\":\"text\"}],\"article_colours\":{\"el\":\"#4A7C9E\",\"la\":\"#B05070\"},\"gender_labels\":{\"m\":\"Masculino\",\"f\":\"Femenino\"},\"verb_tenses\":[\"presente\",\"pretérito_indefinido\",\"pretérito_imperfecto\",\"pretérito_perfecto\",\"participio\",\"futuro_simple\",\"condicional_simple\"],\"cases\":{},\"ui_labels\":{\"learn_mode\":\"Aprender\",\"train_mode\":\"Entrenar\",\"examples_heading\":\"Frases de ejemplo\",\"grammar_note_heading\":\"Nota gramatical\",\"audio_button\":\"Escuchar\",\"back_link\":\"Volver\",\"card_counter\":\"Tarjeta {current} / {total}\",\"next_button\":\"Siguiente\",\"finish_button\":\"Terminar\",\"correct\":\"¡Correcto!\",\"wrong\":\"Incorrecto\",\"dashboard_link\":\"Panel principal\",\"library_prompt\":\"Elige un mazo de la biblioteca y aprende todo el contenido de las tarjetas.\",\"cards_badge\":\"{count} TARJETAS\",\"cards_count\":\"{count} tarjetas\",\"deck_meta\":\"{topic} • {level} • {count} tarjetas\",\"no_decks\":\"Aún no hay mazos en esta categoría.\",\"setup_title\":\"Configurar entrenamiento\",\"setup_subtitle\":\"Configura tu sesión de entrenamiento.\",\"question_type\":\"Tipo de pregunta\",\"mode_multiple_choice\":\"Opción múltiple\",\"mode_typing\":\"Entrada de texto\",\"mode_typing_short\":\"Escritura\",\"direction\":\"Dirección\",\"direction_forward\":\"🇺🇸 English → 🇪🇸 Español\",\"direction_reverse\":\"🇪🇸 Español → 🇺🇸 English\",\"select_level\":\"Seleccionar nivel\",\"start_training\":\"Iniciar entrenamiento\",\"count_label\":\"Cantidad\",\"all_cards\":\"Todas\",\"in_deck\":\"en el mazo\",\"view_cards\":\"Tarjetas\",\"view_list\":\"Lista\",\"card_word\":\"Tarjeta\",\"keyboard_hint_study\":\"← → Flechas para navegar · A para escuchar\",\"example_single_heading\":\"Ejemplo\",\"no_example\":\"No hay ejemplo disponible.\",\"tags_label\":\"Etiquetas:\",\"type_vocab\":\"Vocabulario\",\"type_verb\":\"Verbo\",\"type_phrase\":\"Expresión\",\"type_connector\":\"Conector\",\"type_grammar\":\"Gramática\",\"type_noun\":\"Sustantivo\",\"type_adjective\":\"Adjetivo\",\"type_expression\":\"Locución\",\"plural_prefix\":\"Pl. {plural}\",\"plural_only\":\"solo plural\",\"word_order_heading\":\"Orden de palabras\",\"structure_heading\":\"Estructura\",\"training_title\":\"Entrenamiento\",\"all_levels\":\"Todos los niveles\",\"type_placeholder\":\"Escribe la palabra en español...\",\"check_button\":\"Comprobar\",\"keyboard_hint_train\":\"Intro / Espacio = confirmar · A = Escuchar\",\"audio_title\":\"Escuchar (A)\",\"training_finished\":\"¡Entrenamiento completado!\",\"missed_heading\":\"Respuestas incorrectas — para repetir\",\"retry_missed\":\"Repetir fallos\",\"new_config\":\"Nueva configuración\",\"plural_hint\":\"Pl: {plural}\",\"results_pct\":\"{pct}% de acierto\",\"result_excellent\":\"¡Excelente! Has dominado este nivel.\",\"result_good\":\"¡Muy bien! Un poco más de práctica y lo tendrás dominado.\",\"result_ok\":\"¡Buen comienzo! Repasa las tarjetas una vez más.\",\"result_retry\":\"¡Sin problema! La práctica hace al maestro.\",\"no_cards_title\":\"No se encontraron tarjetas\",\"no_cards_hint\":\"Por favor, elige otro nivel o mazo.\"},\"answer_normalisation\":{\"strip_leading_words\":[\"el\",\"la\",\"los\",\"las\",\"un\",\"una\",\"unos\",\"unas\"],\"alt_spellings\":{\"á\":\"a\",\"é\":\"e\",\"í\":\"i\",\"ó\":\"o\",\"ú\":\"u\",\"ñ\":\"n\",\"ü\":\"u\"}}}";
+const category = "verbs";
+const lang = "en-es";
+const base = "/languagelounge/";
+const defaultView = "cards";
+
+  const cards     = JSON.parse(cardsJson);
+  const config    = JSON.parse(langConfigJson);
+  let currentIndex = 0;
+
+  const dotNav    = document.getElementById('dot-nav');
+  const currentNum = document.getElementById('current-num');
+  const progressBar = document.getElementById('progress-bar');
+  const btnPrev   = document.getElementById('btn-prev');
+  const btnNext   = document.getElementById('btn-next');
+  const cardHost  = document.getElementById('card-host');
+  const progressCont = document.getElementById('progress-container');
+
+  const cardViewWrap = document.getElementById('card-view-wrap');
+  const listViewWrap = document.getElementById('list-view-wrap');
+  const btnViewCards = document.getElementById('view-cards-btn');
+  const btnViewList  = document.getElementById('view-list-btn');
+
+  // Toggle Logic
+  function setViewMode(mode) {
+    if (mode === 'list') {
+      cardViewWrap.classList.add('hidden');
+      listViewWrap.classList.remove('hidden');
+      progressCont.classList.add('hidden');
+      btnViewList.classList.add('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewList.classList.remove('text-[var(--text-muted)]');
+      btnViewCards.classList.remove('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewCards.classList.add('text-[var(--text-muted)]');
+    } else {
+      listViewWrap.classList.add('hidden');
+      cardViewWrap.classList.remove('hidden');
+      progressCont.classList.remove('hidden');
+      btnViewCards.classList.add('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewCards.classList.remove('text-[var(--text-muted)]');
+      btnViewList.classList.remove('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewList.classList.add('text-[var(--text-muted)]');
+    }
+  }
+
+  btnViewCards.addEventListener('click', () => setViewMode('cards'));
+  btnViewList.addEventListener('click', () => setViewMode('list'));
+
+  // Initial view is configured per category (config/language_pairs/*.yaml → categories[].default_view)
+  if (defaultView === 'list') {
+    setViewMode('list');
+  }
+
+
+
+  // ── Helpers (mirror card-renderer.ts — no module imports in inline scripts) ──
+  const articleColours = config.article_colours || {};
+  const genderLabels   = config.gender_labels   || {};
+  const speechLang     = config.speech_lang;
+  const ui             = config.ui_labels || {};
+  const fmt = (tpl, vars) => String(tpl).replace(/\{(\w+)\}/g, (m, k) => (k in vars ? vars[k] : m));
+  const formatHighlight = (text) => text ? String(text).replace(/\*(.*?)\*/g, '<span class="highlighter">$1</span>') : '';
+  // Articles come from the language config (keys of article_colours), never hardcoded
+  const articleList = Object.keys(articleColours);
+  const articlePatterns = articleList.map(a => {
+    const esc = a.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    return esc.endsWith("'") ? esc : `${esc}\\s+`;
+  });
+  const articleRe = articlePatterns.length
+    ? new RegExp('^(?:' + articlePatterns.join('|') + ')', 'i')
+    : null;
+
+  function stripArticle(w) {
+    return articleRe ? (w || '').replace(articleRe, '').trim() : (w || '').trim();
+  }
+
+  function getTypeLabel(card) {
+    const tags = card.tags || [];
+    if (tags.includes('noun'))       return ui.type_noun;
+    if (tags.includes('verb'))       return ui.type_verb;
+    if (tags.includes('adjective'))  return ui.type_adjective;
+    if (tags.includes('expression')) return ui.type_expression;
+    const byType = { vocab: ui.type_vocab, verb: ui.type_verb, phrase: ui.type_phrase, connector: ui.type_connector, grammar: ui.type_grammar };
+    return byType[card.type] || ui.type_vocab;
+  }
+
+  function normaliseEx(ex) {
+    return { target: ex.target||'', source: ex.source||'', note: ex.note };
+  }
+
+  function getMetaFacts(card) {
+    const meta = card.metadata || {};
+    const facts = [];
+    for (const field of (config.noun_metadata_fields || [])) {
+      const raw = meta[field.key];
+      if (!raw || raw==='~') continue;
+      let value = String(raw), colour;
+      if (field.render === 'gender_label')  value  = genderLabels[raw] || raw;
+      if (field.render === 'article_badge') colour = articleColours[raw.toLowerCase()] || 'var(--espresso)';
+      facts.push({ label: field.label, value, colour });
+    }
+    return facts;
+  }
+
+  // ── Card renderer ─────────────────────────────────────────────────────────
+  function renderCard(idx) {
+    const card = cards[idx];
+    if (!card || !cardHost) return;
+
+    const lc = cardHost.querySelector('.learning-card');
+    if (!lc) return;
+
+    function sel(cls) { return lc.querySelector(cls); }
+
+    // Type badge + level
+    sel('.lc-type-badge').textContent = getTypeLabel(card);
+    sel('.lc-level-badge').textContent = (card.level || '').toUpperCase();
+
+    // Article
+    const article = card.metadata?.article;
+    const articleWrap = sel('.lc-article-wrap');
+    const articleEl   = sel('.lc-article');
+    if (article && (card.tags||[]).includes('noun') && !card.metadata?.plural_only) {
+      articleEl.textContent = article;
+      articleEl.style.color = articleColours[article.toLowerCase()] || 'var(--espresso)';
+      articleWrap.style.display = '';
+    } else {
+      articleWrap.style.display = 'none';
+    }
+
+    // Word / translation / forms
+    sel('.lc-word').textContent        = stripArticle(card.target);
+    sel('.lc-translation').textContent = card.source || '';
+    const plural = card.metadata?.plural;
+    sel('.lc-forms').textContent = plural && !card.metadata?.plural_only ? fmt(ui.plural_prefix, { plural }) : card.metadata?.plural_only ? ui.plural_only : '';
+
+    // Meta grid
+    const metaGrid = sel('.lc-meta-grid');
+    const facts = getMetaFacts(card);
+    if (facts.length) {
+      metaGrid.style.gridTemplateColumns = `repeat(${Math.min(facts.length,4)}, 1fr)`;
+      metaGrid.style.display = '';
+      metaGrid.innerHTML = facts.map((f, i) => `
+        <div class="px-5 py-4 ${i<facts.length-1?'border-r':''}" style="border-color:var(--border);">
+          <p class="text-[9px] font-bold uppercase tracking-widest mb-1" style="color:var(--text-muted);">${f.label}</p>
+          <p class="text-sm font-bold" style="color:${f.colour||'var(--text)'};">${f.value}</p>
+        </div>`).join('');
+    } else {
+      metaGrid.style.display = 'none';
+    }
+
+    // Grammar note
+    const grammarWrap = sel('.lc-grammar-wrap');
+    if (card.grammar_note) {
+      sel('.lc-grammar-text').innerHTML = formatHighlight(card.grammar_note);
+      grammarWrap.classList.remove('hidden');
+    } else {
+      grammarWrap.classList.add('hidden');
+    }
+
+    // Examples
+    const examplesEl = sel('.lc-examples');
+    const rawEx = card.examples || [];
+    examplesEl.innerHTML = rawEx.length
+      ? rawEx.map(ex => { const e=normaliseEx(ex); return `
+          <div class="rounded-2xl border overflow-hidden" style="border-color:var(--border);">
+            <div class="px-4 py-3" style="background-color:var(--bg);">
+              <p class="font-semibold leading-snug mb-1" style="color:var(--text);">${e.target}</p>
+              <p class="text-sm italic" style="color:var(--text-muted);">${e.source||''}</p>
+            </div>
+            ${e.note?`<div class="px-4 py-2 border-t" style="border-color:var(--border);">
+              <p class="text-[10px] font-bold font-mono" style="color:var(--espresso);">📐 ${e.note}</p>
+            </div>`:''}
+          </div>`; }).join('')
+      : '<p class="text-sm italic" style="color:var(--text-muted);">' + ui.no_example + '</p>';
+
+    // Verb: conjugation table
+    const conjWrap  = sel('.lc-conjugation-wrap');
+    const conjInner = sel('.lc-conjugation-inner');
+    const cardType = card.type || (card.tags?.includes('verb') ? 'verb' : 'vocab');
+    if (conjWrap && conjInner) {
+      if (cardType === 'verb' && card.conjugations) {
+        conjWrap.classList.remove('hidden');
+        let conjArray = [];
+        if (Array.isArray(card.conjugations)) {
+          conjArray = card.conjugations;
+        } else {
+          for (const [tense, forms] of Object.entries(card.conjugations)) {
+            if (typeof forms === 'string') {
+              conjArray.push({ tense, stringForm: forms });
+            } else {
+              const formsArr = Object.entries(forms).map(([pronoun, form]) => ({ pronoun, form }));
+              conjArray.push({ tense, forms: formsArr });
+            }
+          }
+        }
+
+        const tensesToRender = config.verb_tenses || conjArray.map(t => t.tense);
+        const stringTenses = [];
+        const tableTenses = [];
+
+        tensesToRender.forEach(tense => {
+          const t = conjArray.find(c => c.tense === tense);
+          if (!t) return;
+          if (t.stringForm) stringTenses.push(t);
+          else tableTenses.push(t);
+        });
+
+        let html = '';
+        if (stringTenses.length > 0) {
+          html += `
+            <div class="flex flex-wrap gap-3 mb-6">
+              ${stringTenses.map(t => `
+                <div class="rounded-xl border px-4 py-2.5 flex items-center gap-3 shadow-sm" style="border-color:var(--border); background-color:var(--bg);">
+                  <span class="text-[10px] font-bold uppercase tracking-widest opacity-80" style="color:var(--espresso);">${t.tense.replace(/_/g, ' ')}</span>
+                  <span class="font-bold text-sm" style="color:var(--text);">${t.stringForm}</span>
+                </div>
+              `).join('')}
+            </div>
+          `;
+        }
+
+        if (tableTenses.length > 0) {
+          const pronouns = tableTenses[0].forms.map(f => f.pronoun);
+          html += `
+            <div class="rounded-xl border overflow-x-auto shadow-sm w-full" style="border-color:var(--border);">
+              <table class="w-full text-sm text-left">
+                <thead>
+                  <tr style="background-color:var(--bg); border-bottom: 1px solid var(--border);">
+                    <th class="px-4 py-3 font-bold uppercase tracking-widest text-[10px] w-[1%]" style="color:var(--espresso); border-right: 1px solid var(--border);"></th>
+                    ${tableTenses.map(t => `
+                      <th class="px-4 py-3 font-bold uppercase tracking-widest text-[10px]" style="color:var(--espresso);">${t.tense.replace(/_/g, ' ')}</th>
+                    `).join('')}
+                  </tr>
+                </thead>
+                <tbody>
+                  ${pronouns.map((pronoun, ri) => `
+                    <tr class="${ri < pronouns.length - 1 ? 'border-b' : ''}" style="border-color:var(--border);">
+                      <td class="px-4 py-3 font-bold text-xs whitespace-nowrap" style="color:var(--espresso); background-color:var(--bg); border-right: 1px solid var(--border);">${pronoun}</td>
+                      ${tableTenses.map(t => {
+                        const formObj = t.forms.find(f => f.pronoun === pronoun);
+                        return `<td class="px-4 py-3 font-semibold whitespace-nowrap" style="color:var(--text);">${formObj ? formObj.form : '-'}</td>`;
+                      }).join('')}
+                    </tr>
+                  `).join('')}
+                </tbody>
+              </table>
+            </div>
+          `;
+        }
+        conjInner.innerHTML = html;
+      } else {
+        conjWrap.classList.add('hidden');
+        conjInner.innerHTML = '';
+      }
+    }
+
+    // Connector: word order block
+    const woWrap = sel('.lc-wordorder-wrap');
+    if (woWrap) {
+      if (cardType === 'connector' && card.word_order) {
+        sel('.lc-wordorder-text').textContent = card.word_order;
+        woWrap.classList.remove('hidden');
+      } else {
+        woWrap.classList.add('hidden');
+      }
+    }
+
+    // Phrase: preposition rule block
+    const phraseWrap = sel('.lc-phrase-wrap');
+    if (phraseWrap) {
+      if (cardType === 'phrase' && card.clause_type) {
+        sel('.lc-phrase-rule').textContent = card.clause_type;
+        phraseWrap.classList.remove('hidden');
+      } else {
+        phraseWrap.classList.add('hidden');
+      }
+    }
+
+    // Tags
+    sel('.lc-tags').innerHTML = (card.tags||[]).map(t =>
+      `<span class="text-[10px] font-bold px-2 py-0.5 rounded-md border" style="border-color:var(--border);color:var(--text-muted);background-color:var(--bg);">${t}</span>`
+    ).join('');
+
+    // Progress UI
+    if (currentNum)  currentNum.textContent = String(idx+1);
+    if (progressBar) progressBar.style.width = `${Math.round(((idx+1)/cards.length)*100)}%`;
+    if (btnPrev)     btnPrev.disabled = idx === 0;
+    if (btnNext)     btnNext.innerHTML = idx === cards.length-1
+      ? '✓ ' + ui.finish_button
+      : ui.next_button + ' <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>';
+
+    updateDots();
+
+    // Re-bind audio button cleanly by cloning to strip old listeners
+    const oldBtn = sel('.lc-audio-btn');
+    if (oldBtn) {
+      const newBtn = oldBtn.cloneNode(true);
+      oldBtn.parentNode.replaceChild(newBtn, oldBtn);
+      newBtn.addEventListener('click', speakCurrent);
+    }
+  }
+
+  // ── Dot navigation ────────────────────────────────────────────────────────
+  function buildDots() {
+    if (!dotNav) return;
+    dotNav.innerHTML = '';
+    const maxVisible = 20;
+    const showAll = cards.length <= maxVisible;
+    cards.forEach((_, i) => {
+      if (!showAll && i >= maxVisible) return;
+      const dot = document.createElement('button');
+      dot.className = 'dot w-2 h-2 rounded-full transition-all duration-300 flex-shrink-0';
+      dot.style.backgroundColor = 'var(--border)';
+      dot.title = `${ui.card_word} ${i+1}`;
+      dot.addEventListener('click', () => goTo(i));
+      dotNav.appendChild(dot);
+    });
+    if (!showAll) {
+      const el = document.createElement('span');
+      el.textContent = `+${cards.length - maxVisible}`;
+      el.className = 'text-[10px] font-bold';
+      el.style.color = 'var(--text-muted)';
+      dotNav.appendChild(el);
+    }
+  }
+
+  function updateDots() {
+    dotNav?.querySelectorAll('.dot').forEach((dot, i) => {
+      dot.style.backgroundColor = i===currentIndex ? 'var(--espresso)' : 'var(--border)';
+      dot.style.width     = i===currentIndex ? '20px' : '8px';
+      dot.style.borderRadius = '4px';
+    });
+  }
+
+  // ── Audio ─────────────────────────────────────────────────────────────────
+  function speakCurrent() {
+    const card = cards[currentIndex];
+    if (!card) return;
+    if (window.LoungeAudioEngine) {
+      window.LoungeAudioEngine.speak(card.target || '', speechLang, 0.85);
+    }
+  }
+
+  // ── Navigate ─────────────────────────────────────────────────────────────
+  function goTo(idx) {
+    if (idx < 0 || idx >= cards.length) return;
+    currentIndex = idx;
+    renderCard(currentIndex);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  btnPrev?.addEventListener('click', () => goTo(currentIndex - 1));
+  btnNext?.addEventListener('click', () => {
+    if (currentIndex === cards.length - 1) window.location.href = `${base}${lang}/${category}/`;
+    else goTo(currentIndex + 1);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') goTo(currentIndex + 1);
+    if (e.key === 'ArrowLeft')  goTo(currentIndex - 1);
+    if (e.key === 'a' || e.key === 'A') speakCurrent();
+  });
+
+  // ── Learn / Train panel toggle ──────────────────────
+  const btnLearn = document.getElementById('btn-mode-learn');
+  const btnTrain = document.getElementById('btn-mode-train');
+  const pnlLearn = document.getElementById('learn-panel');
+  const pnlTrain = document.getElementById('train-panel');
+  const toolbar  = document.getElementById('learn-toolbar');
+
+  const STORAGE_KEY = `lounge:${lang}:${category}:deck:mode`;
+  let currentMode = localStorage.getItem(STORAGE_KEY) || 'learn';
+
+  function applyMode() {
+    if (currentMode === 'learn') {
+      btnLearn.style.backgroundColor = 'var(--espresso)';
+      btnLearn.style.color = '#F5F2EB';
+      btnTrain.style.backgroundColor = 'transparent';
+      btnTrain.style.color = 'var(--text-muted)';
+      pnlLearn.classList.remove('hidden');
+      toolbar.classList.remove('hidden');
+      pnlTrain.classList.add('hidden');
+    } else {
+      btnTrain.style.backgroundColor = 'var(--espresso)';
+      btnTrain.style.color = '#F5F2EB';
+      btnLearn.style.backgroundColor = 'transparent';
+      btnLearn.style.color = 'var(--text-muted)';
+      pnlTrain.classList.remove('hidden');
+      pnlLearn.classList.add('hidden');
+      toolbar.classList.add('hidden');
+    }
+    localStorage.setItem(STORAGE_KEY, currentMode);
+  }
+
+  btnLearn?.addEventListener('click', () => { currentMode = 'learn'; applyMode(); });
+  btnTrain?.addEventListener('click', () => { currentMode = 'train'; applyMode(); });
+  applyMode();
+
+  // ── Radio-style selectors (mode & dir & count) ─────────────
+  document.querySelectorAll('.sel-opt').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const group = btn.dataset.group;
+      document.querySelectorAll(`.sel-opt[data-group="${group}"]`).forEach(b => b.classList.remove('sel-active'));
+      btn.classList.add('sel-active');
+      const hidden = document.getElementById(`${group}-hidden`);
+      if (hidden) hidden.value = btn.dataset.value;
+    });
+  });
+
+  document.getElementById('deck-train-form')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const base = form.action;
+    const mode = document.getElementById('mode-hidden')?.value || 'mc';
+    const dir  = document.getElementById('dir-hidden')?.value || `${config.language_pair.source_code}-${config.language_pair.target_code}`.toLowerCase();
+    const count = document.getElementById('count-hidden')?.value || '30';
+    const level = form.querySelector('[name="level"]')?.value || '';
+    const deck = form.querySelector('[name="deck"]')?.value || '';
+    
+    const params = new URLSearchParams();
+    if(level) params.set('level', level);
+    params.set('deck', deck);
+    params.set('mode', mode);
+    params.set('dir', dir);
+    params.set('count', count);
+    
+    window.location.href = `${base}?${params.toString()}`;
+  });
+
+  // ── Init ─────────────────────────────────────────────────────────────────
+  buildDots();
+  // Card 0 is already rendered server-side via LearningCard component.
+  // Sync progress UI to reflect card 0 state.
+  updateDots();
+  if (progressBar) progressBar.style.width = `${Math.round(1/cards.length*100)}%`;
+  // Update card 0 using client-side config too (ensures langConfig is applied)
+  renderCard(0);
+})();</script>

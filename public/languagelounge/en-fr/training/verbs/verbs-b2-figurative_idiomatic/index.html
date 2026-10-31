@@ -1,0 +1,758 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="description" content="Lounge Français — Votre salon dédié à la langue française — développez votre vocabulaire, maîtrisez la grammaire et perfectionnez votre français du niveau A1 au B2."><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/languagelounge/favicon.svg"><meta name="generator" content="Astro v7.3.5"><title>Figurative &amp; Idiomatic — Lounge Français</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet"><script>
+      (function() {
+        const saved = localStorage.getItem('wortschatz_theme');
+        if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script><link rel="stylesheet" href="/languagelounge/_astro/Layout.Cr1varBg.css"><style>.sel-opt[data-astro-cid-5tabbh6g]{border:2px solid var(--border);background-color:var(--card);color:var(--text);cursor:pointer;text-align:center;border-radius:12px;flex-direction:column;justify-content:center;align-items:center;width:100%;padding:14px 12px;transition:border-color .15s,background-color .15s,color .15s,box-shadow .15s;display:flex}.sel-opt[data-astro-cid-5tabbh6g]:hover{border-color:var(--border-hover);box-shadow:0 2px 8px #00000014}.sel-opt[data-astro-cid-5tabbh6g].sel-active{border-color:var(--espresso);background-color:var(--espresso);color:#f5f2eb;box-shadow:0 2px 12px #0000002e}
+</style></head><body class="antialiased min-h-screen flex flex-col" style="background-color:var(--bg);color:var(--text);"><!-- Header --><header class="sticky top-0 z-50 border-b" style="background-color:var(--bg);border-color:var(--border);"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between gap-4" style="height:4.5rem;"><!-- Logo + Language Switcher --><div class="flex items-center gap-4 shrink-0"><a href="/languagelounge/en-fr/" class="flex items-center gap-2 group"><span class="font-outfit font-extrabold text-xl sm:text-2xl tracking-tight transition-colors" style="color:var(--text);">Small Talk Café<span class="font-normal text-base hidden sm:inline" style="color:var(--text-muted);"> | <span id="site-name">Lounge Français</span></span></span></a><!-- Language Selector Dropdown --><div class="relative" id="lang-dropdown-wrapper"><button id="lang-btn" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-sm font-bold transition-all hover:opacity-70" style="background-color:var(--bg); border-color:var(--border); color:var(--text);"><span id="lang-flag">🇫🇷</span><span id="lang-code">FR</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"></path></svg></button><div id="lang-menu" class="hidden absolute top-full left-0 mt-2 rounded-2xl border shadow-2xl overflow-hidden z-50 min-w-[260px] sm:min-w-[300px]" style="background-color:var(--card); border-color:var(--border);"><div class="px-3.5 py-2 text-[11px] font-bold uppercase tracking-wider border-b" style="background-color:var(--surface); border-color:var(--border); color:var(--text-muted);">Language Lounges</div><div><a href="/languagelounge/en-de/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇩🇪</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Deutsch Lounge</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">Der Raum für die deutsche Sprache</div></div></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-es/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇪🇸</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Lounge Español</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">El espacio para la lengua española</div></div></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-fr/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-bold" style="color:var(--text); background-color:var(--surface);"><span class="text-2xl shrink-0">🇫🇷</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Lounge Français</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">Le salon de la langue française</div></div><span class="shrink-0 text-[10px] font-extrabold uppercase px-1.5 py-0.5 rounded" style="background-color:var(--accent); color:var(--bg);">Active</span></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-it/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇮🇹</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Lounge Italiano</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">Il salotto per la lingua italiana</div></div></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-nl/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇳🇱</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Nederlands Lounge</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">Dé ontmoetingsplek voor de Nederlandse taal</div></div></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-pt/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇵🇹</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Lounge Português</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">O espaço para a língua portuguesa</div></div></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-sv/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇸🇪</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Svenska Lounge</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">Mötesplatsen för det svenska språket</div></div></a></div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/" class="w-full flex items-center gap-2.5 px-4 py-2.5 text-xs font-semibold hover:opacity-80 transition-colors " style="color:var(--text); "><span class="text-base">🏛️</span><span>Language Lounge Hub</span><span class="ml-auto text-[11px]" style="color:var(--text-muted);">Overview &rarr;</span></a></div></div></div><!-- Dynamic Nav Links --><nav class="hidden md:flex gap-5 items-center"><a href="https://smalltalkcafe.de/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Small Talk Café Podcasts</a><span class="text-sm font-normal" style="color:var(--border);">|</span><a href="/languagelounge/en-fr/vocabulary/" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Vocabulaire</a><a href="/languagelounge/en-fr/verbs/" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Verbes</a><a href="/languagelounge/en-fr/grammatik/" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Grammaire</a><a href="/languagelounge/en-fr/redemittel/" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Expressions</a><!-- Dark/Light Toggle --><button id="theme-toggle" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-sm font-semibold transition-all hover:opacity-70" style="border-color:var(--border); color:var(--text-muted);" aria-label="Toggle dark/light mode"><span id="theme-icon">☀️</span><span id="theme-label">Light</span></button></nav></div></header><main id="main-content" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-1 w-full"><div class="max-w-4xl mx-auto py-6" data-astro-cid-5tabbh6g><!-- Deck Header --><div class="flex items-start justify-between mb-8 gap-4 flex-wrap" data-astro-cid-5tabbh6g><div data-astro-cid-5tabbh6g><a href="/languagelounge/en-fr/verbs/" class="text-xs font-bold flex items-center gap-1 mb-2 hover:opacity-70 transition-opacity" style="color:var(--espresso);" data-astro-cid-5tabbh6g><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><path d="m15 18-6-6 6-6" data-astro-cid-5tabbh6g></path></svg>Verbes</a><h1 class="text-2xl md:text-3xl font-extrabold font-outfit" style="color:var(--text);" data-astro-cid-5tabbh6g>Figurative &amp; Idiomatic</h1><p class="text-xs font-bold uppercase tracking-wider mt-1" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Figuré et idiomatique • B2 • 20 cartes</p></div><div class="flex flex-col items-end gap-4 w-full md:w-auto mt-4 md:mt-0" data-astro-cid-5tabbh6g><!-- ── Mode Toggle ───────────────────────────── --><div class="flex rounded-xl border overflow-hidden p-1 gap-1 w-full max-w-[300px]" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><button id="btn-mode-learn" class="mode-btn flex-1 flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold transition-all" data-astro-cid-5tabbh6g><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" data-astro-cid-5tabbh6g></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" data-astro-cid-5tabbh6g></path></svg>Apprendre</button><button id="btn-mode-train" class="mode-btn flex-1 flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold transition-all" data-astro-cid-5tabbh6g><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><circle cx="12" cy="12" r="10" data-astro-cid-5tabbh6g></circle><polyline points="12 6 12 12 16 14" data-astro-cid-5tabbh6g></polyline></svg>S&#39;entraîner</button></div><div id="learn-toolbar" class="flex flex-col items-end gap-4 w-full" data-astro-cid-5tabbh6g><!-- View switcher (Cards vs List) --><div class="flex rounded-xl border overflow-hidden p-1 gap-1 w-full max-w-[300px]" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><button id="view-cards-btn" class="view-btn flex-1 flex items-center justify-center px-4 py-2 rounded-lg text-xs font-bold transition-all bg-[var(--espresso)] text-[#F5F2EB]" data-astro-cid-5tabbh6g>Cartes</button><button id="view-list-btn" class="view-btn flex-1 flex items-center justify-center px-4 py-2 rounded-lg text-xs font-bold transition-all text-[var(--text-muted)] hover:opacity-70" data-astro-cid-5tabbh6g>Liste</button></div><!-- Progress indicator --><div id="progress-container" class="flex items-center gap-3" data-astro-cid-5tabbh6g><div class="text-xs font-semibold" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Carte <span id="current-num" class="font-extrabold" style="color:var(--text);" data-astro-cid-5tabbh6g>1</span> / 20</div><div class="w-24 h-1.5 rounded-full overflow-hidden border" style="background-color:var(--bg);border-color:var(--border);" data-astro-cid-5tabbh6g><div id="progress-bar" class="h-full transition-all duration-500 rounded-full" style="width:0%; background-color:var(--espresso);" data-astro-cid-5tabbh6g></div></div></div></div></div></div><!-- ══ LEARN PANEL ════════════════════════════ --><div id="learn-panel" class="space-y-6" data-astro-cid-5tabbh6g><!-- ── Universal Study Card (rendered by LearningCard component) ── --><div id="card-view-wrap" data-astro-cid-5tabbh6g><div id="card-host" data-astro-cid-5tabbh6g><!-- The card shell — populated client-side by renderCard() --><div class="learning-card rounded-3xl border shadow-xl overflow-hidden" style="background-color:var(--card); border-color:var(--border);"><!-- ── Top bar ─────────────────────────────────── --><div class="lc-topbar flex items-center justify-between px-6 py-3.5 border-b" style="border-color:var(--border); background-color:var(--bg);"><div class="flex items-center gap-2"><span class="lc-type-badge text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-lg" style="background-color:var(--espresso); color:#F5F2EB;">—</span><span class="lc-level-badge text-[10px] font-bold px-2.5 py-1 rounded-lg cafe-badge"></span></div><button class="lc-audio-btn flex items-center justify-center w-11 h-11 rounded-full transition-transform hover:scale-105 active:scale-95 shadow-md flex-shrink-0" title="Écouter (A)" style="background-color:var(--espresso); color:#F5F2EB;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg></button></div><!-- ── Main word display ───────────────────────── --><div class="lc-hero px-7 py-8 text-center border-b" style="border-color:var(--border);"><div class="lc-article-wrap mb-1.5"><span class="lc-article text-xl font-bold"></span></div><h2 class="lc-word text-5xl md:text-6xl font-extrabold font-outfit mb-3" style="color:var(--text);">—</h2><p class="lc-translation text-lg font-semibold italic" style="color:var(--text-muted);"></p><p class="lc-forms text-sm font-medium mt-2" style="color:var(--text-muted);"></p></div><!-- ── Meta info grid ─────────────────────────── --><div class="lc-meta-grid grid border-b" style="border-color:var(--border);"><!-- populated by JS --></div><!-- ── Grammar note ───────────────────────────── --><div class="lc-grammar-wrap hidden px-7 py-5 border-b" style="border-color:var(--border); background-color:var(--bg);"><p class="text-[10px] font-bold uppercase tracking-widest mb-2" style="color:var(--espresso);">📌 <span class="lc-grammar-label">Note de grammaire</span></p><p class="lc-grammar-text text-sm leading-relaxed font-medium whitespace-pre-wrap" style="color:var(--text);"></p></div><!-- ── Type-specific block ────────────────────── --><!-- Connector word-order block --><div class="lc-wordorder-wrap hidden px-7 py-4 border-b" style="border-color:var(--border); background-color:var(--bg);"><div class="flex items-start gap-3 text-sm font-medium" style="color:var(--text-muted);"><span class="text-base flex-shrink-0">📐</span><span class="lc-wordorder-text"></span></div></div><!-- Phrase preposition block --><div class="lc-phrase-wrap hidden px-7 py-4 border-b" style="border-color:var(--border); background-color:var(--bg);"><p class="text-[10px] font-bold uppercase tracking-widest mb-2" style="color:var(--espresso);">Structure</p><p class="lc-phrase-rule text-sm font-semibold" style="color:var(--text);"></p></div><!-- ── Examples ───────────────────────────────── --><div class="px-7 py-6 border-b" style="border-color:var(--border);"><p class="lc-examples-label text-[10px] font-bold uppercase tracking-widest mb-5" style="color:var(--text-muted);">Exemples</p><div class="lc-examples space-y-3"><!-- populated by JS --></div></div><!-- Verb conjugation (hidden by default, shown for verb cards) --><div class="lc-conjugation-wrap hidden border-b px-7 py-6" style="border-color:var(--border);"><div class="lc-conjugation-inner flex flex-wrap gap-4"><!-- populated by JS --></div></div><!-- ── Tags ───────────────────────────────────── --><div class="lc-tags-row px-7 py-4 flex items-center gap-2 flex-wrap"><span class="text-[10px] font-bold uppercase tracking-wider" style="color:var(--text-muted);">Tags :</span><div class="lc-tags flex gap-2 flex-wrap"></div></div></div><script>(function(){const cardJson = "{\"id\":\"verbs-b2-figurative_idiomatic-001\",\"target\":\"coûter\",\"source\":\"to cost (figurative: to be difficult)\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"First group (-er) verb, conjugated with avoir. Used figuratively to express effort or difficulty.\",\"examples\":[{\"target\":\"Il lui coûte beaucoup d'admettre ses propres erreurs devant toute l'équipe.\",\"source\":\"It costs him a lot to admit his own mistakes in front of the whole team.\"},{\"target\":\"Ça m'a coûté énormément de terminer ce projet dans les délais.\",\"source\":\"It took a huge effort for me to finish this project on time.\"}],\"conjugations\":{\"présent\":{\"je\":\"coûte\",\"tu\":\"coûtes\",\"il/elle/on\":\"coûte\",\"nous\":\"coûtons\",\"vous\":\"coûtez\",\"ils/elles\":\"coûtent\"},\"imparfait\":{\"je\":\"coûtais\",\"tu\":\"coûtais\",\"il/elle/on\":\"coûtait\",\"nous\":\"coutions\",\"vous\":\"coûtiez\",\"ils/elles\":\"coûtaient\"},\"futur_simple\":{\"je\":\"coûterai\",\"tu\":\"coûteras\",\"il/elle/on\":\"coûtera\",\"nous\":\"coûterons\",\"vous\":\"coûterez\",\"ils/elles\":\"coûteront\"},\"conditionnel_présent\":{\"je\":\"coûterais\",\"tu\":\"coûterais\",\"il/elle/on\":\"coûterait\",\"nous\":\"coûterions\",\"vous\":\"coûteriez\",\"ils/elles\":\"coûteraient\"},\"passé_composé\":\"a coûté\",\"participe_passé\":\"coûté\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}}";
+const langConfigJson = "{\"language_pair\":\"english_french\",\"target_lang\":\"fr\",\"native_lang\":\"en\",\"target_lang_name\":\"Français\",\"native_lang_name\":\"English\",\"speech_lang\":\"fr-FR\",\"noun_metadata_fields\":[{\"key\":\"article\",\"label\":\"Article\",\"render\":\"article_badge\"},{\"key\":\"gender\",\"label\":\"Genre\",\"render\":\"gender_label\"},{\"key\":\"plural\",\"label\":\"Pluriel\",\"render\":\"text\"}],\"article_colours\":{\"le\":\"#4A7C9E\",\"la\":\"#B05070\",\"l'\":\"#7B6291\"},\"gender_labels\":{\"m\":\"Masculin\",\"f\":\"Féminin\"},\"verb_tenses\":[\"présent\",\"passé_composé\",\"imparfait\",\"participe_passé\",\"futur_simple\",\"conditionnel_présent\"],\"cases\":{},\"ui_labels\":{\"learn_mode\":\"Apprendre\",\"train_mode\":\"S'entraîner\",\"examples_heading\":\"Exemples\",\"grammar_note_heading\":\"Note de grammaire\",\"audio_button\":\"Écouter\",\"back_link\":\"Retour\",\"card_counter\":\"Carte {current} / {total}\",\"next_button\":\"Suivant\",\"finish_button\":\"Terminé\",\"correct\":\"Correct !\",\"wrong\":\"Incorrect\",\"dashboard_link\":\"Tableau de bord\",\"library_prompt\":\"Choisissez un paquet dans la bibliothèque et explorez les cartes.\",\"cards_badge\":\"{count} CARTES\",\"cards_count\":\"{count} cartes\",\"deck_meta\":\"{topic} • {level} • {count} cartes\",\"no_decks\":\"Aucun paquet dans cette catégorie pour le moment.\",\"setup_title\":\"Configuration de l'entraînement\",\"setup_subtitle\":\"Configurez votre session d'apprentissage.\",\"question_type\":\"Type de question\",\"mode_multiple_choice\":\"Choix multiple\",\"mode_typing\":\"Saisie de texte\",\"mode_typing_short\":\"Saisie\",\"direction\":\"Direction\",\"direction_forward\":\"🇺🇸 English → 🇫🇷 Français\",\"direction_reverse\":\"🇫🇷 Français → 🇺🇸 English\",\"select_level\":\"Sélectionnez un niveau\",\"start_training\":\"Démarrer l'entraînement\",\"count_label\":\"Nombre de cartes\",\"all_cards\":\"Toutes\",\"in_deck\":\"dans le paquet\",\"view_cards\":\"Cartes\",\"view_list\":\"Liste\",\"card_word\":\"Carte\",\"keyboard_hint_study\":\"← → Flèches pour naviguer · A pour écouter\",\"example_single_heading\":\"Exemple\",\"no_example\":\"Aucun exemple disponible.\",\"tags_label\":\"Tags :\",\"type_vocab\":\"Vocabulaire\",\"type_verb\":\"Verbe\",\"type_phrase\":\"Expression\",\"type_connector\":\"Connecteur\",\"type_grammar\":\"Grammaire\",\"type_noun\":\"Nom\",\"type_adjective\":\"Adjectif\",\"type_expression\":\"Locution\",\"plural_prefix\":\"Pl. {plural}\",\"plural_only\":\"pluriel uniquement\",\"word_order_heading\":\"Ordre des mots\",\"structure_heading\":\"Structure\",\"training_title\":\"Entraînement\",\"all_levels\":\"Tous les niveaux\",\"type_placeholder\":\"Écrivez le mot en français...\",\"check_button\":\"Vérifier\",\"keyboard_hint_train\":\"Entrée / Espace = valider · A = Écouter\",\"audio_title\":\"Écouter (A)\",\"training_finished\":\"Entraînement terminé !\",\"missed_heading\":\"Réponses incorrectes — à réviser\",\"retry_missed\":\"Réessayer les erreurs\",\"new_config\":\"Nouvelle configuration\",\"plural_hint\":\"Pl : {plural}\",\"results_pct\":\"{pct}% de réussite\",\"result_excellent\":\"Excellent ! Vous maîtrisez parfaitement ce niveau.\",\"result_good\":\"Très bien ! Encore un peu de pratique et ce sera parfait !\",\"result_ok\":\"Bon début ! Révisez encore quelques cartes.\",\"result_retry\":\"Pas d'inquiétude — c'est en forgeant qu'on devient forgeron !\",\"no_cards_title\":\"Aucune carte trouvée\",\"no_cards_hint\":\"Veuillez sélectionner un autre niveau ou un autre paquet.\"},\"answer_normalisation\":{\"strip_leading_words\":[\"le\",\"la\",\"l'\",\"un\",\"une\",\"des\",\"du\",\"de la\",\"de l'\"],\"alt_spellings\":{\"é\":\"e\",\"è\":\"e\",\"ê\":\"e\",\"ë\":\"e\",\"à\":\"a\",\"â\":\"a\",\"ô\":\"o\",\"ù\":\"u\",\"û\":\"u\",\"î\":\"i\",\"ï\":\"i\",\"ç\":\"c\"}}}";
+
+  /**
+   * Client-side card renderer.
+   * Uses the universal card-renderer logic inline (no imports in Astro is:inline).
+   */
+
+  // ── Parse data ──────────────────────────────────────────────────────────
+  const card   = JSON.parse(cardJson);
+  const config = JSON.parse(langConfigJson);
+
+  // ── Helpers ─────────────────────────────────────────────────────────────
+  // Articles come from the language config (keys of article_colours), never hardcoded
+  const articleList = Object.keys(config.article_colours || {});
+  const articlePatterns = articleList.map(a => {
+    const esc = a.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    return esc.endsWith("'") ? esc : `${esc}\\s+`;
+  });
+  const articleRe = articlePatterns.length
+    ? new RegExp('^(?:' + articlePatterns.join('|') + ')', 'i')
+    : null;
+
+  function stripArticle(word) {
+    return articleRe ? (word || '').replace(articleRe, '').trim() : (word || '').trim();
+  }
+
+  function getArticleColour(article) {
+    if (!article || !config.article_colours) return 'var(--espresso)';
+    return config.article_colours[article.toLowerCase()] || 'var(--espresso)';
+  }
+
+  function getGenderLabel(gender) {
+    if (!gender) return '';
+    return (config.gender_labels || {})[gender] || gender;
+  }
+
+  const uiLabels = config.ui_labels || {};
+
+  function getTypeLabel() {
+    const tags = card.tags || [];
+    if (tags.includes('noun'))       return uiLabels.type_noun || 'Noun';
+    if (tags.includes('verb'))       return uiLabels.type_verb || 'Verb';
+    if (tags.includes('adjective'))  return uiLabels.type_adjective || 'Adjective';
+    if (tags.includes('expression')) return uiLabels.type_expression || 'Expression';
+    const map = {
+      vocab: uiLabels.type_vocab || 'Vocab',
+      verb: uiLabels.type_verb || 'Verb',
+      phrase: uiLabels.type_phrase || 'Phrase',
+      connector: uiLabels.type_connector || 'Connector',
+      grammar: uiLabels.type_grammar || 'Grammar'
+    };
+    return map[card.type] || uiLabels.card_word || 'Card';
+  }
+
+  function formatHighlight(text) {
+    if (!text) return '';
+    return String(text).replace(/\*(.*?)\*/g, '<span class="highlighter">$1</span>');
+  }
+
+  function getMetaFacts() {
+    const meta = card.metadata || {};
+    const facts = [];
+    for (const field of (config.noun_metadata_fields || [])) {
+      const raw = meta[field.key] || card[field.key];
+      if (!raw || raw === '~') continue;
+      let value = String(raw);
+      let colour;
+      if (field.render === 'gender_label') value = getGenderLabel(raw);
+      else if (field.render === 'article_badge') colour = getArticleColour(raw);
+      facts.push({ label: field.label, value, colour });
+    }
+    return facts;
+  }
+
+  // ── Render ──────────────────────────────────────────────────────────────
+  const container = document.querySelector('.learning-card');
+  if (!container) { console.error('LearningCard: container not found'); }
+
+  function sel(cls) { return container?.querySelector(cls); }
+
+  // Type badge
+  sel('.lc-type-badge').textContent = getTypeLabel();
+
+  // Level badge
+  sel('.lc-level-badge').textContent = card.level || '';
+
+  // Article
+  const article = card.metadata?.article;
+  const articleWrap = sel('.lc-article-wrap');
+  const articleEl   = sel('.lc-article');
+  if (article && card.tags?.includes('noun') && !card.metadata?.plural_only) {
+    articleEl.textContent  = article;
+    articleEl.style.color  = getArticleColour(article);
+    articleWrap.style.display = '';
+  } else {
+    articleWrap.style.display = 'none';
+  }
+
+  // Word
+  sel('.lc-word').textContent = stripArticle(card.target);
+
+  // Translation
+  sel('.lc-translation').textContent = card.source || '';
+
+  // Plural / forms
+  const plural = card.metadata?.plural;
+  const formsEl = sel('.lc-forms');
+  const prefix = uiLabels.plural_prefix || 'Pl.';
+  const pluralOnly = uiLabels.plural_only || 'Plural only';
+  if (plural && !card.metadata?.plural_only) formsEl.textContent = `${prefix} ${plural}`;
+  else if (card.metadata?.plural_only) formsEl.textContent = pluralOnly;
+  else formsEl.textContent = '';
+
+  // Meta grid
+  const metaGrid = sel('.lc-meta-grid');
+  const facts = getMetaFacts();
+  if (facts.length) {
+    const cols = Math.min(facts.length, 4);
+    metaGrid.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
+    metaGrid.innerHTML = facts.map((f, i) => `
+      <div class="px-5 py-4 ${i < facts.length - 1 ? 'border-r' : ''}" style="border-color:var(--border);">
+        <p class="text-[9px] font-bold uppercase tracking-widest mb-1" style="color:var(--text-muted);">${f.label}</p>
+        <p class="text-sm font-bold" style="color:${f.colour || 'var(--text)'};">${f.value}</p>
+      </div>
+    `).join('');
+  } else {
+    metaGrid.style.display = 'none';
+  }
+
+  // Grammar note
+  const grammarWrap = sel('.lc-grammar-wrap');
+  if (card.grammar_note) {
+    sel('.lc-grammar-text').innerHTML = formatHighlight(card.grammar_note);
+    grammarWrap.classList.remove('hidden');
+  }
+
+  // Grammar label from config
+  const uiLabels = config.ui_labels || {};
+  if (uiLabels.grammar_note_heading) sel('.lc-grammar-label').textContent = uiLabels.grammar_note_heading;
+  if (uiLabels.examples_heading)     sel('.lc-examples-label').textContent = uiLabels.examples_heading;
+  if (uiLabels.audio_button)         { const el = sel('.lc-audio-label'); if (el) el.textContent = uiLabels.audio_button; }
+
+  // ── Type-specific blocks ─────────────────────────────────────────────────
+
+  // Verb: conjugation table
+  const type = card.type || (card.tags?.includes('verb') ? 'verb' : 'vocab');
+  if (type === 'verb' && card.conjugations) {
+    const conjWrap  = sel('.lc-conjugation-wrap');
+    const conjInner = sel('.lc-conjugation-inner');
+    conjWrap.classList.remove('hidden');
+
+    let conjArray = [];
+    if (Array.isArray(card.conjugations)) {
+      conjArray = card.conjugations;
+    } else {
+      for (const [tense, forms] of Object.entries(card.conjugations)) {
+        if (typeof forms === 'string') {
+          conjArray.push({ tense, stringForm: forms });
+        } else {
+          const formsArr = Object.entries(forms).map(([pronoun, form]) => ({ pronoun, form }));
+          conjArray.push({ tense, forms: formsArr });
+        }
+      }
+    }
+
+    const tensesToRender = config.verb_tenses || conjArray.map(t => t.tense);
+
+    const stringTenses = [];
+    const tableTenses = [];
+
+    tensesToRender.forEach(tense => {
+      const t = conjArray.find(c => c.tense === tense);
+      if (!t) return;
+      if (t.stringForm) stringTenses.push(t);
+      else tableTenses.push(t);
+    });
+
+    let html = '';
+
+    // Render simple string forms (e.g. Perfekt, Partizip II) as pill-like tags at the top
+    if (stringTenses.length > 0) {
+      html += `
+        <div class="flex flex-wrap gap-3 mb-6">
+          ${stringTenses.map(t => `
+            <div class="rounded-xl border px-4 py-2.5 flex items-center gap-3 shadow-sm" style="border-color:var(--border); background-color:var(--bg);">
+              <span class="text-[10px] font-bold uppercase tracking-widest opacity-80" style="color:var(--espresso);">${t.tense.replace(/_/g, ' ')}</span>
+              <span class="font-bold text-sm" style="color:var(--text);">${t.stringForm}</span>
+            </div>
+          `).join('')}
+        </div>
+      `;
+    }
+
+    // Render full tables (e.g. Präsens, Präteritum) as a unified table
+    if (tableTenses.length > 0) {
+      // Collect all pronouns from the first available table tense
+      const pronouns = tableTenses[0].forms.map(f => f.pronoun);
+
+      html += `
+        <div class="rounded-xl border overflow-x-auto shadow-sm w-full" style="border-color:var(--border);">
+          <table class="w-full text-sm text-left">
+            <thead>
+              <tr style="background-color:var(--bg); border-bottom: 1px solid var(--border);">
+                <th class="px-4 py-3 font-bold uppercase tracking-widest text-[10px] w-[1%]" style="color:var(--espresso); border-right: 1px solid var(--border);"></th>
+                ${tableTenses.map(t => `
+                  <th class="px-4 py-3 font-bold uppercase tracking-widest text-[10px]" style="color:var(--espresso);">${t.tense.replace(/_/g, ' ')}</th>
+                `).join('')}
+              </tr>
+            </thead>
+            <tbody>
+              ${pronouns.map((pronoun, ri) => `
+                <tr class="${ri < pronouns.length - 1 ? 'border-b' : ''}" style="border-color:var(--border);">
+                  <td class="px-4 py-3 font-bold text-xs whitespace-nowrap" style="color:var(--espresso); background-color:var(--bg); border-right: 1px solid var(--border);">${pronoun}</td>
+                  ${tableTenses.map(t => {
+                    const formObj = t.forms.find(f => f.pronoun === pronoun);
+                    return `<td class="px-4 py-3 font-semibold whitespace-nowrap" style="color:var(--text);">${formObj ? formObj.form : '-'}</td>`;
+                  }).join('')}
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+        </div>
+      `;
+    }
+
+    conjInner.innerHTML = html;
+  }
+
+  // Connector: word order block
+  if (type === 'connector' && card.word_order) {
+    const woWrap = sel('.lc-wordorder-wrap');
+    sel('.lc-wordorder-text').textContent = card.word_order;
+    woWrap.classList.remove('hidden');
+  }
+
+  // Phrase: preposition rule block
+  if (type === 'phrase' && card.clause_type) {
+    const phraseWrap = sel('.lc-phrase-wrap');
+    sel('.lc-phrase-rule').textContent = card.clause_type;
+    phraseWrap.classList.remove('hidden');
+  }
+
+  // ── Examples ─────────────────────────────────────────────────────────────
+  const examplesEl = sel('.lc-examples');
+  const rawExamples = card.examples || [];
+
+  if (rawExamples.length) {
+    examplesEl.innerHTML = rawExamples.map(e => `
+        <div class="rounded-2xl border overflow-hidden" style="border-color:var(--border);">
+          <div class="px-4 py-3" style="background-color:var(--bg);">
+            <p class="font-semibold leading-snug mb-1" style="color:var(--text);">${formatHighlight(e.target)}</p>
+            <p class="text-sm italic" style="color:var(--text-muted);">${formatHighlight(e.source || '')}</p>
+          </div>
+          ${e.note ? `<div class="px-4 py-2 border-t" style="border-color:var(--border);">
+            <p class="text-[10px] font-bold font-mono" style="color:var(--espresso);">📐 ${e.note}</p>
+          </div>` : ''}
+        </div>
+      `).join('');
+  } else {
+    examplesEl.innerHTML = `<p class="text-sm italic" style="color:var(--text-muted);">${uiLabels.no_example || ''}</p>`;
+  }
+
+  // ── Tags ─────────────────────────────────────────────────────────────────
+  const tagsEl = sel('.lc-tags');
+  tagsEl.innerHTML = (card.tags || []).map(t => `
+    <span class="text-[10px] font-bold px-2 py-0.5 rounded-md border uppercase" style="border-color:var(--border); color:var(--text-muted); background-color:var(--bg);">${t}</span>
+  `).join('');
+
+  // ── Audio button ─────────────────────────────────────────────────────────
+  sel('.lc-audio-btn')?.addEventListener('click', () => {
+    if (window.LoungeAudioEngine) {
+      window.LoungeAudioEngine.speak(card.target || '', config.speech_lang, 0.85);
+    }
+  });
+})();</script></div><!-- ── Navigation ───────────────────────────── --><div class="flex items-center justify-between mt-8 gap-4" data-astro-cid-5tabbh6g><button id="btn-prev" disabled class="flex items-center gap-2 px-6 py-3 rounded-2xl border font-bold text-sm transition-all hover:opacity-70 active:scale-95 disabled:opacity-30 disabled:cursor-not-allowed" style="border-color:var(--border); color:var(--text); background-color:var(--card);" data-astro-cid-5tabbh6g><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><path d="m15 18-6-6 6-6" data-astro-cid-5tabbh6g></path></svg>Retour</button><!-- Dot navigation --><div id="dot-nav" class="flex items-center gap-1.5 flex-wrap justify-center max-w-xs overflow-hidden" style="max-height:2rem;" data-astro-cid-5tabbh6g><!-- populated by JS --></div><button id="btn-next" class="flex items-center gap-2 px-6 py-3 rounded-2xl font-bold text-sm transition-all hover:opacity-80 active:scale-95" style="background-color:var(--espresso); color:#F5F2EB;" data-astro-cid-5tabbh6g>Suivant<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><path d="m9 18 6-6-6-6" data-astro-cid-5tabbh6g></path></svg></button></div><!-- Keyboard hint --><p class="text-center text-xs font-medium mt-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>← → Flèches pour naviguer · A pour écouter</p></div><!-- ── List View ───────────────────────────── --><div id="list-view-wrap" class="hidden space-y-6" data-astro-cid-5tabbh6g><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>coûter</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to cost (figurative: to be difficult)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Note de grammaire</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>First group (-er) verb, conjugated with avoir. Used figuratively to express effort or difficulty.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemple</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Il lui coûte beaucoup d'admettre ses propres erreurs devant toute l'équipe.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>It costs him a lot to admit his own mistakes in front of the whole team.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>tomber</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to fall (figurative: to happen unexpectedly)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Note de grammaire</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>First group (-er) verb, conjugated with être when intransitive of movement, but mostly avoir or être in idiomatic expressions (tomber bien/mal).</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemple</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Ta question tombe très bien car nous discutions justement de ce sujet.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Your question comes at a very good time because we were just discussing this topic.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>filer</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to spin / to slip away (figurative: to leave quickly)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Note de grammaire</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>First group (-er) verb, conjugated with avoir. Commonly used in daily idioms like 'filer à l'anglaise'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemple</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Je dois filer car ma réunion commence dans dix minutes.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>I have to dash off because my meeting starts in ten minutes.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>croiser</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to cross (figurative: to cross paths with someone)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Note de grammaire</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>First group (-er) verb, conjugated with avoir. Often used for unexpectedly meeting someone.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemple</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>J'ai croisé ton frère par hasard dans le métro ce matin.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>I ran into your brother by chance in the subway this morning.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>décrocher</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to unhook (figurative: to land a job, score a success)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Note de grammaire</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>First group (-er) verb, conjugated with avoir. Used in professional contexts for securing a contract or job.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemple</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Elle a réussi à décrocher un entretien dans une grande entreprise internationale.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>She managed to land an interview in a major international company.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>poser</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to put down (figurative: to pose a question or set conditions)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Note de grammaire</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>First group (-er) verb, conjugated with avoir. Highly versatile in idiomatic phrases like 'poser un lapin'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemple</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Il est important de poser des limites claires dès le début du contrat.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>It is important to set clear boundaries right from the start of the contract.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>creuser</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to dig (figurative: to investigate deeper, explore an idea)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Note de grammaire</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>First group (-er) verb, conjugated with avoir. Used when examining a subject or problem thoroughly.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemple</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>C'est une piste intéressante, il faudrait la creuser un peu plus.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>It's an interesting lead; we should look into it a bit more deeply.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>nager</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to swim (figurative: to be in full confusion or success)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Note de grammaire</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>First group (-er) verb with a spelling change (ge -> geons in 'nous'), conjugated with avoir. Used in 'nager dans le bonheur' or 'nager en plein mystère'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemple</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Depuis qu'ils ont signé leur contrat, ils nagent dans le bonheur.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Ever since they signed their contract, they are walking on air.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>rouler</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to roll (figurative: to deceive or trick someone)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Note de grammaire</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>First group (-er) verb, conjugated with avoir. Famous in the expression 'se faire rouler (dans la farine)'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemple</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Il s'est fait rouler par un vendeur malhonnête qui lui a vendu une voiture cassée.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>He got ripped off by a dishonest salesman who sold him a broken car.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>monter</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to go up (figurative: to fabricate a story or plot a scheme)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Note de grammaire</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>First group (-er) verb, conjugated with être for movement, but with avoir when transitive or in idioms like 'monter un coup'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemple</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Les employés ont monté un dossier solide pour défendre leurs conditions de travail.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The employees put together a solid file to defend their working conditions.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>toucher</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to touch (figurative: to affect emotionally or receive money)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Note de grammaire</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>First group (-er) verb, conjugated with avoir. Used figuratively for emotional impact or receiving a salary.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemple</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Son discours bouleversant a touché tout le public présent dans la salle.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Her moving speech touched everyone in the audience.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>souffler</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to blow (figurative: to suggest an idea or take a breather)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Note de grammaire</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>First group (-er) verb, conjugated with avoir. Used in expressions like 'souffler le chaud et le froid' or 'souffler un peu'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemple</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Après des semaines de travail intense, nous avons enfin le droit de souffler un peu.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>After weeks of intense work, we finally have the right to take a breather.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>voter</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to vote (figurative: to pass a law or approve strongly)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Note de grammaire</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>First group (-er) verb, conjugated with avoir. Used in political and institutional contexts.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemple</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Le parlement a voté la nouvelle loi sur la transition écologique hier soir.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Parliament passed the new law on ecological transition last night.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>passer</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to pass (figurative: to take an exam or endure a hardship)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Note de grammaire</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>First group (-er) verb, conjugated with avoir (or être for simple motion). Common in B2 idioms like 'passer l'éponge' or 'passer un cap'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemple</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Notre entreprise a réussi à passer un cap crucial en augmentant son chiffre d'affaires.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Our company managed to turn a crucial corner by increasing its turnover.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>garder</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to keep (figurative: to remember, keep silent, or maintain self-control)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Note de grammaire</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>First group (-er) verb, conjugated with avoir. Frequent in idiomatic expressions like 'garder son sang-froid' or 'garder le cap'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemple</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Dans une situation de crise, il est primordial de garder son sang-froid.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>In a crisis situation, it is essential to keep one's cool.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>jouer</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to play (figurative: to act a role, or be at stake)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Note de grammaire</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>First group (-er) verb, conjugated with avoir. Found in expressions like 'jouer un rôle clé' or 'tout se joue'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemple</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>La recherche scientifique joue un rôle clé dans le développement des énergies renouvelables.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Scientific research plays a key role in the development of renewable energies.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>porter</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to carry (figurative: to bear responsibility or bear fruit)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Note de grammaire</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>First group (-er) verb, conjugated with avoir. Essential for idiomatic structures like 'porter ses fruits' or 'porter la responsabilité'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemple</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Les réformes engagées par la direction commencent enfin à porter leurs fruits.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The reforms undertaken by management are finally starting to bear fruit.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>briser</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to break (figurative: to shatter hopes or break the silence)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Note de grammaire</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>First group (-er) verb, conjugated with avoir. Frequent in idioms like 'briser la glace' or 'briser le silence'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemple</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Quelques mots d'humour ont suffi pour briser la glace entre les nouveaux collègues.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>A few humorous words were enough to break the ice between the new colleagues.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>tisser</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to weave (figurative: to build relationships or networks)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Note de grammaire</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>First group (-er) verb, conjugated with avoir. Used metaphorically for creating social or professional ties.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemple</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Cet événement professionnel permet de tisser des liens durables entre experts.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>This professional event makes it possible to build lasting ties between experts.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>avaler</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to swallow (figurative: to swallow insults, bitter pills, or believe something naively)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Note de grammaire</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>First group (-er) verb, conjugated with avoir. Frequent in idioms like 'avaler une couleuvre' or 'avaler son bulletin de naissance'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemple</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Il a dû avaler sa fierté pour demander de l'aide à son ancien rival.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>He had to swallow his pride to ask his former rival for help.</p></div></div></div></div></div></div><!-- ══ TRAIN PANEL ════════════════════════════ --><div id="train-panel" class="hidden space-y-10" data-astro-cid-5tabbh6g><div class="cafe-card rounded-3xl p-8 border shadow-lg max-w-xl mx-auto" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="text-center mb-8" data-astro-cid-5tabbh6g><h2 class="text-2xl font-extrabold font-outfit mb-2" style="color:var(--text);" data-astro-cid-5tabbh6g>Configuration de l&#39;entraînement</h2><p class="text-sm font-medium" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Configurez votre session d&#39;apprentissage.</p></div><form action="/languagelounge/en-fr/training/verbs/train/" method="GET" class="space-y-8" id="deck-train-form" data-astro-cid-5tabbh6g><input type="hidden" name="level" value="b2" data-astro-cid-5tabbh6g><input type="hidden" name="deck" value="verbs-b2-figurative_idiomatic" data-astro-cid-5tabbh6g><!-- Mode selection --><div class="space-y-3" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold tracking-widest uppercase" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Type de question</p><div class="grid grid-cols-2 gap-3" data-astro-cid-5tabbh6g><button type="button" data-group="mode" data-value="mc" class="sel-opt sel-active" data-astro-cid-5tabbh6g><span class="text-xl mb-1 block" data-astro-cid-5tabbh6g>🔘</span><span class="text-sm font-bold" data-astro-cid-5tabbh6g>Choix multiple</span></button><button type="button" data-group="mode" data-value="type" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-xl mb-1 block" data-astro-cid-5tabbh6g>⌨️</span><span class="text-sm font-bold" data-astro-cid-5tabbh6g>Saisie de texte</span></button></div><input type="hidden" name="mode" id="mode-hidden" value="mc" data-astro-cid-5tabbh6g></div><!-- Direction selection --><div class="space-y-3" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold tracking-widest uppercase" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Direction</p><div class="grid grid-cols-2 gap-3" data-astro-cid-5tabbh6g><button type="button" data-group="dir" data-value="en-fr" class="sel-opt sel-active" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>🇺🇸 English → 🇫🇷 Français</span></button><button type="button" data-group="dir" data-value="fr-en" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>🇫🇷 Français → 🇺🇸 English</span></button></div><input type="hidden" name="dir" id="dir-hidden" value="en-fr" data-astro-cid-5tabbh6g></div><!-- Count Selection --><div class="space-y-3" data-astro-cid-5tabbh6g><div class="flex justify-between items-end" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold tracking-widest uppercase" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Nombre de cartes</p><span class="text-xs font-bold" style="color:var(--espresso);" data-astro-cid-5tabbh6g>20 cartes dans le paquet</span></div><div class="grid grid-cols-4 gap-3" data-astro-cid-5tabbh6g><button type="button" data-group="count" data-value="30" class="sel-opt sel-active" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>30</span></button><button type="button" data-group="count" data-value="60" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>60</span></button><button type="button" data-group="count" data-value="90" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>90</span></button><button type="button" data-group="count" data-value="1000" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>Toutes</span></button></div><input type="hidden" name="count" id="count-hidden" value="30" data-astro-cid-5tabbh6g></div><button type="submit" class="w-full py-4 rounded-xl font-bold text-base transition-all hover:opacity-90 mt-4 shadow-md active:scale-[0.98]" style="background-color:var(--espresso); color:#F5F2EB;" data-astro-cid-5tabbh6g>Démarrer l&#39;entraînement &rarr;</button></form></div></div></div></main><footer class="mt-auto border-t py-8" style="background-color:var(--bg);border-color:var(--border);"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-medium" style="color:var(--text-muted);"><div>&copy; 2025 - 2026 Small Talk Café Podcasts. All rights reserved.</div><div class="flex gap-4">Made in Bayern ❤️ Los Geht's!</div></div></footer><!-- Minimal script for Theme and Dropdown toggle --><script>
+      // ── Theme ──────────────────────────────────────
+      function applyTheme(dark) {
+        if (dark) {
+          document.documentElement.classList.add('dark');
+          localStorage.setItem('wortschatz_theme', 'dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+          localStorage.setItem('wortschatz_theme', 'light');
+        }
+        const icon = document.getElementById('theme-icon');
+        const label = document.getElementById('theme-label');
+        if (icon) icon.textContent = dark ? '🌙' : '☀️';
+        if (label) label.textContent = dark ? 'Dark' : 'Light';
+      }
+
+      const isDark = document.documentElement.classList.contains('dark');
+      applyTheme(isDark);
+
+      document.getElementById('theme-toggle')?.addEventListener('click', () => {
+        const nowDark = !document.documentElement.classList.contains('dark');
+        applyTheme(nowDark);
+      });
+
+      // ── Dropdown Toggle ──────────────────────────
+      const langBtn = document.getElementById('lang-btn');
+      const langMenu = document.getElementById('lang-menu');
+
+      langBtn?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        langMenu?.classList.toggle('hidden');
+      });
+
+      document.addEventListener('click', () => {
+        langMenu?.classList.add('hidden');
+      });
+    </script></body></html><script type="module" src="/languagelounge/_astro/_deckId_.astro_astro_type_script_index_0_lang.DwXABuW8.js"></script><script>(function(){const cardsJson = "[{\"id\":\"verbs-b2-figurative_idiomatic-001\",\"target\":\"coûter\",\"source\":\"to cost (figurative: to be difficult)\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"First group (-er) verb, conjugated with avoir. Used figuratively to express effort or difficulty.\",\"examples\":[{\"target\":\"Il lui coûte beaucoup d'admettre ses propres erreurs devant toute l'équipe.\",\"source\":\"It costs him a lot to admit his own mistakes in front of the whole team.\"},{\"target\":\"Ça m'a coûté énormément de terminer ce projet dans les délais.\",\"source\":\"It took a huge effort for me to finish this project on time.\"}],\"conjugations\":{\"présent\":{\"je\":\"coûte\",\"tu\":\"coûtes\",\"il/elle/on\":\"coûte\",\"nous\":\"coûtons\",\"vous\":\"coûtez\",\"ils/elles\":\"coûtent\"},\"imparfait\":{\"je\":\"coûtais\",\"tu\":\"coûtais\",\"il/elle/on\":\"coûtait\",\"nous\":\"coutions\",\"vous\":\"coûtiez\",\"ils/elles\":\"coûtaient\"},\"futur_simple\":{\"je\":\"coûterai\",\"tu\":\"coûteras\",\"il/elle/on\":\"coûtera\",\"nous\":\"coûterons\",\"vous\":\"coûterez\",\"ils/elles\":\"coûteront\"},\"conditionnel_présent\":{\"je\":\"coûterais\",\"tu\":\"coûterais\",\"il/elle/on\":\"coûterait\",\"nous\":\"coûterions\",\"vous\":\"coûteriez\",\"ils/elles\":\"coûteraient\"},\"passé_composé\":\"a coûté\",\"participe_passé\":\"coûté\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-figurative_idiomatic-002\",\"target\":\"tomber\",\"source\":\"to fall (figurative: to happen unexpectedly)\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"First group (-er) verb, conjugated with être when intransitive of movement, but mostly avoir or être in idiomatic expressions (tomber bien/mal).\",\"examples\":[{\"target\":\"Ta question tombe très bien car nous discutions justement de ce sujet.\",\"source\":\"Your question comes at a very good time because we were just discussing this topic.\"},{\"target\":\"Leur proposition est tombée à pic pour sauver notre budget.\",\"source\":\"Their proposal came at the exact right moment to save our budget.\"}],\"conjugations\":{\"présent\":{\"je\":\"tombe\",\"tu\":\"tombes\",\"il/elle/on\":\"tombe\",\"nous\":\"tombons\",\"vous\":\"tombez\",\"ils/elles\":\"tombent\"},\"imparfait\":{\"je\":\"tombais\",\"tu\":\"tombais\",\"il/elle/on\":\"tombait\",\"nous\":\"tombions\",\"vous\":\"tombiez\",\"ils/elles\":\"tombaient\"},\"futur_simple\":{\"je\":\"tomberai\",\"tu\":\"tomberas\",\"il/elle/on\":\"tombera\",\"nous\":\"tomberons\",\"vous\":\"tomberez\",\"ils/elles\":\"tomberont\"},\"conditionnel_présent\":{\"je\":\"tomberais\",\"tu\":\"tomberais\",\"il/elle/on\":\"tomberait\",\"nous\":\"tomberions\",\"vous\":\"tomberiez\",\"ils/elles\":\"tomberaient\"},\"passé_composé\":\"est tombé(e)\",\"participe_passé\":\"tombé\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-figurative_idiomatic-003\",\"target\":\"filer\",\"source\":\"to spin / to slip away (figurative: to leave quickly)\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"First group (-er) verb, conjugated with avoir. Commonly used in daily idioms like 'filer à l'anglaise'.\",\"examples\":[{\"target\":\"Je dois filer car ma réunion commence dans dix minutes.\",\"source\":\"I have to dash off because my meeting starts in ten minutes.\"},{\"target\":\"Le temps file trop vite quand on prépare un examen important.\",\"source\":\"Time flies by too fast when you are preparing for an important exam.\"}],\"conjugations\":{\"présent\":{\"je\":\"file\",\"tu\":\"files\",\"il/elle/on\":\"file\",\"nous\":\"filons\",\"vous\":\"filez\",\"ils/elles\":\"filent\"},\"imparfait\":{\"je\":\"filais\",\"tu\":\"filais\",\"il/elle/on\":\"filait\",\"nous\":\"filions\",\"vous\":\"filiez\",\"ils/elles\":\"filaient\"},\"futur_simple\":{\"je\":\"filerai\",\"tu\":\"fileras\",\"il/elle/on\":\"filera\",\"nous\":\"filerons\",\"vous\":\"filerez\",\"ils/elles\":\"fileront\"},\"conditionnel_présent\":{\"je\":\"filerais\",\"tu\":\"filerais\",\"il/elle/on\":\"filerait\",\"nous\":\"filerions\",\"vous\":\"fileriez\",\"ils/elles\":\"fileraient\"},\"passé_composé\":\"a filé\",\"participe_passé\":\"filé\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-figurative_idiomatic-004\",\"target\":\"croiser\",\"source\":\"to cross (figurative: to cross paths with someone)\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"First group (-er) verb, conjugated with avoir. Often used for unexpectedly meeting someone.\",\"examples\":[{\"target\":\"J'ai croisé ton frère par hasard dans le métro ce matin.\",\"source\":\"I ran into your brother by chance in the subway this morning.\"},{\"target\":\"On croise souvent des personnalités célèbres dans ce quartier.\",\"source\":\"You often cross paths with famous personalities in this neighborhood.\"}],\"conjugations\":{\"présent\":{\"je\":\"croise\",\"tu\":\"croises\",\"il/elle/on\":\"croise\",\"nous\":\"croisons\",\"vous\":\"croisez\",\"ils/elles\":\"croisent\"},\"imparfait\":{\"je\":\"croisais\",\"tu\":\"croisais\",\"il/elle/on\":\"croisait\",\"nous\":\"croisions\",\"vous\":\"croisiez\",\"ils/elles\":\"croisaient\"},\"futur_simple\":{\"je\":\"croiserai\",\"tu\":\"croiseras\",\"il/elle/on\":\"croisera\",\"nous\":\"croiserons\",\"vous\":\"croiserez\",\"ils/elles\":\"croiseront\"},\"conditionnel_présent\":{\"je\":\"croiserais\",\"tu\":\"croiserais\",\"il/elle/on\":\"croiserait\",\"nous\":\"croiserions\",\"vous\":\"croiseriez\",\"ils/elles\":\"croiseraient\"},\"passé_composé\":\"a croisé\",\"participe_passé\":\"croisé\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-figurative_idiomatic-005\",\"target\":\"décrocher\",\"source\":\"to unhook (figurative: to land a job, score a success)\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"First group (-er) verb, conjugated with avoir. Used in professional contexts for securing a contract or job.\",\"examples\":[{\"target\":\"Elle a réussi à décrocher un entretien dans une grande entreprise internationale.\",\"source\":\"She managed to land an interview in a major international company.\"},{\"target\":\"Après des mois d'efforts, ils ont décroché le contrat de l'année.\",\"source\":\"After months of efforts, they secured the contract of the year.\"}],\"conjugations\":{\"présent\":{\"je\":\"décroche\",\"tu\":\"décroches\",\"il/elle/on\":\"décroche\",\"nous\":\"décrochons\",\"vous\":\"décrochez\",\"ils/elles\":\"décrochent\"},\"imparfait\":{\"je\":\"décrochais\",\"tu\":\"décrochais\",\"il/elle/on\":\"décrochait\",\"nous\":\"décrochions\",\"vous\":\"décrochiez\",\"ils/elles\":\"décrochaient\"},\"futur_simple\":{\"je\":\"décrocherai\",\"tu\":\"décrocheras\",\"il/elle/on\":\"décrochera\",\"nous\":\"décrocherons\",\"vous\":\"décrocherez\",\"ils/elles\":\"décrocheront\"},\"conditionnel_présent\":{\"je\":\"décrocherais\",\"tu\":\"décrocherais\",\"il/elle/on\":\"décrocherait\",\"nous\":\"décrocherions\",\"vous\":\"décrocheriez\",\"ils/elles\":\"décrocheraient\"},\"passé_composé\":\"a décroché\",\"participe_passé\":\"décroché\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-figurative_idiomatic-006\",\"target\":\"poser\",\"source\":\"to put down (figurative: to pose a question or set conditions)\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"First group (-er) verb, conjugated with avoir. Highly versatile in idiomatic phrases like 'poser un lapin'.\",\"examples\":[{\"target\":\"Il est important de poser des limites claires dès le début du contrat.\",\"source\":\"It is important to set clear boundaries right from the start of the contract.\"},{\"target\":\"Mon collègue m'a posé un lapin pour notre réunion de travail.\",\"source\":\"My colleague stood me up for our work meeting.\"}],\"conjugations\":{\"présent\":{\"je\":\"pose\",\"tu\":\"poses\",\"il/elle/on\":\"pose\",\"nous\":\"posons\",\"vous\":\"posez\",\"ils/elles\":\"posent\"},\"imparfait\":{\"je\":\"posais\",\"tu\":\"posais\",\"il/elle/on\":\"posait\",\"nous\":\"posions\",\"vous\":\"posiez\",\"ils/elles\":\"posaient\"},\"futur_simple\":{\"je\":\"poserai\",\"tu\":\"poseras\",\"il/elle/on\":\"posera\",\"nous\":\"poserons\",\"vous\":\"poserez\",\"ils/elles\":\"poseront\"},\"conditionnel_présent\":{\"je\":\"poserais\",\"tu\":\"poserais\",\"il/elle/on\":\"poserait\",\"nous\":\"poserions\",\"vous\":\"poseriez\",\"ils/elles\":\"poseraient\"},\"passé_composé\":\"a posé\",\"participe_passé\":\"posé\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-figurative_idiomatic-007\",\"target\":\"creuser\",\"source\":\"to dig (figurative: to investigate deeper, explore an idea)\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"First group (-er) verb, conjugated with avoir. Used when examining a subject or problem thoroughly.\",\"examples\":[{\"target\":\"C'est une piste intéressante, il faudrait la creuser un peu plus.\",\"source\":\"It's an interesting lead; we should look into it a bit more deeply.\"},{\"target\":\"Le journaliste a voulu creuser le sujet pour comprendre la source du scandale.\",\"source\":\"The journalist wanted to dig deeper into the subject to understand the source of the scandal.\"}],\"conjugations\":{\"présent\":{\"je\":\"creuse\",\"tu\":\"creuses\",\"il/elle/on\":\"creuse\",\"nous\":\"creusons\",\"vous\":\"creusez\",\"ils/elles\":\"creusent\"},\"imparfait\":{\"je\":\"creusais\",\"tu\":\"creusais\",\"il/elle/on\":\"creusait\",\"nous\":\"creusions\",\"vous\":\"creusiez\",\"ils/elles\":\"creusaient\"},\"futur_simple\":{\"je\":\"creuserai\",\"tu\":\"creuseras\",\"il/elle/on\":\"creusera\",\"nous\":\"creuserons\",\"vous\":\"creuserez\",\"ils/elles\":\"creuseront\"},\"conditionnel_présent\":{\"je\":\"creuserais\",\"tu\":\"creuserais\",\"il/elle/on\":\"creuserait\",\"nous\":\"creuserions\",\"vous\":\"creuseriez\",\"ils/elles\":\"creuseraient\"},\"passé_composé\":\"a creusé\",\"participe_passé\":\"creusé\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-figurative_idiomatic-008\",\"target\":\"nager\",\"source\":\"to swim (figurative: to be in full confusion or success)\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"First group (-er) verb with a spelling change (ge -> geons in 'nous'), conjugated with avoir. Used in 'nager dans le bonheur' or 'nager en plein mystère'.\",\"examples\":[{\"target\":\"Depuis qu'ils ont signé leur contrat, ils nagent dans le bonheur.\",\"source\":\"Ever since they signed their contract, they are walking on air.\"},{\"target\":\"Sans instructions précises, nous nagions en plein mystère pendant des heures.\",\"source\":\"Without clear instructions, we were completely in the dark for hours.\"}],\"conjugations\":{\"présent\":{\"je\":\"nage\",\"tu\":\"nages\",\"il/elle/on\":\"nage\",\"nous\":\"nageons\",\"vous\":\"nagez\",\"ils/elles\":\"nagent\"},\"imparfait\":{\"je\":\"nageais\",\"tu\":\"nageais\",\"il/elle/on\":\"nageait\",\"nous\":\"nagions\",\"vous\":\"nagiez\",\"ils/elles\":\"nageaient\"},\"futur_simple\":{\"je\":\"nagerai\",\"tu\":\"nageras\",\"il/elle/on\":\"nagera\",\"nous\":\"nagerons\",\"vous\":\"nagerez\",\"ils/elles\":\"nageront\"},\"conditionnel_présent\":{\"je\":\"nagerais\",\"tu\":\"nagerais\",\"il/elle/on\":\"nagerait\",\"nous\":\"nagerions\",\"vous\":\"nageriez\",\"ils/elles\":\"nageraient\"},\"passé_composé\":\"a nagé\",\"participe_passé\":\"nagé\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-figurative_idiomatic-009\",\"target\":\"rouler\",\"source\":\"to roll (figurative: to deceive or trick someone)\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"First group (-er) verb, conjugated with avoir. Famous in the expression 'se faire rouler (dans la farine)'.\",\"examples\":[{\"target\":\"Il s'est fait rouler par un vendeur malhonnête qui lui a vendu une voiture cassée.\",\"source\":\"He got ripped off by a dishonest salesman who sold him a broken car.\"},{\"target\":\"Ne te laisse pas rouler par de belles promesses sans garanties écrites.\",\"source\":\"Don't let yourself be fooled by sweet promises without written guarantees.\"}],\"conjugations\":{\"présent\":{\"je\":\"roule\",\"tu\":\"roules\",\"il/elle/on\":\"roule\",\"nous\":\"roulons\",\"vous\":\"roulez\",\"ils/elles\":\"roulent\"},\"imparfait\":{\"je\":\"roulais\",\"tu\":\"roulais\",\"il/elle/on\":\"roulait\",\"nous\":\"roulions\",\"vous\":\"rouliez\",\"ils/elles\":\"roulaient\"},\"futur_simple\":{\"je\":\"roulerai\",\"tu\":\"rouleras\",\"il/elle/on\":\"roulera\",\"nous\":\"roulerons\",\"vous\":\"roulerez\",\"ils/elles\":\"rouleront\"},\"conditionnel_présent\":{\"je\":\"roulerais\",\"tu\":\"roulerais\",\"il/elle/on\":\"roulerait\",\"nous\":\"roulerions\",\"vous\":\"rouleriez\",\"ils/elles\":\"rouleraient\"},\"passé_composé\":\"a roulé\",\"participe_passé\":\"roulé\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-figurative_idiomatic-010\",\"target\":\"monter\",\"source\":\"to go up (figurative: to fabricate a story or plot a scheme)\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"First group (-er) verb, conjugated with être for movement, but with avoir when transitive or in idioms like 'monter un coup'.\",\"examples\":[{\"target\":\"Les employés ont monté un dossier solide pour défendre leurs conditions de travail.\",\"source\":\"The employees put together a solid file to defend their working conditions.\"},{\"target\":\"Ils ont monté toute cette machination pour évincer leur ancien directeur.\",\"source\":\"They hatched this entire scheme to oust their former director.\"}],\"conjugations\":{\"présent\":{\"je\":\"monte\",\"tu\":\"montes\",\"il/elle/on\":\"monte\",\"nous\":\"montons\",\"vous\":\"montez\",\"ils/elles\":\"montent\"},\"imparfait\":{\"je\":\"montais\",\"tu\":\"montais\",\"il/elle/on\":\"montait\",\"nous\":\"montions\",\"vous\":\"montiez\",\"ils/elles\":\"montaient\"},\"futur_simple\":{\"je\":\"monterai\",\"tu\":\"monteras\",\"il/elle/on\":\"montera\",\"nous\":\"monterons\",\"vous\":\"monterez\",\"ils/elles\":\"monteront\"},\"conditionnel_présent\":{\"je\":\"monterais\",\"tu\":\"monterais\",\"il/elle/on\":\"monterait\",\"nous\":\"monterions\",\"vous\":\"monteriez\",\"ils/elles\":\"monteraient\"},\"passé_composé\":\"a monté\",\"participe_passé\":\"monté\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-figurative_idiomatic-011\",\"target\":\"toucher\",\"source\":\"to touch (figurative: to affect emotionally or receive money)\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"First group (-er) verb, conjugated with avoir. Used figuratively for emotional impact or receiving a salary.\",\"examples\":[{\"target\":\"Son discours bouleversant a touché tout le public présent dans la salle.\",\"source\":\"Her moving speech touched everyone in the audience.\"},{\"target\":\"Combien est-ce qu'il touche par mois avec son nouveau poste de cadre ?\",\"source\":\"How much does he earn per month with his new management position?\"}],\"conjugations\":{\"présent\":{\"je\":\"touche\",\"tu\":\"touches\",\"il/elle/on\":\"touche\",\"nous\":\"touchons\",\"vous\":\"touchez\",\"ils/elles\":\"touchent\"},\"imparfait\":{\"je\":\"touchais\",\"tu\":\"touchais\",\"il/elle/on\":\"touchait\",\"nous\":\"touchions\",\"vous\":\"touchiez\",\"ils/elles\":\"touchaient\"},\"futur_simple\":{\"je\":\"toucherai\",\"tu\":\"toucheras\",\"il/elle/on\":\"touchera\",\"nous\":\"toucherons\",\"vous\":\"toucherez\",\"ils/elles\":\"toucheront\"},\"conditionnel_présent\":{\"je\":\"toucherais\",\"tu\":\"toucherais\",\"il/elle/on\":\"toucherait\",\"nous\":\"toucherions\",\"vous\":\"toucheriez\",\"ils/elles\":\"toucheraient\"},\"passé_composé\":\"a touché\",\"participe_passé\":\"touché\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-figurative_idiomatic-012\",\"target\":\"souffler\",\"source\":\"to blow (figurative: to suggest an idea or take a breather)\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"First group (-er) verb, conjugated with avoir. Used in expressions like 'souffler le chaud et le froid' or 'souffler un peu'.\",\"examples\":[{\"target\":\"Après des semaines de travail intense, nous avons enfin le droit de souffler un peu.\",\"source\":\"After weeks of intense work, we finally have the right to take a breather.\"},{\"target\":\"C'est son conseiller qui lui a soufflé cette excellente stratégie de communication.\",\"source\":\"It was his advisor who whispered this excellent communication strategy to him.\"}],\"conjugations\":{\"présent\":{\"je\":\"souffle\",\"tu\":\"souffles\",\"il/elle/on\":\"souffle\",\"nous\":\"soufflons\",\"vous\":\"soufflez\",\"ils/elles\":\"soufflent\"},\"imparfait\":{\"je\":\"soufflais\",\"tu\":\"soufflais\",\"il/elle/on\":\"soufflait\",\"nous\":\"soufflions\",\"vous\":\"souffliez\",\"ils/elles\":\"soufflaient\"},\"futur_simple\":{\"je\":\"soufflerai\",\"tu\":\"souffmeras\",\"il/elle/on\":\"soufflera\",\"nous\":\"soufflerons\",\"vous\":\"soufflerez\",\"ils/elles\":\"souffleront\"},\"conditionnel_présent\":{\"je\":\"soufflerais\",\"tu\":\"soufflerais\",\"il/elle/on\":\"soufflerait\",\"nous\":\"soufflerions\",\"vous\":\"souffleriez\",\"ils/elles\":\"souffleraient\"},\"passé_composé\":\"a soufflé\",\"participe_passé\":\"soufflé\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-figurative_idiomatic-013\",\"target\":\"voter\",\"source\":\"to vote (figurative: to pass a law or approve strongly)\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"First group (-er) verb, conjugated with avoir. Used in political and institutional contexts.\",\"examples\":[{\"target\":\"Le parlement a voté la nouvelle loi sur la transition écologique hier soir.\",\"source\":\"Parliament passed the new law on ecological transition last night.\"},{\"target\":\"Les actionnaires ont voté à l'unanimité le budget prévisionnel pour l'année prochaine.\",\"source\":\"The shareholders unanimously approved the projected budget for next year.\"}],\"conjugations\":{\"présent\":{\"je\":\"vote\",\"tu\":\"votes\",\"il/elle/on\":\"vote\",\"nous\":\"votons\",\"vous\":\"votez\",\"ils/elles\":\"votent\"},\"imparfait\":{\"je\":\"votais\",\"tu\":\"votais\",\"il/elle/on\":\"votait\",\"nous\":\"votions\",\"vous\":\"votiez\",\"ils/elles\":\"votaient\"},\"futur_simple\":{\"je\":\"voterai\",\"tu\":\"voteras\",\"il/elle/on\":\"votera\",\"nous\":\"voterons\",\"vous\":\"voterez\",\"ils/elles\":\"voteront\"},\"conditionnel_présent\":{\"je\":\"voterais\",\"tu\":\"voterais\",\"il/elle/on\":\"voterait\",\"nous\":\"voterions\",\"vous\":\"voteriez\",\"ils/elles\":\"voteraient\"},\"passé_composé\":\"a voté\",\"participe_passé\":\"voté\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-figurative_idiomatic-014\",\"target\":\"passer\",\"source\":\"to pass (figurative: to take an exam or endure a hardship)\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"First group (-er) verb, conjugated with avoir (or être for simple motion). Common in B2 idioms like 'passer l'éponge' or 'passer un cap'.\",\"examples\":[{\"target\":\"Notre entreprise a réussi à passer un cap crucial en augmentant son chiffre d'affaires.\",\"source\":\"Our company managed to turn a crucial corner by increasing its turnover.\"},{\"target\":\"Malgré nos différends, il est temps de passer l'éponge et de repartir sur de bonnes bases.\",\"source\":\"Despite our differences, it's time to wipe the slate clean and start over on a good footing.\"}],\"conjugations\":{\"présent\":{\"je\":\"passe\",\"tu\":\"passes\",\"il/elle/on\":\"passe\",\"nous\":\"passons\",\"vous\":\"passez\",\"ils/elles\":\"passent\"},\"imparfait\":{\"je\":\"passais\",\"tu\":\"passais\",\"il/elle/on\":\"passait\",\"nous\":\"passions\",\"vous\":\"passiez\",\"ils/elles\":\"passaient\"},\"futur_simple\":{\"je\":\"passerai\",\"tu\":\"passeras\",\"il/elle/on\":\"passera\",\"nous\":\"passerons\",\"vous\":\"passerez\",\"ils/elles\":\"passeront\"},\"conditionnel_présent\":{\"je\":\"passerais\",\"tu\":\"passerais\",\"il/elle/on\":\"passerait\",\"nous\":\"passerions\",\"vous\":\"passeriez\",\"ils/elles\":\"passeraient\"},\"passé_composé\":\"a passé\",\"participe_passé\":\"passé\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-figurative_idiomatic-015\",\"target\":\"garder\",\"source\":\"to keep (figurative: to remember, keep silent, or maintain self-control)\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"First group (-er) verb, conjugated with avoir. Frequent in idiomatic expressions like 'garder son sang-froid' or 'garder le cap'.\",\"examples\":[{\"target\":\"Dans une situation de crise, il est primordial de garder son sang-froid.\",\"source\":\"In a crisis situation, it is essential to keep one's cool.\"},{\"target\":\"Malgré les difficultés économiques, notre équipe a su garder le cap.\",\"source\":\"Despite economic difficulties, our team knew how to stay the course.\"}],\"conjugations\":{\"présent\":{\"je\":\"garde\",\"tu\":\"gardes\",\"il/elle/on\":\"garde\",\"nous\":\"gardons\",\"vous\":\"gardez\",\"ils/elles\":\"gardent\"},\"imparfait\":{\"je\":\"gardais\",\"tu\":\"gardais\",\"il/elle/on\":\"gardait\",\"nous\":\"gardions\",\"vous\":\"gardiez\",\"ils/elles\":\"gardaient\"},\"futur_simple\":{\"je\":\"garderai\",\"tu\":\"garderas\",\"il/elle/on\":\"gardera\",\"nous\":\"garderons\",\"vous\":\"garderez\",\"ils/elles\":\"garderont\"},\"conditionnel_présent\":{\"je\":\"garderais\",\"tu\":\"garderais\",\"il/elle/on\":\"garderait\",\"nous\":\"garderions\",\"vous\":\"garderiez\",\"ils/elles\":\"garderaient\"},\"passé_composé\":\"a gardé\",\"participe_passé\":\"gardé\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-figurative_idiomatic-016\",\"target\":\"jouer\",\"source\":\"to play (figurative: to act a role, or be at stake)\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"First group (-er) verb, conjugated with avoir. Found in expressions like 'jouer un rôle clé' or 'tout se joue'.\",\"examples\":[{\"target\":\"La recherche scientifique joue un rôle clé dans le développement des énergies renouvelables.\",\"source\":\"Scientific research plays a key role in the development of renewable energies.\"},{\"target\":\"C'est lors de cet entretien final que tout va se jouer pour ma carrière.\",\"source\":\"It is during this final interview that everything is at stake for my career.\"}],\"conjugations\":{\"présent\":{\"je\":\"joue\",\"tu\":\"joues\",\"il/elle/on\":\"joue\",\"nous\":\"jouons\",\"vous\":\"jouez\",\"ils/elles\":\"jouent\"},\"imparfait\":{\"je\":\"jouais\",\"tu\":\"jouais\",\"il/elle/on\":\"jouait\",\"nous\":\"jouions\",\"vous\":\"jouiez\",\"ils/elles\":\"jouaient\"},\"futur_simple\":{\"je\":\"jouerai\",\"tu\":\"joueras\",\"il/elle/on\":\"jouera\",\"nous\":\"jouerons\",\"vous\":\"jouerez\",\"ils/elles\":\"joueront\"},\"conditionnel_présent\":{\"je\":\"jouerais\",\"tu\":\"jouerais\",\"il/elle/on\":\"jouerait\",\"nous\":\"jouerions\",\"vous\":\"joueriez\",\"ils/elles\":\"joueraient\"},\"passé_composé\":\"a joué\",\"participe_passé\":\"joué\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-figurative_idiomatic-017\",\"target\":\"porter\",\"source\":\"to carry (figurative: to bear responsibility or bear fruit)\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"First group (-er) verb, conjugated with avoir. Essential for idiomatic structures like 'porter ses fruits' or 'porter la responsabilité'.\",\"examples\":[{\"target\":\"Les réformes engagées par la direction commencent enfin à porter leurs fruits.\",\"source\":\"The reforms undertaken by management are finally starting to bear fruit.\"},{\"target\":\"Le chef de projet doit porter la responsabilité en cas d'échec technique.\",\"source\":\"The project manager must bear the responsibility in case of a technical failure.\"}],\"conjugations\":{\"présent\":{\"je\":\"porte\",\"tu\":\"portes\",\"il/elle/on\":\"porte\",\"nous\":\"portons\",\"vous\":\"portez\",\"ils/elles\":\"portent\"},\"imparfait\":{\"je\":\"portais\",\"tu\":\"portais\",\"il/elle/on\":\"portait\",\"nous\":\"portions\",\"vous\":\"portiez\",\"ils/elles\":\"portaient\"},\"futur_simple\":{\"je\":\"porterai\",\"tu\":\"porteras\",\"il/elle/on\":\"portera\",\"nous\":\"porterons\",\"vous\":\"porterez\",\"ils/elles\":\"porteront\"},\"conditionnel_présent\":{\"je\":\"porterais\",\"tu\":\"porterais\",\"il/elle/on\":\"porterait\",\"nous\":\"porterions\",\"vous\":\"porteriez\",\"ils/elles\":\"porteraient\"},\"passé_composé\":\"a porté\",\"participe_passé\":\"porté\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-figurative_idiomatic-018\",\"target\":\"briser\",\"source\":\"to break (figurative: to shatter hopes or break the silence)\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"First group (-er) verb, conjugated with avoir. Frequent in idioms like 'briser la glace' or 'briser le silence'.\",\"examples\":[{\"target\":\"Quelques mots d'humour ont suffi pour briser la glace entre les nouveaux collègues.\",\"source\":\"A few humorous words were enough to break the ice between the new colleagues.\"},{\"target\":\"La victime a enfin décidé de briser le silence lors d'une conférence de presse.\",\"source\":\"The victim finally decided to break the silence during a press conference.\"}],\"conjugations\":{\"présent\":{\"je\":\"brise\",\"tu\":\"brises\",\"il/elle/on\":\"brise\",\"nous\":\"brisons\",\"vous\":\"brisez\",\"ils/elles\":\"brisent\"},\"imparfait\":{\"je\":\"brisais\",\"tu\":\"brisais\",\"il/elle/on\":\"brisait\",\"nous\":\"brisions\",\"vous\":\"brisiez\",\"ils/elles\":\"brisaient\"},\"futur_simple\":{\"je\":\"briserai\",\"tu\":\"briseras\",\"il/elle/on\":\"brisera\",\"nous\":\"briserons\",\"vous\":\"briserez\",\"ils/elles\":\"briseront\"},\"conditionnel_présent\":{\"je\":\"briserais\",\"tu\":\"briserais\",\"il/elle/on\":\"briserait\",\"nous\":\"briserions\",\"vous\":\"briseriez\",\"ils/elles\":\"briseraient\"},\"passé_composé\":\"a brisé\",\"participe_passé\":\"brisé\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-figurative_idiomatic-019\",\"target\":\"tisser\",\"source\":\"to weave (figurative: to build relationships or networks)\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"First group (-er) verb, conjugated with avoir. Used metaphorically for creating social or professional ties.\",\"examples\":[{\"target\":\"Cet événement professionnel permet de tisser des liens durables entre experts.\",\"source\":\"This professional event makes it possible to build lasting ties between experts.\"},{\"target\":\"Au fil des années, ils ont su tisser un réseau influent à l'international.\",\"source\":\"Over the years, they managed to weave an influential international network.\"}],\"conjugations\":{\"présent\":{\"je\":\"tisse\",\"tu\":\"tisses\",\"il/elle/on\":\"tisse\",\"nous\":\"tissons\",\"vous\":\"tissez\",\"ils/elles\":\"tissent\"},\"imparfait\":{\"je\":\"tissais\",\"tu\":\"tissais\",\"il/elle/on\":\"tissait\",\"nous\":\"tissions\",\"vous\":\"tissiez\",\"ils/elles\":\"tissaient\"},\"futur_simple\":{\"je\":\"tisserai\",\"tu\":\"tisseras\",\"il/elle/on\":\"tissera\",\"nous\":\"tisserons\",\"vous\":\"tisserez\",\"ils/elles\":\"tisseront\"},\"conditionnel_présent\":{\"je\":\"tisserais\",\"tu\":\"tisserais\",\"il/elle/on\":\"tisserait\",\"nous\":\"tisserions\",\"vous\":\"tisseriez\",\"ils/elles\":\"tisseraient\"},\"passé_composé\":\"a tissé\",\"participe_passé\":\"tissé\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-figurative_idiomatic-020\",\"target\":\"avaler\",\"source\":\"to swallow (figurative: to swallow insults, bitter pills, or believe something naively)\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"First group (-er) verb, conjugated with avoir. Frequent in idioms like 'avaler une couleuvre' or 'avaler son bulletin de naissance'.\",\"examples\":[{\"target\":\"Il a dû avaler sa fierté pour demander de l'aide à son ancien rival.\",\"source\":\"He had to swallow his pride to ask his former rival for help.\"},{\"target\":\"Tu ne vas quand même pas avaler une histoire aussi invraisemblable ?\",\"source\":\"You're not actually going to swallow such an implausible story, are you?\"}],\"conjugations\":{\"présent\":{\"je\":\"avale\",\"tu\":\"avales\",\"il/elle/on\":\"avale\",\"nous\":\"avalons\",\"vous\":\"avalez\",\"ils/elles\":\"avalent\"},\"imparfait\":{\"je\":\"avalais\",\"tu\":\"avalais\",\"il/elle/on\":\"avalait\",\"nous\":\"avalions\",\"vous\":\"avaliez\",\"ils/elles\":\"avalaient\"},\"futur_simple\":{\"je\":\"avalerai\",\"tu\":\"avaleras\",\"il/elle/on\":\"avalera\",\"nous\":\"avalerons\",\"vous\":\"avalerez\",\"ils/elles\":\"avaleront\"},\"conditionnel_présent\":{\"je\":\"avalerais\",\"tu\":\"avalerais\",\"il/elle/on\":\"avalerait\",\"nous\":\"avalerions\",\"vous\":\"avaleriez\",\"ils/elles\":\"avaleraient\"},\"passé_composé\":\"a avalé\",\"participe_passé\":\"avalé\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}}]";
+const langConfigJson = "{\"language_pair\":\"english_french\",\"target_lang\":\"fr\",\"native_lang\":\"en\",\"target_lang_name\":\"Français\",\"native_lang_name\":\"English\",\"speech_lang\":\"fr-FR\",\"noun_metadata_fields\":[{\"key\":\"article\",\"label\":\"Article\",\"render\":\"article_badge\"},{\"key\":\"gender\",\"label\":\"Genre\",\"render\":\"gender_label\"},{\"key\":\"plural\",\"label\":\"Pluriel\",\"render\":\"text\"}],\"article_colours\":{\"le\":\"#4A7C9E\",\"la\":\"#B05070\",\"l'\":\"#7B6291\"},\"gender_labels\":{\"m\":\"Masculin\",\"f\":\"Féminin\"},\"verb_tenses\":[\"présent\",\"passé_composé\",\"imparfait\",\"participe_passé\",\"futur_simple\",\"conditionnel_présent\"],\"cases\":{},\"ui_labels\":{\"learn_mode\":\"Apprendre\",\"train_mode\":\"S'entraîner\",\"examples_heading\":\"Exemples\",\"grammar_note_heading\":\"Note de grammaire\",\"audio_button\":\"Écouter\",\"back_link\":\"Retour\",\"card_counter\":\"Carte {current} / {total}\",\"next_button\":\"Suivant\",\"finish_button\":\"Terminé\",\"correct\":\"Correct !\",\"wrong\":\"Incorrect\",\"dashboard_link\":\"Tableau de bord\",\"library_prompt\":\"Choisissez un paquet dans la bibliothèque et explorez les cartes.\",\"cards_badge\":\"{count} CARTES\",\"cards_count\":\"{count} cartes\",\"deck_meta\":\"{topic} • {level} • {count} cartes\",\"no_decks\":\"Aucun paquet dans cette catégorie pour le moment.\",\"setup_title\":\"Configuration de l'entraînement\",\"setup_subtitle\":\"Configurez votre session d'apprentissage.\",\"question_type\":\"Type de question\",\"mode_multiple_choice\":\"Choix multiple\",\"mode_typing\":\"Saisie de texte\",\"mode_typing_short\":\"Saisie\",\"direction\":\"Direction\",\"direction_forward\":\"🇺🇸 English → 🇫🇷 Français\",\"direction_reverse\":\"🇫🇷 Français → 🇺🇸 English\",\"select_level\":\"Sélectionnez un niveau\",\"start_training\":\"Démarrer l'entraînement\",\"count_label\":\"Nombre de cartes\",\"all_cards\":\"Toutes\",\"in_deck\":\"dans le paquet\",\"view_cards\":\"Cartes\",\"view_list\":\"Liste\",\"card_word\":\"Carte\",\"keyboard_hint_study\":\"← → Flèches pour naviguer · A pour écouter\",\"example_single_heading\":\"Exemple\",\"no_example\":\"Aucun exemple disponible.\",\"tags_label\":\"Tags :\",\"type_vocab\":\"Vocabulaire\",\"type_verb\":\"Verbe\",\"type_phrase\":\"Expression\",\"type_connector\":\"Connecteur\",\"type_grammar\":\"Grammaire\",\"type_noun\":\"Nom\",\"type_adjective\":\"Adjectif\",\"type_expression\":\"Locution\",\"plural_prefix\":\"Pl. {plural}\",\"plural_only\":\"pluriel uniquement\",\"word_order_heading\":\"Ordre des mots\",\"structure_heading\":\"Structure\",\"training_title\":\"Entraînement\",\"all_levels\":\"Tous les niveaux\",\"type_placeholder\":\"Écrivez le mot en français...\",\"check_button\":\"Vérifier\",\"keyboard_hint_train\":\"Entrée / Espace = valider · A = Écouter\",\"audio_title\":\"Écouter (A)\",\"training_finished\":\"Entraînement terminé !\",\"missed_heading\":\"Réponses incorrectes — à réviser\",\"retry_missed\":\"Réessayer les erreurs\",\"new_config\":\"Nouvelle configuration\",\"plural_hint\":\"Pl : {plural}\",\"results_pct\":\"{pct}% de réussite\",\"result_excellent\":\"Excellent ! Vous maîtrisez parfaitement ce niveau.\",\"result_good\":\"Très bien ! Encore un peu de pratique et ce sera parfait !\",\"result_ok\":\"Bon début ! Révisez encore quelques cartes.\",\"result_retry\":\"Pas d'inquiétude — c'est en forgeant qu'on devient forgeron !\",\"no_cards_title\":\"Aucune carte trouvée\",\"no_cards_hint\":\"Veuillez sélectionner un autre niveau ou un autre paquet.\"},\"answer_normalisation\":{\"strip_leading_words\":[\"le\",\"la\",\"l'\",\"un\",\"une\",\"des\",\"du\",\"de la\",\"de l'\"],\"alt_spellings\":{\"é\":\"e\",\"è\":\"e\",\"ê\":\"e\",\"ë\":\"e\",\"à\":\"a\",\"â\":\"a\",\"ô\":\"o\",\"ù\":\"u\",\"û\":\"u\",\"î\":\"i\",\"ï\":\"i\",\"ç\":\"c\"}}}";
+const category = "verbs";
+const lang = "en-fr";
+const base = "/languagelounge/";
+const defaultView = "cards";
+
+  const cards     = JSON.parse(cardsJson);
+  const config    = JSON.parse(langConfigJson);
+  let currentIndex = 0;
+
+  const dotNav    = document.getElementById('dot-nav');
+  const currentNum = document.getElementById('current-num');
+  const progressBar = document.getElementById('progress-bar');
+  const btnPrev   = document.getElementById('btn-prev');
+  const btnNext   = document.getElementById('btn-next');
+  const cardHost  = document.getElementById('card-host');
+  const progressCont = document.getElementById('progress-container');
+
+  const cardViewWrap = document.getElementById('card-view-wrap');
+  const listViewWrap = document.getElementById('list-view-wrap');
+  const btnViewCards = document.getElementById('view-cards-btn');
+  const btnViewList  = document.getElementById('view-list-btn');
+
+  // Toggle Logic
+  function setViewMode(mode) {
+    if (mode === 'list') {
+      cardViewWrap.classList.add('hidden');
+      listViewWrap.classList.remove('hidden');
+      progressCont.classList.add('hidden');
+      btnViewList.classList.add('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewList.classList.remove('text-[var(--text-muted)]');
+      btnViewCards.classList.remove('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewCards.classList.add('text-[var(--text-muted)]');
+    } else {
+      listViewWrap.classList.add('hidden');
+      cardViewWrap.classList.remove('hidden');
+      progressCont.classList.remove('hidden');
+      btnViewCards.classList.add('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewCards.classList.remove('text-[var(--text-muted)]');
+      btnViewList.classList.remove('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewList.classList.add('text-[var(--text-muted)]');
+    }
+  }
+
+  btnViewCards.addEventListener('click', () => setViewMode('cards'));
+  btnViewList.addEventListener('click', () => setViewMode('list'));
+
+  // Initial view is configured per category (config/language_pairs/*.yaml → categories[].default_view)
+  if (defaultView === 'list') {
+    setViewMode('list');
+  }
+
+
+
+  // ── Helpers (mirror card-renderer.ts — no module imports in inline scripts) ──
+  const articleColours = config.article_colours || {};
+  const genderLabels   = config.gender_labels   || {};
+  const speechLang     = config.speech_lang;
+  const ui             = config.ui_labels || {};
+  const fmt = (tpl, vars) => String(tpl).replace(/\{(\w+)\}/g, (m, k) => (k in vars ? vars[k] : m));
+  const formatHighlight = (text) => text ? String(text).replace(/\*(.*?)\*/g, '<span class="highlighter">$1</span>') : '';
+  // Articles come from the language config (keys of article_colours), never hardcoded
+  const articleList = Object.keys(articleColours);
+  const articlePatterns = articleList.map(a => {
+    const esc = a.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    return esc.endsWith("'") ? esc : `${esc}\\s+`;
+  });
+  const articleRe = articlePatterns.length
+    ? new RegExp('^(?:' + articlePatterns.join('|') + ')', 'i')
+    : null;
+
+  function stripArticle(w) {
+    return articleRe ? (w || '').replace(articleRe, '').trim() : (w || '').trim();
+  }
+
+  function getTypeLabel(card) {
+    const tags = card.tags || [];
+    if (tags.includes('noun'))       return ui.type_noun;
+    if (tags.includes('verb'))       return ui.type_verb;
+    if (tags.includes('adjective'))  return ui.type_adjective;
+    if (tags.includes('expression')) return ui.type_expression;
+    const byType = { vocab: ui.type_vocab, verb: ui.type_verb, phrase: ui.type_phrase, connector: ui.type_connector, grammar: ui.type_grammar };
+    return byType[card.type] || ui.type_vocab;
+  }
+
+  function normaliseEx(ex) {
+    return { target: ex.target||'', source: ex.source||'', note: ex.note };
+  }
+
+  function getMetaFacts(card) {
+    const meta = card.metadata || {};
+    const facts = [];
+    for (const field of (config.noun_metadata_fields || [])) {
+      const raw = meta[field.key];
+      if (!raw || raw==='~') continue;
+      let value = String(raw), colour;
+      if (field.render === 'gender_label')  value  = genderLabels[raw] || raw;
+      if (field.render === 'article_badge') colour = articleColours[raw.toLowerCase()] || 'var(--espresso)';
+      facts.push({ label: field.label, value, colour });
+    }
+    return facts;
+  }
+
+  // ── Card renderer ─────────────────────────────────────────────────────────
+  function renderCard(idx) {
+    const card = cards[idx];
+    if (!card || !cardHost) return;
+
+    const lc = cardHost.querySelector('.learning-card');
+    if (!lc) return;
+
+    function sel(cls) { return lc.querySelector(cls); }
+
+    // Type badge + level
+    sel('.lc-type-badge').textContent = getTypeLabel(card);
+    sel('.lc-level-badge').textContent = (card.level || '').toUpperCase();
+
+    // Article
+    const article = card.metadata?.article;
+    const articleWrap = sel('.lc-article-wrap');
+    const articleEl   = sel('.lc-article');
+    if (article && (card.tags||[]).includes('noun') && !card.metadata?.plural_only) {
+      articleEl.textContent = article;
+      articleEl.style.color = articleColours[article.toLowerCase()] || 'var(--espresso)';
+      articleWrap.style.display = '';
+    } else {
+      articleWrap.style.display = 'none';
+    }
+
+    // Word / translation / forms
+    sel('.lc-word').textContent        = stripArticle(card.target);
+    sel('.lc-translation').textContent = card.source || '';
+    const plural = card.metadata?.plural;
+    sel('.lc-forms').textContent = plural && !card.metadata?.plural_only ? fmt(ui.plural_prefix, { plural }) : card.metadata?.plural_only ? ui.plural_only : '';
+
+    // Meta grid
+    const metaGrid = sel('.lc-meta-grid');
+    const facts = getMetaFacts(card);
+    if (facts.length) {
+      metaGrid.style.gridTemplateColumns = `repeat(${Math.min(facts.length,4)}, 1fr)`;
+      metaGrid.style.display = '';
+      metaGrid.innerHTML = facts.map((f, i) => `
+        <div class="px-5 py-4 ${i<facts.length-1?'border-r':''}" style="border-color:var(--border);">
+          <p class="text-[9px] font-bold uppercase tracking-widest mb-1" style="color:var(--text-muted);">${f.label}</p>
+          <p class="text-sm font-bold" style="color:${f.colour||'var(--text)'};">${f.value}</p>
+        </div>`).join('');
+    } else {
+      metaGrid.style.display = 'none';
+    }
+
+    // Grammar note
+    const grammarWrap = sel('.lc-grammar-wrap');
+    if (card.grammar_note) {
+      sel('.lc-grammar-text').innerHTML = formatHighlight(card.grammar_note);
+      grammarWrap.classList.remove('hidden');
+    } else {
+      grammarWrap.classList.add('hidden');
+    }
+
+    // Examples
+    const examplesEl = sel('.lc-examples');
+    const rawEx = card.examples || [];
+    examplesEl.innerHTML = rawEx.length
+      ? rawEx.map(ex => { const e=normaliseEx(ex); return `
+          <div class="rounded-2xl border overflow-hidden" style="border-color:var(--border);">
+            <div class="px-4 py-3" style="background-color:var(--bg);">
+              <p class="font-semibold leading-snug mb-1" style="color:var(--text);">${e.target}</p>
+              <p class="text-sm italic" style="color:var(--text-muted);">${e.source||''}</p>
+            </div>
+            ${e.note?`<div class="px-4 py-2 border-t" style="border-color:var(--border);">
+              <p class="text-[10px] font-bold font-mono" style="color:var(--espresso);">📐 ${e.note}</p>
+            </div>`:''}
+          </div>`; }).join('')
+      : '<p class="text-sm italic" style="color:var(--text-muted);">' + ui.no_example + '</p>';
+
+    // Verb: conjugation table
+    const conjWrap  = sel('.lc-conjugation-wrap');
+    const conjInner = sel('.lc-conjugation-inner');
+    const cardType = card.type || (card.tags?.includes('verb') ? 'verb' : 'vocab');
+    if (conjWrap && conjInner) {
+      if (cardType === 'verb' && card.conjugations) {
+        conjWrap.classList.remove('hidden');
+        let conjArray = [];
+        if (Array.isArray(card.conjugations)) {
+          conjArray = card.conjugations;
+        } else {
+          for (const [tense, forms] of Object.entries(card.conjugations)) {
+            if (typeof forms === 'string') {
+              conjArray.push({ tense, stringForm: forms });
+            } else {
+              const formsArr = Object.entries(forms).map(([pronoun, form]) => ({ pronoun, form }));
+              conjArray.push({ tense, forms: formsArr });
+            }
+          }
+        }
+
+        const tensesToRender = config.verb_tenses || conjArray.map(t => t.tense);
+        const stringTenses = [];
+        const tableTenses = [];
+
+        tensesToRender.forEach(tense => {
+          const t = conjArray.find(c => c.tense === tense);
+          if (!t) return;
+          if (t.stringForm) stringTenses.push(t);
+          else tableTenses.push(t);
+        });
+
+        let html = '';
+        if (stringTenses.length > 0) {
+          html += `
+            <div class="flex flex-wrap gap-3 mb-6">
+              ${stringTenses.map(t => `
+                <div class="rounded-xl border px-4 py-2.5 flex items-center gap-3 shadow-sm" style="border-color:var(--border); background-color:var(--bg);">
+                  <span class="text-[10px] font-bold uppercase tracking-widest opacity-80" style="color:var(--espresso);">${t.tense.replace(/_/g, ' ')}</span>
+                  <span class="font-bold text-sm" style="color:var(--text);">${t.stringForm}</span>
+                </div>
+              `).join('')}
+            </div>
+          `;
+        }
+
+        if (tableTenses.length > 0) {
+          const pronouns = tableTenses[0].forms.map(f => f.pronoun);
+          html += `
+            <div class="rounded-xl border overflow-x-auto shadow-sm w-full" style="border-color:var(--border);">
+              <table class="w-full text-sm text-left">
+                <thead>
+                  <tr style="background-color:var(--bg); border-bottom: 1px solid var(--border);">
+                    <th class="px-4 py-3 font-bold uppercase tracking-widest text-[10px] w-[1%]" style="color:var(--espresso); border-right: 1px solid var(--border);"></th>
+                    ${tableTenses.map(t => `
+                      <th class="px-4 py-3 font-bold uppercase tracking-widest text-[10px]" style="color:var(--espresso);">${t.tense.replace(/_/g, ' ')}</th>
+                    `).join('')}
+                  </tr>
+                </thead>
+                <tbody>
+                  ${pronouns.map((pronoun, ri) => `
+                    <tr class="${ri < pronouns.length - 1 ? 'border-b' : ''}" style="border-color:var(--border);">
+                      <td class="px-4 py-3 font-bold text-xs whitespace-nowrap" style="color:var(--espresso); background-color:var(--bg); border-right: 1px solid var(--border);">${pronoun}</td>
+                      ${tableTenses.map(t => {
+                        const formObj = t.forms.find(f => f.pronoun === pronoun);
+                        return `<td class="px-4 py-3 font-semibold whitespace-nowrap" style="color:var(--text);">${formObj ? formObj.form : '-'}</td>`;
+                      }).join('')}
+                    </tr>
+                  `).join('')}
+                </tbody>
+              </table>
+            </div>
+          `;
+        }
+        conjInner.innerHTML = html;
+      } else {
+        conjWrap.classList.add('hidden');
+        conjInner.innerHTML = '';
+      }
+    }
+
+    // Connector: word order block
+    const woWrap = sel('.lc-wordorder-wrap');
+    if (woWrap) {
+      if (cardType === 'connector' && card.word_order) {
+        sel('.lc-wordorder-text').textContent = card.word_order;
+        woWrap.classList.remove('hidden');
+      } else {
+        woWrap.classList.add('hidden');
+      }
+    }
+
+    // Phrase: preposition rule block
+    const phraseWrap = sel('.lc-phrase-wrap');
+    if (phraseWrap) {
+      if (cardType === 'phrase' && card.clause_type) {
+        sel('.lc-phrase-rule').textContent = card.clause_type;
+        phraseWrap.classList.remove('hidden');
+      } else {
+        phraseWrap.classList.add('hidden');
+      }
+    }
+
+    // Tags
+    sel('.lc-tags').innerHTML = (card.tags||[]).map(t =>
+      `<span class="text-[10px] font-bold px-2 py-0.5 rounded-md border" style="border-color:var(--border);color:var(--text-muted);background-color:var(--bg);">${t}</span>`
+    ).join('');
+
+    // Progress UI
+    if (currentNum)  currentNum.textContent = String(idx+1);
+    if (progressBar) progressBar.style.width = `${Math.round(((idx+1)/cards.length)*100)}%`;
+    if (btnPrev)     btnPrev.disabled = idx === 0;
+    if (btnNext)     btnNext.innerHTML = idx === cards.length-1
+      ? '✓ ' + ui.finish_button
+      : ui.next_button + ' <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>';
+
+    updateDots();
+
+    // Re-bind audio button cleanly by cloning to strip old listeners
+    const oldBtn = sel('.lc-audio-btn');
+    if (oldBtn) {
+      const newBtn = oldBtn.cloneNode(true);
+      oldBtn.parentNode.replaceChild(newBtn, oldBtn);
+      newBtn.addEventListener('click', speakCurrent);
+    }
+  }
+
+  // ── Dot navigation ────────────────────────────────────────────────────────
+  function buildDots() {
+    if (!dotNav) return;
+    dotNav.innerHTML = '';
+    const maxVisible = 20;
+    const showAll = cards.length <= maxVisible;
+    cards.forEach((_, i) => {
+      if (!showAll && i >= maxVisible) return;
+      const dot = document.createElement('button');
+      dot.className = 'dot w-2 h-2 rounded-full transition-all duration-300 flex-shrink-0';
+      dot.style.backgroundColor = 'var(--border)';
+      dot.title = `${ui.card_word} ${i+1}`;
+      dot.addEventListener('click', () => goTo(i));
+      dotNav.appendChild(dot);
+    });
+    if (!showAll) {
+      const el = document.createElement('span');
+      el.textContent = `+${cards.length - maxVisible}`;
+      el.className = 'text-[10px] font-bold';
+      el.style.color = 'var(--text-muted)';
+      dotNav.appendChild(el);
+    }
+  }
+
+  function updateDots() {
+    dotNav?.querySelectorAll('.dot').forEach((dot, i) => {
+      dot.style.backgroundColor = i===currentIndex ? 'var(--espresso)' : 'var(--border)';
+      dot.style.width     = i===currentIndex ? '20px' : '8px';
+      dot.style.borderRadius = '4px';
+    });
+  }
+
+  // ── Audio ─────────────────────────────────────────────────────────────────
+  function speakCurrent() {
+    const card = cards[currentIndex];
+    if (!card) return;
+    if (window.LoungeAudioEngine) {
+      window.LoungeAudioEngine.speak(card.target || '', speechLang, 0.85);
+    }
+  }
+
+  // ── Navigate ─────────────────────────────────────────────────────────────
+  function goTo(idx) {
+    if (idx < 0 || idx >= cards.length) return;
+    currentIndex = idx;
+    renderCard(currentIndex);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  btnPrev?.addEventListener('click', () => goTo(currentIndex - 1));
+  btnNext?.addEventListener('click', () => {
+    if (currentIndex === cards.length - 1) window.location.href = `${base}${lang}/${category}/`;
+    else goTo(currentIndex + 1);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') goTo(currentIndex + 1);
+    if (e.key === 'ArrowLeft')  goTo(currentIndex - 1);
+    if (e.key === 'a' || e.key === 'A') speakCurrent();
+  });
+
+  // ── Learn / Train panel toggle ──────────────────────
+  const btnLearn = document.getElementById('btn-mode-learn');
+  const btnTrain = document.getElementById('btn-mode-train');
+  const pnlLearn = document.getElementById('learn-panel');
+  const pnlTrain = document.getElementById('train-panel');
+  const toolbar  = document.getElementById('learn-toolbar');
+
+  const STORAGE_KEY = `lounge:${lang}:${category}:deck:mode`;
+  let currentMode = localStorage.getItem(STORAGE_KEY) || 'learn';
+
+  function applyMode() {
+    if (currentMode === 'learn') {
+      btnLearn.style.backgroundColor = 'var(--espresso)';
+      btnLearn.style.color = '#F5F2EB';
+      btnTrain.style.backgroundColor = 'transparent';
+      btnTrain.style.color = 'var(--text-muted)';
+      pnlLearn.classList.remove('hidden');
+      toolbar.classList.remove('hidden');
+      pnlTrain.classList.add('hidden');
+    } else {
+      btnTrain.style.backgroundColor = 'var(--espresso)';
+      btnTrain.style.color = '#F5F2EB';
+      btnLearn.style.backgroundColor = 'transparent';
+      btnLearn.style.color = 'var(--text-muted)';
+      pnlTrain.classList.remove('hidden');
+      pnlLearn.classList.add('hidden');
+      toolbar.classList.add('hidden');
+    }
+    localStorage.setItem(STORAGE_KEY, currentMode);
+  }
+
+  btnLearn?.addEventListener('click', () => { currentMode = 'learn'; applyMode(); });
+  btnTrain?.addEventListener('click', () => { currentMode = 'train'; applyMode(); });
+  applyMode();
+
+  // ── Radio-style selectors (mode & dir & count) ─────────────
+  document.querySelectorAll('.sel-opt').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const group = btn.dataset.group;
+      document.querySelectorAll(`.sel-opt[data-group="${group}"]`).forEach(b => b.classList.remove('sel-active'));
+      btn.classList.add('sel-active');
+      const hidden = document.getElementById(`${group}-hidden`);
+      if (hidden) hidden.value = btn.dataset.value;
+    });
+  });
+
+  document.getElementById('deck-train-form')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const base = form.action;
+    const mode = document.getElementById('mode-hidden')?.value || 'mc';
+    const dir  = document.getElementById('dir-hidden')?.value || `${config.language_pair.source_code}-${config.language_pair.target_code}`.toLowerCase();
+    const count = document.getElementById('count-hidden')?.value || '30';
+    const level = form.querySelector('[name="level"]')?.value || '';
+    const deck = form.querySelector('[name="deck"]')?.value || '';
+    
+    const params = new URLSearchParams();
+    if(level) params.set('level', level);
+    params.set('deck', deck);
+    params.set('mode', mode);
+    params.set('dir', dir);
+    params.set('count', count);
+    
+    window.location.href = `${base}?${params.toString()}`;
+  });
+
+  // ── Init ─────────────────────────────────────────────────────────────────
+  buildDots();
+  // Card 0 is already rendered server-side via LearningCard component.
+  // Sync progress UI to reflect card 0 state.
+  updateDots();
+  if (progressBar) progressBar.style.width = `${Math.round(1/cards.length*100)}%`;
+  // Update card 0 using client-side config too (ensures langConfig is applied)
+  renderCard(0);
+})();</script>

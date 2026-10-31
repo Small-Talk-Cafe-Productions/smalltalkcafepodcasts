@@ -1,0 +1,758 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="description" content="Nederlands Lounge — Jouw vertrouwde lounge voor de Nederlandse taal — vergroot je woordenschat, beheers de grammatica en ontdek het Nederlands van A1 tot B2."><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/languagelounge/favicon.svg"><meta name="generator" content="Astro v7.3.5"><title>Abstract Actions — Nederlands Lounge</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet"><script>
+      (function() {
+        const saved = localStorage.getItem('wortschatz_theme');
+        if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script><link rel="stylesheet" href="/languagelounge/_astro/Layout.Cr1varBg.css"><style>.sel-opt[data-astro-cid-5tabbh6g]{border:2px solid var(--border);background-color:var(--card);color:var(--text);cursor:pointer;text-align:center;border-radius:12px;flex-direction:column;justify-content:center;align-items:center;width:100%;padding:14px 12px;transition:border-color .15s,background-color .15s,color .15s,box-shadow .15s;display:flex}.sel-opt[data-astro-cid-5tabbh6g]:hover{border-color:var(--border-hover);box-shadow:0 2px 8px #00000014}.sel-opt[data-astro-cid-5tabbh6g].sel-active{border-color:var(--espresso);background-color:var(--espresso);color:#f5f2eb;box-shadow:0 2px 12px #0000002e}
+</style></head><body class="antialiased min-h-screen flex flex-col" style="background-color:var(--bg);color:var(--text);"><!-- Header --><header class="sticky top-0 z-50 border-b" style="background-color:var(--bg);border-color:var(--border);"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between gap-4" style="height:4.5rem;"><!-- Logo + Language Switcher --><div class="flex items-center gap-4 shrink-0"><a href="/languagelounge/en-nl/" class="flex items-center gap-2 group"><span class="font-outfit font-extrabold text-xl sm:text-2xl tracking-tight transition-colors" style="color:var(--text);">Small Talk Café<span class="font-normal text-base hidden sm:inline" style="color:var(--text-muted);"> | <span id="site-name">Nederlands Lounge</span></span></span></a><!-- Language Selector Dropdown --><div class="relative" id="lang-dropdown-wrapper"><button id="lang-btn" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-sm font-bold transition-all hover:opacity-70" style="background-color:var(--bg); border-color:var(--border); color:var(--text);"><span id="lang-flag">🇳🇱</span><span id="lang-code">NL</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"></path></svg></button><div id="lang-menu" class="hidden absolute top-full left-0 mt-2 rounded-2xl border shadow-2xl overflow-hidden z-50 min-w-[260px] sm:min-w-[300px]" style="background-color:var(--card); border-color:var(--border);"><div class="px-3.5 py-2 text-[11px] font-bold uppercase tracking-wider border-b" style="background-color:var(--surface); border-color:var(--border); color:var(--text-muted);">Language Lounges</div><div><a href="/languagelounge/en-de/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇩🇪</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Deutsch Lounge</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">Der Raum für die deutsche Sprache</div></div></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-es/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇪🇸</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Lounge Español</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">El espacio para la lengua española</div></div></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-fr/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇫🇷</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Lounge Français</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">Le salon de la langue française</div></div></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-it/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇮🇹</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Lounge Italiano</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">Il salotto per la lingua italiana</div></div></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-nl/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-bold" style="color:var(--text); background-color:var(--surface);"><span class="text-2xl shrink-0">🇳🇱</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Nederlands Lounge</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">Dé ontmoetingsplek voor de Nederlandse taal</div></div><span class="shrink-0 text-[10px] font-extrabold uppercase px-1.5 py-0.5 rounded" style="background-color:var(--accent); color:var(--bg);">Active</span></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-pt/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇵🇹</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Lounge Português</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">O espaço para a língua portuguesa</div></div></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-sv/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇸🇪</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Svenska Lounge</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">Mötesplatsen för det svenska språket</div></div></a></div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/" class="w-full flex items-center gap-2.5 px-4 py-2.5 text-xs font-semibold hover:opacity-80 transition-colors " style="color:var(--text); "><span class="text-base">🏛️</span><span>Language Lounge Hub</span><span class="ml-auto text-[11px]" style="color:var(--text-muted);">Overview &rarr;</span></a></div></div></div><!-- Dynamic Nav Links --><nav class="hidden md:flex gap-5 items-center"><a href="https://smalltalkcafe.de/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Small Talk Café Podcasts</a><span class="text-sm font-normal" style="color:var(--border);">|</span><a href="/languagelounge/en-nl/vocabulary/" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Woordenschat</a><a href="/languagelounge/en-nl/verbs/" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Werkwoorden</a><a href="/languagelounge/en-nl/grammatik/" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Grammatica</a><a href="/languagelounge/en-nl/redemittel/" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Zegswijzen</a><!-- Dark/Light Toggle --><button id="theme-toggle" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-sm font-semibold transition-all hover:opacity-70" style="border-color:var(--border); color:var(--text-muted);" aria-label="Toggle dark/light mode"><span id="theme-icon">☀️</span><span id="theme-label">Light</span></button></nav></div></header><main id="main-content" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-1 w-full"><div class="max-w-4xl mx-auto py-6" data-astro-cid-5tabbh6g><!-- Deck Header --><div class="flex items-start justify-between mb-8 gap-4 flex-wrap" data-astro-cid-5tabbh6g><div data-astro-cid-5tabbh6g><a href="/languagelounge/en-nl/verbs/" class="text-xs font-bold flex items-center gap-1 mb-2 hover:opacity-70 transition-opacity" style="color:var(--espresso);" data-astro-cid-5tabbh6g><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><path d="m15 18-6-6 6-6" data-astro-cid-5tabbh6g></path></svg>Werkwoorden</a><h1 class="text-2xl md:text-3xl font-extrabold font-outfit" style="color:var(--text);" data-astro-cid-5tabbh6g>Abstract Actions</h1><p class="text-xs font-bold uppercase tracking-wider mt-1" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Abstracte Handelingen • B2 • 20 kaarten</p></div><div class="flex flex-col items-end gap-4 w-full md:w-auto mt-4 md:mt-0" data-astro-cid-5tabbh6g><!-- ── Mode Toggle ───────────────────────────── --><div class="flex rounded-xl border overflow-hidden p-1 gap-1 w-full max-w-[300px]" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><button id="btn-mode-learn" class="mode-btn flex-1 flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold transition-all" data-astro-cid-5tabbh6g><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" data-astro-cid-5tabbh6g></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" data-astro-cid-5tabbh6g></path></svg>Leren</button><button id="btn-mode-train" class="mode-btn flex-1 flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold transition-all" data-astro-cid-5tabbh6g><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><circle cx="12" cy="12" r="10" data-astro-cid-5tabbh6g></circle><polyline points="12 6 12 12 16 14" data-astro-cid-5tabbh6g></polyline></svg>Oefenen</button></div><div id="learn-toolbar" class="flex flex-col items-end gap-4 w-full" data-astro-cid-5tabbh6g><!-- View switcher (Cards vs List) --><div class="flex rounded-xl border overflow-hidden p-1 gap-1 w-full max-w-[300px]" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><button id="view-cards-btn" class="view-btn flex-1 flex items-center justify-center px-4 py-2 rounded-lg text-xs font-bold transition-all bg-[var(--espresso)] text-[#F5F2EB]" data-astro-cid-5tabbh6g>Kaarten</button><button id="view-list-btn" class="view-btn flex-1 flex items-center justify-center px-4 py-2 rounded-lg text-xs font-bold transition-all text-[var(--text-muted)] hover:opacity-70" data-astro-cid-5tabbh6g>Lijst</button></div><!-- Progress indicator --><div id="progress-container" class="flex items-center gap-3" data-astro-cid-5tabbh6g><div class="text-xs font-semibold" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Kaart <span id="current-num" class="font-extrabold" style="color:var(--text);" data-astro-cid-5tabbh6g>1</span> / 20</div><div class="w-24 h-1.5 rounded-full overflow-hidden border" style="background-color:var(--bg);border-color:var(--border);" data-astro-cid-5tabbh6g><div id="progress-bar" class="h-full transition-all duration-500 rounded-full" style="width:0%; background-color:var(--espresso);" data-astro-cid-5tabbh6g></div></div></div></div></div></div><!-- ══ LEARN PANEL ════════════════════════════ --><div id="learn-panel" class="space-y-6" data-astro-cid-5tabbh6g><!-- ── Universal Study Card (rendered by LearningCard component) ── --><div id="card-view-wrap" data-astro-cid-5tabbh6g><div id="card-host" data-astro-cid-5tabbh6g><!-- The card shell — populated client-side by renderCard() --><div class="learning-card rounded-3xl border shadow-xl overflow-hidden" style="background-color:var(--card); border-color:var(--border);"><!-- ── Top bar ─────────────────────────────────── --><div class="lc-topbar flex items-center justify-between px-6 py-3.5 border-b" style="border-color:var(--border); background-color:var(--bg);"><div class="flex items-center gap-2"><span class="lc-type-badge text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-lg" style="background-color:var(--espresso); color:#F5F2EB;">—</span><span class="lc-level-badge text-[10px] font-bold px-2.5 py-1 rounded-lg cafe-badge"></span></div><button class="lc-audio-btn flex items-center justify-center w-11 h-11 rounded-full transition-transform hover:scale-105 active:scale-95 shadow-md flex-shrink-0" title="Luisteren (A)" style="background-color:var(--espresso); color:#F5F2EB;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg></button></div><!-- ── Main word display ───────────────────────── --><div class="lc-hero px-7 py-8 text-center border-b" style="border-color:var(--border);"><div class="lc-article-wrap mb-1.5"><span class="lc-article text-xl font-bold"></span></div><h2 class="lc-word text-5xl md:text-6xl font-extrabold font-outfit mb-3" style="color:var(--text);">—</h2><p class="lc-translation text-lg font-semibold italic" style="color:var(--text-muted);"></p><p class="lc-forms text-sm font-medium mt-2" style="color:var(--text-muted);"></p></div><!-- ── Meta info grid ─────────────────────────── --><div class="lc-meta-grid grid border-b" style="border-color:var(--border);"><!-- populated by JS --></div><!-- ── Grammar note ───────────────────────────── --><div class="lc-grammar-wrap hidden px-7 py-5 border-b" style="border-color:var(--border); background-color:var(--bg);"><p class="text-[10px] font-bold uppercase tracking-widest mb-2" style="color:var(--espresso);">📌 <span class="lc-grammar-label">Grammaticanotitie</span></p><p class="lc-grammar-text text-sm leading-relaxed font-medium whitespace-pre-wrap" style="color:var(--text);"></p></div><!-- ── Type-specific block ────────────────────── --><!-- Connector word-order block --><div class="lc-wordorder-wrap hidden px-7 py-4 border-b" style="border-color:var(--border); background-color:var(--bg);"><div class="flex items-start gap-3 text-sm font-medium" style="color:var(--text-muted);"><span class="text-base flex-shrink-0">📐</span><span class="lc-wordorder-text"></span></div></div><!-- Phrase preposition block --><div class="lc-phrase-wrap hidden px-7 py-4 border-b" style="border-color:var(--border); background-color:var(--bg);"><p class="text-[10px] font-bold uppercase tracking-widest mb-2" style="color:var(--espresso);">Structuur</p><p class="lc-phrase-rule text-sm font-semibold" style="color:var(--text);"></p></div><!-- ── Examples ───────────────────────────────── --><div class="px-7 py-6 border-b" style="border-color:var(--border);"><p class="lc-examples-label text-[10px] font-bold uppercase tracking-widest mb-5" style="color:var(--text-muted);">Voorbeeldzinnen</p><div class="lc-examples space-y-3"><!-- populated by JS --></div></div><!-- Verb conjugation (hidden by default, shown for verb cards) --><div class="lc-conjugation-wrap hidden border-b px-7 py-6" style="border-color:var(--border);"><div class="lc-conjugation-inner flex flex-wrap gap-4"><!-- populated by JS --></div></div><!-- ── Tags ───────────────────────────────────── --><div class="lc-tags-row px-7 py-4 flex items-center gap-2 flex-wrap"><span class="text-[10px] font-bold uppercase tracking-wider" style="color:var(--text-muted);">Tags:</span><div class="lc-tags flex gap-2 flex-wrap"></div></div></div><script>(function(){const cardJson = "{\"id\":\"verbs-b2-abstract_actions-001\",\"target\":\"analyseren\",\"source\":\"to analyze\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Weak verb taking 'hebben'. Regular conjugation pattern adding -de/-den in the past tense.\",\"examples\":[{\"target\":\"De commissie zal de cijfers grondig analyseren voordat ze een besluit neemt.\",\"source\":\"The committee will thoroughly analyze the figures before making a decision.\"},{\"target\":\"Het is belangrijk om het probleem van alle kanten te analyseren.\",\"source\":\"It is important to analyze the problem from all sides.\"}],\"conjugations\":{\"tegenwoordige_tijd\":{\"ik\":\"analyseer\",\"jij/je\":\"analyseert\",\"hij/zij/het\":\"analyseert\",\"wij/we\":\"analyseren\",\"jullie\":\"analyseren\",\"zij/ze\":\"analyseren\"},\"verleden_tijd\":{\"ik\":\"analyseerde\",\"jij/je\":\"analyseerde\",\"hij/zij/het\":\"analyseerde\",\"wij/we\":\"analyseerden\",\"jullie\":\"analyseerden\",\"zij/ze\":\"analyseerden\"},\"toekomende_tijd\":{\"ik\":\"zal analyseren\",\"jij/je\":\"zult analyseren\",\"hij/zij/het\":\"zal analyseren\",\"wij/we\":\"zullen analyseren\",\"jullie\":\"zullen analyseren\",\"zij/ze\":\"zullen analyseren\"},\"voltooide_tijd\":\"heeft geanalyseerd\",\"voltooid_deelwoord\":\"geanalyseerd\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}}";
+const langConfigJson = "{\"language_pair\":\"english_dutch\",\"target_lang\":\"nl\",\"native_lang\":\"en\",\"target_lang_name\":\"Nederlands\",\"native_lang_name\":\"English\",\"speech_lang\":\"nl-NL\",\"noun_metadata_fields\":[{\"key\":\"article\",\"label\":\"Lidwoord\",\"render\":\"article_badge\"},{\"key\":\"gender\",\"label\":\"Geslacht\",\"render\":\"gender_label\"},{\"key\":\"plural\",\"label\":\"Meervoud\",\"render\":\"text\"}],\"article_colours\":{\"de\":\"#4A7C9E\",\"het\":\"#4A8A5A\"},\"gender_labels\":{\"c\":\"de-woord\",\"n\":\"het-woord\"},\"verb_tenses\":[\"tegenwoordige_tijd\",\"verleden_tijd\",\"voltooide_tijd\",\"voltooid_deelwoord\",\"toekomende_tijd\"],\"cases\":{},\"ui_labels\":{\"learn_mode\":\"Leren\",\"train_mode\":\"Oefenen\",\"examples_heading\":\"Voorbeeldzinnen\",\"grammar_note_heading\":\"Grammaticanotitie\",\"audio_button\":\"Luisteren\",\"back_link\":\"Terug\",\"card_counter\":\"Kaart {current} / {total}\",\"next_button\":\"Volgende\",\"finish_button\":\"Klaar\",\"correct\":\"Juist!\",\"wrong\":\"Fout\",\"dashboard_link\":\"Dashboard\",\"library_prompt\":\"Kies een deck uit de bibliotheek en ontdek alle informatie op de kaarten.\",\"cards_badge\":\"{count} KAARTEN\",\"cards_count\":\"{count} kaarten\",\"deck_meta\":\"{topic} • {level} • {count} kaarten\",\"no_decks\":\"Nog geen decks in deze categorie.\",\"setup_title\":\"Training instellen\",\"setup_subtitle\":\"Configureer je leersessie.\",\"question_type\":\"Vraagtype\",\"mode_multiple_choice\":\"Meerkeuze\",\"mode_typing\":\"Tekstinvoer\",\"mode_typing_short\":\"Invoer\",\"direction\":\"Richting\",\"direction_forward\":\"🇺🇸 English → 🇳🇱 Nederlands\",\"direction_reverse\":\"🇳🇱 Nederlands → 🇺🇸 English\",\"select_level\":\"Niveau kiezen\",\"start_training\":\"Training starten\",\"count_label\":\"Aantal kaarten\",\"all_cards\":\"Alles\",\"in_deck\":\"in stapel\",\"view_cards\":\"Kaarten\",\"view_list\":\"Lijst\",\"card_word\":\"Kaart\",\"keyboard_hint_study\":\"← → Pijltjestoetsen om te navigeren · A om te luisteren\",\"example_single_heading\":\"Voorbeeld\",\"no_example\":\"Geen voorbeeld beschikbaar.\",\"tags_label\":\"Tags:\",\"type_vocab\":\"Woordenschat\",\"type_verb\":\"Werkwoord\",\"type_phrase\":\"Zegswijze\",\"type_connector\":\"Voegwoord\",\"type_grammar\":\"Grammatica\",\"type_noun\":\"Zelfstandig naamwoord\",\"type_adjective\":\"Bijvoeglijk naamwoord\",\"type_expression\":\"Uitdrukking\",\"plural_prefix\":\"Pl. {plural}\",\"plural_only\":\"alleen meervoud\",\"word_order_heading\":\"Woordvolgorde\",\"structure_heading\":\"Structuur\",\"training_title\":\"Training\",\"all_levels\":\"Alle niveaus\",\"type_placeholder\":\"Schrijf het woord in het Nederlands...\",\"check_button\":\"Controleren\",\"keyboard_hint_train\":\"Enter / Spatie = bevestigen · A = Luisteren\",\"audio_title\":\"Luisteren (A)\",\"training_finished\":\"Training voltooid!\",\"missed_heading\":\"Fout beantwoord — om te herhalen\",\"retry_missed\":\"Fouten opnieuw doen\",\"new_config\":\"Nieuwe configuratie\",\"plural_hint\":\"Pl: {plural}\",\"results_pct\":\"{pct}% juist\",\"result_excellent\":\"Uitstekend! Je beheerst dit niveau volledig.\",\"result_good\":\"Zeer goed! Nog een beetje oefenen en je hebt het onder de knie!\",\"result_ok\":\"Goed begin! Herhaal de kaarten nog een keer.\",\"result_retry\":\"Geen probleem — oefening baart kunst!\",\"no_cards_title\":\"Geen kaarten gevonden\",\"no_cards_hint\":\"Kies een ander niveau of een ander deck.\"},\"answer_normalisation\":{\"strip_leading_words\":[\"de\",\"het\",\"een\",\"der\",\"des\",\"den\"],\"alt_spellings\":{\"ij\":\"y\",\"ë\":\"e\",\"ï\":\"i\"}}}";
+
+  /**
+   * Client-side card renderer.
+   * Uses the universal card-renderer logic inline (no imports in Astro is:inline).
+   */
+
+  // ── Parse data ──────────────────────────────────────────────────────────
+  const card   = JSON.parse(cardJson);
+  const config = JSON.parse(langConfigJson);
+
+  // ── Helpers ─────────────────────────────────────────────────────────────
+  // Articles come from the language config (keys of article_colours), never hardcoded
+  const articleList = Object.keys(config.article_colours || {});
+  const articlePatterns = articleList.map(a => {
+    const esc = a.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    return esc.endsWith("'") ? esc : `${esc}\\s+`;
+  });
+  const articleRe = articlePatterns.length
+    ? new RegExp('^(?:' + articlePatterns.join('|') + ')', 'i')
+    : null;
+
+  function stripArticle(word) {
+    return articleRe ? (word || '').replace(articleRe, '').trim() : (word || '').trim();
+  }
+
+  function getArticleColour(article) {
+    if (!article || !config.article_colours) return 'var(--espresso)';
+    return config.article_colours[article.toLowerCase()] || 'var(--espresso)';
+  }
+
+  function getGenderLabel(gender) {
+    if (!gender) return '';
+    return (config.gender_labels || {})[gender] || gender;
+  }
+
+  const uiLabels = config.ui_labels || {};
+
+  function getTypeLabel() {
+    const tags = card.tags || [];
+    if (tags.includes('noun'))       return uiLabels.type_noun || 'Noun';
+    if (tags.includes('verb'))       return uiLabels.type_verb || 'Verb';
+    if (tags.includes('adjective'))  return uiLabels.type_adjective || 'Adjective';
+    if (tags.includes('expression')) return uiLabels.type_expression || 'Expression';
+    const map = {
+      vocab: uiLabels.type_vocab || 'Vocab',
+      verb: uiLabels.type_verb || 'Verb',
+      phrase: uiLabels.type_phrase || 'Phrase',
+      connector: uiLabels.type_connector || 'Connector',
+      grammar: uiLabels.type_grammar || 'Grammar'
+    };
+    return map[card.type] || uiLabels.card_word || 'Card';
+  }
+
+  function formatHighlight(text) {
+    if (!text) return '';
+    return String(text).replace(/\*(.*?)\*/g, '<span class="highlighter">$1</span>');
+  }
+
+  function getMetaFacts() {
+    const meta = card.metadata || {};
+    const facts = [];
+    for (const field of (config.noun_metadata_fields || [])) {
+      const raw = meta[field.key] || card[field.key];
+      if (!raw || raw === '~') continue;
+      let value = String(raw);
+      let colour;
+      if (field.render === 'gender_label') value = getGenderLabel(raw);
+      else if (field.render === 'article_badge') colour = getArticleColour(raw);
+      facts.push({ label: field.label, value, colour });
+    }
+    return facts;
+  }
+
+  // ── Render ──────────────────────────────────────────────────────────────
+  const container = document.querySelector('.learning-card');
+  if (!container) { console.error('LearningCard: container not found'); }
+
+  function sel(cls) { return container?.querySelector(cls); }
+
+  // Type badge
+  sel('.lc-type-badge').textContent = getTypeLabel();
+
+  // Level badge
+  sel('.lc-level-badge').textContent = card.level || '';
+
+  // Article
+  const article = card.metadata?.article;
+  const articleWrap = sel('.lc-article-wrap');
+  const articleEl   = sel('.lc-article');
+  if (article && card.tags?.includes('noun') && !card.metadata?.plural_only) {
+    articleEl.textContent  = article;
+    articleEl.style.color  = getArticleColour(article);
+    articleWrap.style.display = '';
+  } else {
+    articleWrap.style.display = 'none';
+  }
+
+  // Word
+  sel('.lc-word').textContent = stripArticle(card.target);
+
+  // Translation
+  sel('.lc-translation').textContent = card.source || '';
+
+  // Plural / forms
+  const plural = card.metadata?.plural;
+  const formsEl = sel('.lc-forms');
+  const prefix = uiLabels.plural_prefix || 'Pl.';
+  const pluralOnly = uiLabels.plural_only || 'Plural only';
+  if (plural && !card.metadata?.plural_only) formsEl.textContent = `${prefix} ${plural}`;
+  else if (card.metadata?.plural_only) formsEl.textContent = pluralOnly;
+  else formsEl.textContent = '';
+
+  // Meta grid
+  const metaGrid = sel('.lc-meta-grid');
+  const facts = getMetaFacts();
+  if (facts.length) {
+    const cols = Math.min(facts.length, 4);
+    metaGrid.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
+    metaGrid.innerHTML = facts.map((f, i) => `
+      <div class="px-5 py-4 ${i < facts.length - 1 ? 'border-r' : ''}" style="border-color:var(--border);">
+        <p class="text-[9px] font-bold uppercase tracking-widest mb-1" style="color:var(--text-muted);">${f.label}</p>
+        <p class="text-sm font-bold" style="color:${f.colour || 'var(--text)'};">${f.value}</p>
+      </div>
+    `).join('');
+  } else {
+    metaGrid.style.display = 'none';
+  }
+
+  // Grammar note
+  const grammarWrap = sel('.lc-grammar-wrap');
+  if (card.grammar_note) {
+    sel('.lc-grammar-text').innerHTML = formatHighlight(card.grammar_note);
+    grammarWrap.classList.remove('hidden');
+  }
+
+  // Grammar label from config
+  const uiLabels = config.ui_labels || {};
+  if (uiLabels.grammar_note_heading) sel('.lc-grammar-label').textContent = uiLabels.grammar_note_heading;
+  if (uiLabels.examples_heading)     sel('.lc-examples-label').textContent = uiLabels.examples_heading;
+  if (uiLabels.audio_button)         { const el = sel('.lc-audio-label'); if (el) el.textContent = uiLabels.audio_button; }
+
+  // ── Type-specific blocks ─────────────────────────────────────────────────
+
+  // Verb: conjugation table
+  const type = card.type || (card.tags?.includes('verb') ? 'verb' : 'vocab');
+  if (type === 'verb' && card.conjugations) {
+    const conjWrap  = sel('.lc-conjugation-wrap');
+    const conjInner = sel('.lc-conjugation-inner');
+    conjWrap.classList.remove('hidden');
+
+    let conjArray = [];
+    if (Array.isArray(card.conjugations)) {
+      conjArray = card.conjugations;
+    } else {
+      for (const [tense, forms] of Object.entries(card.conjugations)) {
+        if (typeof forms === 'string') {
+          conjArray.push({ tense, stringForm: forms });
+        } else {
+          const formsArr = Object.entries(forms).map(([pronoun, form]) => ({ pronoun, form }));
+          conjArray.push({ tense, forms: formsArr });
+        }
+      }
+    }
+
+    const tensesToRender = config.verb_tenses || conjArray.map(t => t.tense);
+
+    const stringTenses = [];
+    const tableTenses = [];
+
+    tensesToRender.forEach(tense => {
+      const t = conjArray.find(c => c.tense === tense);
+      if (!t) return;
+      if (t.stringForm) stringTenses.push(t);
+      else tableTenses.push(t);
+    });
+
+    let html = '';
+
+    // Render simple string forms (e.g. Perfekt, Partizip II) as pill-like tags at the top
+    if (stringTenses.length > 0) {
+      html += `
+        <div class="flex flex-wrap gap-3 mb-6">
+          ${stringTenses.map(t => `
+            <div class="rounded-xl border px-4 py-2.5 flex items-center gap-3 shadow-sm" style="border-color:var(--border); background-color:var(--bg);">
+              <span class="text-[10px] font-bold uppercase tracking-widest opacity-80" style="color:var(--espresso);">${t.tense.replace(/_/g, ' ')}</span>
+              <span class="font-bold text-sm" style="color:var(--text);">${t.stringForm}</span>
+            </div>
+          `).join('')}
+        </div>
+      `;
+    }
+
+    // Render full tables (e.g. Präsens, Präteritum) as a unified table
+    if (tableTenses.length > 0) {
+      // Collect all pronouns from the first available table tense
+      const pronouns = tableTenses[0].forms.map(f => f.pronoun);
+
+      html += `
+        <div class="rounded-xl border overflow-x-auto shadow-sm w-full" style="border-color:var(--border);">
+          <table class="w-full text-sm text-left">
+            <thead>
+              <tr style="background-color:var(--bg); border-bottom: 1px solid var(--border);">
+                <th class="px-4 py-3 font-bold uppercase tracking-widest text-[10px] w-[1%]" style="color:var(--espresso); border-right: 1px solid var(--border);"></th>
+                ${tableTenses.map(t => `
+                  <th class="px-4 py-3 font-bold uppercase tracking-widest text-[10px]" style="color:var(--espresso);">${t.tense.replace(/_/g, ' ')}</th>
+                `).join('')}
+              </tr>
+            </thead>
+            <tbody>
+              ${pronouns.map((pronoun, ri) => `
+                <tr class="${ri < pronouns.length - 1 ? 'border-b' : ''}" style="border-color:var(--border);">
+                  <td class="px-4 py-3 font-bold text-xs whitespace-nowrap" style="color:var(--espresso); background-color:var(--bg); border-right: 1px solid var(--border);">${pronoun}</td>
+                  ${tableTenses.map(t => {
+                    const formObj = t.forms.find(f => f.pronoun === pronoun);
+                    return `<td class="px-4 py-3 font-semibold whitespace-nowrap" style="color:var(--text);">${formObj ? formObj.form : '-'}</td>`;
+                  }).join('')}
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+        </div>
+      `;
+    }
+
+    conjInner.innerHTML = html;
+  }
+
+  // Connector: word order block
+  if (type === 'connector' && card.word_order) {
+    const woWrap = sel('.lc-wordorder-wrap');
+    sel('.lc-wordorder-text').textContent = card.word_order;
+    woWrap.classList.remove('hidden');
+  }
+
+  // Phrase: preposition rule block
+  if (type === 'phrase' && card.clause_type) {
+    const phraseWrap = sel('.lc-phrase-wrap');
+    sel('.lc-phrase-rule').textContent = card.clause_type;
+    phraseWrap.classList.remove('hidden');
+  }
+
+  // ── Examples ─────────────────────────────────────────────────────────────
+  const examplesEl = sel('.lc-examples');
+  const rawExamples = card.examples || [];
+
+  if (rawExamples.length) {
+    examplesEl.innerHTML = rawExamples.map(e => `
+        <div class="rounded-2xl border overflow-hidden" style="border-color:var(--border);">
+          <div class="px-4 py-3" style="background-color:var(--bg);">
+            <p class="font-semibold leading-snug mb-1" style="color:var(--text);">${formatHighlight(e.target)}</p>
+            <p class="text-sm italic" style="color:var(--text-muted);">${formatHighlight(e.source || '')}</p>
+          </div>
+          ${e.note ? `<div class="px-4 py-2 border-t" style="border-color:var(--border);">
+            <p class="text-[10px] font-bold font-mono" style="color:var(--espresso);">📐 ${e.note}</p>
+          </div>` : ''}
+        </div>
+      `).join('');
+  } else {
+    examplesEl.innerHTML = `<p class="text-sm italic" style="color:var(--text-muted);">${uiLabels.no_example || ''}</p>`;
+  }
+
+  // ── Tags ─────────────────────────────────────────────────────────────────
+  const tagsEl = sel('.lc-tags');
+  tagsEl.innerHTML = (card.tags || []).map(t => `
+    <span class="text-[10px] font-bold px-2 py-0.5 rounded-md border uppercase" style="border-color:var(--border); color:var(--text-muted); background-color:var(--bg);">${t}</span>
+  `).join('');
+
+  // ── Audio button ─────────────────────────────────────────────────────────
+  sel('.lc-audio-btn')?.addEventListener('click', () => {
+    if (window.LoungeAudioEngine) {
+      window.LoungeAudioEngine.speak(card.target || '', config.speech_lang, 0.85);
+    }
+  });
+})();</script></div><!-- ── Navigation ───────────────────────────── --><div class="flex items-center justify-between mt-8 gap-4" data-astro-cid-5tabbh6g><button id="btn-prev" disabled class="flex items-center gap-2 px-6 py-3 rounded-2xl border font-bold text-sm transition-all hover:opacity-70 active:scale-95 disabled:opacity-30 disabled:cursor-not-allowed" style="border-color:var(--border); color:var(--text); background-color:var(--card);" data-astro-cid-5tabbh6g><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><path d="m15 18-6-6 6-6" data-astro-cid-5tabbh6g></path></svg>Terug</button><!-- Dot navigation --><div id="dot-nav" class="flex items-center gap-1.5 flex-wrap justify-center max-w-xs overflow-hidden" style="max-height:2rem;" data-astro-cid-5tabbh6g><!-- populated by JS --></div><button id="btn-next" class="flex items-center gap-2 px-6 py-3 rounded-2xl font-bold text-sm transition-all hover:opacity-80 active:scale-95" style="background-color:var(--espresso); color:#F5F2EB;" data-astro-cid-5tabbh6g>Volgende<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><path d="m9 18 6-6-6-6" data-astro-cid-5tabbh6g></path></svg></button></div><!-- Keyboard hint --><p class="text-center text-xs font-medium mt-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>← → Pijltjestoetsen om te navigeren · A om te luisteren</p></div><!-- ── List View ───────────────────────────── --><div id="list-view-wrap" class="hidden space-y-6" data-astro-cid-5tabbh6g><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>analyseren</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to analyze</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammaticanotitie</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Weak verb taking 'hebben'. Regular conjugation pattern adding -de/-den in the past tense.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Voorbeeld</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>De commissie zal de cijfers grondig analyseren voordat ze een besluit neemt.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The committee will thoroughly analyze the figures before making a decision.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>benadrukken</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to emphasize</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammaticanotitie</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Weak verb taking 'hebben'. Separable compound formed with 'benadrukken' (though treated as inseparable in most forms).</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Voorbeeld</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>De directeur wilde nogmaals benadrukken hoe belangrijk teamwork is voor ons succes.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The director wanted to emphasize once again how important teamwork is for our success.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>beoordelen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to evaluate</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammaticanotitie</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Weak verb taking 'hebben'. Inseparable prefix 'be-'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Voorbeeld</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>De jury zal de inzendingen beoordelen op originaliteit en creativiteit.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The jury will evaluate the entries on originality and creativity.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>constateren</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to note / to establish</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammaticanotitie</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Weak verb taking 'hebben'. Often used in formal or professional contexts to state a finding.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Voorbeeld</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>De auditor kon constateren dat de administratie volledig in orde was.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The auditor was able to establish that the administration was completely in order.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>definiëren</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to define</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammaticanotitie</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Weak verb taking 'hebben'. Ends in '-eren', meaning the past participle does not take the ge- prefix.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Voorbeeld</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Het is noodzakelijk om de doelstellingen helder te definiëren voor het project begint.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>It is necessary to clearly define the objectives before the project starts.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>demonstreren</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to demonstrate</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammaticanotitie</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Weak verb taking 'hebben'. '-eren' verb without ge- in the past participle.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Voorbeeld</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Tijdens de workshop zal de expert demonstreren hoe de nieuwe software werkt.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>During the workshop, the expert will demonstrate how the new software works.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>discussiëren</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to discuss / to debate</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammaticanotitie</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Weak verb taking 'hebben'. Often takes the preposition 'over' (discussiëren over).</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Voorbeeld</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>De raad van bestuur zal morgen langdurig discussiëren over de nieuwe strategie.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The board of directors will discuss the new strategy at length tomorrow.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>evalueren</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to evaluate / to review</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammaticanotitie</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Weak verb taking 'hebben'. '-eren' verb.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Voorbeeld</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Aan het einde van elk kwartaal evalueren we de behaalde resultaten.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>At the end of each quarter, we evaluate the achieved results.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>formuleren</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to formulate</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammaticanotitie</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Weak verb taking 'hebben'. '-eren' verb.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Voorbeeld</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>De minister wist zijn kritiek uiterst zorgvuldig te formuleren.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The minister managed to formulate his criticism extremely carefully.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>garanderen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to guarantee</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammaticanotitie</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Weak verb taking 'hebben'. '-eren' verb.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Voorbeeld</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Het bedrijf kan geen succes garanderen bij een dergelijke risicovolle investering.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The company cannot guarantee success with such a risky investment.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>identificeren</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to identify</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammaticanotitie</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Weak verb taking 'hebben'. Often used with 'zich' for reflexive usage (zich identificeren met).</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Voorbeeld</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>De analist wist de belangrijkste risico's van het plan snel te identificeren.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The analyst managed to quickly identify the main risks of the plan.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>impliceren</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to imply</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammaticanotitie</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Weak verb taking 'hebben'. '-eren' verb.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Voorbeeld</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Haar besluit om op te stappen impliceert dat ze het niet eens is met de koers.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Her decision to resign implies that she disagrees with the course of action.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>motiveren</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to motivate / to justify</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammaticanotitie</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Weak verb taking 'hebben'. Can mean to inspire action or to provide reasons/justification.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Voorbeeld</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Een goede leidinggevende weet hoe hij zijn team kan motiveren tijdens moeilijke tijden.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>A good manager knows how to motivate his team during difficult times.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>negeren</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to ignore</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammaticanotitie</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Weak verb taking 'hebben'. '-eren' verb.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Voorbeeld</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Het management kon de signalen uit de markt niet langer negeren.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The management could no longer ignore the signals from the market.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>optimaliseren</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to optimize</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammaticanotitie</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Weak verb taking 'hebben'. '-eren' verb.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Voorbeeld</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Het bedrijf probeert de productieprocessen continu te optimaliseren.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The company tries to continuously optimize the production processes.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>prioriteren</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to prioritize</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammaticanotitie</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Weak verb taking 'hebben'. '-eren' verb.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Voorbeeld</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Vanwege een beperkt budget moeten we de projecten zorgvuldig prioriteren.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Due to a limited budget, we must carefully prioritize the projects.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>publiceren</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to publish</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammaticanotitie</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Weak verb taking 'hebben'. '-eren' verb.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Voorbeeld</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>De onderzoeker zal haar bevindingen volgende week in een gerenommeerd tijdschrift publiceren.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The researcher will publish her findings in a renowned journal next week.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>reflecteren</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to reflect</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammaticanotitie</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Weak verb taking 'hebben'. Often used with preposition 'op' (reflecteren op).</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Voorbeeld</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Het is leerzaam om aan het einde van de week te reflecteren op je eigen prestaties.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>It is educational to reflect on your own performance at the end of the week.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>structureren</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to structure</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammaticanotitie</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Weak verb taking 'hebben'. '-eren' verb.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Voorbeeld</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>De spreker wist zijn betoog logisch en helder te structureren.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The speaker managed to structure his presentation logically and clearly.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>verifiëren</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to verify</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammaticanotitie</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Weak verb taking 'hebben'. '-eren' verb.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Voorbeeld</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Voordat u de informatie deelt, is het verstandig om de bron te verifiëren.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Before you share the information, it is wise to verify the source.</p></div></div></div></div></div></div><!-- ══ TRAIN PANEL ════════════════════════════ --><div id="train-panel" class="hidden space-y-10" data-astro-cid-5tabbh6g><div class="cafe-card rounded-3xl p-8 border shadow-lg max-w-xl mx-auto" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="text-center mb-8" data-astro-cid-5tabbh6g><h2 class="text-2xl font-extrabold font-outfit mb-2" style="color:var(--text);" data-astro-cid-5tabbh6g>Training instellen</h2><p class="text-sm font-medium" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Configureer je leersessie.</p></div><form action="/languagelounge/en-nl/training/verbs/train/" method="GET" class="space-y-8" id="deck-train-form" data-astro-cid-5tabbh6g><input type="hidden" name="level" value="b2" data-astro-cid-5tabbh6g><input type="hidden" name="deck" value="verbs-b2-abstract_actions" data-astro-cid-5tabbh6g><!-- Mode selection --><div class="space-y-3" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold tracking-widest uppercase" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Vraagtype</p><div class="grid grid-cols-2 gap-3" data-astro-cid-5tabbh6g><button type="button" data-group="mode" data-value="mc" class="sel-opt sel-active" data-astro-cid-5tabbh6g><span class="text-xl mb-1 block" data-astro-cid-5tabbh6g>🔘</span><span class="text-sm font-bold" data-astro-cid-5tabbh6g>Meerkeuze</span></button><button type="button" data-group="mode" data-value="type" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-xl mb-1 block" data-astro-cid-5tabbh6g>⌨️</span><span class="text-sm font-bold" data-astro-cid-5tabbh6g>Tekstinvoer</span></button></div><input type="hidden" name="mode" id="mode-hidden" value="mc" data-astro-cid-5tabbh6g></div><!-- Direction selection --><div class="space-y-3" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold tracking-widest uppercase" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Richting</p><div class="grid grid-cols-2 gap-3" data-astro-cid-5tabbh6g><button type="button" data-group="dir" data-value="en-nl" class="sel-opt sel-active" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>🇺🇸 English → 🇳🇱 Nederlands</span></button><button type="button" data-group="dir" data-value="nl-en" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>🇳🇱 Nederlands → 🇺🇸 English</span></button></div><input type="hidden" name="dir" id="dir-hidden" value="en-nl" data-astro-cid-5tabbh6g></div><!-- Count Selection --><div class="space-y-3" data-astro-cid-5tabbh6g><div class="flex justify-between items-end" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold tracking-widest uppercase" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Aantal kaarten</p><span class="text-xs font-bold" style="color:var(--espresso);" data-astro-cid-5tabbh6g>20 kaarten in stapel</span></div><div class="grid grid-cols-4 gap-3" data-astro-cid-5tabbh6g><button type="button" data-group="count" data-value="30" class="sel-opt sel-active" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>30</span></button><button type="button" data-group="count" data-value="60" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>60</span></button><button type="button" data-group="count" data-value="90" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>90</span></button><button type="button" data-group="count" data-value="1000" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>Alles</span></button></div><input type="hidden" name="count" id="count-hidden" value="30" data-astro-cid-5tabbh6g></div><button type="submit" class="w-full py-4 rounded-xl font-bold text-base transition-all hover:opacity-90 mt-4 shadow-md active:scale-[0.98]" style="background-color:var(--espresso); color:#F5F2EB;" data-astro-cid-5tabbh6g>Training starten &rarr;</button></form></div></div></div></main><footer class="mt-auto border-t py-8" style="background-color:var(--bg);border-color:var(--border);"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-medium" style="color:var(--text-muted);"><div>&copy; 2025 - 2026 Small Talk Café Podcasts. All rights reserved.</div><div class="flex gap-4">Made in Bayern ❤️ Los Geht's!</div></div></footer><!-- Minimal script for Theme and Dropdown toggle --><script>
+      // ── Theme ──────────────────────────────────────
+      function applyTheme(dark) {
+        if (dark) {
+          document.documentElement.classList.add('dark');
+          localStorage.setItem('wortschatz_theme', 'dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+          localStorage.setItem('wortschatz_theme', 'light');
+        }
+        const icon = document.getElementById('theme-icon');
+        const label = document.getElementById('theme-label');
+        if (icon) icon.textContent = dark ? '🌙' : '☀️';
+        if (label) label.textContent = dark ? 'Dark' : 'Light';
+      }
+
+      const isDark = document.documentElement.classList.contains('dark');
+      applyTheme(isDark);
+
+      document.getElementById('theme-toggle')?.addEventListener('click', () => {
+        const nowDark = !document.documentElement.classList.contains('dark');
+        applyTheme(nowDark);
+      });
+
+      // ── Dropdown Toggle ──────────────────────────
+      const langBtn = document.getElementById('lang-btn');
+      const langMenu = document.getElementById('lang-menu');
+
+      langBtn?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        langMenu?.classList.toggle('hidden');
+      });
+
+      document.addEventListener('click', () => {
+        langMenu?.classList.add('hidden');
+      });
+    </script></body></html><script type="module" src="/languagelounge/_astro/_deckId_.astro_astro_type_script_index_0_lang.DwXABuW8.js"></script><script>(function(){const cardsJson = "[{\"id\":\"verbs-b2-abstract_actions-001\",\"target\":\"analyseren\",\"source\":\"to analyze\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Weak verb taking 'hebben'. Regular conjugation pattern adding -de/-den in the past tense.\",\"examples\":[{\"target\":\"De commissie zal de cijfers grondig analyseren voordat ze een besluit neemt.\",\"source\":\"The committee will thoroughly analyze the figures before making a decision.\"},{\"target\":\"Het is belangrijk om het probleem van alle kanten te analyseren.\",\"source\":\"It is important to analyze the problem from all sides.\"}],\"conjugations\":{\"tegenwoordige_tijd\":{\"ik\":\"analyseer\",\"jij/je\":\"analyseert\",\"hij/zij/het\":\"analyseert\",\"wij/we\":\"analyseren\",\"jullie\":\"analyseren\",\"zij/ze\":\"analyseren\"},\"verleden_tijd\":{\"ik\":\"analyseerde\",\"jij/je\":\"analyseerde\",\"hij/zij/het\":\"analyseerde\",\"wij/we\":\"analyseerden\",\"jullie\":\"analyseerden\",\"zij/ze\":\"analyseerden\"},\"toekomende_tijd\":{\"ik\":\"zal analyseren\",\"jij/je\":\"zult analyseren\",\"hij/zij/het\":\"zal analyseren\",\"wij/we\":\"zullen analyseren\",\"jullie\":\"zullen analyseren\",\"zij/ze\":\"zullen analyseren\"},\"voltooide_tijd\":\"heeft geanalyseerd\",\"voltooid_deelwoord\":\"geanalyseerd\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-abstract_actions-002\",\"target\":\"benadrukken\",\"source\":\"to emphasize\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Weak verb taking 'hebben'. Separable compound formed with 'benadrukken' (though treated as inseparable in most forms).\",\"examples\":[{\"target\":\"De directeur wilde nogmaals benadrukken hoe belangrijk teamwork is voor ons succes.\",\"source\":\"The director wanted to emphasize once again how important teamwork is for our success.\"},{\"target\":\"Tijdens de presentatie benadrukte zij de noodzaak van duurzame innovatie.\",\"source\":\"During the presentation, she emphasized the need for sustainable innovation.\"}],\"conjugations\":{\"tegenwoordige_tijd\":{\"ik\":\"benadruk\",\"jij/je\":\"benadrukt\",\"hij/zij/het\":\"benadrukt\",\"wij/we\":\"benadrukken\",\"jullie\":\"benadrukken\",\"zij/ze\":\"benadrukken\"},\"verleden_tijd\":{\"ik\":\"benadrukte\",\"jij/je\":\"benadrukte\",\"hij/zij/het\":\"benadrukte\",\"wij/we\":\"benadrukten\",\"jullie\":\"benadrukten\",\"zij/ze\":\"benadrukten\"},\"toekomende_tijd\":{\"ik\":\"zal benadrukken\",\"jij/je\":\"zult benadrukken\",\"hij/zij/het\":\"zal benadrukken\",\"wij/we\":\"zullen benadrukken\",\"jullie\":\"zullen benadrukken\",\"zij/ze\":\"zullen benadrukken\"},\"voltooide_tijd\":\"heeft benadrukt\",\"voltooid_deelwoord\":\"benadrukt\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-abstract_actions-003\",\"target\":\"beoordelen\",\"source\":\"to evaluate\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Weak verb taking 'hebben'. Inseparable prefix 'be-'.\",\"examples\":[{\"target\":\"De jury zal de inzendingen beoordelen op originaliteit en creativiteit.\",\"source\":\"The jury will evaluate the entries on originality and creativity.\"},{\"target\":\"Het is moeilijk om iemands prestaties objectief te beoordelen zonder harde data.\",\"source\":\"It is difficult to objectively evaluate someone's performance without hard data.\"}],\"conjugations\":{\"tegenwoordige_tijd\":{\"ik\":\"beoordeel\",\"jij/je\":\"beoordeelt\",\"hij/zij/het\":\"beoordeelt\",\"wij/we\":\"beoordelen\",\"jullie\":\"beoordelen\",\"zij/ze\":\"beoordelen\"},\"verleden_tijd\":{\"ik\":\"beoordeelde\",\"jij/je\":\"beoordeelde\",\"hij/zij/het\":\"beoordeelde\",\"wij/we\":\"beoordeelden\",\"jullie\":\"beoordeelden\",\"zij/ze\":\"beoordeelden\"},\"toekomende_tijd\":{\"ik\":\"zal beoordelen\",\"jij/je\":\"zult beoordelen\",\"hij/zij/het\":\"zal beoordelen\",\"wij/we\":\"zullen beoordelen\",\"jullie\":\"zullen beoordelen\",\"zij/ze\":\"zullen beoordelen\"},\"voltooide_tijd\":\"heeft beoordeeld\",\"voltooid_deelwoord\":\"beoordeeld\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-abstract_actions-004\",\"target\":\"constateren\",\"source\":\"to note / to establish\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Weak verb taking 'hebben'. Often used in formal or professional contexts to state a finding.\",\"examples\":[{\"target\":\"De auditor kon constateren dat de administratie volledig in orde was.\",\"source\":\"The auditor was able to establish that the administration was completely in order.\"},{\"target\":\"We moeten constateren dat de kosten hoger uitvallen dan begroot.\",\"source\":\"We must note that the costs are turning out higher than budgeted.\"}],\"conjugations\":{\"tegenwoordige_tijd\":{\"ik\":\"constateer\",\"jij/je\":\"constateert\",\"hij/zij/het\":\"constateert\",\"wij/we\":\"constateren\",\"jullie\":\"constateren\",\"zij/ze\":\"constateren\"},\"verleden_tijd\":{\"ik\":\"constateerde\",\"jij/je\":\"constateerde\",\"hij/zij/het\":\"constateerde\",\"wij/we\":\"constateerden\",\"jullie\":\"constateerden\",\"zij/ze\":\"constateerden\"},\"toekomende_tijd\":{\"ik\":\"zal constateren\",\"jij/je\":\"zult constateren\",\"hij/zij/het\":\"zal constateren\",\"wij/we\":\"zullen constateren\",\"jullie\":\"zullen constateren\",\"zij/ze\":\"zullen constateren\"},\"voltooide_tijd\":\"heeft geconstateerd\",\"voltooid_deelwoord\":\"geconstateerd\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-abstract_actions-005\",\"target\":\"definiëren\",\"source\":\"to define\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Weak verb taking 'hebben'. Ends in '-eren', meaning the past participle does not take the ge- prefix.\",\"examples\":[{\"target\":\"Het is noodzakelijk om de doelstellingen helder te definiëren voor het project begint.\",\"source\":\"It is necessary to clearly define the objectives before the project starts.\"},{\"target\":\"De wetenschapper probeerde het complexe begrip nauwkeurig te definiëren.\",\"source\":\"The scientist tried to define the complex concept precisely.\"}],\"conjugations\":{\"tegenwoordige_tijd\":{\"ik\":\"definieer\",\"jij/je\":\"definieert\",\"hij/zij/het\":\"definieert\",\"wij/we\":\"definiëren\",\"jullie\":\"definiëren\",\"zij/ze\":\"definiëren\"},\"verleden_tijd\":{\"ik\":\"definieerde\",\"jij/je\":\"definieerde\",\"hij/zij/het\":\"definieerde\",\"wij/we\":\"definieerden\",\"jullie\":\"definieerden\",\"zij/ze\":\"definieerden\"},\"toekomende_tijd\":{\"ik\":\"zal definiëren\",\"jij/je\":\"zult definiëren\",\"hij/zij/het\":\"zal definiëren\",\"wij/we\":\"zullen definiëren\",\"jullie\":\"zullen definiëren\",\"zij/ze\":\"zullen definiëren\"},\"voltooide_tijd\":\"heeft gedefinieerd\",\"voltooid_deelwoord\":\"gedefinieerd\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-abstract_actions-006\",\"target\":\"demonstreren\",\"source\":\"to demonstrate\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Weak verb taking 'hebben'. '-eren' verb without ge- in the past participle.\",\"examples\":[{\"target\":\"Tijdens de workshop zal de expert demonstreren hoe de nieuwe software werkt.\",\"source\":\"During the workshop, the expert will demonstrate how the new software works.\"},{\"target\":\"De manager wilde graag demonstreren dat het nieuwe systeem efficiënter is.\",\"source\":\"The manager wanted to demonstrate that the new system is more efficient.\"}],\"conjugations\":{\"tegenwoordige_tijd\":{\"ik\":\"demonstreer\",\"jij/je\":\"demonstreert\",\"hij/zij/het\":\"demonstreert\",\"wij/we\":\"demonstreren\",\"jullie\":\"demonstreren\",\"zij/ze\":\"demonstreren\"},\"verleden_tijd\":{\"ik\":\"demonstreerde\",\"jij/je\":\"demonstreerde\",\"hij/zij/het\":\"demonstreerde\",\"wij/we\":\"demonstreerden\",\"jullie\":\"demonstreerden\",\"zij/ze\":\"demonstreerden\"},\"toekomende_tijd\":{\"ik\":\"zal demonstreren\",\"jij/je\":\"zult demonstreren\",\"hij/zij/het\":\"zal demonstreren\",\"wij/we\":\"zullen demonstreren\",\"jullie\":\"zullen demonstreren\",\"zij/ze\":\"zullen demonstreren\"},\"voltooide_tijd\":\"heeft gedemonstreerd\",\"voltooid_deelwoord\":\"gedemonstreerd\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-abstract_actions-007\",\"target\":\"discussiëren\",\"source\":\"to discuss / to debate\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Weak verb taking 'hebben'. Often takes the preposition 'over' (discussiëren over).\",\"examples\":[{\"target\":\"De raad van bestuur zal morgen langdurig discussiëren over de nieuwe strategie.\",\"source\":\"The board of directors will discuss the new strategy at length tomorrow.\"},{\"target\":\"Het heeft weinig zin om te discussiëren over zaken die we toch niet kunnen veranderen.\",\"source\":\"It makes little sense to debate matters that we cannot change anyway.\"}],\"conjugations\":{\"tegenwoordige_tijd\":{\"ik\":\"discussieer\",\"jij/je\":\"discussieert\",\"hij/zij/het\":\"discussieert\",\"wij/we\":\"discussiëren\",\"jullie\":\"discussiëren\",\"zij/ze\":\"discussiëren\"},\"verleden_tijd\":{\"ik\":\"discussieerde\",\"jij/je\":\"discussieerde\",\"hij/zij/het\":\"discussieerde\",\"wij/we\":\"discussieerden\",\"jullie\":\"discussieerden\",\"zij/ze\":\"discussieerden\"},\"toekomende_tijd\":{\"ik\":\"zal discussiëren\",\"jij/je\":\"zult discussiëren\",\"hij/zij/het\":\"zal discussiëren\",\"wij/we\":\"zullen discussiëren\",\"jullie\":\"zullen discussiëren\",\"zij/ze\":\"zullen discussiëren\"},\"voltooide_tijd\":\"heeft gediscussieerd\",\"voltooid_deelwoord\":\"gediscussieerd\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-abstract_actions-008\",\"target\":\"evalueren\",\"source\":\"to evaluate / to review\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Weak verb taking 'hebben'. '-eren' verb.\",\"examples\":[{\"target\":\"Aan het einde van elk kwartaal evalueren we de behaalde resultaten.\",\"source\":\"At the end of each quarter, we evaluate the achieved results.\"},{\"target\":\"We moeten onze marketingstrategie grondig evalueren om meer klanten te bereiken.\",\"source\":\"We must thoroughly evaluate our marketing strategy to reach more customers.\"}],\"conjugations\":{\"tegenwoordige_tijd\":{\"ik\":\"evalueer\",\"jij/je\":\"evalueert\",\"hij/zij/het\":\"evalueert\",\"wij/we\":\"evalueren\",\"jullie\":\"evalueren\",\"zij/ze\":\"evalueren\"},\"verleden_tijd\":{\"ik\":\"evalueerde\",\"jij/je\":\"evalueerde\",\"hij/zij/het\":\"evalueerde\",\"wij/we\":\"evalueerden\",\"jullie\":\"evalueerden\",\"zij/ze\":\"evalueerden\"},\"toekomende_tijd\":{\"ik\":\"zal evalueren\",\"jij/je\":\"zult evalueren\",\"hij/zij/het\":\"zal evalueren\",\"wij/we\":\"zullen evalueren\",\"jullie\":\"zullen evalueren\",\"zij/ze\":\"zullen evalueren\"},\"voltooide_tijd\":\"heeft geëvalueerd\",\"voltooid_deelwoord\":\"geëvalueerd\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-abstract_actions-009\",\"target\":\"formuleren\",\"source\":\"to formulate\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Weak verb taking 'hebben'. '-eren' verb.\",\"examples\":[{\"target\":\"De minister wist zijn kritiek uiterst zorgvuldig te formuleren.\",\"source\":\"The minister managed to formulate his criticism extremely carefully.\"},{\"target\":\"Het is van cruciaal belang om duidelijke regels te formuleren voor het personeel.\",\"source\":\"It is crucial to formulate clear rules for the staff.\"}],\"conjugations\":{\"tegenwoordige_tijd\":{\"ik\":\"formuleer\",\"jij/je\":\"formuleert\",\"hij/zij/het\":\"formuleert\",\"wij/we\":\"formuleren\",\"jullie\":\"formuleren\",\"zij/ze\":\"formuleren\"},\"verleden_tijd\":{\"ik\":\"formuleerde\",\"jij/je\":\"formuleerde\",\"hij/zij/het\":\"formuleerde\",\"wij/we\":\"formuleerden\",\"jullie\":\"formuleerden\",\"zij/ze\":\"formuleerden\"},\"toekomende_tijd\":{\"ik\":\"zal formuleren\",\"jij/je\":\"zult formuleren\",\"hij/zij/het\":\"zal formuleren\",\"wij/we\":\"zullen formuleren\",\"jullie\":\"zullen formuleren\",\"zij/ze\":\"zullen formuleren\"},\"voltooide_tijd\":\"heeft geformuleerd\",\"voltooid_deelwoord\":\"geformuleerd\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-abstract_actions-010\",\"target\":\"garanderen\",\"source\":\"to guarantee\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Weak verb taking 'hebben'. '-eren' verb.\",\"examples\":[{\"target\":\"Het bedrijf kan geen succes garanderen bij een dergelijke risicovolle investering.\",\"source\":\"The company cannot guarantee success with such a risky investment.\"},{\"target\":\"Goede beveiliging kan de veiligheid van alle medewerkers garanderen.\",\"source\":\"Good security can guarantee the safety of all employees.\"}],\"conjugations\":{\"tegenwoordige_tijd\":{\"ik\":\"garandeer\",\"jij/je\":\"garandeert\",\"hij/zij/het\":\"garandeert\",\"wij/we\":\"garanderen\",\"jullie\":\"garanderen\",\"zij/ze\":\"garanderen\"},\"verleden_tijd\":{\"ik\":\"garandeerde\",\"jij/je\":\"garandeerde\",\"hij/zij/het\":\"garandeerde\",\"wij/we\":\"garandeerden\",\"jullie\":\"garandeerden\",\"zij/ze\":\"garandeerden\"},\"toekomende_tijd\":{\"ik\":\"zal garanderen\",\"jij/je\":\"zult garanderen\",\"hij/zij/het\":\"zal garanderen\",\"wij/we\":\"zullen garanderen\",\"jullie\":\"zullen garanderen\",\"zij/ze\":\"zullen garanderen\"},\"voltooide_tijd\":\"heeft gegarandeerd\",\"voltooid_deelwoord\":\"gegarandeerd\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-abstract_actions-011\",\"target\":\"identificeren\",\"source\":\"to identify\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Weak verb taking 'hebben'. Often used with 'zich' for reflexive usage (zich identificeren met).\",\"examples\":[{\"target\":\"De analist wist de belangrijkste risico's van het plan snel te identificeren.\",\"source\":\"The analyst managed to quickly identify the main risks of the plan.\"},{\"target\":\"Veel kiezers kunnen zich niet meer identificeren met de gevestigde politieke partijen.\",\"source\":\"Many voters can no longer identify with the established political parties.\"}],\"conjugations\":{\"tegenwoordige_tijd\":{\"ik\":\"identificeer\",\"jij/je\":\"identificeert\",\"hij/zij/het\":\"identificeert\",\"wij/we\":\"identificeren\",\"jullie\":\"identificeren\",\"zij/ze\":\"identificeren\"},\"verleden_tijd\":{\"ik\":\"identificeerde\",\"jij/je\":\"identificeerde\",\"hij/zij/het\":\"identificeerde\",\"wij/we\":\"identificeerden\",\"jullie\":\"identificeerden\",\"zij/ze\":\"identificeerden\"},\"toekomende_tijd\":{\"ik\":\"zal identificeren\",\"jij/je\":\"zult identificeren\",\"hij/zij/het\":\"zal identificeren\",\"wij/we\":\"zullen identificeren\",\"jullie\":\"zullen identificeren\",\"zij/ze\":\"zullen identificeren\"},\"voltooide_tijd\":\"heeft geïdentificeerd\",\"voltooid_deelwoord\":\"geïdentificeerd\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-abstract_actions-012\",\"target\":\"impliceren\",\"source\":\"to imply\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Weak verb taking 'hebben'. '-eren' verb.\",\"examples\":[{\"target\":\"Haar besluit om op te stappen impliceert dat ze het niet eens is met de koers.\",\"source\":\"Her decision to resign implies that she disagrees with the course of action.\"},{\"target\":\"Een hogere productie impliceert niet automatisch een hogere winst.\",\"source\":\"Higher production does not automatically imply higher profit.\"}],\"conjugations\":{\"tegenwoordige_tijd\":{\"ik\":\"impliceer\",\"jij/je\":\"impliceert\",\"hij/zij/het\":\"impliceert\",\"wij/we\":\"impliceren\",\"jullie\":\"impliceren\",\"zij/ze\":\"impliceren\"},\"verleden_tijd\":{\"ik\":\"impliceerde\",\"jij/je\":\"impliceerde\",\"hij/zij/het\":\"impliceerde\",\"wij/we\":\"impliceerden\",\"jullie\":\"impliceerden\",\"zij/ze\":\"impliceerden\"},\"toekomende_tijd\":{\"ik\":\"zal impliceren\",\"jij/je\":\"zult impliceren\",\"hij/zij/het\":\"zal impliceren\",\"wij/we\":\"zullen impliceren\",\"jullie\":\"zullen impliceren\",\"zij/ze\":\"zullen impliceren\"},\"voltooide_tijd\":\"heeft geïmpliceerd\",\"voltooid_deelwoord\":\"geïmpliceerd\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-abstract_actions-013\",\"target\":\"motiveren\",\"source\":\"to motivate / to justify\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Weak verb taking 'hebben'. Can mean to inspire action or to provide reasons/justification.\",\"examples\":[{\"target\":\"Een goede leidinggevende weet hoe hij zijn team kan motiveren tijdens moeilijke tijden.\",\"source\":\"A good manager knows how to motivate his team during difficult times.\"},{\"target\":\"De commissie moest haar beslissing uitvoerig motiveren tegenover de gemeenteraad.\",\"source\":\"The committee had to extensively justify its decision to the municipal council.\"}],\"conjugations\":{\"tegenwoordige_tijd\":{\"ik\":\"motiveer\",\"jij/je\":\"motiveert\",\"hij/zij/het\":\"motiveert\",\"wij/we\":\"motiveren\",\"jullie\":\"motiveren\",\"zij/ze\":\"motiveren\"},\"verleden_tijd\":{\"ik\":\"motiveerde\",\"jij/je\":\"motiveerde\",\"hij/zij/het\":\"motiveerde\",\"wij/we\":\"motiveerden\",\"jullie\":\"motiveerden\",\"zij/ze\":\"motiveerden\"},\"toekomende_tijd\":{\"ik\":\"zal motiveren\",\"jij/je\":\"zult motiveren\",\"hij/zij/het\":\"zal motiveren\",\"wij/we\":\"zullen motiveren\",\"jullie\":\"zullen motiveren\",\"zij/ze\":\"zullen motiveren\"},\"voltooide_tijd\":\"heeft gemotiveerd\",\"voltooid_deelwoord\":\"gemotiveerd\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-abstract_actions-014\",\"target\":\"negeren\",\"source\":\"to ignore\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Weak verb taking 'hebben'. '-eren' verb.\",\"examples\":[{\"target\":\"Het management kon de signalen uit de markt niet langer negeren.\",\"source\":\"The management could no longer ignore the signals from the market.\"},{\"target\":\"Het is onverstandig om de feedback van klanten structureel te negeren.\",\"source\":\"It is unwise to structurally ignore customer feedback.\"}],\"conjugations\":{\"tegenwoordige_tijd\":{\"ik\":\"negeer\",\"jij/je\":\"negeert\",\"hij/zij/het\":\"negeert\",\"wij/we\":\"negeren\",\"jullie\":\"negeren\",\"zij/ze\":\"negeren\"},\"verleden_tijd\":{\"ik\":\"negeerde\",\"jij/je\":\"negeerde\",\"hij/zij/het\":\"negeerde\",\"wij/we\":\"negeerden\",\"jullie\":\"negeerden\",\"zij/ze\":\"negeerden\"},\"toekomende_tijd\":{\"ik\":\"zal negeren\",\"jij/je\":\"zult negeren\",\"hij/zij/het\":\"zal negeren\",\"wij/we\":\"zullen negeren\",\"jullie\":\"zullen negeren\",\"zij/ze\":\"zullen negeren\"},\"voltooide_tijd\":\"heeft genegeerd\",\"voltooid_deelwoord\":\"genegeerd\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-abstract_actions-015\",\"target\":\"optimaliseren\",\"source\":\"to optimize\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Weak verb taking 'hebben'. '-eren' verb.\",\"examples\":[{\"target\":\"Het bedrijf probeert de productieprocessen continu te optimaliseren.\",\"source\":\"The company tries to continuously optimize the production processes.\"},{\"target\":\"Door de website aan te passen, hoopten ze de gebruikerservaring te optimaliseren.\",\"source\":\"By adjusting the website, they hoped to optimize the user experience.\"}],\"conjugations\":{\"tegenwoordige_tijd\":{\"ik\":\"optimaliseer\",\"jij/je\":\"optimaliseert\",\"hij/zij/het\":\"optimaliseert\",\"wij/we\":\"optimaliseren\",\"jullie\":\"optimaliseren\",\"zij/ze\":\"optimaliseren\"},\"verleden_tijd\":{\"ik\":\"optimaliseerde\",\"jij/je\":\"optimaliseerde\",\"hij/zij/het\":\"optimaliseerde\",\"wij/we\":\"optimaliseerden\",\"jullie\":\"optimaliseerden\",\"zij/ze\":\"optimaliseerden\"},\"toekomende_tijd\":{\"ik\":\"zal optimaliseren\",\"jij/je\":\"zult optimaliseren\",\"hij/zij/het\":\"zal optimaliseren\",\"wij/we\":\"zullen optimaliseren\",\"jullie\":\"zullen optimaliseren\",\"zij/ze\":\"zullen optimaliseren\"},\"voltooide_tijd\":\"heeft geoptimaliseerd\",\"voltooid_deelwoord\":\"geoptimaliseerd\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-abstract_actions-016\",\"target\":\"prioriteren\",\"source\":\"to prioritize\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Weak verb taking 'hebben'. '-eren' verb.\",\"examples\":[{\"target\":\"Vanwege een beperkt budget moeten we de projecten zorgvuldig prioriteren.\",\"source\":\"Due to a limited budget, we must carefully prioritize the projects.\"},{\"target\":\"Een succesvolle ondernemer weet altijd welke taken hij moet prioriteren.\",\"source\":\"A successful entrepreneur always knows which tasks to prioritize.\"}],\"conjugations\":{\"tegenwoordige_tijd\":{\"ik\":\"prioriteer\",\"jij/je\":\"prioriteert\",\"hij/zij/het\":\"prioriteert\",\"wij/we\":\"prioriteren\",\"jullie\":\"prioriteren\",\"zij/ze\":\"prioriteren\"},\"verleden_tijd\":{\"ik\":\"prioriteerde\",\"jij/je\":\"prioriteerde\",\"hij/zij/het\":\"prioriteerde\",\"wij/we\":\"prioriteerden\",\"jullie\":\"prioriteerden\",\"zij/ze\":\"prioriteerden\"},\"toekomende_tijd\":{\"ik\":\"zal prioriteren\",\"jij/je\":\"zult prioriteren\",\"hij/zij/het\":\"zal prioriteren\",\"wij/we\":\"zullen prioriteren\",\"jullie\":\"zullen prioriteren\",\"zij/ze\":\"zullen prioriteren\"},\"voltooide_tijd\":\"heeft geprioriteerd\",\"voltooid_deelwoord\":\"geprioriteerd\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-abstract_actions-017\",\"target\":\"publiceren\",\"source\":\"to publish\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Weak verb taking 'hebben'. '-eren' verb.\",\"examples\":[{\"target\":\"De onderzoeker zal haar bevindingen volgende week in een gerenommeerd tijdschrift publiceren.\",\"source\":\"The researcher will publish her findings in a renowned journal next week.\"},{\"target\":\"Het ministerie heeft het nieuwe beleidsrapport online gepubliceerd.\",\"source\":\"The ministry has published the new policy report online.\"}],\"conjugations\":{\"tegenwoordige_tijd\":{\"ik\":\"publiceer\",\"jij/je\":\"publiceert\",\"hij/zij/het\":\"publiceert\",\"wij/we\":\"publiceren\",\"jullie\":\"publiceren\",\"zij/ze\":\"publiceren\"},\"verleden_tijd\":{\"ik\":\"publiceerde\",\"jij/je\":\"publiceerde\",\"hij/zij/het\":\"publiceerde\",\"wij/we\":\"publiceerden\",\"jullie\":\"publiceerden\",\"zij/ze\":\"publiceerden\"},\"toekomende_tijd\":{\"ik\":\"zal publiceren\",\"jij/je\":\"zult publiceren\",\"hij/zij/het\":\"zal publiceren\",\"wij/we\":\"zullen publiceren\",\"jullie\":\"zullen publiceren\",\"zij/ze\":\"zullen publiceren\"},\"voltooide_tijd\":\"heeft gepubliceerd\",\"voltooid_deelwoord\":\"gepubliceerd\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-abstract_actions-018\",\"target\":\"reflecteren\",\"source\":\"to reflect\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Weak verb taking 'hebben'. Often used with preposition 'op' (reflecteren op).\",\"examples\":[{\"target\":\"Het is leerzaam om aan het einde van de week te reflecteren op je eigen prestaties.\",\"source\":\"It is educational to reflect on your own performance at the end of the week.\"},{\"target\":\"De stijgende huizenprijzen reflecteren de enorme krapte op de woningmarkt.\",\"source\":\"Rising house prices reflect the enormous shortage in the housing market.\"}],\"conjugations\":{\"tegenwoordige_tijd\":{\"ik\":\"reflecteer\",\"jij/je\":\"reflecteert\",\"hij/zij/het\":\"reflecteert\",\"wij/we\":\"reflecteren\",\"jullie\":\"reflecteren\",\"zij/ze\":\"reflecteren\"},\"verleden_tijd\":{\"ik\":\"reflecteerde\",\"jij/je\":\"reflecteerde\",\"hij/zij/het\":\"reflecteerde\",\"wij/we\":\"reflecteerden\",\"jullie\":\"reflecteerden\",\"zij/ze\":\"reflecteerden\"},\"toekomende_tijd\":{\"ik\":\"zal reflecteren\",\"jij/je\":\"zult reflecteren\",\"hij/zij/het\":\"zal reflecteren\",\"wij/we\":\"zullen reflecteren\",\"jullie\":\"zullen reflecteren\",\"zij/ze\":\"zullen reflecteren\"},\"voltooide_tijd\":\"heeft gereflecteerd\",\"voltooid_deelwoord\":\"gereflecteerd\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-abstract_actions-019\",\"target\":\"structureren\",\"source\":\"to structure\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Weak verb taking 'hebben'. '-eren' verb.\",\"examples\":[{\"target\":\"De spreker wist zijn betoog logisch en helder te structureren.\",\"source\":\"The speaker managed to structure his presentation logically and clearly.\"},{\"target\":\"Het helpt enorm om je dagelijkse taken goed te structureren voor meer productiviteit.\",\"source\":\"It helps immensely to properly structure your daily tasks for greater productivity.\"}],\"conjugations\":{\"tegenwoordige_tijd\":{\"ik\":\"structureer\",\"jij/je\":\"structureert\",\"hij/zij/het\":\"structureert\",\"wij/we\":\"structureren\",\"jullie\":\"structureren\",\"zij/ze\":\"structureren\"},\"verleden_tijd\":{\"ik\":\"structureerde\",\"jij/je\":\"structureerde\",\"hij/zij/het\":\"structureerde\",\"wij/we\":\"structureerden\",\"jullie\":\"structureerden\",\"zij/ze\":\"structureerden\"},\"toekomende_tijd\":{\"ik\":\"zal structureren\",\"jij/je\":\"zult structureren\",\"hij/zij/het\":\"zal structureren\",\"wij/we\":\"zullen structureren\",\"jullie\":\"zullen structureren\",\"zij/ze\":\"zullen structureren\"},\"voltooide_tijd\":\"heeft gestructureerd\",\"voltooid_deelwoord\":\"gestructureerd\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-abstract_actions-020\",\"target\":\"verifiëren\",\"source\":\"to verify\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Weak verb taking 'hebben'. '-eren' verb.\",\"examples\":[{\"target\":\"Voordat u de informatie deelt, is het verstandig om de bron te verifiëren.\",\"source\":\"Before you share the information, it is wise to verify the source.\"},{\"target\":\"De bank wilde de identiteit van de klant zorgvuldig verifiëren.\",\"source\":\"The bank wanted to carefully verify the customer's identity.\"}],\"conjugations\":{\"tegenwoordige_tijd\":{\"ik\":\"verifieer\",\"jij/je\":\"verifieert\",\"hij/zij/het\":\"verifieert\",\"wij/we\":\"verifiëren\",\"jullie\":\"verifiëren\",\"zij/ze\":\"verifiëren\"},\"verleden_tijd\":{\"ik\":\"verifieerde\",\"jij/je\":\"verifieerde\",\"hij/zij/het\":\"verifieerde\",\"wij/we\":\"verifieerden\",\"jullie\":\"verifieerden\",\"zij/ze\":\"verifieerden\"},\"toekomende_tijd\":{\"ik\":\"zal verifiëren\",\"jij/je\":\"zult verifiëren\",\"hij/zij/het\":\"zal verifiëren\",\"wij/we\":\"zullen verifiëren\",\"jullie\":\"zullen verifiëren\",\"zij/ze\":\"zullen verifiëren\"},\"voltooide_tijd\":\"heeft geverifieerd\",\"voltooid_deelwoord\":\"geverifieerd\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}}]";
+const langConfigJson = "{\"language_pair\":\"english_dutch\",\"target_lang\":\"nl\",\"native_lang\":\"en\",\"target_lang_name\":\"Nederlands\",\"native_lang_name\":\"English\",\"speech_lang\":\"nl-NL\",\"noun_metadata_fields\":[{\"key\":\"article\",\"label\":\"Lidwoord\",\"render\":\"article_badge\"},{\"key\":\"gender\",\"label\":\"Geslacht\",\"render\":\"gender_label\"},{\"key\":\"plural\",\"label\":\"Meervoud\",\"render\":\"text\"}],\"article_colours\":{\"de\":\"#4A7C9E\",\"het\":\"#4A8A5A\"},\"gender_labels\":{\"c\":\"de-woord\",\"n\":\"het-woord\"},\"verb_tenses\":[\"tegenwoordige_tijd\",\"verleden_tijd\",\"voltooide_tijd\",\"voltooid_deelwoord\",\"toekomende_tijd\"],\"cases\":{},\"ui_labels\":{\"learn_mode\":\"Leren\",\"train_mode\":\"Oefenen\",\"examples_heading\":\"Voorbeeldzinnen\",\"grammar_note_heading\":\"Grammaticanotitie\",\"audio_button\":\"Luisteren\",\"back_link\":\"Terug\",\"card_counter\":\"Kaart {current} / {total}\",\"next_button\":\"Volgende\",\"finish_button\":\"Klaar\",\"correct\":\"Juist!\",\"wrong\":\"Fout\",\"dashboard_link\":\"Dashboard\",\"library_prompt\":\"Kies een deck uit de bibliotheek en ontdek alle informatie op de kaarten.\",\"cards_badge\":\"{count} KAARTEN\",\"cards_count\":\"{count} kaarten\",\"deck_meta\":\"{topic} • {level} • {count} kaarten\",\"no_decks\":\"Nog geen decks in deze categorie.\",\"setup_title\":\"Training instellen\",\"setup_subtitle\":\"Configureer je leersessie.\",\"question_type\":\"Vraagtype\",\"mode_multiple_choice\":\"Meerkeuze\",\"mode_typing\":\"Tekstinvoer\",\"mode_typing_short\":\"Invoer\",\"direction\":\"Richting\",\"direction_forward\":\"🇺🇸 English → 🇳🇱 Nederlands\",\"direction_reverse\":\"🇳🇱 Nederlands → 🇺🇸 English\",\"select_level\":\"Niveau kiezen\",\"start_training\":\"Training starten\",\"count_label\":\"Aantal kaarten\",\"all_cards\":\"Alles\",\"in_deck\":\"in stapel\",\"view_cards\":\"Kaarten\",\"view_list\":\"Lijst\",\"card_word\":\"Kaart\",\"keyboard_hint_study\":\"← → Pijltjestoetsen om te navigeren · A om te luisteren\",\"example_single_heading\":\"Voorbeeld\",\"no_example\":\"Geen voorbeeld beschikbaar.\",\"tags_label\":\"Tags:\",\"type_vocab\":\"Woordenschat\",\"type_verb\":\"Werkwoord\",\"type_phrase\":\"Zegswijze\",\"type_connector\":\"Voegwoord\",\"type_grammar\":\"Grammatica\",\"type_noun\":\"Zelfstandig naamwoord\",\"type_adjective\":\"Bijvoeglijk naamwoord\",\"type_expression\":\"Uitdrukking\",\"plural_prefix\":\"Pl. {plural}\",\"plural_only\":\"alleen meervoud\",\"word_order_heading\":\"Woordvolgorde\",\"structure_heading\":\"Structuur\",\"training_title\":\"Training\",\"all_levels\":\"Alle niveaus\",\"type_placeholder\":\"Schrijf het woord in het Nederlands...\",\"check_button\":\"Controleren\",\"keyboard_hint_train\":\"Enter / Spatie = bevestigen · A = Luisteren\",\"audio_title\":\"Luisteren (A)\",\"training_finished\":\"Training voltooid!\",\"missed_heading\":\"Fout beantwoord — om te herhalen\",\"retry_missed\":\"Fouten opnieuw doen\",\"new_config\":\"Nieuwe configuratie\",\"plural_hint\":\"Pl: {plural}\",\"results_pct\":\"{pct}% juist\",\"result_excellent\":\"Uitstekend! Je beheerst dit niveau volledig.\",\"result_good\":\"Zeer goed! Nog een beetje oefenen en je hebt het onder de knie!\",\"result_ok\":\"Goed begin! Herhaal de kaarten nog een keer.\",\"result_retry\":\"Geen probleem — oefening baart kunst!\",\"no_cards_title\":\"Geen kaarten gevonden\",\"no_cards_hint\":\"Kies een ander niveau of een ander deck.\"},\"answer_normalisation\":{\"strip_leading_words\":[\"de\",\"het\",\"een\",\"der\",\"des\",\"den\"],\"alt_spellings\":{\"ij\":\"y\",\"ë\":\"e\",\"ï\":\"i\"}}}";
+const category = "verbs";
+const lang = "en-nl";
+const base = "/languagelounge/";
+const defaultView = "cards";
+
+  const cards     = JSON.parse(cardsJson);
+  const config    = JSON.parse(langConfigJson);
+  let currentIndex = 0;
+
+  const dotNav    = document.getElementById('dot-nav');
+  const currentNum = document.getElementById('current-num');
+  const progressBar = document.getElementById('progress-bar');
+  const btnPrev   = document.getElementById('btn-prev');
+  const btnNext   = document.getElementById('btn-next');
+  const cardHost  = document.getElementById('card-host');
+  const progressCont = document.getElementById('progress-container');
+
+  const cardViewWrap = document.getElementById('card-view-wrap');
+  const listViewWrap = document.getElementById('list-view-wrap');
+  const btnViewCards = document.getElementById('view-cards-btn');
+  const btnViewList  = document.getElementById('view-list-btn');
+
+  // Toggle Logic
+  function setViewMode(mode) {
+    if (mode === 'list') {
+      cardViewWrap.classList.add('hidden');
+      listViewWrap.classList.remove('hidden');
+      progressCont.classList.add('hidden');
+      btnViewList.classList.add('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewList.classList.remove('text-[var(--text-muted)]');
+      btnViewCards.classList.remove('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewCards.classList.add('text-[var(--text-muted)]');
+    } else {
+      listViewWrap.classList.add('hidden');
+      cardViewWrap.classList.remove('hidden');
+      progressCont.classList.remove('hidden');
+      btnViewCards.classList.add('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewCards.classList.remove('text-[var(--text-muted)]');
+      btnViewList.classList.remove('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewList.classList.add('text-[var(--text-muted)]');
+    }
+  }
+
+  btnViewCards.addEventListener('click', () => setViewMode('cards'));
+  btnViewList.addEventListener('click', () => setViewMode('list'));
+
+  // Initial view is configured per category (config/language_pairs/*.yaml → categories[].default_view)
+  if (defaultView === 'list') {
+    setViewMode('list');
+  }
+
+
+
+  // ── Helpers (mirror card-renderer.ts — no module imports in inline scripts) ──
+  const articleColours = config.article_colours || {};
+  const genderLabels   = config.gender_labels   || {};
+  const speechLang     = config.speech_lang;
+  const ui             = config.ui_labels || {};
+  const fmt = (tpl, vars) => String(tpl).replace(/\{(\w+)\}/g, (m, k) => (k in vars ? vars[k] : m));
+  const formatHighlight = (text) => text ? String(text).replace(/\*(.*?)\*/g, '<span class="highlighter">$1</span>') : '';
+  // Articles come from the language config (keys of article_colours), never hardcoded
+  const articleList = Object.keys(articleColours);
+  const articlePatterns = articleList.map(a => {
+    const esc = a.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    return esc.endsWith("'") ? esc : `${esc}\\s+`;
+  });
+  const articleRe = articlePatterns.length
+    ? new RegExp('^(?:' + articlePatterns.join('|') + ')', 'i')
+    : null;
+
+  function stripArticle(w) {
+    return articleRe ? (w || '').replace(articleRe, '').trim() : (w || '').trim();
+  }
+
+  function getTypeLabel(card) {
+    const tags = card.tags || [];
+    if (tags.includes('noun'))       return ui.type_noun;
+    if (tags.includes('verb'))       return ui.type_verb;
+    if (tags.includes('adjective'))  return ui.type_adjective;
+    if (tags.includes('expression')) return ui.type_expression;
+    const byType = { vocab: ui.type_vocab, verb: ui.type_verb, phrase: ui.type_phrase, connector: ui.type_connector, grammar: ui.type_grammar };
+    return byType[card.type] || ui.type_vocab;
+  }
+
+  function normaliseEx(ex) {
+    return { target: ex.target||'', source: ex.source||'', note: ex.note };
+  }
+
+  function getMetaFacts(card) {
+    const meta = card.metadata || {};
+    const facts = [];
+    for (const field of (config.noun_metadata_fields || [])) {
+      const raw = meta[field.key];
+      if (!raw || raw==='~') continue;
+      let value = String(raw), colour;
+      if (field.render === 'gender_label')  value  = genderLabels[raw] || raw;
+      if (field.render === 'article_badge') colour = articleColours[raw.toLowerCase()] || 'var(--espresso)';
+      facts.push({ label: field.label, value, colour });
+    }
+    return facts;
+  }
+
+  // ── Card renderer ─────────────────────────────────────────────────────────
+  function renderCard(idx) {
+    const card = cards[idx];
+    if (!card || !cardHost) return;
+
+    const lc = cardHost.querySelector('.learning-card');
+    if (!lc) return;
+
+    function sel(cls) { return lc.querySelector(cls); }
+
+    // Type badge + level
+    sel('.lc-type-badge').textContent = getTypeLabel(card);
+    sel('.lc-level-badge').textContent = (card.level || '').toUpperCase();
+
+    // Article
+    const article = card.metadata?.article;
+    const articleWrap = sel('.lc-article-wrap');
+    const articleEl   = sel('.lc-article');
+    if (article && (card.tags||[]).includes('noun') && !card.metadata?.plural_only) {
+      articleEl.textContent = article;
+      articleEl.style.color = articleColours[article.toLowerCase()] || 'var(--espresso)';
+      articleWrap.style.display = '';
+    } else {
+      articleWrap.style.display = 'none';
+    }
+
+    // Word / translation / forms
+    sel('.lc-word').textContent        = stripArticle(card.target);
+    sel('.lc-translation').textContent = card.source || '';
+    const plural = card.metadata?.plural;
+    sel('.lc-forms').textContent = plural && !card.metadata?.plural_only ? fmt(ui.plural_prefix, { plural }) : card.metadata?.plural_only ? ui.plural_only : '';
+
+    // Meta grid
+    const metaGrid = sel('.lc-meta-grid');
+    const facts = getMetaFacts(card);
+    if (facts.length) {
+      metaGrid.style.gridTemplateColumns = `repeat(${Math.min(facts.length,4)}, 1fr)`;
+      metaGrid.style.display = '';
+      metaGrid.innerHTML = facts.map((f, i) => `
+        <div class="px-5 py-4 ${i<facts.length-1?'border-r':''}" style="border-color:var(--border);">
+          <p class="text-[9px] font-bold uppercase tracking-widest mb-1" style="color:var(--text-muted);">${f.label}</p>
+          <p class="text-sm font-bold" style="color:${f.colour||'var(--text)'};">${f.value}</p>
+        </div>`).join('');
+    } else {
+      metaGrid.style.display = 'none';
+    }
+
+    // Grammar note
+    const grammarWrap = sel('.lc-grammar-wrap');
+    if (card.grammar_note) {
+      sel('.lc-grammar-text').innerHTML = formatHighlight(card.grammar_note);
+      grammarWrap.classList.remove('hidden');
+    } else {
+      grammarWrap.classList.add('hidden');
+    }
+
+    // Examples
+    const examplesEl = sel('.lc-examples');
+    const rawEx = card.examples || [];
+    examplesEl.innerHTML = rawEx.length
+      ? rawEx.map(ex => { const e=normaliseEx(ex); return `
+          <div class="rounded-2xl border overflow-hidden" style="border-color:var(--border);">
+            <div class="px-4 py-3" style="background-color:var(--bg);">
+              <p class="font-semibold leading-snug mb-1" style="color:var(--text);">${e.target}</p>
+              <p class="text-sm italic" style="color:var(--text-muted);">${e.source||''}</p>
+            </div>
+            ${e.note?`<div class="px-4 py-2 border-t" style="border-color:var(--border);">
+              <p class="text-[10px] font-bold font-mono" style="color:var(--espresso);">📐 ${e.note}</p>
+            </div>`:''}
+          </div>`; }).join('')
+      : '<p class="text-sm italic" style="color:var(--text-muted);">' + ui.no_example + '</p>';
+
+    // Verb: conjugation table
+    const conjWrap  = sel('.lc-conjugation-wrap');
+    const conjInner = sel('.lc-conjugation-inner');
+    const cardType = card.type || (card.tags?.includes('verb') ? 'verb' : 'vocab');
+    if (conjWrap && conjInner) {
+      if (cardType === 'verb' && card.conjugations) {
+        conjWrap.classList.remove('hidden');
+        let conjArray = [];
+        if (Array.isArray(card.conjugations)) {
+          conjArray = card.conjugations;
+        } else {
+          for (const [tense, forms] of Object.entries(card.conjugations)) {
+            if (typeof forms === 'string') {
+              conjArray.push({ tense, stringForm: forms });
+            } else {
+              const formsArr = Object.entries(forms).map(([pronoun, form]) => ({ pronoun, form }));
+              conjArray.push({ tense, forms: formsArr });
+            }
+          }
+        }
+
+        const tensesToRender = config.verb_tenses || conjArray.map(t => t.tense);
+        const stringTenses = [];
+        const tableTenses = [];
+
+        tensesToRender.forEach(tense => {
+          const t = conjArray.find(c => c.tense === tense);
+          if (!t) return;
+          if (t.stringForm) stringTenses.push(t);
+          else tableTenses.push(t);
+        });
+
+        let html = '';
+        if (stringTenses.length > 0) {
+          html += `
+            <div class="flex flex-wrap gap-3 mb-6">
+              ${stringTenses.map(t => `
+                <div class="rounded-xl border px-4 py-2.5 flex items-center gap-3 shadow-sm" style="border-color:var(--border); background-color:var(--bg);">
+                  <span class="text-[10px] font-bold uppercase tracking-widest opacity-80" style="color:var(--espresso);">${t.tense.replace(/_/g, ' ')}</span>
+                  <span class="font-bold text-sm" style="color:var(--text);">${t.stringForm}</span>
+                </div>
+              `).join('')}
+            </div>
+          `;
+        }
+
+        if (tableTenses.length > 0) {
+          const pronouns = tableTenses[0].forms.map(f => f.pronoun);
+          html += `
+            <div class="rounded-xl border overflow-x-auto shadow-sm w-full" style="border-color:var(--border);">
+              <table class="w-full text-sm text-left">
+                <thead>
+                  <tr style="background-color:var(--bg); border-bottom: 1px solid var(--border);">
+                    <th class="px-4 py-3 font-bold uppercase tracking-widest text-[10px] w-[1%]" style="color:var(--espresso); border-right: 1px solid var(--border);"></th>
+                    ${tableTenses.map(t => `
+                      <th class="px-4 py-3 font-bold uppercase tracking-widest text-[10px]" style="color:var(--espresso);">${t.tense.replace(/_/g, ' ')}</th>
+                    `).join('')}
+                  </tr>
+                </thead>
+                <tbody>
+                  ${pronouns.map((pronoun, ri) => `
+                    <tr class="${ri < pronouns.length - 1 ? 'border-b' : ''}" style="border-color:var(--border);">
+                      <td class="px-4 py-3 font-bold text-xs whitespace-nowrap" style="color:var(--espresso); background-color:var(--bg); border-right: 1px solid var(--border);">${pronoun}</td>
+                      ${tableTenses.map(t => {
+                        const formObj = t.forms.find(f => f.pronoun === pronoun);
+                        return `<td class="px-4 py-3 font-semibold whitespace-nowrap" style="color:var(--text);">${formObj ? formObj.form : '-'}</td>`;
+                      }).join('')}
+                    </tr>
+                  `).join('')}
+                </tbody>
+              </table>
+            </div>
+          `;
+        }
+        conjInner.innerHTML = html;
+      } else {
+        conjWrap.classList.add('hidden');
+        conjInner.innerHTML = '';
+      }
+    }
+
+    // Connector: word order block
+    const woWrap = sel('.lc-wordorder-wrap');
+    if (woWrap) {
+      if (cardType === 'connector' && card.word_order) {
+        sel('.lc-wordorder-text').textContent = card.word_order;
+        woWrap.classList.remove('hidden');
+      } else {
+        woWrap.classList.add('hidden');
+      }
+    }
+
+    // Phrase: preposition rule block
+    const phraseWrap = sel('.lc-phrase-wrap');
+    if (phraseWrap) {
+      if (cardType === 'phrase' && card.clause_type) {
+        sel('.lc-phrase-rule').textContent = card.clause_type;
+        phraseWrap.classList.remove('hidden');
+      } else {
+        phraseWrap.classList.add('hidden');
+      }
+    }
+
+    // Tags
+    sel('.lc-tags').innerHTML = (card.tags||[]).map(t =>
+      `<span class="text-[10px] font-bold px-2 py-0.5 rounded-md border" style="border-color:var(--border);color:var(--text-muted);background-color:var(--bg);">${t}</span>`
+    ).join('');
+
+    // Progress UI
+    if (currentNum)  currentNum.textContent = String(idx+1);
+    if (progressBar) progressBar.style.width = `${Math.round(((idx+1)/cards.length)*100)}%`;
+    if (btnPrev)     btnPrev.disabled = idx === 0;
+    if (btnNext)     btnNext.innerHTML = idx === cards.length-1
+      ? '✓ ' + ui.finish_button
+      : ui.next_button + ' <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>';
+
+    updateDots();
+
+    // Re-bind audio button cleanly by cloning to strip old listeners
+    const oldBtn = sel('.lc-audio-btn');
+    if (oldBtn) {
+      const newBtn = oldBtn.cloneNode(true);
+      oldBtn.parentNode.replaceChild(newBtn, oldBtn);
+      newBtn.addEventListener('click', speakCurrent);
+    }
+  }
+
+  // ── Dot navigation ────────────────────────────────────────────────────────
+  function buildDots() {
+    if (!dotNav) return;
+    dotNav.innerHTML = '';
+    const maxVisible = 20;
+    const showAll = cards.length <= maxVisible;
+    cards.forEach((_, i) => {
+      if (!showAll && i >= maxVisible) return;
+      const dot = document.createElement('button');
+      dot.className = 'dot w-2 h-2 rounded-full transition-all duration-300 flex-shrink-0';
+      dot.style.backgroundColor = 'var(--border)';
+      dot.title = `${ui.card_word} ${i+1}`;
+      dot.addEventListener('click', () => goTo(i));
+      dotNav.appendChild(dot);
+    });
+    if (!showAll) {
+      const el = document.createElement('span');
+      el.textContent = `+${cards.length - maxVisible}`;
+      el.className = 'text-[10px] font-bold';
+      el.style.color = 'var(--text-muted)';
+      dotNav.appendChild(el);
+    }
+  }
+
+  function updateDots() {
+    dotNav?.querySelectorAll('.dot').forEach((dot, i) => {
+      dot.style.backgroundColor = i===currentIndex ? 'var(--espresso)' : 'var(--border)';
+      dot.style.width     = i===currentIndex ? '20px' : '8px';
+      dot.style.borderRadius = '4px';
+    });
+  }
+
+  // ── Audio ─────────────────────────────────────────────────────────────────
+  function speakCurrent() {
+    const card = cards[currentIndex];
+    if (!card) return;
+    if (window.LoungeAudioEngine) {
+      window.LoungeAudioEngine.speak(card.target || '', speechLang, 0.85);
+    }
+  }
+
+  // ── Navigate ─────────────────────────────────────────────────────────────
+  function goTo(idx) {
+    if (idx < 0 || idx >= cards.length) return;
+    currentIndex = idx;
+    renderCard(currentIndex);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  btnPrev?.addEventListener('click', () => goTo(currentIndex - 1));
+  btnNext?.addEventListener('click', () => {
+    if (currentIndex === cards.length - 1) window.location.href = `${base}${lang}/${category}/`;
+    else goTo(currentIndex + 1);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') goTo(currentIndex + 1);
+    if (e.key === 'ArrowLeft')  goTo(currentIndex - 1);
+    if (e.key === 'a' || e.key === 'A') speakCurrent();
+  });
+
+  // ── Learn / Train panel toggle ──────────────────────
+  const btnLearn = document.getElementById('btn-mode-learn');
+  const btnTrain = document.getElementById('btn-mode-train');
+  const pnlLearn = document.getElementById('learn-panel');
+  const pnlTrain = document.getElementById('train-panel');
+  const toolbar  = document.getElementById('learn-toolbar');
+
+  const STORAGE_KEY = `lounge:${lang}:${category}:deck:mode`;
+  let currentMode = localStorage.getItem(STORAGE_KEY) || 'learn';
+
+  function applyMode() {
+    if (currentMode === 'learn') {
+      btnLearn.style.backgroundColor = 'var(--espresso)';
+      btnLearn.style.color = '#F5F2EB';
+      btnTrain.style.backgroundColor = 'transparent';
+      btnTrain.style.color = 'var(--text-muted)';
+      pnlLearn.classList.remove('hidden');
+      toolbar.classList.remove('hidden');
+      pnlTrain.classList.add('hidden');
+    } else {
+      btnTrain.style.backgroundColor = 'var(--espresso)';
+      btnTrain.style.color = '#F5F2EB';
+      btnLearn.style.backgroundColor = 'transparent';
+      btnLearn.style.color = 'var(--text-muted)';
+      pnlTrain.classList.remove('hidden');
+      pnlLearn.classList.add('hidden');
+      toolbar.classList.add('hidden');
+    }
+    localStorage.setItem(STORAGE_KEY, currentMode);
+  }
+
+  btnLearn?.addEventListener('click', () => { currentMode = 'learn'; applyMode(); });
+  btnTrain?.addEventListener('click', () => { currentMode = 'train'; applyMode(); });
+  applyMode();
+
+  // ── Radio-style selectors (mode & dir & count) ─────────────
+  document.querySelectorAll('.sel-opt').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const group = btn.dataset.group;
+      document.querySelectorAll(`.sel-opt[data-group="${group}"]`).forEach(b => b.classList.remove('sel-active'));
+      btn.classList.add('sel-active');
+      const hidden = document.getElementById(`${group}-hidden`);
+      if (hidden) hidden.value = btn.dataset.value;
+    });
+  });
+
+  document.getElementById('deck-train-form')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const base = form.action;
+    const mode = document.getElementById('mode-hidden')?.value || 'mc';
+    const dir  = document.getElementById('dir-hidden')?.value || `${config.language_pair.source_code}-${config.language_pair.target_code}`.toLowerCase();
+    const count = document.getElementById('count-hidden')?.value || '30';
+    const level = form.querySelector('[name="level"]')?.value || '';
+    const deck = form.querySelector('[name="deck"]')?.value || '';
+    
+    const params = new URLSearchParams();
+    if(level) params.set('level', level);
+    params.set('deck', deck);
+    params.set('mode', mode);
+    params.set('dir', dir);
+    params.set('count', count);
+    
+    window.location.href = `${base}?${params.toString()}`;
+  });
+
+  // ── Init ─────────────────────────────────────────────────────────────────
+  buildDots();
+  // Card 0 is already rendered server-side via LearningCard component.
+  // Sync progress UI to reflect card 0 state.
+  updateDots();
+  if (progressBar) progressBar.style.width = `${Math.round(1/cards.length*100)}%`;
+  // Update card 0 using client-side config too (ensures langConfig is applied)
+  renderCard(0);
+})();</script>

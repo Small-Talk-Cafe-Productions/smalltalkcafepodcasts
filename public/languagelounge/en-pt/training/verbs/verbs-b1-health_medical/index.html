@@ -1,0 +1,758 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="description" content="Lounge Português — O seu espaço dedicado à língua portuguesa — expanda o seu vocabulário, domine a gramática e aprofunde o seu português do nível A1 ao B2."><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/languagelounge/favicon.svg"><meta name="generator" content="Astro v7.3.5"><title>Health &amp; Medical — Lounge Português</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet"><script>
+      (function() {
+        const saved = localStorage.getItem('wortschatz_theme');
+        if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script><link rel="stylesheet" href="/languagelounge/_astro/Layout.Cr1varBg.css"><style>.sel-opt[data-astro-cid-5tabbh6g]{border:2px solid var(--border);background-color:var(--card);color:var(--text);cursor:pointer;text-align:center;border-radius:12px;flex-direction:column;justify-content:center;align-items:center;width:100%;padding:14px 12px;transition:border-color .15s,background-color .15s,color .15s,box-shadow .15s;display:flex}.sel-opt[data-astro-cid-5tabbh6g]:hover{border-color:var(--border-hover);box-shadow:0 2px 8px #00000014}.sel-opt[data-astro-cid-5tabbh6g].sel-active{border-color:var(--espresso);background-color:var(--espresso);color:#f5f2eb;box-shadow:0 2px 12px #0000002e}
+</style></head><body class="antialiased min-h-screen flex flex-col" style="background-color:var(--bg);color:var(--text);"><!-- Header --><header class="sticky top-0 z-50 border-b" style="background-color:var(--bg);border-color:var(--border);"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between gap-4" style="height:4.5rem;"><!-- Logo + Language Switcher --><div class="flex items-center gap-4 shrink-0"><a href="/languagelounge/en-pt/" class="flex items-center gap-2 group"><span class="font-outfit font-extrabold text-xl sm:text-2xl tracking-tight transition-colors" style="color:var(--text);">Small Talk Café<span class="font-normal text-base hidden sm:inline" style="color:var(--text-muted);"> | <span id="site-name">Lounge Português</span></span></span></a><!-- Language Selector Dropdown --><div class="relative" id="lang-dropdown-wrapper"><button id="lang-btn" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-sm font-bold transition-all hover:opacity-70" style="background-color:var(--bg); border-color:var(--border); color:var(--text);"><span id="lang-flag">🇵🇹</span><span id="lang-code">PT</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"></path></svg></button><div id="lang-menu" class="hidden absolute top-full left-0 mt-2 rounded-2xl border shadow-2xl overflow-hidden z-50 min-w-[260px] sm:min-w-[300px]" style="background-color:var(--card); border-color:var(--border);"><div class="px-3.5 py-2 text-[11px] font-bold uppercase tracking-wider border-b" style="background-color:var(--surface); border-color:var(--border); color:var(--text-muted);">Language Lounges</div><div><a href="/languagelounge/en-de/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇩🇪</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Deutsch Lounge</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">Der Raum für die deutsche Sprache</div></div></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-es/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇪🇸</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Lounge Español</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">El espacio para la lengua española</div></div></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-fr/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇫🇷</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Lounge Français</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">Le salon de la langue française</div></div></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-it/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇮🇹</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Lounge Italiano</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">Il salotto per la lingua italiana</div></div></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-nl/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇳🇱</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Nederlands Lounge</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">Dé ontmoetingsplek voor de Nederlandse taal</div></div></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-pt/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-bold" style="color:var(--text); background-color:var(--surface);"><span class="text-2xl shrink-0">🇵🇹</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Lounge Português</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">O espaço para a língua portuguesa</div></div><span class="shrink-0 text-[10px] font-extrabold uppercase px-1.5 py-0.5 rounded" style="background-color:var(--accent); color:var(--bg);">Active</span></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-sv/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇸🇪</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Svenska Lounge</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">Mötesplatsen för det svenska språket</div></div></a></div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/" class="w-full flex items-center gap-2.5 px-4 py-2.5 text-xs font-semibold hover:opacity-80 transition-colors " style="color:var(--text); "><span class="text-base">🏛️</span><span>Language Lounge Hub</span><span class="ml-auto text-[11px]" style="color:var(--text-muted);">Overview &rarr;</span></a></div></div></div><!-- Dynamic Nav Links --><nav class="hidden md:flex gap-5 items-center"><a href="https://smalltalkcafe.de/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Small Talk Café Podcasts</a><span class="text-sm font-normal" style="color:var(--border);">|</span><a href="/languagelounge/en-pt/vocabulary/" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Vocabulário</a><a href="/languagelounge/en-pt/verbs/" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Verbos</a><a href="/languagelounge/en-pt/grammatik/" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Gramática</a><a href="/languagelounge/en-pt/redemittel/" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Expressões</a><!-- Dark/Light Toggle --><button id="theme-toggle" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-sm font-semibold transition-all hover:opacity-70" style="border-color:var(--border); color:var(--text-muted);" aria-label="Toggle dark/light mode"><span id="theme-icon">☀️</span><span id="theme-label">Light</span></button></nav></div></header><main id="main-content" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-1 w-full"><div class="max-w-4xl mx-auto py-6" data-astro-cid-5tabbh6g><!-- Deck Header --><div class="flex items-start justify-between mb-8 gap-4 flex-wrap" data-astro-cid-5tabbh6g><div data-astro-cid-5tabbh6g><a href="/languagelounge/en-pt/verbs/" class="text-xs font-bold flex items-center gap-1 mb-2 hover:opacity-70 transition-opacity" style="color:var(--espresso);" data-astro-cid-5tabbh6g><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><path d="m15 18-6-6 6-6" data-astro-cid-5tabbh6g></path></svg>Verbos</a><h1 class="text-2xl md:text-3xl font-extrabold font-outfit" style="color:var(--text);" data-astro-cid-5tabbh6g>Health &amp; Medical</h1><p class="text-xs font-bold uppercase tracking-wider mt-1" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Saúde e Medicina • B1 • 20 cartões</p></div><div class="flex flex-col items-end gap-4 w-full md:w-auto mt-4 md:mt-0" data-astro-cid-5tabbh6g><!-- ── Mode Toggle ───────────────────────────── --><div class="flex rounded-xl border overflow-hidden p-1 gap-1 w-full max-w-[300px]" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><button id="btn-mode-learn" class="mode-btn flex-1 flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold transition-all" data-astro-cid-5tabbh6g><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" data-astro-cid-5tabbh6g></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" data-astro-cid-5tabbh6g></path></svg>Aprender</button><button id="btn-mode-train" class="mode-btn flex-1 flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold transition-all" data-astro-cid-5tabbh6g><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><circle cx="12" cy="12" r="10" data-astro-cid-5tabbh6g></circle><polyline points="12 6 12 12 16 14" data-astro-cid-5tabbh6g></polyline></svg>Treinar</button></div><div id="learn-toolbar" class="flex flex-col items-end gap-4 w-full" data-astro-cid-5tabbh6g><!-- View switcher (Cards vs List) --><div class="flex rounded-xl border overflow-hidden p-1 gap-1 w-full max-w-[300px]" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><button id="view-cards-btn" class="view-btn flex-1 flex items-center justify-center px-4 py-2 rounded-lg text-xs font-bold transition-all bg-[var(--espresso)] text-[#F5F2EB]" data-astro-cid-5tabbh6g>Cartões</button><button id="view-list-btn" class="view-btn flex-1 flex items-center justify-center px-4 py-2 rounded-lg text-xs font-bold transition-all text-[var(--text-muted)] hover:opacity-70" data-astro-cid-5tabbh6g>Lista</button></div><!-- Progress indicator --><div id="progress-container" class="flex items-center gap-3" data-astro-cid-5tabbh6g><div class="text-xs font-semibold" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Cartão <span id="current-num" class="font-extrabold" style="color:var(--text);" data-astro-cid-5tabbh6g>1</span> / 20</div><div class="w-24 h-1.5 rounded-full overflow-hidden border" style="background-color:var(--bg);border-color:var(--border);" data-astro-cid-5tabbh6g><div id="progress-bar" class="h-full transition-all duration-500 rounded-full" style="width:0%; background-color:var(--espresso);" data-astro-cid-5tabbh6g></div></div></div></div></div></div><!-- ══ LEARN PANEL ════════════════════════════ --><div id="learn-panel" class="space-y-6" data-astro-cid-5tabbh6g><!-- ── Universal Study Card (rendered by LearningCard component) ── --><div id="card-view-wrap" data-astro-cid-5tabbh6g><div id="card-host" data-astro-cid-5tabbh6g><!-- The card shell — populated client-side by renderCard() --><div class="learning-card rounded-3xl border shadow-xl overflow-hidden" style="background-color:var(--card); border-color:var(--border);"><!-- ── Top bar ─────────────────────────────────── --><div class="lc-topbar flex items-center justify-between px-6 py-3.5 border-b" style="border-color:var(--border); background-color:var(--bg);"><div class="flex items-center gap-2"><span class="lc-type-badge text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-lg" style="background-color:var(--espresso); color:#F5F2EB;">—</span><span class="lc-level-badge text-[10px] font-bold px-2.5 py-1 rounded-lg cafe-badge"></span></div><button class="lc-audio-btn flex items-center justify-center w-11 h-11 rounded-full transition-transform hover:scale-105 active:scale-95 shadow-md flex-shrink-0" title="Ouvir (A)" style="background-color:var(--espresso); color:#F5F2EB;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg></button></div><!-- ── Main word display ───────────────────────── --><div class="lc-hero px-7 py-8 text-center border-b" style="border-color:var(--border);"><div class="lc-article-wrap mb-1.5"><span class="lc-article text-xl font-bold"></span></div><h2 class="lc-word text-5xl md:text-6xl font-extrabold font-outfit mb-3" style="color:var(--text);">—</h2><p class="lc-translation text-lg font-semibold italic" style="color:var(--text-muted);"></p><p class="lc-forms text-sm font-medium mt-2" style="color:var(--text-muted);"></p></div><!-- ── Meta info grid ─────────────────────────── --><div class="lc-meta-grid grid border-b" style="border-color:var(--border);"><!-- populated by JS --></div><!-- ── Grammar note ───────────────────────────── --><div class="lc-grammar-wrap hidden px-7 py-5 border-b" style="border-color:var(--border); background-color:var(--bg);"><p class="text-[10px] font-bold uppercase tracking-widest mb-2" style="color:var(--espresso);">📌 <span class="lc-grammar-label">Nota gramatical</span></p><p class="lc-grammar-text text-sm leading-relaxed font-medium whitespace-pre-wrap" style="color:var(--text);"></p></div><!-- ── Type-specific block ────────────────────── --><!-- Connector word-order block --><div class="lc-wordorder-wrap hidden px-7 py-4 border-b" style="border-color:var(--border); background-color:var(--bg);"><div class="flex items-start gap-3 text-sm font-medium" style="color:var(--text-muted);"><span class="text-base flex-shrink-0">📐</span><span class="lc-wordorder-text"></span></div></div><!-- Phrase preposition block --><div class="lc-phrase-wrap hidden px-7 py-4 border-b" style="border-color:var(--border); background-color:var(--bg);"><p class="text-[10px] font-bold uppercase tracking-widest mb-2" style="color:var(--espresso);">Estrutura</p><p class="lc-phrase-rule text-sm font-semibold" style="color:var(--text);"></p></div><!-- ── Examples ───────────────────────────────── --><div class="px-7 py-6 border-b" style="border-color:var(--border);"><p class="lc-examples-label text-[10px] font-bold uppercase tracking-widest mb-5" style="color:var(--text-muted);">Frases de exemplo</p><div class="lc-examples space-y-3"><!-- populated by JS --></div></div><!-- Verb conjugation (hidden by default, shown for verb cards) --><div class="lc-conjugation-wrap hidden border-b px-7 py-6" style="border-color:var(--border);"><div class="lc-conjugation-inner flex flex-wrap gap-4"><!-- populated by JS --></div></div><!-- ── Tags ───────────────────────────────────── --><div class="lc-tags-row px-7 py-4 flex items-center gap-2 flex-wrap"><span class="text-[10px] font-bold uppercase tracking-wider" style="color:var(--text-muted);">Etiquetas:</span><div class="lc-tags flex gap-2 flex-wrap"></div></div></div><script>(function(){const cardJson = "{\"id\":\"verbs-b1-health_medical-001\",\"target\":\"adoecer\",\"source\":\"to fall ill\",\"type\":\"regular\",\"cefr\":\"B1\",\"grammar_note\":\"-er conjugation group, auxiliary verb 'ter'. Regular verb.\",\"examples\":[{\"target\":\"Costumo adoecer sempre que o inverno chega com muito frio.\",\"source\":\"I usually fall ill whenever winter arrives with lots of cold weather.\"},{\"target\":\"Se adoeceres outra vez, deves marcar uma consulta com o médico.\",\"source\":\"If you fall ill again, you must book an appointment with the doctor.\"}],\"conjugations\":{\"presente\":{\"eu\":\"eu adoeço\",\"tu\":\"tu adoeces\",\"ele/ela/você\":\"ele/ela/você adoece\",\"nós\":\"nós adoecemos\",\"eles/elas/vocês\":\"eles/elas/vocês adoecem\"},\"pretérito_perfeito\":{\"eu\":\"eu adoeci\",\"tu\":\"tu adoeceste\",\"ele/ela/você\":\"ele/ela/você adoeceu\",\"nós\":\"nós adoecemos\",\"eles/elas/vocês\":\"eles/elas/vocês adoeceram\"},\"pretérito_imperfeito\":{\"eu\":\"eu adoecia\",\"tu\":\"tu adoecias\",\"ele/ela/você\":\"ele/ela/você adoecia\",\"nós\":\"nós adoecíamos\",\"eles/elas/vocês\":\"eles/elas/vocês adoeciam\"},\"futuro_simples\":{\"eu\":\"eu adoecerei\",\"tu\":\"tu adoecerás\",\"ele/ela/você\":\"ele/ela/você adoecerá\",\"nós\":\"nós adoeceremos\",\"eles/elas/vocês\":\"eles/elas/vocês adoecerão\"},\"condicional\":{\"eu\":\"eu adoeceria\",\"tu\":\"tu adoecerias\",\"ele/ela/você\":\"ele/ela/você adoeceria\",\"nós\":\"nós adoeceríamos\",\"eles/elas/vocês\":\"eles/elas/voceriam\"},\"particípio_passado\":\"adoecido\"},\"tags\":[\"verb\",\"b1\"],\"metadata\":{}}";
+const langConfigJson = "{\"language_pair\":\"english_portuguese\",\"target_lang\":\"pt\",\"native_lang\":\"en\",\"target_lang_name\":\"Português\",\"native_lang_name\":\"English\",\"speech_lang\":\"pt-PT\",\"noun_metadata_fields\":[{\"key\":\"article\",\"label\":\"Artigo\",\"render\":\"article_badge\"},{\"key\":\"gender\",\"label\":\"Género\",\"render\":\"gender_label\"},{\"key\":\"plural\",\"label\":\"Plural\",\"render\":\"text\"}],\"article_colours\":{\"o\":\"#4A7C9E\",\"a\":\"#B05070\"},\"gender_labels\":{\"m\":\"Masculino\",\"f\":\"Feminino\"},\"verb_tenses\":[\"presente\",\"pretérito_perfeito\",\"pretérito_imperfeito\",\"particípio_passado\",\"futuro_simples\",\"condicional\"],\"cases\":{},\"ui_labels\":{\"learn_mode\":\"Aprender\",\"train_mode\":\"Treinar\",\"examples_heading\":\"Frases de exemplo\",\"grammar_note_heading\":\"Nota gramatical\",\"audio_button\":\"Ouvir\",\"back_link\":\"Voltar\",\"card_counter\":\"Cartão {current} / {total}\",\"next_button\":\"Seguinte\",\"finish_button\":\"Concluir\",\"correct\":\"Correto!\",\"wrong\":\"Incorreto\",\"dashboard_link\":\"Painel principal\",\"library_prompt\":\"Escolha um baralho da biblioteca e explore o conteúdo dos cartões.\",\"cards_badge\":\"{count} CARTÕES\",\"cards_count\":\"{count} cartões\",\"deck_meta\":\"{topic} • {level} • {count} cartões\",\"no_decks\":\"Ainda não existem baralhos nesta categoria.\",\"setup_title\":\"Configurar treino\",\"setup_subtitle\":\"Configure a sua sessão de treino.\",\"question_type\":\"Tipo de pergunta\",\"mode_multiple_choice\":\"Escolha múltipla\",\"mode_typing\":\"Digitação de texto\",\"mode_typing_short\":\"Digitação\",\"direction\":\"Direção\",\"direction_forward\":\"🇺🇸 English → 🇵🇹 Português\",\"direction_reverse\":\"🇵🇹 Português → 🇺🇸 English\",\"select_level\":\"Selecionar nível\",\"start_training\":\"Iniciar treino\",\"count_label\":\"Quantidade\",\"all_cards\":\"Todas\",\"in_deck\":\"no baralho\",\"view_cards\":\"Cartões\",\"view_list\":\"Lista\",\"card_word\":\"Cartão\",\"keyboard_hint_study\":\"← → Teclas de seta para navegar · A para ouvir\",\"example_single_heading\":\"Exemplo\",\"no_example\":\"Nenhum exemplo disponível.\",\"tags_label\":\"Etiquetas:\",\"type_vocab\":\"Vocabulário\",\"type_verb\":\"Verbo\",\"type_phrase\":\"Expressão\",\"type_connector\":\"Conector\",\"type_grammar\":\"Gramática\",\"type_noun\":\"Substantivo\",\"type_adjective\":\"Adjetivo\",\"type_expression\":\"Locução\",\"plural_prefix\":\"Pl. {plural}\",\"plural_only\":\"apenas plural\",\"word_order_heading\":\"Ordem das palavras\",\"structure_heading\":\"Estrutura\",\"training_title\":\"Treino\",\"all_levels\":\"Todos os níveis\",\"type_placeholder\":\"Escreva a palavra em português...\",\"check_button\":\"Verificar\",\"keyboard_hint_train\":\"Enter / Espaço = confirmar · A = Ouvir\",\"audio_title\":\"Ouvir (A)\",\"training_finished\":\"Treino concluído!\",\"missed_heading\":\"Respostas erradas — para repetir\",\"retry_missed\":\"Repetir erros\",\"new_config\":\"Nova configuração\",\"plural_hint\":\"Pl: {plural}\",\"results_pct\":\"{pct}% de acertos\",\"result_excellent\":\"Excelente! Dominou este nível com distinção.\",\"result_good\":\"Muito bem! Mais um pouco de prática e dominará tudo!\",\"result_ok\":\"Bom começo! Reveja os cartões mais uma vez.\",\"result_retry\":\"Sem problema — a prática leva à perfeição!\",\"no_cards_title\":\"Nenhum cartão encontrado\",\"no_cards_hint\":\"Por favor, selecione outro nível ou baralho.\"},\"answer_normalisation\":{\"strip_leading_words\":[\"o\",\"a\",\"os\",\"as\",\"um\",\"uma\",\"uns\",\"umas\"],\"alt_spellings\":{\"á\":\"a\",\"à\":\"a\",\"ã\":\"a\",\"â\":\"a\",\"é\":\"e\",\"ê\":\"e\",\"í\":\"i\",\"ó\":\"o\",\"ô\":\"o\",\"õ\":\"o\",\"ú\":\"u\",\"ç\":\"c\"}}}";
+
+  /**
+   * Client-side card renderer.
+   * Uses the universal card-renderer logic inline (no imports in Astro is:inline).
+   */
+
+  // ── Parse data ──────────────────────────────────────────────────────────
+  const card   = JSON.parse(cardJson);
+  const config = JSON.parse(langConfigJson);
+
+  // ── Helpers ─────────────────────────────────────────────────────────────
+  // Articles come from the language config (keys of article_colours), never hardcoded
+  const articleList = Object.keys(config.article_colours || {});
+  const articlePatterns = articleList.map(a => {
+    const esc = a.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    return esc.endsWith("'") ? esc : `${esc}\\s+`;
+  });
+  const articleRe = articlePatterns.length
+    ? new RegExp('^(?:' + articlePatterns.join('|') + ')', 'i')
+    : null;
+
+  function stripArticle(word) {
+    return articleRe ? (word || '').replace(articleRe, '').trim() : (word || '').trim();
+  }
+
+  function getArticleColour(article) {
+    if (!article || !config.article_colours) return 'var(--espresso)';
+    return config.article_colours[article.toLowerCase()] || 'var(--espresso)';
+  }
+
+  function getGenderLabel(gender) {
+    if (!gender) return '';
+    return (config.gender_labels || {})[gender] || gender;
+  }
+
+  const uiLabels = config.ui_labels || {};
+
+  function getTypeLabel() {
+    const tags = card.tags || [];
+    if (tags.includes('noun'))       return uiLabels.type_noun || 'Noun';
+    if (tags.includes('verb'))       return uiLabels.type_verb || 'Verb';
+    if (tags.includes('adjective'))  return uiLabels.type_adjective || 'Adjective';
+    if (tags.includes('expression')) return uiLabels.type_expression || 'Expression';
+    const map = {
+      vocab: uiLabels.type_vocab || 'Vocab',
+      verb: uiLabels.type_verb || 'Verb',
+      phrase: uiLabels.type_phrase || 'Phrase',
+      connector: uiLabels.type_connector || 'Connector',
+      grammar: uiLabels.type_grammar || 'Grammar'
+    };
+    return map[card.type] || uiLabels.card_word || 'Card';
+  }
+
+  function formatHighlight(text) {
+    if (!text) return '';
+    return String(text).replace(/\*(.*?)\*/g, '<span class="highlighter">$1</span>');
+  }
+
+  function getMetaFacts() {
+    const meta = card.metadata || {};
+    const facts = [];
+    for (const field of (config.noun_metadata_fields || [])) {
+      const raw = meta[field.key] || card[field.key];
+      if (!raw || raw === '~') continue;
+      let value = String(raw);
+      let colour;
+      if (field.render === 'gender_label') value = getGenderLabel(raw);
+      else if (field.render === 'article_badge') colour = getArticleColour(raw);
+      facts.push({ label: field.label, value, colour });
+    }
+    return facts;
+  }
+
+  // ── Render ──────────────────────────────────────────────────────────────
+  const container = document.querySelector('.learning-card');
+  if (!container) { console.error('LearningCard: container not found'); }
+
+  function sel(cls) { return container?.querySelector(cls); }
+
+  // Type badge
+  sel('.lc-type-badge').textContent = getTypeLabel();
+
+  // Level badge
+  sel('.lc-level-badge').textContent = card.level || '';
+
+  // Article
+  const article = card.metadata?.article;
+  const articleWrap = sel('.lc-article-wrap');
+  const articleEl   = sel('.lc-article');
+  if (article && card.tags?.includes('noun') && !card.metadata?.plural_only) {
+    articleEl.textContent  = article;
+    articleEl.style.color  = getArticleColour(article);
+    articleWrap.style.display = '';
+  } else {
+    articleWrap.style.display = 'none';
+  }
+
+  // Word
+  sel('.lc-word').textContent = stripArticle(card.target);
+
+  // Translation
+  sel('.lc-translation').textContent = card.source || '';
+
+  // Plural / forms
+  const plural = card.metadata?.plural;
+  const formsEl = sel('.lc-forms');
+  const prefix = uiLabels.plural_prefix || 'Pl.';
+  const pluralOnly = uiLabels.plural_only || 'Plural only';
+  if (plural && !card.metadata?.plural_only) formsEl.textContent = `${prefix} ${plural}`;
+  else if (card.metadata?.plural_only) formsEl.textContent = pluralOnly;
+  else formsEl.textContent = '';
+
+  // Meta grid
+  const metaGrid = sel('.lc-meta-grid');
+  const facts = getMetaFacts();
+  if (facts.length) {
+    const cols = Math.min(facts.length, 4);
+    metaGrid.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
+    metaGrid.innerHTML = facts.map((f, i) => `
+      <div class="px-5 py-4 ${i < facts.length - 1 ? 'border-r' : ''}" style="border-color:var(--border);">
+        <p class="text-[9px] font-bold uppercase tracking-widest mb-1" style="color:var(--text-muted);">${f.label}</p>
+        <p class="text-sm font-bold" style="color:${f.colour || 'var(--text)'};">${f.value}</p>
+      </div>
+    `).join('');
+  } else {
+    metaGrid.style.display = 'none';
+  }
+
+  // Grammar note
+  const grammarWrap = sel('.lc-grammar-wrap');
+  if (card.grammar_note) {
+    sel('.lc-grammar-text').innerHTML = formatHighlight(card.grammar_note);
+    grammarWrap.classList.remove('hidden');
+  }
+
+  // Grammar label from config
+  const uiLabels = config.ui_labels || {};
+  if (uiLabels.grammar_note_heading) sel('.lc-grammar-label').textContent = uiLabels.grammar_note_heading;
+  if (uiLabels.examples_heading)     sel('.lc-examples-label').textContent = uiLabels.examples_heading;
+  if (uiLabels.audio_button)         { const el = sel('.lc-audio-label'); if (el) el.textContent = uiLabels.audio_button; }
+
+  // ── Type-specific blocks ─────────────────────────────────────────────────
+
+  // Verb: conjugation table
+  const type = card.type || (card.tags?.includes('verb') ? 'verb' : 'vocab');
+  if (type === 'verb' && card.conjugations) {
+    const conjWrap  = sel('.lc-conjugation-wrap');
+    const conjInner = sel('.lc-conjugation-inner');
+    conjWrap.classList.remove('hidden');
+
+    let conjArray = [];
+    if (Array.isArray(card.conjugations)) {
+      conjArray = card.conjugations;
+    } else {
+      for (const [tense, forms] of Object.entries(card.conjugations)) {
+        if (typeof forms === 'string') {
+          conjArray.push({ tense, stringForm: forms });
+        } else {
+          const formsArr = Object.entries(forms).map(([pronoun, form]) => ({ pronoun, form }));
+          conjArray.push({ tense, forms: formsArr });
+        }
+      }
+    }
+
+    const tensesToRender = config.verb_tenses || conjArray.map(t => t.tense);
+
+    const stringTenses = [];
+    const tableTenses = [];
+
+    tensesToRender.forEach(tense => {
+      const t = conjArray.find(c => c.tense === tense);
+      if (!t) return;
+      if (t.stringForm) stringTenses.push(t);
+      else tableTenses.push(t);
+    });
+
+    let html = '';
+
+    // Render simple string forms (e.g. Perfekt, Partizip II) as pill-like tags at the top
+    if (stringTenses.length > 0) {
+      html += `
+        <div class="flex flex-wrap gap-3 mb-6">
+          ${stringTenses.map(t => `
+            <div class="rounded-xl border px-4 py-2.5 flex items-center gap-3 shadow-sm" style="border-color:var(--border); background-color:var(--bg);">
+              <span class="text-[10px] font-bold uppercase tracking-widest opacity-80" style="color:var(--espresso);">${t.tense.replace(/_/g, ' ')}</span>
+              <span class="font-bold text-sm" style="color:var(--text);">${t.stringForm}</span>
+            </div>
+          `).join('')}
+        </div>
+      `;
+    }
+
+    // Render full tables (e.g. Präsens, Präteritum) as a unified table
+    if (tableTenses.length > 0) {
+      // Collect all pronouns from the first available table tense
+      const pronouns = tableTenses[0].forms.map(f => f.pronoun);
+
+      html += `
+        <div class="rounded-xl border overflow-x-auto shadow-sm w-full" style="border-color:var(--border);">
+          <table class="w-full text-sm text-left">
+            <thead>
+              <tr style="background-color:var(--bg); border-bottom: 1px solid var(--border);">
+                <th class="px-4 py-3 font-bold uppercase tracking-widest text-[10px] w-[1%]" style="color:var(--espresso); border-right: 1px solid var(--border);"></th>
+                ${tableTenses.map(t => `
+                  <th class="px-4 py-3 font-bold uppercase tracking-widest text-[10px]" style="color:var(--espresso);">${t.tense.replace(/_/g, ' ')}</th>
+                `).join('')}
+              </tr>
+            </thead>
+            <tbody>
+              ${pronouns.map((pronoun, ri) => `
+                <tr class="${ri < pronouns.length - 1 ? 'border-b' : ''}" style="border-color:var(--border);">
+                  <td class="px-4 py-3 font-bold text-xs whitespace-nowrap" style="color:var(--espresso); background-color:var(--bg); border-right: 1px solid var(--border);">${pronoun}</td>
+                  ${tableTenses.map(t => {
+                    const formObj = t.forms.find(f => f.pronoun === pronoun);
+                    return `<td class="px-4 py-3 font-semibold whitespace-nowrap" style="color:var(--text);">${formObj ? formObj.form : '-'}</td>`;
+                  }).join('')}
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+        </div>
+      `;
+    }
+
+    conjInner.innerHTML = html;
+  }
+
+  // Connector: word order block
+  if (type === 'connector' && card.word_order) {
+    const woWrap = sel('.lc-wordorder-wrap');
+    sel('.lc-wordorder-text').textContent = card.word_order;
+    woWrap.classList.remove('hidden');
+  }
+
+  // Phrase: preposition rule block
+  if (type === 'phrase' && card.clause_type) {
+    const phraseWrap = sel('.lc-phrase-wrap');
+    sel('.lc-phrase-rule').textContent = card.clause_type;
+    phraseWrap.classList.remove('hidden');
+  }
+
+  // ── Examples ─────────────────────────────────────────────────────────────
+  const examplesEl = sel('.lc-examples');
+  const rawExamples = card.examples || [];
+
+  if (rawExamples.length) {
+    examplesEl.innerHTML = rawExamples.map(e => `
+        <div class="rounded-2xl border overflow-hidden" style="border-color:var(--border);">
+          <div class="px-4 py-3" style="background-color:var(--bg);">
+            <p class="font-semibold leading-snug mb-1" style="color:var(--text);">${formatHighlight(e.target)}</p>
+            <p class="text-sm italic" style="color:var(--text-muted);">${formatHighlight(e.source || '')}</p>
+          </div>
+          ${e.note ? `<div class="px-4 py-2 border-t" style="border-color:var(--border);">
+            <p class="text-[10px] font-bold font-mono" style="color:var(--espresso);">📐 ${e.note}</p>
+          </div>` : ''}
+        </div>
+      `).join('');
+  } else {
+    examplesEl.innerHTML = `<p class="text-sm italic" style="color:var(--text-muted);">${uiLabels.no_example || ''}</p>`;
+  }
+
+  // ── Tags ─────────────────────────────────────────────────────────────────
+  const tagsEl = sel('.lc-tags');
+  tagsEl.innerHTML = (card.tags || []).map(t => `
+    <span class="text-[10px] font-bold px-2 py-0.5 rounded-md border uppercase" style="border-color:var(--border); color:var(--text-muted); background-color:var(--bg);">${t}</span>
+  `).join('');
+
+  // ── Audio button ─────────────────────────────────────────────────────────
+  sel('.lc-audio-btn')?.addEventListener('click', () => {
+    if (window.LoungeAudioEngine) {
+      window.LoungeAudioEngine.speak(card.target || '', config.speech_lang, 0.85);
+    }
+  });
+})();</script></div><!-- ── Navigation ───────────────────────────── --><div class="flex items-center justify-between mt-8 gap-4" data-astro-cid-5tabbh6g><button id="btn-prev" disabled class="flex items-center gap-2 px-6 py-3 rounded-2xl border font-bold text-sm transition-all hover:opacity-70 active:scale-95 disabled:opacity-30 disabled:cursor-not-allowed" style="border-color:var(--border); color:var(--text); background-color:var(--card);" data-astro-cid-5tabbh6g><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><path d="m15 18-6-6 6-6" data-astro-cid-5tabbh6g></path></svg>Voltar</button><!-- Dot navigation --><div id="dot-nav" class="flex items-center gap-1.5 flex-wrap justify-center max-w-xs overflow-hidden" style="max-height:2rem;" data-astro-cid-5tabbh6g><!-- populated by JS --></div><button id="btn-next" class="flex items-center gap-2 px-6 py-3 rounded-2xl font-bold text-sm transition-all hover:opacity-80 active:scale-95" style="background-color:var(--espresso); color:#F5F2EB;" data-astro-cid-5tabbh6g>Seguinte<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><path d="m9 18 6-6-6-6" data-astro-cid-5tabbh6g></path></svg></button></div><!-- Keyboard hint --><p class="text-center text-xs font-medium mt-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>← → Teclas de seta para navegar · A para ouvir</p></div><!-- ── List View ───────────────────────────── --><div id="list-view-wrap" class="hidden space-y-6" data-astro-cid-5tabbh6g><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>adoecer</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to fall ill</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>-er conjugation group, auxiliary verb 'ter'. Regular verb.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Costumo adoecer sempre que o inverno chega com muito frio.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>I usually fall ill whenever winter arrives with lots of cold weather.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>apanhar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to catch (a cold, virus)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>-ar conjugation group, auxiliary verb 'ter'. Regular verb.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Ele apanhou uma gripe forte porque saiu à chuva sem casaco.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>He caught a bad flu because he went out in the rain without a coat.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>aspirar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to inhale</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>-ar conjugation group, auxiliary verb 'ter'. Regular verb.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>O médico pediu-me para aspirar profundamente o ar pelo nariz.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The doctor asked me to inhale the air deeply through my nose.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>atenuar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to alleviate / to soothe</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>-ar conjugation group, auxiliary verb 'ter'. Regular verb.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Este xarope ajuda a atenuar a tosse irritante durante a noite.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>This cough syrup helps to soothe the irritating cough during the night.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>consultar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to consult / to see (a doctor)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>-ar conjugation group, auxiliary verb 'ter'. Regular verb.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Decidi consultar um cardiologista para verificar a minha tensão arterial.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>I decided to see a cardiologist to check my blood pressure.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>curar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to cure / to heal</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>-ar conjugation group, auxiliary verb 'ter'. Regular verb.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Os antibióticos ajudam a curar a infeção bacteriana rapidamente.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Antibiotics help to cure the bacterial infection quickly.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>desinfetar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to disinfect</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>-ar conjugation group, auxiliary verb 'ter'. Regular verb.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>É fundamental desinfetar a ferida com álcool antes de colocar o penso.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>It is essential to disinfect the wound with alcohol before applying the plaster.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>diagnosticar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to diagnose</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>-ar conjugation group, auxiliary verb 'ter'. Regular verb.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>O médico conseguiu diagnosticar a doença logo na primeira consulta.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The doctor managed to diagnose the illness right at the first appointment.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>doar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to donate</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>-ar conjugation group, auxiliary verb 'ter'. Regular verb.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Costumo doar sangue duas vezes por ano para ajudar no hospital local.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>I usually donate blood twice a year to help at the local hospital.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>engolir</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to swallow</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>-ir conjugation group, auxiliary verb 'ter'. Regular verb.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Tenho tanta dor de garganta que me custa muito engolir a comida.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>I have such a sore throat that it is very hard for me to swallow food.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>examinar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to examine</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>-ar conjugation group, auxiliary verb 'ter'. Regular verb.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>A pediatra começou por examinar os ouvidos e a garganta da criança.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The pediatrician started by examining the child's ears and throat.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>inchar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to swell</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>-ar conjugation group, auxiliary verb 'ter'. Regular verb.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Depois de torcer o tornozelo, o pé começou logo a inchar bastante.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>After twisting my ankle, my foot immediately started to swell significantly.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>medicar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to medicate / to prescribe medication</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>-ar conjugation group, auxiliary verb 'ter'. Regular verb.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>O clínico geral decidiu medicar o paciente com analgésicos fortes.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The general practitioner decided to prescribe strong painkillers to the patient.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>operar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to operate (surgery)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>-ar conjugation group, auxiliary verb 'ter'. Regular verb.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>O cirurgião vai operar o joelho do atleta na próxima terça-feira.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The surgeon is going to operate on the athlete's knee next Tuesday.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>prevenir</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to prevent</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>-ir conjugation group, auxiliary verb 'ter'. Regular verb.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Tomar a vacina contra a gripe ajuda a prevenir doenças graves no inverno.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Taking the flu vaccine helps to prevent severe illnesses in the winter.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>recuperar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to recover</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>-ar conjugation group, auxiliary verb 'ter'. Regular verb.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Depois da cirurgia, levei um mês a recuperar totalmente as forças.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>After the surgery, it took me a month to fully recover my strength.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>respirar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to breathe</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>-ar conjugation group, auxiliary verb 'ter'. Regular verb.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Com esta alergia grave, é muito difícil respirar sem medicação.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>With this severe allergy, it is very difficult to breathe without medication.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>tosse</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to cough</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>-ar conjugation group, auxiliary verb 'ter'. Regular verb. (Infinitive: tosse -> tosse is noun, wait! Infinitive is tossir!)</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Comecei a tossir imenso durante a noite devido ao ar seco do quarto.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>I started to cough a lot during the night due to the dry air in the bedroom.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>tratar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to treat / to cure</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>-ar conjugation group, auxiliary verb 'ter'. Regular verb.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>O dermatologista conseguiu tratar a minha alergia de pele com sucesso.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The dermatologist managed to treat my skin allergy successfully.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>vacinar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to vaccinate</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>-ar conjugation group, auxiliary verb 'ter'. Regular verb.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Todos os anos devemos vacinar-nos contra a gripe antes do inverno.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Every year we should vaccinate ourselves against the flu before winter.</p></div></div></div></div></div></div><!-- ══ TRAIN PANEL ════════════════════════════ --><div id="train-panel" class="hidden space-y-10" data-astro-cid-5tabbh6g><div class="cafe-card rounded-3xl p-8 border shadow-lg max-w-xl mx-auto" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="text-center mb-8" data-astro-cid-5tabbh6g><h2 class="text-2xl font-extrabold font-outfit mb-2" style="color:var(--text);" data-astro-cid-5tabbh6g>Configurar treino</h2><p class="text-sm font-medium" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Configure a sua sessão de treino.</p></div><form action="/languagelounge/en-pt/training/verbs/train/" method="GET" class="space-y-8" id="deck-train-form" data-astro-cid-5tabbh6g><input type="hidden" name="level" value="b1" data-astro-cid-5tabbh6g><input type="hidden" name="deck" value="verbs-b1-health_medical" data-astro-cid-5tabbh6g><!-- Mode selection --><div class="space-y-3" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold tracking-widest uppercase" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Tipo de pergunta</p><div class="grid grid-cols-2 gap-3" data-astro-cid-5tabbh6g><button type="button" data-group="mode" data-value="mc" class="sel-opt sel-active" data-astro-cid-5tabbh6g><span class="text-xl mb-1 block" data-astro-cid-5tabbh6g>🔘</span><span class="text-sm font-bold" data-astro-cid-5tabbh6g>Escolha múltipla</span></button><button type="button" data-group="mode" data-value="type" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-xl mb-1 block" data-astro-cid-5tabbh6g>⌨️</span><span class="text-sm font-bold" data-astro-cid-5tabbh6g>Digitação de texto</span></button></div><input type="hidden" name="mode" id="mode-hidden" value="mc" data-astro-cid-5tabbh6g></div><!-- Direction selection --><div class="space-y-3" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold tracking-widest uppercase" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Direção</p><div class="grid grid-cols-2 gap-3" data-astro-cid-5tabbh6g><button type="button" data-group="dir" data-value="en-pt" class="sel-opt sel-active" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>🇺🇸 English → 🇵🇹 Português</span></button><button type="button" data-group="dir" data-value="pt-en" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>🇵🇹 Português → 🇺🇸 English</span></button></div><input type="hidden" name="dir" id="dir-hidden" value="en-pt" data-astro-cid-5tabbh6g></div><!-- Count Selection --><div class="space-y-3" data-astro-cid-5tabbh6g><div class="flex justify-between items-end" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold tracking-widest uppercase" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Quantidade</p><span class="text-xs font-bold" style="color:var(--espresso);" data-astro-cid-5tabbh6g>20 cartões no baralho</span></div><div class="grid grid-cols-4 gap-3" data-astro-cid-5tabbh6g><button type="button" data-group="count" data-value="30" class="sel-opt sel-active" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>30</span></button><button type="button" data-group="count" data-value="60" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>60</span></button><button type="button" data-group="count" data-value="90" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>90</span></button><button type="button" data-group="count" data-value="1000" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>Todas</span></button></div><input type="hidden" name="count" id="count-hidden" value="30" data-astro-cid-5tabbh6g></div><button type="submit" class="w-full py-4 rounded-xl font-bold text-base transition-all hover:opacity-90 mt-4 shadow-md active:scale-[0.98]" style="background-color:var(--espresso); color:#F5F2EB;" data-astro-cid-5tabbh6g>Iniciar treino &rarr;</button></form></div></div></div></main><footer class="mt-auto border-t py-8" style="background-color:var(--bg);border-color:var(--border);"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-medium" style="color:var(--text-muted);"><div>&copy; 2025 - 2026 Small Talk Café Podcasts. All rights reserved.</div><div class="flex gap-4">Made in Bayern ❤️ Los Geht's!</div></div></footer><!-- Minimal script for Theme and Dropdown toggle --><script>
+      // ── Theme ──────────────────────────────────────
+      function applyTheme(dark) {
+        if (dark) {
+          document.documentElement.classList.add('dark');
+          localStorage.setItem('wortschatz_theme', 'dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+          localStorage.setItem('wortschatz_theme', 'light');
+        }
+        const icon = document.getElementById('theme-icon');
+        const label = document.getElementById('theme-label');
+        if (icon) icon.textContent = dark ? '🌙' : '☀️';
+        if (label) label.textContent = dark ? 'Dark' : 'Light';
+      }
+
+      const isDark = document.documentElement.classList.contains('dark');
+      applyTheme(isDark);
+
+      document.getElementById('theme-toggle')?.addEventListener('click', () => {
+        const nowDark = !document.documentElement.classList.contains('dark');
+        applyTheme(nowDark);
+      });
+
+      // ── Dropdown Toggle ──────────────────────────
+      const langBtn = document.getElementById('lang-btn');
+      const langMenu = document.getElementById('lang-menu');
+
+      langBtn?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        langMenu?.classList.toggle('hidden');
+      });
+
+      document.addEventListener('click', () => {
+        langMenu?.classList.add('hidden');
+      });
+    </script></body></html><script type="module" src="/languagelounge/_astro/_deckId_.astro_astro_type_script_index_0_lang.DwXABuW8.js"></script><script>(function(){const cardsJson = "[{\"id\":\"verbs-b1-health_medical-001\",\"target\":\"adoecer\",\"source\":\"to fall ill\",\"type\":\"regular\",\"cefr\":\"B1\",\"grammar_note\":\"-er conjugation group, auxiliary verb 'ter'. Regular verb.\",\"examples\":[{\"target\":\"Costumo adoecer sempre que o inverno chega com muito frio.\",\"source\":\"I usually fall ill whenever winter arrives with lots of cold weather.\"},{\"target\":\"Se adoeceres outra vez, deves marcar uma consulta com o médico.\",\"source\":\"If you fall ill again, you must book an appointment with the doctor.\"}],\"conjugations\":{\"presente\":{\"eu\":\"eu adoeço\",\"tu\":\"tu adoeces\",\"ele/ela/você\":\"ele/ela/você adoece\",\"nós\":\"nós adoecemos\",\"eles/elas/vocês\":\"eles/elas/vocês adoecem\"},\"pretérito_perfeito\":{\"eu\":\"eu adoeci\",\"tu\":\"tu adoeceste\",\"ele/ela/você\":\"ele/ela/você adoeceu\",\"nós\":\"nós adoecemos\",\"eles/elas/vocês\":\"eles/elas/vocês adoeceram\"},\"pretérito_imperfeito\":{\"eu\":\"eu adoecia\",\"tu\":\"tu adoecias\",\"ele/ela/você\":\"ele/ela/você adoecia\",\"nós\":\"nós adoecíamos\",\"eles/elas/vocês\":\"eles/elas/vocês adoeciam\"},\"futuro_simples\":{\"eu\":\"eu adoecerei\",\"tu\":\"tu adoecerás\",\"ele/ela/você\":\"ele/ela/você adoecerá\",\"nós\":\"nós adoeceremos\",\"eles/elas/vocês\":\"eles/elas/vocês adoecerão\"},\"condicional\":{\"eu\":\"eu adoeceria\",\"tu\":\"tu adoecerias\",\"ele/ela/você\":\"ele/ela/você adoeceria\",\"nós\":\"nós adoeceríamos\",\"eles/elas/vocês\":\"eles/elas/voceriam\"},\"particípio_passado\":\"adoecido\"},\"tags\":[\"verb\",\"b1\"],\"metadata\":{}},{\"id\":\"verbs-b1-health_medical-002\",\"target\":\"apanhar\",\"source\":\"to catch (a cold, virus)\",\"type\":\"regular\",\"cefr\":\"B1\",\"grammar_note\":\"-ar conjugation group, auxiliary verb 'ter'. Regular verb.\",\"examples\":[{\"target\":\"Ele apanhou uma gripe forte porque saiu à chuva sem casaco.\",\"source\":\"He caught a bad flu because he went out in the rain without a coat.\"},{\"target\":\"Cuidado para não apanhanares nenhuma infeção no hospital.\",\"source\":\"Be careful not to catch any infection at the hospital.\"}],\"conjugations\":{\"presente\":{\"eu\":\"eu apanho\",\"tu\":\"tu apanhas\",\"ele/ela/você\":\"ele/ela/você apanha\",\"nós\":\"nós apanhamos\",\"eles/elas/vocês\":\"eles/elas/vocês apanham\"},\"pretérito_perfeito\":{\"eu\":\"eu apanhei\",\"tu\":\"tu apanhaste\",\"ele/ela/você\":\"ele/ela/você apanhou\",\"nós\":\"nós apanhámos\",\"eles/elas/vocês\":\"eles/elas/vocês apanharam\"},\"pretérito_imperfeito\":{\"eu\":\"eu apanhava\",\"tu\":\"tu apanhavas\",\"ele/ela/você\":\"ele/ela/você apanhava\",\"nós\":\"nós apanhávamos\",\"eles/elas/vocês\":\"eles/elas/vocês apinhavam\"},\"futuro_simples\":{\"eu\":\"eu apanharei\",\"tu\":\"tu apanharás\",\"ele/ela/você\":\"ele/ela/você apanhará\",\"nós\":\"nós apanharemos\",\"eles/elas/vocês\":\"eles/elas/vocês apanharão\"},\"condicional\":{\"eu\":\"eu apanharia\",\"tu\":\"tu apanharias\",\"ele/ela/você\":\"ele/ela/você apanharia\",\"nós\":\"nós apanharíamos\",\"eles/elas/vocês\":\"eles/elas/vocês apanhariam\"},\"particípio_passado\":\"apanhado\"},\"tags\":[\"verb\",\"b1\"],\"metadata\":{}},{\"id\":\"verbs-b1-health_medical-003\",\"target\":\"aspirar\",\"source\":\"to inhale\",\"type\":\"regular\",\"cefr\":\"B1\",\"grammar_note\":\"-ar conjugation group, auxiliary verb 'ter'. Regular verb.\",\"examples\":[{\"target\":\"O médico pediu-me para aspirar profundamente o ar pelo nariz.\",\"source\":\"The doctor asked me to inhale the air deeply through my nose.\"},{\"target\":\"Não deves aspirar vapores tóxicos sem usar uma máscara protetora.\",\"source\":\"You must not inhale toxic fumes without wearing a protective mask.\"}],\"conjugations\":{\"presente\":{\"eu\":\"eu aspiro\",\"tu\":\"tu aspiras\",\"ele/ela/você\":\"ele/ela/você aspira\",\"nós\":\"nós aspiramos\",\"eles/elas/vocês\":\"eles/elas/vocês aspiram\"},\"pretérito_perfeito\":{\"eu\":\"eu aspirei\",\"tu\":\"tu aspiraste\",\"ele/ela/você\":\"ele/ela/você aspirou\",\"nós\":\"nós aspirámos\",\"eles/elas/vocês\":\"eles/elas/vocês aspiraram\"},\"pretérito_imperfeito\":{\"eu\":\"eu aspirava\",\"tu\":\"tu aspiravas\",\"ele/ela/você\":\"ele/ela/você aspirava\",\"nós\":\"nós aspirávamos\",\"eles/elas/vocês\":\"eles/elas/vocês aspiravam\"},\"futuro_simples\":{\"eu\":\"eu aspirarei\",\"tu\":\"tu aspirarás\",\"ele/ela/você\":\"ele/ela/você aspirará\",\"nós\":\"nós aspiraremos\",\"eles/elas/vocês\":\"eles/elas/vocerão\"},\"condicional\":{\"eu\":\"eu aspiraria\",\"tu\":\"tu aspirarias\",\"ele/ela/você\":\"ele/ela/você aspiraria\",\"nós\":\"nós aspiraríamos\",\"eles/elas/vocês\":\"eles/elas/vocês aspirariam\"},\"particípio_passado\":\"aspirado\"},\"tags\":[\"verb\",\"b1\"],\"metadata\":{}},{\"id\":\"verbs-b1-health_medical-004\",\"target\":\"atenuar\",\"source\":\"to alleviate / to soothe\",\"type\":\"regular\",\"cefr\":\"B1\",\"grammar_note\":\"-ar conjugation group, auxiliary verb 'ter'. Regular verb.\",\"examples\":[{\"target\":\"Este xarope ajuda a atenuar a tosse irritante durante a noite.\",\"source\":\"This cough syrup helps to soothe the irritating cough during the night.\"},{\"target\":\"Tomar um banho quente pode atenuar as dores musculares.\",\"source\":\"Taking a warm bath can alleviate muscle aches.\"}],\"conjugations\":{\"presente\":{\"eu\":\"eu atenuo\",\"tu\":\"tu atenuas\",\"ele/ela/você\":\"ele/ela/você atenua\",\"nós\":\"nós atenuamos\",\"eles/elas/vocês\":\"eles/elas/vocês atenuam\"},\"pretérito_perfeito\":{\"eu\":\"eu atenuei\",\"tu\":\"tu atenuaste\",\"ele/ela/você\":\"ele/ela/você atenuou\",\"nós\":\"nós atenuámos\",\"eles/elas/vocês\":\"eles/elas/vocês atenuaram\"},\"pretérito_imperfeito\":{\"eu\":\"eu atenuava\",\"tu\":\"tu atenuavas\",\"ele/ela/você\":\"ele/ela/você atenuava\",\"nós\":\"nós atenuávamos\",\"eles/elas/vocês\":\"eles/elas/vocês atenuavam\"},\"futuro_simples\":{\"eu\":\"eu atenuarei\",\"tu\":\"tu atenuarás\",\"ele/ela/você\":\"ele/ela/você atenuará\",\"nós\":\"nós atenuaremos\",\"eles/elas/vocês\":\"eles/elas/vocês atenuarão\"},\"condicional\":{\"eu\":\"eu atenuaria\",\"tu\":\"tu atenuarias\",\"ele/ela/você\":\"ele/ela/você atenuaria\",\"nós\":\"nós atenuaríamos\",\"eles/elas/vocês\":\"eles/elas/vocês atenuariam\"},\"particípio_passado\":\"atenuado\"},\"tags\":[\"verb\",\"b1\"],\"metadata\":{}},{\"id\":\"verbs-b1-health_medical-005\",\"target\":\"consultar\",\"source\":\"to consult / to see (a doctor)\",\"type\":\"regular\",\"cefr\":\"B1\",\"grammar_note\":\"-ar conjugation group, auxiliary verb 'ter'. Regular verb.\",\"examples\":[{\"target\":\"Decidi consultar um cardiologista para verificar a minha tensão arterial.\",\"source\":\"I decided to see a cardiologist to check my blood pressure.\"},{\"target\":\"Podes consultar o folheto informativo do medicamento para ver os efeitos secundários.\",\"source\":\"You can consult the medicine information leaflet to see the side effects.\"}],\"conjugations\":{\"presente\":{\"eu\":\"eu consulto\",\"tu\":\"tu consultas\",\"ele/ela/você\":\"ele/ela/você consulta\",\"nós\":\"nós consultamos\",\"eles/elas/vocês\":\"eles/elas/vocês consultam\"},\"pretérito_perfeito\":{\"eu\":\"eu consultei\",\"tu\":\"tu consultaste\",\"ele/ela/você\":\"ele/ela/você consultou\",\"nós\":\"nós consultámos\",\"eles/elas/vocês\":\"eles/elas/vocês consultaram\"},\"pretérito_imperfeito\":{\"eu\":\"eu consultava\",\"tu\":\"tu consultavas\",\"ele/ela/você\":\"ele/ela/você consultava\",\"nós\":\"nós consultávamos\",\"eles/elas/vocês\":\"eles/elas/vocês consultavam\"},\"futuro_simples\":{\"eu\":\"eu consultarei\",\"tu\":\"tu consultarás\",\"ele/ela/você\":\"ele/ela/você consultará\",\"nós\":\"nós consultaremos\",\"eles/elas/vocês\":\"eles/elas/vocês consultarão\"},\"condicional\":{\"eu\":\"eu consultaria\",\"tu\":\"tu consultarias\",\"ele/ela/você\":\"ele/ela/você consultaria\",\"nós\":\"nós consultaríamos\",\"eles/elas/vocês\":\"eles/elas/vocês consultariam\"},\"particípio_passado\":\"consultado\"},\"tags\":[\"verb\",\"b1\"],\"metadata\":{}},{\"id\":\"verbs-b1-health_medical-006\",\"target\":\"curar\",\"source\":\"to cure / to heal\",\"type\":\"regular\",\"cefr\":\"B1\",\"grammar_note\":\"-ar conjugation group, auxiliary verb 'ter'. Regular verb.\",\"examples\":[{\"target\":\"Os antibióticos ajudam a curar a infeção bacteriana rapidamente.\",\"source\":\"Antibiotics help to cure the bacterial infection quickly.\"},{\"target\":\"O corte profundo no dedo demorou uma semana a curar.\",\"source\":\"The deep cut on my finger took a week to heal.\"}],\"conjugations\":{\"presente\":{\"eu\":\"eu curo\",\"tu\":\"tu curas\",\"ele/ela/você\":\"ele/ela/você cura\",\"nós\":\"nós curamos\",\"eles/elas/vocês\":\"eles/elas/vocês curam\"},\"pretérito_perfeito\":{\"eu\":\"eu curei\",\"tu\":\"tu curaste\",\"ele/ela/você\":\"ele/ela/você curou\",\"nós\":\"nós curámos\",\"eles/elas/vocês\":\"eles/elas/vocês curaram\"},\"pretérito_imperfeito\":{\"eu\":\"eu curava\",\"tu\":\"tu curavas\",\"ele/ela/você\":\"ele/ela/você curava\",\"nós\":\"nós curávamos\",\"eles/elas/vocês\":\"eles/elas/vocês curavam\"},\"futuro_simples\":{\"eu\":\"eu curarei\",\"tu\":\"tu curarás\",\"ele/ela/você\":\"ele/ela/você curará\",\"nós\":\"nós curaremos\",\"eles/elas/vocês\":\"eles/elas/vocês curarão\"},\"condicional\":{\"eu\":\"eu curaria\",\"tu\":\"tu curarias\",\"ele/ela/você\":\"ele/ela/você curaria\",\"nós\":\"nós curaríamos\",\"eles/elas/vocês\":\"eles/elas/vocês curariam\"},\"particípio_passado\":\"curado\"},\"tags\":[\"verb\",\"b1\"],\"metadata\":{}},{\"id\":\"verbs-b1-health_medical-007\",\"target\":\"desinfetar\",\"source\":\"to disinfect\",\"type\":\"regular\",\"cefr\":\"B1\",\"grammar_note\":\"-ar conjugation group, auxiliary verb 'ter'. Regular verb.\",\"examples\":[{\"target\":\"É fundamental desinfetar a ferida com álcool antes de colocar o penso.\",\"source\":\"It is essential to disinfect the wound with alcohol before applying the plaster.\"},{\"target\":\"O enfermeiro vai desinfetar a mesa de exames para o próximo paciente.\",\"source\":\"The nurse is going to disinfect the examination table for the next patient.\"}],\"conjugations\":{\"presente\":{\"eu\":\"eu desinfeto\",\"tu\":\"tu desinfetas\",\"ele/ela/você\":\"ele/ela/você desinfeta\",\"nós\":\"nós desinfetamos\",\"eles/elas/vocês\":\"eles/elas/vocês desinfetam\"},\"pretérito_perfeito\":{\"eu\":\"eu desinfetei\",\"tu\":\"tu desinfetaste\",\"ele/ela/você\":\"ele/ela/você desinfetou\",\"nós\":\"nós desinfetámos\",\"eles/elas/vocês\":\"eles/elas/vocês desinfetaram\"},\"pretérito_imperfeito\":{\"eu\":\"eu desinfetava\",\"tu\":\"tu desinfetavas\",\"ele/ela/você\":\"ele/ela/você desinfetava\",\"nós\":\"nós desinfetávamos\",\"eles/elas/vocês\":\"eles/elas/vocês desinfetavam\"},\"futuro_simples\":{\"eu\":\"eu desinfetarei\",\"tu\":\"tu desinfetarás\",\"ele/ela/você\":\"ele/ela/você desinfetará\",\"nós\":\"nós desinfetaremos\",\"eles/elas/vocês\":\"eles/elas/vocês desinfetarão\"},\"condicional\":{\"eu\":\"eu desinfetaria\",\"tu\":\"tu desinfetarias\",\"ele/ela/você\":\"ele/ela/você desinfetaria\",\"nós\":\"nós desinfetaríamos\",\"eles/elas/vocês\":\"eles/elas/vocês desinfetariam\"},\"particípio_passado\":\"desinfetado\"},\"tags\":[\"verb\",\"b1\"],\"metadata\":{}},{\"id\":\"verbs-b1-health_medical-008\",\"target\":\"diagnosticar\",\"source\":\"to diagnose\",\"type\":\"regular\",\"cefr\":\"B1\",\"grammar_note\":\"-ar conjugation group, auxiliary verb 'ter'. Regular verb.\",\"examples\":[{\"target\":\"O médico conseguiu diagnosticar a doença logo na primeira consulta.\",\"source\":\"The doctor managed to diagnose the illness right at the first appointment.\"},{\"target\":\"Para diagnosticar o problema corretamente, precisas de fazer análises ao sangue.\",\"source\":\"To diagnose the problem correctly, you need to do blood tests.\"}],\"conjugations\":{\"presente\":{\"eu\":\"eu diagnostico\",\"tu\":\"tu diagnosticas\",\"ele/ela/você\":\"ele/ela/você diagnostica\",\"nós\":\"nós diagnosticamos\",\"eles/elas/vocês\":\"eles/elas/vocês diagnosticam\"},\"pretérito_perfeito\":{\"eu\":\"eu diagnostiquei\",\"tu\":\"tu diagnosticaste\",\"ele/ela/você\":\"ele/ela/você diagnosticou\",\"nós\":\"nós diagnosticámos\",\"eles/elas/vocês\":\"eles/elas/vocês diagnosticaram\"},\"pretérito_imperfeito\":{\"eu\":\"eu diagnosticava\",\"tu\":\"tu diagnosticavas\",\"ele/ela/você\":\"ele/ela/você diagnosticava\",\"nós\":\"nós diagnosticávamos\",\"eles/elas/vocês\":\"eles/elas/vocês diagnosticavam\"},\"futuro_simples\":{\"eu\":\"eu diagnosticarei\",\"tu\":\"tu diagnosticarás\",\"ele/ela/você\":\"ele/ela/você diagnosticará\",\"nós\":\"nós diagnosticaremos\",\"eles/elas/vocês\":\"eles/elas/vocês diagnosticarão\"},\"condicional\":{\"eu\":\"eu diagnosticaria\",\"tu\":\"tu diagnosticarias\",\"ele/ela/você\":\"ele/ela/você diagnosticaria\",\"nós\":\"nós diagnosticaríamos\",\"eles/elas/vocês\":\"eles/elas/vocês diagnosticariam\"},\"particípio_passado\":\"diagnosticado\"},\"tags\":[\"verb\",\"b1\"],\"metadata\":{}},{\"id\":\"verbs-b1-health_medical-009\",\"target\":\"doar\",\"source\":\"to donate\",\"type\":\"regular\",\"cefr\":\"B1\",\"grammar_note\":\"-ar conjugation group, auxiliary verb 'ter'. Regular verb.\",\"examples\":[{\"target\":\"Costumo doar sangue duas vezes por ano para ajudar no hospital local.\",\"source\":\"I usually donate blood twice a year to help at the local hospital.\"},{\"target\":\"Muitas pessoas decidem doar os seus órgãos para salvar vidas após a morte.\",\"source\":\"Many people decide to donate their organs to save lives after death.\"}],\"conjugations\":{\"presente\":{\"eu\":\"eu douo\",\"tu\":\"tu doas\",\"ele/ela/você\":\"ele/ela/você doa\",\"nós\":\"nós doamos\",\"eles/elas/vocês\":\"eles/elas/vocês doam\"},\"pretérito_perfeito\":{\"eu\":\"eu doei\",\"tu\":\"tu doaste\",\"ele/ela/você\":\"ele/ela/você doou\",\"nós\":\"nós doámos\",\"eles/elas/vocês\":\"eles/elas/vocês doaram\"},\"pretérito_imperfeito\":{\"eu\":\"eu doava\",\"tu\":\"tu doavas\",\"ele/ela/você\":\"ele/ela/você doava\",\"nós\":\"nós doávamos\",\"eles/elas/vocês\":\"eles/elas/vocês doavam\"},\"futuro_simples\":{\"eu\":\"eu doarei\",\"tu\":\"tu doarás\",\"ele/ela/você\":\"ele/ela/você doará\",\"nós\":\"nós doaremos\",\"eles/elas/vocês\":\"eles/elas/vocês doarão\"},\"condicional\":{\"eu\":\"eu doaria\",\"tu\":\"tu doarias\",\"ele/ela/você\":\"ele/ela/você doaria\",\"nós\":\"nós doaríamos\",\"eles/elas/vocês\":\"eles/elas/vocês doariam\"},\"particípio_passado\":\"doado\"},\"tags\":[\"verb\",\"b1\"],\"metadata\":{}},{\"id\":\"verbs-b1-health_medical-010\",\"target\":\"engolir\",\"source\":\"to swallow\",\"type\":\"regular\",\"cefr\":\"B1\",\"grammar_note\":\"-ir conjugation group, auxiliary verb 'ter'. Regular verb.\",\"examples\":[{\"target\":\"Tenho tanta dor de garganta que me custa muito engolir a comida.\",\"source\":\"I have such a sore throat that it is very hard for me to swallow food.\"},{\"target\":\"Se não consegues engolir o comprimido inteiro, podes pedir um xarope.\",\"source\":\"If you cannot swallow the pill whole, you can ask for a syrup.\"}],\"conjugations\":{\"presente\":{\"eu\":\"eu engulo\",\"tu\":\"tu engoles\",\"ele/ela/você\":\"ele/ela/você engole\",\"nós\":\"nós engolimos\",\"eles/elas/vocês\":\"eles/elas/vocês engolem\"},\"pretérito_perfeito\":{\"eu\":\"eu engoli\",\"tu\":\"tu engoliste\",\"ele/ela/você\":\"ele/ela/você engoliu\",\"nós\":\"nós engolimos\",\"eles/elas/vocês\":\"eles/elas/vocês engoliram\"},\"pretérito_imperfeito\":{\"eu\":\"eu engolia\",\"tu\":\"tu engolias\",\"ele/ela/você\":\"ele/ela/você engolia\",\"nós\":\"nós engolíamos\",\"eles/elas/vocês\":\"eles/elas/vocês engoliam\"},\"futuro_simples\":{\"eu\":\"eu engolirei\",\"tu\":\"tu engolirás\",\"ele/ela/você\":\"ele/ela/você engolirá\",\"nós\":\"nós engoliremos\",\"eles/elas/vocês\":\"eles/elas/vocês engolirão\"},\"condicional\":{\"eu\":\"eu engoliria\",\"tu\":\"tu engolirias\",\"ele/ela/você\":\"ele/ela/você engoliria\",\"nós\":\"nós engoliríamos\",\"eles/elas/vocês\":\"eles/elas/vocês engoliriam\"},\"particípio_passado\":\"engolido\"},\"tags\":[\"verb\",\"b1\"],\"metadata\":{}},{\"id\":\"verbs-b1-health_medical-011\",\"target\":\"examinar\",\"source\":\"to examine\",\"type\":\"regular\",\"cefr\":\"B1\",\"grammar_note\":\"-ar conjugation group, auxiliary verb 'ter'. Regular verb.\",\"examples\":[{\"target\":\"A pediatra começou por examinar os ouvidos e a garganta da criança.\",\"source\":\"The pediatrician started by examining the child's ears and throat.\"},{\"target\":\"O ortopedista vai examinar a tua radiografia para ver o osso partido.\",\"source\":\"The orthopedist is going to examine your X-ray to see the broken bone.\"}],\"conjugations\":{\"presente\":{\"eu\":\"eu examino\",\"tu\":\"tu examinas\",\"ele/ela/você\":\"ele/ela/você examina\",\"nós\":\"nós examinamos\",\"eles/elas/vocês\":\"eles/elas/vocês examinam\"},\"pretérito_perfeito\":{\"eu\":\"eu examinei\",\"tu\":\"tu examinaste\",\"ele/ela/você\":\"ele/ela/você examinou\",\"nós\":\"nós examinámos\",\"eles/elas/vocês\":\"eles/elas/vocês examinaram\"},\"pretérito_imperfeito\":{\"eu\":\"eu examinava\",\"tu\":\"tu examinavas\",\"ele/ela/você\":\"ele/ela/você examinava\",\"nós\":\"nós examinávamos\",\"eles/elas/vocês\":\"eles/elas/vocês examinavam\"},\"futuro_simples\":{\"eu\":\"eu examinarei\",\"tu\":\"tu examinarás\",\"ele/ela/você\":\"ele/ela/você examinará\",\"nós\":\"nós examinaremos\",\"eles/elas/vocês\":\"eles/elas/vocês examinarão\"},\"condicional\":{\"eu\":\"eu examinaria\",\"tu\":\"tu examinarias\",\"ele/ela/você\":\"ele/ela/você examinaria\",\"nós\":\"nós examinaríamos\",\"eles/elas/vocês\":\"eles/elas/vocês examinariam\"},\"particípio_passado\":\"examinado\"},\"tags\":[\"verb\",\"b1\"],\"metadata\":{}},{\"id\":\"verbs-b1-health_medical-012\",\"target\":\"inchar\",\"source\":\"to swell\",\"type\":\"regular\",\"cefr\":\"B1\",\"grammar_note\":\"-ar conjugation group, auxiliary verb 'ter'. Regular verb.\",\"examples\":[{\"target\":\"Depois de torcer o tornozelo, o pé começou logo a inchar bastante.\",\"source\":\"After twisting my ankle, my foot immediately started to swell significantly.\"},{\"target\":\"Se a picada de inseto começar a inchar, deves aplicar gelo na zona.\",\"source\":\"If the insect bite starts to swell, you should apply ice to the area.\"}],\"conjugations\":{\"presente\":{\"eu\":\"eu incho\",\"tu\":\"tu inchas\",\"ele/ela/você\":\"ele/ela/você incha\",\"nós\":\"nós inchamos\",\"eles/elas/vocês\":\"eles/elas/vocês incham\"},\"pretérito_perfeito\":{\"eu\":\"eu inchei\",\"tu\":\"tu inchaste\",\"ele/ela/você\":\"ele/ela/você inchou\",\"nós\":\"nós inchámos\",\"eles/elas/vocês\":\"eles/elas/vocês incharam\"},\"pretérito_imperfeito\":{\"eu\":\"eu inchava\",\"tu\":\"tu inchavas\",\"ele/ela/você\":\"ele/ela/você inchava\",\"nós\":\"nós inchávamos\",\"eles/elas/vocês\":\"eles/elas/vocês inchavam\"},\"futuro_simples\":{\"eu\":\"eu incharei\",\"tu\":\"tu incharás\",\"ele/ela/você\":\"ele/ela/você inchará\",\"nós\":\"nós incharemos\",\"eles/elas/vocês\":\"eles/elas/vocês incharão\"},\"condicional\":{\"eu\":\"eu incharia\",\"tu\":\"tu incharias\",\"ele/ela/você\":\"ele/ela/você incharia\",\"nós\":\"nós incharíamos\",\"eles/elas/vocês\":\"eles/elas/vocês inchariam\"},\"particípio_passado\":\"inchado\"},\"tags\":[\"verb\",\"b1\"],\"metadata\":{}},{\"id\":\"verbs-b1-health_medical-013\",\"target\":\"medicar\",\"source\":\"to medicate / to prescribe medication\",\"type\":\"regular\",\"cefr\":\"B1\",\"grammar_note\":\"-ar conjugation group, auxiliary verb 'ter'. Regular verb.\",\"examples\":[{\"target\":\"O clínico geral decidiu medicar o paciente com analgésicos fortes.\",\"source\":\"The general practitioner decided to prescribe strong painkillers to the patient.\"},{\"target\":\"Não deves medicar-te por conta própria sem falar primeiro com um médico.\",\"source\":\"You must not medicate yourself on your own without speaking to a doctor first.\"}],\"conjugations\":{\"presente\":{\"eu\":\"eu medico\",\"tu\":\"tu medicas\",\"ele/ela/você\":\"ele/ela/você medica\",\"nós\":\"nós medicamos\",\"eles/elas/vocês\":\"eles/elas/vocês medicam\"},\"pretérito_perfeito\":{\"eu\":\"eu mediquei\",\"tu\":\"tu medicaste\",\"ele/ela/você\":\"ele/ela/você medicou\",\"nós\":\"nós medicámos\",\"eles/elas/vocês\":\"eles/elas/vocês medicaram\"},\"pretérito_imperfeito\":{\"eu\":\"eu medicava\",\"tu\":\"tu medicavas\",\"ele/ela/você\":\"ele/ela/você medicava\",\"nós\":\"nós medicávamos\",\"eles/elas/vocês\":\"eles/elas/vocês medicavam\"},\"futuro_simples\":{\"eu\":\"eu medicarei\",\"tu\":\"tu medicarás\",\"ele/ela/você\":\"ele/ela/você medicará\",\"nós\":\"nós medicaremos\",\"eles/elas/vocês\":\"eles/elas/vocês medicarão\"},\"condicional\":{\"eu\":\"eu medicaria\",\"tu\":\"tu medicarias\",\"ele/ela/você\":\"ele/ela/você medicaria\",\"nós\":\"nós medicaríamos\",\"eles/elas/vocês\":\"eles/elas/vocês medicariam\"},\"particípio_passado\":\"medicado\"},\"tags\":[\"verb\",\"b1\"],\"metadata\":{}},{\"id\":\"verbs-b1-health_medical-014\",\"target\":\"operar\",\"source\":\"to operate (surgery)\",\"type\":\"regular\",\"cefr\":\"B1\",\"grammar_note\":\"-ar conjugation group, auxiliary verb 'ter'. Regular verb.\",\"examples\":[{\"target\":\"O cirurgião vai operar o joelho do atleta na próxima terça-feira.\",\"source\":\"The surgeon is going to operate on the athlete's knee next Tuesday.\"},{\"target\":\"Foi preciso operar de urgência devido a uma apendicite aguda.\",\"source\":\"It was necessary to operate urgently due to acute appendicitis.\"}],\"conjugations\":{\"presente\":{\"eu\":\"eu opero\",\"tu\":\"tu operas\",\"ele/ela/você\":\"ele/ela/você opera\",\"nós\":\"nós operamos\",\"eles/elas/vocês\":\"eles/elas/vocês operam\"},\"pretérito_perfeito\":{\"eu\":\"eu operei\",\"tu\":\"tu operaste\",\"ele/ela/você\":\"ele/ela/você operou\",\"nós\":\"nós operámos\",\"eles/elas/vocês\":\"eles/elas/vocês operaram\"},\"pretérito_imperfeito\":{\"eu\":\"eu operava\",\"tu\":\"tu operavas\",\"ele/ela/você\":\"ele/ela/você operava\",\"nós\":\"nós operávamos\",\"eles/elas/vocês\":\"eles/elas/vocês operavam\"},\"futuro_simples\":{\"eu\":\"eu operarei\",\"tu\":\"tu operarás\",\"ele/ela/você\":\"ele/ela/você operará\",\"nós\":\"nós operaremos\",\"eles/elas/vocês\":\"eles/elas/vocês operarão\"},\"condicional\":{\"eu\":\"eu operaria\",\"tu\":\"tu operarias\",\"ele/ela/você\":\"ele/ela/você operaria\",\"nós\":\"nós operaríamos\",\"eles/elas/vocês\":\"eles/elas/vocês operariam\"},\"particípio_passado\":\"operado\"},\"tags\":[\"verb\",\"b1\"],\"metadata\":{}},{\"id\":\"verbs-b1-health_medical-015\",\"target\":\"prevenir\",\"source\":\"to prevent\",\"type\":\"regular\",\"cefr\":\"B1\",\"grammar_note\":\"-ir conjugation group, auxiliary verb 'ter'. Regular verb.\",\"examples\":[{\"target\":\"Tomar a vacina contra a gripe ajuda a prevenir doenças graves no inverno.\",\"source\":\"Taking the flu vaccine helps to prevent severe illnesses in the winter.\"},{\"target\":\"Devemos praticar exercício físico regularmente para prevenir problemas cardíacos.\",\"source\":\"We must practice physical exercise regularly to prevent heart problems.\"}],\"conjugations\":{\"presente\":{\"eu\":\"eu previno\",\"tu\":\"tu prevines\",\"ele/ela/você\":\"ele/ela/você previne\",\"nós\":\"nós prevenimos\",\"eles/elas/vocês\":\"eles/elas/vocês previnem\"},\"pretérito_perfeito\":{\"eu\":\"eu preveni\",\"tu\":\"tu preveniste\",\"ele/ela/você\":\"ele/ela/você preveniu\",\"nós\":\"nós prevenimos\",\"eles/elas/vocês\":\"eles/elas/vocês preveniram\"},\"pretérito_imperfeito\":{\"eu\":\"eu previa\",\"tu\":\"tu previas\",\"ele/ela/você\":\"ele/ela/você previa\",\"nós\":\"nós prevíamos\",\"eles/elas/vocês\":\"eles/elas/vocês previam\"},\"futuro_simples\":{\"eu\":\"eu prevenirei\",\"tu\":\"tu prevenirás\",\"ele/ela/você\":\"ele/ela/você prevenirá\",\"nós\":\"nós preveniremos\",\"eles/elas/vocês\":\"eles/elas/vocês prevenirão\"},\"condicional\":{\"eu\":\"eu preveniria\",\"tu\":\"tu prevenirias\",\"ele/ela/você\":\"ele/ela/você preveniria\",\"nós\":\"nós preveniríamos\",\"eles/elas/vocês\":\"eles/elas/vocês preveniriam\"},\"particípio_passado\":\"prevenido\"},\"tags\":[\"verb\",\"b1\"],\"metadata\":{}},{\"id\":\"verbs-b1-health_medical-016\",\"target\":\"recuperar\",\"source\":\"to recover\",\"type\":\"regular\",\"cefr\":\"B1\",\"grammar_note\":\"-ar conjugation group, auxiliary verb 'ter'. Regular verb.\",\"examples\":[{\"target\":\"Depois da cirurgia, levei um mês a recuperar totalmente as forças.\",\"source\":\"After the surgery, it took me a month to fully recover my strength.\"},{\"target\":\"O atleta está a recuperar bem da lesão na perna graças à fisioterapia.\",\"source\":\"The athlete is recovering well from the leg injury thanks to physiotherapy.\"}],\"conjugations\":{\"presente\":{\"eu\":\"eu recupero\",\"tu\":\"tu recuperas\",\"ele/ela/você\":\"ele/ela/você recupera\",\"nós\":\"nós recuperamos\",\"eles/elas/vocês\":\"eles/elas/vocês recuperam\"},\"pretérito_perfeito\":{\"eu\":\"eu recuperei\",\"tu\":\"tu recuperaste\",\"ele/ela/você\":\"ele/ela/você recuperou\",\"nós\":\"nós recuperámos\",\"eles/elas/vocês\":\"eles/elas/vocês recuperaram\"},\"pretérito_imperfeito\":{\"eu\":\"eu recuperava\",\"tu\":\"tu recuperavas\",\"ele/ela/você\":\"ele/ela/você recuperava\",\"nós\":\"nós recuperávamos\",\"eles/elas/vocês\":\"eles/elas/vocês recuperavam\"},\"futuro_simples\":{\"eu\":\"eu recuperarei\",\"tu\":\"tu recuperarás\",\"ele/ela/você\":\"ele/ela/você recuperará\",\"nós\":\"nós recuperaremos\",\"eles/elas/vocês\":\"eles/elas/vocês recuperarão\"},\"condicional\":{\"eu\":\"eu recuperaria\",\"tu\":\"tu recuperarias\",\"ele/ela/você\":\"ele/ela/você recuperaria\",\"nós\":\"nós recuperaríamos\",\"eles/elas/vocês\":\"eles/elas/vocês recuperariam\"},\"particípio_passado\":\"recuperado\"},\"tags\":[\"verb\",\"b1\"],\"metadata\":{}},{\"id\":\"verbs-b1-health_medical-017\",\"target\":\"respirar\",\"source\":\"to breathe\",\"type\":\"regular\",\"cefr\":\"B1\",\"grammar_note\":\"-ar conjugation group, auxiliary verb 'ter'. Regular verb.\",\"examples\":[{\"target\":\"Com esta alergia grave, é muito difícil respirar sem medicação.\",\"source\":\"With this severe allergy, it is very difficult to breathe without medication.\"},{\"target\":\"Inspira fundo e expira devagar para conseguir respirar melhor.\",\"source\":\"Inhale deeply and exhale slowly to manage to breathe better.\"}],\"conjugations\":{\"presente\":{\"eu\":\"eu respiro\",\"tu\":\"tu respiras\",\"ele/ela/você\":\"ele/ela/você respira\",\"nós\":\"nós respiramos\",\"eles/elas/vocês\":\"eles/elas/vocês respiram\"},\"pretérito_perfeito\":{\"eu\":\"eu respirei\",\"tu\":\"tu respiraste\",\"ele/ela/você\":\"ele/ela/você respirou\",\"nós\":\"nós respirámos\",\"eles/elas/vocês\":\"eles/elas/vocês respiraram\"},\"pretérito_imperfeito\":{\"eu\":\"eu respirava\",\"tu\":\"tu respiravas\",\"ele/ela/você\":\"ele/ela/você respirava\",\"nós\":\"nós respirávamos\",\"eles/elas/vocês\":\"eles/elas/vocês respiravam\"},\"futuro_simples\":{\"eu\":\"eu respirarei\",\"tu\":\"tu respirarás\",\"ele/ela/você\":\"ele/ela/você respirará\",\"nós\":\"nós respiraremos\",\"eles/elas/vocês\":\"eles/elas/vocês respirarão\"},\"condicional\":{\"eu\":\"eu respiraria\",\"tu\":\"tu respirarias\",\"ele/ela/você\":\"ele/ela/você respiraria\",\"nós\":\"nós respiraríamos\",\"eles/elas/vocês\":\"eles/elas/vocês respirariam\"},\"particípio_passado\":\"respirado\"},\"tags\":[\"verb\",\"b1\"],\"metadata\":{}},{\"id\":\"verbs-b1-health_medical-018\",\"target\":\"tosse\",\"source\":\"to cough\",\"type\":\"regular\",\"cefr\":\"B1\",\"grammar_note\":\"-ar conjugation group, auxiliary verb 'ter'. Regular verb. (Infinitive: tosse -> tosse is noun, wait! Infinitive is tossir!)\",\"examples\":[{\"target\":\"Comecei a tossir imenso durante a noite devido ao ar seco do quarto.\",\"source\":\"I started to cough a lot during the night due to the dry air in the bedroom.\"},{\"target\":\"Tossir sem colocar a mão à boca pode espalhar germes e vírus.\",\"source\":\"Coughing without putting your hand to your mouth can spread germs and viruses.\"}],\"conjugations\":{\"presente\":{\"eu\":\"eu tussa\",\"tu\":\"tu tosses\",\"ele/ela/você\":\"ele/ela/você tosse\",\"nós\":\"nós tossimos\",\"eles/elas/vocês\":\"eles/elas/vocês tossem\"},\"pretérito_perfeito\":{\"eu\":\"eu tossi\",\"tu\":\"tu tossiste\",\"ele/ela/você\":\"ele/ela/você tossiu\",\"nós\":\"nós tossimos\",\"eles/elas/vocês\":\"eles/elas/vocês tossiram\"},\"pretérito_imperfeito\":{\"eu\":\"eu tossia\",\"tu\":\"tu tossias\",\"ele/ela/você\":\"ele/ela/você tossia\",\"nós\":\"nós tossíamos\",\"eles/elas/vocês\":\"eles/elas/vocês tossiam\"},\"futuro_simples\":{\"eu\":\"eu tossirei\",\"tu\":\"tu tossirás\",\"ele/ela/você\":\"ele/ela/você tossirá\",\"nós\":\"nós tossiremos\",\"eles/elas/vocês\":\"eles/elas/vocês tossirão\"},\"condicional\":{\"eu\":\"eu tossiria\",\"tu\":\"tu tossirias\",\"ele/ela/você\":\"ele/ela/você tossiria\",\"nós\":\"nós tossiríamos\",\"eles/elas/vocês\":\"eles/elas/vocês tossiriam\"},\"particípio_passado\":\"tossido\"},\"tags\":[\"verb\",\"b1\"],\"metadata\":{}},{\"id\":\"verbs-b1-health_medical-019\",\"target\":\"tratar\",\"source\":\"to treat / to cure\",\"type\":\"regular\",\"cefr\":\"B1\",\"grammar_note\":\"-ar conjugation group, auxiliary verb 'ter'. Regular verb.\",\"examples\":[{\"target\":\"O dermatologista conseguiu tratar a minha alergia de pele com sucesso.\",\"source\":\"The dermatologist managed to treat my skin allergy successfully.\"},{\"target\":\"É importante tratar bem as feridas para evitar qualquer tipo de infeção.\",\"source\":\"It is important to treat wounds well to avoid any type of infection.\"}],\"conjugations\":{\"presente\":{\"eu\":\"eu trato\",\"tu\":\"tu tratas\",\"ele/ela/você\":\"ele/ela/você trata\",\"nós\":\"nós tratamos\",\"eles/elas/vocês\":\"eles/elas/vocês tratam\"},\"pretérito_perfeito\":{\"eu\":\"eu tratei\",\"tu\":\"tu trataste\",\"ele/ela/você\":\"ele/ela/você tratou\",\"nós\":\"nós tratámos\",\"eles/elas/vocês\":\"eles/elas/vocês trataram\"},\"pretérito_imperfeito\":{\"eu\":\"eu tratava\",\"tu\":\"tu tratavas\",\"ele/ela/você\":\"ele/ela/você tratava\",\"nós\":\"nós tratávamos\",\"eles/elas/vocês\":\"eles/elas/vocês tratavam\"},\"futuro_simples\":{\"eu\":\"eu tratarei\",\"tu\":\"tu tratarás\",\"ele/ela/você\":\"ele/ela/você tratará\",\"nós\":\"nós trataremos\",\"eles/elas/vocês\":\"eles/elas/vocês tratarão\"},\"condicional\":{\"eu\":\"eu trataria\",\"tu\":\"tu tratarias\",\"ele/ela/você\":\"ele/ela/você trataria\",\"nós\":\"nós trataríamos\",\"eles/elas/vocês\":\"eles/elas/vocês tratariam\"},\"particípio_passado\":\"tratado\"},\"tags\":[\"verb\",\"b1\"],\"metadata\":{}},{\"id\":\"verbs-b1-health_medical-020\",\"target\":\"vacinar\",\"source\":\"to vaccinate\",\"type\":\"regular\",\"cefr\":\"B1\",\"grammar_note\":\"-ar conjugation group, auxiliary verb 'ter'. Regular verb.\",\"examples\":[{\"target\":\"Todos os anos devemos vacinar-nos contra a gripe antes do inverno.\",\"source\":\"Every year we should vaccinate ourselves against the flu before winter.\"},{\"target\":\"Os enfermeiros foram à escola vacinar as crianças contra várias doenças.\",\"source\":\"The nurses went to the school to vaccinate the children against various diseases.\"}],\"conjugations\":{\"presente\":{\"eu\":\"eu vacino\",\"tu\":\"tu vacinas\",\"ele/ela/você\":\"ele/ela/você vacina\",\"nós\":\"nós vacinamos\",\"eles/elas/vocês\":\"eles/elas/vocês vacinam\"},\"pretérito_perfeito\":{\"eu\":\"eu vacinei\",\"tu\":\"tu vacinaste\",\"ele/ela/você\":\"ele/ela/você vacinou\",\"nós\":\"nós vacinámos\",\"eles/elas/vocês\":\"eles/elas/vocinaram\"},\"pretérito_imperfeito\":{\"eu\":\"eu vacinava\",\"tu\":\"tu vacinavas\",\"ele/ela/você\":\"ele/ela/você vacinava\",\"nós\":\"nós vacinávamos\",\"eles/elas/vocês\":\"eles/elas/vocês vacinavam\"},\"futuro_simples\":{\"eu\":\"eu vacinarei\",\"tu\":\"tu vacinarás\",\"ele/ela/você\":\"ele/ela/você vacinará\",\"nós\":\"nós vacinaremos\",\"eles/elas/vocês\":\"eles/elas/vocês vacinarão\"},\"condicional\":{\"eu\":\"eu vacinaria\",\"tu\":\"tu vacinarias\",\"ele/ela/você\":\"ele/ela/você vacinaria\",\"nós\":\"nós vacinaríamos\",\"eles/elas/vocês\":\"eles/elas/vocês vacinariam\"},\"particípio_passado\":\"vacinado\"},\"tags\":[\"verb\",\"b1\"],\"metadata\":{}}]";
+const langConfigJson = "{\"language_pair\":\"english_portuguese\",\"target_lang\":\"pt\",\"native_lang\":\"en\",\"target_lang_name\":\"Português\",\"native_lang_name\":\"English\",\"speech_lang\":\"pt-PT\",\"noun_metadata_fields\":[{\"key\":\"article\",\"label\":\"Artigo\",\"render\":\"article_badge\"},{\"key\":\"gender\",\"label\":\"Género\",\"render\":\"gender_label\"},{\"key\":\"plural\",\"label\":\"Plural\",\"render\":\"text\"}],\"article_colours\":{\"o\":\"#4A7C9E\",\"a\":\"#B05070\"},\"gender_labels\":{\"m\":\"Masculino\",\"f\":\"Feminino\"},\"verb_tenses\":[\"presente\",\"pretérito_perfeito\",\"pretérito_imperfeito\",\"particípio_passado\",\"futuro_simples\",\"condicional\"],\"cases\":{},\"ui_labels\":{\"learn_mode\":\"Aprender\",\"train_mode\":\"Treinar\",\"examples_heading\":\"Frases de exemplo\",\"grammar_note_heading\":\"Nota gramatical\",\"audio_button\":\"Ouvir\",\"back_link\":\"Voltar\",\"card_counter\":\"Cartão {current} / {total}\",\"next_button\":\"Seguinte\",\"finish_button\":\"Concluir\",\"correct\":\"Correto!\",\"wrong\":\"Incorreto\",\"dashboard_link\":\"Painel principal\",\"library_prompt\":\"Escolha um baralho da biblioteca e explore o conteúdo dos cartões.\",\"cards_badge\":\"{count} CARTÕES\",\"cards_count\":\"{count} cartões\",\"deck_meta\":\"{topic} • {level} • {count} cartões\",\"no_decks\":\"Ainda não existem baralhos nesta categoria.\",\"setup_title\":\"Configurar treino\",\"setup_subtitle\":\"Configure a sua sessão de treino.\",\"question_type\":\"Tipo de pergunta\",\"mode_multiple_choice\":\"Escolha múltipla\",\"mode_typing\":\"Digitação de texto\",\"mode_typing_short\":\"Digitação\",\"direction\":\"Direção\",\"direction_forward\":\"🇺🇸 English → 🇵🇹 Português\",\"direction_reverse\":\"🇵🇹 Português → 🇺🇸 English\",\"select_level\":\"Selecionar nível\",\"start_training\":\"Iniciar treino\",\"count_label\":\"Quantidade\",\"all_cards\":\"Todas\",\"in_deck\":\"no baralho\",\"view_cards\":\"Cartões\",\"view_list\":\"Lista\",\"card_word\":\"Cartão\",\"keyboard_hint_study\":\"← → Teclas de seta para navegar · A para ouvir\",\"example_single_heading\":\"Exemplo\",\"no_example\":\"Nenhum exemplo disponível.\",\"tags_label\":\"Etiquetas:\",\"type_vocab\":\"Vocabulário\",\"type_verb\":\"Verbo\",\"type_phrase\":\"Expressão\",\"type_connector\":\"Conector\",\"type_grammar\":\"Gramática\",\"type_noun\":\"Substantivo\",\"type_adjective\":\"Adjetivo\",\"type_expression\":\"Locução\",\"plural_prefix\":\"Pl. {plural}\",\"plural_only\":\"apenas plural\",\"word_order_heading\":\"Ordem das palavras\",\"structure_heading\":\"Estrutura\",\"training_title\":\"Treino\",\"all_levels\":\"Todos os níveis\",\"type_placeholder\":\"Escreva a palavra em português...\",\"check_button\":\"Verificar\",\"keyboard_hint_train\":\"Enter / Espaço = confirmar · A = Ouvir\",\"audio_title\":\"Ouvir (A)\",\"training_finished\":\"Treino concluído!\",\"missed_heading\":\"Respostas erradas — para repetir\",\"retry_missed\":\"Repetir erros\",\"new_config\":\"Nova configuração\",\"plural_hint\":\"Pl: {plural}\",\"results_pct\":\"{pct}% de acertos\",\"result_excellent\":\"Excelente! Dominou este nível com distinção.\",\"result_good\":\"Muito bem! Mais um pouco de prática e dominará tudo!\",\"result_ok\":\"Bom começo! Reveja os cartões mais uma vez.\",\"result_retry\":\"Sem problema — a prática leva à perfeição!\",\"no_cards_title\":\"Nenhum cartão encontrado\",\"no_cards_hint\":\"Por favor, selecione outro nível ou baralho.\"},\"answer_normalisation\":{\"strip_leading_words\":[\"o\",\"a\",\"os\",\"as\",\"um\",\"uma\",\"uns\",\"umas\"],\"alt_spellings\":{\"á\":\"a\",\"à\":\"a\",\"ã\":\"a\",\"â\":\"a\",\"é\":\"e\",\"ê\":\"e\",\"í\":\"i\",\"ó\":\"o\",\"ô\":\"o\",\"õ\":\"o\",\"ú\":\"u\",\"ç\":\"c\"}}}";
+const category = "verbs";
+const lang = "en-pt";
+const base = "/languagelounge/";
+const defaultView = "cards";
+
+  const cards     = JSON.parse(cardsJson);
+  const config    = JSON.parse(langConfigJson);
+  let currentIndex = 0;
+
+  const dotNav    = document.getElementById('dot-nav');
+  const currentNum = document.getElementById('current-num');
+  const progressBar = document.getElementById('progress-bar');
+  const btnPrev   = document.getElementById('btn-prev');
+  const btnNext   = document.getElementById('btn-next');
+  const cardHost  = document.getElementById('card-host');
+  const progressCont = document.getElementById('progress-container');
+
+  const cardViewWrap = document.getElementById('card-view-wrap');
+  const listViewWrap = document.getElementById('list-view-wrap');
+  const btnViewCards = document.getElementById('view-cards-btn');
+  const btnViewList  = document.getElementById('view-list-btn');
+
+  // Toggle Logic
+  function setViewMode(mode) {
+    if (mode === 'list') {
+      cardViewWrap.classList.add('hidden');
+      listViewWrap.classList.remove('hidden');
+      progressCont.classList.add('hidden');
+      btnViewList.classList.add('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewList.classList.remove('text-[var(--text-muted)]');
+      btnViewCards.classList.remove('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewCards.classList.add('text-[var(--text-muted)]');
+    } else {
+      listViewWrap.classList.add('hidden');
+      cardViewWrap.classList.remove('hidden');
+      progressCont.classList.remove('hidden');
+      btnViewCards.classList.add('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewCards.classList.remove('text-[var(--text-muted)]');
+      btnViewList.classList.remove('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewList.classList.add('text-[var(--text-muted)]');
+    }
+  }
+
+  btnViewCards.addEventListener('click', () => setViewMode('cards'));
+  btnViewList.addEventListener('click', () => setViewMode('list'));
+
+  // Initial view is configured per category (config/language_pairs/*.yaml → categories[].default_view)
+  if (defaultView === 'list') {
+    setViewMode('list');
+  }
+
+
+
+  // ── Helpers (mirror card-renderer.ts — no module imports in inline scripts) ──
+  const articleColours = config.article_colours || {};
+  const genderLabels   = config.gender_labels   || {};
+  const speechLang     = config.speech_lang;
+  const ui             = config.ui_labels || {};
+  const fmt = (tpl, vars) => String(tpl).replace(/\{(\w+)\}/g, (m, k) => (k in vars ? vars[k] : m));
+  const formatHighlight = (text) => text ? String(text).replace(/\*(.*?)\*/g, '<span class="highlighter">$1</span>') : '';
+  // Articles come from the language config (keys of article_colours), never hardcoded
+  const articleList = Object.keys(articleColours);
+  const articlePatterns = articleList.map(a => {
+    const esc = a.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    return esc.endsWith("'") ? esc : `${esc}\\s+`;
+  });
+  const articleRe = articlePatterns.length
+    ? new RegExp('^(?:' + articlePatterns.join('|') + ')', 'i')
+    : null;
+
+  function stripArticle(w) {
+    return articleRe ? (w || '').replace(articleRe, '').trim() : (w || '').trim();
+  }
+
+  function getTypeLabel(card) {
+    const tags = card.tags || [];
+    if (tags.includes('noun'))       return ui.type_noun;
+    if (tags.includes('verb'))       return ui.type_verb;
+    if (tags.includes('adjective'))  return ui.type_adjective;
+    if (tags.includes('expression')) return ui.type_expression;
+    const byType = { vocab: ui.type_vocab, verb: ui.type_verb, phrase: ui.type_phrase, connector: ui.type_connector, grammar: ui.type_grammar };
+    return byType[card.type] || ui.type_vocab;
+  }
+
+  function normaliseEx(ex) {
+    return { target: ex.target||'', source: ex.source||'', note: ex.note };
+  }
+
+  function getMetaFacts(card) {
+    const meta = card.metadata || {};
+    const facts = [];
+    for (const field of (config.noun_metadata_fields || [])) {
+      const raw = meta[field.key];
+      if (!raw || raw==='~') continue;
+      let value = String(raw), colour;
+      if (field.render === 'gender_label')  value  = genderLabels[raw] || raw;
+      if (field.render === 'article_badge') colour = articleColours[raw.toLowerCase()] || 'var(--espresso)';
+      facts.push({ label: field.label, value, colour });
+    }
+    return facts;
+  }
+
+  // ── Card renderer ─────────────────────────────────────────────────────────
+  function renderCard(idx) {
+    const card = cards[idx];
+    if (!card || !cardHost) return;
+
+    const lc = cardHost.querySelector('.learning-card');
+    if (!lc) return;
+
+    function sel(cls) { return lc.querySelector(cls); }
+
+    // Type badge + level
+    sel('.lc-type-badge').textContent = getTypeLabel(card);
+    sel('.lc-level-badge').textContent = (card.level || '').toUpperCase();
+
+    // Article
+    const article = card.metadata?.article;
+    const articleWrap = sel('.lc-article-wrap');
+    const articleEl   = sel('.lc-article');
+    if (article && (card.tags||[]).includes('noun') && !card.metadata?.plural_only) {
+      articleEl.textContent = article;
+      articleEl.style.color = articleColours[article.toLowerCase()] || 'var(--espresso)';
+      articleWrap.style.display = '';
+    } else {
+      articleWrap.style.display = 'none';
+    }
+
+    // Word / translation / forms
+    sel('.lc-word').textContent        = stripArticle(card.target);
+    sel('.lc-translation').textContent = card.source || '';
+    const plural = card.metadata?.plural;
+    sel('.lc-forms').textContent = plural && !card.metadata?.plural_only ? fmt(ui.plural_prefix, { plural }) : card.metadata?.plural_only ? ui.plural_only : '';
+
+    // Meta grid
+    const metaGrid = sel('.lc-meta-grid');
+    const facts = getMetaFacts(card);
+    if (facts.length) {
+      metaGrid.style.gridTemplateColumns = `repeat(${Math.min(facts.length,4)}, 1fr)`;
+      metaGrid.style.display = '';
+      metaGrid.innerHTML = facts.map((f, i) => `
+        <div class="px-5 py-4 ${i<facts.length-1?'border-r':''}" style="border-color:var(--border);">
+          <p class="text-[9px] font-bold uppercase tracking-widest mb-1" style="color:var(--text-muted);">${f.label}</p>
+          <p class="text-sm font-bold" style="color:${f.colour||'var(--text)'};">${f.value}</p>
+        </div>`).join('');
+    } else {
+      metaGrid.style.display = 'none';
+    }
+
+    // Grammar note
+    const grammarWrap = sel('.lc-grammar-wrap');
+    if (card.grammar_note) {
+      sel('.lc-grammar-text').innerHTML = formatHighlight(card.grammar_note);
+      grammarWrap.classList.remove('hidden');
+    } else {
+      grammarWrap.classList.add('hidden');
+    }
+
+    // Examples
+    const examplesEl = sel('.lc-examples');
+    const rawEx = card.examples || [];
+    examplesEl.innerHTML = rawEx.length
+      ? rawEx.map(ex => { const e=normaliseEx(ex); return `
+          <div class="rounded-2xl border overflow-hidden" style="border-color:var(--border);">
+            <div class="px-4 py-3" style="background-color:var(--bg);">
+              <p class="font-semibold leading-snug mb-1" style="color:var(--text);">${e.target}</p>
+              <p class="text-sm italic" style="color:var(--text-muted);">${e.source||''}</p>
+            </div>
+            ${e.note?`<div class="px-4 py-2 border-t" style="border-color:var(--border);">
+              <p class="text-[10px] font-bold font-mono" style="color:var(--espresso);">📐 ${e.note}</p>
+            </div>`:''}
+          </div>`; }).join('')
+      : '<p class="text-sm italic" style="color:var(--text-muted);">' + ui.no_example + '</p>';
+
+    // Verb: conjugation table
+    const conjWrap  = sel('.lc-conjugation-wrap');
+    const conjInner = sel('.lc-conjugation-inner');
+    const cardType = card.type || (card.tags?.includes('verb') ? 'verb' : 'vocab');
+    if (conjWrap && conjInner) {
+      if (cardType === 'verb' && card.conjugations) {
+        conjWrap.classList.remove('hidden');
+        let conjArray = [];
+        if (Array.isArray(card.conjugations)) {
+          conjArray = card.conjugations;
+        } else {
+          for (const [tense, forms] of Object.entries(card.conjugations)) {
+            if (typeof forms === 'string') {
+              conjArray.push({ tense, stringForm: forms });
+            } else {
+              const formsArr = Object.entries(forms).map(([pronoun, form]) => ({ pronoun, form }));
+              conjArray.push({ tense, forms: formsArr });
+            }
+          }
+        }
+
+        const tensesToRender = config.verb_tenses || conjArray.map(t => t.tense);
+        const stringTenses = [];
+        const tableTenses = [];
+
+        tensesToRender.forEach(tense => {
+          const t = conjArray.find(c => c.tense === tense);
+          if (!t) return;
+          if (t.stringForm) stringTenses.push(t);
+          else tableTenses.push(t);
+        });
+
+        let html = '';
+        if (stringTenses.length > 0) {
+          html += `
+            <div class="flex flex-wrap gap-3 mb-6">
+              ${stringTenses.map(t => `
+                <div class="rounded-xl border px-4 py-2.5 flex items-center gap-3 shadow-sm" style="border-color:var(--border); background-color:var(--bg);">
+                  <span class="text-[10px] font-bold uppercase tracking-widest opacity-80" style="color:var(--espresso);">${t.tense.replace(/_/g, ' ')}</span>
+                  <span class="font-bold text-sm" style="color:var(--text);">${t.stringForm}</span>
+                </div>
+              `).join('')}
+            </div>
+          `;
+        }
+
+        if (tableTenses.length > 0) {
+          const pronouns = tableTenses[0].forms.map(f => f.pronoun);
+          html += `
+            <div class="rounded-xl border overflow-x-auto shadow-sm w-full" style="border-color:var(--border);">
+              <table class="w-full text-sm text-left">
+                <thead>
+                  <tr style="background-color:var(--bg); border-bottom: 1px solid var(--border);">
+                    <th class="px-4 py-3 font-bold uppercase tracking-widest text-[10px] w-[1%]" style="color:var(--espresso); border-right: 1px solid var(--border);"></th>
+                    ${tableTenses.map(t => `
+                      <th class="px-4 py-3 font-bold uppercase tracking-widest text-[10px]" style="color:var(--espresso);">${t.tense.replace(/_/g, ' ')}</th>
+                    `).join('')}
+                  </tr>
+                </thead>
+                <tbody>
+                  ${pronouns.map((pronoun, ri) => `
+                    <tr class="${ri < pronouns.length - 1 ? 'border-b' : ''}" style="border-color:var(--border);">
+                      <td class="px-4 py-3 font-bold text-xs whitespace-nowrap" style="color:var(--espresso); background-color:var(--bg); border-right: 1px solid var(--border);">${pronoun}</td>
+                      ${tableTenses.map(t => {
+                        const formObj = t.forms.find(f => f.pronoun === pronoun);
+                        return `<td class="px-4 py-3 font-semibold whitespace-nowrap" style="color:var(--text);">${formObj ? formObj.form : '-'}</td>`;
+                      }).join('')}
+                    </tr>
+                  `).join('')}
+                </tbody>
+              </table>
+            </div>
+          `;
+        }
+        conjInner.innerHTML = html;
+      } else {
+        conjWrap.classList.add('hidden');
+        conjInner.innerHTML = '';
+      }
+    }
+
+    // Connector: word order block
+    const woWrap = sel('.lc-wordorder-wrap');
+    if (woWrap) {
+      if (cardType === 'connector' && card.word_order) {
+        sel('.lc-wordorder-text').textContent = card.word_order;
+        woWrap.classList.remove('hidden');
+      } else {
+        woWrap.classList.add('hidden');
+      }
+    }
+
+    // Phrase: preposition rule block
+    const phraseWrap = sel('.lc-phrase-wrap');
+    if (phraseWrap) {
+      if (cardType === 'phrase' && card.clause_type) {
+        sel('.lc-phrase-rule').textContent = card.clause_type;
+        phraseWrap.classList.remove('hidden');
+      } else {
+        phraseWrap.classList.add('hidden');
+      }
+    }
+
+    // Tags
+    sel('.lc-tags').innerHTML = (card.tags||[]).map(t =>
+      `<span class="text-[10px] font-bold px-2 py-0.5 rounded-md border" style="border-color:var(--border);color:var(--text-muted);background-color:var(--bg);">${t}</span>`
+    ).join('');
+
+    // Progress UI
+    if (currentNum)  currentNum.textContent = String(idx+1);
+    if (progressBar) progressBar.style.width = `${Math.round(((idx+1)/cards.length)*100)}%`;
+    if (btnPrev)     btnPrev.disabled = idx === 0;
+    if (btnNext)     btnNext.innerHTML = idx === cards.length-1
+      ? '✓ ' + ui.finish_button
+      : ui.next_button + ' <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>';
+
+    updateDots();
+
+    // Re-bind audio button cleanly by cloning to strip old listeners
+    const oldBtn = sel('.lc-audio-btn');
+    if (oldBtn) {
+      const newBtn = oldBtn.cloneNode(true);
+      oldBtn.parentNode.replaceChild(newBtn, oldBtn);
+      newBtn.addEventListener('click', speakCurrent);
+    }
+  }
+
+  // ── Dot navigation ────────────────────────────────────────────────────────
+  function buildDots() {
+    if (!dotNav) return;
+    dotNav.innerHTML = '';
+    const maxVisible = 20;
+    const showAll = cards.length <= maxVisible;
+    cards.forEach((_, i) => {
+      if (!showAll && i >= maxVisible) return;
+      const dot = document.createElement('button');
+      dot.className = 'dot w-2 h-2 rounded-full transition-all duration-300 flex-shrink-0';
+      dot.style.backgroundColor = 'var(--border)';
+      dot.title = `${ui.card_word} ${i+1}`;
+      dot.addEventListener('click', () => goTo(i));
+      dotNav.appendChild(dot);
+    });
+    if (!showAll) {
+      const el = document.createElement('span');
+      el.textContent = `+${cards.length - maxVisible}`;
+      el.className = 'text-[10px] font-bold';
+      el.style.color = 'var(--text-muted)';
+      dotNav.appendChild(el);
+    }
+  }
+
+  function updateDots() {
+    dotNav?.querySelectorAll('.dot').forEach((dot, i) => {
+      dot.style.backgroundColor = i===currentIndex ? 'var(--espresso)' : 'var(--border)';
+      dot.style.width     = i===currentIndex ? '20px' : '8px';
+      dot.style.borderRadius = '4px';
+    });
+  }
+
+  // ── Audio ─────────────────────────────────────────────────────────────────
+  function speakCurrent() {
+    const card = cards[currentIndex];
+    if (!card) return;
+    if (window.LoungeAudioEngine) {
+      window.LoungeAudioEngine.speak(card.target || '', speechLang, 0.85);
+    }
+  }
+
+  // ── Navigate ─────────────────────────────────────────────────────────────
+  function goTo(idx) {
+    if (idx < 0 || idx >= cards.length) return;
+    currentIndex = idx;
+    renderCard(currentIndex);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  btnPrev?.addEventListener('click', () => goTo(currentIndex - 1));
+  btnNext?.addEventListener('click', () => {
+    if (currentIndex === cards.length - 1) window.location.href = `${base}${lang}/${category}/`;
+    else goTo(currentIndex + 1);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') goTo(currentIndex + 1);
+    if (e.key === 'ArrowLeft')  goTo(currentIndex - 1);
+    if (e.key === 'a' || e.key === 'A') speakCurrent();
+  });
+
+  // ── Learn / Train panel toggle ──────────────────────
+  const btnLearn = document.getElementById('btn-mode-learn');
+  const btnTrain = document.getElementById('btn-mode-train');
+  const pnlLearn = document.getElementById('learn-panel');
+  const pnlTrain = document.getElementById('train-panel');
+  const toolbar  = document.getElementById('learn-toolbar');
+
+  const STORAGE_KEY = `lounge:${lang}:${category}:deck:mode`;
+  let currentMode = localStorage.getItem(STORAGE_KEY) || 'learn';
+
+  function applyMode() {
+    if (currentMode === 'learn') {
+      btnLearn.style.backgroundColor = 'var(--espresso)';
+      btnLearn.style.color = '#F5F2EB';
+      btnTrain.style.backgroundColor = 'transparent';
+      btnTrain.style.color = 'var(--text-muted)';
+      pnlLearn.classList.remove('hidden');
+      toolbar.classList.remove('hidden');
+      pnlTrain.classList.add('hidden');
+    } else {
+      btnTrain.style.backgroundColor = 'var(--espresso)';
+      btnTrain.style.color = '#F5F2EB';
+      btnLearn.style.backgroundColor = 'transparent';
+      btnLearn.style.color = 'var(--text-muted)';
+      pnlTrain.classList.remove('hidden');
+      pnlLearn.classList.add('hidden');
+      toolbar.classList.add('hidden');
+    }
+    localStorage.setItem(STORAGE_KEY, currentMode);
+  }
+
+  btnLearn?.addEventListener('click', () => { currentMode = 'learn'; applyMode(); });
+  btnTrain?.addEventListener('click', () => { currentMode = 'train'; applyMode(); });
+  applyMode();
+
+  // ── Radio-style selectors (mode & dir & count) ─────────────
+  document.querySelectorAll('.sel-opt').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const group = btn.dataset.group;
+      document.querySelectorAll(`.sel-opt[data-group="${group}"]`).forEach(b => b.classList.remove('sel-active'));
+      btn.classList.add('sel-active');
+      const hidden = document.getElementById(`${group}-hidden`);
+      if (hidden) hidden.value = btn.dataset.value;
+    });
+  });
+
+  document.getElementById('deck-train-form')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const base = form.action;
+    const mode = document.getElementById('mode-hidden')?.value || 'mc';
+    const dir  = document.getElementById('dir-hidden')?.value || `${config.language_pair.source_code}-${config.language_pair.target_code}`.toLowerCase();
+    const count = document.getElementById('count-hidden')?.value || '30';
+    const level = form.querySelector('[name="level"]')?.value || '';
+    const deck = form.querySelector('[name="deck"]')?.value || '';
+    
+    const params = new URLSearchParams();
+    if(level) params.set('level', level);
+    params.set('deck', deck);
+    params.set('mode', mode);
+    params.set('dir', dir);
+    params.set('count', count);
+    
+    window.location.href = `${base}?${params.toString()}`;
+  });
+
+  // ── Init ─────────────────────────────────────────────────────────────────
+  buildDots();
+  // Card 0 is already rendered server-side via LearningCard component.
+  // Sync progress UI to reflect card 0 state.
+  updateDots();
+  if (progressBar) progressBar.style.width = `${Math.round(1/cards.length*100)}%`;
+  // Update card 0 using client-side config too (ensures langConfig is applied)
+  renderCard(0);
+})();</script>

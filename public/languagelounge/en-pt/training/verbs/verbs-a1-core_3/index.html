@@ -1,0 +1,758 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="description" content="Lounge Português — O seu espaço dedicado à língua portuguesa — expanda o seu vocabulário, domine a gramática e aprofunde o seu português do nível A1 ao B2."><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/languagelounge/favicon.svg"><meta name="generator" content="Astro v7.3.5"><title>Core Verbs, Part 3 — Lounge Português</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet"><script>
+      (function() {
+        const saved = localStorage.getItem('wortschatz_theme');
+        if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script><link rel="stylesheet" href="/languagelounge/_astro/Layout.Cr1varBg.css"><style>.sel-opt[data-astro-cid-5tabbh6g]{border:2px solid var(--border);background-color:var(--card);color:var(--text);cursor:pointer;text-align:center;border-radius:12px;flex-direction:column;justify-content:center;align-items:center;width:100%;padding:14px 12px;transition:border-color .15s,background-color .15s,color .15s,box-shadow .15s;display:flex}.sel-opt[data-astro-cid-5tabbh6g]:hover{border-color:var(--border-hover);box-shadow:0 2px 8px #00000014}.sel-opt[data-astro-cid-5tabbh6g].sel-active{border-color:var(--espresso);background-color:var(--espresso);color:#f5f2eb;box-shadow:0 2px 12px #0000002e}
+</style></head><body class="antialiased min-h-screen flex flex-col" style="background-color:var(--bg);color:var(--text);"><!-- Header --><header class="sticky top-0 z-50 border-b" style="background-color:var(--bg);border-color:var(--border);"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between gap-4" style="height:4.5rem;"><!-- Logo + Language Switcher --><div class="flex items-center gap-4 shrink-0"><a href="/languagelounge/en-pt/" class="flex items-center gap-2 group"><span class="font-outfit font-extrabold text-xl sm:text-2xl tracking-tight transition-colors" style="color:var(--text);">Small Talk Café<span class="font-normal text-base hidden sm:inline" style="color:var(--text-muted);"> | <span id="site-name">Lounge Português</span></span></span></a><!-- Language Selector Dropdown --><div class="relative" id="lang-dropdown-wrapper"><button id="lang-btn" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-sm font-bold transition-all hover:opacity-70" style="background-color:var(--bg); border-color:var(--border); color:var(--text);"><span id="lang-flag">🇵🇹</span><span id="lang-code">PT</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"></path></svg></button><div id="lang-menu" class="hidden absolute top-full left-0 mt-2 rounded-2xl border shadow-2xl overflow-hidden z-50 min-w-[260px] sm:min-w-[300px]" style="background-color:var(--card); border-color:var(--border);"><div class="px-3.5 py-2 text-[11px] font-bold uppercase tracking-wider border-b" style="background-color:var(--surface); border-color:var(--border); color:var(--text-muted);">Language Lounges</div><div><a href="/languagelounge/en-de/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇩🇪</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Deutsch Lounge</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">Der Raum für die deutsche Sprache</div></div></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-es/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇪🇸</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Lounge Español</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">El espacio para la lengua española</div></div></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-fr/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇫🇷</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Lounge Français</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">Le salon de la langue française</div></div></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-it/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇮🇹</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Lounge Italiano</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">Il salotto per la lingua italiana</div></div></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-nl/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇳🇱</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Nederlands Lounge</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">Dé ontmoetingsplek voor de Nederlandse taal</div></div></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-pt/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-bold" style="color:var(--text); background-color:var(--surface);"><span class="text-2xl shrink-0">🇵🇹</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Lounge Português</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">O espaço para a língua portuguesa</div></div><span class="shrink-0 text-[10px] font-extrabold uppercase px-1.5 py-0.5 rounded" style="background-color:var(--accent); color:var(--bg);">Active</span></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-sv/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇸🇪</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Svenska Lounge</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">Mötesplatsen för det svenska språket</div></div></a></div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/" class="w-full flex items-center gap-2.5 px-4 py-2.5 text-xs font-semibold hover:opacity-80 transition-colors " style="color:var(--text); "><span class="text-base">🏛️</span><span>Language Lounge Hub</span><span class="ml-auto text-[11px]" style="color:var(--text-muted);">Overview &rarr;</span></a></div></div></div><!-- Dynamic Nav Links --><nav class="hidden md:flex gap-5 items-center"><a href="https://smalltalkcafe.de/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Small Talk Café Podcasts</a><span class="text-sm font-normal" style="color:var(--border);">|</span><a href="/languagelounge/en-pt/vocabulary/" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Vocabulário</a><a href="/languagelounge/en-pt/verbs/" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Verbos</a><a href="/languagelounge/en-pt/grammatik/" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Gramática</a><a href="/languagelounge/en-pt/redemittel/" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Expressões</a><!-- Dark/Light Toggle --><button id="theme-toggle" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-sm font-semibold transition-all hover:opacity-70" style="border-color:var(--border); color:var(--text-muted);" aria-label="Toggle dark/light mode"><span id="theme-icon">☀️</span><span id="theme-label">Light</span></button></nav></div></header><main id="main-content" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-1 w-full"><div class="max-w-4xl mx-auto py-6" data-astro-cid-5tabbh6g><!-- Deck Header --><div class="flex items-start justify-between mb-8 gap-4 flex-wrap" data-astro-cid-5tabbh6g><div data-astro-cid-5tabbh6g><a href="/languagelounge/en-pt/verbs/" class="text-xs font-bold flex items-center gap-1 mb-2 hover:opacity-70 transition-opacity" style="color:var(--espresso);" data-astro-cid-5tabbh6g><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><path d="m15 18-6-6 6-6" data-astro-cid-5tabbh6g></path></svg>Verbos</a><h1 class="text-2xl md:text-3xl font-extrabold font-outfit" style="color:var(--text);" data-astro-cid-5tabbh6g>Core Verbs, Part 3</h1><p class="text-xs font-bold uppercase tracking-wider mt-1" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Verbos Principais, Parte 3 • A1 • 20 cartões</p></div><div class="flex flex-col items-end gap-4 w-full md:w-auto mt-4 md:mt-0" data-astro-cid-5tabbh6g><!-- ── Mode Toggle ───────────────────────────── --><div class="flex rounded-xl border overflow-hidden p-1 gap-1 w-full max-w-[300px]" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><button id="btn-mode-learn" class="mode-btn flex-1 flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold transition-all" data-astro-cid-5tabbh6g><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" data-astro-cid-5tabbh6g></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" data-astro-cid-5tabbh6g></path></svg>Aprender</button><button id="btn-mode-train" class="mode-btn flex-1 flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold transition-all" data-astro-cid-5tabbh6g><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><circle cx="12" cy="12" r="10" data-astro-cid-5tabbh6g></circle><polyline points="12 6 12 12 16 14" data-astro-cid-5tabbh6g></polyline></svg>Treinar</button></div><div id="learn-toolbar" class="flex flex-col items-end gap-4 w-full" data-astro-cid-5tabbh6g><!-- View switcher (Cards vs List) --><div class="flex rounded-xl border overflow-hidden p-1 gap-1 w-full max-w-[300px]" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><button id="view-cards-btn" class="view-btn flex-1 flex items-center justify-center px-4 py-2 rounded-lg text-xs font-bold transition-all bg-[var(--espresso)] text-[#F5F2EB]" data-astro-cid-5tabbh6g>Cartões</button><button id="view-list-btn" class="view-btn flex-1 flex items-center justify-center px-4 py-2 rounded-lg text-xs font-bold transition-all text-[var(--text-muted)] hover:opacity-70" data-astro-cid-5tabbh6g>Lista</button></div><!-- Progress indicator --><div id="progress-container" class="flex items-center gap-3" data-astro-cid-5tabbh6g><div class="text-xs font-semibold" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Cartão <span id="current-num" class="font-extrabold" style="color:var(--text);" data-astro-cid-5tabbh6g>1</span> / 20</div><div class="w-24 h-1.5 rounded-full overflow-hidden border" style="background-color:var(--bg);border-color:var(--border);" data-astro-cid-5tabbh6g><div id="progress-bar" class="h-full transition-all duration-500 rounded-full" style="width:0%; background-color:var(--espresso);" data-astro-cid-5tabbh6g></div></div></div></div></div></div><!-- ══ LEARN PANEL ════════════════════════════ --><div id="learn-panel" class="space-y-6" data-astro-cid-5tabbh6g><!-- ── Universal Study Card (rendered by LearningCard component) ── --><div id="card-view-wrap" data-astro-cid-5tabbh6g><div id="card-host" data-astro-cid-5tabbh6g><!-- The card shell — populated client-side by renderCard() --><div class="learning-card rounded-3xl border shadow-xl overflow-hidden" style="background-color:var(--card); border-color:var(--border);"><!-- ── Top bar ─────────────────────────────────── --><div class="lc-topbar flex items-center justify-between px-6 py-3.5 border-b" style="border-color:var(--border); background-color:var(--bg);"><div class="flex items-center gap-2"><span class="lc-type-badge text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-lg" style="background-color:var(--espresso); color:#F5F2EB;">—</span><span class="lc-level-badge text-[10px] font-bold px-2.5 py-1 rounded-lg cafe-badge"></span></div><button class="lc-audio-btn flex items-center justify-center w-11 h-11 rounded-full transition-transform hover:scale-105 active:scale-95 shadow-md flex-shrink-0" title="Ouvir (A)" style="background-color:var(--espresso); color:#F5F2EB;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg></button></div><!-- ── Main word display ───────────────────────── --><div class="lc-hero px-7 py-8 text-center border-b" style="border-color:var(--border);"><div class="lc-article-wrap mb-1.5"><span class="lc-article text-xl font-bold"></span></div><h2 class="lc-word text-5xl md:text-6xl font-extrabold font-outfit mb-3" style="color:var(--text);">—</h2><p class="lc-translation text-lg font-semibold italic" style="color:var(--text-muted);"></p><p class="lc-forms text-sm font-medium mt-2" style="color:var(--text-muted);"></p></div><!-- ── Meta info grid ─────────────────────────── --><div class="lc-meta-grid grid border-b" style="border-color:var(--border);"><!-- populated by JS --></div><!-- ── Grammar note ───────────────────────────── --><div class="lc-grammar-wrap hidden px-7 py-5 border-b" style="border-color:var(--border); background-color:var(--bg);"><p class="text-[10px] font-bold uppercase tracking-widest mb-2" style="color:var(--espresso);">📌 <span class="lc-grammar-label">Nota gramatical</span></p><p class="lc-grammar-text text-sm leading-relaxed font-medium whitespace-pre-wrap" style="color:var(--text);"></p></div><!-- ── Type-specific block ────────────────────── --><!-- Connector word-order block --><div class="lc-wordorder-wrap hidden px-7 py-4 border-b" style="border-color:var(--border); background-color:var(--bg);"><div class="flex items-start gap-3 text-sm font-medium" style="color:var(--text-muted);"><span class="text-base flex-shrink-0">📐</span><span class="lc-wordorder-text"></span></div></div><!-- Phrase preposition block --><div class="lc-phrase-wrap hidden px-7 py-4 border-b" style="border-color:var(--border); background-color:var(--bg);"><p class="text-[10px] font-bold uppercase tracking-widest mb-2" style="color:var(--espresso);">Estrutura</p><p class="lc-phrase-rule text-sm font-semibold" style="color:var(--text);"></p></div><!-- ── Examples ───────────────────────────────── --><div class="px-7 py-6 border-b" style="border-color:var(--border);"><p class="lc-examples-label text-[10px] font-bold uppercase tracking-widest mb-5" style="color:var(--text-muted);">Frases de exemplo</p><div class="lc-examples space-y-3"><!-- populated by JS --></div></div><!-- Verb conjugation (hidden by default, shown for verb cards) --><div class="lc-conjugation-wrap hidden border-b px-7 py-6" style="border-color:var(--border);"><div class="lc-conjugation-inner flex flex-wrap gap-4"><!-- populated by JS --></div></div><!-- ── Tags ───────────────────────────────────── --><div class="lc-tags-row px-7 py-4 flex items-center gap-2 flex-wrap"><span class="text-[10px] font-bold uppercase tracking-wider" style="color:var(--text-muted);">Etiquetas:</span><div class="lc-tags flex gap-2 flex-wrap"></div></div></div><script>(function(){const cardJson = "{\"id\":\"verbs-a1-core_3-001\",\"target\":\"estudar\",\"source\":\"to study\",\"type\":\"regular\",\"cefr\":\"A1\",\"grammar_note\":\"-ar regular verb, auxiliary: ter\",\"examples\":[{\"target\":\"Eu estudo português todos os dias.\",\"source\":\"I study Portuguese every day.\"},{\"target\":\"Tu estudas na universidade.\",\"source\":\"You study at the university.\"}],\"conjugations\":{\"presente\":{\"eu\":\"estudo\",\"tu\":\"estudas\",\"ele/ela/você\":\"estuda\",\"nós\":\"estudamos\",\"eles/elas/vocês\":\"estudam\"},\"pretérito_perfeito\":{\"eu\":\"estudei\",\"tu\":\"estudaste\",\"ele/ela/você\":\"estudou\",\"nós\":\"estudámos\",\"eles/elas/vocês\":\"estudaram\"},\"pretérito_imperfeito\":{\"eu\":\"estudava\",\"tu\":\"estudavas\",\"ele/ela/você\":\"estudava\",\"nós\":\"estudávamos\",\"eles/elas/vocês\":\"estudavam\"},\"futuro_simples\":{\"eu\":\"estudarei\",\"tu\":\"estudarás\",\"ele/ela/você\":\"estudará\",\"nós\":\"estudaremos\",\"eles/elas/vocês\":\"estudarão\"},\"condicional\":{\"eu\":\"estudaria\",\"tu\":\"estudarias\",\"ele/ela/você\":\"estudaria\",\"nós\":\"estudaríamos\",\"eles/elas/vocês\":\"estudariam\"},\"particípio_passado\":\"estudado\"},\"tags\":[\"verb\",\"a1\"],\"metadata\":{}}";
+const langConfigJson = "{\"language_pair\":\"english_portuguese\",\"target_lang\":\"pt\",\"native_lang\":\"en\",\"target_lang_name\":\"Português\",\"native_lang_name\":\"English\",\"speech_lang\":\"pt-PT\",\"noun_metadata_fields\":[{\"key\":\"article\",\"label\":\"Artigo\",\"render\":\"article_badge\"},{\"key\":\"gender\",\"label\":\"Género\",\"render\":\"gender_label\"},{\"key\":\"plural\",\"label\":\"Plural\",\"render\":\"text\"}],\"article_colours\":{\"o\":\"#4A7C9E\",\"a\":\"#B05070\"},\"gender_labels\":{\"m\":\"Masculino\",\"f\":\"Feminino\"},\"verb_tenses\":[\"presente\",\"pretérito_perfeito\",\"pretérito_imperfeito\",\"particípio_passado\",\"futuro_simples\",\"condicional\"],\"cases\":{},\"ui_labels\":{\"learn_mode\":\"Aprender\",\"train_mode\":\"Treinar\",\"examples_heading\":\"Frases de exemplo\",\"grammar_note_heading\":\"Nota gramatical\",\"audio_button\":\"Ouvir\",\"back_link\":\"Voltar\",\"card_counter\":\"Cartão {current} / {total}\",\"next_button\":\"Seguinte\",\"finish_button\":\"Concluir\",\"correct\":\"Correto!\",\"wrong\":\"Incorreto\",\"dashboard_link\":\"Painel principal\",\"library_prompt\":\"Escolha um baralho da biblioteca e explore o conteúdo dos cartões.\",\"cards_badge\":\"{count} CARTÕES\",\"cards_count\":\"{count} cartões\",\"deck_meta\":\"{topic} • {level} • {count} cartões\",\"no_decks\":\"Ainda não existem baralhos nesta categoria.\",\"setup_title\":\"Configurar treino\",\"setup_subtitle\":\"Configure a sua sessão de treino.\",\"question_type\":\"Tipo de pergunta\",\"mode_multiple_choice\":\"Escolha múltipla\",\"mode_typing\":\"Digitação de texto\",\"mode_typing_short\":\"Digitação\",\"direction\":\"Direção\",\"direction_forward\":\"🇺🇸 English → 🇵🇹 Português\",\"direction_reverse\":\"🇵🇹 Português → 🇺🇸 English\",\"select_level\":\"Selecionar nível\",\"start_training\":\"Iniciar treino\",\"count_label\":\"Quantidade\",\"all_cards\":\"Todas\",\"in_deck\":\"no baralho\",\"view_cards\":\"Cartões\",\"view_list\":\"Lista\",\"card_word\":\"Cartão\",\"keyboard_hint_study\":\"← → Teclas de seta para navegar · A para ouvir\",\"example_single_heading\":\"Exemplo\",\"no_example\":\"Nenhum exemplo disponível.\",\"tags_label\":\"Etiquetas:\",\"type_vocab\":\"Vocabulário\",\"type_verb\":\"Verbo\",\"type_phrase\":\"Expressão\",\"type_connector\":\"Conector\",\"type_grammar\":\"Gramática\",\"type_noun\":\"Substantivo\",\"type_adjective\":\"Adjetivo\",\"type_expression\":\"Locução\",\"plural_prefix\":\"Pl. {plural}\",\"plural_only\":\"apenas plural\",\"word_order_heading\":\"Ordem das palavras\",\"structure_heading\":\"Estrutura\",\"training_title\":\"Treino\",\"all_levels\":\"Todos os níveis\",\"type_placeholder\":\"Escreva a palavra em português...\",\"check_button\":\"Verificar\",\"keyboard_hint_train\":\"Enter / Espaço = confirmar · A = Ouvir\",\"audio_title\":\"Ouvir (A)\",\"training_finished\":\"Treino concluído!\",\"missed_heading\":\"Respostas erradas — para repetir\",\"retry_missed\":\"Repetir erros\",\"new_config\":\"Nova configuração\",\"plural_hint\":\"Pl: {plural}\",\"results_pct\":\"{pct}% de acertos\",\"result_excellent\":\"Excelente! Dominou este nível com distinção.\",\"result_good\":\"Muito bem! Mais um pouco de prática e dominará tudo!\",\"result_ok\":\"Bom começo! Reveja os cartões mais uma vez.\",\"result_retry\":\"Sem problema — a prática leva à perfeição!\",\"no_cards_title\":\"Nenhum cartão encontrado\",\"no_cards_hint\":\"Por favor, selecione outro nível ou baralho.\"},\"answer_normalisation\":{\"strip_leading_words\":[\"o\",\"a\",\"os\",\"as\",\"um\",\"uma\",\"uns\",\"umas\"],\"alt_spellings\":{\"á\":\"a\",\"à\":\"a\",\"ã\":\"a\",\"â\":\"a\",\"é\":\"e\",\"ê\":\"e\",\"í\":\"i\",\"ó\":\"o\",\"ô\":\"o\",\"õ\":\"o\",\"ú\":\"u\",\"ç\":\"c\"}}}";
+
+  /**
+   * Client-side card renderer.
+   * Uses the universal card-renderer logic inline (no imports in Astro is:inline).
+   */
+
+  // ── Parse data ──────────────────────────────────────────────────────────
+  const card   = JSON.parse(cardJson);
+  const config = JSON.parse(langConfigJson);
+
+  // ── Helpers ─────────────────────────────────────────────────────────────
+  // Articles come from the language config (keys of article_colours), never hardcoded
+  const articleList = Object.keys(config.article_colours || {});
+  const articlePatterns = articleList.map(a => {
+    const esc = a.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    return esc.endsWith("'") ? esc : `${esc}\\s+`;
+  });
+  const articleRe = articlePatterns.length
+    ? new RegExp('^(?:' + articlePatterns.join('|') + ')', 'i')
+    : null;
+
+  function stripArticle(word) {
+    return articleRe ? (word || '').replace(articleRe, '').trim() : (word || '').trim();
+  }
+
+  function getArticleColour(article) {
+    if (!article || !config.article_colours) return 'var(--espresso)';
+    return config.article_colours[article.toLowerCase()] || 'var(--espresso)';
+  }
+
+  function getGenderLabel(gender) {
+    if (!gender) return '';
+    return (config.gender_labels || {})[gender] || gender;
+  }
+
+  const uiLabels = config.ui_labels || {};
+
+  function getTypeLabel() {
+    const tags = card.tags || [];
+    if (tags.includes('noun'))       return uiLabels.type_noun || 'Noun';
+    if (tags.includes('verb'))       return uiLabels.type_verb || 'Verb';
+    if (tags.includes('adjective'))  return uiLabels.type_adjective || 'Adjective';
+    if (tags.includes('expression')) return uiLabels.type_expression || 'Expression';
+    const map = {
+      vocab: uiLabels.type_vocab || 'Vocab',
+      verb: uiLabels.type_verb || 'Verb',
+      phrase: uiLabels.type_phrase || 'Phrase',
+      connector: uiLabels.type_connector || 'Connector',
+      grammar: uiLabels.type_grammar || 'Grammar'
+    };
+    return map[card.type] || uiLabels.card_word || 'Card';
+  }
+
+  function formatHighlight(text) {
+    if (!text) return '';
+    return String(text).replace(/\*(.*?)\*/g, '<span class="highlighter">$1</span>');
+  }
+
+  function getMetaFacts() {
+    const meta = card.metadata || {};
+    const facts = [];
+    for (const field of (config.noun_metadata_fields || [])) {
+      const raw = meta[field.key] || card[field.key];
+      if (!raw || raw === '~') continue;
+      let value = String(raw);
+      let colour;
+      if (field.render === 'gender_label') value = getGenderLabel(raw);
+      else if (field.render === 'article_badge') colour = getArticleColour(raw);
+      facts.push({ label: field.label, value, colour });
+    }
+    return facts;
+  }
+
+  // ── Render ──────────────────────────────────────────────────────────────
+  const container = document.querySelector('.learning-card');
+  if (!container) { console.error('LearningCard: container not found'); }
+
+  function sel(cls) { return container?.querySelector(cls); }
+
+  // Type badge
+  sel('.lc-type-badge').textContent = getTypeLabel();
+
+  // Level badge
+  sel('.lc-level-badge').textContent = card.level || '';
+
+  // Article
+  const article = card.metadata?.article;
+  const articleWrap = sel('.lc-article-wrap');
+  const articleEl   = sel('.lc-article');
+  if (article && card.tags?.includes('noun') && !card.metadata?.plural_only) {
+    articleEl.textContent  = article;
+    articleEl.style.color  = getArticleColour(article);
+    articleWrap.style.display = '';
+  } else {
+    articleWrap.style.display = 'none';
+  }
+
+  // Word
+  sel('.lc-word').textContent = stripArticle(card.target);
+
+  // Translation
+  sel('.lc-translation').textContent = card.source || '';
+
+  // Plural / forms
+  const plural = card.metadata?.plural;
+  const formsEl = sel('.lc-forms');
+  const prefix = uiLabels.plural_prefix || 'Pl.';
+  const pluralOnly = uiLabels.plural_only || 'Plural only';
+  if (plural && !card.metadata?.plural_only) formsEl.textContent = `${prefix} ${plural}`;
+  else if (card.metadata?.plural_only) formsEl.textContent = pluralOnly;
+  else formsEl.textContent = '';
+
+  // Meta grid
+  const metaGrid = sel('.lc-meta-grid');
+  const facts = getMetaFacts();
+  if (facts.length) {
+    const cols = Math.min(facts.length, 4);
+    metaGrid.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
+    metaGrid.innerHTML = facts.map((f, i) => `
+      <div class="px-5 py-4 ${i < facts.length - 1 ? 'border-r' : ''}" style="border-color:var(--border);">
+        <p class="text-[9px] font-bold uppercase tracking-widest mb-1" style="color:var(--text-muted);">${f.label}</p>
+        <p class="text-sm font-bold" style="color:${f.colour || 'var(--text)'};">${f.value}</p>
+      </div>
+    `).join('');
+  } else {
+    metaGrid.style.display = 'none';
+  }
+
+  // Grammar note
+  const grammarWrap = sel('.lc-grammar-wrap');
+  if (card.grammar_note) {
+    sel('.lc-grammar-text').innerHTML = formatHighlight(card.grammar_note);
+    grammarWrap.classList.remove('hidden');
+  }
+
+  // Grammar label from config
+  const uiLabels = config.ui_labels || {};
+  if (uiLabels.grammar_note_heading) sel('.lc-grammar-label').textContent = uiLabels.grammar_note_heading;
+  if (uiLabels.examples_heading)     sel('.lc-examples-label').textContent = uiLabels.examples_heading;
+  if (uiLabels.audio_button)         { const el = sel('.lc-audio-label'); if (el) el.textContent = uiLabels.audio_button; }
+
+  // ── Type-specific blocks ─────────────────────────────────────────────────
+
+  // Verb: conjugation table
+  const type = card.type || (card.tags?.includes('verb') ? 'verb' : 'vocab');
+  if (type === 'verb' && card.conjugations) {
+    const conjWrap  = sel('.lc-conjugation-wrap');
+    const conjInner = sel('.lc-conjugation-inner');
+    conjWrap.classList.remove('hidden');
+
+    let conjArray = [];
+    if (Array.isArray(card.conjugations)) {
+      conjArray = card.conjugations;
+    } else {
+      for (const [tense, forms] of Object.entries(card.conjugations)) {
+        if (typeof forms === 'string') {
+          conjArray.push({ tense, stringForm: forms });
+        } else {
+          const formsArr = Object.entries(forms).map(([pronoun, form]) => ({ pronoun, form }));
+          conjArray.push({ tense, forms: formsArr });
+        }
+      }
+    }
+
+    const tensesToRender = config.verb_tenses || conjArray.map(t => t.tense);
+
+    const stringTenses = [];
+    const tableTenses = [];
+
+    tensesToRender.forEach(tense => {
+      const t = conjArray.find(c => c.tense === tense);
+      if (!t) return;
+      if (t.stringForm) stringTenses.push(t);
+      else tableTenses.push(t);
+    });
+
+    let html = '';
+
+    // Render simple string forms (e.g. Perfekt, Partizip II) as pill-like tags at the top
+    if (stringTenses.length > 0) {
+      html += `
+        <div class="flex flex-wrap gap-3 mb-6">
+          ${stringTenses.map(t => `
+            <div class="rounded-xl border px-4 py-2.5 flex items-center gap-3 shadow-sm" style="border-color:var(--border); background-color:var(--bg);">
+              <span class="text-[10px] font-bold uppercase tracking-widest opacity-80" style="color:var(--espresso);">${t.tense.replace(/_/g, ' ')}</span>
+              <span class="font-bold text-sm" style="color:var(--text);">${t.stringForm}</span>
+            </div>
+          `).join('')}
+        </div>
+      `;
+    }
+
+    // Render full tables (e.g. Präsens, Präteritum) as a unified table
+    if (tableTenses.length > 0) {
+      // Collect all pronouns from the first available table tense
+      const pronouns = tableTenses[0].forms.map(f => f.pronoun);
+
+      html += `
+        <div class="rounded-xl border overflow-x-auto shadow-sm w-full" style="border-color:var(--border);">
+          <table class="w-full text-sm text-left">
+            <thead>
+              <tr style="background-color:var(--bg); border-bottom: 1px solid var(--border);">
+                <th class="px-4 py-3 font-bold uppercase tracking-widest text-[10px] w-[1%]" style="color:var(--espresso); border-right: 1px solid var(--border);"></th>
+                ${tableTenses.map(t => `
+                  <th class="px-4 py-3 font-bold uppercase tracking-widest text-[10px]" style="color:var(--espresso);">${t.tense.replace(/_/g, ' ')}</th>
+                `).join('')}
+              </tr>
+            </thead>
+            <tbody>
+              ${pronouns.map((pronoun, ri) => `
+                <tr class="${ri < pronouns.length - 1 ? 'border-b' : ''}" style="border-color:var(--border);">
+                  <td class="px-4 py-3 font-bold text-xs whitespace-nowrap" style="color:var(--espresso); background-color:var(--bg); border-right: 1px solid var(--border);">${pronoun}</td>
+                  ${tableTenses.map(t => {
+                    const formObj = t.forms.find(f => f.pronoun === pronoun);
+                    return `<td class="px-4 py-3 font-semibold whitespace-nowrap" style="color:var(--text);">${formObj ? formObj.form : '-'}</td>`;
+                  }).join('')}
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+        </div>
+      `;
+    }
+
+    conjInner.innerHTML = html;
+  }
+
+  // Connector: word order block
+  if (type === 'connector' && card.word_order) {
+    const woWrap = sel('.lc-wordorder-wrap');
+    sel('.lc-wordorder-text').textContent = card.word_order;
+    woWrap.classList.remove('hidden');
+  }
+
+  // Phrase: preposition rule block
+  if (type === 'phrase' && card.clause_type) {
+    const phraseWrap = sel('.lc-phrase-wrap');
+    sel('.lc-phrase-rule').textContent = card.clause_type;
+    phraseWrap.classList.remove('hidden');
+  }
+
+  // ── Examples ─────────────────────────────────────────────────────────────
+  const examplesEl = sel('.lc-examples');
+  const rawExamples = card.examples || [];
+
+  if (rawExamples.length) {
+    examplesEl.innerHTML = rawExamples.map(e => `
+        <div class="rounded-2xl border overflow-hidden" style="border-color:var(--border);">
+          <div class="px-4 py-3" style="background-color:var(--bg);">
+            <p class="font-semibold leading-snug mb-1" style="color:var(--text);">${formatHighlight(e.target)}</p>
+            <p class="text-sm italic" style="color:var(--text-muted);">${formatHighlight(e.source || '')}</p>
+          </div>
+          ${e.note ? `<div class="px-4 py-2 border-t" style="border-color:var(--border);">
+            <p class="text-[10px] font-bold font-mono" style="color:var(--espresso);">📐 ${e.note}</p>
+          </div>` : ''}
+        </div>
+      `).join('');
+  } else {
+    examplesEl.innerHTML = `<p class="text-sm italic" style="color:var(--text-muted);">${uiLabels.no_example || ''}</p>`;
+  }
+
+  // ── Tags ─────────────────────────────────────────────────────────────────
+  const tagsEl = sel('.lc-tags');
+  tagsEl.innerHTML = (card.tags || []).map(t => `
+    <span class="text-[10px] font-bold px-2 py-0.5 rounded-md border uppercase" style="border-color:var(--border); color:var(--text-muted); background-color:var(--bg);">${t}</span>
+  `).join('');
+
+  // ── Audio button ─────────────────────────────────────────────────────────
+  sel('.lc-audio-btn')?.addEventListener('click', () => {
+    if (window.LoungeAudioEngine) {
+      window.LoungeAudioEngine.speak(card.target || '', config.speech_lang, 0.85);
+    }
+  });
+})();</script></div><!-- ── Navigation ───────────────────────────── --><div class="flex items-center justify-between mt-8 gap-4" data-astro-cid-5tabbh6g><button id="btn-prev" disabled class="flex items-center gap-2 px-6 py-3 rounded-2xl border font-bold text-sm transition-all hover:opacity-70 active:scale-95 disabled:opacity-30 disabled:cursor-not-allowed" style="border-color:var(--border); color:var(--text); background-color:var(--card);" data-astro-cid-5tabbh6g><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><path d="m15 18-6-6 6-6" data-astro-cid-5tabbh6g></path></svg>Voltar</button><!-- Dot navigation --><div id="dot-nav" class="flex items-center gap-1.5 flex-wrap justify-center max-w-xs overflow-hidden" style="max-height:2rem;" data-astro-cid-5tabbh6g><!-- populated by JS --></div><button id="btn-next" class="flex items-center gap-2 px-6 py-3 rounded-2xl font-bold text-sm transition-all hover:opacity-80 active:scale-95" style="background-color:var(--espresso); color:#F5F2EB;" data-astro-cid-5tabbh6g>Seguinte<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><path d="m9 18 6-6-6-6" data-astro-cid-5tabbh6g></path></svg></button></div><!-- Keyboard hint --><p class="text-center text-xs font-medium mt-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>← → Teclas de seta para navegar · A para ouvir</p></div><!-- ── List View ───────────────────────────── --><div id="list-view-wrap" class="hidden space-y-6" data-astro-cid-5tabbh6g><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>estudar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to study</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>-ar regular verb, auxiliary: ter</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Eu estudo português todos os dias.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>I study Portuguese every day.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>trabalhar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to work</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>-ar regular verb, auxiliary: ter</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Eu trabalho em Lisboa.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>I work in Lisbon.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>morar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to live (reside)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>-ar regular verb, auxiliary: ter</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Eu moro no Porto.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>I live in Porto.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>falar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to speak</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>-ar regular verb, auxiliary: ter</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Elas falam português bem.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>They speak Portuguese well.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>ouvir</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to hear / to listen</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>-ir verb with stem change in present singular (ouço), auxiliary: ter</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Eu ouço música no autocarro.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>I listen to music on the bus.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>escrever</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to write</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>-er regular verb, auxiliary: ter</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Eu escrevo uma carta.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>I write a letter.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>ler</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to read</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>-er irregular verb (leio, lês, lê), auxiliary: ter</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Eu leio um livro interessante.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>I read an interesting book.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>comprar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to buy</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>-ar regular verb, auxiliary: ter</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Eu compro pão fresco.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>I buy fresh bread.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>pagar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to pay</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>-ar regular verb with spelling change in preterite (paguei), auxiliary: ter</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Eu pago com o telemóvel.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>I pay with the mobile phone.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>gostar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to like</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>-ar regular verb, takes preposition 'de' (gostar de), auxiliary: ter</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Eu gosto de café.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>I like coffee.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>amar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to love</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>-ar regular verb, auxiliary: ter</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Eu amo a minha família.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>I love my family.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>odiar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to hate</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>-ar regular verb (odeio in present), auxiliary: ter</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Eu odeio acordar cedo.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>I hate waking up early.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>viajar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to travel</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>-ar regular verb, auxiliary: ter</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Eu viajo no verão.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>I travel in the summer.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>chegar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to arrive</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>-ar regular verb with spelling change in preterite (cheguei), auxiliary: ter</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Eu chego a casa tarde.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>I arrive home late.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>sair</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to leave / to go out</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>-ir irregular verb (saiu in preterite, saio in present), auxiliary: ter</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Eu saio com os meus amigos.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>I go out with my friends.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>entrar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to enter</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>-ar regular verb, auxiliary: ter</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Eu entro na sala de aula.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>I enter the classroom.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>ficar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to stay / to remain</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>-ar regular verb with spelling change in preterite (fiquei), auxiliary: ter</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Eu fico em casa hoje.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>I stay at home today.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>telefonar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to call (on phone)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>-ar regular verb, takes preposition 'a' or 'para' (telefonar a alguém), auxiliary: ter</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Eu telefono à minha mãe.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>I call my mother.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>ajudar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to help</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>-ar regular verb, auxiliary: ter</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Eu ajudo o meu amigo.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>I help my friend.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>procurar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to look for / to search</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>-ar regular verb, auxiliary: ter</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Eu procuro as minhas chaves.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>I am looking for my keys.</p></div></div></div></div></div></div><!-- ══ TRAIN PANEL ════════════════════════════ --><div id="train-panel" class="hidden space-y-10" data-astro-cid-5tabbh6g><div class="cafe-card rounded-3xl p-8 border shadow-lg max-w-xl mx-auto" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="text-center mb-8" data-astro-cid-5tabbh6g><h2 class="text-2xl font-extrabold font-outfit mb-2" style="color:var(--text);" data-astro-cid-5tabbh6g>Configurar treino</h2><p class="text-sm font-medium" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Configure a sua sessão de treino.</p></div><form action="/languagelounge/en-pt/training/verbs/train/" method="GET" class="space-y-8" id="deck-train-form" data-astro-cid-5tabbh6g><input type="hidden" name="level" value="a1" data-astro-cid-5tabbh6g><input type="hidden" name="deck" value="verbs-a1-core_3" data-astro-cid-5tabbh6g><!-- Mode selection --><div class="space-y-3" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold tracking-widest uppercase" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Tipo de pergunta</p><div class="grid grid-cols-2 gap-3" data-astro-cid-5tabbh6g><button type="button" data-group="mode" data-value="mc" class="sel-opt sel-active" data-astro-cid-5tabbh6g><span class="text-xl mb-1 block" data-astro-cid-5tabbh6g>🔘</span><span class="text-sm font-bold" data-astro-cid-5tabbh6g>Escolha múltipla</span></button><button type="button" data-group="mode" data-value="type" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-xl mb-1 block" data-astro-cid-5tabbh6g>⌨️</span><span class="text-sm font-bold" data-astro-cid-5tabbh6g>Digitação de texto</span></button></div><input type="hidden" name="mode" id="mode-hidden" value="mc" data-astro-cid-5tabbh6g></div><!-- Direction selection --><div class="space-y-3" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold tracking-widest uppercase" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Direção</p><div class="grid grid-cols-2 gap-3" data-astro-cid-5tabbh6g><button type="button" data-group="dir" data-value="en-pt" class="sel-opt sel-active" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>🇺🇸 English → 🇵🇹 Português</span></button><button type="button" data-group="dir" data-value="pt-en" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>🇵🇹 Português → 🇺🇸 English</span></button></div><input type="hidden" name="dir" id="dir-hidden" value="en-pt" data-astro-cid-5tabbh6g></div><!-- Count Selection --><div class="space-y-3" data-astro-cid-5tabbh6g><div class="flex justify-between items-end" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold tracking-widest uppercase" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Quantidade</p><span class="text-xs font-bold" style="color:var(--espresso);" data-astro-cid-5tabbh6g>20 cartões no baralho</span></div><div class="grid grid-cols-4 gap-3" data-astro-cid-5tabbh6g><button type="button" data-group="count" data-value="30" class="sel-opt sel-active" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>30</span></button><button type="button" data-group="count" data-value="60" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>60</span></button><button type="button" data-group="count" data-value="90" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>90</span></button><button type="button" data-group="count" data-value="1000" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>Todas</span></button></div><input type="hidden" name="count" id="count-hidden" value="30" data-astro-cid-5tabbh6g></div><button type="submit" class="w-full py-4 rounded-xl font-bold text-base transition-all hover:opacity-90 mt-4 shadow-md active:scale-[0.98]" style="background-color:var(--espresso); color:#F5F2EB;" data-astro-cid-5tabbh6g>Iniciar treino &rarr;</button></form></div></div></div></main><footer class="mt-auto border-t py-8" style="background-color:var(--bg);border-color:var(--border);"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-medium" style="color:var(--text-muted);"><div>&copy; 2025 - 2026 Small Talk Café Podcasts. All rights reserved.</div><div class="flex gap-4">Made in Bayern ❤️ Los Geht's!</div></div></footer><!-- Minimal script for Theme and Dropdown toggle --><script>
+      // ── Theme ──────────────────────────────────────
+      function applyTheme(dark) {
+        if (dark) {
+          document.documentElement.classList.add('dark');
+          localStorage.setItem('wortschatz_theme', 'dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+          localStorage.setItem('wortschatz_theme', 'light');
+        }
+        const icon = document.getElementById('theme-icon');
+        const label = document.getElementById('theme-label');
+        if (icon) icon.textContent = dark ? '🌙' : '☀️';
+        if (label) label.textContent = dark ? 'Dark' : 'Light';
+      }
+
+      const isDark = document.documentElement.classList.contains('dark');
+      applyTheme(isDark);
+
+      document.getElementById('theme-toggle')?.addEventListener('click', () => {
+        const nowDark = !document.documentElement.classList.contains('dark');
+        applyTheme(nowDark);
+      });
+
+      // ── Dropdown Toggle ──────────────────────────
+      const langBtn = document.getElementById('lang-btn');
+      const langMenu = document.getElementById('lang-menu');
+
+      langBtn?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        langMenu?.classList.toggle('hidden');
+      });
+
+      document.addEventListener('click', () => {
+        langMenu?.classList.add('hidden');
+      });
+    </script></body></html><script type="module" src="/languagelounge/_astro/_deckId_.astro_astro_type_script_index_0_lang.DwXABuW8.js"></script><script>(function(){const cardsJson = "[{\"id\":\"verbs-a1-core_3-001\",\"target\":\"estudar\",\"source\":\"to study\",\"type\":\"regular\",\"cefr\":\"A1\",\"grammar_note\":\"-ar regular verb, auxiliary: ter\",\"examples\":[{\"target\":\"Eu estudo português todos os dias.\",\"source\":\"I study Portuguese every day.\"},{\"target\":\"Tu estudas na universidade.\",\"source\":\"You study at the university.\"}],\"conjugations\":{\"presente\":{\"eu\":\"estudo\",\"tu\":\"estudas\",\"ele/ela/você\":\"estuda\",\"nós\":\"estudamos\",\"eles/elas/vocês\":\"estudam\"},\"pretérito_perfeito\":{\"eu\":\"estudei\",\"tu\":\"estudaste\",\"ele/ela/você\":\"estudou\",\"nós\":\"estudámos\",\"eles/elas/vocês\":\"estudaram\"},\"pretérito_imperfeito\":{\"eu\":\"estudava\",\"tu\":\"estudavas\",\"ele/ela/você\":\"estudava\",\"nós\":\"estudávamos\",\"eles/elas/vocês\":\"estudavam\"},\"futuro_simples\":{\"eu\":\"estudarei\",\"tu\":\"estudarás\",\"ele/ela/você\":\"estudará\",\"nós\":\"estudaremos\",\"eles/elas/vocês\":\"estudarão\"},\"condicional\":{\"eu\":\"estudaria\",\"tu\":\"estudarias\",\"ele/ela/você\":\"estudaria\",\"nós\":\"estudaríamos\",\"eles/elas/vocês\":\"estudariam\"},\"particípio_passado\":\"estudado\"},\"tags\":[\"verb\",\"a1\"],\"metadata\":{}},{\"id\":\"verbs-a1-core_3-002\",\"target\":\"trabalhar\",\"source\":\"to work\",\"type\":\"regular\",\"cefr\":\"A1\",\"grammar_note\":\"-ar regular verb, auxiliary: ter\",\"examples\":[{\"target\":\"Eu trabalho em Lisboa.\",\"source\":\"I work in Lisbon.\"},{\"target\":\"Ele trabalha muito hoje.\",\"source\":\"He works a lot today.\"}],\"conjugations\":{\"presente\":{\"eu\":\"trabalho\",\"tu\":\"trabalhas\",\"ele/ela/você\":\"trabalha\",\"nós\":\"trabalhamos\",\"eles/elas/vocês\":\"trabalham\"},\"pretérito_perfeito\":{\"eu\":\"trabalhei\",\"tu\":\"trabalhaste\",\"ele/ela/você\":\"trabalhou\",\"nós\":\"trabalhámos\",\"eles/elas/vocês\":\"trabalharam\"},\"pretérito_imperfeito\":{\"eu\":\"trabalhava\",\"tu\":\"trabalhavas\",\"ele/ela/você\":\"trabalhava\",\"nós\":\"trabalhávamos\",\"eles/elas/vocês\":\"trabalhavam\"},\"futuro_simples\":{\"eu\":\"trabalharei\",\"tu\":\"trabalharás\",\"ele/ela/você\":\"trabalhará\",\"nós\":\"trabalharemos\",\"eles/elas/vocês\":\"trabalharão\"},\"condicional\":{\"eu\":\"trabalharia\",\"tu\":\"trabalharias\",\"ele/ela/você\":\"trabalharia\",\"nós\":\"trabalharíamos\",\"eles/elas/vocês\":\"trabalhariam\"},\"particípio_passado\":\"trabalhado\"},\"tags\":[\"verb\",\"a1\"],\"metadata\":{}},{\"id\":\"verbs-a1-core_3-003\",\"target\":\"morar\",\"source\":\"to live (reside)\",\"type\":\"regular\",\"cefr\":\"A1\",\"grammar_note\":\"-ar regular verb, auxiliary: ter\",\"examples\":[{\"target\":\"Eu moro no Porto.\",\"source\":\"I live in Porto.\"},{\"target\":\"Onde moras tu?\",\"source\":\"Where do you live?\"}],\"conjugations\":{\"presente\":{\"eu\":\"moro\",\"tu\":\"moras\",\"ele/ela/você\":\"mora\",\"nós\":\"moramos\",\"eles/elas/vocês\":\"moram\"},\"pretérito_perfeito\":{\"eu\":\"mori\",\"tu\":\"moraste\",\"ele/ela/você\":\"morou\",\"nós\":\"morámos\",\"eles/elas/vocês\":\"moraram\"},\"pretérito_imperfeito\":{\"eu\":\"morava\",\"tu\":\"moravas\",\"ele/ela/você\":\"morava\",\"nós\":\"morávamos\",\"eles/elas/vocês\":\"moravam\"},\"futuro_simples\":{\"eu\":\"morarei\",\"tu\":\"morarás\",\"ele/ela/você\":\"morará\",\"nós\":\"moraremos\",\"eles/elas/vocês\":\"morarão\"},\"condicional\":{\"eu\":\"moraria\",\"tu\":\"morarias\",\"ele/ela/você\":\"moraria\",\"nós\":\"moraríamos\",\"eles/elas/vocês\":\"morariam\"},\"particípio_passado\":\"morado\"},\"tags\":[\"verb\",\"a1\"],\"metadata\":{}},{\"id\":\"verbs-a1-core_3-004\",\"target\":\"falar\",\"source\":\"to speak\",\"type\":\"regular\",\"cefr\":\"A1\",\"grammar_note\":\"-ar regular verb, auxiliary: ter\",\"examples\":[{\"target\":\"Elas falam português bem.\",\"source\":\"They speak Portuguese well.\"},{\"target\":\"Eu falo inglês e espanhol.\",\"source\":\"I speak English and Spanish.\"}],\"conjugations\":{\"presente\":{\"eu\":\"falo\",\"tu\":\"falas\",\"ele/ela/você\":\"fala\",\"nós\":\"falamos\",\"eles/elas/vocês\":\"falam\"},\"pretérito_perfeito\":{\"eu\":\"falei\",\"tu\":\"falaste\",\"ele/ela/você\":\"falou\",\"nós\":\"falámos\",\"eles/elas/vocês\":\"falaram\"},\"pretérito_imperfeito\":{\"eu\":\"falava\",\"tu\":\"falavas\",\"ele/ela/você\":\"falava\",\"nós\":\"falávamos\",\"eles/elas/vocês\":\"falavam\"},\"futuro_simples\":{\"eu\":\"falarei\",\"tu\":\"falarás\",\"ele/ela/você\":\"falará\",\"nós\":\"falaremos\",\"eles/elas/vocês\":\"falarão\"},\"condicional\":{\"eu\":\"falaria\",\"tu\":\"falarias\",\"ele/ela/você\":\"falaria\",\"nós\":\"falaríamos\",\"eles/elas/vocês\":\"falariam\"},\"particípio_passado\":\"falado\"},\"tags\":[\"verb\",\"a1\"],\"metadata\":{}},{\"id\":\"verbs-a1-core_3-005\",\"target\":\"ouvir\",\"source\":\"to hear / to listen\",\"type\":\"irregular\",\"cefr\":\"A1\",\"grammar_note\":\"-ir verb with stem change in present singular (ouço), auxiliary: ter\",\"examples\":[{\"target\":\"Eu ouço música no autocarro.\",\"source\":\"I listen to music on the bus.\"},{\"target\":\"Tu ouves o professor?\",\"source\":\"Do you hear the teacher?\"}],\"conjugations\":{\"presente\":{\"eu\":\"ouço\",\"tu\":\"ouves\",\"ele/ela/você\":\"ouve\",\"nós\":\"ouvimos\",\"eles/elas/vocês\":\"ouvem\"},\"pretérito_perfeito\":{\"eu\":\"ouvi\",\"tu\":\"ouviste\",\"ele/ela/você\":\"ouviu\",\"nós\":\"ouvimos\",\"eles/elas/vocês\":\"ouviram\"},\"pretérito_imperfeito\":{\"eu\":\"ouvia\",\"tu\":\"ouvias\",\"ele/ela/você\":\"ouvia\",\"nós\":\"ouvíamos\",\"eles/elas/vocês\":\"ouviam\"},\"futuro_simples\":{\"eu\":\"ouvirei\",\"tu\":\"ouvirás\",\"ele/ela/você\":\"ouvirá\",\"nós\":\"ouviremos\",\"eles/elas/vocês\":\"ouvirão\"},\"condicional\":{\"eu\":\"ouviria\",\"tu\":\"ouvirias\",\"ele/ela/você\":\"ouviria\",\"nós\":\"ouviríamos\",\"eles/elas/vocês\":\"ouviriam\"},\"particípio_passado\":\"ouvido\"},\"tags\":[\"verb\",\"a1\"],\"metadata\":{}},{\"id\":\"verbs-a1-core_3-006\",\"target\":\"escrever\",\"source\":\"to write\",\"type\":\"regular\",\"cefr\":\"A1\",\"grammar_note\":\"-er regular verb, auxiliary: ter\",\"examples\":[{\"target\":\"Eu escrevo uma carta.\",\"source\":\"I write a letter.\"},{\"target\":\"Tu escreves no caderno.\",\"source\":\"You write in the notebook.\"}],\"conjugations\":{\"presente\":{\"eu\":\"escrevo\",\"tu\":\"escreves\",\"ele/ela/você\":\"escreve\",\"nós\":\"escrevemos\",\"eles/elas/vocês\":\"escrevem\"},\"pretérito_perfeito\":{\"eu\":\"escrevi\",\"tu\":\"escreviste\",\"ele/ela/você\":\"escreveu\",\"nós\":\"escrevemos\",\"eles/elas/vocês\":\"escreveram\"},\"pretérito_imperfeito\":{\"eu\":\"escrevia\",\"tu\":\"escrevias\",\"ele/ela/você\":\"escrevia\",\"nós\":\"escrevíamos\",\"eles/elas/vocês\":\"escreviam\"},\"futuro_simples\":{\"eu\":\"escreverei\",\"tu\":\"escreverás\",\"ele/ela/você\":\"escreverá\",\"nós\":\"escreveremos\",\"eles/elas/vocês\":\"escreverão\"},\"condicional\":{\"eu\":\"escreveria\",\"tu\":\"escreverias\",\"ele/ela/você\":\"escreveria\",\"nós\":\"escreveríamos\",\"eles/elas/vocês\":\"escreveriam\"},\"particípio_passado\":\"escrito\"},\"tags\":[\"verb\",\"a1\"],\"metadata\":{}},{\"id\":\"verbs-a1-core_3-007\",\"target\":\"ler\",\"source\":\"to read\",\"type\":\"irregular\",\"cefr\":\"A1\",\"grammar_note\":\"-er irregular verb (leio, lês, lê), auxiliary: ter\",\"examples\":[{\"target\":\"Eu leio um livro interessante.\",\"source\":\"I read an interesting book.\"},{\"target\":\"Ela lê o jornal de manhã.\",\"source\":\"She reads the newspaper in the morning.\"}],\"conjugations\":{\"presente\":{\"eu\":\"leio\",\"tu\":\"lês\",\"ele/ela/você\":\"lê\",\"nós\":\"lemos\",\"eles/elas/vocês\":\"leem\"},\"pretérito_perfeito\":{\"eu\":\"li\",\"tu\":\"leste\",\"ele/ela/você\":\"leu\",\"nós\":\"lemos\",\"eles/elas/vocês\":\"leram\"},\"pretérito_imperfeito\":{\"eu\":\"lia\",\"tu\":\"lias\",\"ele/ela/você\":\"lia\",\"nós\":\"líamos\",\"eles/elas/vocês\":\"liam\"},\"futuro_simples\":{\"eu\":\"lerei\",\"tu\":\"lerás\",\"ele/ela/você\":\"lerá\",\"nós\":\"leremos\",\"eles/elas/vocês\":\"lerão\"},\"condicional\":{\"eu\":\"leria\",\"tu\":\"lerias\",\"ele/ela/você\":\"leria\",\"nós\":\"leríamos\",\"eles/elas/vocês\":\"leriam\"},\"particípio_passado\":\"lido\"},\"tags\":[\"verb\",\"a1\"],\"metadata\":{}},{\"id\":\"verbs-a1-core_3-008\",\"target\":\"comprar\",\"source\":\"to buy\",\"type\":\"regular\",\"cefr\":\"A1\",\"grammar_note\":\"-ar regular verb, auxiliary: ter\",\"examples\":[{\"target\":\"Eu compro pão fresco.\",\"source\":\"I buy fresh bread.\"},{\"target\":\"Tu compras café na loja.\",\"source\":\"You buy coffee at the shop.\"}],\"conjugations\":{\"presente\":{\"eu\":\"compro\",\"tu\":\"compras\",\"ele/ela/você\":\"compra\",\"nós\":\"compramos\",\"eles/elas/vocês\":\"compram\"},\"pretérito_perfeito\":{\"eu\":\"comprei\",\"tu\":\"compraste\",\"ele/ela/você\":\"comprou\",\"nós\":\"comprámos\",\"eles/elas/vocês\":\"compraram\"},\"pretérito_imperfeito\":{\"eu\":\"comprava\",\"tu\":\"compravas\",\"ele/ela/você\":\"comprava\",\"nós\":\"comprávamos\",\"eles/elas/vocês\":\"compravam\"},\"futuro_simples\":{\"eu\":\"comprarei\",\"tu\":\"comprarás\",\"ele/ela/você\":\"comprará\",\"nós\":\"compraremos\",\"eles/elas/vocês\":\"comprarão\"},\"condicional\":{\"eu\":\"compraria\",\"tu\":\"comprarias\",\"ele/ela/você\":\"compraria\",\"nós\":\"compraríamos\",\"eles/elas/vocês\":\"comprariam\"},\"particípio_passado\":\"comprado\"},\"tags\":[\"verb\",\"a1\"],\"metadata\":{}},{\"id\":\"verbs-a1-core_3-009\",\"target\":\"pagar\",\"source\":\"to pay\",\"type\":\"regular\",\"cefr\":\"A1\",\"grammar_note\":\"-ar regular verb with spelling change in preterite (paguei), auxiliary: ter\",\"examples\":[{\"target\":\"Eu pago com o telemóvel.\",\"source\":\"I pay with the mobile phone.\"},{\"target\":\"Ele paga o jantar.\",\"source\":\"He pays for dinner.\"}],\"conjugations\":{\"presente\":{\"eu\":\"pago\",\"tu\":\"pagas\",\"ele/ela/você\":\"paga\",\"nós\":\"pagamos\",\"eles/elas/vocês\":\"pagam\"},\"pretérito_perfeito\":{\"eu\":\"paguei\",\"tu\":\"pagaste\",\"ele/ela/você\":\"pagou\",\"nós\":\"pagámos\",\"eles/elas/vocês\":\"pagaram\"},\"pretérito_imperfeito\":{\"eu\":\"pagava\",\"tu\":\"pagavas\",\"ele/ela/você\":\"pagava\",\"nós\":\"pagávamos\",\"eles/elas/vocês\":\"pagavam\"},\"futuro_simples\":{\"eu\":\"pagarei\",\"tu\":\"pagarás\",\"ele/ela/você\":\"pagará\",\"nós\":\"pagaremos\",\"eles/elas/vocês\":\"pagarão\"},\"condicional\":{\"eu\":\"pagaria\",\"tu\":\"pagarias\",\"ele/ela/você\":\"pagaria\",\"nós\":\"pagaríamos\",\"eles/elas/vocês\":\"pagariam\"},\"particípio_passado\":\"pago\"},\"tags\":[\"verb\",\"a1\"],\"metadata\":{}},{\"id\":\"verbs-a1-core_3-010\",\"target\":\"gostar\",\"source\":\"to like\",\"type\":\"regular\",\"cefr\":\"A1\",\"grammar_note\":\"-ar regular verb, takes preposition 'de' (gostar de), auxiliary: ter\",\"examples\":[{\"target\":\"Eu gosto de café.\",\"source\":\"I like coffee.\"},{\"target\":\"Tu gostas de viajar?\",\"source\":\"Do you like to travel?\"}],\"conjugations\":{\"presente\":{\"eu\":\"gosto\",\"tu\":\"gostas\",\"ele/ela/você\":\"gosta\",\"nós\":\"gostamos\",\"eles/elas/vocês\":\"gostam\"},\"pretérito_perfeito\":{\"eu\":\"gostei\",\"tu\":\"gostaste\",\"ele/ela/você\":\"gostou\",\"nós\":\"gostámos\",\"eles/elas/vocês\":\"gostaram\"},\"pretérito_imperfeito\":{\"eu\":\"gostava\",\"tu\":\"gostavas\",\"ele/ela/você\":\"gostava\",\"nós\":\"gostávamos\",\"eles/elas/vocês\":\"gostavam\"},\"futuro_simples\":{\"eu\":\"gostarei\",\"tu\":\"gostarás\",\"ele/ela/você\":\"gostará\",\"nós\":\"gostaremos\",\"eles/elas/vocês\":\"gostarão\"},\"condicional\":{\"eu\":\"gostaria\",\"tu\":\"gostarias\",\"ele/ela/você\":\"gostaria\",\"nós\":\"gostaríamos\",\"eles/elas/vocês\":\"gostariam\"},\"particípio_passado\":\"gostado\"},\"tags\":[\"verb\",\"a1\"],\"metadata\":{}},{\"id\":\"verbs-a1-core_3-011\",\"target\":\"amar\",\"source\":\"to love\",\"type\":\"regular\",\"cefr\":\"A1\",\"grammar_note\":\"-ar regular verb, auxiliary: ter\",\"examples\":[{\"target\":\"Eu amo a minha família.\",\"source\":\"I love my family.\"},{\"target\":\"Elas amam Portugal.\",\"source\":\"They love Portugal.\"}],\"conjugations\":{\"presente\":{\"eu\":\"amo\",\"tu\":\"amas\",\"ele/ela/você\":\"ama\",\"nós\":\"amamos\",\"eles/elas/vocês\":\"amam\"},\"pretérito_perfeito\":{\"eu\":\"amei\",\"tu\":\"amaste\",\"ele/ela/você\":\"amou\",\"nós\":\"amámos\",\"eles/elas/vocês\":\"amaram\"},\"pretérito_imperfeito\":{\"eu\":\"amava\",\"tu\":\"amavas\",\"ele/ela/você\":\"amava\",\"nós\":\"amávamos\",\"eles/elas/vocês\":\"amavam\"},\"futuro_simples\":{\"eu\":\"amarei\",\"tu\":\"amarás\",\"ele/ela/você\":\"amará\",\"nós\":\"amaremos\",\"eles/elas/vocês\":\"amarão\"},\"condicional\":{\"eu\":\"amaria\",\"tu\":\"amarias\",\"ele/ela/você\":\"amaria\",\"nós\":\"amaríamos\",\"eles/elas/vocês\":\"ariam\"},\"particípio_passado\":\"amado\"},\"tags\":[\"verb\",\"a1\"],\"metadata\":{}},{\"id\":\"verbs-a1-core_3-012\",\"target\":\"odiar\",\"source\":\"to hate\",\"type\":\"regular\",\"cefr\":\"A1\",\"grammar_note\":\"-ar regular verb (odeio in present), auxiliary: ter\",\"examples\":[{\"target\":\"Eu odeio acordar cedo.\",\"source\":\"I hate waking up early.\"},{\"target\":\"Tu odias o frio.\",\"source\":\"You hate the cold.\"}],\"conjugations\":{\"presente\":{\"eu\":\"odeio\",\"tu\":\"odias\",\"ele/ela/você\":\"odeia\",\"nós\":\"odiamos\",\"eles/elas/vocês\":\"odeiam\"},\"pretérito_perfeito\":{\"eu\":\"odiei\",\"tu\":\"odiaste\",\"ele/ela/você\":\"odiou\",\"nós\":\"odiámos\",\"eles/elas/vocês\":\"odiaram\"},\"pretérito_imperfeito\":{\"eu\":\"odiava\",\"tu\":\"odiavas\",\"ele/ela/você\":\"odiava\",\"nós\":\"odiávamos\",\"eles/elas/vocês\":\"odiavam\"},\"futuro_simples\":{\"eu\":\"odiarei\",\"tu\":\"odiarás\",\"ele/ela/você\":\"odiará\",\"nós\":\"odiaremos\",\"eles/elas/vocês\":\"odiarão\"},\"condicional\":{\"eu\":\"odiaria\",\"tu\":\"odiarias\",\"ele/ela/você\":\"odiaria\",\"nós\":\"odiaríamos\",\"eles/elas/vocês\":\"odiariam\"},\"particípio_passado\":\"odiado\"},\"tags\":[\"verb\",\"a1\"],\"metadata\":{}},{\"id\":\"verbs-a1-core_3-013\",\"target\":\"viajar\",\"source\":\"to travel\",\"type\":\"regular\",\"cefr\":\"A1\",\"grammar_note\":\"-ar regular verb, auxiliary: ter\",\"examples\":[{\"target\":\"Eu viajo no verão.\",\"source\":\"I travel in the summer.\"},{\"target\":\"Nós viajamos de comboio.\",\"source\":\"We travel by train.\"}],\"conjugations\":{\"presente\":{\"eu\":\"viajo\",\"tu\":\"viajas\",\"ele/ela/você\":\"viaja\",\"nós\":\"viajamos\",\"eles/elas/vocês\":\"viajam\"},\"pretérito_perfeito\":{\"eu\":\"viajei\",\"tu\":\"viajaste\",\"ele/ela/você\":\"viajou\",\"nós\":\"viajámos\",\"eles/elas/vocês\":\"viajaram\"},\"pretérito_imperfeito\":{\"eu\":\"viajava\",\"tu\":\"viajavas\",\"ele/ela/você\":\"viajava\",\"nós\":\"viajávamos\",\"eles/elas/vocês\":\"viajavam\"},\"futuro_simples\":{\"eu\":\"viajarei\",\"tu\":\"viajarás\",\"ele/ela/você\":\"viajará\",\"nós\":\"viajaremos\",\"eles/elas/vocês\":\"viajarão\"},\"condicional\":{\"eu\":\"viajaria\",\"tu\":\"viajarias\",\"ele/ela/você\":\"viajaria\",\"nós\":\"viajaríamos\",\"eles/elas/vocês\":\"viajariam\"},\"particípio_passado\":\"viajado\"},\"tags\":[\"verb\",\"a1\"],\"metadata\":{}},{\"id\":\"verbs-a1-core_3-014\",\"target\":\"chegar\",\"source\":\"to arrive\",\"type\":\"regular\",\"cefr\":\"A1\",\"grammar_note\":\"-ar regular verb with spelling change in preterite (cheguei), auxiliary: ter\",\"examples\":[{\"target\":\"Eu chego a casa tarde.\",\"source\":\"I arrive home late.\"},{\"target\":\"O autocarro chega agora.\",\"source\":\"The bus arrives now.\"}],\"conjugations\":{\"presente\":{\"eu\":\"chego\",\"tu\":\"chegas\",\"ele/ela/você\":\"chega\",\"nós\":\"chegamos\",\"eles/elas/vocês\":\"chegam\"},\"pretérito_perfeito\":{\"eu\":\"cheguei\",\"tu\":\"chegaste\",\"ele/ela/você\":\"chegou\",\"nós\":\"chegámos\",\"eles/elas/vocês\":\"chegaram\"},\"pretérito_imperfeito\":{\"eu\":\"chegava\",\"tu\":\"chegavas\",\"ele/ela/você\":\"chegava\",\"nós\":\"chegávamos\",\"eles/elas/vocês\":\"chegavam\"},\"futuro_simples\":{\"eu\":\"chegarei\",\"tu\":\"chegarás\",\"ele/ela/você\":\"chegará\",\"nós\":\"chegaremos\",\"eles/elas/vocês\":\"chegarão\"},\"condicional\":{\"eu\":\"chegaria\",\"tu\":\"chegarias\",\"ele/ela/você\":\"chegaria\",\"nós\":\"chegaríamos\",\"eles/elas/vocês\":\"chegariam\"},\"particípio_passado\":\"chegado\"},\"tags\":[\"verb\",\"a1\"],\"metadata\":{}},{\"id\":\"verbs-a1-core_3-015\",\"target\":\"sair\",\"source\":\"to leave / to go out\",\"type\":\"irregular\",\"cefr\":\"A1\",\"grammar_note\":\"-ir irregular verb (saiu in preterite, saio in present), auxiliary: ter\",\"examples\":[{\"target\":\"Eu saio com os meus amigos.\",\"source\":\"I go out with my friends.\"},{\"target\":\"Tu sais de casa cedo.\",\"source\":\"You leave the house early.\"}],\"conjugations\":{\"presente\":{\"eu\":\"saio\",\"tu\":\"sais\",\"ele/ela/você\":\"sai\",\"nós\":\"saímos\",\"eles/elas/vocês\":\"saem\"},\"pretérito_perfeito\":{\"eu\":\"saí\",\"tu\":\"saíste\",\"ele/ela/você\":\"saiu\",\"nós\":\"saímos\",\"eles/elas/vocês\":\"saíram\"},\"pretérito_imperfeito\":{\"eu\":\"saía\",\"tu\":\"saías\",\"ele/ela/você\":\"saía\",\"nós\":\"saíamos\",\"eles/elas/vocês\":\"saíam\"},\"futuro_simples\":{\"eu\":\"sairei\",\"tu\":\"sairás\",\"ele/ela/você\":\"sairá\",\"nós\":\"sairemos\",\"eles/elas/vocês\":\"sairão\"},\"condicional\":{\"eu\":\"sairia\",\"tu\":\"sairias\",\"ele/ela/você\":\"sairia\",\"nós\":\"sairíamos\",\"eles/elas/vocês\":\"sairiam\"},\"particípio_passado\":\"saído\"},\"tags\":[\"verb\",\"a1\"],\"metadata\":{}},{\"id\":\"verbs-a1-core_3-016\",\"target\":\"entrar\",\"source\":\"to enter\",\"type\":\"regular\",\"cefr\":\"A1\",\"grammar_note\":\"-ar regular verb, auxiliary: ter\",\"examples\":[{\"target\":\"Eu entro na sala de aula.\",\"source\":\"I enter the classroom.\"},{\"target\":\"Ele entra no café.\",\"source\":\"He enters the café.\"}],\"conjugations\":{\"presente\":{\"eu\":\"entro\",\"tu\":\"entras\",\"ele/ela/você\":\"entra\",\"nós\":\"entramos\",\"eles/elas/vocês\":\"entram\"},\"pretérito_perfeito\":{\"eu\":\"entrei\",\"tu\":\"entraste\",\"ele/ela/você\":\"entrou\",\"nós\":\"entrámos\",\"eles/elas/vocês\":\"entraram\"},\"pretérito_imperfeito\":{\"eu\":\"entrava\",\"tu\":\"entravas\",\"ele/ela/você\":\"entrava\",\"nós\":\"entrávamos\",\"eles/elas/vocês\":\"entravam\"},\"futuro_simples\":{\"eu\":\"entrarei\",\"tu\":\"entrarás\",\"ele/ela/você\":\"entrará\",\"nós\":\"entraremos\",\"eles/elas/vocês\":\"entrarão\"},\"condicional\":{\"eu\":\"entraria\",\"tu\":\"entrarias\",\"ele/ela/você\":\"entraria\",\"nós\":\"entraríamos\",\"eles/elas/vocês\":\"entrariam\"},\"particípio_passado\":\"entrado\"},\"tags\":[\"verb\",\"a1\"],\"metadata\":{}},{\"id\":\"verbs-a1-core_3-017\",\"target\":\"ficar\",\"source\":\"to stay / to remain\",\"type\":\"regular\",\"cefr\":\"A1\",\"grammar_note\":\"-ar regular verb with spelling change in preterite (fiquei), auxiliary: ter\",\"examples\":[{\"target\":\"Eu fico em casa hoje.\",\"source\":\"I stay at home today.\"},{\"target\":\"Onde fica o hotel?\",\"source\":\"Where is the hotel located?\"}],\"conjugations\":{\"presente\":{\"eu\":\"fico\",\"tu\":\"ficas\",\"ele/ela/você\":\"fica\",\"nós\":\"ficamos\",\"eles/elas/vocês\":\"ficam\"},\"pretérito_perfeito\":{\"eu\":\"fiquei\",\"tu\":\"ficaste\",\"ele/ela/você\":\"ficou\",\"nós\":\"ficámos\",\"eles/elas/vocês\":\"ficaram\"},\"pretérito_imperfeito\":{\"eu\":\"ficava\",\"tu\":\"ficavas\",\"ele/ela/você\":\"ficava\",\"nós\":\"ficávamos\",\"eles/elas/vocês\":\"ficavam\"},\"futuro_simples\":{\"eu\":\"ficarei\",\"tu\":\"ficarás\",\"ele/ela/você\":\"ficará\",\"nós\":\"ficaremos\",\"eles/elas/vocês\":\"ficarão\"},\"condicional\":{\"eu\":\"ficaria\",\"tu\":\"ficarias\",\"ele/ela/você\":\"ficaria\",\"nós\":\"ficaríamos\",\"eles/elas/vocês\":\"ficariam\"},\"particípio_passado\":\"ficado\"},\"tags\":[\"verb\",\"a1\"],\"metadata\":{}},{\"id\":\"verbs-a1-core_3-018\",\"target\":\"telefonar\",\"source\":\"to call (on phone)\",\"type\":\"regular\",\"cefr\":\"A1\",\"grammar_note\":\"-ar regular verb, takes preposition 'a' or 'para' (telefonar a alguém), auxiliary: ter\",\"examples\":[{\"target\":\"Eu telefono à minha mãe.\",\"source\":\"I call my mother.\"},{\"target\":\"Tu telefonas mais tarde?\",\"source\":\"Will you call later?\"}],\"conjugations\":{\"presente\":{\"eu\":\"telefono\",\"tu\":\"telefonas\",\"ele/ela/você\":\"telefona\",\"nós\":\"telefonamos\",\"eles/elas/vocês\":\"telefonam\"},\"pretérito_perfeito\":{\"eu\":\"telefonei\",\"tu\":\"telefonaste\",\"ele/ela/você\":\"telefonou\",\"nós\":\"telefonámos\",\"eles/elas/vocês\":\"telefonaram\"},\"pretérito_imperfeito\":{\"eu\":\"telefonavas\",\"tu\":\"telefonavas\",\"ele/ela/você\":\"telefonava\",\"nós\":\"telefonavamos\",\"eles/elas/vocês\":\"telefonavam\"},\"futuro_simples\":{\"eu\":\"telefonarei\",\"tu\":\"telefonarás\",\"ele/ela/você\":\"telefonará\",\"nós\":\"telefonaremos\",\"eles/elas/vocês\":\"telefonarão\"},\"condicional\":{\"eu\":\"telefonaria\",\"tu\":\"telefonarias\",\"ele/ela/você\":\"telefonaria\",\"nós\":\"telefonaríamos\",\"eles/elas/vocês\":\"telefonariam\"},\"particípio_passado\":\"telefonado\"},\"tags\":[\"verb\",\"a1\"],\"metadata\":{}},{\"id\":\"verbs-a1-core_3-019\",\"target\":\"ajudar\",\"source\":\"to help\",\"type\":\"regular\",\"cefr\":\"A1\",\"grammar_note\":\"-ar regular verb, auxiliary: ter\",\"examples\":[{\"target\":\"Eu ajudo o meu amigo.\",\"source\":\"I help my friend.\"},{\"target\":\"Podes ajudar-me, por favor?\",\"source\":\"Can you help me, please?\"}],\"conjugations\":{\"presente\":{\"eu\":\"ajudo\",\"tu\":\"ajudas\",\"ele/ela/você\":\"ajuda\",\"nós\":\"ajudamos\",\"eles/elas/vocês\":\"ajudam\"},\"pretérito_perfeito\":{\"eu\":\"ajudei\",\"tu\":\"ajudaste\",\"ele/ela/você\":\"ajudou\",\"nós\":\"ajudámos\",\"eles/elas/vocês\":\"ajudaram\"},\"pretérito_imperfeito\":{\"eu\":\"ajudava\",\"tu\":\"ajudavas\",\"ele/ela/você\":\"ajudava\",\"nós\":\"ajudávamos\",\"eles/elas/vocês\":\"ajudavam\"},\"futuro_simples\":{\"eu\":\"ajudarei\",\"tu\":\"ajudarás\",\"ele/ela/você\":\"ajudará\",\"nós\":\"ajudaremos\",\"eles/elas/vocês\":\"ajudarão\"},\"condicional\":{\"eu\":\"ajudaria\",\"tu\":\"ajudarias\",\"ele/ela/você\":\"ajudaria\",\"nós\":\"ajudaríamos\",\"eles/elas/vocês\":\"ajudariam\"},\"particípio_passado\":\"ajudado\"},\"tags\":[\"verb\",\"a1\"],\"metadata\":{}},{\"id\":\"verbs-a1-core_3-020\",\"target\":\"procurar\",\"source\":\"to look for / to search\",\"type\":\"regular\",\"cefr\":\"A1\",\"grammar_note\":\"-ar regular verb, auxiliary: ter\",\"examples\":[{\"target\":\"Eu procuro as minhas chaves.\",\"source\":\"I am looking for my keys.\"},{\"target\":\"Ela procura um trabalho novo.\",\"source\":\"She is looking for a new job.\"}],\"conjugations\":{\"presente\":{\"eu\":\"procuro\",\"tu\":\"procuras\",\"ele/ela/você\":\"procura\",\"nós\":\"procuramos\",\"eles/elas/vocês\":\"procuram\"},\"pretérito_perfeito\":{\"eu\":\"procurei\",\"tu\":\"procuraste\",\"ele/ela/você\":\"procurou\",\"nós\":\"procurámos\",\"eles/elas/vocês\":\"procuraram\"},\"pretérito_imperfeito\":{\"eu\":\"procurava\",\"tu\":\"procuravas\",\"ele/ela/você\":\"procurava\",\"nós\":\"procurávamos\",\"eles/elas/vocês\":\"procuravam\"},\"futuro_simples\":{\"eu\":\"procurarei\",\"tu\":\"procurarás\",\"ele/ela/você\":\"procurará\",\"nós\":\"procuraremos\",\"eles/elas/vocês\":\"procurarão\"},\"condicional\":{\"eu\":\"procuraria\",\"tu\":\"procurarias\",\"ele/ela/você\":\"procuraria\",\"nós\":\"procuraríamos\",\"eles/elas/vocês\":\"procurariam\"},\"particípio_passado\":\"procurado\"},\"tags\":[\"verb\",\"a1\"],\"metadata\":{}}]";
+const langConfigJson = "{\"language_pair\":\"english_portuguese\",\"target_lang\":\"pt\",\"native_lang\":\"en\",\"target_lang_name\":\"Português\",\"native_lang_name\":\"English\",\"speech_lang\":\"pt-PT\",\"noun_metadata_fields\":[{\"key\":\"article\",\"label\":\"Artigo\",\"render\":\"article_badge\"},{\"key\":\"gender\",\"label\":\"Género\",\"render\":\"gender_label\"},{\"key\":\"plural\",\"label\":\"Plural\",\"render\":\"text\"}],\"article_colours\":{\"o\":\"#4A7C9E\",\"a\":\"#B05070\"},\"gender_labels\":{\"m\":\"Masculino\",\"f\":\"Feminino\"},\"verb_tenses\":[\"presente\",\"pretérito_perfeito\",\"pretérito_imperfeito\",\"particípio_passado\",\"futuro_simples\",\"condicional\"],\"cases\":{},\"ui_labels\":{\"learn_mode\":\"Aprender\",\"train_mode\":\"Treinar\",\"examples_heading\":\"Frases de exemplo\",\"grammar_note_heading\":\"Nota gramatical\",\"audio_button\":\"Ouvir\",\"back_link\":\"Voltar\",\"card_counter\":\"Cartão {current} / {total}\",\"next_button\":\"Seguinte\",\"finish_button\":\"Concluir\",\"correct\":\"Correto!\",\"wrong\":\"Incorreto\",\"dashboard_link\":\"Painel principal\",\"library_prompt\":\"Escolha um baralho da biblioteca e explore o conteúdo dos cartões.\",\"cards_badge\":\"{count} CARTÕES\",\"cards_count\":\"{count} cartões\",\"deck_meta\":\"{topic} • {level} • {count} cartões\",\"no_decks\":\"Ainda não existem baralhos nesta categoria.\",\"setup_title\":\"Configurar treino\",\"setup_subtitle\":\"Configure a sua sessão de treino.\",\"question_type\":\"Tipo de pergunta\",\"mode_multiple_choice\":\"Escolha múltipla\",\"mode_typing\":\"Digitação de texto\",\"mode_typing_short\":\"Digitação\",\"direction\":\"Direção\",\"direction_forward\":\"🇺🇸 English → 🇵🇹 Português\",\"direction_reverse\":\"🇵🇹 Português → 🇺🇸 English\",\"select_level\":\"Selecionar nível\",\"start_training\":\"Iniciar treino\",\"count_label\":\"Quantidade\",\"all_cards\":\"Todas\",\"in_deck\":\"no baralho\",\"view_cards\":\"Cartões\",\"view_list\":\"Lista\",\"card_word\":\"Cartão\",\"keyboard_hint_study\":\"← → Teclas de seta para navegar · A para ouvir\",\"example_single_heading\":\"Exemplo\",\"no_example\":\"Nenhum exemplo disponível.\",\"tags_label\":\"Etiquetas:\",\"type_vocab\":\"Vocabulário\",\"type_verb\":\"Verbo\",\"type_phrase\":\"Expressão\",\"type_connector\":\"Conector\",\"type_grammar\":\"Gramática\",\"type_noun\":\"Substantivo\",\"type_adjective\":\"Adjetivo\",\"type_expression\":\"Locução\",\"plural_prefix\":\"Pl. {plural}\",\"plural_only\":\"apenas plural\",\"word_order_heading\":\"Ordem das palavras\",\"structure_heading\":\"Estrutura\",\"training_title\":\"Treino\",\"all_levels\":\"Todos os níveis\",\"type_placeholder\":\"Escreva a palavra em português...\",\"check_button\":\"Verificar\",\"keyboard_hint_train\":\"Enter / Espaço = confirmar · A = Ouvir\",\"audio_title\":\"Ouvir (A)\",\"training_finished\":\"Treino concluído!\",\"missed_heading\":\"Respostas erradas — para repetir\",\"retry_missed\":\"Repetir erros\",\"new_config\":\"Nova configuração\",\"plural_hint\":\"Pl: {plural}\",\"results_pct\":\"{pct}% de acertos\",\"result_excellent\":\"Excelente! Dominou este nível com distinção.\",\"result_good\":\"Muito bem! Mais um pouco de prática e dominará tudo!\",\"result_ok\":\"Bom começo! Reveja os cartões mais uma vez.\",\"result_retry\":\"Sem problema — a prática leva à perfeição!\",\"no_cards_title\":\"Nenhum cartão encontrado\",\"no_cards_hint\":\"Por favor, selecione outro nível ou baralho.\"},\"answer_normalisation\":{\"strip_leading_words\":[\"o\",\"a\",\"os\",\"as\",\"um\",\"uma\",\"uns\",\"umas\"],\"alt_spellings\":{\"á\":\"a\",\"à\":\"a\",\"ã\":\"a\",\"â\":\"a\",\"é\":\"e\",\"ê\":\"e\",\"í\":\"i\",\"ó\":\"o\",\"ô\":\"o\",\"õ\":\"o\",\"ú\":\"u\",\"ç\":\"c\"}}}";
+const category = "verbs";
+const lang = "en-pt";
+const base = "/languagelounge/";
+const defaultView = "cards";
+
+  const cards     = JSON.parse(cardsJson);
+  const config    = JSON.parse(langConfigJson);
+  let currentIndex = 0;
+
+  const dotNav    = document.getElementById('dot-nav');
+  const currentNum = document.getElementById('current-num');
+  const progressBar = document.getElementById('progress-bar');
+  const btnPrev   = document.getElementById('btn-prev');
+  const btnNext   = document.getElementById('btn-next');
+  const cardHost  = document.getElementById('card-host');
+  const progressCont = document.getElementById('progress-container');
+
+  const cardViewWrap = document.getElementById('card-view-wrap');
+  const listViewWrap = document.getElementById('list-view-wrap');
+  const btnViewCards = document.getElementById('view-cards-btn');
+  const btnViewList  = document.getElementById('view-list-btn');
+
+  // Toggle Logic
+  function setViewMode(mode) {
+    if (mode === 'list') {
+      cardViewWrap.classList.add('hidden');
+      listViewWrap.classList.remove('hidden');
+      progressCont.classList.add('hidden');
+      btnViewList.classList.add('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewList.classList.remove('text-[var(--text-muted)]');
+      btnViewCards.classList.remove('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewCards.classList.add('text-[var(--text-muted)]');
+    } else {
+      listViewWrap.classList.add('hidden');
+      cardViewWrap.classList.remove('hidden');
+      progressCont.classList.remove('hidden');
+      btnViewCards.classList.add('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewCards.classList.remove('text-[var(--text-muted)]');
+      btnViewList.classList.remove('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewList.classList.add('text-[var(--text-muted)]');
+    }
+  }
+
+  btnViewCards.addEventListener('click', () => setViewMode('cards'));
+  btnViewList.addEventListener('click', () => setViewMode('list'));
+
+  // Initial view is configured per category (config/language_pairs/*.yaml → categories[].default_view)
+  if (defaultView === 'list') {
+    setViewMode('list');
+  }
+
+
+
+  // ── Helpers (mirror card-renderer.ts — no module imports in inline scripts) ──
+  const articleColours = config.article_colours || {};
+  const genderLabels   = config.gender_labels   || {};
+  const speechLang     = config.speech_lang;
+  const ui             = config.ui_labels || {};
+  const fmt = (tpl, vars) => String(tpl).replace(/\{(\w+)\}/g, (m, k) => (k in vars ? vars[k] : m));
+  const formatHighlight = (text) => text ? String(text).replace(/\*(.*?)\*/g, '<span class="highlighter">$1</span>') : '';
+  // Articles come from the language config (keys of article_colours), never hardcoded
+  const articleList = Object.keys(articleColours);
+  const articlePatterns = articleList.map(a => {
+    const esc = a.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    return esc.endsWith("'") ? esc : `${esc}\\s+`;
+  });
+  const articleRe = articlePatterns.length
+    ? new RegExp('^(?:' + articlePatterns.join('|') + ')', 'i')
+    : null;
+
+  function stripArticle(w) {
+    return articleRe ? (w || '').replace(articleRe, '').trim() : (w || '').trim();
+  }
+
+  function getTypeLabel(card) {
+    const tags = card.tags || [];
+    if (tags.includes('noun'))       return ui.type_noun;
+    if (tags.includes('verb'))       return ui.type_verb;
+    if (tags.includes('adjective'))  return ui.type_adjective;
+    if (tags.includes('expression')) return ui.type_expression;
+    const byType = { vocab: ui.type_vocab, verb: ui.type_verb, phrase: ui.type_phrase, connector: ui.type_connector, grammar: ui.type_grammar };
+    return byType[card.type] || ui.type_vocab;
+  }
+
+  function normaliseEx(ex) {
+    return { target: ex.target||'', source: ex.source||'', note: ex.note };
+  }
+
+  function getMetaFacts(card) {
+    const meta = card.metadata || {};
+    const facts = [];
+    for (const field of (config.noun_metadata_fields || [])) {
+      const raw = meta[field.key];
+      if (!raw || raw==='~') continue;
+      let value = String(raw), colour;
+      if (field.render === 'gender_label')  value  = genderLabels[raw] || raw;
+      if (field.render === 'article_badge') colour = articleColours[raw.toLowerCase()] || 'var(--espresso)';
+      facts.push({ label: field.label, value, colour });
+    }
+    return facts;
+  }
+
+  // ── Card renderer ─────────────────────────────────────────────────────────
+  function renderCard(idx) {
+    const card = cards[idx];
+    if (!card || !cardHost) return;
+
+    const lc = cardHost.querySelector('.learning-card');
+    if (!lc) return;
+
+    function sel(cls) { return lc.querySelector(cls); }
+
+    // Type badge + level
+    sel('.lc-type-badge').textContent = getTypeLabel(card);
+    sel('.lc-level-badge').textContent = (card.level || '').toUpperCase();
+
+    // Article
+    const article = card.metadata?.article;
+    const articleWrap = sel('.lc-article-wrap');
+    const articleEl   = sel('.lc-article');
+    if (article && (card.tags||[]).includes('noun') && !card.metadata?.plural_only) {
+      articleEl.textContent = article;
+      articleEl.style.color = articleColours[article.toLowerCase()] || 'var(--espresso)';
+      articleWrap.style.display = '';
+    } else {
+      articleWrap.style.display = 'none';
+    }
+
+    // Word / translation / forms
+    sel('.lc-word').textContent        = stripArticle(card.target);
+    sel('.lc-translation').textContent = card.source || '';
+    const plural = card.metadata?.plural;
+    sel('.lc-forms').textContent = plural && !card.metadata?.plural_only ? fmt(ui.plural_prefix, { plural }) : card.metadata?.plural_only ? ui.plural_only : '';
+
+    // Meta grid
+    const metaGrid = sel('.lc-meta-grid');
+    const facts = getMetaFacts(card);
+    if (facts.length) {
+      metaGrid.style.gridTemplateColumns = `repeat(${Math.min(facts.length,4)}, 1fr)`;
+      metaGrid.style.display = '';
+      metaGrid.innerHTML = facts.map((f, i) => `
+        <div class="px-5 py-4 ${i<facts.length-1?'border-r':''}" style="border-color:var(--border);">
+          <p class="text-[9px] font-bold uppercase tracking-widest mb-1" style="color:var(--text-muted);">${f.label}</p>
+          <p class="text-sm font-bold" style="color:${f.colour||'var(--text)'};">${f.value}</p>
+        </div>`).join('');
+    } else {
+      metaGrid.style.display = 'none';
+    }
+
+    // Grammar note
+    const grammarWrap = sel('.lc-grammar-wrap');
+    if (card.grammar_note) {
+      sel('.lc-grammar-text').innerHTML = formatHighlight(card.grammar_note);
+      grammarWrap.classList.remove('hidden');
+    } else {
+      grammarWrap.classList.add('hidden');
+    }
+
+    // Examples
+    const examplesEl = sel('.lc-examples');
+    const rawEx = card.examples || [];
+    examplesEl.innerHTML = rawEx.length
+      ? rawEx.map(ex => { const e=normaliseEx(ex); return `
+          <div class="rounded-2xl border overflow-hidden" style="border-color:var(--border);">
+            <div class="px-4 py-3" style="background-color:var(--bg);">
+              <p class="font-semibold leading-snug mb-1" style="color:var(--text);">${e.target}</p>
+              <p class="text-sm italic" style="color:var(--text-muted);">${e.source||''}</p>
+            </div>
+            ${e.note?`<div class="px-4 py-2 border-t" style="border-color:var(--border);">
+              <p class="text-[10px] font-bold font-mono" style="color:var(--espresso);">📐 ${e.note}</p>
+            </div>`:''}
+          </div>`; }).join('')
+      : '<p class="text-sm italic" style="color:var(--text-muted);">' + ui.no_example + '</p>';
+
+    // Verb: conjugation table
+    const conjWrap  = sel('.lc-conjugation-wrap');
+    const conjInner = sel('.lc-conjugation-inner');
+    const cardType = card.type || (card.tags?.includes('verb') ? 'verb' : 'vocab');
+    if (conjWrap && conjInner) {
+      if (cardType === 'verb' && card.conjugations) {
+        conjWrap.classList.remove('hidden');
+        let conjArray = [];
+        if (Array.isArray(card.conjugations)) {
+          conjArray = card.conjugations;
+        } else {
+          for (const [tense, forms] of Object.entries(card.conjugations)) {
+            if (typeof forms === 'string') {
+              conjArray.push({ tense, stringForm: forms });
+            } else {
+              const formsArr = Object.entries(forms).map(([pronoun, form]) => ({ pronoun, form }));
+              conjArray.push({ tense, forms: formsArr });
+            }
+          }
+        }
+
+        const tensesToRender = config.verb_tenses || conjArray.map(t => t.tense);
+        const stringTenses = [];
+        const tableTenses = [];
+
+        tensesToRender.forEach(tense => {
+          const t = conjArray.find(c => c.tense === tense);
+          if (!t) return;
+          if (t.stringForm) stringTenses.push(t);
+          else tableTenses.push(t);
+        });
+
+        let html = '';
+        if (stringTenses.length > 0) {
+          html += `
+            <div class="flex flex-wrap gap-3 mb-6">
+              ${stringTenses.map(t => `
+                <div class="rounded-xl border px-4 py-2.5 flex items-center gap-3 shadow-sm" style="border-color:var(--border); background-color:var(--bg);">
+                  <span class="text-[10px] font-bold uppercase tracking-widest opacity-80" style="color:var(--espresso);">${t.tense.replace(/_/g, ' ')}</span>
+                  <span class="font-bold text-sm" style="color:var(--text);">${t.stringForm}</span>
+                </div>
+              `).join('')}
+            </div>
+          `;
+        }
+
+        if (tableTenses.length > 0) {
+          const pronouns = tableTenses[0].forms.map(f => f.pronoun);
+          html += `
+            <div class="rounded-xl border overflow-x-auto shadow-sm w-full" style="border-color:var(--border);">
+              <table class="w-full text-sm text-left">
+                <thead>
+                  <tr style="background-color:var(--bg); border-bottom: 1px solid var(--border);">
+                    <th class="px-4 py-3 font-bold uppercase tracking-widest text-[10px] w-[1%]" style="color:var(--espresso); border-right: 1px solid var(--border);"></th>
+                    ${tableTenses.map(t => `
+                      <th class="px-4 py-3 font-bold uppercase tracking-widest text-[10px]" style="color:var(--espresso);">${t.tense.replace(/_/g, ' ')}</th>
+                    `).join('')}
+                  </tr>
+                </thead>
+                <tbody>
+                  ${pronouns.map((pronoun, ri) => `
+                    <tr class="${ri < pronouns.length - 1 ? 'border-b' : ''}" style="border-color:var(--border);">
+                      <td class="px-4 py-3 font-bold text-xs whitespace-nowrap" style="color:var(--espresso); background-color:var(--bg); border-right: 1px solid var(--border);">${pronoun}</td>
+                      ${tableTenses.map(t => {
+                        const formObj = t.forms.find(f => f.pronoun === pronoun);
+                        return `<td class="px-4 py-3 font-semibold whitespace-nowrap" style="color:var(--text);">${formObj ? formObj.form : '-'}</td>`;
+                      }).join('')}
+                    </tr>
+                  `).join('')}
+                </tbody>
+              </table>
+            </div>
+          `;
+        }
+        conjInner.innerHTML = html;
+      } else {
+        conjWrap.classList.add('hidden');
+        conjInner.innerHTML = '';
+      }
+    }
+
+    // Connector: word order block
+    const woWrap = sel('.lc-wordorder-wrap');
+    if (woWrap) {
+      if (cardType === 'connector' && card.word_order) {
+        sel('.lc-wordorder-text').textContent = card.word_order;
+        woWrap.classList.remove('hidden');
+      } else {
+        woWrap.classList.add('hidden');
+      }
+    }
+
+    // Phrase: preposition rule block
+    const phraseWrap = sel('.lc-phrase-wrap');
+    if (phraseWrap) {
+      if (cardType === 'phrase' && card.clause_type) {
+        sel('.lc-phrase-rule').textContent = card.clause_type;
+        phraseWrap.classList.remove('hidden');
+      } else {
+        phraseWrap.classList.add('hidden');
+      }
+    }
+
+    // Tags
+    sel('.lc-tags').innerHTML = (card.tags||[]).map(t =>
+      `<span class="text-[10px] font-bold px-2 py-0.5 rounded-md border" style="border-color:var(--border);color:var(--text-muted);background-color:var(--bg);">${t}</span>`
+    ).join('');
+
+    // Progress UI
+    if (currentNum)  currentNum.textContent = String(idx+1);
+    if (progressBar) progressBar.style.width = `${Math.round(((idx+1)/cards.length)*100)}%`;
+    if (btnPrev)     btnPrev.disabled = idx === 0;
+    if (btnNext)     btnNext.innerHTML = idx === cards.length-1
+      ? '✓ ' + ui.finish_button
+      : ui.next_button + ' <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>';
+
+    updateDots();
+
+    // Re-bind audio button cleanly by cloning to strip old listeners
+    const oldBtn = sel('.lc-audio-btn');
+    if (oldBtn) {
+      const newBtn = oldBtn.cloneNode(true);
+      oldBtn.parentNode.replaceChild(newBtn, oldBtn);
+      newBtn.addEventListener('click', speakCurrent);
+    }
+  }
+
+  // ── Dot navigation ────────────────────────────────────────────────────────
+  function buildDots() {
+    if (!dotNav) return;
+    dotNav.innerHTML = '';
+    const maxVisible = 20;
+    const showAll = cards.length <= maxVisible;
+    cards.forEach((_, i) => {
+      if (!showAll && i >= maxVisible) return;
+      const dot = document.createElement('button');
+      dot.className = 'dot w-2 h-2 rounded-full transition-all duration-300 flex-shrink-0';
+      dot.style.backgroundColor = 'var(--border)';
+      dot.title = `${ui.card_word} ${i+1}`;
+      dot.addEventListener('click', () => goTo(i));
+      dotNav.appendChild(dot);
+    });
+    if (!showAll) {
+      const el = document.createElement('span');
+      el.textContent = `+${cards.length - maxVisible}`;
+      el.className = 'text-[10px] font-bold';
+      el.style.color = 'var(--text-muted)';
+      dotNav.appendChild(el);
+    }
+  }
+
+  function updateDots() {
+    dotNav?.querySelectorAll('.dot').forEach((dot, i) => {
+      dot.style.backgroundColor = i===currentIndex ? 'var(--espresso)' : 'var(--border)';
+      dot.style.width     = i===currentIndex ? '20px' : '8px';
+      dot.style.borderRadius = '4px';
+    });
+  }
+
+  // ── Audio ─────────────────────────────────────────────────────────────────
+  function speakCurrent() {
+    const card = cards[currentIndex];
+    if (!card) return;
+    if (window.LoungeAudioEngine) {
+      window.LoungeAudioEngine.speak(card.target || '', speechLang, 0.85);
+    }
+  }
+
+  // ── Navigate ─────────────────────────────────────────────────────────────
+  function goTo(idx) {
+    if (idx < 0 || idx >= cards.length) return;
+    currentIndex = idx;
+    renderCard(currentIndex);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  btnPrev?.addEventListener('click', () => goTo(currentIndex - 1));
+  btnNext?.addEventListener('click', () => {
+    if (currentIndex === cards.length - 1) window.location.href = `${base}${lang}/${category}/`;
+    else goTo(currentIndex + 1);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') goTo(currentIndex + 1);
+    if (e.key === 'ArrowLeft')  goTo(currentIndex - 1);
+    if (e.key === 'a' || e.key === 'A') speakCurrent();
+  });
+
+  // ── Learn / Train panel toggle ──────────────────────
+  const btnLearn = document.getElementById('btn-mode-learn');
+  const btnTrain = document.getElementById('btn-mode-train');
+  const pnlLearn = document.getElementById('learn-panel');
+  const pnlTrain = document.getElementById('train-panel');
+  const toolbar  = document.getElementById('learn-toolbar');
+
+  const STORAGE_KEY = `lounge:${lang}:${category}:deck:mode`;
+  let currentMode = localStorage.getItem(STORAGE_KEY) || 'learn';
+
+  function applyMode() {
+    if (currentMode === 'learn') {
+      btnLearn.style.backgroundColor = 'var(--espresso)';
+      btnLearn.style.color = '#F5F2EB';
+      btnTrain.style.backgroundColor = 'transparent';
+      btnTrain.style.color = 'var(--text-muted)';
+      pnlLearn.classList.remove('hidden');
+      toolbar.classList.remove('hidden');
+      pnlTrain.classList.add('hidden');
+    } else {
+      btnTrain.style.backgroundColor = 'var(--espresso)';
+      btnTrain.style.color = '#F5F2EB';
+      btnLearn.style.backgroundColor = 'transparent';
+      btnLearn.style.color = 'var(--text-muted)';
+      pnlTrain.classList.remove('hidden');
+      pnlLearn.classList.add('hidden');
+      toolbar.classList.add('hidden');
+    }
+    localStorage.setItem(STORAGE_KEY, currentMode);
+  }
+
+  btnLearn?.addEventListener('click', () => { currentMode = 'learn'; applyMode(); });
+  btnTrain?.addEventListener('click', () => { currentMode = 'train'; applyMode(); });
+  applyMode();
+
+  // ── Radio-style selectors (mode & dir & count) ─────────────
+  document.querySelectorAll('.sel-opt').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const group = btn.dataset.group;
+      document.querySelectorAll(`.sel-opt[data-group="${group}"]`).forEach(b => b.classList.remove('sel-active'));
+      btn.classList.add('sel-active');
+      const hidden = document.getElementById(`${group}-hidden`);
+      if (hidden) hidden.value = btn.dataset.value;
+    });
+  });
+
+  document.getElementById('deck-train-form')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const base = form.action;
+    const mode = document.getElementById('mode-hidden')?.value || 'mc';
+    const dir  = document.getElementById('dir-hidden')?.value || `${config.language_pair.source_code}-${config.language_pair.target_code}`.toLowerCase();
+    const count = document.getElementById('count-hidden')?.value || '30';
+    const level = form.querySelector('[name="level"]')?.value || '';
+    const deck = form.querySelector('[name="deck"]')?.value || '';
+    
+    const params = new URLSearchParams();
+    if(level) params.set('level', level);
+    params.set('deck', deck);
+    params.set('mode', mode);
+    params.set('dir', dir);
+    params.set('count', count);
+    
+    window.location.href = `${base}?${params.toString()}`;
+  });
+
+  // ── Init ─────────────────────────────────────────────────────────────────
+  buildDots();
+  // Card 0 is already rendered server-side via LearningCard component.
+  // Sync progress UI to reflect card 0 state.
+  updateDots();
+  if (progressBar) progressBar.style.width = `${Math.round(1/cards.length*100)}%`;
+  // Update card 0 using client-side config too (ensures langConfig is applied)
+  renderCard(0);
+})();</script>

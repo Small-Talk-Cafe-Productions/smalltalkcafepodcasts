@@ -1,0 +1,758 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="description" content="Lounge Português — O seu espaço dedicado à língua portuguesa — expanda o seu vocabulário, domine a gramática e aprofunde o seu português do nível A1 ao B2."><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/languagelounge/favicon.svg"><meta name="generator" content="Astro v7.3.5"><title>Reporting &amp; Media — Lounge Português</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet"><script>
+      (function() {
+        const saved = localStorage.getItem('wortschatz_theme');
+        if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script><link rel="stylesheet" href="/languagelounge/_astro/Layout.Cr1varBg.css"><style>.sel-opt[data-astro-cid-5tabbh6g]{border:2px solid var(--border);background-color:var(--card);color:var(--text);cursor:pointer;text-align:center;border-radius:12px;flex-direction:column;justify-content:center;align-items:center;width:100%;padding:14px 12px;transition:border-color .15s,background-color .15s,color .15s,box-shadow .15s;display:flex}.sel-opt[data-astro-cid-5tabbh6g]:hover{border-color:var(--border-hover);box-shadow:0 2px 8px #00000014}.sel-opt[data-astro-cid-5tabbh6g].sel-active{border-color:var(--espresso);background-color:var(--espresso);color:#f5f2eb;box-shadow:0 2px 12px #0000002e}
+</style></head><body class="antialiased min-h-screen flex flex-col" style="background-color:var(--bg);color:var(--text);"><!-- Header --><header class="sticky top-0 z-50 border-b" style="background-color:var(--bg);border-color:var(--border);"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between gap-4" style="height:4.5rem;"><!-- Logo + Language Switcher --><div class="flex items-center gap-4 shrink-0"><a href="/languagelounge/en-pt/" class="flex items-center gap-2 group"><span class="font-outfit font-extrabold text-xl sm:text-2xl tracking-tight transition-colors" style="color:var(--text);">Small Talk Café<span class="font-normal text-base hidden sm:inline" style="color:var(--text-muted);"> | <span id="site-name">Lounge Português</span></span></span></a><!-- Language Selector Dropdown --><div class="relative" id="lang-dropdown-wrapper"><button id="lang-btn" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-sm font-bold transition-all hover:opacity-70" style="background-color:var(--bg); border-color:var(--border); color:var(--text);"><span id="lang-flag">🇵🇹</span><span id="lang-code">PT</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"></path></svg></button><div id="lang-menu" class="hidden absolute top-full left-0 mt-2 rounded-2xl border shadow-2xl overflow-hidden z-50 min-w-[260px] sm:min-w-[300px]" style="background-color:var(--card); border-color:var(--border);"><div class="px-3.5 py-2 text-[11px] font-bold uppercase tracking-wider border-b" style="background-color:var(--surface); border-color:var(--border); color:var(--text-muted);">Language Lounges</div><div><a href="/languagelounge/en-de/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇩🇪</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Deutsch Lounge</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">Der Raum für die deutsche Sprache</div></div></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-es/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇪🇸</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Lounge Español</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">El espacio para la lengua española</div></div></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-fr/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇫🇷</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Lounge Français</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">Le salon de la langue française</div></div></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-it/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇮🇹</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Lounge Italiano</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">Il salotto per la lingua italiana</div></div></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-nl/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇳🇱</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Nederlands Lounge</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">Dé ontmoetingsplek voor de Nederlandse taal</div></div></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-pt/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-bold" style="color:var(--text); background-color:var(--surface);"><span class="text-2xl shrink-0">🇵🇹</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Lounge Português</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">O espaço para a língua portuguesa</div></div><span class="shrink-0 text-[10px] font-extrabold uppercase px-1.5 py-0.5 rounded" style="background-color:var(--accent); color:var(--bg);">Active</span></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-sv/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇸🇪</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Svenska Lounge</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">Mötesplatsen för det svenska språket</div></div></a></div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/" class="w-full flex items-center gap-2.5 px-4 py-2.5 text-xs font-semibold hover:opacity-80 transition-colors " style="color:var(--text); "><span class="text-base">🏛️</span><span>Language Lounge Hub</span><span class="ml-auto text-[11px]" style="color:var(--text-muted);">Overview &rarr;</span></a></div></div></div><!-- Dynamic Nav Links --><nav class="hidden md:flex gap-5 items-center"><a href="https://smalltalkcafe.de/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Small Talk Café Podcasts</a><span class="text-sm font-normal" style="color:var(--border);">|</span><a href="/languagelounge/en-pt/vocabulary/" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Vocabulário</a><a href="/languagelounge/en-pt/verbs/" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Verbos</a><a href="/languagelounge/en-pt/grammatik/" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Gramática</a><a href="/languagelounge/en-pt/redemittel/" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Expressões</a><!-- Dark/Light Toggle --><button id="theme-toggle" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-sm font-semibold transition-all hover:opacity-70" style="border-color:var(--border); color:var(--text-muted);" aria-label="Toggle dark/light mode"><span id="theme-icon">☀️</span><span id="theme-label">Light</span></button></nav></div></header><main id="main-content" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-1 w-full"><div class="max-w-4xl mx-auto py-6" data-astro-cid-5tabbh6g><!-- Deck Header --><div class="flex items-start justify-between mb-8 gap-4 flex-wrap" data-astro-cid-5tabbh6g><div data-astro-cid-5tabbh6g><a href="/languagelounge/en-pt/verbs/" class="text-xs font-bold flex items-center gap-1 mb-2 hover:opacity-70 transition-opacity" style="color:var(--espresso);" data-astro-cid-5tabbh6g><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><path d="m15 18-6-6 6-6" data-astro-cid-5tabbh6g></path></svg>Verbos</a><h1 class="text-2xl md:text-3xl font-extrabold font-outfit" style="color:var(--text);" data-astro-cid-5tabbh6g>Reporting &amp; Media</h1><p class="text-xs font-bold uppercase tracking-wider mt-1" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Informação e Meios de Comunicação • B2 • 20 cartões</p></div><div class="flex flex-col items-end gap-4 w-full md:w-auto mt-4 md:mt-0" data-astro-cid-5tabbh6g><!-- ── Mode Toggle ───────────────────────────── --><div class="flex rounded-xl border overflow-hidden p-1 gap-1 w-full max-w-[300px]" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><button id="btn-mode-learn" class="mode-btn flex-1 flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold transition-all" data-astro-cid-5tabbh6g><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" data-astro-cid-5tabbh6g></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" data-astro-cid-5tabbh6g></path></svg>Aprender</button><button id="btn-mode-train" class="mode-btn flex-1 flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold transition-all" data-astro-cid-5tabbh6g><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><circle cx="12" cy="12" r="10" data-astro-cid-5tabbh6g></circle><polyline points="12 6 12 12 16 14" data-astro-cid-5tabbh6g></polyline></svg>Treinar</button></div><div id="learn-toolbar" class="flex flex-col items-end gap-4 w-full" data-astro-cid-5tabbh6g><!-- View switcher (Cards vs List) --><div class="flex rounded-xl border overflow-hidden p-1 gap-1 w-full max-w-[300px]" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><button id="view-cards-btn" class="view-btn flex-1 flex items-center justify-center px-4 py-2 rounded-lg text-xs font-bold transition-all bg-[var(--espresso)] text-[#F5F2EB]" data-astro-cid-5tabbh6g>Cartões</button><button id="view-list-btn" class="view-btn flex-1 flex items-center justify-center px-4 py-2 rounded-lg text-xs font-bold transition-all text-[var(--text-muted)] hover:opacity-70" data-astro-cid-5tabbh6g>Lista</button></div><!-- Progress indicator --><div id="progress-container" class="flex items-center gap-3" data-astro-cid-5tabbh6g><div class="text-xs font-semibold" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Cartão <span id="current-num" class="font-extrabold" style="color:var(--text);" data-astro-cid-5tabbh6g>1</span> / 20</div><div class="w-24 h-1.5 rounded-full overflow-hidden border" style="background-color:var(--bg);border-color:var(--border);" data-astro-cid-5tabbh6g><div id="progress-bar" class="h-full transition-all duration-500 rounded-full" style="width:0%; background-color:var(--espresso);" data-astro-cid-5tabbh6g></div></div></div></div></div></div><!-- ══ LEARN PANEL ════════════════════════════ --><div id="learn-panel" class="space-y-6" data-astro-cid-5tabbh6g><!-- ── Universal Study Card (rendered by LearningCard component) ── --><div id="card-view-wrap" data-astro-cid-5tabbh6g><div id="card-host" data-astro-cid-5tabbh6g><!-- The card shell — populated client-side by renderCard() --><div class="learning-card rounded-3xl border shadow-xl overflow-hidden" style="background-color:var(--card); border-color:var(--border);"><!-- ── Top bar ─────────────────────────────────── --><div class="lc-topbar flex items-center justify-between px-6 py-3.5 border-b" style="border-color:var(--border); background-color:var(--bg);"><div class="flex items-center gap-2"><span class="lc-type-badge text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-lg" style="background-color:var(--espresso); color:#F5F2EB;">—</span><span class="lc-level-badge text-[10px] font-bold px-2.5 py-1 rounded-lg cafe-badge"></span></div><button class="lc-audio-btn flex items-center justify-center w-11 h-11 rounded-full transition-transform hover:scale-105 active:scale-95 shadow-md flex-shrink-0" title="Ouvir (A)" style="background-color:var(--espresso); color:#F5F2EB;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg></button></div><!-- ── Main word display ───────────────────────── --><div class="lc-hero px-7 py-8 text-center border-b" style="border-color:var(--border);"><div class="lc-article-wrap mb-1.5"><span class="lc-article text-xl font-bold"></span></div><h2 class="lc-word text-5xl md:text-6xl font-extrabold font-outfit mb-3" style="color:var(--text);">—</h2><p class="lc-translation text-lg font-semibold italic" style="color:var(--text-muted);"></p><p class="lc-forms text-sm font-medium mt-2" style="color:var(--text-muted);"></p></div><!-- ── Meta info grid ─────────────────────────── --><div class="lc-meta-grid grid border-b" style="border-color:var(--border);"><!-- populated by JS --></div><!-- ── Grammar note ───────────────────────────── --><div class="lc-grammar-wrap hidden px-7 py-5 border-b" style="border-color:var(--border); background-color:var(--bg);"><p class="text-[10px] font-bold uppercase tracking-widest mb-2" style="color:var(--espresso);">📌 <span class="lc-grammar-label">Nota gramatical</span></p><p class="lc-grammar-text text-sm leading-relaxed font-medium whitespace-pre-wrap" style="color:var(--text);"></p></div><!-- ── Type-specific block ────────────────────── --><!-- Connector word-order block --><div class="lc-wordorder-wrap hidden px-7 py-4 border-b" style="border-color:var(--border); background-color:var(--bg);"><div class="flex items-start gap-3 text-sm font-medium" style="color:var(--text-muted);"><span class="text-base flex-shrink-0">📐</span><span class="lc-wordorder-text"></span></div></div><!-- Phrase preposition block --><div class="lc-phrase-wrap hidden px-7 py-4 border-b" style="border-color:var(--border); background-color:var(--bg);"><p class="text-[10px] font-bold uppercase tracking-widest mb-2" style="color:var(--espresso);">Estrutura</p><p class="lc-phrase-rule text-sm font-semibold" style="color:var(--text);"></p></div><!-- ── Examples ───────────────────────────────── --><div class="px-7 py-6 border-b" style="border-color:var(--border);"><p class="lc-examples-label text-[10px] font-bold uppercase tracking-widest mb-5" style="color:var(--text-muted);">Frases de exemplo</p><div class="lc-examples space-y-3"><!-- populated by JS --></div></div><!-- Verb conjugation (hidden by default, shown for verb cards) --><div class="lc-conjugation-wrap hidden border-b px-7 py-6" style="border-color:var(--border);"><div class="lc-conjugation-inner flex flex-wrap gap-4"><!-- populated by JS --></div></div><!-- ── Tags ───────────────────────────────────── --><div class="lc-tags-row px-7 py-4 flex items-center gap-2 flex-wrap"><span class="text-[10px] font-bold uppercase tracking-wider" style="color:var(--text-muted);">Etiquetas:</span><div class="lc-tags flex gap-2 flex-wrap"></div></div></div><script>(function(){const cardJson = "{\"id\":\"verbs-b2-reporting_media-001\",\"target\":\"noticiar\",\"source\":\"to report news\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Regular -ar verb, auxiliary verb 'ter', takes direct object.\",\"examples\":[{\"target\":\"O telejornal de ontem decidiu noticiar o escândalo financeiro em primeira mão.\",\"source\":\"Yesterday's TV news decided to report the financial scandal firsthand.\"},{\"target\":\"Vários jornais locais começaram a noticiar a grave crise de habitação.\",\"source\":\"Several local newspapers began to report on the severe housing crisis.\"}],\"conjugations\":{\"presente\":{\"eu\":\"noticio\",\"tu\":\"noticias\",\"ele/ela/você\":\"noticia\",\"nós\":\"noticiamos\",\"eles/elas/vocês\":\"noticiam\"},\"pretérito_perfeito\":{\"eu\":\"noticiei\",\"tu\":\"noticiaste\",\"ele/ela/você\":\"noticiou\",\"nós\":\"noticiámos\",\"eles/elas/vocês\":\"noticiaram\"},\"pretérito_imperfeito\":{\"eu\":\"noticiava\",\"tu\":\"noticiavas\",\"ele/ela/você\":\"noticiava\",\"nós\":\"noticiávamos\",\"eles/elas/vocês\":\"noticiavam\"},\"futuro_simples\":{\"eu\":\"noticiarei\",\"tu\":\"noticiarás\",\"ele/ela/você\":\"noticiará\",\"nós\":\"noticiaremos\",\"eles/elas/vocês\":\"noticiarão\"},\"condicional\":{\"eu\":\"noticiaria\",\"tu\":\"noticiarias\",\"ele/ela/você\":\"noticiaria\",\"nós\":\"noticiaríamos\",\"eles/elas/vocês\":\"noticiariam\"},\"particípio_passado\":\"noticiado\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}}";
+const langConfigJson = "{\"language_pair\":\"english_portuguese\",\"target_lang\":\"pt\",\"native_lang\":\"en\",\"target_lang_name\":\"Português\",\"native_lang_name\":\"English\",\"speech_lang\":\"pt-PT\",\"noun_metadata_fields\":[{\"key\":\"article\",\"label\":\"Artigo\",\"render\":\"article_badge\"},{\"key\":\"gender\",\"label\":\"Género\",\"render\":\"gender_label\"},{\"key\":\"plural\",\"label\":\"Plural\",\"render\":\"text\"}],\"article_colours\":{\"o\":\"#4A7C9E\",\"a\":\"#B05070\"},\"gender_labels\":{\"m\":\"Masculino\",\"f\":\"Feminino\"},\"verb_tenses\":[\"presente\",\"pretérito_perfeito\",\"pretérito_imperfeito\",\"particípio_passado\",\"futuro_simples\",\"condicional\"],\"cases\":{},\"ui_labels\":{\"learn_mode\":\"Aprender\",\"train_mode\":\"Treinar\",\"examples_heading\":\"Frases de exemplo\",\"grammar_note_heading\":\"Nota gramatical\",\"audio_button\":\"Ouvir\",\"back_link\":\"Voltar\",\"card_counter\":\"Cartão {current} / {total}\",\"next_button\":\"Seguinte\",\"finish_button\":\"Concluir\",\"correct\":\"Correto!\",\"wrong\":\"Incorreto\",\"dashboard_link\":\"Painel principal\",\"library_prompt\":\"Escolha um baralho da biblioteca e explore o conteúdo dos cartões.\",\"cards_badge\":\"{count} CARTÕES\",\"cards_count\":\"{count} cartões\",\"deck_meta\":\"{topic} • {level} • {count} cartões\",\"no_decks\":\"Ainda não existem baralhos nesta categoria.\",\"setup_title\":\"Configurar treino\",\"setup_subtitle\":\"Configure a sua sessão de treino.\",\"question_type\":\"Tipo de pergunta\",\"mode_multiple_choice\":\"Escolha múltipla\",\"mode_typing\":\"Digitação de texto\",\"mode_typing_short\":\"Digitação\",\"direction\":\"Direção\",\"direction_forward\":\"🇺🇸 English → 🇵🇹 Português\",\"direction_reverse\":\"🇵🇹 Português → 🇺🇸 English\",\"select_level\":\"Selecionar nível\",\"start_training\":\"Iniciar treino\",\"count_label\":\"Quantidade\",\"all_cards\":\"Todas\",\"in_deck\":\"no baralho\",\"view_cards\":\"Cartões\",\"view_list\":\"Lista\",\"card_word\":\"Cartão\",\"keyboard_hint_study\":\"← → Teclas de seta para navegar · A para ouvir\",\"example_single_heading\":\"Exemplo\",\"no_example\":\"Nenhum exemplo disponível.\",\"tags_label\":\"Etiquetas:\",\"type_vocab\":\"Vocabulário\",\"type_verb\":\"Verbo\",\"type_phrase\":\"Expressão\",\"type_connector\":\"Conector\",\"type_grammar\":\"Gramática\",\"type_noun\":\"Substantivo\",\"type_adjective\":\"Adjetivo\",\"type_expression\":\"Locução\",\"plural_prefix\":\"Pl. {plural}\",\"plural_only\":\"apenas plural\",\"word_order_heading\":\"Ordem das palavras\",\"structure_heading\":\"Estrutura\",\"training_title\":\"Treino\",\"all_levels\":\"Todos os níveis\",\"type_placeholder\":\"Escreva a palavra em português...\",\"check_button\":\"Verificar\",\"keyboard_hint_train\":\"Enter / Espaço = confirmar · A = Ouvir\",\"audio_title\":\"Ouvir (A)\",\"training_finished\":\"Treino concluído!\",\"missed_heading\":\"Respostas erradas — para repetir\",\"retry_missed\":\"Repetir erros\",\"new_config\":\"Nova configuração\",\"plural_hint\":\"Pl: {plural}\",\"results_pct\":\"{pct}% de acertos\",\"result_excellent\":\"Excelente! Dominou este nível com distinção.\",\"result_good\":\"Muito bem! Mais um pouco de prática e dominará tudo!\",\"result_ok\":\"Bom começo! Reveja os cartões mais uma vez.\",\"result_retry\":\"Sem problema — a prática leva à perfeição!\",\"no_cards_title\":\"Nenhum cartão encontrado\",\"no_cards_hint\":\"Por favor, selecione outro nível ou baralho.\"},\"answer_normalisation\":{\"strip_leading_words\":[\"o\",\"a\",\"os\",\"as\",\"um\",\"uma\",\"uns\",\"umas\"],\"alt_spellings\":{\"á\":\"a\",\"à\":\"a\",\"ã\":\"a\",\"â\":\"a\",\"é\":\"e\",\"ê\":\"e\",\"í\":\"i\",\"ó\":\"o\",\"ô\":\"o\",\"õ\":\"o\",\"ú\":\"u\",\"ç\":\"c\"}}}";
+
+  /**
+   * Client-side card renderer.
+   * Uses the universal card-renderer logic inline (no imports in Astro is:inline).
+   */
+
+  // ── Parse data ──────────────────────────────────────────────────────────
+  const card   = JSON.parse(cardJson);
+  const config = JSON.parse(langConfigJson);
+
+  // ── Helpers ─────────────────────────────────────────────────────────────
+  // Articles come from the language config (keys of article_colours), never hardcoded
+  const articleList = Object.keys(config.article_colours || {});
+  const articlePatterns = articleList.map(a => {
+    const esc = a.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    return esc.endsWith("'") ? esc : `${esc}\\s+`;
+  });
+  const articleRe = articlePatterns.length
+    ? new RegExp('^(?:' + articlePatterns.join('|') + ')', 'i')
+    : null;
+
+  function stripArticle(word) {
+    return articleRe ? (word || '').replace(articleRe, '').trim() : (word || '').trim();
+  }
+
+  function getArticleColour(article) {
+    if (!article || !config.article_colours) return 'var(--espresso)';
+    return config.article_colours[article.toLowerCase()] || 'var(--espresso)';
+  }
+
+  function getGenderLabel(gender) {
+    if (!gender) return '';
+    return (config.gender_labels || {})[gender] || gender;
+  }
+
+  const uiLabels = config.ui_labels || {};
+
+  function getTypeLabel() {
+    const tags = card.tags || [];
+    if (tags.includes('noun'))       return uiLabels.type_noun || 'Noun';
+    if (tags.includes('verb'))       return uiLabels.type_verb || 'Verb';
+    if (tags.includes('adjective'))  return uiLabels.type_adjective || 'Adjective';
+    if (tags.includes('expression')) return uiLabels.type_expression || 'Expression';
+    const map = {
+      vocab: uiLabels.type_vocab || 'Vocab',
+      verb: uiLabels.type_verb || 'Verb',
+      phrase: uiLabels.type_phrase || 'Phrase',
+      connector: uiLabels.type_connector || 'Connector',
+      grammar: uiLabels.type_grammar || 'Grammar'
+    };
+    return map[card.type] || uiLabels.card_word || 'Card';
+  }
+
+  function formatHighlight(text) {
+    if (!text) return '';
+    return String(text).replace(/\*(.*?)\*/g, '<span class="highlighter">$1</span>');
+  }
+
+  function getMetaFacts() {
+    const meta = card.metadata || {};
+    const facts = [];
+    for (const field of (config.noun_metadata_fields || [])) {
+      const raw = meta[field.key] || card[field.key];
+      if (!raw || raw === '~') continue;
+      let value = String(raw);
+      let colour;
+      if (field.render === 'gender_label') value = getGenderLabel(raw);
+      else if (field.render === 'article_badge') colour = getArticleColour(raw);
+      facts.push({ label: field.label, value, colour });
+    }
+    return facts;
+  }
+
+  // ── Render ──────────────────────────────────────────────────────────────
+  const container = document.querySelector('.learning-card');
+  if (!container) { console.error('LearningCard: container not found'); }
+
+  function sel(cls) { return container?.querySelector(cls); }
+
+  // Type badge
+  sel('.lc-type-badge').textContent = getTypeLabel();
+
+  // Level badge
+  sel('.lc-level-badge').textContent = card.level || '';
+
+  // Article
+  const article = card.metadata?.article;
+  const articleWrap = sel('.lc-article-wrap');
+  const articleEl   = sel('.lc-article');
+  if (article && card.tags?.includes('noun') && !card.metadata?.plural_only) {
+    articleEl.textContent  = article;
+    articleEl.style.color  = getArticleColour(article);
+    articleWrap.style.display = '';
+  } else {
+    articleWrap.style.display = 'none';
+  }
+
+  // Word
+  sel('.lc-word').textContent = stripArticle(card.target);
+
+  // Translation
+  sel('.lc-translation').textContent = card.source || '';
+
+  // Plural / forms
+  const plural = card.metadata?.plural;
+  const formsEl = sel('.lc-forms');
+  const prefix = uiLabels.plural_prefix || 'Pl.';
+  const pluralOnly = uiLabels.plural_only || 'Plural only';
+  if (plural && !card.metadata?.plural_only) formsEl.textContent = `${prefix} ${plural}`;
+  else if (card.metadata?.plural_only) formsEl.textContent = pluralOnly;
+  else formsEl.textContent = '';
+
+  // Meta grid
+  const metaGrid = sel('.lc-meta-grid');
+  const facts = getMetaFacts();
+  if (facts.length) {
+    const cols = Math.min(facts.length, 4);
+    metaGrid.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
+    metaGrid.innerHTML = facts.map((f, i) => `
+      <div class="px-5 py-4 ${i < facts.length - 1 ? 'border-r' : ''}" style="border-color:var(--border);">
+        <p class="text-[9px] font-bold uppercase tracking-widest mb-1" style="color:var(--text-muted);">${f.label}</p>
+        <p class="text-sm font-bold" style="color:${f.colour || 'var(--text)'};">${f.value}</p>
+      </div>
+    `).join('');
+  } else {
+    metaGrid.style.display = 'none';
+  }
+
+  // Grammar note
+  const grammarWrap = sel('.lc-grammar-wrap');
+  if (card.grammar_note) {
+    sel('.lc-grammar-text').innerHTML = formatHighlight(card.grammar_note);
+    grammarWrap.classList.remove('hidden');
+  }
+
+  // Grammar label from config
+  const uiLabels = config.ui_labels || {};
+  if (uiLabels.grammar_note_heading) sel('.lc-grammar-label').textContent = uiLabels.grammar_note_heading;
+  if (uiLabels.examples_heading)     sel('.lc-examples-label').textContent = uiLabels.examples_heading;
+  if (uiLabels.audio_button)         { const el = sel('.lc-audio-label'); if (el) el.textContent = uiLabels.audio_button; }
+
+  // ── Type-specific blocks ─────────────────────────────────────────────────
+
+  // Verb: conjugation table
+  const type = card.type || (card.tags?.includes('verb') ? 'verb' : 'vocab');
+  if (type === 'verb' && card.conjugations) {
+    const conjWrap  = sel('.lc-conjugation-wrap');
+    const conjInner = sel('.lc-conjugation-inner');
+    conjWrap.classList.remove('hidden');
+
+    let conjArray = [];
+    if (Array.isArray(card.conjugations)) {
+      conjArray = card.conjugations;
+    } else {
+      for (const [tense, forms] of Object.entries(card.conjugations)) {
+        if (typeof forms === 'string') {
+          conjArray.push({ tense, stringForm: forms });
+        } else {
+          const formsArr = Object.entries(forms).map(([pronoun, form]) => ({ pronoun, form }));
+          conjArray.push({ tense, forms: formsArr });
+        }
+      }
+    }
+
+    const tensesToRender = config.verb_tenses || conjArray.map(t => t.tense);
+
+    const stringTenses = [];
+    const tableTenses = [];
+
+    tensesToRender.forEach(tense => {
+      const t = conjArray.find(c => c.tense === tense);
+      if (!t) return;
+      if (t.stringForm) stringTenses.push(t);
+      else tableTenses.push(t);
+    });
+
+    let html = '';
+
+    // Render simple string forms (e.g. Perfekt, Partizip II) as pill-like tags at the top
+    if (stringTenses.length > 0) {
+      html += `
+        <div class="flex flex-wrap gap-3 mb-6">
+          ${stringTenses.map(t => `
+            <div class="rounded-xl border px-4 py-2.5 flex items-center gap-3 shadow-sm" style="border-color:var(--border); background-color:var(--bg);">
+              <span class="text-[10px] font-bold uppercase tracking-widest opacity-80" style="color:var(--espresso);">${t.tense.replace(/_/g, ' ')}</span>
+              <span class="font-bold text-sm" style="color:var(--text);">${t.stringForm}</span>
+            </div>
+          `).join('')}
+        </div>
+      `;
+    }
+
+    // Render full tables (e.g. Präsens, Präteritum) as a unified table
+    if (tableTenses.length > 0) {
+      // Collect all pronouns from the first available table tense
+      const pronouns = tableTenses[0].forms.map(f => f.pronoun);
+
+      html += `
+        <div class="rounded-xl border overflow-x-auto shadow-sm w-full" style="border-color:var(--border);">
+          <table class="w-full text-sm text-left">
+            <thead>
+              <tr style="background-color:var(--bg); border-bottom: 1px solid var(--border);">
+                <th class="px-4 py-3 font-bold uppercase tracking-widest text-[10px] w-[1%]" style="color:var(--espresso); border-right: 1px solid var(--border);"></th>
+                ${tableTenses.map(t => `
+                  <th class="px-4 py-3 font-bold uppercase tracking-widest text-[10px]" style="color:var(--espresso);">${t.tense.replace(/_/g, ' ')}</th>
+                `).join('')}
+              </tr>
+            </thead>
+            <tbody>
+              ${pronouns.map((pronoun, ri) => `
+                <tr class="${ri < pronouns.length - 1 ? 'border-b' : ''}" style="border-color:var(--border);">
+                  <td class="px-4 py-3 font-bold text-xs whitespace-nowrap" style="color:var(--espresso); background-color:var(--bg); border-right: 1px solid var(--border);">${pronoun}</td>
+                  ${tableTenses.map(t => {
+                    const formObj = t.forms.find(f => f.pronoun === pronoun);
+                    return `<td class="px-4 py-3 font-semibold whitespace-nowrap" style="color:var(--text);">${formObj ? formObj.form : '-'}</td>`;
+                  }).join('')}
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+        </div>
+      `;
+    }
+
+    conjInner.innerHTML = html;
+  }
+
+  // Connector: word order block
+  if (type === 'connector' && card.word_order) {
+    const woWrap = sel('.lc-wordorder-wrap');
+    sel('.lc-wordorder-text').textContent = card.word_order;
+    woWrap.classList.remove('hidden');
+  }
+
+  // Phrase: preposition rule block
+  if (type === 'phrase' && card.clause_type) {
+    const phraseWrap = sel('.lc-phrase-wrap');
+    sel('.lc-phrase-rule').textContent = card.clause_type;
+    phraseWrap.classList.remove('hidden');
+  }
+
+  // ── Examples ─────────────────────────────────────────────────────────────
+  const examplesEl = sel('.lc-examples');
+  const rawExamples = card.examples || [];
+
+  if (rawExamples.length) {
+    examplesEl.innerHTML = rawExamples.map(e => `
+        <div class="rounded-2xl border overflow-hidden" style="border-color:var(--border);">
+          <div class="px-4 py-3" style="background-color:var(--bg);">
+            <p class="font-semibold leading-snug mb-1" style="color:var(--text);">${formatHighlight(e.target)}</p>
+            <p class="text-sm italic" style="color:var(--text-muted);">${formatHighlight(e.source || '')}</p>
+          </div>
+          ${e.note ? `<div class="px-4 py-2 border-t" style="border-color:var(--border);">
+            <p class="text-[10px] font-bold font-mono" style="color:var(--espresso);">📐 ${e.note}</p>
+          </div>` : ''}
+        </div>
+      `).join('');
+  } else {
+    examplesEl.innerHTML = `<p class="text-sm italic" style="color:var(--text-muted);">${uiLabels.no_example || ''}</p>`;
+  }
+
+  // ── Tags ─────────────────────────────────────────────────────────────────
+  const tagsEl = sel('.lc-tags');
+  tagsEl.innerHTML = (card.tags || []).map(t => `
+    <span class="text-[10px] font-bold px-2 py-0.5 rounded-md border uppercase" style="border-color:var(--border); color:var(--text-muted); background-color:var(--bg);">${t}</span>
+  `).join('');
+
+  // ── Audio button ─────────────────────────────────────────────────────────
+  sel('.lc-audio-btn')?.addEventListener('click', () => {
+    if (window.LoungeAudioEngine) {
+      window.LoungeAudioEngine.speak(card.target || '', config.speech_lang, 0.85);
+    }
+  });
+})();</script></div><!-- ── Navigation ───────────────────────────── --><div class="flex items-center justify-between mt-8 gap-4" data-astro-cid-5tabbh6g><button id="btn-prev" disabled class="flex items-center gap-2 px-6 py-3 rounded-2xl border font-bold text-sm transition-all hover:opacity-70 active:scale-95 disabled:opacity-30 disabled:cursor-not-allowed" style="border-color:var(--border); color:var(--text); background-color:var(--card);" data-astro-cid-5tabbh6g><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><path d="m15 18-6-6 6-6" data-astro-cid-5tabbh6g></path></svg>Voltar</button><!-- Dot navigation --><div id="dot-nav" class="flex items-center gap-1.5 flex-wrap justify-center max-w-xs overflow-hidden" style="max-height:2rem;" data-astro-cid-5tabbh6g><!-- populated by JS --></div><button id="btn-next" class="flex items-center gap-2 px-6 py-3 rounded-2xl font-bold text-sm transition-all hover:opacity-80 active:scale-95" style="background-color:var(--espresso); color:#F5F2EB;" data-astro-cid-5tabbh6g>Seguinte<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><path d="m9 18 6-6-6-6" data-astro-cid-5tabbh6g></path></svg></button></div><!-- Keyboard hint --><p class="text-center text-xs font-medium mt-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>← → Teclas de seta para navegar · A para ouvir</p></div><!-- ── List View ───────────────────────────── --><div id="list-view-wrap" class="hidden space-y-6" data-astro-cid-5tabbh6g><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>noticiar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to report news</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -ar verb, auxiliary verb 'ter', takes direct object.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>O telejornal de ontem decidiu noticiar o escândalo financeiro em primeira mão.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Yesterday's TV news decided to report the financial scandal firsthand.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>divulgar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to disclose, to release</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -ar verb with spelling change in 1st person singular preterite (divulguei), auxiliary verb 'ter'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>A polícia vai divulgar novos dados sobre a investigação no jornal da noite.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The police will release new data about the investigation on the evening news.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>censurar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to censor</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -ar verb, auxiliary verb 'ter'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>O governo tentou censurar o artigo crítico publicado na imprensa independente.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The government tried to censor the critical article published in the independent press.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>transmitir</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to broadcast, to transmit</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -ir verb, auxiliary verb 'ter'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>A estação de rádio vai transmitir o debate político em direto esta noite.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The radio station is going to broadcast the political debate live tonight.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>publicar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to publish</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -ar verb with spelling change in 1st person singular preterite (publiquei), auxiliary verb 'ter'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>O jornal de investigação decidiu publicar a entrevista exclusiva com o ministro.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The investigative newspaper decided to publish the exclusive interview with the minister.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>esclarecer</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to clarify, to clear up</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -er verb, auxiliary verb 'ter'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>O porta-voz convocou uma conferência para esclarecer as dúvidas sobre a nova lei.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The spokesperson called a conference to clarify doubts about the new law.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>desmentir</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to deny, to refute</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -ir verb (follows mentir model in stems where applicable, but standard -ir here), auxiliary verb 'ter'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>A administração teve de desmentir rapidamente os rumores falsos na imprensa.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The administration had to quickly deny the false rumors in the press.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>enfatizar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to emphasize</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -ar verb with spelling change in 1st person singular preterite (enfatizei), auxiliary verb 'ter'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>O editorial de hoje faz questão de enfatizar a importância da liberdade de imprensa.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Today's editorial makes a point of emphasizing the importance of freedom of the press.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>entrevistar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to interview</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -ar verb, auxiliary verb 'ter'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>A jornalista vai entrevistar o escritor premiado no programa de amanhã.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The journalist is going to interview the award-winning writer on tomorrow's show.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>comentar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to comment on</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -ar verb, auxiliary verb 'ter'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Os analistas políticos recusaram-se a comentar os resultados parciais das eleições.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The political analysts refused to comment on the partial election results.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>generalizar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to generalize</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -ar verb with spelling change in 1st person singular preterite (generalizei), auxiliary verb 'ter'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Não se deve generalizar a partir de um único caso relatado pela imprensa.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>One should not generalize from a single case reported by the press.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>garantir</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to guarantee, to assure</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -ir verb with stem vowel alternation in present (garanto, garantes), auxiliary verb 'ter'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>A fonte anónima garantiu que a informação era totalmente fidedigna.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The anonymous source assured that the information was completely reliable.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>apresentar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to present, to host</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -ar verb, auxiliary verb 'ter'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Ela foi convidada para apresentar o principal telejornal da estação pública.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>She was invited to host the public station's main television news.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>acusar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to accuse</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -ar verb, auxiliary verb 'ter'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>O jornal acusou o político de manipular dados estatísticos para ganhar votos.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The newspaper accused the politician of manipulating statistical data to win votes.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>demonstrar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to demonstrate, to show</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -ar verb, auxiliary verb 'ter'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>A investigação jornalística conseguiu demonstrar a veracidade das acusações.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The journalistic investigation managed to demonstrate the truth of the accusations.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>verificar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to verify, to check</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -ar verb with spelling change in 1st person singular preterite (verifiquei), auxiliary verb 'ter'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>É fundamental verificar as fontes antes de publicar qualquer notícia online.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>It is essential to verify sources before publishing any news online.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>revelar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to reveal</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -ar verb, auxiliary verb 'ter'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Um jornal de referência prometeu revelar novos documentos secretos amanhã.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>A newspaper of record promised to reveal new secret documents tomorrow.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>criticar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to criticize</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -ar verb with spelling change in 1st person singular preterite (critiquei), auxiliary verb 'ter'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Vários críticos de televisão aproveitaram para criticar a falta de originalidade.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Several television critics took the opportunity to criticize the lack of originality.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>alegar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to claim, to allege</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -ar verb, auxiliary verb 'ter'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>A defesa do jornal alegou que a publicação estava protegida pela lei da imprensa.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The newspaper's defense claimed that the publication was protected by press law.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>insinuar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to insinuate</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -ar verb, auxiliary verb 'ter'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>O comentador parecia insinuar que houve corrupção na adjudicação do contrato.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The commentator seemed to insinuate that there was corruption in awarding the contract.</p></div></div></div></div></div></div><!-- ══ TRAIN PANEL ════════════════════════════ --><div id="train-panel" class="hidden space-y-10" data-astro-cid-5tabbh6g><div class="cafe-card rounded-3xl p-8 border shadow-lg max-w-xl mx-auto" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="text-center mb-8" data-astro-cid-5tabbh6g><h2 class="text-2xl font-extrabold font-outfit mb-2" style="color:var(--text);" data-astro-cid-5tabbh6g>Configurar treino</h2><p class="text-sm font-medium" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Configure a sua sessão de treino.</p></div><form action="/languagelounge/en-pt/training/verbs/train/" method="GET" class="space-y-8" id="deck-train-form" data-astro-cid-5tabbh6g><input type="hidden" name="level" value="b2" data-astro-cid-5tabbh6g><input type="hidden" name="deck" value="verbs-b2-reporting_media" data-astro-cid-5tabbh6g><!-- Mode selection --><div class="space-y-3" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold tracking-widest uppercase" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Tipo de pergunta</p><div class="grid grid-cols-2 gap-3" data-astro-cid-5tabbh6g><button type="button" data-group="mode" data-value="mc" class="sel-opt sel-active" data-astro-cid-5tabbh6g><span class="text-xl mb-1 block" data-astro-cid-5tabbh6g>🔘</span><span class="text-sm font-bold" data-astro-cid-5tabbh6g>Escolha múltipla</span></button><button type="button" data-group="mode" data-value="type" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-xl mb-1 block" data-astro-cid-5tabbh6g>⌨️</span><span class="text-sm font-bold" data-astro-cid-5tabbh6g>Digitação de texto</span></button></div><input type="hidden" name="mode" id="mode-hidden" value="mc" data-astro-cid-5tabbh6g></div><!-- Direction selection --><div class="space-y-3" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold tracking-widest uppercase" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Direção</p><div class="grid grid-cols-2 gap-3" data-astro-cid-5tabbh6g><button type="button" data-group="dir" data-value="en-pt" class="sel-opt sel-active" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>🇺🇸 English → 🇵🇹 Português</span></button><button type="button" data-group="dir" data-value="pt-en" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>🇵🇹 Português → 🇺🇸 English</span></button></div><input type="hidden" name="dir" id="dir-hidden" value="en-pt" data-astro-cid-5tabbh6g></div><!-- Count Selection --><div class="space-y-3" data-astro-cid-5tabbh6g><div class="flex justify-between items-end" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold tracking-widest uppercase" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Quantidade</p><span class="text-xs font-bold" style="color:var(--espresso);" data-astro-cid-5tabbh6g>20 cartões no baralho</span></div><div class="grid grid-cols-4 gap-3" data-astro-cid-5tabbh6g><button type="button" data-group="count" data-value="30" class="sel-opt sel-active" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>30</span></button><button type="button" data-group="count" data-value="60" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>60</span></button><button type="button" data-group="count" data-value="90" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>90</span></button><button type="button" data-group="count" data-value="1000" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>Todas</span></button></div><input type="hidden" name="count" id="count-hidden" value="30" data-astro-cid-5tabbh6g></div><button type="submit" class="w-full py-4 rounded-xl font-bold text-base transition-all hover:opacity-90 mt-4 shadow-md active:scale-[0.98]" style="background-color:var(--espresso); color:#F5F2EB;" data-astro-cid-5tabbh6g>Iniciar treino &rarr;</button></form></div></div></div></main><footer class="mt-auto border-t py-8" style="background-color:var(--bg);border-color:var(--border);"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-medium" style="color:var(--text-muted);"><div>&copy; 2025 - 2026 Small Talk Café Podcasts. All rights reserved.</div><div class="flex gap-4">Made in Bayern ❤️ Los Geht's!</div></div></footer><!-- Minimal script for Theme and Dropdown toggle --><script>
+      // ── Theme ──────────────────────────────────────
+      function applyTheme(dark) {
+        if (dark) {
+          document.documentElement.classList.add('dark');
+          localStorage.setItem('wortschatz_theme', 'dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+          localStorage.setItem('wortschatz_theme', 'light');
+        }
+        const icon = document.getElementById('theme-icon');
+        const label = document.getElementById('theme-label');
+        if (icon) icon.textContent = dark ? '🌙' : '☀️';
+        if (label) label.textContent = dark ? 'Dark' : 'Light';
+      }
+
+      const isDark = document.documentElement.classList.contains('dark');
+      applyTheme(isDark);
+
+      document.getElementById('theme-toggle')?.addEventListener('click', () => {
+        const nowDark = !document.documentElement.classList.contains('dark');
+        applyTheme(nowDark);
+      });
+
+      // ── Dropdown Toggle ──────────────────────────
+      const langBtn = document.getElementById('lang-btn');
+      const langMenu = document.getElementById('lang-menu');
+
+      langBtn?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        langMenu?.classList.toggle('hidden');
+      });
+
+      document.addEventListener('click', () => {
+        langMenu?.classList.add('hidden');
+      });
+    </script></body></html><script type="module" src="/languagelounge/_astro/_deckId_.astro_astro_type_script_index_0_lang.DwXABuW8.js"></script><script>(function(){const cardsJson = "[{\"id\":\"verbs-b2-reporting_media-001\",\"target\":\"noticiar\",\"source\":\"to report news\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Regular -ar verb, auxiliary verb 'ter', takes direct object.\",\"examples\":[{\"target\":\"O telejornal de ontem decidiu noticiar o escândalo financeiro em primeira mão.\",\"source\":\"Yesterday's TV news decided to report the financial scandal firsthand.\"},{\"target\":\"Vários jornais locais começaram a noticiar a grave crise de habitação.\",\"source\":\"Several local newspapers began to report on the severe housing crisis.\"}],\"conjugations\":{\"presente\":{\"eu\":\"noticio\",\"tu\":\"noticias\",\"ele/ela/você\":\"noticia\",\"nós\":\"noticiamos\",\"eles/elas/vocês\":\"noticiam\"},\"pretérito_perfeito\":{\"eu\":\"noticiei\",\"tu\":\"noticiaste\",\"ele/ela/você\":\"noticiou\",\"nós\":\"noticiámos\",\"eles/elas/vocês\":\"noticiaram\"},\"pretérito_imperfeito\":{\"eu\":\"noticiava\",\"tu\":\"noticiavas\",\"ele/ela/você\":\"noticiava\",\"nós\":\"noticiávamos\",\"eles/elas/vocês\":\"noticiavam\"},\"futuro_simples\":{\"eu\":\"noticiarei\",\"tu\":\"noticiarás\",\"ele/ela/você\":\"noticiará\",\"nós\":\"noticiaremos\",\"eles/elas/vocês\":\"noticiarão\"},\"condicional\":{\"eu\":\"noticiaria\",\"tu\":\"noticiarias\",\"ele/ela/você\":\"noticiaria\",\"nós\":\"noticiaríamos\",\"eles/elas/vocês\":\"noticiariam\"},\"particípio_passado\":\"noticiado\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-reporting_media-002\",\"target\":\"divulgar\",\"source\":\"to disclose, to release\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Regular -ar verb with spelling change in 1st person singular preterite (divulguei), auxiliary verb 'ter'.\",\"examples\":[{\"target\":\"A polícia vai divulgar novos dados sobre a investigação no jornal da noite.\",\"source\":\"The police will release new data about the investigation on the evening news.\"},{\"target\":\"O ministério recusou-se a divulgar o relatório completo aos jornalistas presentes.\",\"source\":\"The ministry refused to disclose the full report to the journalists present.\"}],\"conjugations\":{\"presente\":{\"eu\":\"divulgo\",\"tu\":\"divulgas\",\"ele/ela/você\":\"divulga\",\"nós\":\"divulgamos\",\"eles/elas/vocês\":\"divulgam\"},\"pretérito_perfeito\":{\"eu\":\"divulguei\",\"tu\":\"divulgaste\",\"ele/ela/você\":\"divulgou\",\"nós\":\"divulgámos\",\"eles/elas/vocês\":\"divulgaram\"},\"pretérito_imperfeito\":{\"eu\":\"divulgava\",\"tu\":\"divulgavas\",\"ele/ela/você\":\"divulgava\",\"nós\":\"divulgávamos\",\"eles/elas/vocês\":\"divulgavam\"},\"futuro_simples\":{\"eu\":\"divulgarei\",\"tu\":\"divulgarás\",\"ele/ela/você\":\"divulgará\",\"nós\":\"divulgaremos\",\"eles/elas/vocês\":\"divulgarão\"},\"condicional\":{\"eu\":\"divulgaria\",\"tu\":\"divulgarias\",\"ele/ela/você\":\"divulgaria\",\"nós\":\"divulgaríamos\",\"eles/elas/vocês\":\"divulgariam\"},\"particípio_passado\":\"divulgado\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-reporting_media-003\",\"target\":\"censurar\",\"source\":\"to censor\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Regular -ar verb, auxiliary verb 'ter'.\",\"examples\":[{\"target\":\"O governo tentou censurar o artigo crítico publicado na imprensa independente.\",\"source\":\"The government tried to censor the critical article published in the independent press.\"},{\"target\":\"Muitos cidadãos lutam contra as autoridades que continuam a censurar a internet.\",\"source\":\"Many citizens fight against the authorities that continue to censor the internet.\"}],\"conjugations\":{\"presente\":{\"eu\":\"censuro\",\"tu\":\"censuras\",\"ele/ela/você\":\"censura\",\"nós\":\"censuramos\",\"eles/elas/vocês\":\"censuram\"},\"pretérito_perfeito\":{\"eu\":\"censurei\",\"tu\":\"censuraste\",\"ele/ela/você\":\"censurou\",\"nós\":\"censurámos\",\"eles/elas/vocês\":\"censuraram\"},\"pretérito_imperfeito\":{\"eu\":\"censurava\",\"tu\":\"censuravas\",\"ele/ela/você\":\"censurava\",\"nós\":\"censurávamos\",\"eles/elas/vocês\":\"censuravam\"},\"futuro_simples\":{\"eu\":\"censurarei\",\"tu\":\"censurarás\",\"ele/ela/você\":\"censurará\",\"nós\":\"censuraremos\",\"eles/elas/vocês\":\"censurarão\"},\"condicional\":{\"eu\":\"censuraria\",\"tu\":\"censurarias\",\"ele/ela/você\":\"censuraria\",\"nós\":\"censuraríamos\",\"eles/elas/vocês\":\"censurariam\"},\"particípio_passado\":\"censurado\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-reporting_media-004\",\"target\":\"transmitir\",\"source\":\"to broadcast, to transmit\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Regular -ir verb, auxiliary verb 'ter'.\",\"examples\":[{\"target\":\"A estação de rádio vai transmitir o debate político em direto esta noite.\",\"source\":\"The radio station is going to broadcast the political debate live tonight.\"},{\"target\":\"Eles conseguiram transmitir a conferência de imprensa para todo o país.\",\"source\":\"They managed to broadcast the press conference to the whole country.\"}],\"conjugations\":{\"presente\":{\"eu\":\"transmito\",\"tu\":\"transmites\",\"ele/ela/você\":\"transmite\",\"nós\":\"transmitimos\",\"eles/elas/vocês\":\"transmitem\"},\"pretérito_perfeito\":{\"eu\":\"transmiti\",\"tu\":\"transmitiste\",\"ele/ela/você\":\"transmitiu\",\"nós\":\"transmitimos\",\"eles/elas/vocês\":\"transmitiram\"},\"pretérito_imperfeito\":{\"eu\":\"transmitia\",\"tu\":\"transmitias\",\"ele/ela/você\":\"transmitia\",\"nós\":\"transmitíamos\",\"eles/elas/vocês\":\"transmitiam\"},\"futuro_simples\":{\"eu\":\"transmitirei\",\"tu\":\"transmitirás\",\"ele/ela/você\":\"transmitirá\",\"nós\":\"transmitiremos\",\"eles/elas/vocês\":\"transmitirão\"},\"condicional\":{\"eu\":\"transmitiria\",\"tu\":\"transmitirias\",\"ele/ela/você\":\"transmitiria\",\"nós\":\"transmitiríamos\",\"eles/elas/vocês\":\"transmitiriam\"},\"particípio_passado\":\"transmitido\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-reporting_media-005\",\"target\":\"publicar\",\"source\":\"to publish\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Regular -ar verb with spelling change in 1st person singular preterite (publiquei), auxiliary verb 'ter'.\",\"examples\":[{\"target\":\"O jornal de investigação decidiu publicar a entrevista exclusiva com o ministro.\",\"source\":\"The investigative newspaper decided to publish the exclusive interview with the minister.\"},{\"target\":\"Muitos repórteres esperam ver os seus artigos publicados na edição de domingo.\",\"source\":\"Many reporters hope to see their articles published in the Sunday edition.\"}],\"conjugations\":{\"presente\":{\"eu\":\"publico\",\"tu\":\"publicas\",\"ele/ela/você\":\"publica\",\"nós\":\"publicamos\",\"eles/elas/vocês\":\"publicam\"},\"pretérito_perfeito\":{\"eu\":\"publiquei\",\"tu\":\"publicaste\",\"ele/ela/você\":\"publicou\",\"nós\":\"publicámos\",\"eles/elas/vocês\":\"publicaram\"},\"pretérito_imperfeito\":{\"eu\":\"publicava\",\"tu\":\"publicavas\",\"ele/ela/você\":\"publicava\",\"nós\":\"publicávamos\",\"eles/elas/vocês\":\"publicavam\"},\"futuro_simples\":{\"eu\":\"publicarei\",\"tu\":\"publicarás\",\"ele/ela/você\":\"publicará\",\"nós\":\"publicaremos\",\"eles/elas/vocês\":\"publicarão\"},\"condicional\":{\"eu\":\"publicaria\",\"tu\":\"publicarias\",\"ele/ela/você\":\"publicaria\",\"nós\":\"publicaríamos\",\"eles/elas/vocês\":\"publicariam\"},\"particípio_passado\":\"publicado\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-reporting_media-006\",\"target\":\"esclarecer\",\"source\":\"to clarify, to clear up\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Regular -er verb, auxiliary verb 'ter'.\",\"examples\":[{\"target\":\"O porta-voz convocou uma conferência para esclarecer as dúvidas sobre a nova lei.\",\"source\":\"The spokesperson called a conference to clarify doubts about the new law.\"},{\"target\":\"A jornalista pediu ao diretor que esclarecesse a situação financeira da empresa.\",\"source\":\"The journalist asked the director to clarify the company's financial situation.\"}],\"conjugations\":{\"presente\":{\"eu\":\"esclareço\",\"tu\":\"esclareces\",\"ele/ela/você\":\"esclarece\",\"nós\":\"esclarecemos\",\"eles/elas/vocês\":\"esclarecem\"},\"pretérito_perfeito\":{\"eu\":\"esclareci\",\"tu\":\"esclareceste\",\"ele/ela/você\":\"esclareceu\",\"nós\":\"esclarecemos\",\"eles/elas/vocês\":\"esclareceram\"},\"pretérito_imperfeito\":{\"eu\":\"esclarecia\",\"tu\":\"esclarecias\",\"ele/ela/você\":\"esclarecia\",\"nós\":\"esclarecíamos\",\"eles/elas/vocês\":\"esclareciam\"},\"futuro_simples\":{\"eu\":\"esclarecerei\",\"tu\":\"esclarecerás\",\"ele/ela/você\":\"esclarecerá\",\"nós\":\"esclareceremos\",\"eles/elas/vocês\":\"esclarecerão\"},\"condicional\":{\"eu\":\"esclareceria\",\"tu\":\"esclarecerias\",\"ele/ela/você\":\"esclareceria\",\"nós\":\"esclareceríamos\",\"eles/elas/vocês\":\"esclareceriam\"},\"particípio_passado\":\"esclarecido\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-reporting_media-007\",\"target\":\"desmentir\",\"source\":\"to deny, to refute\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Regular -ir verb (follows mentir model in stems where applicable, but standard -ir here), auxiliary verb 'ter'.\",\"examples\":[{\"target\":\"A administração teve de desmentir rapidamente os rumores falsos na imprensa.\",\"source\":\"The administration had to quickly deny the false rumors in the press.\"},{\"target\":\"O artista veio a público desmentir a notícia sobre a sua reforma antecipada.\",\"source\":\"The artist came forward to refute the news about his early retirement.\"}],\"conjugations\":{\"presente\":{\"eu\":\"desminto\",\"tu\":\"desmentes\",\"ele/ela/você\":\"desmente\",\"nós\":\"desmentimos\",\"eles/elas/vocês\":\"desmentem\"},\"pretérito_perfeito\":{\"eu\":\"desmenti\",\"tu\":\"desmentiste\",\"ele/ela/você\":\"desmentiu\",\"nós\":\"desmentimos\",\"eles/elas/vocês\":\"desmentiram\"},\"pretérito_imperfeito\":{\"eu\":\"desmentia\",\"tu\":\"desmentias\",\"ele/ela/você\":\"desmentia\",\"nós\":\"desmentíamos\",\"eles/elas/vocês\":\"desmentiam\"},\"futuro_simples\":{\"eu\":\"desmentirei\",\"tu\":\"desmentirás\",\"ele/ela/você\":\"desmentirá\",\"nós\":\"desmentiremos\",\"eles/elas/vocês\":\"desmentirão\"},\"condicional\":{\"eu\":\"desmentiria\",\"tu\":\"desmentirias\",\"ele/ela/você\":\"desmentiria\",\"nós\":\"desmentiríamos\",\"eles/elas/vocês\":\"desmentiriam\"},\"particípio_passado\":\"desmentido\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-reporting_media-008\",\"target\":\"enfatizar\",\"source\":\"to emphasize\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Regular -ar verb with spelling change in 1st person singular preterite (enfatizei), auxiliary verb 'ter'.\",\"examples\":[{\"target\":\"O editorial de hoje faz questão de enfatizar a importância da liberdade de imprensa.\",\"source\":\"Today's editorial makes a point of emphasizing the importance of freedom of the press.\"},{\"target\":\"A repórter soube enfatizar os pontos mais críticos da nova política ambiental.\",\"source\":\"The reporter knew how to emphasize the most critical points of the new environmental policy.\"}],\"conjugations\":{\"presente\":{\"eu\":\"enfatizo\",\"tu\":\"enfatizas\",\"ele/ela/você\":\"enfatiza\",\"nós\":\"enfatizamos\",\"eles/elas/vocês\":\"enfatizam\"},\"pretérito_perfeito\":{\"eu\":\"enfatizei\",\"tu\":\"enfatizaste\",\"ele/ela/você\":\"enfatizou\",\"nós\":\"enfatizámos\",\"eles/elas/vocês\":\"enfatizaram\"},\"pretérito_imperfeito\":{\"eu\":\"enfatizava\",\"tu\":\"enfatizavas\",\"ele/ela/você\":\"enfatizava\",\"nós\":\"enfatizávamos\",\"eles/elas/vocês\":\"enfatizavam\"},\"futuro_simples\":{\"eu\":\"enfatizarei\",\"tu\":\"enfatizarás\",\"ele/ela/você\":\"enfatizará\",\"nós\":\"enfatizaremos\",\"eles/elas/vocês\":\"enfatizarão\"},\"condicional\":{\"eu\":\"enfatizaria\",\"tu\":\"enfatizarias\",\"ele/ela/você\":\"enfatizaria\",\"nós\":\"enfatizaríamos\",\"eles/elas/vocês\":\"enfatizariam\"},\"particípio_passado\":\"enfatizado\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-reporting_media-009\",\"target\":\"entrevistar\",\"source\":\"to interview\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Regular -ar verb, auxiliary verb 'ter'.\",\"examples\":[{\"target\":\"A jornalista vai entrevistar o escritor premiado no programa de amanhã.\",\"source\":\"The journalist is going to interview the award-winning writer on tomorrow's show.\"},{\"target\":\"Eles conseguiram entrevistar várias testemunhas oculares do acidente de viação.\",\"source\":\"They managed to interview several eyewitnesses of the road accident.\"}],\"conjugations\":{\"presente\":{\"eu\":\"entrevisto\",\"tu\":\"entrevistas\",\"ele/ela/você\":\"entrevista\",\"nós\":\"entrevistamos\",\"eles/elas/vocês\":\"entrevistam\"},\"pretérito_perfeito\":{\"eu\":\"entrevistei\",\"tu\":\"entrevistaste\",\"ele/ela/você\":\"entrevistou\",\"nós\":\"entrevistámos\",\"eles/elas/vocês\":\"entrevistaram\"},\"pretérito_imperfeito\":{\"eu\":\"entrevistava\",\"tu\":\"entrevistavas\",\"ele/ela/você\":\"entrevistava\",\"nós\":\"entrevistávamos\",\"eles/elas/vocês\":\"entrevistavam\"},\"futuro_simples\":{\"eu\":\"entrevistarei\",\"tu\":\"entrevistarás\",\"ele/ela/você\":\"entrevistará\",\"nós\":\"entrevistaremos\",\"eles/elas/vocês\":\"entrevistarão\"},\"condicional\":{\"eu\":\"entrevistaria\",\"tu\":\"entrevistarias\",\"ele/ela/você\":\"entrevistaria\",\"nós\":\"entrevistaríamos\",\"eles/elas/vocês\":\"entrevistariam\"},\"particípio_passado\":\"entrevistado\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-reporting_media-010\",\"target\":\"comentar\",\"source\":\"to comment on\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Regular -ar verb, auxiliary verb 'ter'.\",\"examples\":[{\"target\":\"Os analistas políticos recusaram-se a comentar os resultados parciais das eleições.\",\"source\":\"The political analysts refused to comment on the partial election results.\"},{\"target\":\"Muitos leitores começaram a comentar a notícia nas redes sociais do jornal.\",\"source\":\"Many readers began to comment on the news on the newspaper's social media.\"}],\"conjugations\":{\"presente\":{\"eu\":\"comento\",\"tu\":\"comentas\",\"ele/ela/você\":\"comenta\",\"nós\":\"comentamos\",\"eles/elas/vocês\":\"comentam\"},\"pretérito_perfeito\":{\"eu\":\"comentei\",\"tu\":\"comentaste\",\"ele/ela/você\":\"comentou\",\"nós\":\"comentámos\",\"eles/elas/vocês\":\"comentaram\"},\"pretérito_imperfeito\":{\"eu\":\"comentava\",\"tu\":\"comentavas\",\"ele/ela/você\":\"comentava\",\"nós\":\"comentávamos\",\"eles/elas/vocês\":\"comentavam\"},\"futuro_simples\":{\"eu\":\"comentarei\",\"tu\":\"comentarás\",\"ele/ela/você\":\"comentará\",\"nós\":\"comentaremos\",\"eles/elas/vocês\":\"comentarão\"},\"condicional\":{\"eu\":\"comentaria\",\"tu\":\"comentarias\",\"ele/ela/você\":\"comentaria\",\"nós\":\"comentaríamos\",\"eles/elas/vocês\":\"comentariam\"},\"particípio_passado\":\"comentado\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-reporting_media-011\",\"target\":\"generalizar\",\"source\":\"to generalize\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Regular -ar verb with spelling change in 1st person singular preterite (generalizei), auxiliary verb 'ter'.\",\"examples\":[{\"target\":\"Não se deve generalizar a partir de um único caso relatado pela imprensa.\",\"source\":\"One should not generalize from a single case reported by the press.\"},{\"target\":\"O articulista criticou aqueles que tendem a generalizar os problemas sociais.\",\"source\":\"The columnist criticized those who tend to generalize social problems.\"}],\"conjugations\":{\"presente\":{\"eu\":\"generalizo\",\"tu\":\"generalizas\",\"ele/ela/você\":\"generaliza\",\"nós\":\"generalizamos\",\"eles/elas/vocês\":\"generalizam\"},\"pretérito_perfeito\":{\"eu\":\"generalizei\",\"tu\":\"generalizaste\",\"ele/ela/você\":\"generalizou\",\"nós\":\"generalizámos\",\"eles/elas/vocês\":\"generalizaram\"},\"pretérito_imperfeito\":{\"eu\":\"generalizava\",\"tu\":\"generalizavas\",\"ele/ela/você\":\"generalizava\",\"nós\":\"generalizávamos\",\"eles/elas/vocês\":\"generalizavam\"},\"futuro_simples\":{\"eu\":\"generalizarei\",\"tu\":\"generalizarás\",\"ele/ela/você\":\"generalizará\",\"nós\":\"generalizaremos\",\"eles/elas/vocês\":\"generalizarão\"},\"condicional\":{\"eu\":\"generalizaria\",\"tu\":\"generalizarias\",\"ele/ela/você\":\"generalizaria\",\"nós\":\"generalizaríamos\",\"eles/elas/vocês\":\"generalizariam\"},\"particípio_passado\":\"generalizado\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-reporting_media-012\",\"target\":\"garantir\",\"source\":\"to guarantee, to assure\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Regular -ir verb with stem vowel alternation in present (garanto, garantes), auxiliary verb 'ter'.\",\"examples\":[{\"target\":\"A fonte anónima garantiu que a informação era totalmente fidedigna.\",\"source\":\"The anonymous source assured that the information was completely reliable.\"},{\"target\":\"O canal de televisão quis garantir a imparcialidade na cobertura do conflito.\",\"source\":\"The television channel wanted to guarantee impartiality in covering the conflict.\"}],\"conjugations\":{\"presente\":{\"eu\":\"garanto\",\"tu\":\"garantes\",\"ele/ela/você\":\"garante\",\"nós\":\"garantimos\",\"eles/elas/vocês\":\"garantem\"},\"pretérito_perfeito\":{\"eu\":\"garanti\",\"tu\":\"garantiste\",\"ele/ela/você\":\"garantiu\",\"nós\":\"garantimos\",\"eles/elas/vocês\":\"garantiram\"},\"pretérito_imperfeito\":{\"eu\":\"garantia\",\"tu\":\"garantias\",\"ele/ela/você\":\"garantia\",\"nós\":\"garantíamos\",\"eles/elas/vocês\":\"garantiam\"},\"futuro_simples\":{\"eu\":\"garantirei\",\"tu\":\"garantirás\",\"ele/ela/você\":\"garantirá\",\"nós\":\"garantiremos\",\"eles/elas/vocês\":\"garantirão\"},\"condicional\":{\"eu\":\"garantiria\",\"tu\":\"garantirias\",\"ele/ela/você\":\"garantiria\",\"nós\":\"garantiríamos\",\"eles/elas/vocês\":\"garantiriam\"},\"particípio_passado\":\"garantido\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-reporting_media-013\",\"target\":\"apresentar\",\"source\":\"to present, to host\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Regular -ar verb, auxiliary verb 'ter'.\",\"examples\":[{\"target\":\"Ela foi convidada para apresentar o principal telejornal da estação pública.\",\"source\":\"She was invited to host the public station's main television news.\"},{\"target\":\"O repórter vai apresentar uma reportagem especial sobre a corrupção.\",\"source\":\"The reporter is going to present a special report on corruption.\"}],\"conjugations\":{\"presente\":{\"eu\":\"apresento\",\"tu\":\"apresentas\",\"ele/ela/você\":\"apresenta\",\"nós\":\"apresentamos\",\"eles/elas/vocês\":\"apresentam\"},\"pretérito_perfeito\":{\"eu\":\"apresentei\",\"tu\":\"apresentaste\",\"ele/ela/você\":\"apresentou\",\"nós\":\"apresentámos\",\"eles/elas/vocês\":\"apresentaram\"},\"pretérito_imperfeito\":{\"eu\":\"apresentava\",\"tu\":\"apresentavas\",\"ele/ela/você\":\"apresentava\",\"nós\":\"apresentávamos\",\"eles/elas/vocês\":\"apresentavam\"},\"futuro_simples\":{\"eu\":\"apresentarei\",\"tu\":\"apresentarás\",\"ele/ela/você\":\"apresentará\",\"nós\":\"apresentaremos\",\"eles/elas/vocês\":\"apresentarão\"},\"condicional\":{\"eu\":\"apresentaria\",\"tu\":\"apresentarias\",\"ele/ela/você\":\"apresentaria\",\"nós\":\"apresentaríamos\",\"eles/elas/vocês\":\"apresentariam\"},\"particípio_passado\":\"apresentado\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-reporting_media-014\",\"target\":\"acusar\",\"source\":\"to accuse\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Regular -ar verb, auxiliary verb 'ter'.\",\"examples\":[{\"target\":\"O jornal acusou o político de manipular dados estatísticos para ganhar votos.\",\"source\":\"The newspaper accused the politician of manipulating statistical data to win votes.\"},{\"target\":\"Vários órgãos de comunicação social foram acusados de sensacionalismo.\",\"source\":\"Several media outlets were accused of sensationalism.\"}],\"conjugations\":{\"presente\":{\"eu\":\"acuso\",\"tu\":\"usas\",\"ele/ela/você\":\"acusa\",\"nós\":\"acusamos\",\"eles/elas/vocês\":\"acusam\"},\"pretérito_perfeito\":{\"eu\":\"acusei\",\"tu\":\"acusaste\",\"ele/ela/você\":\"acusou\",\"nós\":\"acusámos\",\"eles/elas/vocês\":\"acusaram\"},\"pretérito_imperfeito\":{\"eu\":\"acusava\",\"tu\":\"acusavas\",\"ele/ela/você\":\"acusava\",\"nós\":\"acusávamos\",\"eles/elas/vocês\":\"acusavam\"},\"futuro_simples\":{\"eu\":\"acusarei\",\"tu\":\"acusarás\",\"ele/ela/você\":\"acusará\",\"nós\":\"acusaremos\",\"eles/elas/vocês\":\"acusarão\"},\"condicional\":{\"eu\":\"acusaria\",\"tu\":\"acusarias\",\"ele/ela/você\":\"acusaria\",\"nós\":\"acusaríamos\",\"eles/elas/vocês\":\"acusariam\"},\"particípio_passado\":\"acusado\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-reporting_media-015\",\"target\":\"demonstrar\",\"source\":\"to demonstrate, to show\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Regular -ar verb, auxiliary verb 'ter'.\",\"examples\":[{\"target\":\"A investigação jornalística conseguiu demonstrar a veracidade das acusações.\",\"source\":\"The journalistic investigation managed to demonstrate the truth of the accusations.\"},{\"target\":\"O pivot do telejornal demonstrou grande profissionalismo durante o direto.\",\"source\":\"The news anchor demonstrated great professionalism during the live broadcast.\"}],\"conjugations\":{\"presente\":{\"eu\":\"demonstro\",\"tu\":\"demonstras\",\"ele/ela/você\":\"demonstra\",\"nós\":\"demonstramos\",\"eles/elas/vocês\":\"demonstram\"},\"pretérito_perfeito\":{\"eu\":\"demonstrei\",\"tu\":\"demonstraste\",\"ele/ela/você\":\"demonstrou\",\"nós\":\"demonstrámos\",\"eles/elas/vocês\":\"demonstraram\"},\"pretérito_imperfeito\":{\"eu\":\"demonstrava\",\"tu\":\"demonstravas\",\"ele/ela/você\":\"demonstrava\",\"nós\":\"demonstrávamos\",\"eles/elas/vocês\":\"demonstravam\"},\"futuro_simples\":{\"eu\":\"demonstrarei\",\"tu\":\"demonstrarás\",\"ele/ela/você\":\"demonstrará\",\"nós\":\"demonstraremos\",\"eles/elas/vocês\":\"demonstrarão\"},\"condicional\":{\"eu\":\"demonstraria\",\"tu\":\"demonstrarias\",\"ele/ela/você\":\"demonstraria\",\"nós\":\"demonstraríamos\",\"eles/elas/vocês\":\"demonstrariam\"},\"particípio_passado\":\"demonstrado\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-reporting_media-016\",\"target\":\"verificar\",\"source\":\"to verify, to check\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Regular -ar verb with spelling change in 1st person singular preterite (verifiquei), auxiliary verb 'ter'.\",\"examples\":[{\"target\":\"É fundamental verificar as fontes antes de publicar qualquer notícia online.\",\"source\":\"It is essential to verify sources before publishing any news online.\"},{\"target\":\"Os editores passaram horas a verificar os factos apresentados no artigo.\",\"source\":\"The editors spent hours verifying the facts presented in the article.\"}],\"conjugations\":{\"presente\":{\"eu\":\"verifico\",\"tu\":\"verificas\",\"ele/ela/você\":\"verifica\",\"nós\":\"verificamos\",\"eles/elas/vocês\":\"verificam\"},\"pretérito_perfeito\":{\"eu\":\"verifiquei\",\"tu\":\"verificaste\",\"ele/ela/você\":\"verificou\",\"nós\":\"verificámos\",\"eles/elas/vocês\":\"verificaram\"},\"pretérito_imperfeito\":{\"eu\":\"verificava\",\"tu\":\"verificavas\",\"ele/ela/você\":\"verificava\",\"nós\":\"verificávamos\",\"eles/elas/vocês\":\"verificavam\"},\"futuro_simples\":{\"eu\":\"verificarei\",\"tu\":\"verificarás\",\"ele/ela/você\":\"verificará\",\"nós\":\"verificaremos\",\"eles/elas/vocês\":\"verificarão\"},\"condicional\":{\"eu\":\"verificaria\",\"tu\":\"verificarias\",\"ele/ela/você\":\"verificaria\",\"nós\":\"verificaríamos\",\"eles/elas/vocês\":\"verificariam\"},\"particípio_passado\":\"verificado\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-reporting_media-017\",\"target\":\"revelar\",\"source\":\"to reveal\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Regular -ar verb, auxiliary verb 'ter'.\",\"examples\":[{\"target\":\"Um jornal de referência prometeu revelar novos documentos secretos amanhã.\",\"source\":\"A newspaper of record promised to reveal new secret documents tomorrow.\"},{\"target\":\"A sondagem recente veio revelar uma mudança drástica nas intenções de voto.\",\"source\":\"The recent poll revealed a drastic shift in voting intentions.\"}],\"conjugations\":{\"presente\":{\"eu\":\"revelo\",\"tu\":\"revelas\",\"ele/ela/você\":\"revela\",\"nós\":\"revelamos\",\"eles/elas/vocês\":\"revelam\"},\"pretérito_perfeito\":{\"eu\":\"revelei\",\"tu\":\"revelaste\",\"ele/ela/você\":\"revelou\",\"nós\":\"revelámos\",\"eles/elas/vocês\":\"revelaram\"},\"pretérito_imperfeito\":{\"eu\":\"revelava\",\"tu\":\"revelavas\",\"ele/ela/você\":\"revelava\",\"nós\":\"revelávamos\",\"eles/elas/vocês\":\"revelavam\"},\"futuro_simples\":{\"eu\":\"revelarei\",\"tu\":\"revelarás\",\"ele/ela/você\":\"revelará\",\"nós\":\"revelaremos\",\"eles/elas/vocês\":\"revelarão\"},\"condicional\":{\"eu\":\"revelaria\",\"tu\":\"revelarias\",\"ele/ela/você\":\"revelaria\",\"nós\":\"revelaríamos\",\"eles/elas/vocês\":\"revelariam\"},\"particípio_passado\":\"revelado\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-reporting_media-018\",\"target\":\"criticar\",\"source\":\"to criticize\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Regular -ar verb with spelling change in 1st person singular preterite (critiquei), auxiliary verb 'ter'.\",\"examples\":[{\"target\":\"Vários críticos de televisão aproveitaram para criticar a falta de originalidade.\",\"source\":\"Several television critics took the opportunity to criticize the lack of originality.\"},{\"target\":\"O editorial não hesitou em criticar a gestão da crise por parte do governo.\",\"source\":\"The editorial did not hesitate to criticize the government's management of the crisis.\"}],\"conjugations\":{\"presente\":{\"eu\":\"critico\",\"tu\":\"criticas\",\"ele/ela/você\":\"critica\",\"nós\":\"criticamos\",\"eles/elas/vocês\":\"criticam\"},\"pretérito_perfeito\":{\"eu\":\"critiquei\",\"tu\":\"criticaste\",\"ele/ela/você\":\"criticou\",\"nós\":\"criticámos\",\"eles/elas/vocês\":\"criticaram\"},\"pretérito_imperfeito\":{\"eu\":\"criticava\",\"tu\":\"criticavas\",\"ele/ela/você\":\"criticava\",\"nós\":\"criticávamos\",\"eles/elas/vocês\":\"criticavam\"},\"futuro_simples\":{\"eu\":\"criticarei\",\"tu\":\"criticarás\",\"ele/ela/você\":\"criticará\",\"nós\":\"criticaremos\",\"eles/elas/vocês\":\"criticarão\"},\"condicional\":{\"eu\":\"criticaria\",\"tu\":\"criticarias\",\"ele/ela/você\":\"criticaria\",\"nós\":\"criticaríamos\",\"eles/elas/vocês\":\"criticariam\"},\"particípio_passado\":\"criticado\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-reporting_media-019\",\"target\":\"alegar\",\"source\":\"to claim, to allege\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Regular -ar verb, auxiliary verb 'ter'.\",\"examples\":[{\"target\":\"A defesa do jornal alegou que a publicação estava protegida pela lei da imprensa.\",\"source\":\"The newspaper's defense claimed that the publication was protected by press law.\"},{\"target\":\"O porta-voz alegou desconhecer os detalhes do memorando que foi divulgado.\",\"source\":\"The spokesperson claimed to be unaware of the details of the leaked memorandum.\"}],\"conjugations\":{\"presente\":{\"eu\":\"alego\",\"tu\":\"alegas\",\"ele/ela/você\":\"alega\",\"nós\":\"alegamos\",\"eles/elas/vocês\":\"alegam\"},\"pretérito_perfeito\":{\"eu\":\"aleguei\",\"tu\":\"alegaste\",\"ele/ela/você\":\"alegou\",\"nós\":\"alegámos\",\"eles/elas/vocês\":\"alegaram\"},\"pretérito_imperfeito\":{\"eu\":\"alegava\",\"tu\":\"alegavas\",\"ele/ela/você\":\"alegava\",\"nós\":\"alegávamos\",\"eles/elas/vocês\":\"alegavam\"},\"futuro_simples\":{\"eu\":\"alegarei\",\"tu\":\"alegarás\",\"ele/ela/você\":\"alegará\",\"nós\":\"alegaremos\",\"eles/elas/vocês\":\"alegarão\"},\"condicional\":{\"eu\":\"alegaria\",\"tu\":\"alegarias\",\"ele/ela/você\":\"alegaria\",\"nós\":\"alegaríamos\",\"eles/elas/vocês\":\"alegariam\"},\"particípio_passado\":\"alegado\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-reporting_media-020\",\"target\":\"insinuar\",\"source\":\"to insinuate\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Regular -ar verb, auxiliary verb 'ter'.\",\"examples\":[{\"target\":\"O comentador parecia insinuar que houve corrupção na adjudicação do contrato.\",\"source\":\"The commentator seemed to insinuate that there was corruption in awarding the contract.\"},{\"target\":\"Ela evitou insinuar qualquer culpa antes de os factos estarem confirmados.\",\"source\":\"She avoided insinuating any guilt before the facts were confirmed.\"}],\"conjugations\":{\"presente\":{\"eu\":\"insinuo\",\"tu\":\"insinuas\",\"ele/ela/você\":\"insinua\",\"nós\":\"insinuamos\",\"eles/elas/vocês\":\"insinuam\"},\"pretérito_perfeito\":{\"eu\":\"insinuei\",\"tu\":\"insinuaste\",\"ele/ela/você\":\"insinuou\",\"nós\":\"insinuámos\",\"eles/elas/vocês\":\"insinuaram\"},\"pretérito_imperfeito\":{\"eu\":\"insinuava\",\"tu\":\"insinuavas\",\"ele/ela/você\":\"insinuava\",\"nós\":\"insinuávamos\",\"eles/elas/vocês\":\"insinuavam\"},\"futuro_simples\":{\"eu\":\"insinuarei\",\"tu\":\"insinuarás\",\"ele/ela/você\":\"insinuará\",\"nós\":\"insinuaremos\",\"eles/elas/vocês\":\"insinuarão\"},\"condicional\":{\"eu\":\"insinuaria\",\"tu\":\"insinuarias\",\"ele/ela/você\":\"insinuaria\",\"nós\":\"insinuaríamos\",\"eles/elas/vocês\":\"insinuariam\"},\"particípio_passado\":\"insinuado\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}}]";
+const langConfigJson = "{\"language_pair\":\"english_portuguese\",\"target_lang\":\"pt\",\"native_lang\":\"en\",\"target_lang_name\":\"Português\",\"native_lang_name\":\"English\",\"speech_lang\":\"pt-PT\",\"noun_metadata_fields\":[{\"key\":\"article\",\"label\":\"Artigo\",\"render\":\"article_badge\"},{\"key\":\"gender\",\"label\":\"Género\",\"render\":\"gender_label\"},{\"key\":\"plural\",\"label\":\"Plural\",\"render\":\"text\"}],\"article_colours\":{\"o\":\"#4A7C9E\",\"a\":\"#B05070\"},\"gender_labels\":{\"m\":\"Masculino\",\"f\":\"Feminino\"},\"verb_tenses\":[\"presente\",\"pretérito_perfeito\",\"pretérito_imperfeito\",\"particípio_passado\",\"futuro_simples\",\"condicional\"],\"cases\":{},\"ui_labels\":{\"learn_mode\":\"Aprender\",\"train_mode\":\"Treinar\",\"examples_heading\":\"Frases de exemplo\",\"grammar_note_heading\":\"Nota gramatical\",\"audio_button\":\"Ouvir\",\"back_link\":\"Voltar\",\"card_counter\":\"Cartão {current} / {total}\",\"next_button\":\"Seguinte\",\"finish_button\":\"Concluir\",\"correct\":\"Correto!\",\"wrong\":\"Incorreto\",\"dashboard_link\":\"Painel principal\",\"library_prompt\":\"Escolha um baralho da biblioteca e explore o conteúdo dos cartões.\",\"cards_badge\":\"{count} CARTÕES\",\"cards_count\":\"{count} cartões\",\"deck_meta\":\"{topic} • {level} • {count} cartões\",\"no_decks\":\"Ainda não existem baralhos nesta categoria.\",\"setup_title\":\"Configurar treino\",\"setup_subtitle\":\"Configure a sua sessão de treino.\",\"question_type\":\"Tipo de pergunta\",\"mode_multiple_choice\":\"Escolha múltipla\",\"mode_typing\":\"Digitação de texto\",\"mode_typing_short\":\"Digitação\",\"direction\":\"Direção\",\"direction_forward\":\"🇺🇸 English → 🇵🇹 Português\",\"direction_reverse\":\"🇵🇹 Português → 🇺🇸 English\",\"select_level\":\"Selecionar nível\",\"start_training\":\"Iniciar treino\",\"count_label\":\"Quantidade\",\"all_cards\":\"Todas\",\"in_deck\":\"no baralho\",\"view_cards\":\"Cartões\",\"view_list\":\"Lista\",\"card_word\":\"Cartão\",\"keyboard_hint_study\":\"← → Teclas de seta para navegar · A para ouvir\",\"example_single_heading\":\"Exemplo\",\"no_example\":\"Nenhum exemplo disponível.\",\"tags_label\":\"Etiquetas:\",\"type_vocab\":\"Vocabulário\",\"type_verb\":\"Verbo\",\"type_phrase\":\"Expressão\",\"type_connector\":\"Conector\",\"type_grammar\":\"Gramática\",\"type_noun\":\"Substantivo\",\"type_adjective\":\"Adjetivo\",\"type_expression\":\"Locução\",\"plural_prefix\":\"Pl. {plural}\",\"plural_only\":\"apenas plural\",\"word_order_heading\":\"Ordem das palavras\",\"structure_heading\":\"Estrutura\",\"training_title\":\"Treino\",\"all_levels\":\"Todos os níveis\",\"type_placeholder\":\"Escreva a palavra em português...\",\"check_button\":\"Verificar\",\"keyboard_hint_train\":\"Enter / Espaço = confirmar · A = Ouvir\",\"audio_title\":\"Ouvir (A)\",\"training_finished\":\"Treino concluído!\",\"missed_heading\":\"Respostas erradas — para repetir\",\"retry_missed\":\"Repetir erros\",\"new_config\":\"Nova configuração\",\"plural_hint\":\"Pl: {plural}\",\"results_pct\":\"{pct}% de acertos\",\"result_excellent\":\"Excelente! Dominou este nível com distinção.\",\"result_good\":\"Muito bem! Mais um pouco de prática e dominará tudo!\",\"result_ok\":\"Bom começo! Reveja os cartões mais uma vez.\",\"result_retry\":\"Sem problema — a prática leva à perfeição!\",\"no_cards_title\":\"Nenhum cartão encontrado\",\"no_cards_hint\":\"Por favor, selecione outro nível ou baralho.\"},\"answer_normalisation\":{\"strip_leading_words\":[\"o\",\"a\",\"os\",\"as\",\"um\",\"uma\",\"uns\",\"umas\"],\"alt_spellings\":{\"á\":\"a\",\"à\":\"a\",\"ã\":\"a\",\"â\":\"a\",\"é\":\"e\",\"ê\":\"e\",\"í\":\"i\",\"ó\":\"o\",\"ô\":\"o\",\"õ\":\"o\",\"ú\":\"u\",\"ç\":\"c\"}}}";
+const category = "verbs";
+const lang = "en-pt";
+const base = "/languagelounge/";
+const defaultView = "cards";
+
+  const cards     = JSON.parse(cardsJson);
+  const config    = JSON.parse(langConfigJson);
+  let currentIndex = 0;
+
+  const dotNav    = document.getElementById('dot-nav');
+  const currentNum = document.getElementById('current-num');
+  const progressBar = document.getElementById('progress-bar');
+  const btnPrev   = document.getElementById('btn-prev');
+  const btnNext   = document.getElementById('btn-next');
+  const cardHost  = document.getElementById('card-host');
+  const progressCont = document.getElementById('progress-container');
+
+  const cardViewWrap = document.getElementById('card-view-wrap');
+  const listViewWrap = document.getElementById('list-view-wrap');
+  const btnViewCards = document.getElementById('view-cards-btn');
+  const btnViewList  = document.getElementById('view-list-btn');
+
+  // Toggle Logic
+  function setViewMode(mode) {
+    if (mode === 'list') {
+      cardViewWrap.classList.add('hidden');
+      listViewWrap.classList.remove('hidden');
+      progressCont.classList.add('hidden');
+      btnViewList.classList.add('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewList.classList.remove('text-[var(--text-muted)]');
+      btnViewCards.classList.remove('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewCards.classList.add('text-[var(--text-muted)]');
+    } else {
+      listViewWrap.classList.add('hidden');
+      cardViewWrap.classList.remove('hidden');
+      progressCont.classList.remove('hidden');
+      btnViewCards.classList.add('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewCards.classList.remove('text-[var(--text-muted)]');
+      btnViewList.classList.remove('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewList.classList.add('text-[var(--text-muted)]');
+    }
+  }
+
+  btnViewCards.addEventListener('click', () => setViewMode('cards'));
+  btnViewList.addEventListener('click', () => setViewMode('list'));
+
+  // Initial view is configured per category (config/language_pairs/*.yaml → categories[].default_view)
+  if (defaultView === 'list') {
+    setViewMode('list');
+  }
+
+
+
+  // ── Helpers (mirror card-renderer.ts — no module imports in inline scripts) ──
+  const articleColours = config.article_colours || {};
+  const genderLabels   = config.gender_labels   || {};
+  const speechLang     = config.speech_lang;
+  const ui             = config.ui_labels || {};
+  const fmt = (tpl, vars) => String(tpl).replace(/\{(\w+)\}/g, (m, k) => (k in vars ? vars[k] : m));
+  const formatHighlight = (text) => text ? String(text).replace(/\*(.*?)\*/g, '<span class="highlighter">$1</span>') : '';
+  // Articles come from the language config (keys of article_colours), never hardcoded
+  const articleList = Object.keys(articleColours);
+  const articlePatterns = articleList.map(a => {
+    const esc = a.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    return esc.endsWith("'") ? esc : `${esc}\\s+`;
+  });
+  const articleRe = articlePatterns.length
+    ? new RegExp('^(?:' + articlePatterns.join('|') + ')', 'i')
+    : null;
+
+  function stripArticle(w) {
+    return articleRe ? (w || '').replace(articleRe, '').trim() : (w || '').trim();
+  }
+
+  function getTypeLabel(card) {
+    const tags = card.tags || [];
+    if (tags.includes('noun'))       return ui.type_noun;
+    if (tags.includes('verb'))       return ui.type_verb;
+    if (tags.includes('adjective'))  return ui.type_adjective;
+    if (tags.includes('expression')) return ui.type_expression;
+    const byType = { vocab: ui.type_vocab, verb: ui.type_verb, phrase: ui.type_phrase, connector: ui.type_connector, grammar: ui.type_grammar };
+    return byType[card.type] || ui.type_vocab;
+  }
+
+  function normaliseEx(ex) {
+    return { target: ex.target||'', source: ex.source||'', note: ex.note };
+  }
+
+  function getMetaFacts(card) {
+    const meta = card.metadata || {};
+    const facts = [];
+    for (const field of (config.noun_metadata_fields || [])) {
+      const raw = meta[field.key];
+      if (!raw || raw==='~') continue;
+      let value = String(raw), colour;
+      if (field.render === 'gender_label')  value  = genderLabels[raw] || raw;
+      if (field.render === 'article_badge') colour = articleColours[raw.toLowerCase()] || 'var(--espresso)';
+      facts.push({ label: field.label, value, colour });
+    }
+    return facts;
+  }
+
+  // ── Card renderer ─────────────────────────────────────────────────────────
+  function renderCard(idx) {
+    const card = cards[idx];
+    if (!card || !cardHost) return;
+
+    const lc = cardHost.querySelector('.learning-card');
+    if (!lc) return;
+
+    function sel(cls) { return lc.querySelector(cls); }
+
+    // Type badge + level
+    sel('.lc-type-badge').textContent = getTypeLabel(card);
+    sel('.lc-level-badge').textContent = (card.level || '').toUpperCase();
+
+    // Article
+    const article = card.metadata?.article;
+    const articleWrap = sel('.lc-article-wrap');
+    const articleEl   = sel('.lc-article');
+    if (article && (card.tags||[]).includes('noun') && !card.metadata?.plural_only) {
+      articleEl.textContent = article;
+      articleEl.style.color = articleColours[article.toLowerCase()] || 'var(--espresso)';
+      articleWrap.style.display = '';
+    } else {
+      articleWrap.style.display = 'none';
+    }
+
+    // Word / translation / forms
+    sel('.lc-word').textContent        = stripArticle(card.target);
+    sel('.lc-translation').textContent = card.source || '';
+    const plural = card.metadata?.plural;
+    sel('.lc-forms').textContent = plural && !card.metadata?.plural_only ? fmt(ui.plural_prefix, { plural }) : card.metadata?.plural_only ? ui.plural_only : '';
+
+    // Meta grid
+    const metaGrid = sel('.lc-meta-grid');
+    const facts = getMetaFacts(card);
+    if (facts.length) {
+      metaGrid.style.gridTemplateColumns = `repeat(${Math.min(facts.length,4)}, 1fr)`;
+      metaGrid.style.display = '';
+      metaGrid.innerHTML = facts.map((f, i) => `
+        <div class="px-5 py-4 ${i<facts.length-1?'border-r':''}" style="border-color:var(--border);">
+          <p class="text-[9px] font-bold uppercase tracking-widest mb-1" style="color:var(--text-muted);">${f.label}</p>
+          <p class="text-sm font-bold" style="color:${f.colour||'var(--text)'};">${f.value}</p>
+        </div>`).join('');
+    } else {
+      metaGrid.style.display = 'none';
+    }
+
+    // Grammar note
+    const grammarWrap = sel('.lc-grammar-wrap');
+    if (card.grammar_note) {
+      sel('.lc-grammar-text').innerHTML = formatHighlight(card.grammar_note);
+      grammarWrap.classList.remove('hidden');
+    } else {
+      grammarWrap.classList.add('hidden');
+    }
+
+    // Examples
+    const examplesEl = sel('.lc-examples');
+    const rawEx = card.examples || [];
+    examplesEl.innerHTML = rawEx.length
+      ? rawEx.map(ex => { const e=normaliseEx(ex); return `
+          <div class="rounded-2xl border overflow-hidden" style="border-color:var(--border);">
+            <div class="px-4 py-3" style="background-color:var(--bg);">
+              <p class="font-semibold leading-snug mb-1" style="color:var(--text);">${e.target}</p>
+              <p class="text-sm italic" style="color:var(--text-muted);">${e.source||''}</p>
+            </div>
+            ${e.note?`<div class="px-4 py-2 border-t" style="border-color:var(--border);">
+              <p class="text-[10px] font-bold font-mono" style="color:var(--espresso);">📐 ${e.note}</p>
+            </div>`:''}
+          </div>`; }).join('')
+      : '<p class="text-sm italic" style="color:var(--text-muted);">' + ui.no_example + '</p>';
+
+    // Verb: conjugation table
+    const conjWrap  = sel('.lc-conjugation-wrap');
+    const conjInner = sel('.lc-conjugation-inner');
+    const cardType = card.type || (card.tags?.includes('verb') ? 'verb' : 'vocab');
+    if (conjWrap && conjInner) {
+      if (cardType === 'verb' && card.conjugations) {
+        conjWrap.classList.remove('hidden');
+        let conjArray = [];
+        if (Array.isArray(card.conjugations)) {
+          conjArray = card.conjugations;
+        } else {
+          for (const [tense, forms] of Object.entries(card.conjugations)) {
+            if (typeof forms === 'string') {
+              conjArray.push({ tense, stringForm: forms });
+            } else {
+              const formsArr = Object.entries(forms).map(([pronoun, form]) => ({ pronoun, form }));
+              conjArray.push({ tense, forms: formsArr });
+            }
+          }
+        }
+
+        const tensesToRender = config.verb_tenses || conjArray.map(t => t.tense);
+        const stringTenses = [];
+        const tableTenses = [];
+
+        tensesToRender.forEach(tense => {
+          const t = conjArray.find(c => c.tense === tense);
+          if (!t) return;
+          if (t.stringForm) stringTenses.push(t);
+          else tableTenses.push(t);
+        });
+
+        let html = '';
+        if (stringTenses.length > 0) {
+          html += `
+            <div class="flex flex-wrap gap-3 mb-6">
+              ${stringTenses.map(t => `
+                <div class="rounded-xl border px-4 py-2.5 flex items-center gap-3 shadow-sm" style="border-color:var(--border); background-color:var(--bg);">
+                  <span class="text-[10px] font-bold uppercase tracking-widest opacity-80" style="color:var(--espresso);">${t.tense.replace(/_/g, ' ')}</span>
+                  <span class="font-bold text-sm" style="color:var(--text);">${t.stringForm}</span>
+                </div>
+              `).join('')}
+            </div>
+          `;
+        }
+
+        if (tableTenses.length > 0) {
+          const pronouns = tableTenses[0].forms.map(f => f.pronoun);
+          html += `
+            <div class="rounded-xl border overflow-x-auto shadow-sm w-full" style="border-color:var(--border);">
+              <table class="w-full text-sm text-left">
+                <thead>
+                  <tr style="background-color:var(--bg); border-bottom: 1px solid var(--border);">
+                    <th class="px-4 py-3 font-bold uppercase tracking-widest text-[10px] w-[1%]" style="color:var(--espresso); border-right: 1px solid var(--border);"></th>
+                    ${tableTenses.map(t => `
+                      <th class="px-4 py-3 font-bold uppercase tracking-widest text-[10px]" style="color:var(--espresso);">${t.tense.replace(/_/g, ' ')}</th>
+                    `).join('')}
+                  </tr>
+                </thead>
+                <tbody>
+                  ${pronouns.map((pronoun, ri) => `
+                    <tr class="${ri < pronouns.length - 1 ? 'border-b' : ''}" style="border-color:var(--border);">
+                      <td class="px-4 py-3 font-bold text-xs whitespace-nowrap" style="color:var(--espresso); background-color:var(--bg); border-right: 1px solid var(--border);">${pronoun}</td>
+                      ${tableTenses.map(t => {
+                        const formObj = t.forms.find(f => f.pronoun === pronoun);
+                        return `<td class="px-4 py-3 font-semibold whitespace-nowrap" style="color:var(--text);">${formObj ? formObj.form : '-'}</td>`;
+                      }).join('')}
+                    </tr>
+                  `).join('')}
+                </tbody>
+              </table>
+            </div>
+          `;
+        }
+        conjInner.innerHTML = html;
+      } else {
+        conjWrap.classList.add('hidden');
+        conjInner.innerHTML = '';
+      }
+    }
+
+    // Connector: word order block
+    const woWrap = sel('.lc-wordorder-wrap');
+    if (woWrap) {
+      if (cardType === 'connector' && card.word_order) {
+        sel('.lc-wordorder-text').textContent = card.word_order;
+        woWrap.classList.remove('hidden');
+      } else {
+        woWrap.classList.add('hidden');
+      }
+    }
+
+    // Phrase: preposition rule block
+    const phraseWrap = sel('.lc-phrase-wrap');
+    if (phraseWrap) {
+      if (cardType === 'phrase' && card.clause_type) {
+        sel('.lc-phrase-rule').textContent = card.clause_type;
+        phraseWrap.classList.remove('hidden');
+      } else {
+        phraseWrap.classList.add('hidden');
+      }
+    }
+
+    // Tags
+    sel('.lc-tags').innerHTML = (card.tags||[]).map(t =>
+      `<span class="text-[10px] font-bold px-2 py-0.5 rounded-md border" style="border-color:var(--border);color:var(--text-muted);background-color:var(--bg);">${t}</span>`
+    ).join('');
+
+    // Progress UI
+    if (currentNum)  currentNum.textContent = String(idx+1);
+    if (progressBar) progressBar.style.width = `${Math.round(((idx+1)/cards.length)*100)}%`;
+    if (btnPrev)     btnPrev.disabled = idx === 0;
+    if (btnNext)     btnNext.innerHTML = idx === cards.length-1
+      ? '✓ ' + ui.finish_button
+      : ui.next_button + ' <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>';
+
+    updateDots();
+
+    // Re-bind audio button cleanly by cloning to strip old listeners
+    const oldBtn = sel('.lc-audio-btn');
+    if (oldBtn) {
+      const newBtn = oldBtn.cloneNode(true);
+      oldBtn.parentNode.replaceChild(newBtn, oldBtn);
+      newBtn.addEventListener('click', speakCurrent);
+    }
+  }
+
+  // ── Dot navigation ────────────────────────────────────────────────────────
+  function buildDots() {
+    if (!dotNav) return;
+    dotNav.innerHTML = '';
+    const maxVisible = 20;
+    const showAll = cards.length <= maxVisible;
+    cards.forEach((_, i) => {
+      if (!showAll && i >= maxVisible) return;
+      const dot = document.createElement('button');
+      dot.className = 'dot w-2 h-2 rounded-full transition-all duration-300 flex-shrink-0';
+      dot.style.backgroundColor = 'var(--border)';
+      dot.title = `${ui.card_word} ${i+1}`;
+      dot.addEventListener('click', () => goTo(i));
+      dotNav.appendChild(dot);
+    });
+    if (!showAll) {
+      const el = document.createElement('span');
+      el.textContent = `+${cards.length - maxVisible}`;
+      el.className = 'text-[10px] font-bold';
+      el.style.color = 'var(--text-muted)';
+      dotNav.appendChild(el);
+    }
+  }
+
+  function updateDots() {
+    dotNav?.querySelectorAll('.dot').forEach((dot, i) => {
+      dot.style.backgroundColor = i===currentIndex ? 'var(--espresso)' : 'var(--border)';
+      dot.style.width     = i===currentIndex ? '20px' : '8px';
+      dot.style.borderRadius = '4px';
+    });
+  }
+
+  // ── Audio ─────────────────────────────────────────────────────────────────
+  function speakCurrent() {
+    const card = cards[currentIndex];
+    if (!card) return;
+    if (window.LoungeAudioEngine) {
+      window.LoungeAudioEngine.speak(card.target || '', speechLang, 0.85);
+    }
+  }
+
+  // ── Navigate ─────────────────────────────────────────────────────────────
+  function goTo(idx) {
+    if (idx < 0 || idx >= cards.length) return;
+    currentIndex = idx;
+    renderCard(currentIndex);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  btnPrev?.addEventListener('click', () => goTo(currentIndex - 1));
+  btnNext?.addEventListener('click', () => {
+    if (currentIndex === cards.length - 1) window.location.href = `${base}${lang}/${category}/`;
+    else goTo(currentIndex + 1);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') goTo(currentIndex + 1);
+    if (e.key === 'ArrowLeft')  goTo(currentIndex - 1);
+    if (e.key === 'a' || e.key === 'A') speakCurrent();
+  });
+
+  // ── Learn / Train panel toggle ──────────────────────
+  const btnLearn = document.getElementById('btn-mode-learn');
+  const btnTrain = document.getElementById('btn-mode-train');
+  const pnlLearn = document.getElementById('learn-panel');
+  const pnlTrain = document.getElementById('train-panel');
+  const toolbar  = document.getElementById('learn-toolbar');
+
+  const STORAGE_KEY = `lounge:${lang}:${category}:deck:mode`;
+  let currentMode = localStorage.getItem(STORAGE_KEY) || 'learn';
+
+  function applyMode() {
+    if (currentMode === 'learn') {
+      btnLearn.style.backgroundColor = 'var(--espresso)';
+      btnLearn.style.color = '#F5F2EB';
+      btnTrain.style.backgroundColor = 'transparent';
+      btnTrain.style.color = 'var(--text-muted)';
+      pnlLearn.classList.remove('hidden');
+      toolbar.classList.remove('hidden');
+      pnlTrain.classList.add('hidden');
+    } else {
+      btnTrain.style.backgroundColor = 'var(--espresso)';
+      btnTrain.style.color = '#F5F2EB';
+      btnLearn.style.backgroundColor = 'transparent';
+      btnLearn.style.color = 'var(--text-muted)';
+      pnlTrain.classList.remove('hidden');
+      pnlLearn.classList.add('hidden');
+      toolbar.classList.add('hidden');
+    }
+    localStorage.setItem(STORAGE_KEY, currentMode);
+  }
+
+  btnLearn?.addEventListener('click', () => { currentMode = 'learn'; applyMode(); });
+  btnTrain?.addEventListener('click', () => { currentMode = 'train'; applyMode(); });
+  applyMode();
+
+  // ── Radio-style selectors (mode & dir & count) ─────────────
+  document.querySelectorAll('.sel-opt').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const group = btn.dataset.group;
+      document.querySelectorAll(`.sel-opt[data-group="${group}"]`).forEach(b => b.classList.remove('sel-active'));
+      btn.classList.add('sel-active');
+      const hidden = document.getElementById(`${group}-hidden`);
+      if (hidden) hidden.value = btn.dataset.value;
+    });
+  });
+
+  document.getElementById('deck-train-form')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const base = form.action;
+    const mode = document.getElementById('mode-hidden')?.value || 'mc';
+    const dir  = document.getElementById('dir-hidden')?.value || `${config.language_pair.source_code}-${config.language_pair.target_code}`.toLowerCase();
+    const count = document.getElementById('count-hidden')?.value || '30';
+    const level = form.querySelector('[name="level"]')?.value || '';
+    const deck = form.querySelector('[name="deck"]')?.value || '';
+    
+    const params = new URLSearchParams();
+    if(level) params.set('level', level);
+    params.set('deck', deck);
+    params.set('mode', mode);
+    params.set('dir', dir);
+    params.set('count', count);
+    
+    window.location.href = `${base}?${params.toString()}`;
+  });
+
+  // ── Init ─────────────────────────────────────────────────────────────────
+  buildDots();
+  // Card 0 is already rendered server-side via LearningCard component.
+  // Sync progress UI to reflect card 0 state.
+  updateDots();
+  if (progressBar) progressBar.style.width = `${Math.round(1/cards.length*100)}%`;
+  // Update card 0 using client-side config too (ensures langConfig is applied)
+  renderCard(0);
+})();</script>

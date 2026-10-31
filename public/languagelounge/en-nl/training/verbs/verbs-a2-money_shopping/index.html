@@ -1,0 +1,758 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="description" content="Nederlands Lounge — Jouw vertrouwde lounge voor de Nederlandse taal — vergroot je woordenschat, beheers de grammatica en ontdek het Nederlands van A1 tot B2."><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/languagelounge/favicon.svg"><meta name="generator" content="Astro v7.3.5"><title>Money &amp; Shopping — Nederlands Lounge</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet"><script>
+      (function() {
+        const saved = localStorage.getItem('wortschatz_theme');
+        if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script><link rel="stylesheet" href="/languagelounge/_astro/Layout.Cr1varBg.css"><style>.sel-opt[data-astro-cid-5tabbh6g]{border:2px solid var(--border);background-color:var(--card);color:var(--text);cursor:pointer;text-align:center;border-radius:12px;flex-direction:column;justify-content:center;align-items:center;width:100%;padding:14px 12px;transition:border-color .15s,background-color .15s,color .15s,box-shadow .15s;display:flex}.sel-opt[data-astro-cid-5tabbh6g]:hover{border-color:var(--border-hover);box-shadow:0 2px 8px #00000014}.sel-opt[data-astro-cid-5tabbh6g].sel-active{border-color:var(--espresso);background-color:var(--espresso);color:#f5f2eb;box-shadow:0 2px 12px #0000002e}
+</style></head><body class="antialiased min-h-screen flex flex-col" style="background-color:var(--bg);color:var(--text);"><!-- Header --><header class="sticky top-0 z-50 border-b" style="background-color:var(--bg);border-color:var(--border);"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between gap-4" style="height:4.5rem;"><!-- Logo + Language Switcher --><div class="flex items-center gap-4 shrink-0"><a href="/languagelounge/en-nl/" class="flex items-center gap-2 group"><span class="font-outfit font-extrabold text-xl sm:text-2xl tracking-tight transition-colors" style="color:var(--text);">Small Talk Café<span class="font-normal text-base hidden sm:inline" style="color:var(--text-muted);"> | <span id="site-name">Nederlands Lounge</span></span></span></a><!-- Language Selector Dropdown --><div class="relative" id="lang-dropdown-wrapper"><button id="lang-btn" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-sm font-bold transition-all hover:opacity-70" style="background-color:var(--bg); border-color:var(--border); color:var(--text);"><span id="lang-flag">🇳🇱</span><span id="lang-code">NL</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"></path></svg></button><div id="lang-menu" class="hidden absolute top-full left-0 mt-2 rounded-2xl border shadow-2xl overflow-hidden z-50 min-w-[260px] sm:min-w-[300px]" style="background-color:var(--card); border-color:var(--border);"><div class="px-3.5 py-2 text-[11px] font-bold uppercase tracking-wider border-b" style="background-color:var(--surface); border-color:var(--border); color:var(--text-muted);">Language Lounges</div><div><a href="/languagelounge/en-de/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇩🇪</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Deutsch Lounge</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">Der Raum für die deutsche Sprache</div></div></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-es/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇪🇸</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Lounge Español</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">El espacio para la lengua española</div></div></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-fr/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇫🇷</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Lounge Français</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">Le salon de la langue française</div></div></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-it/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇮🇹</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Lounge Italiano</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">Il salotto per la lingua italiana</div></div></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-nl/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-bold" style="color:var(--text); background-color:var(--surface);"><span class="text-2xl shrink-0">🇳🇱</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Nederlands Lounge</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">Dé ontmoetingsplek voor de Nederlandse taal</div></div><span class="shrink-0 text-[10px] font-extrabold uppercase px-1.5 py-0.5 rounded" style="background-color:var(--accent); color:var(--bg);">Active</span></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-pt/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇵🇹</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Lounge Português</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">O espaço para a língua portuguesa</div></div></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-sv/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇸🇪</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Svenska Lounge</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">Mötesplatsen för det svenska språket</div></div></a></div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/" class="w-full flex items-center gap-2.5 px-4 py-2.5 text-xs font-semibold hover:opacity-80 transition-colors " style="color:var(--text); "><span class="text-base">🏛️</span><span>Language Lounge Hub</span><span class="ml-auto text-[11px]" style="color:var(--text-muted);">Overview &rarr;</span></a></div></div></div><!-- Dynamic Nav Links --><nav class="hidden md:flex gap-5 items-center"><a href="https://smalltalkcafe.de/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Small Talk Café Podcasts</a><span class="text-sm font-normal" style="color:var(--border);">|</span><a href="/languagelounge/en-nl/vocabulary/" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Woordenschat</a><a href="/languagelounge/en-nl/verbs/" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Werkwoorden</a><a href="/languagelounge/en-nl/grammatik/" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Grammatica</a><a href="/languagelounge/en-nl/redemittel/" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Zegswijzen</a><!-- Dark/Light Toggle --><button id="theme-toggle" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-sm font-semibold transition-all hover:opacity-70" style="border-color:var(--border); color:var(--text-muted);" aria-label="Toggle dark/light mode"><span id="theme-icon">☀️</span><span id="theme-label">Light</span></button></nav></div></header><main id="main-content" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-1 w-full"><div class="max-w-4xl mx-auto py-6" data-astro-cid-5tabbh6g><!-- Deck Header --><div class="flex items-start justify-between mb-8 gap-4 flex-wrap" data-astro-cid-5tabbh6g><div data-astro-cid-5tabbh6g><a href="/languagelounge/en-nl/verbs/" class="text-xs font-bold flex items-center gap-1 mb-2 hover:opacity-70 transition-opacity" style="color:var(--espresso);" data-astro-cid-5tabbh6g><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><path d="m15 18-6-6 6-6" data-astro-cid-5tabbh6g></path></svg>Werkwoorden</a><h1 class="text-2xl md:text-3xl font-extrabold font-outfit" style="color:var(--text);" data-astro-cid-5tabbh6g>Money &amp; Shopping</h1><p class="text-xs font-bold uppercase tracking-wider mt-1" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Geld &amp; Winkelen • A2 • 20 kaarten</p></div><div class="flex flex-col items-end gap-4 w-full md:w-auto mt-4 md:mt-0" data-astro-cid-5tabbh6g><!-- ── Mode Toggle ───────────────────────────── --><div class="flex rounded-xl border overflow-hidden p-1 gap-1 w-full max-w-[300px]" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><button id="btn-mode-learn" class="mode-btn flex-1 flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold transition-all" data-astro-cid-5tabbh6g><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" data-astro-cid-5tabbh6g></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" data-astro-cid-5tabbh6g></path></svg>Leren</button><button id="btn-mode-train" class="mode-btn flex-1 flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold transition-all" data-astro-cid-5tabbh6g><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><circle cx="12" cy="12" r="10" data-astro-cid-5tabbh6g></circle><polyline points="12 6 12 12 16 14" data-astro-cid-5tabbh6g></polyline></svg>Oefenen</button></div><div id="learn-toolbar" class="flex flex-col items-end gap-4 w-full" data-astro-cid-5tabbh6g><!-- View switcher (Cards vs List) --><div class="flex rounded-xl border overflow-hidden p-1 gap-1 w-full max-w-[300px]" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><button id="view-cards-btn" class="view-btn flex-1 flex items-center justify-center px-4 py-2 rounded-lg text-xs font-bold transition-all bg-[var(--espresso)] text-[#F5F2EB]" data-astro-cid-5tabbh6g>Kaarten</button><button id="view-list-btn" class="view-btn flex-1 flex items-center justify-center px-4 py-2 rounded-lg text-xs font-bold transition-all text-[var(--text-muted)] hover:opacity-70" data-astro-cid-5tabbh6g>Lijst</button></div><!-- Progress indicator --><div id="progress-container" class="flex items-center gap-3" data-astro-cid-5tabbh6g><div class="text-xs font-semibold" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Kaart <span id="current-num" class="font-extrabold" style="color:var(--text);" data-astro-cid-5tabbh6g>1</span> / 20</div><div class="w-24 h-1.5 rounded-full overflow-hidden border" style="background-color:var(--bg);border-color:var(--border);" data-astro-cid-5tabbh6g><div id="progress-bar" class="h-full transition-all duration-500 rounded-full" style="width:0%; background-color:var(--espresso);" data-astro-cid-5tabbh6g></div></div></div></div></div></div><!-- ══ LEARN PANEL ════════════════════════════ --><div id="learn-panel" class="space-y-6" data-astro-cid-5tabbh6g><!-- ── Universal Study Card (rendered by LearningCard component) ── --><div id="card-view-wrap" data-astro-cid-5tabbh6g><div id="card-host" data-astro-cid-5tabbh6g><!-- The card shell — populated client-side by renderCard() --><div class="learning-card rounded-3xl border shadow-xl overflow-hidden" style="background-color:var(--card); border-color:var(--border);"><!-- ── Top bar ─────────────────────────────────── --><div class="lc-topbar flex items-center justify-between px-6 py-3.5 border-b" style="border-color:var(--border); background-color:var(--bg);"><div class="flex items-center gap-2"><span class="lc-type-badge text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-lg" style="background-color:var(--espresso); color:#F5F2EB;">—</span><span class="lc-level-badge text-[10px] font-bold px-2.5 py-1 rounded-lg cafe-badge"></span></div><button class="lc-audio-btn flex items-center justify-center w-11 h-11 rounded-full transition-transform hover:scale-105 active:scale-95 shadow-md flex-shrink-0" title="Luisteren (A)" style="background-color:var(--espresso); color:#F5F2EB;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg></button></div><!-- ── Main word display ───────────────────────── --><div class="lc-hero px-7 py-8 text-center border-b" style="border-color:var(--border);"><div class="lc-article-wrap mb-1.5"><span class="lc-article text-xl font-bold"></span></div><h2 class="lc-word text-5xl md:text-6xl font-extrabold font-outfit mb-3" style="color:var(--text);">—</h2><p class="lc-translation text-lg font-semibold italic" style="color:var(--text-muted);"></p><p class="lc-forms text-sm font-medium mt-2" style="color:var(--text-muted);"></p></div><!-- ── Meta info grid ─────────────────────────── --><div class="lc-meta-grid grid border-b" style="border-color:var(--border);"><!-- populated by JS --></div><!-- ── Grammar note ───────────────────────────── --><div class="lc-grammar-wrap hidden px-7 py-5 border-b" style="border-color:var(--border); background-color:var(--bg);"><p class="text-[10px] font-bold uppercase tracking-widest mb-2" style="color:var(--espresso);">📌 <span class="lc-grammar-label">Grammaticanotitie</span></p><p class="lc-grammar-text text-sm leading-relaxed font-medium whitespace-pre-wrap" style="color:var(--text);"></p></div><!-- ── Type-specific block ────────────────────── --><!-- Connector word-order block --><div class="lc-wordorder-wrap hidden px-7 py-4 border-b" style="border-color:var(--border); background-color:var(--bg);"><div class="flex items-start gap-3 text-sm font-medium" style="color:var(--text-muted);"><span class="text-base flex-shrink-0">📐</span><span class="lc-wordorder-text"></span></div></div><!-- Phrase preposition block --><div class="lc-phrase-wrap hidden px-7 py-4 border-b" style="border-color:var(--border); background-color:var(--bg);"><p class="text-[10px] font-bold uppercase tracking-widest mb-2" style="color:var(--espresso);">Structuur</p><p class="lc-phrase-rule text-sm font-semibold" style="color:var(--text);"></p></div><!-- ── Examples ───────────────────────────────── --><div class="px-7 py-6 border-b" style="border-color:var(--border);"><p class="lc-examples-label text-[10px] font-bold uppercase tracking-widest mb-5" style="color:var(--text-muted);">Voorbeeldzinnen</p><div class="lc-examples space-y-3"><!-- populated by JS --></div></div><!-- Verb conjugation (hidden by default, shown for verb cards) --><div class="lc-conjugation-wrap hidden border-b px-7 py-6" style="border-color:var(--border);"><div class="lc-conjugation-inner flex flex-wrap gap-4"><!-- populated by JS --></div></div><!-- ── Tags ───────────────────────────────────── --><div class="lc-tags-row px-7 py-4 flex items-center gap-2 flex-wrap"><span class="text-[10px] font-bold uppercase tracking-wider" style="color:var(--text-muted);">Tags:</span><div class="lc-tags flex gap-2 flex-wrap"></div></div></div><script>(function(){const cardJson = "{\"id\":\"verbs-a2-money_shopping-001\",\"target\":\"kopen\",\"source\":\"to buy\",\"type\":\"irregular\",\"cefr\":\"A2\",\"grammar_note\":\"Strong verb, takes hebben.\",\"examples\":[{\"target\":\"Ik koop een nieuwe jas in de stad.\",\"source\":\"I buy a new coat in the city.\"},{\"target\":\"Koop jij die dure schoenen?\",\"source\":\"Are you buying those expensive shoes?\"}],\"conjugations\":{\"tegenwoordige_tijd\":{\"ik\":\"ik koop\",\"jij/je\":\"jij koop\",\"hij/zij/het\":\"hij/zij koopt\",\"wij/we\":\"wij kopen\",\"jullie\":\"jullie kopen\",\"zij/ze\":\"zij kopen\"},\"verleden_tijd\":{\"ik\":\"ik kocht\",\"jij/je\":\"jij kocht\",\"hij/zij/het\":\"hij/zij kocht\",\"wij/we\":\"wij kochten\",\"jullie\":\"jullie kochten\",\"zij/ze\":\"zij kochten\"},\"toekomende_tijd\":{\"ik\":\"ik zal kopen\",\"jij/je\":\"jij zult kopen\",\"hij/zij/het\":\"hij/zij zal kopen\",\"wij/we\":\"wij zullen kopen\",\"jullie\":\"jullie zullen kopen\",\"zij/ze\":\"zij zullen kopen\"},\"voltooide_tijd\":\"heeft gekocht\",\"voltooid_deelwoord\":\"gekocht\"},\"tags\":[\"verb\",\"a2\"],\"metadata\":{}}";
+const langConfigJson = "{\"language_pair\":\"english_dutch\",\"target_lang\":\"nl\",\"native_lang\":\"en\",\"target_lang_name\":\"Nederlands\",\"native_lang_name\":\"English\",\"speech_lang\":\"nl-NL\",\"noun_metadata_fields\":[{\"key\":\"article\",\"label\":\"Lidwoord\",\"render\":\"article_badge\"},{\"key\":\"gender\",\"label\":\"Geslacht\",\"render\":\"gender_label\"},{\"key\":\"plural\",\"label\":\"Meervoud\",\"render\":\"text\"}],\"article_colours\":{\"de\":\"#4A7C9E\",\"het\":\"#4A8A5A\"},\"gender_labels\":{\"c\":\"de-woord\",\"n\":\"het-woord\"},\"verb_tenses\":[\"tegenwoordige_tijd\",\"verleden_tijd\",\"voltooide_tijd\",\"voltooid_deelwoord\",\"toekomende_tijd\"],\"cases\":{},\"ui_labels\":{\"learn_mode\":\"Leren\",\"train_mode\":\"Oefenen\",\"examples_heading\":\"Voorbeeldzinnen\",\"grammar_note_heading\":\"Grammaticanotitie\",\"audio_button\":\"Luisteren\",\"back_link\":\"Terug\",\"card_counter\":\"Kaart {current} / {total}\",\"next_button\":\"Volgende\",\"finish_button\":\"Klaar\",\"correct\":\"Juist!\",\"wrong\":\"Fout\",\"dashboard_link\":\"Dashboard\",\"library_prompt\":\"Kies een deck uit de bibliotheek en ontdek alle informatie op de kaarten.\",\"cards_badge\":\"{count} KAARTEN\",\"cards_count\":\"{count} kaarten\",\"deck_meta\":\"{topic} • {level} • {count} kaarten\",\"no_decks\":\"Nog geen decks in deze categorie.\",\"setup_title\":\"Training instellen\",\"setup_subtitle\":\"Configureer je leersessie.\",\"question_type\":\"Vraagtype\",\"mode_multiple_choice\":\"Meerkeuze\",\"mode_typing\":\"Tekstinvoer\",\"mode_typing_short\":\"Invoer\",\"direction\":\"Richting\",\"direction_forward\":\"🇺🇸 English → 🇳🇱 Nederlands\",\"direction_reverse\":\"🇳🇱 Nederlands → 🇺🇸 English\",\"select_level\":\"Niveau kiezen\",\"start_training\":\"Training starten\",\"count_label\":\"Aantal kaarten\",\"all_cards\":\"Alles\",\"in_deck\":\"in stapel\",\"view_cards\":\"Kaarten\",\"view_list\":\"Lijst\",\"card_word\":\"Kaart\",\"keyboard_hint_study\":\"← → Pijltjestoetsen om te navigeren · A om te luisteren\",\"example_single_heading\":\"Voorbeeld\",\"no_example\":\"Geen voorbeeld beschikbaar.\",\"tags_label\":\"Tags:\",\"type_vocab\":\"Woordenschat\",\"type_verb\":\"Werkwoord\",\"type_phrase\":\"Zegswijze\",\"type_connector\":\"Voegwoord\",\"type_grammar\":\"Grammatica\",\"type_noun\":\"Zelfstandig naamwoord\",\"type_adjective\":\"Bijvoeglijk naamwoord\",\"type_expression\":\"Uitdrukking\",\"plural_prefix\":\"Pl. {plural}\",\"plural_only\":\"alleen meervoud\",\"word_order_heading\":\"Woordvolgorde\",\"structure_heading\":\"Structuur\",\"training_title\":\"Training\",\"all_levels\":\"Alle niveaus\",\"type_placeholder\":\"Schrijf het woord in het Nederlands...\",\"check_button\":\"Controleren\",\"keyboard_hint_train\":\"Enter / Spatie = bevestigen · A = Luisteren\",\"audio_title\":\"Luisteren (A)\",\"training_finished\":\"Training voltooid!\",\"missed_heading\":\"Fout beantwoord — om te herhalen\",\"retry_missed\":\"Fouten opnieuw doen\",\"new_config\":\"Nieuwe configuratie\",\"plural_hint\":\"Pl: {plural}\",\"results_pct\":\"{pct}% juist\",\"result_excellent\":\"Uitstekend! Je beheerst dit niveau volledig.\",\"result_good\":\"Zeer goed! Nog een beetje oefenen en je hebt het onder de knie!\",\"result_ok\":\"Goed begin! Herhaal de kaarten nog een keer.\",\"result_retry\":\"Geen probleem — oefening baart kunst!\",\"no_cards_title\":\"Geen kaarten gevonden\",\"no_cards_hint\":\"Kies een ander niveau of een ander deck.\"},\"answer_normalisation\":{\"strip_leading_words\":[\"de\",\"het\",\"een\",\"der\",\"des\",\"den\"],\"alt_spellings\":{\"ij\":\"y\",\"ë\":\"e\",\"ï\":\"i\"}}}";
+
+  /**
+   * Client-side card renderer.
+   * Uses the universal card-renderer logic inline (no imports in Astro is:inline).
+   */
+
+  // ── Parse data ──────────────────────────────────────────────────────────
+  const card   = JSON.parse(cardJson);
+  const config = JSON.parse(langConfigJson);
+
+  // ── Helpers ─────────────────────────────────────────────────────────────
+  // Articles come from the language config (keys of article_colours), never hardcoded
+  const articleList = Object.keys(config.article_colours || {});
+  const articlePatterns = articleList.map(a => {
+    const esc = a.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    return esc.endsWith("'") ? esc : `${esc}\\s+`;
+  });
+  const articleRe = articlePatterns.length
+    ? new RegExp('^(?:' + articlePatterns.join('|') + ')', 'i')
+    : null;
+
+  function stripArticle(word) {
+    return articleRe ? (word || '').replace(articleRe, '').trim() : (word || '').trim();
+  }
+
+  function getArticleColour(article) {
+    if (!article || !config.article_colours) return 'var(--espresso)';
+    return config.article_colours[article.toLowerCase()] || 'var(--espresso)';
+  }
+
+  function getGenderLabel(gender) {
+    if (!gender) return '';
+    return (config.gender_labels || {})[gender] || gender;
+  }
+
+  const uiLabels = config.ui_labels || {};
+
+  function getTypeLabel() {
+    const tags = card.tags || [];
+    if (tags.includes('noun'))       return uiLabels.type_noun || 'Noun';
+    if (tags.includes('verb'))       return uiLabels.type_verb || 'Verb';
+    if (tags.includes('adjective'))  return uiLabels.type_adjective || 'Adjective';
+    if (tags.includes('expression')) return uiLabels.type_expression || 'Expression';
+    const map = {
+      vocab: uiLabels.type_vocab || 'Vocab',
+      verb: uiLabels.type_verb || 'Verb',
+      phrase: uiLabels.type_phrase || 'Phrase',
+      connector: uiLabels.type_connector || 'Connector',
+      grammar: uiLabels.type_grammar || 'Grammar'
+    };
+    return map[card.type] || uiLabels.card_word || 'Card';
+  }
+
+  function formatHighlight(text) {
+    if (!text) return '';
+    return String(text).replace(/\*(.*?)\*/g, '<span class="highlighter">$1</span>');
+  }
+
+  function getMetaFacts() {
+    const meta = card.metadata || {};
+    const facts = [];
+    for (const field of (config.noun_metadata_fields || [])) {
+      const raw = meta[field.key] || card[field.key];
+      if (!raw || raw === '~') continue;
+      let value = String(raw);
+      let colour;
+      if (field.render === 'gender_label') value = getGenderLabel(raw);
+      else if (field.render === 'article_badge') colour = getArticleColour(raw);
+      facts.push({ label: field.label, value, colour });
+    }
+    return facts;
+  }
+
+  // ── Render ──────────────────────────────────────────────────────────────
+  const container = document.querySelector('.learning-card');
+  if (!container) { console.error('LearningCard: container not found'); }
+
+  function sel(cls) { return container?.querySelector(cls); }
+
+  // Type badge
+  sel('.lc-type-badge').textContent = getTypeLabel();
+
+  // Level badge
+  sel('.lc-level-badge').textContent = card.level || '';
+
+  // Article
+  const article = card.metadata?.article;
+  const articleWrap = sel('.lc-article-wrap');
+  const articleEl   = sel('.lc-article');
+  if (article && card.tags?.includes('noun') && !card.metadata?.plural_only) {
+    articleEl.textContent  = article;
+    articleEl.style.color  = getArticleColour(article);
+    articleWrap.style.display = '';
+  } else {
+    articleWrap.style.display = 'none';
+  }
+
+  // Word
+  sel('.lc-word').textContent = stripArticle(card.target);
+
+  // Translation
+  sel('.lc-translation').textContent = card.source || '';
+
+  // Plural / forms
+  const plural = card.metadata?.plural;
+  const formsEl = sel('.lc-forms');
+  const prefix = uiLabels.plural_prefix || 'Pl.';
+  const pluralOnly = uiLabels.plural_only || 'Plural only';
+  if (plural && !card.metadata?.plural_only) formsEl.textContent = `${prefix} ${plural}`;
+  else if (card.metadata?.plural_only) formsEl.textContent = pluralOnly;
+  else formsEl.textContent = '';
+
+  // Meta grid
+  const metaGrid = sel('.lc-meta-grid');
+  const facts = getMetaFacts();
+  if (facts.length) {
+    const cols = Math.min(facts.length, 4);
+    metaGrid.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
+    metaGrid.innerHTML = facts.map((f, i) => `
+      <div class="px-5 py-4 ${i < facts.length - 1 ? 'border-r' : ''}" style="border-color:var(--border);">
+        <p class="text-[9px] font-bold uppercase tracking-widest mb-1" style="color:var(--text-muted);">${f.label}</p>
+        <p class="text-sm font-bold" style="color:${f.colour || 'var(--text)'};">${f.value}</p>
+      </div>
+    `).join('');
+  } else {
+    metaGrid.style.display = 'none';
+  }
+
+  // Grammar note
+  const grammarWrap = sel('.lc-grammar-wrap');
+  if (card.grammar_note) {
+    sel('.lc-grammar-text').innerHTML = formatHighlight(card.grammar_note);
+    grammarWrap.classList.remove('hidden');
+  }
+
+  // Grammar label from config
+  const uiLabels = config.ui_labels || {};
+  if (uiLabels.grammar_note_heading) sel('.lc-grammar-label').textContent = uiLabels.grammar_note_heading;
+  if (uiLabels.examples_heading)     sel('.lc-examples-label').textContent = uiLabels.examples_heading;
+  if (uiLabels.audio_button)         { const el = sel('.lc-audio-label'); if (el) el.textContent = uiLabels.audio_button; }
+
+  // ── Type-specific blocks ─────────────────────────────────────────────────
+
+  // Verb: conjugation table
+  const type = card.type || (card.tags?.includes('verb') ? 'verb' : 'vocab');
+  if (type === 'verb' && card.conjugations) {
+    const conjWrap  = sel('.lc-conjugation-wrap');
+    const conjInner = sel('.lc-conjugation-inner');
+    conjWrap.classList.remove('hidden');
+
+    let conjArray = [];
+    if (Array.isArray(card.conjugations)) {
+      conjArray = card.conjugations;
+    } else {
+      for (const [tense, forms] of Object.entries(card.conjugations)) {
+        if (typeof forms === 'string') {
+          conjArray.push({ tense, stringForm: forms });
+        } else {
+          const formsArr = Object.entries(forms).map(([pronoun, form]) => ({ pronoun, form }));
+          conjArray.push({ tense, forms: formsArr });
+        }
+      }
+    }
+
+    const tensesToRender = config.verb_tenses || conjArray.map(t => t.tense);
+
+    const stringTenses = [];
+    const tableTenses = [];
+
+    tensesToRender.forEach(tense => {
+      const t = conjArray.find(c => c.tense === tense);
+      if (!t) return;
+      if (t.stringForm) stringTenses.push(t);
+      else tableTenses.push(t);
+    });
+
+    let html = '';
+
+    // Render simple string forms (e.g. Perfekt, Partizip II) as pill-like tags at the top
+    if (stringTenses.length > 0) {
+      html += `
+        <div class="flex flex-wrap gap-3 mb-6">
+          ${stringTenses.map(t => `
+            <div class="rounded-xl border px-4 py-2.5 flex items-center gap-3 shadow-sm" style="border-color:var(--border); background-color:var(--bg);">
+              <span class="text-[10px] font-bold uppercase tracking-widest opacity-80" style="color:var(--espresso);">${t.tense.replace(/_/g, ' ')}</span>
+              <span class="font-bold text-sm" style="color:var(--text);">${t.stringForm}</span>
+            </div>
+          `).join('')}
+        </div>
+      `;
+    }
+
+    // Render full tables (e.g. Präsens, Präteritum) as a unified table
+    if (tableTenses.length > 0) {
+      // Collect all pronouns from the first available table tense
+      const pronouns = tableTenses[0].forms.map(f => f.pronoun);
+
+      html += `
+        <div class="rounded-xl border overflow-x-auto shadow-sm w-full" style="border-color:var(--border);">
+          <table class="w-full text-sm text-left">
+            <thead>
+              <tr style="background-color:var(--bg); border-bottom: 1px solid var(--border);">
+                <th class="px-4 py-3 font-bold uppercase tracking-widest text-[10px] w-[1%]" style="color:var(--espresso); border-right: 1px solid var(--border);"></th>
+                ${tableTenses.map(t => `
+                  <th class="px-4 py-3 font-bold uppercase tracking-widest text-[10px]" style="color:var(--espresso);">${t.tense.replace(/_/g, ' ')}</th>
+                `).join('')}
+              </tr>
+            </thead>
+            <tbody>
+              ${pronouns.map((pronoun, ri) => `
+                <tr class="${ri < pronouns.length - 1 ? 'border-b' : ''}" style="border-color:var(--border);">
+                  <td class="px-4 py-3 font-bold text-xs whitespace-nowrap" style="color:var(--espresso); background-color:var(--bg); border-right: 1px solid var(--border);">${pronoun}</td>
+                  ${tableTenses.map(t => {
+                    const formObj = t.forms.find(f => f.pronoun === pronoun);
+                    return `<td class="px-4 py-3 font-semibold whitespace-nowrap" style="color:var(--text);">${formObj ? formObj.form : '-'}</td>`;
+                  }).join('')}
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+        </div>
+      `;
+    }
+
+    conjInner.innerHTML = html;
+  }
+
+  // Connector: word order block
+  if (type === 'connector' && card.word_order) {
+    const woWrap = sel('.lc-wordorder-wrap');
+    sel('.lc-wordorder-text').textContent = card.word_order;
+    woWrap.classList.remove('hidden');
+  }
+
+  // Phrase: preposition rule block
+  if (type === 'phrase' && card.clause_type) {
+    const phraseWrap = sel('.lc-phrase-wrap');
+    sel('.lc-phrase-rule').textContent = card.clause_type;
+    phraseWrap.classList.remove('hidden');
+  }
+
+  // ── Examples ─────────────────────────────────────────────────────────────
+  const examplesEl = sel('.lc-examples');
+  const rawExamples = card.examples || [];
+
+  if (rawExamples.length) {
+    examplesEl.innerHTML = rawExamples.map(e => `
+        <div class="rounded-2xl border overflow-hidden" style="border-color:var(--border);">
+          <div class="px-4 py-3" style="background-color:var(--bg);">
+            <p class="font-semibold leading-snug mb-1" style="color:var(--text);">${formatHighlight(e.target)}</p>
+            <p class="text-sm italic" style="color:var(--text-muted);">${formatHighlight(e.source || '')}</p>
+          </div>
+          ${e.note ? `<div class="px-4 py-2 border-t" style="border-color:var(--border);">
+            <p class="text-[10px] font-bold font-mono" style="color:var(--espresso);">📐 ${e.note}</p>
+          </div>` : ''}
+        </div>
+      `).join('');
+  } else {
+    examplesEl.innerHTML = `<p class="text-sm italic" style="color:var(--text-muted);">${uiLabels.no_example || ''}</p>`;
+  }
+
+  // ── Tags ─────────────────────────────────────────────────────────────────
+  const tagsEl = sel('.lc-tags');
+  tagsEl.innerHTML = (card.tags || []).map(t => `
+    <span class="text-[10px] font-bold px-2 py-0.5 rounded-md border uppercase" style="border-color:var(--border); color:var(--text-muted); background-color:var(--bg);">${t}</span>
+  `).join('');
+
+  // ── Audio button ─────────────────────────────────────────────────────────
+  sel('.lc-audio-btn')?.addEventListener('click', () => {
+    if (window.LoungeAudioEngine) {
+      window.LoungeAudioEngine.speak(card.target || '', config.speech_lang, 0.85);
+    }
+  });
+})();</script></div><!-- ── Navigation ───────────────────────────── --><div class="flex items-center justify-between mt-8 gap-4" data-astro-cid-5tabbh6g><button id="btn-prev" disabled class="flex items-center gap-2 px-6 py-3 rounded-2xl border font-bold text-sm transition-all hover:opacity-70 active:scale-95 disabled:opacity-30 disabled:cursor-not-allowed" style="border-color:var(--border); color:var(--text); background-color:var(--card);" data-astro-cid-5tabbh6g><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><path d="m15 18-6-6 6-6" data-astro-cid-5tabbh6g></path></svg>Terug</button><!-- Dot navigation --><div id="dot-nav" class="flex items-center gap-1.5 flex-wrap justify-center max-w-xs overflow-hidden" style="max-height:2rem;" data-astro-cid-5tabbh6g><!-- populated by JS --></div><button id="btn-next" class="flex items-center gap-2 px-6 py-3 rounded-2xl font-bold text-sm transition-all hover:opacity-80 active:scale-95" style="background-color:var(--espresso); color:#F5F2EB;" data-astro-cid-5tabbh6g>Volgende<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><path d="m9 18 6-6-6-6" data-astro-cid-5tabbh6g></path></svg></button></div><!-- Keyboard hint --><p class="text-center text-xs font-medium mt-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>← → Pijltjestoetsen om te navigeren · A om te luisteren</p></div><!-- ── List View ───────────────────────────── --><div id="list-view-wrap" class="hidden space-y-6" data-astro-cid-5tabbh6g><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>kopen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to buy</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammaticanotitie</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Strong verb, takes hebben.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Voorbeeld</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Ik koop een nieuwe jas in de stad.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>I buy a new coat in the city.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>betalen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to pay</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammaticanotitie</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Weak verb, takes hebben.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Voorbeeld</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Kun je met pin betalen?</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Can you pay by card?</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>kosten</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to cost</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammaticanotitie</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Weak verb, takes hebben. Usually used with third person.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Voorbeeld</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Hoeveel kost deze rode trui?</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>How much does this red sweater cost?</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>pinnen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to pay by card</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammaticanotitie</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Weak verb, takes hebben.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Voorbeeld</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Kan ik hier pinnen?</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Can I pay by card here?</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>passen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to fit / to try on</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammaticanotitie</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Weak verb, takes hebben.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Voorbeeld</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Waar is het hokje om te passen?</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Where is the fitting room to try things on?</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>verkopen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to sell</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammaticanotitie</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Strong verb, takes hebben.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Voorbeeld</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Die winkel verkoopt lekkere kaas.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>That shop sells tasty cheese.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>zoeken</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to look for / to search</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammaticanotitie</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Weak verb, takes hebben.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Voorbeeld</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Zoek je iets speciaals in de winkel?</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Are you looking for something special in the shop?</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>kijken</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to look</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammaticanotitie</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Strong verb, takes hebben.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Voorbeeld</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Ik wil alleen even rondkijken.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>I just want to look around for a bit.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>uitkiezen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to choose / to select</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammaticanotitie</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Separable strong verb, takes hebben.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Voorbeeld</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Kies jij een mooie taart uit?</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Are you choosing a nice cake?</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>afrekenen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to check out / to pay the bill</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammaticanotitie</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Separable weak verb, takes hebben.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Voorbeeld</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Waar kan ik afrekenen?</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Where can I check out/pay?</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>sparen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to save money</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammaticanotitie</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Weak verb, takes hebben.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Voorbeeld</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Ik spaar voor een nieuwe laptop.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>I am saving money for a new laptop.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>uitgeven</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to spend (money)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammaticanotitie</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Separable strong verb, takes hebben.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Voorbeeld</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Ik wil niet te veel geld uitgeven.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>I do not want to spend too much money.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>lenen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to borrow / to lend</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammaticanotitie</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Weak verb, takes hebben.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Voorbeeld</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Kan ik geld lenen van jou?</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Can I borrow money from you?</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>ruilen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to exchange / to swap</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammaticanotitie</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Weak verb, takes hebben.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Voorbeeld</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Kan ik deze trui ruilen voor een grotere maat?</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Can I exchange this sweater for a larger size?</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>bestellen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to order</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammaticanotitie</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Weak verb, takes hebben.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Voorbeeld</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Ik bestel vaak kleren online.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>I often order clothes online.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>kosten</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to cost</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammaticanotitie</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Weak verb, takes hebben. Duplicate semantic coverage for variety in practice.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Voorbeeld</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Wat kosten deze tomaten per kilo?</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>What do these tomatoes cost per kilo?</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>ontvangen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to receive</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammaticanotitie</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Strong verb, takes hebben.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Voorbeeld</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Heb je het pakketje al ontvangen?</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Did you already receive the package?</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>aanbieden</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to offer</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammaticanotitie</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Separable strong verb, takes hebben.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Voorbeeld</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>De winkel biedt een leuke korting aan.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The shop offers a nice discount.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>krijgen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to get / to receive</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammaticanotitie</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Strong verb, takes hebben.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Voorbeeld</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Krijg ik hier ook tasjes bij?</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Do I also get bags with this?</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>meenemen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to take along / to bring</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammaticanotitie</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Separable strong verb, takes hebben.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Voorbeeld</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Neem jij een eigen tas mee?</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Are you taking your own bag along?</p></div></div></div></div></div></div><!-- ══ TRAIN PANEL ════════════════════════════ --><div id="train-panel" class="hidden space-y-10" data-astro-cid-5tabbh6g><div class="cafe-card rounded-3xl p-8 border shadow-lg max-w-xl mx-auto" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="text-center mb-8" data-astro-cid-5tabbh6g><h2 class="text-2xl font-extrabold font-outfit mb-2" style="color:var(--text);" data-astro-cid-5tabbh6g>Training instellen</h2><p class="text-sm font-medium" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Configureer je leersessie.</p></div><form action="/languagelounge/en-nl/training/verbs/train/" method="GET" class="space-y-8" id="deck-train-form" data-astro-cid-5tabbh6g><input type="hidden" name="level" value="a2" data-astro-cid-5tabbh6g><input type="hidden" name="deck" value="verbs-a2-money_shopping" data-astro-cid-5tabbh6g><!-- Mode selection --><div class="space-y-3" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold tracking-widest uppercase" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Vraagtype</p><div class="grid grid-cols-2 gap-3" data-astro-cid-5tabbh6g><button type="button" data-group="mode" data-value="mc" class="sel-opt sel-active" data-astro-cid-5tabbh6g><span class="text-xl mb-1 block" data-astro-cid-5tabbh6g>🔘</span><span class="text-sm font-bold" data-astro-cid-5tabbh6g>Meerkeuze</span></button><button type="button" data-group="mode" data-value="type" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-xl mb-1 block" data-astro-cid-5tabbh6g>⌨️</span><span class="text-sm font-bold" data-astro-cid-5tabbh6g>Tekstinvoer</span></button></div><input type="hidden" name="mode" id="mode-hidden" value="mc" data-astro-cid-5tabbh6g></div><!-- Direction selection --><div class="space-y-3" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold tracking-widest uppercase" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Richting</p><div class="grid grid-cols-2 gap-3" data-astro-cid-5tabbh6g><button type="button" data-group="dir" data-value="en-nl" class="sel-opt sel-active" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>🇺🇸 English → 🇳🇱 Nederlands</span></button><button type="button" data-group="dir" data-value="nl-en" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>🇳🇱 Nederlands → 🇺🇸 English</span></button></div><input type="hidden" name="dir" id="dir-hidden" value="en-nl" data-astro-cid-5tabbh6g></div><!-- Count Selection --><div class="space-y-3" data-astro-cid-5tabbh6g><div class="flex justify-between items-end" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold tracking-widest uppercase" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Aantal kaarten</p><span class="text-xs font-bold" style="color:var(--espresso);" data-astro-cid-5tabbh6g>20 kaarten in stapel</span></div><div class="grid grid-cols-4 gap-3" data-astro-cid-5tabbh6g><button type="button" data-group="count" data-value="30" class="sel-opt sel-active" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>30</span></button><button type="button" data-group="count" data-value="60" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>60</span></button><button type="button" data-group="count" data-value="90" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>90</span></button><button type="button" data-group="count" data-value="1000" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>Alles</span></button></div><input type="hidden" name="count" id="count-hidden" value="30" data-astro-cid-5tabbh6g></div><button type="submit" class="w-full py-4 rounded-xl font-bold text-base transition-all hover:opacity-90 mt-4 shadow-md active:scale-[0.98]" style="background-color:var(--espresso); color:#F5F2EB;" data-astro-cid-5tabbh6g>Training starten &rarr;</button></form></div></div></div></main><footer class="mt-auto border-t py-8" style="background-color:var(--bg);border-color:var(--border);"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-medium" style="color:var(--text-muted);"><div>&copy; 2025 - 2026 Small Talk Café Podcasts. All rights reserved.</div><div class="flex gap-4">Made in Bayern ❤️ Los Geht's!</div></div></footer><!-- Minimal script for Theme and Dropdown toggle --><script>
+      // ── Theme ──────────────────────────────────────
+      function applyTheme(dark) {
+        if (dark) {
+          document.documentElement.classList.add('dark');
+          localStorage.setItem('wortschatz_theme', 'dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+          localStorage.setItem('wortschatz_theme', 'light');
+        }
+        const icon = document.getElementById('theme-icon');
+        const label = document.getElementById('theme-label');
+        if (icon) icon.textContent = dark ? '🌙' : '☀️';
+        if (label) label.textContent = dark ? 'Dark' : 'Light';
+      }
+
+      const isDark = document.documentElement.classList.contains('dark');
+      applyTheme(isDark);
+
+      document.getElementById('theme-toggle')?.addEventListener('click', () => {
+        const nowDark = !document.documentElement.classList.contains('dark');
+        applyTheme(nowDark);
+      });
+
+      // ── Dropdown Toggle ──────────────────────────
+      const langBtn = document.getElementById('lang-btn');
+      const langMenu = document.getElementById('lang-menu');
+
+      langBtn?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        langMenu?.classList.toggle('hidden');
+      });
+
+      document.addEventListener('click', () => {
+        langMenu?.classList.add('hidden');
+      });
+    </script></body></html><script type="module" src="/languagelounge/_astro/_deckId_.astro_astro_type_script_index_0_lang.DwXABuW8.js"></script><script>(function(){const cardsJson = "[{\"id\":\"verbs-a2-money_shopping-001\",\"target\":\"kopen\",\"source\":\"to buy\",\"type\":\"irregular\",\"cefr\":\"A2\",\"grammar_note\":\"Strong verb, takes hebben.\",\"examples\":[{\"target\":\"Ik koop een nieuwe jas in de stad.\",\"source\":\"I buy a new coat in the city.\"},{\"target\":\"Koop jij die dure schoenen?\",\"source\":\"Are you buying those expensive shoes?\"}],\"conjugations\":{\"tegenwoordige_tijd\":{\"ik\":\"ik koop\",\"jij/je\":\"jij koop\",\"hij/zij/het\":\"hij/zij koopt\",\"wij/we\":\"wij kopen\",\"jullie\":\"jullie kopen\",\"zij/ze\":\"zij kopen\"},\"verleden_tijd\":{\"ik\":\"ik kocht\",\"jij/je\":\"jij kocht\",\"hij/zij/het\":\"hij/zij kocht\",\"wij/we\":\"wij kochten\",\"jullie\":\"jullie kochten\",\"zij/ze\":\"zij kochten\"},\"toekomende_tijd\":{\"ik\":\"ik zal kopen\",\"jij/je\":\"jij zult kopen\",\"hij/zij/het\":\"hij/zij zal kopen\",\"wij/we\":\"wij zullen kopen\",\"jullie\":\"jullie zullen kopen\",\"zij/ze\":\"zij zullen kopen\"},\"voltooide_tijd\":\"heeft gekocht\",\"voltooid_deelwoord\":\"gekocht\"},\"tags\":[\"verb\",\"a2\"],\"metadata\":{}},{\"id\":\"verbs-a2-money_shopping-002\",\"target\":\"betalen\",\"source\":\"to pay\",\"type\":\"regular\",\"cefr\":\"A2\",\"grammar_note\":\"Weak verb, takes hebben.\",\"examples\":[{\"target\":\"Kun je met pin betalen?\",\"source\":\"Can you pay by card?\"},{\"target\":\"Ik betaal de rekening voor het eten.\",\"source\":\"I pay the bill for the food.\"}],\"conjugations\":{\"tegenwoordige_tijd\":{\"ik\":\"ik betaal\",\"jij/je\":\"jij betaalt\",\"hij/zij/het\":\"hij/zij betaalt\",\"wij/we\":\"wij betalen\",\"jullie\":\"jullie betalen\",\"zij/ze\":\"zij betalen\"},\"verleden_tijd\":{\"ik\":\"ik betaalde\",\"jij/je\":\"jij betaalde\",\"hij/zij/het\":\"hij/zij betaalde\",\"wij/we\":\"wij betaalden\",\"jullie\":\"jullie betaalden\",\"zij/ze\":\"zij betaalden\"},\"toekomende_tijd\":{\"ik\":\"ik zal betalen\",\"jij/je\":\"jij zult betalen\",\"hij/zij/het\":\"hij/zij zal betalen\",\"wij/we\":\"wij zullen betalen\",\"jullie\":\"jullie zullen betalen\",\"zij/ze\":\"zij zullen betalen\"},\"voltooide_tijd\":\"heeft betaald\",\"voltooid_deelwoord\":\"betaald\"},\"tags\":[\"verb\",\"a2\"],\"metadata\":{}},{\"id\":\"verbs-a2-money_shopping-003\",\"target\":\"kosten\",\"source\":\"to cost\",\"type\":\"regular\",\"cefr\":\"A2\",\"grammar_note\":\"Weak verb, takes hebben. Usually used with third person.\",\"examples\":[{\"target\":\"Hoeveel kost deze rode trui?\",\"source\":\"How much does this red sweater cost?\"},{\"target\":\"Die broek kost vijftig euro.\",\"source\":\"Those trousers cost fifty euros.\"}],\"conjugations\":{\"tegenwoordige_tijd\":{\"ik\":\"ik kost\",\"jij/je\":\"jij kost\",\"hij/zij/het\":\"hij/zij kost\",\"wij/we\":\"wij kosten\",\"jullie\":\"jullie kosten\",\"zij/ze\":\"zij kosten\"},\"verleden_tijd\":{\"ik\":\"ik kostte\",\"jij/je\":\"jij kostte\",\"hij/zij/het\":\"hij/zij kostte\",\"wij/we\":\"wij kostten\",\"jullie\":\"jullie kostten\",\"zij/ze\":\"zij kostten\"},\"toekomende_tijd\":{\"ik\":\"ik zal kosten\",\"jij/je\":\"jij zult kosten\",\"hij/zij/het\":\"hij/zij zal kosten\",\"wij/we\":\"wij zullen kosten\",\"jullie\":\"jullie zullen kosten\",\"zij/ze\":\"zij zullen kosten\"},\"voltooide_tijd\":\"heeft gekost\",\"voltooid_deelwoord\":\"gekost\"},\"tags\":[\"verb\",\"a2\"],\"metadata\":{}},{\"id\":\"verbs-a2-money_shopping-004\",\"target\":\"pinnen\",\"source\":\"to pay by card\",\"type\":\"regular\",\"cefr\":\"A2\",\"grammar_note\":\"Weak verb, takes hebben.\",\"examples\":[{\"target\":\"Kan ik hier pinnen?\",\"source\":\"Can I pay by card here?\"},{\"target\":\"Veel mensen pinnen in de supermarkt.\",\"source\":\"Many people pay by card in the supermarket.\"}],\"conjugations\":{\"tegenwoordige_tijd\":{\"ik\":\"ik pin\",\"jij/je\":\"jij pint\",\"hij/zij/het\":\"hij/zij pint\",\"wij/we\":\"wij pinnen\",\"jullie\":\"jullie pinnen\",\"zij/ze\":\"zij pinnen\"},\"verleden_tijd\":{\"ik\":\"ik pinde\",\"jij/je\":\"jij pinde\",\"hij/zij/het\":\"hij/zij pinde\",\"wij/we\":\"wij pinden\",\"jullie\":\"jullie pinden\",\"zij/ze\":\"zij pinden\"},\"toekomende_tijd\":{\"ik\":\"ik zal pinnen\",\"jij/je\":\"jij zult pinnen\",\"hij/zij/het\":\"hij/zij zal pinnen\",\"wij/we\":\"wij zullen pinnen\",\"jullie\":\"jullie zullen pinnen\",\"zij/ze\":\"zij zullen pinnen\"},\"voltooide_tijd\":\"heeft gepind\",\"voltooid_deelwoord\":\"gepind\"},\"tags\":[\"verb\",\"a2\"],\"metadata\":{}},{\"id\":\"verbs-a2-money_shopping-005\",\"target\":\"passen\",\"source\":\"to fit / to try on\",\"type\":\"regular\",\"cefr\":\"A2\",\"grammar_note\":\"Weak verb, takes hebben.\",\"examples\":[{\"target\":\"Waar is het hokje om te passen?\",\"source\":\"Where is the fitting room to try things on?\"},{\"target\":\"Deze schoenen passen mij heel goed.\",\"source\":\"These shoes fit me very well.\"}],\"conjugations\":{\"tegenwoordige_tijd\":{\"ik\":\"ik pas\",\"jij/je\":\"jij past\",\"hij/zij/het\":\"hij/zij past\",\"wij/we\":\"wij passen\",\"jullie\":\"jullie passen\",\"zij/ze\":\"zij passen\"},\"verleden_tijd\":{\"ik\":\"ik paste\",\"jij/je\":\"jij paste\",\"hij/zij/het\":\"hij/zij paste\",\"wij/we\":\"wij pasten\",\"jullie\":\"jullie pasten\",\"zij/ze\":\"zij pasten\"},\"toekomende_tijd\":{\"ik\":\"ik zal passen\",\"jij/je\":\"jij zult passen\",\"hij/zij/het\":\"hij/zij zal passen\",\"wij/we\":\"wij zullen passen\",\"jullie\":\"jullie zullen passen\",\"zij/ze\":\"zij zullen passen\"},\"voltooide_tijd\":\"heeft gepast\",\"voltooid_deelwoord\":\"gepast\"},\"tags\":[\"verb\",\"a2\"],\"metadata\":{}},{\"id\":\"verbs-a2-money_shopping-006\",\"target\":\"verkopen\",\"source\":\"to sell\",\"type\":\"irregular\",\"cefr\":\"A2\",\"grammar_note\":\"Strong verb, takes hebben.\",\"examples\":[{\"target\":\"Die winkel verkoopt lekkere kaas.\",\"source\":\"That shop sells tasty cheese.\"},{\"target\":\"Ik wil mijn oude fiets verkopen.\",\"source\":\"I want to sell my old bicycle.\"}],\"conjugations\":{\"tegenwoordige_tijd\":{\"ik\":\"ik verkoop\",\"jij/je\":\"jij verkoopt\",\"hij/zij/het\":\"hij/zij verkoopt\",\"wij/we\":\"wij verkopen\",\"jullie\":\"jullie verkopen\",\"zij/ze\":\"zij verkopen\"},\"verleden_tijd\":{\"ik\":\"ik verkocht\",\"jij/je\":\"jij verkocht\",\"hij/zij/het\":\"hij/zij verkocht\",\"wij/we\":\"wij verkochten\",\"jullie\":\"jullie verkochten\",\"zij/ze\":\"zij verkochten\"},\"toekomende_tijd\":{\"ik\":\"ik zal verkopen\",\"jij/je\":\"jij zult verkopen\",\"hij/zij/het\":\"hij/zij zal verkopen\",\"wij/we\":\"wij zullen verkopen\",\"jullie\":\"jullie zullen verkopen\",\"zij/ze\":\"zij zullen verkopen\"},\"voltooide_tijd\":\"heeft verkocht\",\"voltooid_deelwoord\":\"verkocht\"},\"tags\":[\"verb\",\"a2\"],\"metadata\":{}},{\"id\":\"verbs-a2-money_shopping-007\",\"target\":\"zoeken\",\"source\":\"to look for / to search\",\"type\":\"regular\",\"cefr\":\"A2\",\"grammar_note\":\"Weak verb, takes hebben.\",\"examples\":[{\"target\":\"Zoek je iets speciaals in de winkel?\",\"source\":\"Are you looking for something special in the shop?\"},{\"target\":\"Ik zoek een zwarte broek.\",\"source\":\"I am looking for black trousers.\"}],\"conjugations\":{\"tegenwoordige_tijd\":{\"ik\":\"ik zoek\",\"jij/je\":\"jij zoekt\",\"hij/zij/het\":\"hij/zij zoekt\",\"wij/we\":\"wij zoeken\",\"jullie\":\"jullie zoeken\",\"zij/ze\":\"zij zoeken\"},\"verleden_tijd\":{\"ik\":\"ik zocht\",\"jij/je\":\"jij zocht\",\"hij/zij/het\":\"hij/zij zocht\",\"wij/we\":\"wij zochten\",\"jullie\":\"jullie zochten\",\"zij/ze\":\"zij zochten\"},\"toekomende_tijd\":{\"ik\":\"ik zal zoeken\",\"jij/je\":\"jij zult zoeken\",\"hij/zij/het\":\"hij/zij zal zoeken\",\"wij/we\":\"wij zullen zoeken\",\"jullie\":\"jullie zullen zoeken\",\"zij/ze\":\"zij zullen zoeken\"},\"voltooide_tijd\":\"heeft gezocht\",\"voltooid_deelwoord\":\"gezocht\"},\"tags\":[\"verb\",\"a2\"],\"metadata\":{}},{\"id\":\"verbs-a2-money_shopping-008\",\"target\":\"kijken\",\"source\":\"to look\",\"type\":\"irregular\",\"cefr\":\"A2\",\"grammar_note\":\"Strong verb, takes hebben.\",\"examples\":[{\"target\":\"Ik wil alleen even rondkijken.\",\"source\":\"I just want to look around for a bit.\"},{\"target\":\"Kijk naar de prijzen op het schap.\",\"source\":\"Look at the prices on the shelf.\"}],\"conjugations\":{\"tegenwoordige_tijd\":{\"ik\":\"ik kijk\",\"jij/je\":\"jij kijkt\",\"hij/zij/het\":\"hij/zij kijkt\",\"wij/we\":\"wij kijken\",\"jullie\":\"jullie kijken\",\"zij/ze\":\"zij kijken\"},\"verleden_tijd\":{\"ik\":\"ik keek\",\"jij/je\":\"jij keek\",\"hij/zij/het\":\"hij/zij keek\",\"wij/we\":\"wij keken\",\"jullie\":\"jullie keken\",\"zij/ze\":\"zij keken\"},\"toekomende_tijd\":{\"ik\":\"ik zal kijken\",\"jij/je\":\"jij zult kijken\",\"hij/zij/het\":\"hij/zij zal kijken\",\"wij/we\":\"wij zullen kijken\",\"jullie\":\"jullie zullen kijken\",\"zij/ze\":\"zij zullen kijken\"},\"voltooide_tijd\":\"heeft gekeken\",\"voltooid_deelwoord\":\"gekeken\"},\"tags\":[\"verb\",\"a2\"],\"metadata\":{}},{\"id\":\"verbs-a2-money_shopping-009\",\"target\":\"uitkiezen\",\"source\":\"to choose / to select\",\"type\":\"separable\",\"cefr\":\"A2\",\"grammar_note\":\"Separable strong verb, takes hebben.\",\"examples\":[{\"target\":\"Kies jij een mooie taart uit?\",\"source\":\"Are you choosing a nice cake?\"},{\"target\":\"Ik kies een rode jas uit.\",\"source\":\"I am choosing a red coat.\"}],\"conjugations\":{\"tegenwoordige_tijd\":{\"ik\":\"ik kies uit\",\"jij/je\":\"jij kiest uit\",\"hij/zij/het\":\"hij/zij kiest uit\",\"wij/we\":\"wij kiezen uit\",\"jullie\":\"jullie kiezen uit\",\"zij/ze\":\"zij kiezen uit\"},\"verleden_tijd\":{\"ik\":\"ik koos uit\",\"jij/je\":\"jij koos uit\",\"hij/zij/het\":\"hij/zij koos uit\",\"wij/we\":\"wij kozen uit\",\"jullie\":\"jullie kozen uit\",\"zij/ze\":\"zij kozen uit\"},\"toekomende_tijd\":{\"ik\":\"ik zal uitkiezen\",\"jij/je\":\"jij zult uitkiezen\",\"hij/zij/het\":\"hij/zij zal uitkiezen\",\"wij/we\":\"wij zullen uitkiezen\",\"jullie\":\"jullie zullen uitkiezen\",\"zij/ze\":\"zij zullen uitkiezen\"},\"voltooide_tijd\":\"heeft uitgekozen\",\"voltooid_deelwoord\":\"uitgekozen\"},\"tags\":[\"verb\",\"a2\"],\"metadata\":{}},{\"id\":\"verbs-a2-money_shopping-010\",\"target\":\"afrekenen\",\"source\":\"to check out / to pay the bill\",\"type\":\"separable\",\"cefr\":\"A2\",\"grammar_note\":\"Separable weak verb, takes hebben.\",\"examples\":[{\"target\":\"Waar kan ik afrekenen?\",\"source\":\"Where can I check out/pay?\"},{\"target\":\"Ik reken de boodschappen af bij de kassa.\",\"source\":\"I pay for the groceries at the checkout.\"}],\"conjugations\":{\"tegenwoordige_tijd\":{\"ik\":\"ik reken af\",\"jij/je\":\"jij rekent af\",\"hij/zij/het\":\"hij/zij rekent af\",\"wij/we\":\"wij rekenen af\",\"jullie\":\"jullie rekenen af\",\"zij/ze\":\"zij rekenen af\"},\"verleden_tijd\":{\"ik\":\"ik rekende af\",\"jij/je\":\"jij rekende af\",\"hij/zij/het\":\"hij/zij rekende af\",\"wij/we\":\"wij rekenden af\",\"jullie\":\"jullie rekenden af\",\"zij/ze\":\"zij rekenden af\"},\"toekomende_tijd\":{\"ik\":\"ik zal afrekenen\",\"jij/je\":\"jij zult afrekenen\",\"hij/zij/het\":\"hij/zij zal afrekenen\",\"wij/we\":\"wij zullen afrekenen\",\"jullie\":\"jullie zullen afrekenen\",\"zij/ze\":\"zij zullen afrekenen\"},\"voltooide_tijd\":\"heeft afgerekend\",\"voltooid_deelwoord\":\"afgerekend\"},\"tags\":[\"verb\",\"a2\"],\"metadata\":{}},{\"id\":\"verbs-a2-money_shopping-011\",\"target\":\"sparen\",\"source\":\"to save money\",\"type\":\"regular\",\"cefr\":\"A2\",\"grammar_note\":\"Weak verb, takes hebben.\",\"examples\":[{\"target\":\"Ik spaar voor een nieuwe laptop.\",\"source\":\"I am saving money for a new laptop.\"},{\"target\":\"Spaar jij ook zegels bij de supermarkt?\",\"source\":\"Do you also save stamps at the supermarket?\"}],\"conjugations\":{\"tegenwoordige_tijd\":{\"ik\":\"ik spaar\",\"jij/je\":\"jij spaart\",\"hij/zij/het\":\"hij/zij spaart\",\"wij/we\":\"wij sparen\",\"jullie\":\"jullie sparen\",\"zij/ze\":\"zij sparen\"},\"verleden_tijd\":{\"ik\":\"ik spaarde\",\"jij/je\":\"jij spaarde\",\"hij/zij/het\":\"hij/zij spaarde\",\"wij/we\":\"wij spaarden\",\"jullie\":\"jullie spaarden\",\"zij/ze\":\"zij spaarden\"},\"toekomende_tijd\":{\"ik\":\"ik zal sparen\",\"jij/je\":\"jij zult sparen\",\"hij/zij/het\":\"hij/zij zal sparen\",\"wij/we\":\"wij zullen sparen\",\"jullie\":\"jullie zullen sparen\",\"zij/ze\":\"zij zullen sparen\"},\"voltooide_tijd\":\"heeft gespaard\",\"voltooid_deelwoord\":\"gespaard\"},\"tags\":[\"verb\",\"a2\"],\"metadata\":{}},{\"id\":\"verbs-a2-money_shopping-012\",\"target\":\"uitgeven\",\"source\":\"to spend (money)\",\"type\":\"separable\",\"cefr\":\"A2\",\"grammar_note\":\"Separable strong verb, takes hebben.\",\"examples\":[{\"target\":\"Ik wil niet te veel geld uitgeven.\",\"source\":\"I do not want to spend too much money.\"},{\"target\":\"Geef jij veel geld uit aan kleding?\",\"source\":\"Do you spend a lot of money on clothes?\"}],\"conjugations\":{\"tegenwoordige_tijd\":{\"ik\":\"ik geef uit\",\"jij/je\":\"jij geeft uit\",\"hij/zij/het\":\"hij/zij geeft uit\",\"wij/we\":\"wij geven uit\",\"jullie\":\"jullie geven uit\",\"zij/ze\":\"zij geven uit\"},\"verleden_tijd\":{\"ik\":\"ik gaf uit\",\"jij/je\":\"jij gaf uit\",\"hij/zij/het\":\"hij/zij gaf uit\",\"wij/we\":\"wij gaven uit\",\"jullie\":\"jullie gaven uit\",\"zij/ze\":\"zij gaven uit\"},\"toekomende_tijd\":{\"ik\":\"ik zal uitgeven\",\"jij/je\":\"jij zult uitgeven\",\"hij/zij/het\":\"hij/zij zal uitgeven\",\"wij/we\":\"wij zullen uitgeven\",\"jullie\":\"jullie zullen uitgeven\",\"zij/ze\":\"zij zullen uitgeven\"},\"voltooide_tijd\":\"heeft uitgegeven\",\"voltooid_deelwoord\":\"uitgegeven\"},\"tags\":[\"verb\",\"a2\"],\"metadata\":{}},{\"id\":\"verbs-a2-money_shopping-013\",\"target\":\"lenen\",\"source\":\"to borrow / to lend\",\"type\":\"regular\",\"cefr\":\"A2\",\"grammar_note\":\"Weak verb, takes hebben.\",\"examples\":[{\"target\":\"Kan ik geld lenen van jou?\",\"source\":\"Can I borrow money from you?\"},{\"target\":\"De bank leent geld aan mensen.\",\"source\":\"The bank lends money to people.\"}],\"conjugations\":{\"tegenwoordige_tijd\":{\"ik\":\"ik leen\",\"jij/je\":\"jij leent\",\"hij/zij/het\":\"hij/zij leent\",\"wij/we\":\"wij lenen\",\"jullie\":\"jullie lenen\",\"zij/ze\":\"zij lenen\"},\"verleden_tijd\":{\"ik\":\"ik leende\",\"jij/je\":\"jij leende\",\"hij/zij/het\":\"hij/zij leende\",\"wij/we\":\"wij leenden\",\"jullie\":\"jullie leenden\",\"zij/ze\":\"zij leenden\"},\"toekomende_tijd\":{\"ik\":\"ik zal lenen\",\"jij/je\":\"jij zult lenen\",\"hij/zij/het\":\"hij/zij zal lenen\",\"wij/we\":\"wij zullen lenen\",\"jullie\":\"jullie zullen lenen\",\"zij/ze\":\"zij zullen lenen\"},\"voltooide_tijd\":\"heeft geleend\",\"voltooid_deelwoord\":\"geleend\"},\"tags\":[\"verb\",\"a2\"],\"metadata\":{}},{\"id\":\"verbs-a2-money_shopping-014\",\"target\":\"ruilen\",\"source\":\"to exchange / to swap\",\"type\":\"regular\",\"cefr\":\"A2\",\"grammar_note\":\"Weak verb, takes hebben.\",\"examples\":[{\"target\":\"Kan ik deze trui ruilen voor een grotere maat?\",\"source\":\"Can I exchange this sweater for a larger size?\"},{\"target\":\"Ik wil dit shirt ruilen.\",\"source\":\"I want to exchange this shirt.\"}],\"conjugations\":{\"tegenwoordige_tijd\":{\"ik\":\"ik ruil\",\"jij/je\":\"jij ruilt\",\"hij/zij/het\":\"hij/zij ruilt\",\"wij/we\":\"wij ruilen\",\"jullie\":\"jullie ruilen\",\"zij/ze\":\"zij ruilen\"},\"verleden_tijd\":{\"ik\":\"ik ruilde\",\"jij/je\":\"jij ruilde\",\"hij/zij/het\":\"hij/zij ruilde\",\"wij/we\":\"wij ruilden\",\"jullie\":\"jullie ruilden\",\"zij/ze\":\"zij ruilden\"},\"toekomende_tijd\":{\"ik\":\"ik zal ruilen\",\"jij/je\":\"jij zult ruilen\",\"hij/zij/het\":\"hij/zij zal ruilen\",\"wij/we\":\"wij zullen ruilen\",\"jullie\":\"jullie zullen ruilen\",\"zij/ze\":\"zij zullen ruilen\"},\"voltooide_tijd\":\"heeft geruild\",\"voltooid_deelwoord\":\"geruild\"},\"tags\":[\"verb\",\"a2\"],\"metadata\":{}},{\"id\":\"verbs-a2-money_shopping-015\",\"target\":\"bestellen\",\"source\":\"to order\",\"type\":\"regular\",\"cefr\":\"A2\",\"grammar_note\":\"Weak verb, takes hebben.\",\"examples\":[{\"target\":\"Ik bestel vaak kleren online.\",\"source\":\"I often order clothes online.\"},{\"target\":\"Heb jij die schoenen besteld?\",\"source\":\"Did you order those shoes?\"}],\"conjugations\":{\"tegenwoordige_tijd\":{\"ik\":\"ik bestel\",\"jij/je\":\"jij bestelt\",\"hij/zij/het\":\"hij/zij bestelt\",\"wij/we\":\"wij bestellen\",\"jullie\":\"jullie bestellen\",\"zij/ze\":\"zij bestellen\"},\"verleden_tijd\":{\"ik\":\"ik bestelde\",\"jij/je\":\"jij bestelde\",\"hij/zij/het\":\"hij/zij bestelde\",\"wij/we\":\"wij bestelden\",\"jullie\":\"jullie bestelden\",\"zij/ze\":\"zij bestelden\"},\"toekomende_tijd\":{\"ik\":\"ik zal bestellen\",\"jij/je\":\"jij zult bestellen\",\"hij/zij/het\":\"hij/zij zal bestellen\",\"wij/we\":\"wij zullen bestellen\",\"jullie\":\"jullie zullen bestellen\",\"zij/ze\":\"zij zullen bestellen\"},\"voltooide_tijd\":\"heeft besteld\",\"voltooid_deelwoord\":\"besteld\"},\"tags\":[\"verb\",\"a2\"],\"metadata\":{}},{\"id\":\"verbs-a2-money_shopping-016\",\"target\":\"kosten\",\"source\":\"to cost\",\"type\":\"regular\",\"cefr\":\"A2\",\"grammar_note\":\"Weak verb, takes hebben. Duplicate semantic coverage for variety in practice.\",\"examples\":[{\"target\":\"Wat kosten deze tomaten per kilo?\",\"source\":\"What do these tomatoes cost per kilo?\"},{\"target\":\"Dat kost helemaal niets!\",\"source\":\"That costs nothing at all!\"}],\"conjugations\":{\"tegenwoordige_tijd\":{\"ik\":\"ik kost\",\"jij/je\":\"jij kost\",\"hij/zij/het\":\"hij/zij kost\",\"wij/we\":\"wij kosten\",\"jullie\":\"jullie kosten\",\"zij/ze\":\"zij kosten\"},\"verleden_tijd\":{\"ik\":\"ik kostte\",\"jij/je\":\"jij kostte\",\"hij/zij/het\":\"hij/zij kostte\",\"wij/we\":\"wij kostten\",\"jullie\":\"jullie kostten\",\"zij/ze\":\"zij kostten\"},\"toekomende_tijd\":{\"ik\":\"ik zal kosten\",\"jij/je\":\"jij zult kosten\",\"hij/zij/het\":\"hij/zij zal kosten\",\"wij/we\":\"wij zullen kosten\",\"jullie\":\"jullie zullen kosten\",\"zij/ze\":\"zij zullen kosten\"},\"voltooide_tijd\":\"heeft gekost\",\"voltooid_deelwoord\":\"gekost\"},\"tags\":[\"verb\",\"a2\"],\"metadata\":{}},{\"id\":\"verbs-a2-money_shopping-017\",\"target\":\"ontvangen\",\"source\":\"to receive\",\"type\":\"irregular\",\"cefr\":\"A2\",\"grammar_note\":\"Strong verb, takes hebben.\",\"examples\":[{\"target\":\"Heb je het pakketje al ontvangen?\",\"source\":\"Did you already receive the package?\"},{\"target\":\"Ik ontvang morgen mijn salaris.\",\"source\":\"I receive my salary tomorrow.\"}],\"conjugations\":{\"tegenwoordige_tijd\":{\"ik\":\"ik ontvang\",\"jij/je\":\"jij ontvangt\",\"hij/zij/het\":\"hij/zij ontvangt\",\"wij/we\":\"wij ontvangen\",\"jullie\":\"jullie ontvangen\",\"zij/ze\":\"zij ontvangen\"},\"verleden_tijd\":{\"ik\":\"ik ontving\",\"jij/je\":\"jij ontving\",\"hij/zij/het\":\"hij/zij ontving\",\"wij/we\":\"wij ontvingen\",\"jullie\":\"jullie ontvingen\",\"zij/ze\":\"zij ontvingen\"},\"toekomende_tijd\":{\"ik\":\"ik zal ontvangen\",\"jij/je\":\"jij zult ontvangen\",\"hij/zij/het\":\"hij/zij zal ontvangen\",\"wij/we\":\"wij zullen ontvangen\",\"jullie\":\"jullie zullen ontvangen\",\"zij/ze\":\"zij zullen ontvangen\"},\"voltooide_tijd\":\"heeft ontvangen\",\"voltooid_deelwoord\":\"ontvangen\"},\"tags\":[\"verb\",\"a2\"],\"metadata\":{}},{\"id\":\"verbs-a2-money_shopping-018\",\"target\":\"aanbieden\",\"source\":\"to offer\",\"type\":\"separable\",\"cefr\":\"A2\",\"grammar_note\":\"Separable strong verb, takes hebben.\",\"examples\":[{\"target\":\"De winkel biedt een leuke korting aan.\",\"source\":\"The shop offers a nice discount.\"},{\"target\":\"Ze bieden gratis bezorging aan.\",\"source\":\"They offer free delivery.\"}],\"conjugations\":{\"tegenwoordige_tijd\":{\"ik\":\"ik bied aan\",\"jij/je\":\"jij biedt aan\",\"hij/zij/het\":\"hij/zij biedt aan\",\"wij/we\":\"wij bieden aan\",\"jullie\":\"jullie bieden aan\",\"zij/ze\":\"zij bieden aan\"},\"verleden_tijd\":{\"ik\":\"ik bood aan\",\"jij/je\":\"jij bood aan\",\"hij/zij/het\":\"hij/zij bood aan\",\"wij/we\":\"wij boden aan\",\"jullie\":\"jullie boden aan\",\"zij/ze\":\"zij boden aan\"},\"toekomende_tijd\":{\"ik\":\"ik zal aanbieden\",\"jij/je\":\"jij zult aanbieden\",\"hij/zij/het\":\"hij/zij zal aanbieden\",\"wij/we\":\"wij zullen aanbieden\",\"jullie\":\"jullie zullen aanbieden\",\"zij/ze\":\"zij zullen aanbieden\"},\"voltooide_tijd\":\"heeft aangeboden\",\"voltooid_deelwoord\":\"aangeboden\"},\"tags\":[\"verb\",\"a2\"],\"metadata\":{}},{\"id\":\"verbs-a2-money_shopping-019\",\"target\":\"krijgen\",\"source\":\"to get / to receive\",\"type\":\"irregular\",\"cefr\":\"A2\",\"grammar_note\":\"Strong verb, takes hebben.\",\"examples\":[{\"target\":\"Krijg ik hier ook tasjes bij?\",\"source\":\"Do I also get bags with this?\"},{\"target\":\"Ik kreeg tien procent korting.\",\"source\":\"I got ten percent discount.\"}],\"conjugations\":{\"tegenwoordige_tijd\":{\"ik\":\"ik krijg\",\"jij/je\":\"jij krijgt\",\"hij/zij/het\":\"hij/zij krijgt\",\"wij/we\":\"wij krijgen\",\"jullie\":\"jullie krijgen\",\"zij/ze\":\"zij krijgen\"},\"verleden_tijd\":{\"ik\":\"ik kreeg\",\"jij/je\":\"jij kreeg\",\"hij/zij/het\":\"hij/zij kreeg\",\"wij/we\":\"wij kregen\",\"jullie\":\"jullie kregen\",\"zij/ze\":\"zij kregen\"},\"toekomende_tijd\":{\"ik\":\"ik zal krijgen\",\"jij/je\":\"jij zult krijgen\",\"hij/zij/het\":\"hij/zij zal krijgen\",\"wij/we\":\"wij zullen krijgen\",\"jullie\":\"jullie zullen krijgen\",\"zij/ze\":\"zij zullen krijgen\"},\"voltooide_tijd\":\"heeft gekregen\",\"voltooid_deelwoord\":\"gekregen\"},\"tags\":[\"verb\",\"a2\"],\"metadata\":{}},{\"id\":\"verbs-a2-money_shopping-020\",\"target\":\"meenemen\",\"source\":\"to take along / to bring\",\"type\":\"separable\",\"cefr\":\"A2\",\"grammar_note\":\"Separable strong verb, takes hebben.\",\"examples\":[{\"target\":\"Neem jij een eigen tas mee?\",\"source\":\"Are you taking your own bag along?\"},{\"target\":\"Ik neem de bonnetjes mee.\",\"source\":\"I am taking the receipts along.\"}],\"conjugations\":{\"tegenwoordige_tijd\":{\"ik\":\"ik neem mee\",\"jij/je\":\"jij neemt mee\",\"hij/zij/het\":\"hij/zij neemt mee\",\"wij/we\":\"wij nemen mee\",\"jullie\":\"jullie nemen mee\",\"zij/ze\":\"zij nemen mee\"},\"verleden_tijd\":{\"ik\":\"ik nam mee\",\"jij/je\":\"jij nam mee\",\"hij/zij/het\":\"hij/zij nam mee\",\"wij/we\":\"wij namen mee\",\"jullie\":\"jullie namen mee\",\"zij/ze\":\"zij namen mee\"},\"toekomende_tijd\":{\"ik\":\"ik zal meenemen\",\"jij/je\":\"jij zult meenemen\",\"hij/zij/het\":\"hij/zij zal meenemen\",\"wij/we\":\"wij zullen meenemen\",\"jullie\":\"jullie zullen meenemen\",\"zij/ze\":\"zij zullen meenemen\"},\"voltooide_tijd\":\"heeft meegenomen\",\"voltooid_deelwoord\":\"meegenomen\"},\"tags\":[\"verb\",\"a2\"],\"metadata\":{}}]";
+const langConfigJson = "{\"language_pair\":\"english_dutch\",\"target_lang\":\"nl\",\"native_lang\":\"en\",\"target_lang_name\":\"Nederlands\",\"native_lang_name\":\"English\",\"speech_lang\":\"nl-NL\",\"noun_metadata_fields\":[{\"key\":\"article\",\"label\":\"Lidwoord\",\"render\":\"article_badge\"},{\"key\":\"gender\",\"label\":\"Geslacht\",\"render\":\"gender_label\"},{\"key\":\"plural\",\"label\":\"Meervoud\",\"render\":\"text\"}],\"article_colours\":{\"de\":\"#4A7C9E\",\"het\":\"#4A8A5A\"},\"gender_labels\":{\"c\":\"de-woord\",\"n\":\"het-woord\"},\"verb_tenses\":[\"tegenwoordige_tijd\",\"verleden_tijd\",\"voltooide_tijd\",\"voltooid_deelwoord\",\"toekomende_tijd\"],\"cases\":{},\"ui_labels\":{\"learn_mode\":\"Leren\",\"train_mode\":\"Oefenen\",\"examples_heading\":\"Voorbeeldzinnen\",\"grammar_note_heading\":\"Grammaticanotitie\",\"audio_button\":\"Luisteren\",\"back_link\":\"Terug\",\"card_counter\":\"Kaart {current} / {total}\",\"next_button\":\"Volgende\",\"finish_button\":\"Klaar\",\"correct\":\"Juist!\",\"wrong\":\"Fout\",\"dashboard_link\":\"Dashboard\",\"library_prompt\":\"Kies een deck uit de bibliotheek en ontdek alle informatie op de kaarten.\",\"cards_badge\":\"{count} KAARTEN\",\"cards_count\":\"{count} kaarten\",\"deck_meta\":\"{topic} • {level} • {count} kaarten\",\"no_decks\":\"Nog geen decks in deze categorie.\",\"setup_title\":\"Training instellen\",\"setup_subtitle\":\"Configureer je leersessie.\",\"question_type\":\"Vraagtype\",\"mode_multiple_choice\":\"Meerkeuze\",\"mode_typing\":\"Tekstinvoer\",\"mode_typing_short\":\"Invoer\",\"direction\":\"Richting\",\"direction_forward\":\"🇺🇸 English → 🇳🇱 Nederlands\",\"direction_reverse\":\"🇳🇱 Nederlands → 🇺🇸 English\",\"select_level\":\"Niveau kiezen\",\"start_training\":\"Training starten\",\"count_label\":\"Aantal kaarten\",\"all_cards\":\"Alles\",\"in_deck\":\"in stapel\",\"view_cards\":\"Kaarten\",\"view_list\":\"Lijst\",\"card_word\":\"Kaart\",\"keyboard_hint_study\":\"← → Pijltjestoetsen om te navigeren · A om te luisteren\",\"example_single_heading\":\"Voorbeeld\",\"no_example\":\"Geen voorbeeld beschikbaar.\",\"tags_label\":\"Tags:\",\"type_vocab\":\"Woordenschat\",\"type_verb\":\"Werkwoord\",\"type_phrase\":\"Zegswijze\",\"type_connector\":\"Voegwoord\",\"type_grammar\":\"Grammatica\",\"type_noun\":\"Zelfstandig naamwoord\",\"type_adjective\":\"Bijvoeglijk naamwoord\",\"type_expression\":\"Uitdrukking\",\"plural_prefix\":\"Pl. {plural}\",\"plural_only\":\"alleen meervoud\",\"word_order_heading\":\"Woordvolgorde\",\"structure_heading\":\"Structuur\",\"training_title\":\"Training\",\"all_levels\":\"Alle niveaus\",\"type_placeholder\":\"Schrijf het woord in het Nederlands...\",\"check_button\":\"Controleren\",\"keyboard_hint_train\":\"Enter / Spatie = bevestigen · A = Luisteren\",\"audio_title\":\"Luisteren (A)\",\"training_finished\":\"Training voltooid!\",\"missed_heading\":\"Fout beantwoord — om te herhalen\",\"retry_missed\":\"Fouten opnieuw doen\",\"new_config\":\"Nieuwe configuratie\",\"plural_hint\":\"Pl: {plural}\",\"results_pct\":\"{pct}% juist\",\"result_excellent\":\"Uitstekend! Je beheerst dit niveau volledig.\",\"result_good\":\"Zeer goed! Nog een beetje oefenen en je hebt het onder de knie!\",\"result_ok\":\"Goed begin! Herhaal de kaarten nog een keer.\",\"result_retry\":\"Geen probleem — oefening baart kunst!\",\"no_cards_title\":\"Geen kaarten gevonden\",\"no_cards_hint\":\"Kies een ander niveau of een ander deck.\"},\"answer_normalisation\":{\"strip_leading_words\":[\"de\",\"het\",\"een\",\"der\",\"des\",\"den\"],\"alt_spellings\":{\"ij\":\"y\",\"ë\":\"e\",\"ï\":\"i\"}}}";
+const category = "verbs";
+const lang = "en-nl";
+const base = "/languagelounge/";
+const defaultView = "cards";
+
+  const cards     = JSON.parse(cardsJson);
+  const config    = JSON.parse(langConfigJson);
+  let currentIndex = 0;
+
+  const dotNav    = document.getElementById('dot-nav');
+  const currentNum = document.getElementById('current-num');
+  const progressBar = document.getElementById('progress-bar');
+  const btnPrev   = document.getElementById('btn-prev');
+  const btnNext   = document.getElementById('btn-next');
+  const cardHost  = document.getElementById('card-host');
+  const progressCont = document.getElementById('progress-container');
+
+  const cardViewWrap = document.getElementById('card-view-wrap');
+  const listViewWrap = document.getElementById('list-view-wrap');
+  const btnViewCards = document.getElementById('view-cards-btn');
+  const btnViewList  = document.getElementById('view-list-btn');
+
+  // Toggle Logic
+  function setViewMode(mode) {
+    if (mode === 'list') {
+      cardViewWrap.classList.add('hidden');
+      listViewWrap.classList.remove('hidden');
+      progressCont.classList.add('hidden');
+      btnViewList.classList.add('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewList.classList.remove('text-[var(--text-muted)]');
+      btnViewCards.classList.remove('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewCards.classList.add('text-[var(--text-muted)]');
+    } else {
+      listViewWrap.classList.add('hidden');
+      cardViewWrap.classList.remove('hidden');
+      progressCont.classList.remove('hidden');
+      btnViewCards.classList.add('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewCards.classList.remove('text-[var(--text-muted)]');
+      btnViewList.classList.remove('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewList.classList.add('text-[var(--text-muted)]');
+    }
+  }
+
+  btnViewCards.addEventListener('click', () => setViewMode('cards'));
+  btnViewList.addEventListener('click', () => setViewMode('list'));
+
+  // Initial view is configured per category (config/language_pairs/*.yaml → categories[].default_view)
+  if (defaultView === 'list') {
+    setViewMode('list');
+  }
+
+
+
+  // ── Helpers (mirror card-renderer.ts — no module imports in inline scripts) ──
+  const articleColours = config.article_colours || {};
+  const genderLabels   = config.gender_labels   || {};
+  const speechLang     = config.speech_lang;
+  const ui             = config.ui_labels || {};
+  const fmt = (tpl, vars) => String(tpl).replace(/\{(\w+)\}/g, (m, k) => (k in vars ? vars[k] : m));
+  const formatHighlight = (text) => text ? String(text).replace(/\*(.*?)\*/g, '<span class="highlighter">$1</span>') : '';
+  // Articles come from the language config (keys of article_colours), never hardcoded
+  const articleList = Object.keys(articleColours);
+  const articlePatterns = articleList.map(a => {
+    const esc = a.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    return esc.endsWith("'") ? esc : `${esc}\\s+`;
+  });
+  const articleRe = articlePatterns.length
+    ? new RegExp('^(?:' + articlePatterns.join('|') + ')', 'i')
+    : null;
+
+  function stripArticle(w) {
+    return articleRe ? (w || '').replace(articleRe, '').trim() : (w || '').trim();
+  }
+
+  function getTypeLabel(card) {
+    const tags = card.tags || [];
+    if (tags.includes('noun'))       return ui.type_noun;
+    if (tags.includes('verb'))       return ui.type_verb;
+    if (tags.includes('adjective'))  return ui.type_adjective;
+    if (tags.includes('expression')) return ui.type_expression;
+    const byType = { vocab: ui.type_vocab, verb: ui.type_verb, phrase: ui.type_phrase, connector: ui.type_connector, grammar: ui.type_grammar };
+    return byType[card.type] || ui.type_vocab;
+  }
+
+  function normaliseEx(ex) {
+    return { target: ex.target||'', source: ex.source||'', note: ex.note };
+  }
+
+  function getMetaFacts(card) {
+    const meta = card.metadata || {};
+    const facts = [];
+    for (const field of (config.noun_metadata_fields || [])) {
+      const raw = meta[field.key];
+      if (!raw || raw==='~') continue;
+      let value = String(raw), colour;
+      if (field.render === 'gender_label')  value  = genderLabels[raw] || raw;
+      if (field.render === 'article_badge') colour = articleColours[raw.toLowerCase()] || 'var(--espresso)';
+      facts.push({ label: field.label, value, colour });
+    }
+    return facts;
+  }
+
+  // ── Card renderer ─────────────────────────────────────────────────────────
+  function renderCard(idx) {
+    const card = cards[idx];
+    if (!card || !cardHost) return;
+
+    const lc = cardHost.querySelector('.learning-card');
+    if (!lc) return;
+
+    function sel(cls) { return lc.querySelector(cls); }
+
+    // Type badge + level
+    sel('.lc-type-badge').textContent = getTypeLabel(card);
+    sel('.lc-level-badge').textContent = (card.level || '').toUpperCase();
+
+    // Article
+    const article = card.metadata?.article;
+    const articleWrap = sel('.lc-article-wrap');
+    const articleEl   = sel('.lc-article');
+    if (article && (card.tags||[]).includes('noun') && !card.metadata?.plural_only) {
+      articleEl.textContent = article;
+      articleEl.style.color = articleColours[article.toLowerCase()] || 'var(--espresso)';
+      articleWrap.style.display = '';
+    } else {
+      articleWrap.style.display = 'none';
+    }
+
+    // Word / translation / forms
+    sel('.lc-word').textContent        = stripArticle(card.target);
+    sel('.lc-translation').textContent = card.source || '';
+    const plural = card.metadata?.plural;
+    sel('.lc-forms').textContent = plural && !card.metadata?.plural_only ? fmt(ui.plural_prefix, { plural }) : card.metadata?.plural_only ? ui.plural_only : '';
+
+    // Meta grid
+    const metaGrid = sel('.lc-meta-grid');
+    const facts = getMetaFacts(card);
+    if (facts.length) {
+      metaGrid.style.gridTemplateColumns = `repeat(${Math.min(facts.length,4)}, 1fr)`;
+      metaGrid.style.display = '';
+      metaGrid.innerHTML = facts.map((f, i) => `
+        <div class="px-5 py-4 ${i<facts.length-1?'border-r':''}" style="border-color:var(--border);">
+          <p class="text-[9px] font-bold uppercase tracking-widest mb-1" style="color:var(--text-muted);">${f.label}</p>
+          <p class="text-sm font-bold" style="color:${f.colour||'var(--text)'};">${f.value}</p>
+        </div>`).join('');
+    } else {
+      metaGrid.style.display = 'none';
+    }
+
+    // Grammar note
+    const grammarWrap = sel('.lc-grammar-wrap');
+    if (card.grammar_note) {
+      sel('.lc-grammar-text').innerHTML = formatHighlight(card.grammar_note);
+      grammarWrap.classList.remove('hidden');
+    } else {
+      grammarWrap.classList.add('hidden');
+    }
+
+    // Examples
+    const examplesEl = sel('.lc-examples');
+    const rawEx = card.examples || [];
+    examplesEl.innerHTML = rawEx.length
+      ? rawEx.map(ex => { const e=normaliseEx(ex); return `
+          <div class="rounded-2xl border overflow-hidden" style="border-color:var(--border);">
+            <div class="px-4 py-3" style="background-color:var(--bg);">
+              <p class="font-semibold leading-snug mb-1" style="color:var(--text);">${e.target}</p>
+              <p class="text-sm italic" style="color:var(--text-muted);">${e.source||''}</p>
+            </div>
+            ${e.note?`<div class="px-4 py-2 border-t" style="border-color:var(--border);">
+              <p class="text-[10px] font-bold font-mono" style="color:var(--espresso);">📐 ${e.note}</p>
+            </div>`:''}
+          </div>`; }).join('')
+      : '<p class="text-sm italic" style="color:var(--text-muted);">' + ui.no_example + '</p>';
+
+    // Verb: conjugation table
+    const conjWrap  = sel('.lc-conjugation-wrap');
+    const conjInner = sel('.lc-conjugation-inner');
+    const cardType = card.type || (card.tags?.includes('verb') ? 'verb' : 'vocab');
+    if (conjWrap && conjInner) {
+      if (cardType === 'verb' && card.conjugations) {
+        conjWrap.classList.remove('hidden');
+        let conjArray = [];
+        if (Array.isArray(card.conjugations)) {
+          conjArray = card.conjugations;
+        } else {
+          for (const [tense, forms] of Object.entries(card.conjugations)) {
+            if (typeof forms === 'string') {
+              conjArray.push({ tense, stringForm: forms });
+            } else {
+              const formsArr = Object.entries(forms).map(([pronoun, form]) => ({ pronoun, form }));
+              conjArray.push({ tense, forms: formsArr });
+            }
+          }
+        }
+
+        const tensesToRender = config.verb_tenses || conjArray.map(t => t.tense);
+        const stringTenses = [];
+        const tableTenses = [];
+
+        tensesToRender.forEach(tense => {
+          const t = conjArray.find(c => c.tense === tense);
+          if (!t) return;
+          if (t.stringForm) stringTenses.push(t);
+          else tableTenses.push(t);
+        });
+
+        let html = '';
+        if (stringTenses.length > 0) {
+          html += `
+            <div class="flex flex-wrap gap-3 mb-6">
+              ${stringTenses.map(t => `
+                <div class="rounded-xl border px-4 py-2.5 flex items-center gap-3 shadow-sm" style="border-color:var(--border); background-color:var(--bg);">
+                  <span class="text-[10px] font-bold uppercase tracking-widest opacity-80" style="color:var(--espresso);">${t.tense.replace(/_/g, ' ')}</span>
+                  <span class="font-bold text-sm" style="color:var(--text);">${t.stringForm}</span>
+                </div>
+              `).join('')}
+            </div>
+          `;
+        }
+
+        if (tableTenses.length > 0) {
+          const pronouns = tableTenses[0].forms.map(f => f.pronoun);
+          html += `
+            <div class="rounded-xl border overflow-x-auto shadow-sm w-full" style="border-color:var(--border);">
+              <table class="w-full text-sm text-left">
+                <thead>
+                  <tr style="background-color:var(--bg); border-bottom: 1px solid var(--border);">
+                    <th class="px-4 py-3 font-bold uppercase tracking-widest text-[10px] w-[1%]" style="color:var(--espresso); border-right: 1px solid var(--border);"></th>
+                    ${tableTenses.map(t => `
+                      <th class="px-4 py-3 font-bold uppercase tracking-widest text-[10px]" style="color:var(--espresso);">${t.tense.replace(/_/g, ' ')}</th>
+                    `).join('')}
+                  </tr>
+                </thead>
+                <tbody>
+                  ${pronouns.map((pronoun, ri) => `
+                    <tr class="${ri < pronouns.length - 1 ? 'border-b' : ''}" style="border-color:var(--border);">
+                      <td class="px-4 py-3 font-bold text-xs whitespace-nowrap" style="color:var(--espresso); background-color:var(--bg); border-right: 1px solid var(--border);">${pronoun}</td>
+                      ${tableTenses.map(t => {
+                        const formObj = t.forms.find(f => f.pronoun === pronoun);
+                        return `<td class="px-4 py-3 font-semibold whitespace-nowrap" style="color:var(--text);">${formObj ? formObj.form : '-'}</td>`;
+                      }).join('')}
+                    </tr>
+                  `).join('')}
+                </tbody>
+              </table>
+            </div>
+          `;
+        }
+        conjInner.innerHTML = html;
+      } else {
+        conjWrap.classList.add('hidden');
+        conjInner.innerHTML = '';
+      }
+    }
+
+    // Connector: word order block
+    const woWrap = sel('.lc-wordorder-wrap');
+    if (woWrap) {
+      if (cardType === 'connector' && card.word_order) {
+        sel('.lc-wordorder-text').textContent = card.word_order;
+        woWrap.classList.remove('hidden');
+      } else {
+        woWrap.classList.add('hidden');
+      }
+    }
+
+    // Phrase: preposition rule block
+    const phraseWrap = sel('.lc-phrase-wrap');
+    if (phraseWrap) {
+      if (cardType === 'phrase' && card.clause_type) {
+        sel('.lc-phrase-rule').textContent = card.clause_type;
+        phraseWrap.classList.remove('hidden');
+      } else {
+        phraseWrap.classList.add('hidden');
+      }
+    }
+
+    // Tags
+    sel('.lc-tags').innerHTML = (card.tags||[]).map(t =>
+      `<span class="text-[10px] font-bold px-2 py-0.5 rounded-md border" style="border-color:var(--border);color:var(--text-muted);background-color:var(--bg);">${t}</span>`
+    ).join('');
+
+    // Progress UI
+    if (currentNum)  currentNum.textContent = String(idx+1);
+    if (progressBar) progressBar.style.width = `${Math.round(((idx+1)/cards.length)*100)}%`;
+    if (btnPrev)     btnPrev.disabled = idx === 0;
+    if (btnNext)     btnNext.innerHTML = idx === cards.length-1
+      ? '✓ ' + ui.finish_button
+      : ui.next_button + ' <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>';
+
+    updateDots();
+
+    // Re-bind audio button cleanly by cloning to strip old listeners
+    const oldBtn = sel('.lc-audio-btn');
+    if (oldBtn) {
+      const newBtn = oldBtn.cloneNode(true);
+      oldBtn.parentNode.replaceChild(newBtn, oldBtn);
+      newBtn.addEventListener('click', speakCurrent);
+    }
+  }
+
+  // ── Dot navigation ────────────────────────────────────────────────────────
+  function buildDots() {
+    if (!dotNav) return;
+    dotNav.innerHTML = '';
+    const maxVisible = 20;
+    const showAll = cards.length <= maxVisible;
+    cards.forEach((_, i) => {
+      if (!showAll && i >= maxVisible) return;
+      const dot = document.createElement('button');
+      dot.className = 'dot w-2 h-2 rounded-full transition-all duration-300 flex-shrink-0';
+      dot.style.backgroundColor = 'var(--border)';
+      dot.title = `${ui.card_word} ${i+1}`;
+      dot.addEventListener('click', () => goTo(i));
+      dotNav.appendChild(dot);
+    });
+    if (!showAll) {
+      const el = document.createElement('span');
+      el.textContent = `+${cards.length - maxVisible}`;
+      el.className = 'text-[10px] font-bold';
+      el.style.color = 'var(--text-muted)';
+      dotNav.appendChild(el);
+    }
+  }
+
+  function updateDots() {
+    dotNav?.querySelectorAll('.dot').forEach((dot, i) => {
+      dot.style.backgroundColor = i===currentIndex ? 'var(--espresso)' : 'var(--border)';
+      dot.style.width     = i===currentIndex ? '20px' : '8px';
+      dot.style.borderRadius = '4px';
+    });
+  }
+
+  // ── Audio ─────────────────────────────────────────────────────────────────
+  function speakCurrent() {
+    const card = cards[currentIndex];
+    if (!card) return;
+    if (window.LoungeAudioEngine) {
+      window.LoungeAudioEngine.speak(card.target || '', speechLang, 0.85);
+    }
+  }
+
+  // ── Navigate ─────────────────────────────────────────────────────────────
+  function goTo(idx) {
+    if (idx < 0 || idx >= cards.length) return;
+    currentIndex = idx;
+    renderCard(currentIndex);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  btnPrev?.addEventListener('click', () => goTo(currentIndex - 1));
+  btnNext?.addEventListener('click', () => {
+    if (currentIndex === cards.length - 1) window.location.href = `${base}${lang}/${category}/`;
+    else goTo(currentIndex + 1);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') goTo(currentIndex + 1);
+    if (e.key === 'ArrowLeft')  goTo(currentIndex - 1);
+    if (e.key === 'a' || e.key === 'A') speakCurrent();
+  });
+
+  // ── Learn / Train panel toggle ──────────────────────
+  const btnLearn = document.getElementById('btn-mode-learn');
+  const btnTrain = document.getElementById('btn-mode-train');
+  const pnlLearn = document.getElementById('learn-panel');
+  const pnlTrain = document.getElementById('train-panel');
+  const toolbar  = document.getElementById('learn-toolbar');
+
+  const STORAGE_KEY = `lounge:${lang}:${category}:deck:mode`;
+  let currentMode = localStorage.getItem(STORAGE_KEY) || 'learn';
+
+  function applyMode() {
+    if (currentMode === 'learn') {
+      btnLearn.style.backgroundColor = 'var(--espresso)';
+      btnLearn.style.color = '#F5F2EB';
+      btnTrain.style.backgroundColor = 'transparent';
+      btnTrain.style.color = 'var(--text-muted)';
+      pnlLearn.classList.remove('hidden');
+      toolbar.classList.remove('hidden');
+      pnlTrain.classList.add('hidden');
+    } else {
+      btnTrain.style.backgroundColor = 'var(--espresso)';
+      btnTrain.style.color = '#F5F2EB';
+      btnLearn.style.backgroundColor = 'transparent';
+      btnLearn.style.color = 'var(--text-muted)';
+      pnlTrain.classList.remove('hidden');
+      pnlLearn.classList.add('hidden');
+      toolbar.classList.add('hidden');
+    }
+    localStorage.setItem(STORAGE_KEY, currentMode);
+  }
+
+  btnLearn?.addEventListener('click', () => { currentMode = 'learn'; applyMode(); });
+  btnTrain?.addEventListener('click', () => { currentMode = 'train'; applyMode(); });
+  applyMode();
+
+  // ── Radio-style selectors (mode & dir & count) ─────────────
+  document.querySelectorAll('.sel-opt').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const group = btn.dataset.group;
+      document.querySelectorAll(`.sel-opt[data-group="${group}"]`).forEach(b => b.classList.remove('sel-active'));
+      btn.classList.add('sel-active');
+      const hidden = document.getElementById(`${group}-hidden`);
+      if (hidden) hidden.value = btn.dataset.value;
+    });
+  });
+
+  document.getElementById('deck-train-form')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const base = form.action;
+    const mode = document.getElementById('mode-hidden')?.value || 'mc';
+    const dir  = document.getElementById('dir-hidden')?.value || `${config.language_pair.source_code}-${config.language_pair.target_code}`.toLowerCase();
+    const count = document.getElementById('count-hidden')?.value || '30';
+    const level = form.querySelector('[name="level"]')?.value || '';
+    const deck = form.querySelector('[name="deck"]')?.value || '';
+    
+    const params = new URLSearchParams();
+    if(level) params.set('level', level);
+    params.set('deck', deck);
+    params.set('mode', mode);
+    params.set('dir', dir);
+    params.set('count', count);
+    
+    window.location.href = `${base}?${params.toString()}`;
+  });
+
+  // ── Init ─────────────────────────────────────────────────────────────────
+  buildDots();
+  // Card 0 is already rendered server-side via LearningCard component.
+  // Sync progress UI to reflect card 0 state.
+  updateDots();
+  if (progressBar) progressBar.style.width = `${Math.round(1/cards.length*100)}%`;
+  // Update card 0 using client-side config too (ensures langConfig is applied)
+  renderCard(0);
+})();</script>

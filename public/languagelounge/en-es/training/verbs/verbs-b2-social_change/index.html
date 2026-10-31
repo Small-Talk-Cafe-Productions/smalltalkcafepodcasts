@@ -1,0 +1,758 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="description" content="Lounge Español — Tu espacio dedicado a la lengua española — amplía tu vocabulario, domina la gramática y perfecciona tu español de A1 a B2."><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/languagelounge/favicon.svg"><meta name="generator" content="Astro v7.3.5"><title>Social Change — Lounge Español</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet"><script>
+      (function() {
+        const saved = localStorage.getItem('wortschatz_theme');
+        if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script><link rel="stylesheet" href="/languagelounge/_astro/Layout.Cr1varBg.css"><style>.sel-opt[data-astro-cid-5tabbh6g]{border:2px solid var(--border);background-color:var(--card);color:var(--text);cursor:pointer;text-align:center;border-radius:12px;flex-direction:column;justify-content:center;align-items:center;width:100%;padding:14px 12px;transition:border-color .15s,background-color .15s,color .15s,box-shadow .15s;display:flex}.sel-opt[data-astro-cid-5tabbh6g]:hover{border-color:var(--border-hover);box-shadow:0 2px 8px #00000014}.sel-opt[data-astro-cid-5tabbh6g].sel-active{border-color:var(--espresso);background-color:var(--espresso);color:#f5f2eb;box-shadow:0 2px 12px #0000002e}
+</style></head><body class="antialiased min-h-screen flex flex-col" style="background-color:var(--bg);color:var(--text);"><!-- Header --><header class="sticky top-0 z-50 border-b" style="background-color:var(--bg);border-color:var(--border);"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between gap-4" style="height:4.5rem;"><!-- Logo + Language Switcher --><div class="flex items-center gap-4 shrink-0"><a href="/languagelounge/en-es/" class="flex items-center gap-2 group"><span class="font-outfit font-extrabold text-xl sm:text-2xl tracking-tight transition-colors" style="color:var(--text);">Small Talk Café<span class="font-normal text-base hidden sm:inline" style="color:var(--text-muted);"> | <span id="site-name">Lounge Español</span></span></span></a><!-- Language Selector Dropdown --><div class="relative" id="lang-dropdown-wrapper"><button id="lang-btn" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-sm font-bold transition-all hover:opacity-70" style="background-color:var(--bg); border-color:var(--border); color:var(--text);"><span id="lang-flag">🇪🇸</span><span id="lang-code">ES</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"></path></svg></button><div id="lang-menu" class="hidden absolute top-full left-0 mt-2 rounded-2xl border shadow-2xl overflow-hidden z-50 min-w-[260px] sm:min-w-[300px]" style="background-color:var(--card); border-color:var(--border);"><div class="px-3.5 py-2 text-[11px] font-bold uppercase tracking-wider border-b" style="background-color:var(--surface); border-color:var(--border); color:var(--text-muted);">Language Lounges</div><div><a href="/languagelounge/en-de/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇩🇪</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Deutsch Lounge</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">Der Raum für die deutsche Sprache</div></div></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-es/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-bold" style="color:var(--text); background-color:var(--surface);"><span class="text-2xl shrink-0">🇪🇸</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Lounge Español</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">El espacio para la lengua española</div></div><span class="shrink-0 text-[10px] font-extrabold uppercase px-1.5 py-0.5 rounded" style="background-color:var(--accent); color:var(--bg);">Active</span></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-fr/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇫🇷</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Lounge Français</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">Le salon de la langue française</div></div></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-it/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇮🇹</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Lounge Italiano</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">Il salotto per la lingua italiana</div></div></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-nl/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇳🇱</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Nederlands Lounge</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">Dé ontmoetingsplek voor de Nederlandse taal</div></div></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-pt/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇵🇹</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Lounge Português</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">O espaço para a língua portuguesa</div></div></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-sv/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇸🇪</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Svenska Lounge</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">Mötesplatsen för det svenska språket</div></div></a></div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/" class="w-full flex items-center gap-2.5 px-4 py-2.5 text-xs font-semibold hover:opacity-80 transition-colors " style="color:var(--text); "><span class="text-base">🏛️</span><span>Language Lounge Hub</span><span class="ml-auto text-[11px]" style="color:var(--text-muted);">Overview &rarr;</span></a></div></div></div><!-- Dynamic Nav Links --><nav class="hidden md:flex gap-5 items-center"><a href="https://smalltalkcafe.de/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Small Talk Café Podcasts</a><span class="text-sm font-normal" style="color:var(--border);">|</span><a href="/languagelounge/en-es/vocabulary/" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Vocabulario</a><a href="/languagelounge/en-es/verbs/" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Verbos</a><a href="/languagelounge/en-es/grammatik/" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Gramática</a><a href="/languagelounge/en-es/redemittel/" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Expresiones</a><!-- Dark/Light Toggle --><button id="theme-toggle" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-sm font-semibold transition-all hover:opacity-70" style="border-color:var(--border); color:var(--text-muted);" aria-label="Toggle dark/light mode"><span id="theme-icon">☀️</span><span id="theme-label">Light</span></button></nav></div></header><main id="main-content" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-1 w-full"><div class="max-w-4xl mx-auto py-6" data-astro-cid-5tabbh6g><!-- Deck Header --><div class="flex items-start justify-between mb-8 gap-4 flex-wrap" data-astro-cid-5tabbh6g><div data-astro-cid-5tabbh6g><a href="/languagelounge/en-es/verbs/" class="text-xs font-bold flex items-center gap-1 mb-2 hover:opacity-70 transition-opacity" style="color:var(--espresso);" data-astro-cid-5tabbh6g><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><path d="m15 18-6-6 6-6" data-astro-cid-5tabbh6g></path></svg>Verbos</a><h1 class="text-2xl md:text-3xl font-extrabold font-outfit" style="color:var(--text);" data-astro-cid-5tabbh6g>Social Change</h1><p class="text-xs font-bold uppercase tracking-wider mt-1" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Cambio Social • B2 • 20 tarjetas</p></div><div class="flex flex-col items-end gap-4 w-full md:w-auto mt-4 md:mt-0" data-astro-cid-5tabbh6g><!-- ── Mode Toggle ───────────────────────────── --><div class="flex rounded-xl border overflow-hidden p-1 gap-1 w-full max-w-[300px]" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><button id="btn-mode-learn" class="mode-btn flex-1 flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold transition-all" data-astro-cid-5tabbh6g><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" data-astro-cid-5tabbh6g></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" data-astro-cid-5tabbh6g></path></svg>Aprender</button><button id="btn-mode-train" class="mode-btn flex-1 flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold transition-all" data-astro-cid-5tabbh6g><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><circle cx="12" cy="12" r="10" data-astro-cid-5tabbh6g></circle><polyline points="12 6 12 12 16 14" data-astro-cid-5tabbh6g></polyline></svg>Entrenar</button></div><div id="learn-toolbar" class="flex flex-col items-end gap-4 w-full" data-astro-cid-5tabbh6g><!-- View switcher (Cards vs List) --><div class="flex rounded-xl border overflow-hidden p-1 gap-1 w-full max-w-[300px]" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><button id="view-cards-btn" class="view-btn flex-1 flex items-center justify-center px-4 py-2 rounded-lg text-xs font-bold transition-all bg-[var(--espresso)] text-[#F5F2EB]" data-astro-cid-5tabbh6g>Tarjetas</button><button id="view-list-btn" class="view-btn flex-1 flex items-center justify-center px-4 py-2 rounded-lg text-xs font-bold transition-all text-[var(--text-muted)] hover:opacity-70" data-astro-cid-5tabbh6g>Lista</button></div><!-- Progress indicator --><div id="progress-container" class="flex items-center gap-3" data-astro-cid-5tabbh6g><div class="text-xs font-semibold" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Tarjeta <span id="current-num" class="font-extrabold" style="color:var(--text);" data-astro-cid-5tabbh6g>1</span> / 20</div><div class="w-24 h-1.5 rounded-full overflow-hidden border" style="background-color:var(--bg);border-color:var(--border);" data-astro-cid-5tabbh6g><div id="progress-bar" class="h-full transition-all duration-500 rounded-full" style="width:0%; background-color:var(--espresso);" data-astro-cid-5tabbh6g></div></div></div></div></div></div><!-- ══ LEARN PANEL ════════════════════════════ --><div id="learn-panel" class="space-y-6" data-astro-cid-5tabbh6g><!-- ── Universal Study Card (rendered by LearningCard component) ── --><div id="card-view-wrap" data-astro-cid-5tabbh6g><div id="card-host" data-astro-cid-5tabbh6g><!-- The card shell — populated client-side by renderCard() --><div class="learning-card rounded-3xl border shadow-xl overflow-hidden" style="background-color:var(--card); border-color:var(--border);"><!-- ── Top bar ─────────────────────────────────── --><div class="lc-topbar flex items-center justify-between px-6 py-3.5 border-b" style="border-color:var(--border); background-color:var(--bg);"><div class="flex items-center gap-2"><span class="lc-type-badge text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-lg" style="background-color:var(--espresso); color:#F5F2EB;">—</span><span class="lc-level-badge text-[10px] font-bold px-2.5 py-1 rounded-lg cafe-badge"></span></div><button class="lc-audio-btn flex items-center justify-center w-11 h-11 rounded-full transition-transform hover:scale-105 active:scale-95 shadow-md flex-shrink-0" title="Escuchar (A)" style="background-color:var(--espresso); color:#F5F2EB;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg></button></div><!-- ── Main word display ───────────────────────── --><div class="lc-hero px-7 py-8 text-center border-b" style="border-color:var(--border);"><div class="lc-article-wrap mb-1.5"><span class="lc-article text-xl font-bold"></span></div><h2 class="lc-word text-5xl md:text-6xl font-extrabold font-outfit mb-3" style="color:var(--text);">—</h2><p class="lc-translation text-lg font-semibold italic" style="color:var(--text-muted);"></p><p class="lc-forms text-sm font-medium mt-2" style="color:var(--text-muted);"></p></div><!-- ── Meta info grid ─────────────────────────── --><div class="lc-meta-grid grid border-b" style="border-color:var(--border);"><!-- populated by JS --></div><!-- ── Grammar note ───────────────────────────── --><div class="lc-grammar-wrap hidden px-7 py-5 border-b" style="border-color:var(--border); background-color:var(--bg);"><p class="text-[10px] font-bold uppercase tracking-widest mb-2" style="color:var(--espresso);">📌 <span class="lc-grammar-label">Nota gramatical</span></p><p class="lc-grammar-text text-sm leading-relaxed font-medium whitespace-pre-wrap" style="color:var(--text);"></p></div><!-- ── Type-specific block ────────────────────── --><!-- Connector word-order block --><div class="lc-wordorder-wrap hidden px-7 py-4 border-b" style="border-color:var(--border); background-color:var(--bg);"><div class="flex items-start gap-3 text-sm font-medium" style="color:var(--text-muted);"><span class="text-base flex-shrink-0">📐</span><span class="lc-wordorder-text"></span></div></div><!-- Phrase preposition block --><div class="lc-phrase-wrap hidden px-7 py-4 border-b" style="border-color:var(--border); background-color:var(--bg);"><p class="text-[10px] font-bold uppercase tracking-widest mb-2" style="color:var(--espresso);">Estructura</p><p class="lc-phrase-rule text-sm font-semibold" style="color:var(--text);"></p></div><!-- ── Examples ───────────────────────────────── --><div class="px-7 py-6 border-b" style="border-color:var(--border);"><p class="lc-examples-label text-[10px] font-bold uppercase tracking-widest mb-5" style="color:var(--text-muted);">Frases de ejemplo</p><div class="lc-examples space-y-3"><!-- populated by JS --></div></div><!-- Verb conjugation (hidden by default, shown for verb cards) --><div class="lc-conjugation-wrap hidden border-b px-7 py-6" style="border-color:var(--border);"><div class="lc-conjugation-inner flex flex-wrap gap-4"><!-- populated by JS --></div></div><!-- ── Tags ───────────────────────────────────── --><div class="lc-tags-row px-7 py-4 flex items-center gap-2 flex-wrap"><span class="text-[10px] font-bold uppercase tracking-wider" style="color:var(--text-muted);">Etiquetas:</span><div class="lc-tags flex gap-2 flex-wrap"></div></div></div><script>(function(){const cardJson = "{\"id\":\"verbs-b2-social_change-001\",\"target\":\"reivindicar\",\"source\":\"to claim, to demand rights\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Regular -ar verb used heavily in socio-political contexts to demand rights or vindicate causes.\",\"examples\":[{\"target\":\"Los manifestantes salieron a la calle para reivindicar mejores condiciones laborales y sociales.\",\"source\":\"The protesters took to the street to demand better working and social conditions.\"},{\"target\":\"Es necesario reivindicar el papel de la mujer en la historia contemporánea.\",\"source\":\"It is necessary to reclaim the role of women in contemporary history.\"}],\"conjugations\":{\"presente\":{\"yo\":\"reivindico\",\"tú\":\"reivindicas\",\"él/ella/usted\":\"reivindica\",\"nosotros\":\"reivindicamos\",\"vosotros\":\"reivindicáis\",\"ellos/ellas/ustedes\":\"reivindican\"},\"pretérito_indefinido\":{\"yo\":\"reivindiqué\",\"tú\":\"reivindicaste\",\"él/ella/usted\":\"reivindicó\",\"nosotros\":\"reivindicamos\",\"vosotros\":\"reivindicasteis\",\"ellos/ellas/ustedes\":\"reivindicaron\"},\"pretérito_imperfecto\":{\"yo\":\"reivindicaba\",\"tú\":\"reivindicabas\",\"él/ella/usted\":\"reivindicaba\",\"nosotros\":\"reivindicábamos\",\"vosotros\":\"reivindicabais\",\"ellos/ellas/ustedes\":\"reivindicaban\"},\"futuro_simple\":{\"yo\":\"reivindicaré\",\"tú\":\"reivindicarás\",\"él/ella/usted\":\"reivindicará\",\"nosotros\":\"reivindicaremos\",\"vosotros\":\"reivindicaréis\",\"ellos/ellas/ustedes\":\"reivindicarán\"},\"condicional_simple\":{\"yo\":\"reivindicaría\",\"tú\":\"reivindicarías\",\"él/ella/usted\":\"reivindicaría\",\"nosotros\":\"reivindicaríamos\",\"vosotros\":\"reivindicaríais\",\"ellos/ellas/ustedes\":\"reivindicarían\"},\"pretérito_perfecto\":\"ha reivindicado\",\"participio\":\"reivindicado\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}}";
+const langConfigJson = "{\"language_pair\":\"english_spanish\",\"target_lang\":\"es\",\"native_lang\":\"en\",\"target_lang_name\":\"Español\",\"native_lang_name\":\"English\",\"speech_lang\":\"es-ES\",\"noun_metadata_fields\":[{\"key\":\"article\",\"label\":\"Artículo\",\"render\":\"article_badge\"},{\"key\":\"gender\",\"label\":\"Género\",\"render\":\"gender_label\"},{\"key\":\"plural\",\"label\":\"Plural\",\"render\":\"text\"}],\"article_colours\":{\"el\":\"#4A7C9E\",\"la\":\"#B05070\"},\"gender_labels\":{\"m\":\"Masculino\",\"f\":\"Femenino\"},\"verb_tenses\":[\"presente\",\"pretérito_indefinido\",\"pretérito_imperfecto\",\"pretérito_perfecto\",\"participio\",\"futuro_simple\",\"condicional_simple\"],\"cases\":{},\"ui_labels\":{\"learn_mode\":\"Aprender\",\"train_mode\":\"Entrenar\",\"examples_heading\":\"Frases de ejemplo\",\"grammar_note_heading\":\"Nota gramatical\",\"audio_button\":\"Escuchar\",\"back_link\":\"Volver\",\"card_counter\":\"Tarjeta {current} / {total}\",\"next_button\":\"Siguiente\",\"finish_button\":\"Terminar\",\"correct\":\"¡Correcto!\",\"wrong\":\"Incorrecto\",\"dashboard_link\":\"Panel principal\",\"library_prompt\":\"Elige un mazo de la biblioteca y aprende todo el contenido de las tarjetas.\",\"cards_badge\":\"{count} TARJETAS\",\"cards_count\":\"{count} tarjetas\",\"deck_meta\":\"{topic} • {level} • {count} tarjetas\",\"no_decks\":\"Aún no hay mazos en esta categoría.\",\"setup_title\":\"Configurar entrenamiento\",\"setup_subtitle\":\"Configura tu sesión de entrenamiento.\",\"question_type\":\"Tipo de pregunta\",\"mode_multiple_choice\":\"Opción múltiple\",\"mode_typing\":\"Entrada de texto\",\"mode_typing_short\":\"Escritura\",\"direction\":\"Dirección\",\"direction_forward\":\"🇺🇸 English → 🇪🇸 Español\",\"direction_reverse\":\"🇪🇸 Español → 🇺🇸 English\",\"select_level\":\"Seleccionar nivel\",\"start_training\":\"Iniciar entrenamiento\",\"count_label\":\"Cantidad\",\"all_cards\":\"Todas\",\"in_deck\":\"en el mazo\",\"view_cards\":\"Tarjetas\",\"view_list\":\"Lista\",\"card_word\":\"Tarjeta\",\"keyboard_hint_study\":\"← → Flechas para navegar · A para escuchar\",\"example_single_heading\":\"Ejemplo\",\"no_example\":\"No hay ejemplo disponible.\",\"tags_label\":\"Etiquetas:\",\"type_vocab\":\"Vocabulario\",\"type_verb\":\"Verbo\",\"type_phrase\":\"Expresión\",\"type_connector\":\"Conector\",\"type_grammar\":\"Gramática\",\"type_noun\":\"Sustantivo\",\"type_adjective\":\"Adjetivo\",\"type_expression\":\"Locución\",\"plural_prefix\":\"Pl. {plural}\",\"plural_only\":\"solo plural\",\"word_order_heading\":\"Orden de palabras\",\"structure_heading\":\"Estructura\",\"training_title\":\"Entrenamiento\",\"all_levels\":\"Todos los niveles\",\"type_placeholder\":\"Escribe la palabra en español...\",\"check_button\":\"Comprobar\",\"keyboard_hint_train\":\"Intro / Espacio = confirmar · A = Escuchar\",\"audio_title\":\"Escuchar (A)\",\"training_finished\":\"¡Entrenamiento completado!\",\"missed_heading\":\"Respuestas incorrectas — para repetir\",\"retry_missed\":\"Repetir fallos\",\"new_config\":\"Nueva configuración\",\"plural_hint\":\"Pl: {plural}\",\"results_pct\":\"{pct}% de acierto\",\"result_excellent\":\"¡Excelente! Has dominado este nivel.\",\"result_good\":\"¡Muy bien! Un poco más de práctica y lo tendrás dominado.\",\"result_ok\":\"¡Buen comienzo! Repasa las tarjetas una vez más.\",\"result_retry\":\"¡Sin problema! La práctica hace al maestro.\",\"no_cards_title\":\"No se encontraron tarjetas\",\"no_cards_hint\":\"Por favor, elige otro nivel o mazo.\"},\"answer_normalisation\":{\"strip_leading_words\":[\"el\",\"la\",\"los\",\"las\",\"un\",\"una\",\"unos\",\"unas\"],\"alt_spellings\":{\"á\":\"a\",\"é\":\"e\",\"í\":\"i\",\"ó\":\"o\",\"ú\":\"u\",\"ñ\":\"n\",\"ü\":\"u\"}}}";
+
+  /**
+   * Client-side card renderer.
+   * Uses the universal card-renderer logic inline (no imports in Astro is:inline).
+   */
+
+  // ── Parse data ──────────────────────────────────────────────────────────
+  const card   = JSON.parse(cardJson);
+  const config = JSON.parse(langConfigJson);
+
+  // ── Helpers ─────────────────────────────────────────────────────────────
+  // Articles come from the language config (keys of article_colours), never hardcoded
+  const articleList = Object.keys(config.article_colours || {});
+  const articlePatterns = articleList.map(a => {
+    const esc = a.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    return esc.endsWith("'") ? esc : `${esc}\\s+`;
+  });
+  const articleRe = articlePatterns.length
+    ? new RegExp('^(?:' + articlePatterns.join('|') + ')', 'i')
+    : null;
+
+  function stripArticle(word) {
+    return articleRe ? (word || '').replace(articleRe, '').trim() : (word || '').trim();
+  }
+
+  function getArticleColour(article) {
+    if (!article || !config.article_colours) return 'var(--espresso)';
+    return config.article_colours[article.toLowerCase()] || 'var(--espresso)';
+  }
+
+  function getGenderLabel(gender) {
+    if (!gender) return '';
+    return (config.gender_labels || {})[gender] || gender;
+  }
+
+  const uiLabels = config.ui_labels || {};
+
+  function getTypeLabel() {
+    const tags = card.tags || [];
+    if (tags.includes('noun'))       return uiLabels.type_noun || 'Noun';
+    if (tags.includes('verb'))       return uiLabels.type_verb || 'Verb';
+    if (tags.includes('adjective'))  return uiLabels.type_adjective || 'Adjective';
+    if (tags.includes('expression')) return uiLabels.type_expression || 'Expression';
+    const map = {
+      vocab: uiLabels.type_vocab || 'Vocab',
+      verb: uiLabels.type_verb || 'Verb',
+      phrase: uiLabels.type_phrase || 'Phrase',
+      connector: uiLabels.type_connector || 'Connector',
+      grammar: uiLabels.type_grammar || 'Grammar'
+    };
+    return map[card.type] || uiLabels.card_word || 'Card';
+  }
+
+  function formatHighlight(text) {
+    if (!text) return '';
+    return String(text).replace(/\*(.*?)\*/g, '<span class="highlighter">$1</span>');
+  }
+
+  function getMetaFacts() {
+    const meta = card.metadata || {};
+    const facts = [];
+    for (const field of (config.noun_metadata_fields || [])) {
+      const raw = meta[field.key] || card[field.key];
+      if (!raw || raw === '~') continue;
+      let value = String(raw);
+      let colour;
+      if (field.render === 'gender_label') value = getGenderLabel(raw);
+      else if (field.render === 'article_badge') colour = getArticleColour(raw);
+      facts.push({ label: field.label, value, colour });
+    }
+    return facts;
+  }
+
+  // ── Render ──────────────────────────────────────────────────────────────
+  const container = document.querySelector('.learning-card');
+  if (!container) { console.error('LearningCard: container not found'); }
+
+  function sel(cls) { return container?.querySelector(cls); }
+
+  // Type badge
+  sel('.lc-type-badge').textContent = getTypeLabel();
+
+  // Level badge
+  sel('.lc-level-badge').textContent = card.level || '';
+
+  // Article
+  const article = card.metadata?.article;
+  const articleWrap = sel('.lc-article-wrap');
+  const articleEl   = sel('.lc-article');
+  if (article && card.tags?.includes('noun') && !card.metadata?.plural_only) {
+    articleEl.textContent  = article;
+    articleEl.style.color  = getArticleColour(article);
+    articleWrap.style.display = '';
+  } else {
+    articleWrap.style.display = 'none';
+  }
+
+  // Word
+  sel('.lc-word').textContent = stripArticle(card.target);
+
+  // Translation
+  sel('.lc-translation').textContent = card.source || '';
+
+  // Plural / forms
+  const plural = card.metadata?.plural;
+  const formsEl = sel('.lc-forms');
+  const prefix = uiLabels.plural_prefix || 'Pl.';
+  const pluralOnly = uiLabels.plural_only || 'Plural only';
+  if (plural && !card.metadata?.plural_only) formsEl.textContent = `${prefix} ${plural}`;
+  else if (card.metadata?.plural_only) formsEl.textContent = pluralOnly;
+  else formsEl.textContent = '';
+
+  // Meta grid
+  const metaGrid = sel('.lc-meta-grid');
+  const facts = getMetaFacts();
+  if (facts.length) {
+    const cols = Math.min(facts.length, 4);
+    metaGrid.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
+    metaGrid.innerHTML = facts.map((f, i) => `
+      <div class="px-5 py-4 ${i < facts.length - 1 ? 'border-r' : ''}" style="border-color:var(--border);">
+        <p class="text-[9px] font-bold uppercase tracking-widest mb-1" style="color:var(--text-muted);">${f.label}</p>
+        <p class="text-sm font-bold" style="color:${f.colour || 'var(--text)'};">${f.value}</p>
+      </div>
+    `).join('');
+  } else {
+    metaGrid.style.display = 'none';
+  }
+
+  // Grammar note
+  const grammarWrap = sel('.lc-grammar-wrap');
+  if (card.grammar_note) {
+    sel('.lc-grammar-text').innerHTML = formatHighlight(card.grammar_note);
+    grammarWrap.classList.remove('hidden');
+  }
+
+  // Grammar label from config
+  const uiLabels = config.ui_labels || {};
+  if (uiLabels.grammar_note_heading) sel('.lc-grammar-label').textContent = uiLabels.grammar_note_heading;
+  if (uiLabels.examples_heading)     sel('.lc-examples-label').textContent = uiLabels.examples_heading;
+  if (uiLabels.audio_button)         { const el = sel('.lc-audio-label'); if (el) el.textContent = uiLabels.audio_button; }
+
+  // ── Type-specific blocks ─────────────────────────────────────────────────
+
+  // Verb: conjugation table
+  const type = card.type || (card.tags?.includes('verb') ? 'verb' : 'vocab');
+  if (type === 'verb' && card.conjugations) {
+    const conjWrap  = sel('.lc-conjugation-wrap');
+    const conjInner = sel('.lc-conjugation-inner');
+    conjWrap.classList.remove('hidden');
+
+    let conjArray = [];
+    if (Array.isArray(card.conjugations)) {
+      conjArray = card.conjugations;
+    } else {
+      for (const [tense, forms] of Object.entries(card.conjugations)) {
+        if (typeof forms === 'string') {
+          conjArray.push({ tense, stringForm: forms });
+        } else {
+          const formsArr = Object.entries(forms).map(([pronoun, form]) => ({ pronoun, form }));
+          conjArray.push({ tense, forms: formsArr });
+        }
+      }
+    }
+
+    const tensesToRender = config.verb_tenses || conjArray.map(t => t.tense);
+
+    const stringTenses = [];
+    const tableTenses = [];
+
+    tensesToRender.forEach(tense => {
+      const t = conjArray.find(c => c.tense === tense);
+      if (!t) return;
+      if (t.stringForm) stringTenses.push(t);
+      else tableTenses.push(t);
+    });
+
+    let html = '';
+
+    // Render simple string forms (e.g. Perfekt, Partizip II) as pill-like tags at the top
+    if (stringTenses.length > 0) {
+      html += `
+        <div class="flex flex-wrap gap-3 mb-6">
+          ${stringTenses.map(t => `
+            <div class="rounded-xl border px-4 py-2.5 flex items-center gap-3 shadow-sm" style="border-color:var(--border); background-color:var(--bg);">
+              <span class="text-[10px] font-bold uppercase tracking-widest opacity-80" style="color:var(--espresso);">${t.tense.replace(/_/g, ' ')}</span>
+              <span class="font-bold text-sm" style="color:var(--text);">${t.stringForm}</span>
+            </div>
+          `).join('')}
+        </div>
+      `;
+    }
+
+    // Render full tables (e.g. Präsens, Präteritum) as a unified table
+    if (tableTenses.length > 0) {
+      // Collect all pronouns from the first available table tense
+      const pronouns = tableTenses[0].forms.map(f => f.pronoun);
+
+      html += `
+        <div class="rounded-xl border overflow-x-auto shadow-sm w-full" style="border-color:var(--border);">
+          <table class="w-full text-sm text-left">
+            <thead>
+              <tr style="background-color:var(--bg); border-bottom: 1px solid var(--border);">
+                <th class="px-4 py-3 font-bold uppercase tracking-widest text-[10px] w-[1%]" style="color:var(--espresso); border-right: 1px solid var(--border);"></th>
+                ${tableTenses.map(t => `
+                  <th class="px-4 py-3 font-bold uppercase tracking-widest text-[10px]" style="color:var(--espresso);">${t.tense.replace(/_/g, ' ')}</th>
+                `).join('')}
+              </tr>
+            </thead>
+            <tbody>
+              ${pronouns.map((pronoun, ri) => `
+                <tr class="${ri < pronouns.length - 1 ? 'border-b' : ''}" style="border-color:var(--border);">
+                  <td class="px-4 py-3 font-bold text-xs whitespace-nowrap" style="color:var(--espresso); background-color:var(--bg); border-right: 1px solid var(--border);">${pronoun}</td>
+                  ${tableTenses.map(t => {
+                    const formObj = t.forms.find(f => f.pronoun === pronoun);
+                    return `<td class="px-4 py-3 font-semibold whitespace-nowrap" style="color:var(--text);">${formObj ? formObj.form : '-'}</td>`;
+                  }).join('')}
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+        </div>
+      `;
+    }
+
+    conjInner.innerHTML = html;
+  }
+
+  // Connector: word order block
+  if (type === 'connector' && card.word_order) {
+    const woWrap = sel('.lc-wordorder-wrap');
+    sel('.lc-wordorder-text').textContent = card.word_order;
+    woWrap.classList.remove('hidden');
+  }
+
+  // Phrase: preposition rule block
+  if (type === 'phrase' && card.clause_type) {
+    const phraseWrap = sel('.lc-phrase-wrap');
+    sel('.lc-phrase-rule').textContent = card.clause_type;
+    phraseWrap.classList.remove('hidden');
+  }
+
+  // ── Examples ─────────────────────────────────────────────────────────────
+  const examplesEl = sel('.lc-examples');
+  const rawExamples = card.examples || [];
+
+  if (rawExamples.length) {
+    examplesEl.innerHTML = rawExamples.map(e => `
+        <div class="rounded-2xl border overflow-hidden" style="border-color:var(--border);">
+          <div class="px-4 py-3" style="background-color:var(--bg);">
+            <p class="font-semibold leading-snug mb-1" style="color:var(--text);">${formatHighlight(e.target)}</p>
+            <p class="text-sm italic" style="color:var(--text-muted);">${formatHighlight(e.source || '')}</p>
+          </div>
+          ${e.note ? `<div class="px-4 py-2 border-t" style="border-color:var(--border);">
+            <p class="text-[10px] font-bold font-mono" style="color:var(--espresso);">📐 ${e.note}</p>
+          </div>` : ''}
+        </div>
+      `).join('');
+  } else {
+    examplesEl.innerHTML = `<p class="text-sm italic" style="color:var(--text-muted);">${uiLabels.no_example || ''}</p>`;
+  }
+
+  // ── Tags ─────────────────────────────────────────────────────────────────
+  const tagsEl = sel('.lc-tags');
+  tagsEl.innerHTML = (card.tags || []).map(t => `
+    <span class="text-[10px] font-bold px-2 py-0.5 rounded-md border uppercase" style="border-color:var(--border); color:var(--text-muted); background-color:var(--bg);">${t}</span>
+  `).join('');
+
+  // ── Audio button ─────────────────────────────────────────────────────────
+  sel('.lc-audio-btn')?.addEventListener('click', () => {
+    if (window.LoungeAudioEngine) {
+      window.LoungeAudioEngine.speak(card.target || '', config.speech_lang, 0.85);
+    }
+  });
+})();</script></div><!-- ── Navigation ───────────────────────────── --><div class="flex items-center justify-between mt-8 gap-4" data-astro-cid-5tabbh6g><button id="btn-prev" disabled class="flex items-center gap-2 px-6 py-3 rounded-2xl border font-bold text-sm transition-all hover:opacity-70 active:scale-95 disabled:opacity-30 disabled:cursor-not-allowed" style="border-color:var(--border); color:var(--text); background-color:var(--card);" data-astro-cid-5tabbh6g><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><path d="m15 18-6-6 6-6" data-astro-cid-5tabbh6g></path></svg>Volver</button><!-- Dot navigation --><div id="dot-nav" class="flex items-center gap-1.5 flex-wrap justify-center max-w-xs overflow-hidden" style="max-height:2rem;" data-astro-cid-5tabbh6g><!-- populated by JS --></div><button id="btn-next" class="flex items-center gap-2 px-6 py-3 rounded-2xl font-bold text-sm transition-all hover:opacity-80 active:scale-95" style="background-color:var(--espresso); color:#F5F2EB;" data-astro-cid-5tabbh6g>Siguiente<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><path d="m9 18 6-6-6-6" data-astro-cid-5tabbh6g></path></svg></button></div><!-- Keyboard hint --><p class="text-center text-xs font-medium mt-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>← → Flechas para navegar · A para escuchar</p></div><!-- ── List View ───────────────────────────── --><div id="list-view-wrap" class="hidden space-y-6" data-astro-cid-5tabbh6g><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>reivindicar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to claim, to demand rights</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -ar verb used heavily in socio-political contexts to demand rights or vindicate causes.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Ejemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Los manifestantes salieron a la calle para reivindicar mejores condiciones laborales y sociales.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The protesters took to the street to demand better working and social conditions.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>concienciar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to raise awareness</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -ar verb; often takes the preposition 'sobre' when introducing the topic of awareness.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Ejemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Las ONG organizan talleres para concienciar a los jóvenes sobre el cambio climático.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>NGOs organize workshops to raise young people's awareness about climate change.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>marginar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to marginalize</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -ar verb used when discussing social exclusion and discrimination.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Ejemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>La pobreza extrema suele marginar a los sectores más vulnerables de la población urbana.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Extreme poverty tends to marginalize the most vulnerable sectors of the urban population.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>subvencionar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to subsidize, to fund</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -ar verb referring to financial support for social programs or public services.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Ejemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>El gobierno decidió subvencionar los programas de integración para inmigrantes.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The government decided to subsidize integration programs for immigrants.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>erradicar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to eradicate</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -ar verb with spelling change in preterite yo (c -> qu: erradiqué).</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Ejemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>La principal prioridad del nuevo plan de desarrollo es erradicar la pobreza extrema.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The main priority of the new development plan is to eradicate extreme poverty.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>protestar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to protest</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -ar verb; often used with 'contra' to denote opposition to policies.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Ejemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Cientos de ciudadanos salieron a protestar contra la subida de los impuestos.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Hundreds of citizens went out to protest against the tax increase.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>cofinanciar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to co-finance</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -ar verb; compound of financiar, used in institutional cooperation.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Ejemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>La Unión Europea va a cofinanciar varios proyectos de desarrollo sostenible.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The European Union is going to co-finance several sustainable development projects.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>promover</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to promote</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>-er verb with o>ue stem change in present (promuevo, promueves...). Regular past tenses.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Ejemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Las nuevas leyes buscan promover la igualdad de oportunidades en el ámbito laboral.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The new laws seek to promote equal opportunities in the workplace.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>reinsertar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to reintegrate (socially/professionally)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -ar verb used in contexts of prisoner rehabilitation and social reentry.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Ejemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Los centros penitenciarios deben esforzarse por reinsertar a los presos en la sociedad.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Penitentiary centers must strive to reintegrate prisoners into society.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>manifestarse</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to demonstrate, to protest (reflexive)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Reflexive -ar verb; requires reflexive pronouns (me, te, se, nos, os, se).</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Ejemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Miles de estudiantes se manifestaron pacíficamente frente al ministerio de educación.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Thousands of students demonstrated peacefully in front of the ministry of education.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>apoyar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to support, to back</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -ar verb used to express backing for causes, groups, or candidates.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Ejemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>La fundación apoya iniciativas locales para mejorar el acceso al agua potable.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The foundation supports local initiatives to improve access to drinking water.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>desarrollar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to develop</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -ar verb; often applied to communities, programs, or human capacities.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Ejemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>El programa busca desarrollar las habilidades de liderazgo entre los jóvenes rurales.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The program seeks to develop leadership skills among rural youth.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>integrar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to integrate</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -ar verb frequently used in discussions about multiculturalism and social inclusion.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Ejemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>La escuela desempeña un papel clave para integrar a los niños de diversas procedencias.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The school plays a key role in integrating children from diverse backgrounds.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>impulsar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to boost, to drive, to promote</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -ar verb used metaphorically to drive forward social initiatives or economic growth.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Ejemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>El ayuntamiento quiere impulsar medidas ecológicas para reducir la contaminación.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The city council wants to drive ecological measures to reduce pollution.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>repartir</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to distribute, to share out</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -ir verb frequently used when talking about wealth redistribution or aid delivery.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Ejemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Los voluntarios pasaron la mañana a repartir alimentos entre las familias sin recursos.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The volunteers spent the morning distributing food among destitute families.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>rebelarse</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to rebel (reflexive)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Reflexive -ar verb; often takes preposition 'contra' to denote rebellion against injustice.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Ejemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Los ciudadanos se rebelaron contra las injustas medidas de austeridad económica.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The citizens rebelled against the unfair economic austerity measures.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>visibilizar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to make visible, to bring to light</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -ar verb very common in modern social movements to highlight hidden issues.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Ejemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Esta campaña pretende visibilizar los problemas de salud mental en el entorno laboral.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>This campaign aims to bring mental health problems in the workplace to light.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>financiar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to finance, to fund</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -ar verb with written accent on the 'i' in present/imperfect endings (financiáis, etc.).</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Ejemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Un grupo de inversores privados va a financiar la creación de viviendas sociales.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>A group of private investors is going to fund the creation of social housing.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>reivindicarse</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to vindicate oneself, to redeem oneself</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Reflexive -ar verb used when a group or individual asserts their dignity or worth.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Ejemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>El sector cultural busca reivindicarse tras años de recortes presupuestarios.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The cultural sector seeks to redeem itself after years of budget cuts.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>reclamar</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to demand, to call for</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota gramatical</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -ar verb frequently used in formal complaints and social demands.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Ejemplo</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Los sindicatos salieron a reclamar mejores medidas de seguridad en las obras.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The unions came out to demand better safety measures at construction sites.</p></div></div></div></div></div></div><!-- ══ TRAIN PANEL ════════════════════════════ --><div id="train-panel" class="hidden space-y-10" data-astro-cid-5tabbh6g><div class="cafe-card rounded-3xl p-8 border shadow-lg max-w-xl mx-auto" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="text-center mb-8" data-astro-cid-5tabbh6g><h2 class="text-2xl font-extrabold font-outfit mb-2" style="color:var(--text);" data-astro-cid-5tabbh6g>Configurar entrenamiento</h2><p class="text-sm font-medium" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Configura tu sesión de entrenamiento.</p></div><form action="/languagelounge/en-es/training/verbs/train/" method="GET" class="space-y-8" id="deck-train-form" data-astro-cid-5tabbh6g><input type="hidden" name="level" value="b2" data-astro-cid-5tabbh6g><input type="hidden" name="deck" value="verbs-b2-social_change" data-astro-cid-5tabbh6g><!-- Mode selection --><div class="space-y-3" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold tracking-widest uppercase" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Tipo de pregunta</p><div class="grid grid-cols-2 gap-3" data-astro-cid-5tabbh6g><button type="button" data-group="mode" data-value="mc" class="sel-opt sel-active" data-astro-cid-5tabbh6g><span class="text-xl mb-1 block" data-astro-cid-5tabbh6g>🔘</span><span class="text-sm font-bold" data-astro-cid-5tabbh6g>Opción múltiple</span></button><button type="button" data-group="mode" data-value="type" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-xl mb-1 block" data-astro-cid-5tabbh6g>⌨️</span><span class="text-sm font-bold" data-astro-cid-5tabbh6g>Entrada de texto</span></button></div><input type="hidden" name="mode" id="mode-hidden" value="mc" data-astro-cid-5tabbh6g></div><!-- Direction selection --><div class="space-y-3" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold tracking-widest uppercase" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Dirección</p><div class="grid grid-cols-2 gap-3" data-astro-cid-5tabbh6g><button type="button" data-group="dir" data-value="en-es" class="sel-opt sel-active" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>🇺🇸 English → 🇪🇸 Español</span></button><button type="button" data-group="dir" data-value="es-en" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>🇪🇸 Español → 🇺🇸 English</span></button></div><input type="hidden" name="dir" id="dir-hidden" value="en-es" data-astro-cid-5tabbh6g></div><!-- Count Selection --><div class="space-y-3" data-astro-cid-5tabbh6g><div class="flex justify-between items-end" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold tracking-widest uppercase" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Cantidad</p><span class="text-xs font-bold" style="color:var(--espresso);" data-astro-cid-5tabbh6g>20 tarjetas en el mazo</span></div><div class="grid grid-cols-4 gap-3" data-astro-cid-5tabbh6g><button type="button" data-group="count" data-value="30" class="sel-opt sel-active" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>30</span></button><button type="button" data-group="count" data-value="60" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>60</span></button><button type="button" data-group="count" data-value="90" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>90</span></button><button type="button" data-group="count" data-value="1000" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>Todas</span></button></div><input type="hidden" name="count" id="count-hidden" value="30" data-astro-cid-5tabbh6g></div><button type="submit" class="w-full py-4 rounded-xl font-bold text-base transition-all hover:opacity-90 mt-4 shadow-md active:scale-[0.98]" style="background-color:var(--espresso); color:#F5F2EB;" data-astro-cid-5tabbh6g>Iniciar entrenamiento &rarr;</button></form></div></div></div></main><footer class="mt-auto border-t py-8" style="background-color:var(--bg);border-color:var(--border);"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-medium" style="color:var(--text-muted);"><div>&copy; 2025 - 2026 Small Talk Café Podcasts. All rights reserved.</div><div class="flex gap-4">Made in Bayern ❤️ Los Geht's!</div></div></footer><!-- Minimal script for Theme and Dropdown toggle --><script>
+      // ── Theme ──────────────────────────────────────
+      function applyTheme(dark) {
+        if (dark) {
+          document.documentElement.classList.add('dark');
+          localStorage.setItem('wortschatz_theme', 'dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+          localStorage.setItem('wortschatz_theme', 'light');
+        }
+        const icon = document.getElementById('theme-icon');
+        const label = document.getElementById('theme-label');
+        if (icon) icon.textContent = dark ? '🌙' : '☀️';
+        if (label) label.textContent = dark ? 'Dark' : 'Light';
+      }
+
+      const isDark = document.documentElement.classList.contains('dark');
+      applyTheme(isDark);
+
+      document.getElementById('theme-toggle')?.addEventListener('click', () => {
+        const nowDark = !document.documentElement.classList.contains('dark');
+        applyTheme(nowDark);
+      });
+
+      // ── Dropdown Toggle ──────────────────────────
+      const langBtn = document.getElementById('lang-btn');
+      const langMenu = document.getElementById('lang-menu');
+
+      langBtn?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        langMenu?.classList.toggle('hidden');
+      });
+
+      document.addEventListener('click', () => {
+        langMenu?.classList.add('hidden');
+      });
+    </script></body></html><script type="module" src="/languagelounge/_astro/_deckId_.astro_astro_type_script_index_0_lang.DwXABuW8.js"></script><script>(function(){const cardsJson = "[{\"id\":\"verbs-b2-social_change-001\",\"target\":\"reivindicar\",\"source\":\"to claim, to demand rights\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Regular -ar verb used heavily in socio-political contexts to demand rights or vindicate causes.\",\"examples\":[{\"target\":\"Los manifestantes salieron a la calle para reivindicar mejores condiciones laborales y sociales.\",\"source\":\"The protesters took to the street to demand better working and social conditions.\"},{\"target\":\"Es necesario reivindicar el papel de la mujer en la historia contemporánea.\",\"source\":\"It is necessary to reclaim the role of women in contemporary history.\"}],\"conjugations\":{\"presente\":{\"yo\":\"reivindico\",\"tú\":\"reivindicas\",\"él/ella/usted\":\"reivindica\",\"nosotros\":\"reivindicamos\",\"vosotros\":\"reivindicáis\",\"ellos/ellas/ustedes\":\"reivindican\"},\"pretérito_indefinido\":{\"yo\":\"reivindiqué\",\"tú\":\"reivindicaste\",\"él/ella/usted\":\"reivindicó\",\"nosotros\":\"reivindicamos\",\"vosotros\":\"reivindicasteis\",\"ellos/ellas/ustedes\":\"reivindicaron\"},\"pretérito_imperfecto\":{\"yo\":\"reivindicaba\",\"tú\":\"reivindicabas\",\"él/ella/usted\":\"reivindicaba\",\"nosotros\":\"reivindicábamos\",\"vosotros\":\"reivindicabais\",\"ellos/ellas/ustedes\":\"reivindicaban\"},\"futuro_simple\":{\"yo\":\"reivindicaré\",\"tú\":\"reivindicarás\",\"él/ella/usted\":\"reivindicará\",\"nosotros\":\"reivindicaremos\",\"vosotros\":\"reivindicaréis\",\"ellos/ellas/ustedes\":\"reivindicarán\"},\"condicional_simple\":{\"yo\":\"reivindicaría\",\"tú\":\"reivindicarías\",\"él/ella/usted\":\"reivindicaría\",\"nosotros\":\"reivindicaríamos\",\"vosotros\":\"reivindicaríais\",\"ellos/ellas/ustedes\":\"reivindicarían\"},\"pretérito_perfecto\":\"ha reivindicado\",\"participio\":\"reivindicado\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-social_change-002\",\"target\":\"concienciar\",\"source\":\"to raise awareness\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Regular -ar verb; often takes the preposition 'sobre' when introducing the topic of awareness.\",\"examples\":[{\"target\":\"Las ONG organizan talleres para concienciar a los jóvenes sobre el cambio climático.\",\"source\":\"NGOs organize workshops to raise young people's awareness about climate change.\"},{\"target\":\"Tenemos que concienciar a la sociedad de la importancia de la igualdad de género.\",\"source\":\"We have to make society aware of the importance of gender equality.\"}],\"conjugations\":{\"presente\":{\"yo\":\"conciencio\",\"tú\":\"conciencias\",\"él/ella/usted\":\"conciencia\",\"nosotros\":\"concienciamos\",\"vosotros\":\"concienciáis\",\"ellos/ellas/ustedes\":\"conciencian\"},\"pretérito_indefinido\":{\"yo\":\"conciencié\",\"tú\":\"concienciaste\",\"él/ella/usted\":\"concienció\",\"nosotros\":\"concienciamos\",\"vosotros\":\"concienciasteis\",\"ellos/ellas/ustedes\":\"concienciaron\"},\"pretérito_imperfecto\":{\"yo\":\"concienciaba\",\"tú\":\"concienciabas\",\"él/ella/usted\":\"concienciaba\",\"nosotros\":\"concienciábamos\",\"vosotros\":\"concienciabais\",\"ellos/ellas/ustedes\":\"concienciaban\"},\"futuro_simple\":{\"yo\":\"concienciaré\",\"tú\":\"concienciarás\",\"él/ella/usted\":\"concienciará\",\"nosotros\":\"concienciaremos\",\"vosotros\":\"concienciaréis\",\"ellos/ellas/ustedes\":\"concienciarán\"},\"condicional_simple\":{\"yo\":\"concienciaría\",\"tú\":\"concienciarías\",\"él/ella/usted\":\"concienciaría\",\"nosotros\":\"concienciaríamos\",\"vosotros\":\"concienciaríais\",\"ellos/ellas/ustedes\":\"concienciarían\"},\"pretérito_perfecto\":\"ha concienciado\",\"participio\":\"concienciado\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-social_change-003\",\"target\":\"marginar\",\"source\":\"to marginalize\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Regular -ar verb used when discussing social exclusion and discrimination.\",\"examples\":[{\"target\":\"La pobreza extrema suele marginar a los sectores más vulnerables de la población urbana.\",\"source\":\"Extreme poverty tends to marginalize the most vulnerable sectors of the urban population.\"},{\"target\":\"El sistema educativo no debe marginar a ningún alumno por motivos económicos.\",\"source\":\"The educational system must not marginalize any student for economic reasons.\"}],\"conjugations\":{\"presente\":{\"yo\":\"margino\",\"tú\":\"marginas\",\"él/ella/usted\":\"margina\",\"nosotros\":\"marginamos\",\"vosotros\":\"margináis\",\"ellos/ellas/ustedes\":\"marginan\"},\"pretérito_indefinido\":{\"yo\":\"marginé\",\"tú\":\"marginaste\",\"él/ella/usted\":\"marginó\",\"nosotros\":\"marginamos\",\"vosotros\":\"marginasteis\",\"ellos/ellas/ustedes\":\"marginaron\"},\"pretérito_imperfecto\":{\"yo\":\"marginaba\",\"tú\":\"marginabas\",\"él/ella/usted\":\"marginaba\",\"nosotros\":\"marginábamos\",\"vosotros\":\"marginabais\",\"ellos/ellas/ustedes\":\"marginaban\"},\"futuro_simple\":{\"yo\":\"marginaré\",\"tú\":\"marginarás\",\"él/ella/usted\":\"marginará\",\"nosotros\":\"marginaremos\",\"vosotros\":\"marginaréis\",\"ellos/ellas/ustedes\":\"marginarán\"},\"condicional_simple\":{\"yo\":\"marginaría\",\"tú\":\"marginarías\",\"él/ella/usted\":\"marginaría\",\"nosotros\":\"marginaríamos\",\"vosotros\":\"marginaríais\",\"ellos/ellas/ustedes\":\"marginarían\"},\"pretérito_perfecto\":\"ha marginado\",\"participio\":\"marginado\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-social_change-004\",\"target\":\"subvencionar\",\"source\":\"to subsidize, to fund\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Regular -ar verb referring to financial support for social programs or public services.\",\"examples\":[{\"target\":\"El gobierno decidió subvencionar los programas de integración para inmigrantes.\",\"source\":\"The government decided to subsidize integration programs for immigrants.\"},{\"target\":\"Muchas asociaciones culturales necesitan que el Estado las subvencione para sobrevivir.\",\"source\":\"Many cultural associations need the State to subsidize them in order to survive.\"}],\"conjugations\":{\"presente\":{\"yo\":\"subvenciono\",\"tú\":\"subvencionas\",\"él/ella/usted\":\"subvenciona\",\"nosotros\":\"subvencionamos\",\"vosotros\":\"subvencionáis\",\"ellos/ellas/ustedes\":\"subvencionan\"},\"pretérito_indefinido\":{\"yo\":\"subvencioné\",\"tú\":\"subvencionaste\",\"él/ella/usted\":\"subvencionó\",\"nosotros\":\"subvencionamos\",\"vosotros\":\"subvencionasteis\",\"ellos/ellas/ustedes\":\"subvencionaron\"},\"pretérito_imperfecto\":{\"yo\":\"subvencionaba\",\"tú\":\"subvencionabas\",\"él/ella/usted\":\"subvencionaba\",\"nosotros\":\"subvencionábamos\",\"vosotros\":\"subvencionabais\",\"ellos/ellas/ustedes\":\"subvencionaban\"},\"futuro_simple\":{\"yo\":\"subvencionaré\",\"tú\":\"subvencionarás\",\"él/ella/usted\":\"subvencionará\",\"nosotros\":\"subvencionaremos\",\"vosotros\":\"subvencionaréis\",\"ellos/ellas/ustedes\":\"subvencionarán\"},\"condicional_simple\":{\"yo\":\"subvencionaría\",\"tú\":\"subvencionarías\",\"él/ella/usted\":\"subvencionaría\",\"nosotros\":\"subvencionaríamos\",\"vosotros\":\"subvencionaríais\",\"ellos/ellas/ustedes\":\"subvencionarían\"},\"pretérito_perfecto\":\"ha subvencionado\",\"participio\":\"subvencionado\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-social_change-005\",\"target\":\"erradicar\",\"source\":\"to eradicate\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Regular -ar verb with spelling change in preterite yo (c -> qu: erradiqué).\",\"examples\":[{\"target\":\"La principal prioridad del nuevo plan de desarrollo es erradicar la pobreza extrema.\",\"source\":\"The main priority of the new development plan is to eradicate extreme poverty.\"},{\"target\":\"Es muy difícil erradicar la corrupción en las instituciones públicas sin una reforma profunda.\",\"source\":\"It is very difficult to eradicate corruption in public institutions without a profound reform.\"}],\"conjugations\":{\"presente\":{\"yo\":\"erradico\",\"tú\":\"erradicas\",\"él/ella/usted\":\"erradica\",\"nosotros\":\"erradicamos\",\"vosotros\":\"erradicáis\",\"ellos/ellas/ustedes\":\"erradican\"},\"pretérito_indefinido\":{\"yo\":\"erradiqué\",\"tú\":\"erradicaste\",\"él/ella/usted\":\"erradicó\",\"nosotros\":\"erradicamos\",\"vosotros\":\"erradicasteis\",\"ellos/ellas/ustedes\":\"erradicaron\"},\"pretérito_imperfecto\":{\"yo\":\"erradicaba\",\"tú\":\"erradicabas\",\"él/ella/usted\":\"erradicaba\",\"nosotros\":\"erradicábamos\",\"vosotros\":\"erradicabais\",\"ellos/ellas/ustedes\":\"erradicaban\"},\"futuro_simple\":{\"yo\":\"erradicaré\",\"tú\":\"erradicarás\",\"él/ella/usted\":\"erradicará\",\"nosotros\":\"erradicaremos\",\"vosotros\":\"erradicaréis\",\"ellos/ellas/ustedes\":\"erradicarán\"},\"condicional_simple\":{\"yo\":\"erradicaría\",\"tú\":\"erradicarías\",\"él/ella/usted\":\"erradicaría\",\"nosotros\":\"erradicaríamos\",\"vosotros\":\"erradicaríais\",\"ellos/ellas/ustedes\":\"erradicarían\"},\"pretérito_perfecto\":\"ha erradicado\",\"participio\":\"erradicado\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-social_change-006\",\"target\":\"protestar\",\"source\":\"to protest\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Regular -ar verb; often used with 'contra' to denote opposition to policies.\",\"examples\":[{\"target\":\"Cientos de ciudadanos salieron a protestar contra la subida de los impuestos.\",\"source\":\"Hundreds of citizens went out to protest against the tax increase.\"},{\"target\":\"Los trabajadores decidieron protestar por el retraso en el pago de sus salarios.\",\"source\":\"The workers decided to protest due to the delay in the payment of their wages.\"}],\"conjugations\":{\"presente\":{\"yo\":\"protesto\",\"tú\":\"protestas\",\"él/ella/usted\":\"protesta\",\"nosotros\":\"protestamos\",\"vosotros\":\"protestáis\",\"ellos/ellas/ustedes\":\"protestan\"},\"pretérito_indefinido\":{\"yo\":\"protesté\",\"tú\":\"protestaste\",\"él/ella/usted\":\"protestó\",\"nosotros\":\"protestamos\",\"vosotros\":\"protestasteis\",\"ellos/ellas/ustedes\":\"protestaron\"},\"pretérito_imperfecto\":{\"yo\":\"protestaba\",\"tú\":\"protestabas\",\"él/ella/usted\":\"protestaba\",\"nosotros\":\"protestábamos\",\"vosotros\":\"protestabais\",\"ellos/ellas/ustedes\":\"protestaban\"},\"futuro_simple\":{\"yo\":\"protestaré\",\"tú\":\"protestarás\",\"él/ella/usted\":\"protestará\",\"nosotros\":\"protestaremos\",\"vosotros\":\"protestaréis\",\"ellos/ellas/ustedes\":\"protestarán\"},\"condicional_simple\":{\"yo\":\"protestaría\",\"tú\":\"protestarías\",\"él/ella/usted\":\"protestaría\",\"nosotros\":\"protestaríamos\",\"vosotros\":\"protestaríais\",\"ellos/ellas/ustedes\":\"protestarían\"},\"pretérito_perfecto\":\"ha protestado\",\"participio\":\"protestado\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-social_change-007\",\"target\":\"cofinanciar\",\"source\":\"to co-finance\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Regular -ar verb; compound of financiar, used in institutional cooperation.\",\"examples\":[{\"target\":\"La Unión Europea va a cofinanciar varios proyectos de desarrollo sostenible.\",\"source\":\"The European Union is going to co-finance several sustainable development projects.\"},{\"target\":\"El ayuntamiento aceptó cofinanciar la construcción del nuevo centro cívico.\",\"source\":\"The city council agreed to co-finance the construction of the new civic center.\"}],\"conjugations\":{\"presente\":{\"yo\":\"cofinancio\",\"tú\":\"cofinancias\",\"él/ella/usted\":\"cofinancia\",\"nosotros\":\"cofinanciamos\",\"vosotros\":\"cofinanciáis\",\"ellos/ellas/ustedes\":\"cofinancian\"},\"pretérito_indefinido\":{\"yo\":\"cofinancié\",\"tú\":\"cofinanciaste\",\"él/ella/usted\":\"cofinanció\",\"nosotros\":\"cofinanciamos\",\"vosotros\":\"cofinanciasteis\",\"ellos/ellas/ustedes\":\"cofinanciaron\"},\"pretérito_imperfecto\":{\"yo\":\"cofinanciaba\",\"tú\":\"cofinanciabas\",\"él/ella/usted\":\"cofinanciaba\",\"nosotros\":\"cofinanciábamos\",\"vosotros\":\"cofinanciabais\",\"ellos/ellas/ustedes\":\"cofinanciaban\"},\"futuro_simple\":{\"yo\":\"cofinanciaré\",\"tú\":\"cofinanciarás\",\"él/ella/usted\":\"cofinanciará\",\"nosotros\":\"cofinanciaremos\",\"vosotros\":\"cofinanciaréis\",\"ellos/ellas/ustedes\":\"cofinanciarán\"},\"condicional_simple\":{\"yo\":\"cofinanciaría\",\"tú\":\"cofinanciarías\",\"él/ella/usted\":\"cofinanciaría\",\"nosotros\":\"cofinanciaríamos\",\"vosotros\":\"cofinanciaríais\",\"ellos/ellas/ustedes\":\"cofinanciarían\"},\"pretérito_perfecto\":\"ha cofinanciado\",\"participio\":\"cofinanciado\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-social_change-008\",\"target\":\"promover\",\"source\":\"to promote\",\"type\":\"stem_changing\",\"cefr\":\"B2\",\"grammar_note\":\"-er verb with o>ue stem change in present (promuevo, promueves...). Regular past tenses.\",\"examples\":[{\"target\":\"Las nuevas leyes buscan promover la igualdad de oportunidades en el ámbito laboral.\",\"source\":\"The new laws seek to promote equal opportunities in the workplace.\"},{\"target\":\"Es fundamental promover el debate ciudadano sobre las reformas políticas.\",\"source\":\"It is essential to promote civic debate regarding political reforms.\"}],\"conjugations\":{\"presente\":{\"yo\":\"promuevo\",\"tú\":\"promueves\",\"él/ella/usted\":\"promueve\",\"nosotros\":\"promovemos\",\"vosotros\":\"promovéis\",\"ellos/ellas/ustedes\":\"promueven\"},\"pretérito_indefinido\":{\"yo\":\"promoví\",\"tú\":\"promoviste\",\"él/ella/usted\":\"promovió\",\"nosotros\":\"promovimos\",\"vosotros\":\"promovisteis\",\"ellos/ellas/ustedes\":\"promovieron\"},\"pretérito_imperfecto\":{\"yo\":\"promovía\",\"tú\":\"promovías\",\"él/ella/usted\":\"promovía\",\"nosotros\":\"promovíamos\",\"vosotros\":\"promovíais\",\"ellos/ellas/ustedes\":\"promovían\"},\"futuro_simple\":{\"yo\":\"promoveré\",\"tú\":\"promoverás\",\"él/ella/usted\":\"promoverá\",\"nosotros\":\"promoveremos\",\"vosotros\":\"promoveréis\",\"ellos/ellas/ustedes\":\"promoverán\"},\"condicional_simple\":{\"yo\":\"promovería\",\"tú\":\"promoverías\",\"él/ella/usted\":\"promovería\",\"nosotros\":\"promoveríamos\",\"vosotros\":\"promoveríais\",\"ellos/ellas/ustedes\":\"promoverían\"},\"pretérito_perfecto\":\"ha promovido\",\"participio\":\"promovido\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-social_change-009\",\"target\":\"reinsertar\",\"source\":\"to reintegrate (socially/professionally)\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Regular -ar verb used in contexts of prisoner rehabilitation and social reentry.\",\"examples\":[{\"target\":\"Los centros penitenciarios deben esforzarse por reinsertar a los presos en la sociedad.\",\"source\":\"Penitentiary centers must strive to reintegrate prisoners into society.\"},{\"target\":\"Hay pocos programas eficaces para reinsertar a los desempleados de larga duración.\",\"source\":\"There are few effective programs to reintegrate long-term unemployed people.\"}],\"conjugations\":{\"presente\":{\"yo\":\"reinserto\",\"tú\":\"reinsertas\",\"él/ella/usted\":\"reinserta\",\"nosotros\":\"reinsertamos\",\"vosotros\":\"reinsertáis\",\"ellos/ellas/ustedes\":\"reinsertan\"},\"pretérito_indefinido\":{\"yo\":\"reinserté\",\"tú\":\"reinsertaste\",\"él/ella/usted\":\"reinsertó\",\"nosotros\":\"reinsertamos\",\"vosotros\":\"reinsertasteis\",\"ellos/ellas/ustedes\":\"reinsertaron\"},\"pretérito_imperfecto\":{\"yo\":\"reinsertaba\",\"tú\":\"reinsertabas\",\"él/ella/usted\":\"reinsertaba\",\"nosotros\":\"reinsertábamos\",\"vosotros\":\"reinsertabais\",\"ellos/ellas/ustedes\":\"reinsertaban\"},\"futuro_simple\":{\"yo\":\"reinsertaré\",\"tú\":\"reinsertarás\",\"él/ella/usted\":\"reinsertará\",\"nosotros\":\"reinsertaremos\",\"vosotros\":\"reinsertaréis\",\"ellos/ellas/ustedes\":\"reinsertarán\"},\"condicional_simple\":{\"yo\":\"reinsertaría\",\"tú\":\"reinsertarías\",\"él/ella/usted\":\"reinsertaría\",\"nosotros\":\"reinsertaríamos\",\"vosotros\":\"reinsertaríais\",\"ellos/ellas/ustedes\":\"reinsertarían\"},\"pretérito_perfecto\":\"ha reinsertado\",\"participio\":\"reinsertado\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-social_change-010\",\"target\":\"manifestarse\",\"source\":\"to demonstrate, to protest (reflexive)\",\"type\":\"reflexive\",\"cefr\":\"B2\",\"grammar_note\":\"Reflexive -ar verb; requires reflexive pronouns (me, te, se, nos, os, se).\",\"examples\":[{\"target\":\"Miles de estudiantes se manifestaron pacíficamente frente al ministerio de educación.\",\"source\":\"Thousands of students demonstrated peacefully in front of the ministry of education.\"},{\"target\":\"Los ciudadanos tienen el derecho democrático de manifestarse cuando no están de acuerdo.\",\"source\":\"Citizens have the democratic right to protest when they disagree.\"}],\"conjugations\":{\"presente\":{\"yo\":\"me manifiesto\",\"tú\":\"te manifiestas\",\"él/ella/usted\":\"se manifiesta\",\"nosotros\":\"nos manifestamos\",\"vosotros\":\"os manifestáis\",\"ellos/ellas/ustedes\":\"se manifiestan\"},\"pretérito_indefinido\":{\"yo\":\"me manifesté\",\"tú\":\"te manifestaste\",\"él/ella/usted\":\"se manifestó\",\"nosotros\":\"nos manifestamos\",\"vosotros\":\"os manifestasteis\",\"ellos/ellas/ustedes\":\"se manifestaron\"},\"pretérito_imperfecto\":{\"yo\":\"me manifestaba\",\"tú\":\"te manifestabas\",\"él/ella/usted\":\"se manifestaba\",\"nosotros\":\"nos manifestábamos\",\"vosotros\":\"os manifestabais\",\"ellos/ellas/ustedes\":\"se manifestaban\"},\"futuro_simple\":{\"yo\":\"me manifestaré\",\"tú\":\"te manifestarás\",\"él/ella/usted\":\"se manifestará\",\"nosotros\":\"nos manifestaremos\",\"vosotros\":\"os manifestaréis\",\"ellos/ellas/ustedes\":\"se manifestarán\"},\"condicional_simple\":{\"yo\":\"me manifestaría\",\"tú\":\"te manifestarías\",\"él/ella/usted\":\"se manifestaría\",\"nosotros\":\"nos manifestaríamos\",\"vosotros\":\"os manifestaríais\",\"ellos/ellas/ustedes\":\"se manifestarían\"},\"pretérito_perfecto\":\"se ha manifestado\",\"participio\":\"manifestado\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-social_change-011\",\"target\":\"apoyar\",\"source\":\"to support, to back\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Regular -ar verb used to express backing for causes, groups, or candidates.\",\"examples\":[{\"target\":\"La fundación apoya iniciativas locales para mejorar el acceso al agua potable.\",\"source\":\"The foundation supports local initiatives to improve access to drinking water.\"},{\"target\":\"Decidimos apoyar la campaña solidaria organizada por los vecinos del barrio.\",\"source\":\"We decided to support the solidarity campaign organized by the neighborhood residents.\"}],\"conjugations\":{\"presente\":{\"yo\":\"apoyo\",\"tú\":\"apoyas\",\"él/ella/usted\":\"apoya\",\"nosotros\":\"apoyamos\",\"vosotros\":\"apoyáis\",\"ellos/ellas/ustedes\":\"apoyan\"},\"pretérito_indefinido\":{\"yo\":\"apoyé\",\"tú\":\"apoyaste\",\"él/ella/usted\":\"apoyó\",\"nosotros\":\"apoyamos\",\"vosotros\":\"apoyasteis\",\"ellos/ellas/ustedes\":\"apoyaron\"},\"pretérito_imperfecto\":{\"yo\":\"apoyaba\",\"tú\":\"apoyabas\",\"él/ella/usted\":\"apoyaba\",\"nosotros\":\"apoyábamos\",\"vosotros\":\"apoyabais\",\"ellos/ellas/ustedes\":\"apoyaban\"},\"futuro_simple\":{\"yo\":\"apoyaré\",\"tú\":\"apoyarás\",\"él/ella/usted\":\"apoyará\",\"nosotros\":\"apoyaremos\",\"vosotros\":\"apoyaréis\",\"ellos/ellas/ustedes\":\"apoyarán\"},\"condicional_simple\":{\"yo\":\"apoyaría\",\"tú\":\"apoyarías\",\"él/ella/usted\":\"apoyaría\",\"nosotros\":\"apoyaríamos\",\"vosotros\":\"apoyaríais\",\"ellos/ellas/ustedes\":\"apoyarían\"},\"pretérito_perfecto\":\"ha apoyado\",\"participio\":\"apoyado\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-social_change-012\",\"target\":\"desarrollar\",\"source\":\"to develop\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Regular -ar verb; often applied to communities, programs, or human capacities.\",\"examples\":[{\"target\":\"El programa busca desarrollar las habilidades de liderazgo entre los jóvenes rurales.\",\"source\":\"The program seeks to develop leadership skills among rural youth.\"},{\"target\":\"Las políticas públicas deben ayudar a desarrollar regiones económicamente deprimidas.\",\"source\":\"Public policies must help develop economically depressed regions.\"}],\"conjugations\":{\"presente\":{\"yo\":\"desarrollo\",\"tú\":\"desarrollas\",\"él/ella/usted\":\"desarrolla\",\"nosotros\":\"desarrollamos\",\"vosotros\":\"desarrolláis\",\"ellos/ellas/ustedes\":\"desarrollan\"},\"pretérito_indefinido\":{\"yo\":\"desarrollé\",\"tú\":\"desarrollaste\",\"él/ella/usted\":\"desarrolló\",\"nosotros\":\"desarrollamos\",\"vosotros\":\"desarrollasteis\",\"ellos/ellas/ustedes\":\"desarrollaron\"},\"pretérito_imperfecto\":{\"yo\":\"desarrollaba\",\"tú\":\"desarrollabas\",\"él/ella/usted\":\"desarrollaba\",\"nosotros\":\"desarrollábamos\",\"vosotros\":\"desarrollabais\",\"ellos/ellas/ustedes\":\"desarrollaban\"},\"futuro_simple\":{\"yo\":\"desarrollaré\",\"tú\":\"desarrollarás\",\"él/ella/usted\":\"desarrollará\",\"nosotros\":\"desarrollaremos\",\"vosotros\":\"desarrollaréis\",\"ellos/ellas/ustedes\":\"desarrollarán\"},\"condicional_simple\":{\"yo\":\"desarrollaría\",\"tú\":\"desarrollarías\",\"él/ella/usted\":\"desarrollaría\",\"nosotros\":\"desarrollaríamos\",\"vosotros\":\"desarrollaríais\",\"ellos/ellas/ustedes\":\"desarrollarían\"},\"pretérito_perfecto\":\"ha desarrollado\",\"participio\":\"desarrollado\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-social_change-013\",\"target\":\"integrar\",\"source\":\"to integrate\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Regular -ar verb frequently used in discussions about multiculturalism and social inclusion.\",\"examples\":[{\"target\":\"La escuela desempeña un papel clave para integrar a los niños de diversas procedencias.\",\"source\":\"The school plays a key role in integrating children from diverse backgrounds.\"},{\"target\":\"Debemos esforzarnos por integrar a las personas con discapacidad en la vida laboral.\",\"source\":\"We must strive to integrate people with disabilities into working life.\"}],\"conjugations\":{\"presente\":{\"yo\":\"integro\",\"tú\":\"integras\",\"él/ella/usted\":\"integra\",\"nosotros\":\"integramos\",\"vosotros\":\"integráis\",\"ellos/ellas/ustedes\":\"integran\"},\"pretérito_indefinido\":{\"yo\":\"integré\",\"tú\":\"integraste\",\"él/ella/usted\":\"integró\",\"nosotros\":\"integramos\",\"vosotros\":\"integrasteis\",\"ellos/ellas/ustedes\":\"integraron\"},\"pretérito_imperfecto\":{\"yo\":\"integraba\",\"tú\":\"integrabas\",\"él/ella/usted\":\"integraba\",\"nosotros\":\"integrábamos\",\"vosotros\":\"integrabais\",\"ellos/ellas/ustedes\":\"integraban\"},\"futuro_simple\":{\"yo\":\"integraré\",\"tú\":\"integrarás\",\"él/ella/usted\":\"integrará\",\"nosotros\":\"integraremos\",\"vosotros\":\"integraréis\",\"ellos/ellas/ustedes\":\"integrarán\"},\"condicional_simple\":{\"yo\":\"integraría\",\"tú\":\"integrarías\",\"él/ella/usted\":\"integraría\",\"nosotros\":\"integraríamos\",\"vosotros\":\"integraríais\",\"ellos/ellas/ustedes\":\"integrarían\"},\"pretérito_perfecto\":\"ha integrado\",\"participio\":\"integrado\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-social_change-014\",\"target\":\"impulsar\",\"source\":\"to boost, to drive, to promote\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Regular -ar verb used metaphorically to drive forward social initiatives or economic growth.\",\"examples\":[{\"target\":\"El ayuntamiento quiere impulsar medidas ecológicas para reducir la contaminación.\",\"source\":\"The city council wants to drive ecological measures to reduce pollution.\"},{\"target\":\"Varios colectivos se unieron para impulsar una ley de protección animal.\",\"source\":\"Several groups came together to push for an animal protection law.\"}],\"conjugations\":{\"presente\":{\"yo\":\"impulso\",\"tú\":\"impulsas\",\"él/ella/usted\":\"impulsa\",\"nosotros\":\"impulsamos\",\"vosotros\":\"impulsáis\",\"ellos/ellas/ustedes\":\"impulsan\"},\"pretérito_indefinido\":{\"yo\":\"impulsé\",\"tú\":\"impulsaste\",\"él/ella/usted\":\"impulsó\",\"nosotros\":\"impulsamos\",\"vosotros\":\"impulsasteis\",\"ellos/ellas/ustedes\":\"impulsaron\"},\"pretérito_imperfecto\":{\"yo\":\"impulsaba\",\"tú\":\"impulsabas\",\"él/ella/usted\":\"impulsaba\",\"nosotros\":\"impulsábamos\",\"vosotros\":\"impulsabais\",\"ellos/ellas/ustedes\":\"impulsaban\"},\"futuro_simple\":{\"yo\":\"impulsaré\",\"tú\":\"impulsarás\",\"él/ella/usted\":\"impulsará\",\"nosotros\":\"impulsaremos\",\"vosotros\":\"impulsaréis\",\"ellos/ellas/ustedes\":\"impulsarán\"},\"condicional_simple\":{\"yo\":\"impulsaría\",\"tú\":\"impulsarías\",\"él/ella/usted\":\"impulsaría\",\"nosotros\":\"impulsaríamos\",\"vosotros\":\"impulsaríais\",\"ellos/ellas/ustedes\":\"impulsarían\"},\"pretérito_perfecto\":\"ha impulsado\",\"participio\":\"impulsado\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-social_change-015\",\"target\":\"repartir\",\"source\":\"to distribute, to share out\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Regular -ir verb frequently used when talking about wealth redistribution or aid delivery.\",\"examples\":[{\"target\":\"Los voluntarios pasaron la mañana a repartir alimentos entre las familias sin recursos.\",\"source\":\"The volunteers spent the morning distributing food among destitute families.\"},{\"target\":\"Es necesario repartir la riqueza de manera más justa en todo el país.\",\"source\":\"It is necessary to distribute wealth more fairly throughout the country.\"}],\"conjugations\":{\"presente\":{\"yo\":\"reparto\",\"tú\":\"repartas\",\"él/ella/usted\":\"reparta\",\"nosotros\":\"repartimos\",\"vosotros\":\"repartís\",\"ellos/ellas/ustedes\":\"repartan\"},\"pretérito_indefinido\":{\"yo\":\"repartí\",\"tú\":\"repartiste\",\"él/ella/usted\":\"repartió\",\"nosotros\":\"repartimos\",\"vosotros\":\"repartisteis\",\"ellos/ellas/ustedes\":\"repartieron\"},\"pretérito_imperfecto\":{\"yo\":\"repartía\",\"tú\":\"repartías\",\"él/ella/usted\":\"repartía\",\"nosotros\":\"repartíamos\",\"vosotros\":\"repartíais\",\"ellos/ellas/ustedes\":\"repartían\"},\"futuro_simple\":{\"yo\":\"repartiré\",\"tú\":\"repartirás\",\"él/ella/usted\":\"repartirá\",\"nosotros\":\"repartiremos\",\"vosotros\":\"repartiréis\",\"ellos/ellas/ustedes\":\"repartirán\"},\"condicional_simple\":{\"yo\":\"repartiría\",\"tú\":\"repartirías\",\"él/ella/usted\":\"repartiría\",\"nosotros\":\"repartiríamos\",\"vosotros\":\"repartiríais\",\"ellos/ellas/ustedes\":\"repartirían\"},\"pretérito_perfecto\":\"ha repartido\",\"participio\":\"repartido\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-social_change-016\",\"target\":\"rebelarse\",\"source\":\"to rebel (reflexive)\",\"type\":\"reflexive\",\"cefr\":\"B2\",\"grammar_note\":\"Reflexive -ar verb; often takes preposition 'contra' to denote rebellion against injustice.\",\"examples\":[{\"target\":\"Los ciudadanos se rebelaron contra las injustas medidas de austeridad económica.\",\"source\":\"The citizens rebelled against the unfair economic austerity measures.\"},{\"target\":\"Los jóvenes suelen rebelarse ante las normas establecidas que consideran obsoletas.\",\"source\":\"Young people tend to rebel against established rules that they consider obsolete.\"}],\"conjugations\":{\"presente\":{\"yo\":\"me rebelo\",\"tú\":\"te rebelas\",\"él/ella/usted\":\"se rebela\",\"nosotros\":\"nos rebelamos\",\"vosotros\":\"os rebeláis\",\"ellos/ellas/ustedes\":\"se rebelan\"},\"pretérito_indefinido\":{\"yo\":\"me rebelé\",\"tú\":\"te rebelaste\",\"él/ella/usted\":\"se rebeló\",\"nosotros\":\"nos rebelamos\",\"vosotros\":\"os rebelasteis\",\"ellos/ellas/ustedes\":\"se rebelaron\"},\"pretérito_imperfecto\":{\"yo\":\"me rebelaba\",\"tú\":\"te rebelabas\",\"él/ella/usted\":\"se rebelaba\",\"nosotros\":\"nos rebelábamos\",\"vosotros\":\"os rebelabais\",\"ellos/ellas/ustedes\":\"se rebelaban\"},\"futuro_simple\":{\"yo\":\"me rebelaré\",\"tú\":\"te rebelarás\",\"él/ella/usted\":\"se rebelará\",\"nosotros\":\"nos rebelaremos\",\"vosotros\":\"os rebelaréis\",\"ellos/ellas/ustedes\":\"se rebelarán\"},\"condicional_simple\":{\"yo\":\"me rebelaría\",\"tú\":\"te rebelarías\",\"él/ella/usted\":\"se rebelaría\",\"nosotros\":\"nos rebelaríamos\",\"vosotros\":\"os rebelaríais\",\"ellos/ellas/ustedes\":\"se rebelarían\"},\"pretérito_perfecto\":\"se ha rebelado\",\"participio\":\"rebelado\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-social_change-017\",\"target\":\"visibilizar\",\"source\":\"to make visible, to bring to light\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Regular -ar verb very common in modern social movements to highlight hidden issues.\",\"examples\":[{\"target\":\"Esta campaña pretende visibilizar los problemas de salud mental en el entorno laboral.\",\"source\":\"This campaign aims to bring mental health problems in the workplace to light.\"},{\"target\":\"Es fundamental visibilizar la labor invisible que realizan los cuidadores.\",\"source\":\"It is essential to make the invisible work done by caregivers visible.\"}],\"conjugations\":{\"presente\":{\"yo\":\"visibilizo\",\"tú\":\"visibilizas\",\"él/ella/usted\":\"visibiliza\",\"nosotros\":\"visibilizamos\",\"vosotros\":\"visibilizáis\",\"ellos/ellas/ustedes\":\"visibilizan\"},\"pretérito_indefinido\":{\"yo\":\"visibilicé\",\"tú\":\"visibilizaste\",\"él/ella/usted\":\"visibilizó\",\"nosotros\":\"visibilizamos\",\"vosotros\":\"visibilizasteis\",\"ellos/ellas/ustedes\":\"visibilizaron\"},\"pretérito_imperfecto\":{\"yo\":\"visibilizaba\",\"tú\":\"visibilizabas\",\"él/ella/usted\":\"visibilizaba\",\"nosotros\":\"visibilizábamos\",\"vosotros\":\"visibilizabais\",\"ellos/ellas/ustedes\":\"visibilizaban\"},\"futuro_simple\":{\"yo\":\"visibilizaré\",\"tú\":\"visibilizarás\",\"él/ella/usted\":\"visibilizará\",\"nosotros\":\"visibilizaremos\",\"vosotros\":\"visibilizaréis\",\"ellos/ellas/ustedes\":\"visibilizarán\"},\"condicional_simple\":{\"yo\":\"visibilizaría\",\"tú\":\"visibilizarías\",\"él/ella/usted\":\"visibilizaría\",\"nosotros\":\"visibilizaríamos\",\"vosotros\":\"visibilizaríais\",\"ellos/ellas/ustedes\":\"visibilizarían\"},\"pretérito_perfecto\":\"ha visibilizado\",\"participio\":\"visibilizado\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-social_change-018\",\"target\":\"financiar\",\"source\":\"to finance, to fund\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Regular -ar verb with written accent on the 'i' in present/imperfect endings (financiáis, etc.).\",\"examples\":[{\"target\":\"Un grupo de inversores privados va a financiar la creación de viviendas sociales.\",\"source\":\"A group of private investors is going to fund the creation of social housing.\"},{\"target\":\"El sindicato se niega a financiar campañas políticas con fondos de los afiliados.\",\"source\":\"The union refuses to finance political campaigns with members' funds.\"}],\"conjugations\":{\"presente\":{\"yo\":\"financio\",\"tú\":\"financias\",\"él/ella/usted\":\"financia\",\"nosotros\":\"financiamos\",\"vosotros\":\"financiáis\",\"ellos/ellas/ustedes\":\"financian\"},\"pretérito_indefinido\":{\"yo\":\"financié\",\"tú\":\"financiaste\",\"él/ella/usted\":\"financió\",\"nosotros\":\"financiamos\",\"vosotros\":\"financiasteis\",\"ellos/ellas/ustedes\":\"financiaron\"},\"pretérito_imperfecto\":{\"yo\":\"financiaba\",\"tú\":\"financiabas\",\"él/ella/usted\":\"financiaba\",\"nosotros\":\"financiábamos\",\"vosotros\":\"financiabais\",\"ellos/ellas/ustedes\":\"financiaban\"},\"futuro_simple\":{\"yo\":\"financiaré\",\"tú\":\"financiarás\",\"él/ella/usted\":\"financiará\",\"nosotros\":\"financiaremos\",\"vosotros\":\"financiaréis\",\"ellos/ellas/ustedes\":\"financiarán\"},\"condicional_simple\":{\"yo\":\"financiaría\",\"tú\":\"financiarías\",\"él/ella/usted\":\"financiaría\",\"nosotros\":\"financiaríamos\",\"vosotros\":\"financiaríais\",\"ellos/ellas/ustedes\":\"financiarían\"},\"pretérito_perfecto\":\"ha financiado\",\"participio\":\"financiado\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-social_change-019\",\"target\":\"reivindicarse\",\"source\":\"to vindicate oneself, to redeem oneself\",\"type\":\"reflexive\",\"cefr\":\"B2\",\"grammar_note\":\"Reflexive -ar verb used when a group or individual asserts their dignity or worth.\",\"examples\":[{\"target\":\"El sector cultural busca reivindicarse tras años de recortes presupuestarios.\",\"source\":\"The cultural sector seeks to redeem itself after years of budget cuts.\"},{\"target\":\"Los deportistas de minorías luchan por reivindicarse en el panorama internacional.\",\"source\":\"Minority athletes fight to assert themselves on the international stage.\"}],\"conjugations\":{\"presente\":{\"yo\":\"me reivindico\",\"tú\":\"te reivindicas\",\"él/ella/usted\":\"se reivindica\",\"nosotros\":\"nos reivindicamos\",\"vosotros\":\"os reivindicáis\",\"ellos/ellas/ustedes\":\"se reivindican\"},\"pretérito_indefinido\":{\"yo\":\"me reivindiqué\",\"tú\":\"te reivindicaste\",\"él/ella/usted\":\"se reivindicó\",\"nosotros\":\"nos reivindicamos\",\"vosotros\":\"os reivindicasteis\",\"ellos/ellas/ustedes\":\"se reivindicaron\"},\"pretérito_imperfecto\":{\"yo\":\"me reivindicaba\",\"tú\":\"te reivindicabas\",\"él/ella/usted\":\"se reivindicaba\",\"nosotros\":\"nos reivindicábamos\",\"vosotros\":\"os reivindicabais\",\"ellos/ellas/ustedes\":\"se reivindicaban\"},\"futuro_simple\":{\"yo\":\"me reivindicaré\",\"tú\":\"te reivindicarás\",\"él/ella/usted\":\"se reivindicará\",\"nosotros\":\"nos reivindicaremos\",\"vosotros\":\"os reivindicaréis\",\"ellos/ellas/ustedes\":\"se reivindicarán\"},\"condicional_simple\":{\"yo\":\"me reivindicaría\",\"tú\":\"te reivindicarías\",\"él/ella/usted\":\"se reivindicaría\",\"nosotros\":\"nos reivindicaríamos\",\"vosotros\":\"os reivindicaríais\",\"ellos/ellas/ustedes\":\"se reivindicarían\"},\"pretérito_perfecto\":\"se ha reivindicado\",\"participio\":\"reivindicado\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-social_change-020\",\"target\":\"reclamar\",\"source\":\"to demand, to call for\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Regular -ar verb frequently used in formal complaints and social demands.\",\"examples\":[{\"target\":\"Los sindicatos salieron a reclamar mejores medidas de seguridad en las obras.\",\"source\":\"The unions came out to demand better safety measures at construction sites.\"},{\"target\":\"Es hora de reclamar nuestros derechos fundamentales sin miedo a represalias.\",\"source\":\"It is time to demand our fundamental rights without fear of retaliation.\"}],\"conjugations\":{\"presente\":{\"yo\":\"reclamo\",\"tú\":\"reclamas\",\"él/ella/usted\":\"reclama\",\"nosotros\":\"reclamamos\",\"vosotros\":\"reclamáis\",\"ellos/ellas/ustedes\":\"reclaman\"},\"pretérito_indefinido\":{\"yo\":\"reclamé\",\"tú\":\"reclamaste\",\"él/ella/usted\":\"reclamó\",\"nosotros\":\"reclamamos\",\"vosotros\":\"reclamasteis\",\"ellos/ellas/ustedes\":\"reclamaron\"},\"pretérito_imperfecto\":{\"yo\":\"reclamaba\",\"tú\":\"reclamabas\",\"él/ella/usted\":\"reclamaba\",\"nosotros\":\"reclamábamos\",\"vosotros\":\"reclamabais\",\"ellos/ellas/ustedes\":\"reclamaban\"},\"futuro_simple\":{\"yo\":\"reclamaré\",\"tú\":\"reclamarás\",\"él/ella/usted\":\"reclamará\",\"nosotros\":\"reclamaremos\",\"vosotros\":\"reclamaréis\",\"ellos/ellas/ustedes\":\"reclamarán\"},\"condicional_simple\":{\"yo\":\"reclamaría\",\"tú\":\"reclamarías\",\"él/ella/usted\":\"reclamaría\",\"nosotros\":\"reclamaríamos\",\"vosotros\":\"reclamaríais\",\"ellos/ellas/ustedes\":\"reclamarían\"},\"pretérito_perfecto\":\"ha reclamado\",\"participio\":\"reclamado\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}}]";
+const langConfigJson = "{\"language_pair\":\"english_spanish\",\"target_lang\":\"es\",\"native_lang\":\"en\",\"target_lang_name\":\"Español\",\"native_lang_name\":\"English\",\"speech_lang\":\"es-ES\",\"noun_metadata_fields\":[{\"key\":\"article\",\"label\":\"Artículo\",\"render\":\"article_badge\"},{\"key\":\"gender\",\"label\":\"Género\",\"render\":\"gender_label\"},{\"key\":\"plural\",\"label\":\"Plural\",\"render\":\"text\"}],\"article_colours\":{\"el\":\"#4A7C9E\",\"la\":\"#B05070\"},\"gender_labels\":{\"m\":\"Masculino\",\"f\":\"Femenino\"},\"verb_tenses\":[\"presente\",\"pretérito_indefinido\",\"pretérito_imperfecto\",\"pretérito_perfecto\",\"participio\",\"futuro_simple\",\"condicional_simple\"],\"cases\":{},\"ui_labels\":{\"learn_mode\":\"Aprender\",\"train_mode\":\"Entrenar\",\"examples_heading\":\"Frases de ejemplo\",\"grammar_note_heading\":\"Nota gramatical\",\"audio_button\":\"Escuchar\",\"back_link\":\"Volver\",\"card_counter\":\"Tarjeta {current} / {total}\",\"next_button\":\"Siguiente\",\"finish_button\":\"Terminar\",\"correct\":\"¡Correcto!\",\"wrong\":\"Incorrecto\",\"dashboard_link\":\"Panel principal\",\"library_prompt\":\"Elige un mazo de la biblioteca y aprende todo el contenido de las tarjetas.\",\"cards_badge\":\"{count} TARJETAS\",\"cards_count\":\"{count} tarjetas\",\"deck_meta\":\"{topic} • {level} • {count} tarjetas\",\"no_decks\":\"Aún no hay mazos en esta categoría.\",\"setup_title\":\"Configurar entrenamiento\",\"setup_subtitle\":\"Configura tu sesión de entrenamiento.\",\"question_type\":\"Tipo de pregunta\",\"mode_multiple_choice\":\"Opción múltiple\",\"mode_typing\":\"Entrada de texto\",\"mode_typing_short\":\"Escritura\",\"direction\":\"Dirección\",\"direction_forward\":\"🇺🇸 English → 🇪🇸 Español\",\"direction_reverse\":\"🇪🇸 Español → 🇺🇸 English\",\"select_level\":\"Seleccionar nivel\",\"start_training\":\"Iniciar entrenamiento\",\"count_label\":\"Cantidad\",\"all_cards\":\"Todas\",\"in_deck\":\"en el mazo\",\"view_cards\":\"Tarjetas\",\"view_list\":\"Lista\",\"card_word\":\"Tarjeta\",\"keyboard_hint_study\":\"← → Flechas para navegar · A para escuchar\",\"example_single_heading\":\"Ejemplo\",\"no_example\":\"No hay ejemplo disponible.\",\"tags_label\":\"Etiquetas:\",\"type_vocab\":\"Vocabulario\",\"type_verb\":\"Verbo\",\"type_phrase\":\"Expresión\",\"type_connector\":\"Conector\",\"type_grammar\":\"Gramática\",\"type_noun\":\"Sustantivo\",\"type_adjective\":\"Adjetivo\",\"type_expression\":\"Locución\",\"plural_prefix\":\"Pl. {plural}\",\"plural_only\":\"solo plural\",\"word_order_heading\":\"Orden de palabras\",\"structure_heading\":\"Estructura\",\"training_title\":\"Entrenamiento\",\"all_levels\":\"Todos los niveles\",\"type_placeholder\":\"Escribe la palabra en español...\",\"check_button\":\"Comprobar\",\"keyboard_hint_train\":\"Intro / Espacio = confirmar · A = Escuchar\",\"audio_title\":\"Escuchar (A)\",\"training_finished\":\"¡Entrenamiento completado!\",\"missed_heading\":\"Respuestas incorrectas — para repetir\",\"retry_missed\":\"Repetir fallos\",\"new_config\":\"Nueva configuración\",\"plural_hint\":\"Pl: {plural}\",\"results_pct\":\"{pct}% de acierto\",\"result_excellent\":\"¡Excelente! Has dominado este nivel.\",\"result_good\":\"¡Muy bien! Un poco más de práctica y lo tendrás dominado.\",\"result_ok\":\"¡Buen comienzo! Repasa las tarjetas una vez más.\",\"result_retry\":\"¡Sin problema! La práctica hace al maestro.\",\"no_cards_title\":\"No se encontraron tarjetas\",\"no_cards_hint\":\"Por favor, elige otro nivel o mazo.\"},\"answer_normalisation\":{\"strip_leading_words\":[\"el\",\"la\",\"los\",\"las\",\"un\",\"una\",\"unos\",\"unas\"],\"alt_spellings\":{\"á\":\"a\",\"é\":\"e\",\"í\":\"i\",\"ó\":\"o\",\"ú\":\"u\",\"ñ\":\"n\",\"ü\":\"u\"}}}";
+const category = "verbs";
+const lang = "en-es";
+const base = "/languagelounge/";
+const defaultView = "cards";
+
+  const cards     = JSON.parse(cardsJson);
+  const config    = JSON.parse(langConfigJson);
+  let currentIndex = 0;
+
+  const dotNav    = document.getElementById('dot-nav');
+  const currentNum = document.getElementById('current-num');
+  const progressBar = document.getElementById('progress-bar');
+  const btnPrev   = document.getElementById('btn-prev');
+  const btnNext   = document.getElementById('btn-next');
+  const cardHost  = document.getElementById('card-host');
+  const progressCont = document.getElementById('progress-container');
+
+  const cardViewWrap = document.getElementById('card-view-wrap');
+  const listViewWrap = document.getElementById('list-view-wrap');
+  const btnViewCards = document.getElementById('view-cards-btn');
+  const btnViewList  = document.getElementById('view-list-btn');
+
+  // Toggle Logic
+  function setViewMode(mode) {
+    if (mode === 'list') {
+      cardViewWrap.classList.add('hidden');
+      listViewWrap.classList.remove('hidden');
+      progressCont.classList.add('hidden');
+      btnViewList.classList.add('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewList.classList.remove('text-[var(--text-muted)]');
+      btnViewCards.classList.remove('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewCards.classList.add('text-[var(--text-muted)]');
+    } else {
+      listViewWrap.classList.add('hidden');
+      cardViewWrap.classList.remove('hidden');
+      progressCont.classList.remove('hidden');
+      btnViewCards.classList.add('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewCards.classList.remove('text-[var(--text-muted)]');
+      btnViewList.classList.remove('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewList.classList.add('text-[var(--text-muted)]');
+    }
+  }
+
+  btnViewCards.addEventListener('click', () => setViewMode('cards'));
+  btnViewList.addEventListener('click', () => setViewMode('list'));
+
+  // Initial view is configured per category (config/language_pairs/*.yaml → categories[].default_view)
+  if (defaultView === 'list') {
+    setViewMode('list');
+  }
+
+
+
+  // ── Helpers (mirror card-renderer.ts — no module imports in inline scripts) ──
+  const articleColours = config.article_colours || {};
+  const genderLabels   = config.gender_labels   || {};
+  const speechLang     = config.speech_lang;
+  const ui             = config.ui_labels || {};
+  const fmt = (tpl, vars) => String(tpl).replace(/\{(\w+)\}/g, (m, k) => (k in vars ? vars[k] : m));
+  const formatHighlight = (text) => text ? String(text).replace(/\*(.*?)\*/g, '<span class="highlighter">$1</span>') : '';
+  // Articles come from the language config (keys of article_colours), never hardcoded
+  const articleList = Object.keys(articleColours);
+  const articlePatterns = articleList.map(a => {
+    const esc = a.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    return esc.endsWith("'") ? esc : `${esc}\\s+`;
+  });
+  const articleRe = articlePatterns.length
+    ? new RegExp('^(?:' + articlePatterns.join('|') + ')', 'i')
+    : null;
+
+  function stripArticle(w) {
+    return articleRe ? (w || '').replace(articleRe, '').trim() : (w || '').trim();
+  }
+
+  function getTypeLabel(card) {
+    const tags = card.tags || [];
+    if (tags.includes('noun'))       return ui.type_noun;
+    if (tags.includes('verb'))       return ui.type_verb;
+    if (tags.includes('adjective'))  return ui.type_adjective;
+    if (tags.includes('expression')) return ui.type_expression;
+    const byType = { vocab: ui.type_vocab, verb: ui.type_verb, phrase: ui.type_phrase, connector: ui.type_connector, grammar: ui.type_grammar };
+    return byType[card.type] || ui.type_vocab;
+  }
+
+  function normaliseEx(ex) {
+    return { target: ex.target||'', source: ex.source||'', note: ex.note };
+  }
+
+  function getMetaFacts(card) {
+    const meta = card.metadata || {};
+    const facts = [];
+    for (const field of (config.noun_metadata_fields || [])) {
+      const raw = meta[field.key];
+      if (!raw || raw==='~') continue;
+      let value = String(raw), colour;
+      if (field.render === 'gender_label')  value  = genderLabels[raw] || raw;
+      if (field.render === 'article_badge') colour = articleColours[raw.toLowerCase()] || 'var(--espresso)';
+      facts.push({ label: field.label, value, colour });
+    }
+    return facts;
+  }
+
+  // ── Card renderer ─────────────────────────────────────────────────────────
+  function renderCard(idx) {
+    const card = cards[idx];
+    if (!card || !cardHost) return;
+
+    const lc = cardHost.querySelector('.learning-card');
+    if (!lc) return;
+
+    function sel(cls) { return lc.querySelector(cls); }
+
+    // Type badge + level
+    sel('.lc-type-badge').textContent = getTypeLabel(card);
+    sel('.lc-level-badge').textContent = (card.level || '').toUpperCase();
+
+    // Article
+    const article = card.metadata?.article;
+    const articleWrap = sel('.lc-article-wrap');
+    const articleEl   = sel('.lc-article');
+    if (article && (card.tags||[]).includes('noun') && !card.metadata?.plural_only) {
+      articleEl.textContent = article;
+      articleEl.style.color = articleColours[article.toLowerCase()] || 'var(--espresso)';
+      articleWrap.style.display = '';
+    } else {
+      articleWrap.style.display = 'none';
+    }
+
+    // Word / translation / forms
+    sel('.lc-word').textContent        = stripArticle(card.target);
+    sel('.lc-translation').textContent = card.source || '';
+    const plural = card.metadata?.plural;
+    sel('.lc-forms').textContent = plural && !card.metadata?.plural_only ? fmt(ui.plural_prefix, { plural }) : card.metadata?.plural_only ? ui.plural_only : '';
+
+    // Meta grid
+    const metaGrid = sel('.lc-meta-grid');
+    const facts = getMetaFacts(card);
+    if (facts.length) {
+      metaGrid.style.gridTemplateColumns = `repeat(${Math.min(facts.length,4)}, 1fr)`;
+      metaGrid.style.display = '';
+      metaGrid.innerHTML = facts.map((f, i) => `
+        <div class="px-5 py-4 ${i<facts.length-1?'border-r':''}" style="border-color:var(--border);">
+          <p class="text-[9px] font-bold uppercase tracking-widest mb-1" style="color:var(--text-muted);">${f.label}</p>
+          <p class="text-sm font-bold" style="color:${f.colour||'var(--text)'};">${f.value}</p>
+        </div>`).join('');
+    } else {
+      metaGrid.style.display = 'none';
+    }
+
+    // Grammar note
+    const grammarWrap = sel('.lc-grammar-wrap');
+    if (card.grammar_note) {
+      sel('.lc-grammar-text').innerHTML = formatHighlight(card.grammar_note);
+      grammarWrap.classList.remove('hidden');
+    } else {
+      grammarWrap.classList.add('hidden');
+    }
+
+    // Examples
+    const examplesEl = sel('.lc-examples');
+    const rawEx = card.examples || [];
+    examplesEl.innerHTML = rawEx.length
+      ? rawEx.map(ex => { const e=normaliseEx(ex); return `
+          <div class="rounded-2xl border overflow-hidden" style="border-color:var(--border);">
+            <div class="px-4 py-3" style="background-color:var(--bg);">
+              <p class="font-semibold leading-snug mb-1" style="color:var(--text);">${e.target}</p>
+              <p class="text-sm italic" style="color:var(--text-muted);">${e.source||''}</p>
+            </div>
+            ${e.note?`<div class="px-4 py-2 border-t" style="border-color:var(--border);">
+              <p class="text-[10px] font-bold font-mono" style="color:var(--espresso);">📐 ${e.note}</p>
+            </div>`:''}
+          </div>`; }).join('')
+      : '<p class="text-sm italic" style="color:var(--text-muted);">' + ui.no_example + '</p>';
+
+    // Verb: conjugation table
+    const conjWrap  = sel('.lc-conjugation-wrap');
+    const conjInner = sel('.lc-conjugation-inner');
+    const cardType = card.type || (card.tags?.includes('verb') ? 'verb' : 'vocab');
+    if (conjWrap && conjInner) {
+      if (cardType === 'verb' && card.conjugations) {
+        conjWrap.classList.remove('hidden');
+        let conjArray = [];
+        if (Array.isArray(card.conjugations)) {
+          conjArray = card.conjugations;
+        } else {
+          for (const [tense, forms] of Object.entries(card.conjugations)) {
+            if (typeof forms === 'string') {
+              conjArray.push({ tense, stringForm: forms });
+            } else {
+              const formsArr = Object.entries(forms).map(([pronoun, form]) => ({ pronoun, form }));
+              conjArray.push({ tense, forms: formsArr });
+            }
+          }
+        }
+
+        const tensesToRender = config.verb_tenses || conjArray.map(t => t.tense);
+        const stringTenses = [];
+        const tableTenses = [];
+
+        tensesToRender.forEach(tense => {
+          const t = conjArray.find(c => c.tense === tense);
+          if (!t) return;
+          if (t.stringForm) stringTenses.push(t);
+          else tableTenses.push(t);
+        });
+
+        let html = '';
+        if (stringTenses.length > 0) {
+          html += `
+            <div class="flex flex-wrap gap-3 mb-6">
+              ${stringTenses.map(t => `
+                <div class="rounded-xl border px-4 py-2.5 flex items-center gap-3 shadow-sm" style="border-color:var(--border); background-color:var(--bg);">
+                  <span class="text-[10px] font-bold uppercase tracking-widest opacity-80" style="color:var(--espresso);">${t.tense.replace(/_/g, ' ')}</span>
+                  <span class="font-bold text-sm" style="color:var(--text);">${t.stringForm}</span>
+                </div>
+              `).join('')}
+            </div>
+          `;
+        }
+
+        if (tableTenses.length > 0) {
+          const pronouns = tableTenses[0].forms.map(f => f.pronoun);
+          html += `
+            <div class="rounded-xl border overflow-x-auto shadow-sm w-full" style="border-color:var(--border);">
+              <table class="w-full text-sm text-left">
+                <thead>
+                  <tr style="background-color:var(--bg); border-bottom: 1px solid var(--border);">
+                    <th class="px-4 py-3 font-bold uppercase tracking-widest text-[10px] w-[1%]" style="color:var(--espresso); border-right: 1px solid var(--border);"></th>
+                    ${tableTenses.map(t => `
+                      <th class="px-4 py-3 font-bold uppercase tracking-widest text-[10px]" style="color:var(--espresso);">${t.tense.replace(/_/g, ' ')}</th>
+                    `).join('')}
+                  </tr>
+                </thead>
+                <tbody>
+                  ${pronouns.map((pronoun, ri) => `
+                    <tr class="${ri < pronouns.length - 1 ? 'border-b' : ''}" style="border-color:var(--border);">
+                      <td class="px-4 py-3 font-bold text-xs whitespace-nowrap" style="color:var(--espresso); background-color:var(--bg); border-right: 1px solid var(--border);">${pronoun}</td>
+                      ${tableTenses.map(t => {
+                        const formObj = t.forms.find(f => f.pronoun === pronoun);
+                        return `<td class="px-4 py-3 font-semibold whitespace-nowrap" style="color:var(--text);">${formObj ? formObj.form : '-'}</td>`;
+                      }).join('')}
+                    </tr>
+                  `).join('')}
+                </tbody>
+              </table>
+            </div>
+          `;
+        }
+        conjInner.innerHTML = html;
+      } else {
+        conjWrap.classList.add('hidden');
+        conjInner.innerHTML = '';
+      }
+    }
+
+    // Connector: word order block
+    const woWrap = sel('.lc-wordorder-wrap');
+    if (woWrap) {
+      if (cardType === 'connector' && card.word_order) {
+        sel('.lc-wordorder-text').textContent = card.word_order;
+        woWrap.classList.remove('hidden');
+      } else {
+        woWrap.classList.add('hidden');
+      }
+    }
+
+    // Phrase: preposition rule block
+    const phraseWrap = sel('.lc-phrase-wrap');
+    if (phraseWrap) {
+      if (cardType === 'phrase' && card.clause_type) {
+        sel('.lc-phrase-rule').textContent = card.clause_type;
+        phraseWrap.classList.remove('hidden');
+      } else {
+        phraseWrap.classList.add('hidden');
+      }
+    }
+
+    // Tags
+    sel('.lc-tags').innerHTML = (card.tags||[]).map(t =>
+      `<span class="text-[10px] font-bold px-2 py-0.5 rounded-md border" style="border-color:var(--border);color:var(--text-muted);background-color:var(--bg);">${t}</span>`
+    ).join('');
+
+    // Progress UI
+    if (currentNum)  currentNum.textContent = String(idx+1);
+    if (progressBar) progressBar.style.width = `${Math.round(((idx+1)/cards.length)*100)}%`;
+    if (btnPrev)     btnPrev.disabled = idx === 0;
+    if (btnNext)     btnNext.innerHTML = idx === cards.length-1
+      ? '✓ ' + ui.finish_button
+      : ui.next_button + ' <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>';
+
+    updateDots();
+
+    // Re-bind audio button cleanly by cloning to strip old listeners
+    const oldBtn = sel('.lc-audio-btn');
+    if (oldBtn) {
+      const newBtn = oldBtn.cloneNode(true);
+      oldBtn.parentNode.replaceChild(newBtn, oldBtn);
+      newBtn.addEventListener('click', speakCurrent);
+    }
+  }
+
+  // ── Dot navigation ────────────────────────────────────────────────────────
+  function buildDots() {
+    if (!dotNav) return;
+    dotNav.innerHTML = '';
+    const maxVisible = 20;
+    const showAll = cards.length <= maxVisible;
+    cards.forEach((_, i) => {
+      if (!showAll && i >= maxVisible) return;
+      const dot = document.createElement('button');
+      dot.className = 'dot w-2 h-2 rounded-full transition-all duration-300 flex-shrink-0';
+      dot.style.backgroundColor = 'var(--border)';
+      dot.title = `${ui.card_word} ${i+1}`;
+      dot.addEventListener('click', () => goTo(i));
+      dotNav.appendChild(dot);
+    });
+    if (!showAll) {
+      const el = document.createElement('span');
+      el.textContent = `+${cards.length - maxVisible}`;
+      el.className = 'text-[10px] font-bold';
+      el.style.color = 'var(--text-muted)';
+      dotNav.appendChild(el);
+    }
+  }
+
+  function updateDots() {
+    dotNav?.querySelectorAll('.dot').forEach((dot, i) => {
+      dot.style.backgroundColor = i===currentIndex ? 'var(--espresso)' : 'var(--border)';
+      dot.style.width     = i===currentIndex ? '20px' : '8px';
+      dot.style.borderRadius = '4px';
+    });
+  }
+
+  // ── Audio ─────────────────────────────────────────────────────────────────
+  function speakCurrent() {
+    const card = cards[currentIndex];
+    if (!card) return;
+    if (window.LoungeAudioEngine) {
+      window.LoungeAudioEngine.speak(card.target || '', speechLang, 0.85);
+    }
+  }
+
+  // ── Navigate ─────────────────────────────────────────────────────────────
+  function goTo(idx) {
+    if (idx < 0 || idx >= cards.length) return;
+    currentIndex = idx;
+    renderCard(currentIndex);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  btnPrev?.addEventListener('click', () => goTo(currentIndex - 1));
+  btnNext?.addEventListener('click', () => {
+    if (currentIndex === cards.length - 1) window.location.href = `${base}${lang}/${category}/`;
+    else goTo(currentIndex + 1);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') goTo(currentIndex + 1);
+    if (e.key === 'ArrowLeft')  goTo(currentIndex - 1);
+    if (e.key === 'a' || e.key === 'A') speakCurrent();
+  });
+
+  // ── Learn / Train panel toggle ──────────────────────
+  const btnLearn = document.getElementById('btn-mode-learn');
+  const btnTrain = document.getElementById('btn-mode-train');
+  const pnlLearn = document.getElementById('learn-panel');
+  const pnlTrain = document.getElementById('train-panel');
+  const toolbar  = document.getElementById('learn-toolbar');
+
+  const STORAGE_KEY = `lounge:${lang}:${category}:deck:mode`;
+  let currentMode = localStorage.getItem(STORAGE_KEY) || 'learn';
+
+  function applyMode() {
+    if (currentMode === 'learn') {
+      btnLearn.style.backgroundColor = 'var(--espresso)';
+      btnLearn.style.color = '#F5F2EB';
+      btnTrain.style.backgroundColor = 'transparent';
+      btnTrain.style.color = 'var(--text-muted)';
+      pnlLearn.classList.remove('hidden');
+      toolbar.classList.remove('hidden');
+      pnlTrain.classList.add('hidden');
+    } else {
+      btnTrain.style.backgroundColor = 'var(--espresso)';
+      btnTrain.style.color = '#F5F2EB';
+      btnLearn.style.backgroundColor = 'transparent';
+      btnLearn.style.color = 'var(--text-muted)';
+      pnlTrain.classList.remove('hidden');
+      pnlLearn.classList.add('hidden');
+      toolbar.classList.add('hidden');
+    }
+    localStorage.setItem(STORAGE_KEY, currentMode);
+  }
+
+  btnLearn?.addEventListener('click', () => { currentMode = 'learn'; applyMode(); });
+  btnTrain?.addEventListener('click', () => { currentMode = 'train'; applyMode(); });
+  applyMode();
+
+  // ── Radio-style selectors (mode & dir & count) ─────────────
+  document.querySelectorAll('.sel-opt').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const group = btn.dataset.group;
+      document.querySelectorAll(`.sel-opt[data-group="${group}"]`).forEach(b => b.classList.remove('sel-active'));
+      btn.classList.add('sel-active');
+      const hidden = document.getElementById(`${group}-hidden`);
+      if (hidden) hidden.value = btn.dataset.value;
+    });
+  });
+
+  document.getElementById('deck-train-form')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const base = form.action;
+    const mode = document.getElementById('mode-hidden')?.value || 'mc';
+    const dir  = document.getElementById('dir-hidden')?.value || `${config.language_pair.source_code}-${config.language_pair.target_code}`.toLowerCase();
+    const count = document.getElementById('count-hidden')?.value || '30';
+    const level = form.querySelector('[name="level"]')?.value || '';
+    const deck = form.querySelector('[name="deck"]')?.value || '';
+    
+    const params = new URLSearchParams();
+    if(level) params.set('level', level);
+    params.set('deck', deck);
+    params.set('mode', mode);
+    params.set('dir', dir);
+    params.set('count', count);
+    
+    window.location.href = `${base}?${params.toString()}`;
+  });
+
+  // ── Init ─────────────────────────────────────────────────────────────────
+  buildDots();
+  // Card 0 is already rendered server-side via LearningCard component.
+  // Sync progress UI to reflect card 0 state.
+  updateDots();
+  if (progressBar) progressBar.style.width = `${Math.round(1/cards.length*100)}%`;
+  // Update card 0 using client-side config too (ensures langConfig is applied)
+  renderCard(0);
+})();</script>

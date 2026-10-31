@@ -1,0 +1,758 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="description" content="Lounge Italiano — Il tuo salotto dedicato alla lingua italiana — arricchisci il vocabolario, approfondisci la grammatica e vivi l'italiano da A1 a B2."><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/languagelounge/favicon.svg"><meta name="generator" content="Astro v7.3.5"><title>Change &amp; Development — Lounge Italiano</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet"><script>
+      (function() {
+        const saved = localStorage.getItem('wortschatz_theme');
+        if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script><link rel="stylesheet" href="/languagelounge/_astro/Layout.Cr1varBg.css"><style>.sel-opt[data-astro-cid-5tabbh6g]{border:2px solid var(--border);background-color:var(--card);color:var(--text);cursor:pointer;text-align:center;border-radius:12px;flex-direction:column;justify-content:center;align-items:center;width:100%;padding:14px 12px;transition:border-color .15s,background-color .15s,color .15s,box-shadow .15s;display:flex}.sel-opt[data-astro-cid-5tabbh6g]:hover{border-color:var(--border-hover);box-shadow:0 2px 8px #00000014}.sel-opt[data-astro-cid-5tabbh6g].sel-active{border-color:var(--espresso);background-color:var(--espresso);color:#f5f2eb;box-shadow:0 2px 12px #0000002e}
+</style></head><body class="antialiased min-h-screen flex flex-col" style="background-color:var(--bg);color:var(--text);"><!-- Header --><header class="sticky top-0 z-50 border-b" style="background-color:var(--bg);border-color:var(--border);"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between gap-4" style="height:4.5rem;"><!-- Logo + Language Switcher --><div class="flex items-center gap-4 shrink-0"><a href="/languagelounge/en-it/" class="flex items-center gap-2 group"><span class="font-outfit font-extrabold text-xl sm:text-2xl tracking-tight transition-colors" style="color:var(--text);">Small Talk Café<span class="font-normal text-base hidden sm:inline" style="color:var(--text-muted);"> | <span id="site-name">Lounge Italiano</span></span></span></a><!-- Language Selector Dropdown --><div class="relative" id="lang-dropdown-wrapper"><button id="lang-btn" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-sm font-bold transition-all hover:opacity-70" style="background-color:var(--bg); border-color:var(--border); color:var(--text);"><span id="lang-flag">🇮🇹</span><span id="lang-code">IT</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"></path></svg></button><div id="lang-menu" class="hidden absolute top-full left-0 mt-2 rounded-2xl border shadow-2xl overflow-hidden z-50 min-w-[260px] sm:min-w-[300px]" style="background-color:var(--card); border-color:var(--border);"><div class="px-3.5 py-2 text-[11px] font-bold uppercase tracking-wider border-b" style="background-color:var(--surface); border-color:var(--border); color:var(--text-muted);">Language Lounges</div><div><a href="/languagelounge/en-de/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇩🇪</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Deutsch Lounge</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">Der Raum für die deutsche Sprache</div></div></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-es/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇪🇸</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Lounge Español</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">El espacio para la lengua española</div></div></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-fr/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇫🇷</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Lounge Français</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">Le salon de la langue française</div></div></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-it/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-bold" style="color:var(--text); background-color:var(--surface);"><span class="text-2xl shrink-0">🇮🇹</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Lounge Italiano</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">Il salotto per la lingua italiana</div></div><span class="shrink-0 text-[10px] font-extrabold uppercase px-1.5 py-0.5 rounded" style="background-color:var(--accent); color:var(--bg);">Active</span></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-nl/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇳🇱</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Nederlands Lounge</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">Dé ontmoetingsplek voor de Nederlandse taal</div></div></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-pt/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇵🇹</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Lounge Português</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">O espaço para a língua portuguesa</div></div></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-sv/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇸🇪</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Svenska Lounge</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">Mötesplatsen för det svenska språket</div></div></a></div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/" class="w-full flex items-center gap-2.5 px-4 py-2.5 text-xs font-semibold hover:opacity-80 transition-colors " style="color:var(--text); "><span class="text-base">🏛️</span><span>Language Lounge Hub</span><span class="ml-auto text-[11px]" style="color:var(--text-muted);">Overview &rarr;</span></a></div></div></div><!-- Dynamic Nav Links --><nav class="hidden md:flex gap-5 items-center"><a href="https://smalltalkcafe.de/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Small Talk Café Podcasts</a><span class="text-sm font-normal" style="color:var(--border);">|</span><a href="/languagelounge/en-it/vocabulary/" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Vocabolario</a><a href="/languagelounge/en-it/verbs/" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Verbi</a><a href="/languagelounge/en-it/grammatik/" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Grammatica</a><a href="/languagelounge/en-it/redemittel/" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Espressioni</a><!-- Dark/Light Toggle --><button id="theme-toggle" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-sm font-semibold transition-all hover:opacity-70" style="border-color:var(--border); color:var(--text-muted);" aria-label="Toggle dark/light mode"><span id="theme-icon">☀️</span><span id="theme-label">Light</span></button></nav></div></header><main id="main-content" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-1 w-full"><div class="max-w-4xl mx-auto py-6" data-astro-cid-5tabbh6g><!-- Deck Header --><div class="flex items-start justify-between mb-8 gap-4 flex-wrap" data-astro-cid-5tabbh6g><div data-astro-cid-5tabbh6g><a href="/languagelounge/en-it/verbs/" class="text-xs font-bold flex items-center gap-1 mb-2 hover:opacity-70 transition-opacity" style="color:var(--espresso);" data-astro-cid-5tabbh6g><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><path d="m15 18-6-6 6-6" data-astro-cid-5tabbh6g></path></svg>Verbi</a><h1 class="text-2xl md:text-3xl font-extrabold font-outfit" style="color:var(--text);" data-astro-cid-5tabbh6g>Change &amp; Development</h1><p class="text-xs font-bold uppercase tracking-wider mt-1" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Cambiamento e Sviluppo • B1 • 20 carte</p></div><div class="flex flex-col items-end gap-4 w-full md:w-auto mt-4 md:mt-0" data-astro-cid-5tabbh6g><!-- ── Mode Toggle ───────────────────────────── --><div class="flex rounded-xl border overflow-hidden p-1 gap-1 w-full max-w-[300px]" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><button id="btn-mode-learn" class="mode-btn flex-1 flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold transition-all" data-astro-cid-5tabbh6g><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" data-astro-cid-5tabbh6g></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" data-astro-cid-5tabbh6g></path></svg>Impara</button><button id="btn-mode-train" class="mode-btn flex-1 flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold transition-all" data-astro-cid-5tabbh6g><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><circle cx="12" cy="12" r="10" data-astro-cid-5tabbh6g></circle><polyline points="12 6 12 12 16 14" data-astro-cid-5tabbh6g></polyline></svg>Esercitati</button></div><div id="learn-toolbar" class="flex flex-col items-end gap-4 w-full" data-astro-cid-5tabbh6g><!-- View switcher (Cards vs List) --><div class="flex rounded-xl border overflow-hidden p-1 gap-1 w-full max-w-[300px]" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><button id="view-cards-btn" class="view-btn flex-1 flex items-center justify-center px-4 py-2 rounded-lg text-xs font-bold transition-all bg-[var(--espresso)] text-[#F5F2EB]" data-astro-cid-5tabbh6g>Carte</button><button id="view-list-btn" class="view-btn flex-1 flex items-center justify-center px-4 py-2 rounded-lg text-xs font-bold transition-all text-[var(--text-muted)] hover:opacity-70" data-astro-cid-5tabbh6g>Elenco</button></div><!-- Progress indicator --><div id="progress-container" class="flex items-center gap-3" data-astro-cid-5tabbh6g><div class="text-xs font-semibold" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Carta <span id="current-num" class="font-extrabold" style="color:var(--text);" data-astro-cid-5tabbh6g>1</span> / 20</div><div class="w-24 h-1.5 rounded-full overflow-hidden border" style="background-color:var(--bg);border-color:var(--border);" data-astro-cid-5tabbh6g><div id="progress-bar" class="h-full transition-all duration-500 rounded-full" style="width:0%; background-color:var(--espresso);" data-astro-cid-5tabbh6g></div></div></div></div></div></div><!-- ══ LEARN PANEL ════════════════════════════ --><div id="learn-panel" class="space-y-6" data-astro-cid-5tabbh6g><!-- ── Universal Study Card (rendered by LearningCard component) ── --><div id="card-view-wrap" data-astro-cid-5tabbh6g><div id="card-host" data-astro-cid-5tabbh6g><!-- The card shell — populated client-side by renderCard() --><div class="learning-card rounded-3xl border shadow-xl overflow-hidden" style="background-color:var(--card); border-color:var(--border);"><!-- ── Top bar ─────────────────────────────────── --><div class="lc-topbar flex items-center justify-between px-6 py-3.5 border-b" style="border-color:var(--border); background-color:var(--bg);"><div class="flex items-center gap-2"><span class="lc-type-badge text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-lg" style="background-color:var(--espresso); color:#F5F2EB;">—</span><span class="lc-level-badge text-[10px] font-bold px-2.5 py-1 rounded-lg cafe-badge"></span></div><button class="lc-audio-btn flex items-center justify-center w-11 h-11 rounded-full transition-transform hover:scale-105 active:scale-95 shadow-md flex-shrink-0" title="Ascolta (A)" style="background-color:var(--espresso); color:#F5F2EB;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg></button></div><!-- ── Main word display ───────────────────────── --><div class="lc-hero px-7 py-8 text-center border-b" style="border-color:var(--border);"><div class="lc-article-wrap mb-1.5"><span class="lc-article text-xl font-bold"></span></div><h2 class="lc-word text-5xl md:text-6xl font-extrabold font-outfit mb-3" style="color:var(--text);">—</h2><p class="lc-translation text-lg font-semibold italic" style="color:var(--text-muted);"></p><p class="lc-forms text-sm font-medium mt-2" style="color:var(--text-muted);"></p></div><!-- ── Meta info grid ─────────────────────────── --><div class="lc-meta-grid grid border-b" style="border-color:var(--border);"><!-- populated by JS --></div><!-- ── Grammar note ───────────────────────────── --><div class="lc-grammar-wrap hidden px-7 py-5 border-b" style="border-color:var(--border); background-color:var(--bg);"><p class="text-[10px] font-bold uppercase tracking-widest mb-2" style="color:var(--espresso);">📌 <span class="lc-grammar-label">Nota grammaticale</span></p><p class="lc-grammar-text text-sm leading-relaxed font-medium whitespace-pre-wrap" style="color:var(--text);"></p></div><!-- ── Type-specific block ────────────────────── --><!-- Connector word-order block --><div class="lc-wordorder-wrap hidden px-7 py-4 border-b" style="border-color:var(--border); background-color:var(--bg);"><div class="flex items-start gap-3 text-sm font-medium" style="color:var(--text-muted);"><span class="text-base flex-shrink-0">📐</span><span class="lc-wordorder-text"></span></div></div><!-- Phrase preposition block --><div class="lc-phrase-wrap hidden px-7 py-4 border-b" style="border-color:var(--border); background-color:var(--bg);"><p class="text-[10px] font-bold uppercase tracking-widest mb-2" style="color:var(--espresso);">Struttura</p><p class="lc-phrase-rule text-sm font-semibold" style="color:var(--text);"></p></div><!-- ── Examples ───────────────────────────────── --><div class="px-7 py-6 border-b" style="border-color:var(--border);"><p class="lc-examples-label text-[10px] font-bold uppercase tracking-widest mb-5" style="color:var(--text-muted);">Frasi di esempio</p><div class="lc-examples space-y-3"><!-- populated by JS --></div></div><!-- Verb conjugation (hidden by default, shown for verb cards) --><div class="lc-conjugation-wrap hidden border-b px-7 py-6" style="border-color:var(--border);"><div class="lc-conjugation-inner flex flex-wrap gap-4"><!-- populated by JS --></div></div><!-- ── Tags ───────────────────────────────────── --><div class="lc-tags-row px-7 py-4 flex items-center gap-2 flex-wrap"><span class="text-[10px] font-bold uppercase tracking-wider" style="color:var(--text-muted);">Tag:</span><div class="lc-tags flex gap-2 flex-wrap"></div></div></div><script>(function(){const cardJson = "{\"id\":\"verbs-b1-change_development-001\",\"target\":\"cambiare\",\"source\":\"to change\",\"type\":\"regular\",\"cefr\":\"B1\",\"grammar_note\":\"-are group, auxiliary avere\",\"examples\":[{\"target\":\"Dobbiamo cambiare i nostri piani a causa del maltempo improvviso.\",\"source\":\"We must change our plans due to the sudden bad weather.\"},{\"target\":\"La tecnologia sta cambiando rapidamente il modo in cui viviamo e lavoriamo.\",\"source\":\"Technology is rapidly changing the way we live and work.\"}],\"conjugations\":{\"presente\":{\"io\":\"cambio\",\"tu\":\"cambi\",\"lui/lei\":\"cambia\",\"noi\":\"cambiamo\",\"voi\":\"cambiate\",\"loro\":\"cambiano\"},\"imperfetto\":{\"io\":\"cambiavo\",\"tu\":\"cambiavi\",\"lui/lei\":\"cambiava\",\"noi\":\"cambiavamo\",\"voi\":\"cambiavate\",\"loro\":\"cambiavano\"},\"futuro_semplice\":{\"io\":\"cambierò\",\"tu\":\"cambierai\",\"lui/lei\":\"cambierà\",\"noi\":\"cambieremo\",\"voi\":\"cambierete\",\"loro\":\"cambieranno\"},\"condizionale_presente\":{\"io\":\"cambierei\",\"tu\":\"cambieresti\",\"lui/lei\":\"cambierebbe\",\"noi\":\"cambieremmo\",\"voi\":\"cambiereste\",\"loro\":\"cambierebbero\"},\"passato_prossimo\":\"ha cambiato\",\"participio_passato\":\"cambiato\"},\"tags\":[\"verb\",\"b1\"],\"metadata\":{}}";
+const langConfigJson = "{\"language_pair\":\"english_italian\",\"target_lang\":\"it\",\"native_lang\":\"en\",\"target_lang_name\":\"Italiano\",\"native_lang_name\":\"English\",\"speech_lang\":\"it-IT\",\"noun_metadata_fields\":[{\"key\":\"article\",\"label\":\"Articolo\",\"render\":\"article_badge\"},{\"key\":\"gender\",\"label\":\"Genere\",\"render\":\"gender_label\"},{\"key\":\"plural\",\"label\":\"Plurale\",\"render\":\"text\"}],\"article_colours\":{\"il\":\"#4A7C9E\",\"lo\":\"#2E6171\",\"la\":\"#B05070\",\"l'\":\"#7B6291\"},\"gender_labels\":{\"m\":\"Maschile\",\"f\":\"Femminile\"},\"verb_tenses\":[\"presente\",\"passato_prossimo\",\"imperfetto\",\"participio_passato\",\"futuro_semplice\",\"condizionale_presente\"],\"cases\":{},\"ui_labels\":{\"learn_mode\":\"Impara\",\"train_mode\":\"Esercitati\",\"examples_heading\":\"Frasi di esempio\",\"grammar_note_heading\":\"Nota grammaticale\",\"audio_button\":\"Ascolta\",\"back_link\":\"Indietro\",\"card_counter\":\"Carta {current} / {total}\",\"next_button\":\"Avanti\",\"finish_button\":\"Fine\",\"correct\":\"Esatto!\",\"wrong\":\"Sbagliato\",\"dashboard_link\":\"Dashboard\",\"library_prompt\":\"Scegli un mazzo dalla libreria ed esplora le carte.\",\"cards_badge\":\"{count} CARTE\",\"cards_count\":\"{count} carte\",\"deck_meta\":\"{topic} • {level} • {count} carte\",\"no_decks\":\"Nessun mazzo in questa categoria al momento.\",\"setup_title\":\"Configurazione allenamento\",\"setup_subtitle\":\"Configura la tua sessione di studio.\",\"question_type\":\"Tipo di domanda\",\"mode_multiple_choice\":\"Scelta multipla\",\"mode_typing\":\"Scrittura testo\",\"mode_typing_short\":\"Scrittura\",\"direction\":\"Direzione\",\"direction_forward\":\"🇺🇸 English → 🇮🇹 Italiano\",\"direction_reverse\":\"🇮🇹 Italiano → 🇺🇸 English\",\"select_level\":\"Seleziona livello\",\"start_training\":\"Inizia allenamento\",\"count_label\":\"Conteggio\",\"all_cards\":\"Tutte\",\"in_deck\":\"nel mazzo\",\"view_cards\":\"Carte\",\"view_list\":\"Elenco\",\"card_word\":\"Carta\",\"keyboard_hint_study\":\"← → Frecce per navigare · A per ascoltare\",\"example_single_heading\":\"Esempio\",\"no_example\":\"Nessun esempio disponibile.\",\"tags_label\":\"Tag:\",\"type_vocab\":\"Vocabolario\",\"type_verb\":\"Verbo\",\"type_phrase\":\"Espressione\",\"type_connector\":\"Connettore\",\"type_grammar\":\"Grammatica\",\"type_noun\":\"Sostantivo\",\"type_adjective\":\"Aggettivo\",\"type_expression\":\"Locuzione\",\"plural_prefix\":\"Pl. {plural}\",\"plural_only\":\"solo plurale\",\"word_order_heading\":\"Ordine delle parole\",\"structure_heading\":\"Struttura\",\"training_title\":\"Allenamento\",\"all_levels\":\"Tutti i livelli\",\"type_placeholder\":\"Scrivi la parola in italiano...\",\"check_button\":\"Controlla\",\"keyboard_hint_train\":\"Invio / Spazio = conferma · A = Ascolta\",\"audio_title\":\"Ascolta (A)\",\"training_finished\":\"Allenamento completato!\",\"missed_heading\":\"Risposte errate — da ripetere\",\"retry_missed\":\"Riprova errori\",\"new_config\":\"Nuova configurazione\",\"plural_hint\":\"Pl: {plural}\",\"results_pct\":\"{pct}% corretto\",\"result_excellent\":\"Eccellente! Hai padroneggiato questo livello.\",\"result_good\":\"Molto bene! Ancora un po' di pratica e sarà perfetto!\",\"result_ok\":\"Buon inizio! Ripassa ancora alcune carte.\",\"result_retry\":\"Non ti preoccupare: sbagliando si impara!\",\"no_cards_title\":\"Nessuna carta trovata\",\"no_cards_hint\":\"Seleziona un altro livello o mazzo.\"},\"answer_normalisation\":{\"strip_leading_words\":[\"il\",\"lo\",\"la\",\"l'\",\"i\",\"gli\",\"le\",\"un\",\"uno\",\"una\",\"un'\"],\"alt_spellings\":{\"à\":\"a\",\"è\":\"e\",\"é\":\"e\",\"ì\":\"i\",\"ò\":\"o\",\"ù\":\"u\"}}}";
+
+  /**
+   * Client-side card renderer.
+   * Uses the universal card-renderer logic inline (no imports in Astro is:inline).
+   */
+
+  // ── Parse data ──────────────────────────────────────────────────────────
+  const card   = JSON.parse(cardJson);
+  const config = JSON.parse(langConfigJson);
+
+  // ── Helpers ─────────────────────────────────────────────────────────────
+  // Articles come from the language config (keys of article_colours), never hardcoded
+  const articleList = Object.keys(config.article_colours || {});
+  const articlePatterns = articleList.map(a => {
+    const esc = a.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    return esc.endsWith("'") ? esc : `${esc}\\s+`;
+  });
+  const articleRe = articlePatterns.length
+    ? new RegExp('^(?:' + articlePatterns.join('|') + ')', 'i')
+    : null;
+
+  function stripArticle(word) {
+    return articleRe ? (word || '').replace(articleRe, '').trim() : (word || '').trim();
+  }
+
+  function getArticleColour(article) {
+    if (!article || !config.article_colours) return 'var(--espresso)';
+    return config.article_colours[article.toLowerCase()] || 'var(--espresso)';
+  }
+
+  function getGenderLabel(gender) {
+    if (!gender) return '';
+    return (config.gender_labels || {})[gender] || gender;
+  }
+
+  const uiLabels = config.ui_labels || {};
+
+  function getTypeLabel() {
+    const tags = card.tags || [];
+    if (tags.includes('noun'))       return uiLabels.type_noun || 'Noun';
+    if (tags.includes('verb'))       return uiLabels.type_verb || 'Verb';
+    if (tags.includes('adjective'))  return uiLabels.type_adjective || 'Adjective';
+    if (tags.includes('expression')) return uiLabels.type_expression || 'Expression';
+    const map = {
+      vocab: uiLabels.type_vocab || 'Vocab',
+      verb: uiLabels.type_verb || 'Verb',
+      phrase: uiLabels.type_phrase || 'Phrase',
+      connector: uiLabels.type_connector || 'Connector',
+      grammar: uiLabels.type_grammar || 'Grammar'
+    };
+    return map[card.type] || uiLabels.card_word || 'Card';
+  }
+
+  function formatHighlight(text) {
+    if (!text) return '';
+    return String(text).replace(/\*(.*?)\*/g, '<span class="highlighter">$1</span>');
+  }
+
+  function getMetaFacts() {
+    const meta = card.metadata || {};
+    const facts = [];
+    for (const field of (config.noun_metadata_fields || [])) {
+      const raw = meta[field.key] || card[field.key];
+      if (!raw || raw === '~') continue;
+      let value = String(raw);
+      let colour;
+      if (field.render === 'gender_label') value = getGenderLabel(raw);
+      else if (field.render === 'article_badge') colour = getArticleColour(raw);
+      facts.push({ label: field.label, value, colour });
+    }
+    return facts;
+  }
+
+  // ── Render ──────────────────────────────────────────────────────────────
+  const container = document.querySelector('.learning-card');
+  if (!container) { console.error('LearningCard: container not found'); }
+
+  function sel(cls) { return container?.querySelector(cls); }
+
+  // Type badge
+  sel('.lc-type-badge').textContent = getTypeLabel();
+
+  // Level badge
+  sel('.lc-level-badge').textContent = card.level || '';
+
+  // Article
+  const article = card.metadata?.article;
+  const articleWrap = sel('.lc-article-wrap');
+  const articleEl   = sel('.lc-article');
+  if (article && card.tags?.includes('noun') && !card.metadata?.plural_only) {
+    articleEl.textContent  = article;
+    articleEl.style.color  = getArticleColour(article);
+    articleWrap.style.display = '';
+  } else {
+    articleWrap.style.display = 'none';
+  }
+
+  // Word
+  sel('.lc-word').textContent = stripArticle(card.target);
+
+  // Translation
+  sel('.lc-translation').textContent = card.source || '';
+
+  // Plural / forms
+  const plural = card.metadata?.plural;
+  const formsEl = sel('.lc-forms');
+  const prefix = uiLabels.plural_prefix || 'Pl.';
+  const pluralOnly = uiLabels.plural_only || 'Plural only';
+  if (plural && !card.metadata?.plural_only) formsEl.textContent = `${prefix} ${plural}`;
+  else if (card.metadata?.plural_only) formsEl.textContent = pluralOnly;
+  else formsEl.textContent = '';
+
+  // Meta grid
+  const metaGrid = sel('.lc-meta-grid');
+  const facts = getMetaFacts();
+  if (facts.length) {
+    const cols = Math.min(facts.length, 4);
+    metaGrid.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
+    metaGrid.innerHTML = facts.map((f, i) => `
+      <div class="px-5 py-4 ${i < facts.length - 1 ? 'border-r' : ''}" style="border-color:var(--border);">
+        <p class="text-[9px] font-bold uppercase tracking-widest mb-1" style="color:var(--text-muted);">${f.label}</p>
+        <p class="text-sm font-bold" style="color:${f.colour || 'var(--text)'};">${f.value}</p>
+      </div>
+    `).join('');
+  } else {
+    metaGrid.style.display = 'none';
+  }
+
+  // Grammar note
+  const grammarWrap = sel('.lc-grammar-wrap');
+  if (card.grammar_note) {
+    sel('.lc-grammar-text').innerHTML = formatHighlight(card.grammar_note);
+    grammarWrap.classList.remove('hidden');
+  }
+
+  // Grammar label from config
+  const uiLabels = config.ui_labels || {};
+  if (uiLabels.grammar_note_heading) sel('.lc-grammar-label').textContent = uiLabels.grammar_note_heading;
+  if (uiLabels.examples_heading)     sel('.lc-examples-label').textContent = uiLabels.examples_heading;
+  if (uiLabels.audio_button)         { const el = sel('.lc-audio-label'); if (el) el.textContent = uiLabels.audio_button; }
+
+  // ── Type-specific blocks ─────────────────────────────────────────────────
+
+  // Verb: conjugation table
+  const type = card.type || (card.tags?.includes('verb') ? 'verb' : 'vocab');
+  if (type === 'verb' && card.conjugations) {
+    const conjWrap  = sel('.lc-conjugation-wrap');
+    const conjInner = sel('.lc-conjugation-inner');
+    conjWrap.classList.remove('hidden');
+
+    let conjArray = [];
+    if (Array.isArray(card.conjugations)) {
+      conjArray = card.conjugations;
+    } else {
+      for (const [tense, forms] of Object.entries(card.conjugations)) {
+        if (typeof forms === 'string') {
+          conjArray.push({ tense, stringForm: forms });
+        } else {
+          const formsArr = Object.entries(forms).map(([pronoun, form]) => ({ pronoun, form }));
+          conjArray.push({ tense, forms: formsArr });
+        }
+      }
+    }
+
+    const tensesToRender = config.verb_tenses || conjArray.map(t => t.tense);
+
+    const stringTenses = [];
+    const tableTenses = [];
+
+    tensesToRender.forEach(tense => {
+      const t = conjArray.find(c => c.tense === tense);
+      if (!t) return;
+      if (t.stringForm) stringTenses.push(t);
+      else tableTenses.push(t);
+    });
+
+    let html = '';
+
+    // Render simple string forms (e.g. Perfekt, Partizip II) as pill-like tags at the top
+    if (stringTenses.length > 0) {
+      html += `
+        <div class="flex flex-wrap gap-3 mb-6">
+          ${stringTenses.map(t => `
+            <div class="rounded-xl border px-4 py-2.5 flex items-center gap-3 shadow-sm" style="border-color:var(--border); background-color:var(--bg);">
+              <span class="text-[10px] font-bold uppercase tracking-widest opacity-80" style="color:var(--espresso);">${t.tense.replace(/_/g, ' ')}</span>
+              <span class="font-bold text-sm" style="color:var(--text);">${t.stringForm}</span>
+            </div>
+          `).join('')}
+        </div>
+      `;
+    }
+
+    // Render full tables (e.g. Präsens, Präteritum) as a unified table
+    if (tableTenses.length > 0) {
+      // Collect all pronouns from the first available table tense
+      const pronouns = tableTenses[0].forms.map(f => f.pronoun);
+
+      html += `
+        <div class="rounded-xl border overflow-x-auto shadow-sm w-full" style="border-color:var(--border);">
+          <table class="w-full text-sm text-left">
+            <thead>
+              <tr style="background-color:var(--bg); border-bottom: 1px solid var(--border);">
+                <th class="px-4 py-3 font-bold uppercase tracking-widest text-[10px] w-[1%]" style="color:var(--espresso); border-right: 1px solid var(--border);"></th>
+                ${tableTenses.map(t => `
+                  <th class="px-4 py-3 font-bold uppercase tracking-widest text-[10px]" style="color:var(--espresso);">${t.tense.replace(/_/g, ' ')}</th>
+                `).join('')}
+              </tr>
+            </thead>
+            <tbody>
+              ${pronouns.map((pronoun, ri) => `
+                <tr class="${ri < pronouns.length - 1 ? 'border-b' : ''}" style="border-color:var(--border);">
+                  <td class="px-4 py-3 font-bold text-xs whitespace-nowrap" style="color:var(--espresso); background-color:var(--bg); border-right: 1px solid var(--border);">${pronoun}</td>
+                  ${tableTenses.map(t => {
+                    const formObj = t.forms.find(f => f.pronoun === pronoun);
+                    return `<td class="px-4 py-3 font-semibold whitespace-nowrap" style="color:var(--text);">${formObj ? formObj.form : '-'}</td>`;
+                  }).join('')}
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+        </div>
+      `;
+    }
+
+    conjInner.innerHTML = html;
+  }
+
+  // Connector: word order block
+  if (type === 'connector' && card.word_order) {
+    const woWrap = sel('.lc-wordorder-wrap');
+    sel('.lc-wordorder-text').textContent = card.word_order;
+    woWrap.classList.remove('hidden');
+  }
+
+  // Phrase: preposition rule block
+  if (type === 'phrase' && card.clause_type) {
+    const phraseWrap = sel('.lc-phrase-wrap');
+    sel('.lc-phrase-rule').textContent = card.clause_type;
+    phraseWrap.classList.remove('hidden');
+  }
+
+  // ── Examples ─────────────────────────────────────────────────────────────
+  const examplesEl = sel('.lc-examples');
+  const rawExamples = card.examples || [];
+
+  if (rawExamples.length) {
+    examplesEl.innerHTML = rawExamples.map(e => `
+        <div class="rounded-2xl border overflow-hidden" style="border-color:var(--border);">
+          <div class="px-4 py-3" style="background-color:var(--bg);">
+            <p class="font-semibold leading-snug mb-1" style="color:var(--text);">${formatHighlight(e.target)}</p>
+            <p class="text-sm italic" style="color:var(--text-muted);">${formatHighlight(e.source || '')}</p>
+          </div>
+          ${e.note ? `<div class="px-4 py-2 border-t" style="border-color:var(--border);">
+            <p class="text-[10px] font-bold font-mono" style="color:var(--espresso);">📐 ${e.note}</p>
+          </div>` : ''}
+        </div>
+      `).join('');
+  } else {
+    examplesEl.innerHTML = `<p class="text-sm italic" style="color:var(--text-muted);">${uiLabels.no_example || ''}</p>`;
+  }
+
+  // ── Tags ─────────────────────────────────────────────────────────────────
+  const tagsEl = sel('.lc-tags');
+  tagsEl.innerHTML = (card.tags || []).map(t => `
+    <span class="text-[10px] font-bold px-2 py-0.5 rounded-md border uppercase" style="border-color:var(--border); color:var(--text-muted); background-color:var(--bg);">${t}</span>
+  `).join('');
+
+  // ── Audio button ─────────────────────────────────────────────────────────
+  sel('.lc-audio-btn')?.addEventListener('click', () => {
+    if (window.LoungeAudioEngine) {
+      window.LoungeAudioEngine.speak(card.target || '', config.speech_lang, 0.85);
+    }
+  });
+})();</script></div><!-- ── Navigation ───────────────────────────── --><div class="flex items-center justify-between mt-8 gap-4" data-astro-cid-5tabbh6g><button id="btn-prev" disabled class="flex items-center gap-2 px-6 py-3 rounded-2xl border font-bold text-sm transition-all hover:opacity-70 active:scale-95 disabled:opacity-30 disabled:cursor-not-allowed" style="border-color:var(--border); color:var(--text); background-color:var(--card);" data-astro-cid-5tabbh6g><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><path d="m15 18-6-6 6-6" data-astro-cid-5tabbh6g></path></svg>Indietro</button><!-- Dot navigation --><div id="dot-nav" class="flex items-center gap-1.5 flex-wrap justify-center max-w-xs overflow-hidden" style="max-height:2rem;" data-astro-cid-5tabbh6g><!-- populated by JS --></div><button id="btn-next" class="flex items-center gap-2 px-6 py-3 rounded-2xl font-bold text-sm transition-all hover:opacity-80 active:scale-95" style="background-color:var(--espresso); color:#F5F2EB;" data-astro-cid-5tabbh6g>Avanti<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><path d="m9 18 6-6-6-6" data-astro-cid-5tabbh6g></path></svg></button></div><!-- Keyboard hint --><p class="text-center text-xs font-medium mt-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>← → Frecce per navigare · A per ascoltare</p></div><!-- ── List View ───────────────────────────── --><div id="list-view-wrap" class="hidden space-y-6" data-astro-cid-5tabbh6g><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>cambiare</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to change</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota grammaticale</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>-are group, auxiliary avere</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Esempio</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Dobbiamo cambiare i nostri piani a causa del maltempo improvviso.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>We must change our plans due to the sudden bad weather.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>sviluppare</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to develop</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota grammaticale</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>-are group, auxiliary avere</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Esempio</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>L'azienda vuole sviluppare nuovi prodotti per soddisfare le esigenze del mercato.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The company wants to develop new products to meet market needs.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>migliorare</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to improve</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota grammaticale</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>-are group, auxiliary avere (transitive) or essere (intransitive)</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Esempio</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Spero che il tempo migliori presto così potremo uscire.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>I hope the weather improves soon so we can go out.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>peggiorare</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to worsen</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota grammaticale</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>-are group, auxiliary avere (transitive) or essere (intransitive)</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Esempio</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>La situazione economica potrebbe peggiorare se non si prendono provvedimenti.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The economic situation could worsen if no measures are taken.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>trasformare</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to transform</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota grammaticale</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>-are group, auxiliary avere</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Esempio</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>L'artista è riuscito a trasformare un vecchio magazzino in una galleria d'arte moderna.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The artist managed to transform an old warehouse into a modern art gallery.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>modificare</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to modify</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota grammaticale</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>-are group, auxiliary avere</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Esempio</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Dobbiamo modificare il documento prima di inviarlo al cliente.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>We need to modify the document before sending it to the client.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>adattarsi</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to adapt oneself</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota grammaticale</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>-are group, auxiliary essere (reflexive)</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Esempio</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>È fondamentale adattarsi ai cambiamenti del mercato del lavoro.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>It is essential to adapt oneself to changes in the job market.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>evolvere</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to evolve</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota grammaticale</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>-ere group, auxiliary essere (intransitive)</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Esempio</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>La società continua a evolvere, affrontando nuove sfide ogni giorno.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Society continues to evolve, facing new challenges every day.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>crescere</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to grow</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota grammaticale</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>-ere group, auxiliary essere (intransitive) or avere (transitive)</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Esempio</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>I bambini crescono molto velocemente, è incredibile vederli cambiare.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Children grow very fast, it's incredible to see them change.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>diminuire</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to decrease</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota grammaticale</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>-ire group (isc-verbs), auxiliary essere (intransitive) or avere (transitive)</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Esempio</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Il numero di studenti iscritti all'università ha iniziato a diminuire.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The number of students enrolled in the university has started to decrease.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>aumentare</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to increase</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota grammaticale</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>-are group, auxiliary essere (intransitive) or avere (transitive)</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Esempio</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>I prezzi dei beni di prima necessità continuano ad aumentare ogni mese.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The prices of basic necessities continue to increase every month.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>innovare</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to innovate</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota grammaticale</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>-are group, auxiliary avere</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Esempio</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Le aziende devono innovare continuamente per rimanere competitive sul mercato globale.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Companies must innovate continuously to remain competitive in the global market.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>progredire</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to progress</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota grammaticale</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>-ire group (isc-verbs), auxiliary essere</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Esempio</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Spero di progredire rapidamente nello studio della lingua italiana.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>I hope to progress quickly in learning the Italian language.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>regredire</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to regress</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota grammaticale</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>-ire group (isc-verbs), auxiliary essere</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Esempio</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Spero che la situazione non regredisca dopo tutti i progressi fatti.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>I hope the situation doesn't regress after all the progress made.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>rinnovare</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to renew</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota grammaticale</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>-are group, auxiliary avere</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Esempio</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Dobbiamo rinnovare il nostro abbonamento alla rivista entro la fine del mese.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>We need to renew our magazine subscription by the end of the month.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>stabilizzarsi</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to stabilize oneself</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota grammaticale</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>-are group, auxiliary essere (reflexive)</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Esempio</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Dopo un periodo di incertezza, la situazione economica sembra stabilizzarsi.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>After a period of uncertainty, the economic situation seems to be stabilizing.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>espandere</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to expand</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota grammaticale</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>-ere group, auxiliary avere (transitive) or essere (intransitive)</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Esempio</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>L'azienda prevede di espandere le sue operazioni in nuovi mercati internazionali.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The company plans to expand its operations into new international markets.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>ridurre</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to reduce</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota grammaticale</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>-ere group, auxiliary avere</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Esempio</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Dobbiamo ridurre il consumo di plastica per proteggere l'ambiente marino.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>We must reduce plastic consumption to protect the marine environment.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>superare</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to overcome / to surpass</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota grammaticale</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>-are group, auxiliary avere</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Esempio</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Dobbiamo superare gli ostacoli per raggiungere i nostri obiettivi.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>We must overcome obstacles to achieve our goals.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>realizzare</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to achieve / to realize</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Nota grammaticale</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>-are group, auxiliary avere</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Esempio</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Spero di realizzare tutti i miei sogni e obiettivi nella vita.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>I hope to achieve all my dreams and goals in life.</p></div></div></div></div></div></div><!-- ══ TRAIN PANEL ════════════════════════════ --><div id="train-panel" class="hidden space-y-10" data-astro-cid-5tabbh6g><div class="cafe-card rounded-3xl p-8 border shadow-lg max-w-xl mx-auto" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="text-center mb-8" data-astro-cid-5tabbh6g><h2 class="text-2xl font-extrabold font-outfit mb-2" style="color:var(--text);" data-astro-cid-5tabbh6g>Configurazione allenamento</h2><p class="text-sm font-medium" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Configura la tua sessione di studio.</p></div><form action="/languagelounge/en-it/training/verbs/train/" method="GET" class="space-y-8" id="deck-train-form" data-astro-cid-5tabbh6g><input type="hidden" name="level" value="b1" data-astro-cid-5tabbh6g><input type="hidden" name="deck" value="verbs-b1-change_development" data-astro-cid-5tabbh6g><!-- Mode selection --><div class="space-y-3" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold tracking-widest uppercase" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Tipo di domanda</p><div class="grid grid-cols-2 gap-3" data-astro-cid-5tabbh6g><button type="button" data-group="mode" data-value="mc" class="sel-opt sel-active" data-astro-cid-5tabbh6g><span class="text-xl mb-1 block" data-astro-cid-5tabbh6g>🔘</span><span class="text-sm font-bold" data-astro-cid-5tabbh6g>Scelta multipla</span></button><button type="button" data-group="mode" data-value="type" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-xl mb-1 block" data-astro-cid-5tabbh6g>⌨️</span><span class="text-sm font-bold" data-astro-cid-5tabbh6g>Scrittura testo</span></button></div><input type="hidden" name="mode" id="mode-hidden" value="mc" data-astro-cid-5tabbh6g></div><!-- Direction selection --><div class="space-y-3" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold tracking-widest uppercase" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Direzione</p><div class="grid grid-cols-2 gap-3" data-astro-cid-5tabbh6g><button type="button" data-group="dir" data-value="en-it" class="sel-opt sel-active" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>🇺🇸 English → 🇮🇹 Italiano</span></button><button type="button" data-group="dir" data-value="it-en" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>🇮🇹 Italiano → 🇺🇸 English</span></button></div><input type="hidden" name="dir" id="dir-hidden" value="en-it" data-astro-cid-5tabbh6g></div><!-- Count Selection --><div class="space-y-3" data-astro-cid-5tabbh6g><div class="flex justify-between items-end" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold tracking-widest uppercase" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Conteggio</p><span class="text-xs font-bold" style="color:var(--espresso);" data-astro-cid-5tabbh6g>20 carte nel mazzo</span></div><div class="grid grid-cols-4 gap-3" data-astro-cid-5tabbh6g><button type="button" data-group="count" data-value="30" class="sel-opt sel-active" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>30</span></button><button type="button" data-group="count" data-value="60" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>60</span></button><button type="button" data-group="count" data-value="90" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>90</span></button><button type="button" data-group="count" data-value="1000" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>Tutte</span></button></div><input type="hidden" name="count" id="count-hidden" value="30" data-astro-cid-5tabbh6g></div><button type="submit" class="w-full py-4 rounded-xl font-bold text-base transition-all hover:opacity-90 mt-4 shadow-md active:scale-[0.98]" style="background-color:var(--espresso); color:#F5F2EB;" data-astro-cid-5tabbh6g>Inizia allenamento &rarr;</button></form></div></div></div></main><footer class="mt-auto border-t py-8" style="background-color:var(--bg);border-color:var(--border);"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-medium" style="color:var(--text-muted);"><div>&copy; 2025 - 2026 Small Talk Café Podcasts. All rights reserved.</div><div class="flex gap-4">Made in Bayern ❤️ Los Geht's!</div></div></footer><!-- Minimal script for Theme and Dropdown toggle --><script>
+      // ── Theme ──────────────────────────────────────
+      function applyTheme(dark) {
+        if (dark) {
+          document.documentElement.classList.add('dark');
+          localStorage.setItem('wortschatz_theme', 'dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+          localStorage.setItem('wortschatz_theme', 'light');
+        }
+        const icon = document.getElementById('theme-icon');
+        const label = document.getElementById('theme-label');
+        if (icon) icon.textContent = dark ? '🌙' : '☀️';
+        if (label) label.textContent = dark ? 'Dark' : 'Light';
+      }
+
+      const isDark = document.documentElement.classList.contains('dark');
+      applyTheme(isDark);
+
+      document.getElementById('theme-toggle')?.addEventListener('click', () => {
+        const nowDark = !document.documentElement.classList.contains('dark');
+        applyTheme(nowDark);
+      });
+
+      // ── Dropdown Toggle ──────────────────────────
+      const langBtn = document.getElementById('lang-btn');
+      const langMenu = document.getElementById('lang-menu');
+
+      langBtn?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        langMenu?.classList.toggle('hidden');
+      });
+
+      document.addEventListener('click', () => {
+        langMenu?.classList.add('hidden');
+      });
+    </script></body></html><script type="module" src="/languagelounge/_astro/_deckId_.astro_astro_type_script_index_0_lang.DwXABuW8.js"></script><script>(function(){const cardsJson = "[{\"id\":\"verbs-b1-change_development-001\",\"target\":\"cambiare\",\"source\":\"to change\",\"type\":\"regular\",\"cefr\":\"B1\",\"grammar_note\":\"-are group, auxiliary avere\",\"examples\":[{\"target\":\"Dobbiamo cambiare i nostri piani a causa del maltempo improvviso.\",\"source\":\"We must change our plans due to the sudden bad weather.\"},{\"target\":\"La tecnologia sta cambiando rapidamente il modo in cui viviamo e lavoriamo.\",\"source\":\"Technology is rapidly changing the way we live and work.\"}],\"conjugations\":{\"presente\":{\"io\":\"cambio\",\"tu\":\"cambi\",\"lui/lei\":\"cambia\",\"noi\":\"cambiamo\",\"voi\":\"cambiate\",\"loro\":\"cambiano\"},\"imperfetto\":{\"io\":\"cambiavo\",\"tu\":\"cambiavi\",\"lui/lei\":\"cambiava\",\"noi\":\"cambiavamo\",\"voi\":\"cambiavate\",\"loro\":\"cambiavano\"},\"futuro_semplice\":{\"io\":\"cambierò\",\"tu\":\"cambierai\",\"lui/lei\":\"cambierà\",\"noi\":\"cambieremo\",\"voi\":\"cambierete\",\"loro\":\"cambieranno\"},\"condizionale_presente\":{\"io\":\"cambierei\",\"tu\":\"cambieresti\",\"lui/lei\":\"cambierebbe\",\"noi\":\"cambieremmo\",\"voi\":\"cambiereste\",\"loro\":\"cambierebbero\"},\"passato_prossimo\":\"ha cambiato\",\"participio_passato\":\"cambiato\"},\"tags\":[\"verb\",\"b1\"],\"metadata\":{}},{\"id\":\"verbs-b1-change_development-002\",\"target\":\"sviluppare\",\"source\":\"to develop\",\"type\":\"regular\",\"cefr\":\"B1\",\"grammar_note\":\"-are group, auxiliary avere\",\"examples\":[{\"target\":\"L'azienda vuole sviluppare nuovi prodotti per soddisfare le esigenze del mercato.\",\"source\":\"The company wants to develop new products to meet market needs.\"},{\"target\":\"È importante sviluppare le proprie competenze professionali per rimanere competitivi.\",\"source\":\"It's important to develop one's professional skills to remain competitive.\"}],\"conjugations\":{\"presente\":{\"io\":\"sviluppo\",\"tu\":\"sviluppi\",\"lui/lei\":\"sviluppa\",\"noi\":\"sviluppiamo\",\"voi\":\"sviluppate\",\"loro\":\"sviluppano\"},\"imperfetto\":{\"io\":\"sviluppavo\",\"tu\":\"sviluppavi\",\"lui/lei\":\"sviluppava\",\"noi\":\"sviluppavamo\",\"voi\":\"sviluppavate\",\"loro\":\"sviluppavano\"},\"futuro_semplice\":{\"io\":\"svilupperò\",\"tu\":\"svilupperai\",\"lui/lei\":\"svilupperà\",\"noi\":\"svilupperemo\",\"voi\":\"svilupperete\",\"loro\":\"svilupperanno\"},\"condizionale_presente\":{\"io\":\"svilupperei\",\"tu\":\"svilupperesti\",\"lui/lei\":\"svilupperebbe\",\"noi\":\"svilupperemmo\",\"voi\":\"sviluppereste\",\"loro\":\"svilupperebbero\"},\"passato_prossimo\":\"ha sviluppato\",\"participio_passato\":\"sviluppato\"},\"tags\":[\"verb\",\"b1\"],\"metadata\":{}},{\"id\":\"verbs-b1-change_development-003\",\"target\":\"migliorare\",\"source\":\"to improve\",\"type\":\"regular\",\"cefr\":\"B1\",\"grammar_note\":\"-are group, auxiliary avere (transitive) or essere (intransitive)\",\"examples\":[{\"target\":\"Spero che il tempo migliori presto così potremo uscire.\",\"source\":\"I hope the weather improves soon so we can go out.\"},{\"target\":\"Dovremmo migliorare la comunicazione interna per essere più efficienti.\",\"source\":\"We should improve internal communication to be more efficient.\"}],\"conjugations\":{\"presente\":{\"io\":\"miglioro\",\"tu\":\"migliori\",\"lui/lei\":\"migliora\",\"noi\":\"miglioriamo\",\"voi\":\"migliorate\",\"loro\":\"migliorano\"},\"imperfetto\":{\"io\":\"miglioravo\",\"tu\":\"miglioravi\",\"lui/lei\":\"migliorava\",\"noi\":\"miglioravamo\",\"voi\":\"miglioravate\",\"loro\":\"miglioravano\"},\"futuro_semplice\":{\"io\":\"migliorerò\",\"tu\":\"migliorerai\",\"lui/lei\":\"migliorerà\",\"noi\":\"miglioreremo\",\"voi\":\"migliorerete\",\"loro\":\"miglioreranno\"},\"condizionale_presente\":{\"io\":\"migliorerei\",\"tu\":\"miglioreresti\",\"lui/lei\":\"migliorerebbe\",\"noi\":\"miglioreremmo\",\"voi\":\"migliorereste\",\"loro\":\"migliorerebbero\"},\"passato_prossimo\":\"è migliorato\",\"participio_passato\":\"migliorato\"},\"tags\":[\"verb\",\"b1\"],\"metadata\":{}},{\"id\":\"verbs-b1-change_development-004\",\"target\":\"peggiorare\",\"source\":\"to worsen\",\"type\":\"regular\",\"cefr\":\"B1\",\"grammar_note\":\"-are group, auxiliary avere (transitive) or essere (intransitive)\",\"examples\":[{\"target\":\"La situazione economica potrebbe peggiorare se non si prendono provvedimenti.\",\"source\":\"The economic situation could worsen if no measures are taken.\"},{\"target\":\"Il suo umore è peggiorato dopo aver ricevuto la brutta notizia.\",\"source\":\"His mood worsened after receiving the bad news.\"}],\"conjugations\":{\"presente\":{\"io\":\"peggioro\",\"tu\":\"peggiori\",\"lui/lei\":\"peggiora\",\"noi\":\"peggioriamo\",\"voi\":\"peggiorate\",\"loro\":\"peggiorano\"},\"imperfetto\":{\"io\":\"peggioravo\",\"tu\":\"peggioravi\",\"lui/lei\":\"peggiorava\",\"noi\":\"peggioravamo\",\"voi\":\"peggioravate\",\"loro\":\"peggioravano\"},\"futuro_semplice\":{\"io\":\"peggiorerò\",\"tu\":\"peggiorerai\",\"lui/lei\":\"peggiorerà\",\"noi\":\"peggioreremo\",\"voi\":\"peggiorerete\",\"loro\":\"peggioreranno\"},\"condizionale_presente\":{\"io\":\"peggiorerei\",\"tu\":\"peggioreresti\",\"lui/lei\":\"peggiorerebbe\",\"noi\":\"peggioreremmo\",\"voi\":\"peggiorereste\",\"loro\":\"peggiorerebbero\"},\"passato_prossimo\":\"è peggiorato\",\"participio_passato\":\"peggiorato\"},\"tags\":[\"verb\",\"b1\"],\"metadata\":{}},{\"id\":\"verbs-b1-change_development-005\",\"target\":\"trasformare\",\"source\":\"to transform\",\"type\":\"regular\",\"cefr\":\"B1\",\"grammar_note\":\"-are group, auxiliary avere\",\"examples\":[{\"target\":\"L'artista è riuscito a trasformare un vecchio magazzino in una galleria d'arte moderna.\",\"source\":\"The artist managed to transform an old warehouse into a modern art gallery.\"},{\"target\":\"La crisi può trasformare le persone, rendendole più forti e resilienti.\",\"source\":\"Crisis can transform people, making them stronger and more resilient.\"}],\"conjugations\":{\"presente\":{\"io\":\"trasformo\",\"tu\":\"trasformi\",\"lui/lei\":\"trasforma\",\"noi\":\"trasformiamo\",\"voi\":\"trasformate\",\"loro\":\"trasformano\"},\"imperfetto\":{\"io\":\"trasformavo\",\"tu\":\"trasformavi\",\"lui/lei\":\"trasformava\",\"noi\":\"trasformavamo\",\"voi\":\"trasformavate\",\"loro\":\"trasformavano\"},\"futuro_semplice\":{\"io\":\"trasformerò\",\"tu\":\"trasformerai\",\"lui/lei\":\"trasformerà\",\"noi\":\"trasformeremo\",\"voi\":\"trasformerete\",\"loro\":\"trasformeranno\"},\"condizionale_presente\":{\"io\":\"trasformerei\",\"tu\":\"trasformeresti\",\"lui/lei\":\"trasformerebbe\",\"noi\":\"trasformeremmo\",\"voi\":\"trasformereste\",\"loro\":\"trasformerebbero\"},\"passato_prossimo\":\"ha trasformato\",\"participio_passato\":\"trasformato\"},\"tags\":[\"verb\",\"b1\"],\"metadata\":{}},{\"id\":\"verbs-b1-change_development-006\",\"target\":\"modificare\",\"source\":\"to modify\",\"type\":\"regular\",\"cefr\":\"B1\",\"grammar_note\":\"-are group, auxiliary avere\",\"examples\":[{\"target\":\"Dobbiamo modificare il documento prima di inviarlo al cliente.\",\"source\":\"We need to modify the document before sending it to the client.\"},{\"target\":\"Il governo ha deciso di modificare alcune leggi per migliorare la sicurezza.\",\"source\":\"The government decided to modify some laws to improve security.\"}],\"conjugations\":{\"presente\":{\"io\":\"modifico\",\"tu\":\"modifici\",\"lui/lei\":\"modifica\",\"noi\":\"modifichiamo\",\"voi\":\"modificate\",\"loro\":\"modificano\"},\"imperfetto\":{\"io\":\"modificavo\",\"tu\":\"modificavi\",\"lui/lei\":\"modificava\",\"noi\":\"modificavamo\",\"voi\":\"modificavate\",\"loro\":\"modificavano\"},\"futuro_semplice\":{\"io\":\"modificerò\",\"tu\":\"modificerai\",\"lui/lei\":\"modificerà\",\"noi\":\"modificeremo\",\"voi\":\"modificerete\",\"loro\":\"modificeranno\"},\"condizionale_presente\":{\"io\":\"modificerei\",\"tu\":\"modificeresti\",\"lui/lei\":\"modificerebbe\",\"noi\":\"modificeremmo\",\"voi\":\"modificereste\",\"loro\":\"modificerebbero\"},\"passato_prossimo\":\"ha modificato\",\"participio_passato\":\"modificato\"},\"tags\":[\"verb\",\"b1\"],\"metadata\":{}},{\"id\":\"verbs-b1-change_development-007\",\"target\":\"adattarsi\",\"source\":\"to adapt oneself\",\"type\":\"reflexive\",\"cefr\":\"B1\",\"grammar_note\":\"-are group, auxiliary essere (reflexive)\",\"examples\":[{\"target\":\"È fondamentale adattarsi ai cambiamenti del mercato del lavoro.\",\"source\":\"It is essential to adapt oneself to changes in the job market.\"},{\"target\":\"Mi sono adattato rapidamente alla nuova cultura e al cibo locale.\",\"source\":\"I quickly adapted to the new culture and local food.\"}],\"conjugations\":{\"presente\":{\"io\":\"mi adatto\",\"tu\":\"ti adatti\",\"lui/lei\":\"si adatta\",\"noi\":\"ci adattiamo\",\"voi\":\"vi adattate\",\"loro\":\"si adattano\"},\"imperfetto\":{\"io\":\"mi adattavo\",\"tu\":\"ti adattavi\",\"lui/lei\":\"si adattava\",\"noi\":\"ci adattavamo\",\"voi\":\"vi adattavate\",\"loro\":\"si adattavano\"},\"futuro_semplice\":{\"io\":\"mi adatterò\",\"tu\":\"ti adatterai\",\"lui/lei\":\"si adatterà\",\"noi\":\"ci adatteremo\",\"voi\":\"vi adatterete\",\"loro\":\"si adatteranno\"},\"condizionale_presente\":{\"io\":\"mi adatterei\",\"tu\":\"ti adatteresti\",\"lui/lei\":\"si adatterebbe\",\"noi\":\"ci adatteremmo\",\"voi\":\"vi adattereste\",\"loro\":\"si adatterebbero\"},\"passato_prossimo\":\"si è adattato\",\"participio_passato\":\"adattato\"},\"tags\":[\"verb\",\"b1\"],\"metadata\":{}},{\"id\":\"verbs-b1-change_development-008\",\"target\":\"evolvere\",\"source\":\"to evolve\",\"type\":\"regular\",\"cefr\":\"B1\",\"grammar_note\":\"-ere group, auxiliary essere (intransitive)\",\"examples\":[{\"target\":\"La società continua a evolvere, affrontando nuove sfide ogni giorno.\",\"source\":\"Society continues to evolve, facing new challenges every day.\"},{\"target\":\"Le specie animali si sono evolute per sopravvivere in ambienti diversi.\",\"source\":\"Animal species have evolved to survive in different environments.\"}],\"conjugations\":{\"presente\":{\"io\":\"evolvo\",\"tu\":\"evolvi\",\"lui/lei\":\"evolve\",\"noi\":\"evolviamo\",\"voi\":\"evolvete\",\"loro\":\"evolvono\"},\"imperfetto\":{\"io\":\"evolvevo\",\"tu\":\"evolvevi\",\"lui/lei\":\"evolveva\",\"noi\":\"evolvevamo\",\"voi\":\"evolvevate\",\"loro\":\"evolvevano\"},\"futuro_semplice\":{\"io\":\"evolverò\",\"tu\":\"evolverai\",\"lui/lei\":\"evolverà\",\"noi\":\"evolveremo\",\"voi\":\"evolverete\",\"loro\":\"evolveranno\"},\"condizionale_presente\":{\"io\":\"evolverei\",\"tu\":\"evolveresti\",\"lui/lei\":\"evolverebbe\",\"noi\":\"evolveremmo\",\"voi\":\"evolvereste\",\"loro\":\"evolverebbero\"},\"passato_prossimo\":\"è evoluto\",\"participio_passato\":\"evoluto\"},\"tags\":[\"verb\",\"b1\"],\"metadata\":{}},{\"id\":\"verbs-b1-change_development-009\",\"target\":\"crescere\",\"source\":\"to grow\",\"type\":\"irregular\",\"cefr\":\"B1\",\"grammar_note\":\"-ere group, auxiliary essere (intransitive) or avere (transitive)\",\"examples\":[{\"target\":\"I bambini crescono molto velocemente, è incredibile vederli cambiare.\",\"source\":\"Children grow very fast, it's incredible to see them change.\"},{\"target\":\"L'economia del paese sta crescendo grazie ai nuovi investimenti esteri.\",\"source\":\"The country's economy is growing thanks to new foreign investments.\"}],\"conjugations\":{\"presente\":{\"io\":\"cresco\",\"tu\":\"cresci\",\"lui/lei\":\"cresce\",\"noi\":\"cresciamo\",\"voi\":\"crescete\",\"loro\":\"crescono\"},\"imperfetto\":{\"io\":\"crescevo\",\"tu\":\"crescevi\",\"lui/lei\":\"cresceva\",\"noi\":\"crescevamo\",\"voi\":\"crescevate\",\"loro\":\"crescevano\"},\"futuro_semplice\":{\"io\":\"crescerò\",\"tu\":\"crescerai\",\"lui/lei\":\"crescerà\",\"noi\":\"cresceremo\",\"voi\":\"crescerete\",\"loro\":\"cresceranno\"},\"condizionale_presente\":{\"io\":\"crescerei\",\"tu\":\"cresceresti\",\"lui/lei\":\"crescerebbe\",\"noi\":\"cresceremmo\",\"voi\":\"crescereste\",\"loro\":\"crescerebbero\"},\"passato_prossimo\":\"è cresciuto\",\"participio_passato\":\"cresciuto\"},\"tags\":[\"verb\",\"b1\"],\"metadata\":{}},{\"id\":\"verbs-b1-change_development-010\",\"target\":\"diminuire\",\"source\":\"to decrease\",\"type\":\"regular\",\"cefr\":\"B1\",\"grammar_note\":\"-ire group (isc-verbs), auxiliary essere (intransitive) or avere (transitive)\",\"examples\":[{\"target\":\"Il numero di studenti iscritti all'università ha iniziato a diminuire.\",\"source\":\"The number of students enrolled in the university has started to decrease.\"},{\"target\":\"Dobbiamo diminuire il consumo di energia per proteggere l'ambiente.\",\"source\":\"We must decrease energy consumption to protect the environment.\"}],\"conjugations\":{\"presente\":{\"io\":\"diminuisco\",\"tu\":\"diminuisci\",\"lui/lei\":\"diminuisce\",\"noi\":\"diminuiamo\",\"voi\":\"diminuite\",\"loro\":\"diminuiscono\"},\"imperfetto\":{\"io\":\"diminuivo\",\"tu\":\"diminuivi\",\"lui/lei\":\"diminuiva\",\"noi\":\"diminuivamo\",\"voi\":\"diminuivate\",\"loro\":\"diminuivano\"},\"futuro_semplice\":{\"io\":\"diminuirò\",\"tu\":\"diminuirai\",\"lui/lei\":\"diminuirà\",\"noi\":\"diminuiremo\",\"voi\":\"diminuirete\",\"loro\":\"diminuiranno\"},\"condizionale_presente\":{\"io\":\"diminuirei\",\"tu\":\"diminuiresti\",\"lui/lei\":\"diminuirebbe\",\"noi\":\"diminuiremmo\",\"voi\":\"diminuireste\",\"loro\":\"diminuirebbero\"},\"passato_prossimo\":\"è diminuito\",\"participio_passato\":\"diminuito\"},\"tags\":[\"verb\",\"b1\"],\"metadata\":{}},{\"id\":\"verbs-b1-change_development-011\",\"target\":\"aumentare\",\"source\":\"to increase\",\"type\":\"regular\",\"cefr\":\"B1\",\"grammar_note\":\"-are group, auxiliary essere (intransitive) or avere (transitive)\",\"examples\":[{\"target\":\"I prezzi dei beni di prima necessità continuano ad aumentare ogni mese.\",\"source\":\"The prices of basic necessities continue to increase every month.\"},{\"target\":\"L'azienda prevede di aumentare la produzione per soddisfare la domanda.\",\"source\":\"The company plans to increase production to meet demand.\"}],\"conjugations\":{\"presente\":{\"io\":\"aumento\",\"tu\":\"aumenti\",\"lui/lei\":\"aumenta\",\"noi\":\"aumentiamo\",\"voi\":\"aumentate\",\"loro\":\"aumentano\"},\"imperfetto\":{\"io\":\"aumentavo\",\"tu\":\"aumentavi\",\"lui/lei\":\"aumentava\",\"noi\":\"aumentavamo\",\"voi\":\"aumentavate\",\"loro\":\"aumentavano\"},\"futuro_semplice\":{\"io\":\"aumenterò\",\"tu\":\"aumenterai\",\"lui/lei\":\"aumenterà\",\"noi\":\"aumenteremo\",\"voi\":\"aumenterete\",\"loro\":\"aumenteranno\"},\"condizionale_presente\":{\"io\":\"aumenterei\",\"tu\":\"aumenteresti\",\"lui/lei\":\"aumenterebbe\",\"noi\":\"aumenteremmo\",\"voi\":\"aumentereste\",\"loro\":\"aumenterebbero\"},\"passato_prossimo\":\"è aumentato\",\"participio_passato\":\"aumentato\"},\"tags\":[\"verb\",\"b1\"],\"metadata\":{}},{\"id\":\"verbs-b1-change_development-012\",\"target\":\"innovare\",\"source\":\"to innovate\",\"type\":\"regular\",\"cefr\":\"B1\",\"grammar_note\":\"-are group, auxiliary avere\",\"examples\":[{\"target\":\"Le aziende devono innovare continuamente per rimanere competitive sul mercato globale.\",\"source\":\"Companies must innovate continuously to remain competitive in the global market.\"},{\"target\":\"Il team di ricerca sta cercando di innovare i metodi di produzione attuali.\",\"source\":\"The research team is trying to innovate current production methods.\"}],\"conjugations\":{\"presente\":{\"io\":\"innovo\",\"tu\":\"innovi\",\"lui/lei\":\"innova\",\"noi\":\"innoviamo\",\"voi\":\"innovate\",\"loro\":\"innovano\"},\"imperfetto\":{\"io\":\"innovavo\",\"tu\":\"innovavi\",\"lui/lei\":\"innovava\",\"noi\":\"innovavamo\",\"voi\":\"innovavate\",\"loro\":\"innovavano\"},\"futuro_semplice\":{\"io\":\"innovarò\",\"tu\":\"innovarai\",\"lui/lei\":\"innovarà\",\"noi\":\"innovaremo\",\"voi\":\"innovarete\",\"loro\":\"innovaranno\"},\"condizionale_presente\":{\"io\":\"innovarei\",\"tu\":\"innovaresti\",\"lui/lei\":\"innovarebbe\",\"noi\":\"innovaremmo\",\"voi\":\"innovareste\",\"loro\":\"innovarebbero\"},\"passato_prossimo\":\"ha innovato\",\"participio_passato\":\"innovato\"},\"tags\":[\"verb\",\"b1\"],\"metadata\":{}},{\"id\":\"verbs-b1-change_development-013\",\"target\":\"progredire\",\"source\":\"to progress\",\"type\":\"regular\",\"cefr\":\"B1\",\"grammar_note\":\"-ire group (isc-verbs), auxiliary essere\",\"examples\":[{\"target\":\"Spero di progredire rapidamente nello studio della lingua italiana.\",\"source\":\"I hope to progress quickly in learning the Italian language.\"},{\"target\":\"La scienza continua a progredire, portando a nuove scoperte ogni giorno.\",\"source\":\"Science continues to progress, leading to new discoveries every day.\"}],\"conjugations\":{\"presente\":{\"io\":\"progredisco\",\"tu\":\"progredisci\",\"lui/lei\":\"progredisce\",\"noi\":\"progrediamo\",\"voi\":\"progredite\",\"loro\":\"progrediscono\"},\"imperfetto\":{\"io\":\"progredivo\",\"tu\":\"progredivi\",\"lui/lei\":\"progrediva\",\"noi\":\"progredivamo\",\"voi\":\"progredivate\",\"loro\":\"progredivano\"},\"futuro_semplice\":{\"io\":\"progredirò\",\"tu\":\"progredirai\",\"lui/lei\":\"progredirà\",\"noi\":\"progrediremo\",\"voi\":\"progredirete\",\"loro\":\"progrediranno\"},\"condizionale_presente\":{\"io\":\"progredirei\",\"tu\":\"progrediresti\",\"lui/lei\":\"progredirebbe\",\"noi\":\"progrediremmo\",\"voi\":\"progredireste\",\"loro\":\"progredirebbero\"},\"passato_prossimo\":\"è progredito\",\"participio_passato\":\"progredito\"},\"tags\":[\"verb\",\"b1\"],\"metadata\":{}},{\"id\":\"verbs-b1-change_development-014\",\"target\":\"regredire\",\"source\":\"to regress\",\"type\":\"regular\",\"cefr\":\"B1\",\"grammar_note\":\"-ire group (isc-verbs), auxiliary essere\",\"examples\":[{\"target\":\"Spero che la situazione non regredisca dopo tutti i progressi fatti.\",\"source\":\"I hope the situation doesn't regress after all the progress made.\"},{\"target\":\"Il paziente ha mostrato segni di miglioramento, ma poi ha iniziato a regredire.\",\"source\":\"The patient showed signs of improvement, but then started to regress.\"}],\"conjugations\":{\"presente\":{\"io\":\"regredisco\",\"tu\":\"regredisci\",\"lui/lei\":\"regredisce\",\"noi\":\"regrediamo\",\"voi\":\"regredite\",\"loro\":\"regrediscono\"},\"imperfetto\":{\"io\":\"regredivo\",\"tu\":\"regredivi\",\"lui/lei\":\"regrediva\",\"noi\":\"regredivamo\",\"voi\":\"regredivate\",\"loro\":\"regredivano\"},\"futuro_semplice\":{\"io\":\"regredirò\",\"tu\":\"regredirai\",\"lui/lei\":\"regredirà\",\"noi\":\"regrediremo\",\"voi\":\"regredirete\",\"loro\":\"regrediranno\"},\"condizionale_presente\":{\"io\":\"regredirei\",\"tu\":\"regrediresti\",\"lui/lei\":\"regredirebbe\",\"noi\":\"regrediremmo\",\"voi\":\"regredireste\",\"loro\":\"regredirebbero\"},\"passato_prossimo\":\"è regredito\",\"participio_passato\":\"regredito\"},\"tags\":[\"verb\",\"b1\"],\"metadata\":{}},{\"id\":\"verbs-b1-change_development-015\",\"target\":\"rinnovare\",\"source\":\"to renew\",\"type\":\"regular\",\"cefr\":\"B1\",\"grammar_note\":\"-are group, auxiliary avere\",\"examples\":[{\"target\":\"Dobbiamo rinnovare il nostro abbonamento alla rivista entro la fine del mese.\",\"source\":\"We need to renew our magazine subscription by the end of the month.\"},{\"target\":\"Il governo ha promesso di rinnovare le infrastrutture pubbliche per il benessere dei cittadini.\",\"source\":\"The government promised to renew public infrastructure for the welfare of citizens.\"}],\"conjugations\":{\"presente\":{\"io\":\"rinnovo\",\"tu\":\"rinnovi\",\"lui/lei\":\"rinnova\",\"noi\":\"rinnoviamo\",\"voi\":\"rinnovate\",\"loro\":\"rinnovano\"},\"imperfetto\":{\"io\":\"rinnovavo\",\"tu\":\"rinnovavi\",\"lui/lei\":\"rinnovava\",\"noi\":\"rinnovavamo\",\"voi\":\"rinnovavate\",\"loro\":\"rinnovavano\"},\"futuro_semplice\":{\"io\":\"rinnovarò\",\"tu\":\"rinnovarai\",\"lui/lei\":\"rinnovarà\",\"noi\":\"rinnovaremo\",\"voi\":\"rinnovarete\",\"loro\":\"rinnovaranno\"},\"condizionale_presente\":{\"io\":\"rinnovarei\",\"tu\":\"rinnovaresti\",\"lui/lei\":\"rinnovarebbe\",\"noi\":\"rinnovaremmo\",\"voi\":\"rinnovareste\",\"loro\":\"rinnovarebbero\"},\"passato_prossimo\":\"ha rinnovato\",\"participio_passato\":\"rinnovato\"},\"tags\":[\"verb\",\"b1\"],\"metadata\":{}},{\"id\":\"verbs-b1-change_development-016\",\"target\":\"stabilizzarsi\",\"source\":\"to stabilize oneself\",\"type\":\"reflexive\",\"cefr\":\"B1\",\"grammar_note\":\"-are group, auxiliary essere (reflexive)\",\"examples\":[{\"target\":\"Dopo un periodo di incertezza, la situazione economica sembra stabilizzarsi.\",\"source\":\"After a period of uncertainty, the economic situation seems to be stabilizing.\"},{\"target\":\"Spero che il mercato immobiliare si stabilizzi presto per poter comprare casa.\",\"source\":\"I hope the housing market stabilizes soon so I can buy a house.\"}],\"conjugations\":{\"presente\":{\"io\":\"mi stabilizzo\",\"tu\":\"ti stabilizzi\",\"lui/lei\":\"si stabilizza\",\"noi\":\"ci stabiliamo\",\"voi\":\"vi stabilizzate\",\"loro\":\"si stabilizzano\"},\"imperfetto\":{\"io\":\"mi stabilizzavo\",\"tu\":\"ti stabilizzavi\",\"lui/lei\":\"si stabilizzava\",\"noi\":\"ci stabilizzavamo\",\"voi\":\"vi stabilizzavate\",\"loro\":\"si stabilizzavano\"},\"futuro_semplice\":{\"io\":\"mi stabilizzerò\",\"tu\":\"ti stabilizzerai\",\"lui/lei\":\"si stabilizzerà\",\"noi\":\"ci stabilizzeremo\",\"voi\":\"vi stabilizzerete\",\"loro\":\"si stabilizzeranno\"},\"condizionale_presente\":{\"io\":\"mi stabilizzerei\",\"tu\":\"ti stabilizzeresti\",\"lui/lei\":\"si stabilizzerebbe\",\"noi\":\"ci stabilizzeremmo\",\"voi\":\"vi stabilizzereste\",\"loro\":\"si stabilizzerebbero\"},\"passato_prossimo\":\"si è stabilizzato\",\"participio_passato\":\"stabilizzato\"},\"tags\":[\"verb\",\"b1\"],\"metadata\":{}},{\"id\":\"verbs-b1-change_development-017\",\"target\":\"espandere\",\"source\":\"to expand\",\"type\":\"irregular\",\"cefr\":\"B1\",\"grammar_note\":\"-ere group, auxiliary avere (transitive) or essere (intransitive)\",\"examples\":[{\"target\":\"L'azienda prevede di espandere le sue operazioni in nuovi mercati internazionali.\",\"source\":\"The company plans to expand its operations into new international markets.\"},{\"target\":\"La città ha continuato ad espandere i suoi confini negli ultimi decenni.\",\"source\":\"The city has continued to expand its borders in recent decades.\"}],\"conjugations\":{\"presente\":{\"io\":\"espando\",\"tu\":\"espandi\",\"lui/lei\":\"espande\",\"noi\":\"espandiamo\",\"voi\":\"espandete\",\"loro\":\"espandono\"},\"imperfetto\":{\"io\":\"espandevo\",\"tu\":\"espandevi\",\"lui/lei\":\"espandeva\",\"noi\":\"espandevamo\",\"voi\":\"espandevate\",\"loro\":\"espandevano\"},\"futuro_semplice\":{\"io\":\"espanderò\",\"tu\":\"espanderai\",\"lui/lei\":\"espanderà\",\"noi\":\"espanderemo\",\"voi\":\"espanderete\",\"loro\":\"espanderanno\"},\"condizionale_presente\":{\"io\":\"espanderei\",\"tu\":\"espanderesti\",\"lui/lei\":\"espanderebbe\",\"noi\":\"espanderemmo\",\"voi\":\"espandereste\",\"loro\":\"espanderebbero\"},\"passato_prossimo\":\"ha espanso\",\"participio_passato\":\"espanso\"},\"tags\":[\"verb\",\"b1\"],\"metadata\":{}},{\"id\":\"verbs-b1-change_development-018\",\"target\":\"ridurre\",\"source\":\"to reduce\",\"type\":\"irregular\",\"cefr\":\"B1\",\"grammar_note\":\"-ere group, auxiliary avere\",\"examples\":[{\"target\":\"Dobbiamo ridurre il consumo di plastica per proteggere l'ambiente marino.\",\"source\":\"We must reduce plastic consumption to protect the marine environment.\"},{\"target\":\"Il nuovo sistema aiuterà a ridurre i costi operativi dell'azienda.\",\"source\":\"The new system will help to reduce the company's operating costs.\"}],\"conjugations\":{\"presente\":{\"io\":\"riduco\",\"tu\":\"riduci\",\"lui/lei\":\"riduce\",\"noi\":\"riduciamo\",\"voi\":\"riducete\",\"loro\":\"riducono\"},\"imperfetto\":{\"io\":\"riducevo\",\"tu\":\"riducevi\",\"lui/lei\":\"riduceva\",\"noi\":\"riducevamo\",\"voi\":\"riducevate\",\"loro\":\"riducevano\"},\"futuro_semplice\":{\"io\":\"ridurrò\",\"tu\":\"ridurrai\",\"lui/lei\":\"ridurrà\",\"noi\":\"ridurremo\",\"voi\":\"ridurrete\",\"loro\":\"ridurranno\"},\"condizionale_presente\":{\"io\":\"ridurrei\",\"tu\":\"ridurresti\",\"lui/lei\":\"ridurrebbe\",\"noi\":\"ridurremmo\",\"voi\":\"ridurreste\",\"loro\":\"ridurrebbero\"},\"passato_prossimo\":\"ha ridotto\",\"participio_passato\":\"ridotto\"},\"tags\":[\"verb\",\"b1\"],\"metadata\":{}},{\"id\":\"verbs-b1-change_development-019\",\"target\":\"superare\",\"source\":\"to overcome / to surpass\",\"type\":\"regular\",\"cefr\":\"B1\",\"grammar_note\":\"-are group, auxiliary avere\",\"examples\":[{\"target\":\"Dobbiamo superare gli ostacoli per raggiungere i nostri obiettivi.\",\"source\":\"We must overcome obstacles to achieve our goals.\"},{\"target\":\"Spero di superare l'esame di italiano con un buon voto il prossimo mese.\",\"source\":\"I hope to pass the Italian exam with a good grade next month.\"}],\"conjugations\":{\"presente\":{\"io\":\"supero\",\"tu\":\"superi\",\"lui/lei\":\"supera\",\"noi\":\"superiamo\",\"voi\":\"superate\",\"loro\":\"superano\"},\"imperfetto\":{\"io\":\"superavo\",\"tu\":\"superavi\",\"lui/lei\":\"superava\",\"noi\":\"superavamo\",\"voi\":\"superavate\",\"loro\":\"superavano\"},\"futuro_semplice\":{\"io\":\"supererò\",\"tu\":\"supererai\",\"lui/lei\":\"supererà\",\"noi\":\"supereremo\",\"voi\":\"supererete\",\"loro\":\"supereranno\"},\"condizionale_presente\":{\"io\":\"supererei\",\"tu\":\"supereresti\",\"lui/lei\":\"supererebbe\",\"noi\":\"supereremmo\",\"voi\":\"superereste\",\"loro\":\"supererebbero\"},\"passato_prossimo\":\"ha superato\",\"participio_passato\":\"superato\"},\"tags\":[\"verb\",\"b1\"],\"metadata\":{}},{\"id\":\"verbs-b1-change_development-020\",\"target\":\"realizzare\",\"source\":\"to achieve / to realize\",\"type\":\"regular\",\"cefr\":\"B1\",\"grammar_note\":\"-are group, auxiliary avere\",\"examples\":[{\"target\":\"Spero di realizzare tutti i miei sogni e obiettivi nella vita.\",\"source\":\"I hope to achieve all my dreams and goals in life.\"},{\"target\":\"Ho realizzato che avevo sbagliato strada solo dopo diversi chilometri.\",\"source\":\"I realized I had taken the wrong road only after several kilometers.\"}],\"conjugations\":{\"presente\":{\"io\":\"realizzo\",\"tu\":\"realizzi\",\"lui/lei\":\"realizza\",\"noi\":\"realizziamo\",\"voi\":\"realizzate\",\"loro\":\"realizzano\"},\"imperfetto\":{\"io\":\"realizzavo\",\"tu\":\"realizzavi\",\"lui/lei\":\"realizzava\",\"noi\":\"realizzavamo\",\"voi\":\"realizzavate\",\"loro\":\"realizzavano\"},\"futuro_semplice\":{\"io\":\"realizzerò\",\"tu\":\"realizzerai\",\"lui/lei\":\"realizzerà\",\"noi\":\"realizzeremo\",\"voi\":\"realizzerete\",\"loro\":\"realizzeranno\"},\"condizionale_presente\":{\"io\":\"realizzerei\",\"tu\":\"realizzeresti\",\"lui/lei\":\"realizzerebbe\",\"noi\":\"realizzeremmo\",\"voi\":\"realizzereste\",\"loro\":\"realizzerebbero\"},\"passato_prossimo\":\"ha realizzato\",\"participio_passato\":\"realizzato\"},\"tags\":[\"verb\",\"b1\"],\"metadata\":{}}]";
+const langConfigJson = "{\"language_pair\":\"english_italian\",\"target_lang\":\"it\",\"native_lang\":\"en\",\"target_lang_name\":\"Italiano\",\"native_lang_name\":\"English\",\"speech_lang\":\"it-IT\",\"noun_metadata_fields\":[{\"key\":\"article\",\"label\":\"Articolo\",\"render\":\"article_badge\"},{\"key\":\"gender\",\"label\":\"Genere\",\"render\":\"gender_label\"},{\"key\":\"plural\",\"label\":\"Plurale\",\"render\":\"text\"}],\"article_colours\":{\"il\":\"#4A7C9E\",\"lo\":\"#2E6171\",\"la\":\"#B05070\",\"l'\":\"#7B6291\"},\"gender_labels\":{\"m\":\"Maschile\",\"f\":\"Femminile\"},\"verb_tenses\":[\"presente\",\"passato_prossimo\",\"imperfetto\",\"participio_passato\",\"futuro_semplice\",\"condizionale_presente\"],\"cases\":{},\"ui_labels\":{\"learn_mode\":\"Impara\",\"train_mode\":\"Esercitati\",\"examples_heading\":\"Frasi di esempio\",\"grammar_note_heading\":\"Nota grammaticale\",\"audio_button\":\"Ascolta\",\"back_link\":\"Indietro\",\"card_counter\":\"Carta {current} / {total}\",\"next_button\":\"Avanti\",\"finish_button\":\"Fine\",\"correct\":\"Esatto!\",\"wrong\":\"Sbagliato\",\"dashboard_link\":\"Dashboard\",\"library_prompt\":\"Scegli un mazzo dalla libreria ed esplora le carte.\",\"cards_badge\":\"{count} CARTE\",\"cards_count\":\"{count} carte\",\"deck_meta\":\"{topic} • {level} • {count} carte\",\"no_decks\":\"Nessun mazzo in questa categoria al momento.\",\"setup_title\":\"Configurazione allenamento\",\"setup_subtitle\":\"Configura la tua sessione di studio.\",\"question_type\":\"Tipo di domanda\",\"mode_multiple_choice\":\"Scelta multipla\",\"mode_typing\":\"Scrittura testo\",\"mode_typing_short\":\"Scrittura\",\"direction\":\"Direzione\",\"direction_forward\":\"🇺🇸 English → 🇮🇹 Italiano\",\"direction_reverse\":\"🇮🇹 Italiano → 🇺🇸 English\",\"select_level\":\"Seleziona livello\",\"start_training\":\"Inizia allenamento\",\"count_label\":\"Conteggio\",\"all_cards\":\"Tutte\",\"in_deck\":\"nel mazzo\",\"view_cards\":\"Carte\",\"view_list\":\"Elenco\",\"card_word\":\"Carta\",\"keyboard_hint_study\":\"← → Frecce per navigare · A per ascoltare\",\"example_single_heading\":\"Esempio\",\"no_example\":\"Nessun esempio disponibile.\",\"tags_label\":\"Tag:\",\"type_vocab\":\"Vocabolario\",\"type_verb\":\"Verbo\",\"type_phrase\":\"Espressione\",\"type_connector\":\"Connettore\",\"type_grammar\":\"Grammatica\",\"type_noun\":\"Sostantivo\",\"type_adjective\":\"Aggettivo\",\"type_expression\":\"Locuzione\",\"plural_prefix\":\"Pl. {plural}\",\"plural_only\":\"solo plurale\",\"word_order_heading\":\"Ordine delle parole\",\"structure_heading\":\"Struttura\",\"training_title\":\"Allenamento\",\"all_levels\":\"Tutti i livelli\",\"type_placeholder\":\"Scrivi la parola in italiano...\",\"check_button\":\"Controlla\",\"keyboard_hint_train\":\"Invio / Spazio = conferma · A = Ascolta\",\"audio_title\":\"Ascolta (A)\",\"training_finished\":\"Allenamento completato!\",\"missed_heading\":\"Risposte errate — da ripetere\",\"retry_missed\":\"Riprova errori\",\"new_config\":\"Nuova configurazione\",\"plural_hint\":\"Pl: {plural}\",\"results_pct\":\"{pct}% corretto\",\"result_excellent\":\"Eccellente! Hai padroneggiato questo livello.\",\"result_good\":\"Molto bene! Ancora un po' di pratica e sarà perfetto!\",\"result_ok\":\"Buon inizio! Ripassa ancora alcune carte.\",\"result_retry\":\"Non ti preoccupare: sbagliando si impara!\",\"no_cards_title\":\"Nessuna carta trovata\",\"no_cards_hint\":\"Seleziona un altro livello o mazzo.\"},\"answer_normalisation\":{\"strip_leading_words\":[\"il\",\"lo\",\"la\",\"l'\",\"i\",\"gli\",\"le\",\"un\",\"uno\",\"una\",\"un'\"],\"alt_spellings\":{\"à\":\"a\",\"è\":\"e\",\"é\":\"e\",\"ì\":\"i\",\"ò\":\"o\",\"ù\":\"u\"}}}";
+const category = "verbs";
+const lang = "en-it";
+const base = "/languagelounge/";
+const defaultView = "cards";
+
+  const cards     = JSON.parse(cardsJson);
+  const config    = JSON.parse(langConfigJson);
+  let currentIndex = 0;
+
+  const dotNav    = document.getElementById('dot-nav');
+  const currentNum = document.getElementById('current-num');
+  const progressBar = document.getElementById('progress-bar');
+  const btnPrev   = document.getElementById('btn-prev');
+  const btnNext   = document.getElementById('btn-next');
+  const cardHost  = document.getElementById('card-host');
+  const progressCont = document.getElementById('progress-container');
+
+  const cardViewWrap = document.getElementById('card-view-wrap');
+  const listViewWrap = document.getElementById('list-view-wrap');
+  const btnViewCards = document.getElementById('view-cards-btn');
+  const btnViewList  = document.getElementById('view-list-btn');
+
+  // Toggle Logic
+  function setViewMode(mode) {
+    if (mode === 'list') {
+      cardViewWrap.classList.add('hidden');
+      listViewWrap.classList.remove('hidden');
+      progressCont.classList.add('hidden');
+      btnViewList.classList.add('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewList.classList.remove('text-[var(--text-muted)]');
+      btnViewCards.classList.remove('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewCards.classList.add('text-[var(--text-muted)]');
+    } else {
+      listViewWrap.classList.add('hidden');
+      cardViewWrap.classList.remove('hidden');
+      progressCont.classList.remove('hidden');
+      btnViewCards.classList.add('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewCards.classList.remove('text-[var(--text-muted)]');
+      btnViewList.classList.remove('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewList.classList.add('text-[var(--text-muted)]');
+    }
+  }
+
+  btnViewCards.addEventListener('click', () => setViewMode('cards'));
+  btnViewList.addEventListener('click', () => setViewMode('list'));
+
+  // Initial view is configured per category (config/language_pairs/*.yaml → categories[].default_view)
+  if (defaultView === 'list') {
+    setViewMode('list');
+  }
+
+
+
+  // ── Helpers (mirror card-renderer.ts — no module imports in inline scripts) ──
+  const articleColours = config.article_colours || {};
+  const genderLabels   = config.gender_labels   || {};
+  const speechLang     = config.speech_lang;
+  const ui             = config.ui_labels || {};
+  const fmt = (tpl, vars) => String(tpl).replace(/\{(\w+)\}/g, (m, k) => (k in vars ? vars[k] : m));
+  const formatHighlight = (text) => text ? String(text).replace(/\*(.*?)\*/g, '<span class="highlighter">$1</span>') : '';
+  // Articles come from the language config (keys of article_colours), never hardcoded
+  const articleList = Object.keys(articleColours);
+  const articlePatterns = articleList.map(a => {
+    const esc = a.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    return esc.endsWith("'") ? esc : `${esc}\\s+`;
+  });
+  const articleRe = articlePatterns.length
+    ? new RegExp('^(?:' + articlePatterns.join('|') + ')', 'i')
+    : null;
+
+  function stripArticle(w) {
+    return articleRe ? (w || '').replace(articleRe, '').trim() : (w || '').trim();
+  }
+
+  function getTypeLabel(card) {
+    const tags = card.tags || [];
+    if (tags.includes('noun'))       return ui.type_noun;
+    if (tags.includes('verb'))       return ui.type_verb;
+    if (tags.includes('adjective'))  return ui.type_adjective;
+    if (tags.includes('expression')) return ui.type_expression;
+    const byType = { vocab: ui.type_vocab, verb: ui.type_verb, phrase: ui.type_phrase, connector: ui.type_connector, grammar: ui.type_grammar };
+    return byType[card.type] || ui.type_vocab;
+  }
+
+  function normaliseEx(ex) {
+    return { target: ex.target||'', source: ex.source||'', note: ex.note };
+  }
+
+  function getMetaFacts(card) {
+    const meta = card.metadata || {};
+    const facts = [];
+    for (const field of (config.noun_metadata_fields || [])) {
+      const raw = meta[field.key];
+      if (!raw || raw==='~') continue;
+      let value = String(raw), colour;
+      if (field.render === 'gender_label')  value  = genderLabels[raw] || raw;
+      if (field.render === 'article_badge') colour = articleColours[raw.toLowerCase()] || 'var(--espresso)';
+      facts.push({ label: field.label, value, colour });
+    }
+    return facts;
+  }
+
+  // ── Card renderer ─────────────────────────────────────────────────────────
+  function renderCard(idx) {
+    const card = cards[idx];
+    if (!card || !cardHost) return;
+
+    const lc = cardHost.querySelector('.learning-card');
+    if (!lc) return;
+
+    function sel(cls) { return lc.querySelector(cls); }
+
+    // Type badge + level
+    sel('.lc-type-badge').textContent = getTypeLabel(card);
+    sel('.lc-level-badge').textContent = (card.level || '').toUpperCase();
+
+    // Article
+    const article = card.metadata?.article;
+    const articleWrap = sel('.lc-article-wrap');
+    const articleEl   = sel('.lc-article');
+    if (article && (card.tags||[]).includes('noun') && !card.metadata?.plural_only) {
+      articleEl.textContent = article;
+      articleEl.style.color = articleColours[article.toLowerCase()] || 'var(--espresso)';
+      articleWrap.style.display = '';
+    } else {
+      articleWrap.style.display = 'none';
+    }
+
+    // Word / translation / forms
+    sel('.lc-word').textContent        = stripArticle(card.target);
+    sel('.lc-translation').textContent = card.source || '';
+    const plural = card.metadata?.plural;
+    sel('.lc-forms').textContent = plural && !card.metadata?.plural_only ? fmt(ui.plural_prefix, { plural }) : card.metadata?.plural_only ? ui.plural_only : '';
+
+    // Meta grid
+    const metaGrid = sel('.lc-meta-grid');
+    const facts = getMetaFacts(card);
+    if (facts.length) {
+      metaGrid.style.gridTemplateColumns = `repeat(${Math.min(facts.length,4)}, 1fr)`;
+      metaGrid.style.display = '';
+      metaGrid.innerHTML = facts.map((f, i) => `
+        <div class="px-5 py-4 ${i<facts.length-1?'border-r':''}" style="border-color:var(--border);">
+          <p class="text-[9px] font-bold uppercase tracking-widest mb-1" style="color:var(--text-muted);">${f.label}</p>
+          <p class="text-sm font-bold" style="color:${f.colour||'var(--text)'};">${f.value}</p>
+        </div>`).join('');
+    } else {
+      metaGrid.style.display = 'none';
+    }
+
+    // Grammar note
+    const grammarWrap = sel('.lc-grammar-wrap');
+    if (card.grammar_note) {
+      sel('.lc-grammar-text').innerHTML = formatHighlight(card.grammar_note);
+      grammarWrap.classList.remove('hidden');
+    } else {
+      grammarWrap.classList.add('hidden');
+    }
+
+    // Examples
+    const examplesEl = sel('.lc-examples');
+    const rawEx = card.examples || [];
+    examplesEl.innerHTML = rawEx.length
+      ? rawEx.map(ex => { const e=normaliseEx(ex); return `
+          <div class="rounded-2xl border overflow-hidden" style="border-color:var(--border);">
+            <div class="px-4 py-3" style="background-color:var(--bg);">
+              <p class="font-semibold leading-snug mb-1" style="color:var(--text);">${e.target}</p>
+              <p class="text-sm italic" style="color:var(--text-muted);">${e.source||''}</p>
+            </div>
+            ${e.note?`<div class="px-4 py-2 border-t" style="border-color:var(--border);">
+              <p class="text-[10px] font-bold font-mono" style="color:var(--espresso);">📐 ${e.note}</p>
+            </div>`:''}
+          </div>`; }).join('')
+      : '<p class="text-sm italic" style="color:var(--text-muted);">' + ui.no_example + '</p>';
+
+    // Verb: conjugation table
+    const conjWrap  = sel('.lc-conjugation-wrap');
+    const conjInner = sel('.lc-conjugation-inner');
+    const cardType = card.type || (card.tags?.includes('verb') ? 'verb' : 'vocab');
+    if (conjWrap && conjInner) {
+      if (cardType === 'verb' && card.conjugations) {
+        conjWrap.classList.remove('hidden');
+        let conjArray = [];
+        if (Array.isArray(card.conjugations)) {
+          conjArray = card.conjugations;
+        } else {
+          for (const [tense, forms] of Object.entries(card.conjugations)) {
+            if (typeof forms === 'string') {
+              conjArray.push({ tense, stringForm: forms });
+            } else {
+              const formsArr = Object.entries(forms).map(([pronoun, form]) => ({ pronoun, form }));
+              conjArray.push({ tense, forms: formsArr });
+            }
+          }
+        }
+
+        const tensesToRender = config.verb_tenses || conjArray.map(t => t.tense);
+        const stringTenses = [];
+        const tableTenses = [];
+
+        tensesToRender.forEach(tense => {
+          const t = conjArray.find(c => c.tense === tense);
+          if (!t) return;
+          if (t.stringForm) stringTenses.push(t);
+          else tableTenses.push(t);
+        });
+
+        let html = '';
+        if (stringTenses.length > 0) {
+          html += `
+            <div class="flex flex-wrap gap-3 mb-6">
+              ${stringTenses.map(t => `
+                <div class="rounded-xl border px-4 py-2.5 flex items-center gap-3 shadow-sm" style="border-color:var(--border); background-color:var(--bg);">
+                  <span class="text-[10px] font-bold uppercase tracking-widest opacity-80" style="color:var(--espresso);">${t.tense.replace(/_/g, ' ')}</span>
+                  <span class="font-bold text-sm" style="color:var(--text);">${t.stringForm}</span>
+                </div>
+              `).join('')}
+            </div>
+          `;
+        }
+
+        if (tableTenses.length > 0) {
+          const pronouns = tableTenses[0].forms.map(f => f.pronoun);
+          html += `
+            <div class="rounded-xl border overflow-x-auto shadow-sm w-full" style="border-color:var(--border);">
+              <table class="w-full text-sm text-left">
+                <thead>
+                  <tr style="background-color:var(--bg); border-bottom: 1px solid var(--border);">
+                    <th class="px-4 py-3 font-bold uppercase tracking-widest text-[10px] w-[1%]" style="color:var(--espresso); border-right: 1px solid var(--border);"></th>
+                    ${tableTenses.map(t => `
+                      <th class="px-4 py-3 font-bold uppercase tracking-widest text-[10px]" style="color:var(--espresso);">${t.tense.replace(/_/g, ' ')}</th>
+                    `).join('')}
+                  </tr>
+                </thead>
+                <tbody>
+                  ${pronouns.map((pronoun, ri) => `
+                    <tr class="${ri < pronouns.length - 1 ? 'border-b' : ''}" style="border-color:var(--border);">
+                      <td class="px-4 py-3 font-bold text-xs whitespace-nowrap" style="color:var(--espresso); background-color:var(--bg); border-right: 1px solid var(--border);">${pronoun}</td>
+                      ${tableTenses.map(t => {
+                        const formObj = t.forms.find(f => f.pronoun === pronoun);
+                        return `<td class="px-4 py-3 font-semibold whitespace-nowrap" style="color:var(--text);">${formObj ? formObj.form : '-'}</td>`;
+                      }).join('')}
+                    </tr>
+                  `).join('')}
+                </tbody>
+              </table>
+            </div>
+          `;
+        }
+        conjInner.innerHTML = html;
+      } else {
+        conjWrap.classList.add('hidden');
+        conjInner.innerHTML = '';
+      }
+    }
+
+    // Connector: word order block
+    const woWrap = sel('.lc-wordorder-wrap');
+    if (woWrap) {
+      if (cardType === 'connector' && card.word_order) {
+        sel('.lc-wordorder-text').textContent = card.word_order;
+        woWrap.classList.remove('hidden');
+      } else {
+        woWrap.classList.add('hidden');
+      }
+    }
+
+    // Phrase: preposition rule block
+    const phraseWrap = sel('.lc-phrase-wrap');
+    if (phraseWrap) {
+      if (cardType === 'phrase' && card.clause_type) {
+        sel('.lc-phrase-rule').textContent = card.clause_type;
+        phraseWrap.classList.remove('hidden');
+      } else {
+        phraseWrap.classList.add('hidden');
+      }
+    }
+
+    // Tags
+    sel('.lc-tags').innerHTML = (card.tags||[]).map(t =>
+      `<span class="text-[10px] font-bold px-2 py-0.5 rounded-md border" style="border-color:var(--border);color:var(--text-muted);background-color:var(--bg);">${t}</span>`
+    ).join('');
+
+    // Progress UI
+    if (currentNum)  currentNum.textContent = String(idx+1);
+    if (progressBar) progressBar.style.width = `${Math.round(((idx+1)/cards.length)*100)}%`;
+    if (btnPrev)     btnPrev.disabled = idx === 0;
+    if (btnNext)     btnNext.innerHTML = idx === cards.length-1
+      ? '✓ ' + ui.finish_button
+      : ui.next_button + ' <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>';
+
+    updateDots();
+
+    // Re-bind audio button cleanly by cloning to strip old listeners
+    const oldBtn = sel('.lc-audio-btn');
+    if (oldBtn) {
+      const newBtn = oldBtn.cloneNode(true);
+      oldBtn.parentNode.replaceChild(newBtn, oldBtn);
+      newBtn.addEventListener('click', speakCurrent);
+    }
+  }
+
+  // ── Dot navigation ────────────────────────────────────────────────────────
+  function buildDots() {
+    if (!dotNav) return;
+    dotNav.innerHTML = '';
+    const maxVisible = 20;
+    const showAll = cards.length <= maxVisible;
+    cards.forEach((_, i) => {
+      if (!showAll && i >= maxVisible) return;
+      const dot = document.createElement('button');
+      dot.className = 'dot w-2 h-2 rounded-full transition-all duration-300 flex-shrink-0';
+      dot.style.backgroundColor = 'var(--border)';
+      dot.title = `${ui.card_word} ${i+1}`;
+      dot.addEventListener('click', () => goTo(i));
+      dotNav.appendChild(dot);
+    });
+    if (!showAll) {
+      const el = document.createElement('span');
+      el.textContent = `+${cards.length - maxVisible}`;
+      el.className = 'text-[10px] font-bold';
+      el.style.color = 'var(--text-muted)';
+      dotNav.appendChild(el);
+    }
+  }
+
+  function updateDots() {
+    dotNav?.querySelectorAll('.dot').forEach((dot, i) => {
+      dot.style.backgroundColor = i===currentIndex ? 'var(--espresso)' : 'var(--border)';
+      dot.style.width     = i===currentIndex ? '20px' : '8px';
+      dot.style.borderRadius = '4px';
+    });
+  }
+
+  // ── Audio ─────────────────────────────────────────────────────────────────
+  function speakCurrent() {
+    const card = cards[currentIndex];
+    if (!card) return;
+    if (window.LoungeAudioEngine) {
+      window.LoungeAudioEngine.speak(card.target || '', speechLang, 0.85);
+    }
+  }
+
+  // ── Navigate ─────────────────────────────────────────────────────────────
+  function goTo(idx) {
+    if (idx < 0 || idx >= cards.length) return;
+    currentIndex = idx;
+    renderCard(currentIndex);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  btnPrev?.addEventListener('click', () => goTo(currentIndex - 1));
+  btnNext?.addEventListener('click', () => {
+    if (currentIndex === cards.length - 1) window.location.href = `${base}${lang}/${category}/`;
+    else goTo(currentIndex + 1);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') goTo(currentIndex + 1);
+    if (e.key === 'ArrowLeft')  goTo(currentIndex - 1);
+    if (e.key === 'a' || e.key === 'A') speakCurrent();
+  });
+
+  // ── Learn / Train panel toggle ──────────────────────
+  const btnLearn = document.getElementById('btn-mode-learn');
+  const btnTrain = document.getElementById('btn-mode-train');
+  const pnlLearn = document.getElementById('learn-panel');
+  const pnlTrain = document.getElementById('train-panel');
+  const toolbar  = document.getElementById('learn-toolbar');
+
+  const STORAGE_KEY = `lounge:${lang}:${category}:deck:mode`;
+  let currentMode = localStorage.getItem(STORAGE_KEY) || 'learn';
+
+  function applyMode() {
+    if (currentMode === 'learn') {
+      btnLearn.style.backgroundColor = 'var(--espresso)';
+      btnLearn.style.color = '#F5F2EB';
+      btnTrain.style.backgroundColor = 'transparent';
+      btnTrain.style.color = 'var(--text-muted)';
+      pnlLearn.classList.remove('hidden');
+      toolbar.classList.remove('hidden');
+      pnlTrain.classList.add('hidden');
+    } else {
+      btnTrain.style.backgroundColor = 'var(--espresso)';
+      btnTrain.style.color = '#F5F2EB';
+      btnLearn.style.backgroundColor = 'transparent';
+      btnLearn.style.color = 'var(--text-muted)';
+      pnlTrain.classList.remove('hidden');
+      pnlLearn.classList.add('hidden');
+      toolbar.classList.add('hidden');
+    }
+    localStorage.setItem(STORAGE_KEY, currentMode);
+  }
+
+  btnLearn?.addEventListener('click', () => { currentMode = 'learn'; applyMode(); });
+  btnTrain?.addEventListener('click', () => { currentMode = 'train'; applyMode(); });
+  applyMode();
+
+  // ── Radio-style selectors (mode & dir & count) ─────────────
+  document.querySelectorAll('.sel-opt').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const group = btn.dataset.group;
+      document.querySelectorAll(`.sel-opt[data-group="${group}"]`).forEach(b => b.classList.remove('sel-active'));
+      btn.classList.add('sel-active');
+      const hidden = document.getElementById(`${group}-hidden`);
+      if (hidden) hidden.value = btn.dataset.value;
+    });
+  });
+
+  document.getElementById('deck-train-form')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const base = form.action;
+    const mode = document.getElementById('mode-hidden')?.value || 'mc';
+    const dir  = document.getElementById('dir-hidden')?.value || `${config.language_pair.source_code}-${config.language_pair.target_code}`.toLowerCase();
+    const count = document.getElementById('count-hidden')?.value || '30';
+    const level = form.querySelector('[name="level"]')?.value || '';
+    const deck = form.querySelector('[name="deck"]')?.value || '';
+    
+    const params = new URLSearchParams();
+    if(level) params.set('level', level);
+    params.set('deck', deck);
+    params.set('mode', mode);
+    params.set('dir', dir);
+    params.set('count', count);
+    
+    window.location.href = `${base}?${params.toString()}`;
+  });
+
+  // ── Init ─────────────────────────────────────────────────────────────────
+  buildDots();
+  // Card 0 is already rendered server-side via LearningCard component.
+  // Sync progress UI to reflect card 0 state.
+  updateDots();
+  if (progressBar) progressBar.style.width = `${Math.round(1/cards.length*100)}%`;
+  // Update card 0 using client-side config too (ensures langConfig is applied)
+  renderCard(0);
+})();</script>

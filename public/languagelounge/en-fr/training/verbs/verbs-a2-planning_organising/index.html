@@ -1,0 +1,758 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="description" content="Lounge Français — Votre salon dédié à la langue française — développez votre vocabulaire, maîtrisez la grammaire et perfectionnez votre français du niveau A1 au B2."><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/languagelounge/favicon.svg"><meta name="generator" content="Astro v7.3.5"><title>Planning &amp; Organising — Lounge Français</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet"><script>
+      (function() {
+        const saved = localStorage.getItem('wortschatz_theme');
+        if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script><link rel="stylesheet" href="/languagelounge/_astro/Layout.Cr1varBg.css"><style>.sel-opt[data-astro-cid-5tabbh6g]{border:2px solid var(--border);background-color:var(--card);color:var(--text);cursor:pointer;text-align:center;border-radius:12px;flex-direction:column;justify-content:center;align-items:center;width:100%;padding:14px 12px;transition:border-color .15s,background-color .15s,color .15s,box-shadow .15s;display:flex}.sel-opt[data-astro-cid-5tabbh6g]:hover{border-color:var(--border-hover);box-shadow:0 2px 8px #00000014}.sel-opt[data-astro-cid-5tabbh6g].sel-active{border-color:var(--espresso);background-color:var(--espresso);color:#f5f2eb;box-shadow:0 2px 12px #0000002e}
+</style></head><body class="antialiased min-h-screen flex flex-col" style="background-color:var(--bg);color:var(--text);"><!-- Header --><header class="sticky top-0 z-50 border-b" style="background-color:var(--bg);border-color:var(--border);"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between gap-4" style="height:4.5rem;"><!-- Logo + Language Switcher --><div class="flex items-center gap-4 shrink-0"><a href="/languagelounge/en-fr/" class="flex items-center gap-2 group"><span class="font-outfit font-extrabold text-xl sm:text-2xl tracking-tight transition-colors" style="color:var(--text);">Small Talk Café<span class="font-normal text-base hidden sm:inline" style="color:var(--text-muted);"> | <span id="site-name">Lounge Français</span></span></span></a><!-- Language Selector Dropdown --><div class="relative" id="lang-dropdown-wrapper"><button id="lang-btn" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-sm font-bold transition-all hover:opacity-70" style="background-color:var(--bg); border-color:var(--border); color:var(--text);"><span id="lang-flag">🇫🇷</span><span id="lang-code">FR</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"></path></svg></button><div id="lang-menu" class="hidden absolute top-full left-0 mt-2 rounded-2xl border shadow-2xl overflow-hidden z-50 min-w-[260px] sm:min-w-[300px]" style="background-color:var(--card); border-color:var(--border);"><div class="px-3.5 py-2 text-[11px] font-bold uppercase tracking-wider border-b" style="background-color:var(--surface); border-color:var(--border); color:var(--text-muted);">Language Lounges</div><div><a href="/languagelounge/en-de/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇩🇪</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Deutsch Lounge</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">Der Raum für die deutsche Sprache</div></div></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-es/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇪🇸</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Lounge Español</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">El espacio para la lengua española</div></div></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-fr/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-bold" style="color:var(--text); background-color:var(--surface);"><span class="text-2xl shrink-0">🇫🇷</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Lounge Français</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">Le salon de la langue française</div></div><span class="shrink-0 text-[10px] font-extrabold uppercase px-1.5 py-0.5 rounded" style="background-color:var(--accent); color:var(--bg);">Active</span></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-it/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇮🇹</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Lounge Italiano</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">Il salotto per la lingua italiana</div></div></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-nl/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇳🇱</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Nederlands Lounge</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">Dé ontmoetingsplek voor de Nederlandse taal</div></div></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-pt/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇵🇹</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Lounge Português</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">O espaço para a língua portuguesa</div></div></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-sv/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇸🇪</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Svenska Lounge</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">Mötesplatsen för det svenska språket</div></div></a></div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/" class="w-full flex items-center gap-2.5 px-4 py-2.5 text-xs font-semibold hover:opacity-80 transition-colors " style="color:var(--text); "><span class="text-base">🏛️</span><span>Language Lounge Hub</span><span class="ml-auto text-[11px]" style="color:var(--text-muted);">Overview &rarr;</span></a></div></div></div><!-- Dynamic Nav Links --><nav class="hidden md:flex gap-5 items-center"><a href="https://smalltalkcafe.de/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Small Talk Café Podcasts</a><span class="text-sm font-normal" style="color:var(--border);">|</span><a href="/languagelounge/en-fr/vocabulary/" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Vocabulaire</a><a href="/languagelounge/en-fr/verbs/" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Verbes</a><a href="/languagelounge/en-fr/grammatik/" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Grammaire</a><a href="/languagelounge/en-fr/redemittel/" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Expressions</a><!-- Dark/Light Toggle --><button id="theme-toggle" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-sm font-semibold transition-all hover:opacity-70" style="border-color:var(--border); color:var(--text-muted);" aria-label="Toggle dark/light mode"><span id="theme-icon">☀️</span><span id="theme-label">Light</span></button></nav></div></header><main id="main-content" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-1 w-full"><div class="max-w-4xl mx-auto py-6" data-astro-cid-5tabbh6g><!-- Deck Header --><div class="flex items-start justify-between mb-8 gap-4 flex-wrap" data-astro-cid-5tabbh6g><div data-astro-cid-5tabbh6g><a href="/languagelounge/en-fr/verbs/" class="text-xs font-bold flex items-center gap-1 mb-2 hover:opacity-70 transition-opacity" style="color:var(--espresso);" data-astro-cid-5tabbh6g><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><path d="m15 18-6-6 6-6" data-astro-cid-5tabbh6g></path></svg>Verbes</a><h1 class="text-2xl md:text-3xl font-extrabold font-outfit" style="color:var(--text);" data-astro-cid-5tabbh6g>Planning &amp; Organising</h1><p class="text-xs font-bold uppercase tracking-wider mt-1" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Planification et Organisation • A2 • 20 cartes</p></div><div class="flex flex-col items-end gap-4 w-full md:w-auto mt-4 md:mt-0" data-astro-cid-5tabbh6g><!-- ── Mode Toggle ───────────────────────────── --><div class="flex rounded-xl border overflow-hidden p-1 gap-1 w-full max-w-[300px]" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><button id="btn-mode-learn" class="mode-btn flex-1 flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold transition-all" data-astro-cid-5tabbh6g><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" data-astro-cid-5tabbh6g></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" data-astro-cid-5tabbh6g></path></svg>Apprendre</button><button id="btn-mode-train" class="mode-btn flex-1 flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold transition-all" data-astro-cid-5tabbh6g><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><circle cx="12" cy="12" r="10" data-astro-cid-5tabbh6g></circle><polyline points="12 6 12 12 16 14" data-astro-cid-5tabbh6g></polyline></svg>S&#39;entraîner</button></div><div id="learn-toolbar" class="flex flex-col items-end gap-4 w-full" data-astro-cid-5tabbh6g><!-- View switcher (Cards vs List) --><div class="flex rounded-xl border overflow-hidden p-1 gap-1 w-full max-w-[300px]" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><button id="view-cards-btn" class="view-btn flex-1 flex items-center justify-center px-4 py-2 rounded-lg text-xs font-bold transition-all bg-[var(--espresso)] text-[#F5F2EB]" data-astro-cid-5tabbh6g>Cartes</button><button id="view-list-btn" class="view-btn flex-1 flex items-center justify-center px-4 py-2 rounded-lg text-xs font-bold transition-all text-[var(--text-muted)] hover:opacity-70" data-astro-cid-5tabbh6g>Liste</button></div><!-- Progress indicator --><div id="progress-container" class="flex items-center gap-3" data-astro-cid-5tabbh6g><div class="text-xs font-semibold" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Carte <span id="current-num" class="font-extrabold" style="color:var(--text);" data-astro-cid-5tabbh6g>1</span> / 20</div><div class="w-24 h-1.5 rounded-full overflow-hidden border" style="background-color:var(--bg);border-color:var(--border);" data-astro-cid-5tabbh6g><div id="progress-bar" class="h-full transition-all duration-500 rounded-full" style="width:0%; background-color:var(--espresso);" data-astro-cid-5tabbh6g></div></div></div></div></div></div><!-- ══ LEARN PANEL ════════════════════════════ --><div id="learn-panel" class="space-y-6" data-astro-cid-5tabbh6g><!-- ── Universal Study Card (rendered by LearningCard component) ── --><div id="card-view-wrap" data-astro-cid-5tabbh6g><div id="card-host" data-astro-cid-5tabbh6g><!-- The card shell — populated client-side by renderCard() --><div class="learning-card rounded-3xl border shadow-xl overflow-hidden" style="background-color:var(--card); border-color:var(--border);"><!-- ── Top bar ─────────────────────────────────── --><div class="lc-topbar flex items-center justify-between px-6 py-3.5 border-b" style="border-color:var(--border); background-color:var(--bg);"><div class="flex items-center gap-2"><span class="lc-type-badge text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-lg" style="background-color:var(--espresso); color:#F5F2EB;">—</span><span class="lc-level-badge text-[10px] font-bold px-2.5 py-1 rounded-lg cafe-badge"></span></div><button class="lc-audio-btn flex items-center justify-center w-11 h-11 rounded-full transition-transform hover:scale-105 active:scale-95 shadow-md flex-shrink-0" title="Écouter (A)" style="background-color:var(--espresso); color:#F5F2EB;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg></button></div><!-- ── Main word display ───────────────────────── --><div class="lc-hero px-7 py-8 text-center border-b" style="border-color:var(--border);"><div class="lc-article-wrap mb-1.5"><span class="lc-article text-xl font-bold"></span></div><h2 class="lc-word text-5xl md:text-6xl font-extrabold font-outfit mb-3" style="color:var(--text);">—</h2><p class="lc-translation text-lg font-semibold italic" style="color:var(--text-muted);"></p><p class="lc-forms text-sm font-medium mt-2" style="color:var(--text-muted);"></p></div><!-- ── Meta info grid ─────────────────────────── --><div class="lc-meta-grid grid border-b" style="border-color:var(--border);"><!-- populated by JS --></div><!-- ── Grammar note ───────────────────────────── --><div class="lc-grammar-wrap hidden px-7 py-5 border-b" style="border-color:var(--border); background-color:var(--bg);"><p class="text-[10px] font-bold uppercase tracking-widest mb-2" style="color:var(--espresso);">📌 <span class="lc-grammar-label">Note de grammaire</span></p><p class="lc-grammar-text text-sm leading-relaxed font-medium whitespace-pre-wrap" style="color:var(--text);"></p></div><!-- ── Type-specific block ────────────────────── --><!-- Connector word-order block --><div class="lc-wordorder-wrap hidden px-7 py-4 border-b" style="border-color:var(--border); background-color:var(--bg);"><div class="flex items-start gap-3 text-sm font-medium" style="color:var(--text-muted);"><span class="text-base flex-shrink-0">📐</span><span class="lc-wordorder-text"></span></div></div><!-- Phrase preposition block --><div class="lc-phrase-wrap hidden px-7 py-4 border-b" style="border-color:var(--border); background-color:var(--bg);"><p class="text-[10px] font-bold uppercase tracking-widest mb-2" style="color:var(--espresso);">Structure</p><p class="lc-phrase-rule text-sm font-semibold" style="color:var(--text);"></p></div><!-- ── Examples ───────────────────────────────── --><div class="px-7 py-6 border-b" style="border-color:var(--border);"><p class="lc-examples-label text-[10px] font-bold uppercase tracking-widest mb-5" style="color:var(--text-muted);">Exemples</p><div class="lc-examples space-y-3"><!-- populated by JS --></div></div><!-- Verb conjugation (hidden by default, shown for verb cards) --><div class="lc-conjugation-wrap hidden border-b px-7 py-6" style="border-color:var(--border);"><div class="lc-conjugation-inner flex flex-wrap gap-4"><!-- populated by JS --></div></div><!-- ── Tags ───────────────────────────────────── --><div class="lc-tags-row px-7 py-4 flex items-center gap-2 flex-wrap"><span class="text-[10px] font-bold uppercase tracking-wider" style="color:var(--text-muted);">Tags :</span><div class="lc-tags flex gap-2 flex-wrap"></div></div></div><script>(function(){const cardJson = "{\"id\":\"verbs-a2-planning_organising-001\",\"target\":\"organiser\",\"source\":\"to organise\",\"type\":\"regular\",\"cefr\":\"A2\",\"grammar_note\":\"Regular -er verb, auxiliary avoir.\",\"examples\":[{\"target\":\"Nous organisons une fête ce week-end.\",\"source\":\"We are organising a party this weekend.\"},{\"target\":\"Tu organises ton voyage facilement.\",\"source\":\"You organise your trip easily.\"}],\"conjugations\":{\"présent\":{\"je\":\"organise\",\"tu\":\"organises\",\"il/elle/on\":\"organise\",\"nous\":\"organisons\",\"vous\":\"organisez\",\"ils/elles\":\"organisent\"},\"imparfait\":{\"je\":\"organisais\",\"tu\":\"organisais\",\"il/elle/on\":\"organisait\",\"nous\":\"organisions\",\"vous\":\"organisiez\",\"ils/elles\":\"organisaient\"},\"futur_simple\":{\"je\":\"organiserai\",\"tu\":\"organiseras\",\"il/elle/on\":\"organisera\",\"nous\":\"organiserons\",\"vous\":\"organiserez\",\"ils/elles\":\"organiseront\"},\"conditionnel_présent\":{\"je\":\"organiserais\",\"tu\":\"organiserais\",\"il/elle/on\":\"organiserait\",\"nous\":\"organiserions\",\"vous\":\"organiseriez\",\"ils/elles\":\"organiseraient\"},\"passé_composé\":\"a organisé\",\"participe_passé\":\"organisé\"},\"tags\":[\"verb\",\"a2\"],\"metadata\":{}}";
+const langConfigJson = "{\"language_pair\":\"english_french\",\"target_lang\":\"fr\",\"native_lang\":\"en\",\"target_lang_name\":\"Français\",\"native_lang_name\":\"English\",\"speech_lang\":\"fr-FR\",\"noun_metadata_fields\":[{\"key\":\"article\",\"label\":\"Article\",\"render\":\"article_badge\"},{\"key\":\"gender\",\"label\":\"Genre\",\"render\":\"gender_label\"},{\"key\":\"plural\",\"label\":\"Pluriel\",\"render\":\"text\"}],\"article_colours\":{\"le\":\"#4A7C9E\",\"la\":\"#B05070\",\"l'\":\"#7B6291\"},\"gender_labels\":{\"m\":\"Masculin\",\"f\":\"Féminin\"},\"verb_tenses\":[\"présent\",\"passé_composé\",\"imparfait\",\"participe_passé\",\"futur_simple\",\"conditionnel_présent\"],\"cases\":{},\"ui_labels\":{\"learn_mode\":\"Apprendre\",\"train_mode\":\"S'entraîner\",\"examples_heading\":\"Exemples\",\"grammar_note_heading\":\"Note de grammaire\",\"audio_button\":\"Écouter\",\"back_link\":\"Retour\",\"card_counter\":\"Carte {current} / {total}\",\"next_button\":\"Suivant\",\"finish_button\":\"Terminé\",\"correct\":\"Correct !\",\"wrong\":\"Incorrect\",\"dashboard_link\":\"Tableau de bord\",\"library_prompt\":\"Choisissez un paquet dans la bibliothèque et explorez les cartes.\",\"cards_badge\":\"{count} CARTES\",\"cards_count\":\"{count} cartes\",\"deck_meta\":\"{topic} • {level} • {count} cartes\",\"no_decks\":\"Aucun paquet dans cette catégorie pour le moment.\",\"setup_title\":\"Configuration de l'entraînement\",\"setup_subtitle\":\"Configurez votre session d'apprentissage.\",\"question_type\":\"Type de question\",\"mode_multiple_choice\":\"Choix multiple\",\"mode_typing\":\"Saisie de texte\",\"mode_typing_short\":\"Saisie\",\"direction\":\"Direction\",\"direction_forward\":\"🇺🇸 English → 🇫🇷 Français\",\"direction_reverse\":\"🇫🇷 Français → 🇺🇸 English\",\"select_level\":\"Sélectionnez un niveau\",\"start_training\":\"Démarrer l'entraînement\",\"count_label\":\"Nombre de cartes\",\"all_cards\":\"Toutes\",\"in_deck\":\"dans le paquet\",\"view_cards\":\"Cartes\",\"view_list\":\"Liste\",\"card_word\":\"Carte\",\"keyboard_hint_study\":\"← → Flèches pour naviguer · A pour écouter\",\"example_single_heading\":\"Exemple\",\"no_example\":\"Aucun exemple disponible.\",\"tags_label\":\"Tags :\",\"type_vocab\":\"Vocabulaire\",\"type_verb\":\"Verbe\",\"type_phrase\":\"Expression\",\"type_connector\":\"Connecteur\",\"type_grammar\":\"Grammaire\",\"type_noun\":\"Nom\",\"type_adjective\":\"Adjectif\",\"type_expression\":\"Locution\",\"plural_prefix\":\"Pl. {plural}\",\"plural_only\":\"pluriel uniquement\",\"word_order_heading\":\"Ordre des mots\",\"structure_heading\":\"Structure\",\"training_title\":\"Entraînement\",\"all_levels\":\"Tous les niveaux\",\"type_placeholder\":\"Écrivez le mot en français...\",\"check_button\":\"Vérifier\",\"keyboard_hint_train\":\"Entrée / Espace = valider · A = Écouter\",\"audio_title\":\"Écouter (A)\",\"training_finished\":\"Entraînement terminé !\",\"missed_heading\":\"Réponses incorrectes — à réviser\",\"retry_missed\":\"Réessayer les erreurs\",\"new_config\":\"Nouvelle configuration\",\"plural_hint\":\"Pl : {plural}\",\"results_pct\":\"{pct}% de réussite\",\"result_excellent\":\"Excellent ! Vous maîtrisez parfaitement ce niveau.\",\"result_good\":\"Très bien ! Encore un peu de pratique et ce sera parfait !\",\"result_ok\":\"Bon début ! Révisez encore quelques cartes.\",\"result_retry\":\"Pas d'inquiétude — c'est en forgeant qu'on devient forgeron !\",\"no_cards_title\":\"Aucune carte trouvée\",\"no_cards_hint\":\"Veuillez sélectionner un autre niveau ou un autre paquet.\"},\"answer_normalisation\":{\"strip_leading_words\":[\"le\",\"la\",\"l'\",\"un\",\"une\",\"des\",\"du\",\"de la\",\"de l'\"],\"alt_spellings\":{\"é\":\"e\",\"è\":\"e\",\"ê\":\"e\",\"ë\":\"e\",\"à\":\"a\",\"â\":\"a\",\"ô\":\"o\",\"ù\":\"u\",\"û\":\"u\",\"î\":\"i\",\"ï\":\"i\",\"ç\":\"c\"}}}";
+
+  /**
+   * Client-side card renderer.
+   * Uses the universal card-renderer logic inline (no imports in Astro is:inline).
+   */
+
+  // ── Parse data ──────────────────────────────────────────────────────────
+  const card   = JSON.parse(cardJson);
+  const config = JSON.parse(langConfigJson);
+
+  // ── Helpers ─────────────────────────────────────────────────────────────
+  // Articles come from the language config (keys of article_colours), never hardcoded
+  const articleList = Object.keys(config.article_colours || {});
+  const articlePatterns = articleList.map(a => {
+    const esc = a.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    return esc.endsWith("'") ? esc : `${esc}\\s+`;
+  });
+  const articleRe = articlePatterns.length
+    ? new RegExp('^(?:' + articlePatterns.join('|') + ')', 'i')
+    : null;
+
+  function stripArticle(word) {
+    return articleRe ? (word || '').replace(articleRe, '').trim() : (word || '').trim();
+  }
+
+  function getArticleColour(article) {
+    if (!article || !config.article_colours) return 'var(--espresso)';
+    return config.article_colours[article.toLowerCase()] || 'var(--espresso)';
+  }
+
+  function getGenderLabel(gender) {
+    if (!gender) return '';
+    return (config.gender_labels || {})[gender] || gender;
+  }
+
+  const uiLabels = config.ui_labels || {};
+
+  function getTypeLabel() {
+    const tags = card.tags || [];
+    if (tags.includes('noun'))       return uiLabels.type_noun || 'Noun';
+    if (tags.includes('verb'))       return uiLabels.type_verb || 'Verb';
+    if (tags.includes('adjective'))  return uiLabels.type_adjective || 'Adjective';
+    if (tags.includes('expression')) return uiLabels.type_expression || 'Expression';
+    const map = {
+      vocab: uiLabels.type_vocab || 'Vocab',
+      verb: uiLabels.type_verb || 'Verb',
+      phrase: uiLabels.type_phrase || 'Phrase',
+      connector: uiLabels.type_connector || 'Connector',
+      grammar: uiLabels.type_grammar || 'Grammar'
+    };
+    return map[card.type] || uiLabels.card_word || 'Card';
+  }
+
+  function formatHighlight(text) {
+    if (!text) return '';
+    return String(text).replace(/\*(.*?)\*/g, '<span class="highlighter">$1</span>');
+  }
+
+  function getMetaFacts() {
+    const meta = card.metadata || {};
+    const facts = [];
+    for (const field of (config.noun_metadata_fields || [])) {
+      const raw = meta[field.key] || card[field.key];
+      if (!raw || raw === '~') continue;
+      let value = String(raw);
+      let colour;
+      if (field.render === 'gender_label') value = getGenderLabel(raw);
+      else if (field.render === 'article_badge') colour = getArticleColour(raw);
+      facts.push({ label: field.label, value, colour });
+    }
+    return facts;
+  }
+
+  // ── Render ──────────────────────────────────────────────────────────────
+  const container = document.querySelector('.learning-card');
+  if (!container) { console.error('LearningCard: container not found'); }
+
+  function sel(cls) { return container?.querySelector(cls); }
+
+  // Type badge
+  sel('.lc-type-badge').textContent = getTypeLabel();
+
+  // Level badge
+  sel('.lc-level-badge').textContent = card.level || '';
+
+  // Article
+  const article = card.metadata?.article;
+  const articleWrap = sel('.lc-article-wrap');
+  const articleEl   = sel('.lc-article');
+  if (article && card.tags?.includes('noun') && !card.metadata?.plural_only) {
+    articleEl.textContent  = article;
+    articleEl.style.color  = getArticleColour(article);
+    articleWrap.style.display = '';
+  } else {
+    articleWrap.style.display = 'none';
+  }
+
+  // Word
+  sel('.lc-word').textContent = stripArticle(card.target);
+
+  // Translation
+  sel('.lc-translation').textContent = card.source || '';
+
+  // Plural / forms
+  const plural = card.metadata?.plural;
+  const formsEl = sel('.lc-forms');
+  const prefix = uiLabels.plural_prefix || 'Pl.';
+  const pluralOnly = uiLabels.plural_only || 'Plural only';
+  if (plural && !card.metadata?.plural_only) formsEl.textContent = `${prefix} ${plural}`;
+  else if (card.metadata?.plural_only) formsEl.textContent = pluralOnly;
+  else formsEl.textContent = '';
+
+  // Meta grid
+  const metaGrid = sel('.lc-meta-grid');
+  const facts = getMetaFacts();
+  if (facts.length) {
+    const cols = Math.min(facts.length, 4);
+    metaGrid.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
+    metaGrid.innerHTML = facts.map((f, i) => `
+      <div class="px-5 py-4 ${i < facts.length - 1 ? 'border-r' : ''}" style="border-color:var(--border);">
+        <p class="text-[9px] font-bold uppercase tracking-widest mb-1" style="color:var(--text-muted);">${f.label}</p>
+        <p class="text-sm font-bold" style="color:${f.colour || 'var(--text)'};">${f.value}</p>
+      </div>
+    `).join('');
+  } else {
+    metaGrid.style.display = 'none';
+  }
+
+  // Grammar note
+  const grammarWrap = sel('.lc-grammar-wrap');
+  if (card.grammar_note) {
+    sel('.lc-grammar-text').innerHTML = formatHighlight(card.grammar_note);
+    grammarWrap.classList.remove('hidden');
+  }
+
+  // Grammar label from config
+  const uiLabels = config.ui_labels || {};
+  if (uiLabels.grammar_note_heading) sel('.lc-grammar-label').textContent = uiLabels.grammar_note_heading;
+  if (uiLabels.examples_heading)     sel('.lc-examples-label').textContent = uiLabels.examples_heading;
+  if (uiLabels.audio_button)         { const el = sel('.lc-audio-label'); if (el) el.textContent = uiLabels.audio_button; }
+
+  // ── Type-specific blocks ─────────────────────────────────────────────────
+
+  // Verb: conjugation table
+  const type = card.type || (card.tags?.includes('verb') ? 'verb' : 'vocab');
+  if (type === 'verb' && card.conjugations) {
+    const conjWrap  = sel('.lc-conjugation-wrap');
+    const conjInner = sel('.lc-conjugation-inner');
+    conjWrap.classList.remove('hidden');
+
+    let conjArray = [];
+    if (Array.isArray(card.conjugations)) {
+      conjArray = card.conjugations;
+    } else {
+      for (const [tense, forms] of Object.entries(card.conjugations)) {
+        if (typeof forms === 'string') {
+          conjArray.push({ tense, stringForm: forms });
+        } else {
+          const formsArr = Object.entries(forms).map(([pronoun, form]) => ({ pronoun, form }));
+          conjArray.push({ tense, forms: formsArr });
+        }
+      }
+    }
+
+    const tensesToRender = config.verb_tenses || conjArray.map(t => t.tense);
+
+    const stringTenses = [];
+    const tableTenses = [];
+
+    tensesToRender.forEach(tense => {
+      const t = conjArray.find(c => c.tense === tense);
+      if (!t) return;
+      if (t.stringForm) stringTenses.push(t);
+      else tableTenses.push(t);
+    });
+
+    let html = '';
+
+    // Render simple string forms (e.g. Perfekt, Partizip II) as pill-like tags at the top
+    if (stringTenses.length > 0) {
+      html += `
+        <div class="flex flex-wrap gap-3 mb-6">
+          ${stringTenses.map(t => `
+            <div class="rounded-xl border px-4 py-2.5 flex items-center gap-3 shadow-sm" style="border-color:var(--border); background-color:var(--bg);">
+              <span class="text-[10px] font-bold uppercase tracking-widest opacity-80" style="color:var(--espresso);">${t.tense.replace(/_/g, ' ')}</span>
+              <span class="font-bold text-sm" style="color:var(--text);">${t.stringForm}</span>
+            </div>
+          `).join('')}
+        </div>
+      `;
+    }
+
+    // Render full tables (e.g. Präsens, Präteritum) as a unified table
+    if (tableTenses.length > 0) {
+      // Collect all pronouns from the first available table tense
+      const pronouns = tableTenses[0].forms.map(f => f.pronoun);
+
+      html += `
+        <div class="rounded-xl border overflow-x-auto shadow-sm w-full" style="border-color:var(--border);">
+          <table class="w-full text-sm text-left">
+            <thead>
+              <tr style="background-color:var(--bg); border-bottom: 1px solid var(--border);">
+                <th class="px-4 py-3 font-bold uppercase tracking-widest text-[10px] w-[1%]" style="color:var(--espresso); border-right: 1px solid var(--border);"></th>
+                ${tableTenses.map(t => `
+                  <th class="px-4 py-3 font-bold uppercase tracking-widest text-[10px]" style="color:var(--espresso);">${t.tense.replace(/_/g, ' ')}</th>
+                `).join('')}
+              </tr>
+            </thead>
+            <tbody>
+              ${pronouns.map((pronoun, ri) => `
+                <tr class="${ri < pronouns.length - 1 ? 'border-b' : ''}" style="border-color:var(--border);">
+                  <td class="px-4 py-3 font-bold text-xs whitespace-nowrap" style="color:var(--espresso); background-color:var(--bg); border-right: 1px solid var(--border);">${pronoun}</td>
+                  ${tableTenses.map(t => {
+                    const formObj = t.forms.find(f => f.pronoun === pronoun);
+                    return `<td class="px-4 py-3 font-semibold whitespace-nowrap" style="color:var(--text);">${formObj ? formObj.form : '-'}</td>`;
+                  }).join('')}
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+        </div>
+      `;
+    }
+
+    conjInner.innerHTML = html;
+  }
+
+  // Connector: word order block
+  if (type === 'connector' && card.word_order) {
+    const woWrap = sel('.lc-wordorder-wrap');
+    sel('.lc-wordorder-text').textContent = card.word_order;
+    woWrap.classList.remove('hidden');
+  }
+
+  // Phrase: preposition rule block
+  if (type === 'phrase' && card.clause_type) {
+    const phraseWrap = sel('.lc-phrase-wrap');
+    sel('.lc-phrase-rule').textContent = card.clause_type;
+    phraseWrap.classList.remove('hidden');
+  }
+
+  // ── Examples ─────────────────────────────────────────────────────────────
+  const examplesEl = sel('.lc-examples');
+  const rawExamples = card.examples || [];
+
+  if (rawExamples.length) {
+    examplesEl.innerHTML = rawExamples.map(e => `
+        <div class="rounded-2xl border overflow-hidden" style="border-color:var(--border);">
+          <div class="px-4 py-3" style="background-color:var(--bg);">
+            <p class="font-semibold leading-snug mb-1" style="color:var(--text);">${formatHighlight(e.target)}</p>
+            <p class="text-sm italic" style="color:var(--text-muted);">${formatHighlight(e.source || '')}</p>
+          </div>
+          ${e.note ? `<div class="px-4 py-2 border-t" style="border-color:var(--border);">
+            <p class="text-[10px] font-bold font-mono" style="color:var(--espresso);">📐 ${e.note}</p>
+          </div>` : ''}
+        </div>
+      `).join('');
+  } else {
+    examplesEl.innerHTML = `<p class="text-sm italic" style="color:var(--text-muted);">${uiLabels.no_example || ''}</p>`;
+  }
+
+  // ── Tags ─────────────────────────────────────────────────────────────────
+  const tagsEl = sel('.lc-tags');
+  tagsEl.innerHTML = (card.tags || []).map(t => `
+    <span class="text-[10px] font-bold px-2 py-0.5 rounded-md border uppercase" style="border-color:var(--border); color:var(--text-muted); background-color:var(--bg);">${t}</span>
+  `).join('');
+
+  // ── Audio button ─────────────────────────────────────────────────────────
+  sel('.lc-audio-btn')?.addEventListener('click', () => {
+    if (window.LoungeAudioEngine) {
+      window.LoungeAudioEngine.speak(card.target || '', config.speech_lang, 0.85);
+    }
+  });
+})();</script></div><!-- ── Navigation ───────────────────────────── --><div class="flex items-center justify-between mt-8 gap-4" data-astro-cid-5tabbh6g><button id="btn-prev" disabled class="flex items-center gap-2 px-6 py-3 rounded-2xl border font-bold text-sm transition-all hover:opacity-70 active:scale-95 disabled:opacity-30 disabled:cursor-not-allowed" style="border-color:var(--border); color:var(--text); background-color:var(--card);" data-astro-cid-5tabbh6g><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><path d="m15 18-6-6 6-6" data-astro-cid-5tabbh6g></path></svg>Retour</button><!-- Dot navigation --><div id="dot-nav" class="flex items-center gap-1.5 flex-wrap justify-center max-w-xs overflow-hidden" style="max-height:2rem;" data-astro-cid-5tabbh6g><!-- populated by JS --></div><button id="btn-next" class="flex items-center gap-2 px-6 py-3 rounded-2xl font-bold text-sm transition-all hover:opacity-80 active:scale-95" style="background-color:var(--espresso); color:#F5F2EB;" data-astro-cid-5tabbh6g>Suivant<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><path d="m9 18 6-6-6-6" data-astro-cid-5tabbh6g></path></svg></button></div><!-- Keyboard hint --><p class="text-center text-xs font-medium mt-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>← → Flèches pour naviguer · A pour écouter</p></div><!-- ── List View ───────────────────────────── --><div id="list-view-wrap" class="hidden space-y-6" data-astro-cid-5tabbh6g><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>organiser</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to organise</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Note de grammaire</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -er verb, auxiliary avoir.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemple</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Nous organisons une fête ce week-end.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>We are organising a party this weekend.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>planifier</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to plan</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Note de grammaire</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -er verb, auxiliary avoir.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemple</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Il planifie ses vacances pour juillet.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>He is planning his holidays for July.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>inviter</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to invite</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Note de grammaire</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -er verb, auxiliary avoir.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemple</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>J'invite mes amis à dîner.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>I am inviting my friends for dinner.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>confirmer</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to confirm</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Note de grammaire</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -er verb, auxiliary avoir.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemple</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Vous devez confirmer votre réservation.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>You must confirm your reservation.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>annuler</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to cancel</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Note de grammaire</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -er verb, auxiliary avoir.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemple</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>J'annule mon rendez-vous avec le médecin.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>I am cancelling my appointment with the doctor.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>reporter</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to postpone / to reschedule</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Note de grammaire</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -er verb, auxiliary avoir.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemple</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>On reporte la réunion à jeudi.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>We are postponing the meeting to Thursday.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>fixer</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to set / to arrange (a date or time)</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Note de grammaire</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -er verb, auxiliary avoir.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemple</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Nous fixons la date du mariage.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>We are setting the date of the wedding.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>prévoir</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to foresee / to plan ahead</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Note de grammaire</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Irregular -oir verb, conjugated like voir, auxiliary avoir.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemple</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Je prévois un grand voyage cet été.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>I am planning a big trip this summer.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>réserver</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to book / to reserve</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Note de grammaire</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -er verb, auxiliary avoir.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemple</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Je réserve une table pour quatre personnes.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>I am booking a table for four people.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>préparer</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to prepare</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Note de grammaire</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -er verb, auxiliary avoir.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemple</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Elle prépare son exposé pour le cours.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>She is preparing her presentation for the class.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>rencontrer</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to meet</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Note de grammaire</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -er verb, auxiliary avoir.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemple</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Je rencontre un client cet après-midi.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>I am meeting a client this afternoon.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>commencer</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to start / to begin</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Note de grammaire</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -er verb with a spelling change (ç before a/o) in 'nous', auxiliary avoir.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemple</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Le cours commence à neuf heures.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The class starts at nine o'clock.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>terminer</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to finish / to end</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Note de grammaire</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -er verb, auxiliary avoir.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemple</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Tu termines ton travail à quelle heure ?</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>What time do you finish your work?</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>choisir</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to choose</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Note de grammaire</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -ir verb (second group), auxiliary avoir.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemple</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Tu choisis quelle date pour la fête ?</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Which date are you choosing for the party?</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>décider</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to decide</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Note de grammaire</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -er verb, auxiliary avoir.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemple</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Qu'est-ce que tu décides pour le weekend ?</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>What are you deciding for the weekend?</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>rejoindre</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to join</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Note de grammaire</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Irregular -re verb (conjugated like peindre), auxiliary avoir.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemple</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Tu me rejoins au bureau à dix heures ?</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Are you joining me at the office at ten o'clock?</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>participer</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to participate / to take part</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Note de grammaire</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -er verb, takes preposition 'à', auxiliary avoir.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemple</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Tu participes à la réunion de projet ?</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Are you participating in the project meeting?</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>noter</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to write down / to note</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Note de grammaire</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -er verb, auxiliary avoir.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemple</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Note bien l'adresse du restaurant.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Write down the address of the restaurant.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>patienter</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to wait / to be patient</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Note de grammaire</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -er verb, auxiliary avoir.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemple</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Veuillez patienter quelques minutes, s'il vous plaît.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Please wait a few minutes.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>oublier</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to forget</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Note de grammaire</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Regular -er verb, auxiliary avoir.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Exemple</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>N'oublie pas notre rendez-vous demain !</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Don't forget our appointment tomorrow!</p></div></div></div></div></div></div><!-- ══ TRAIN PANEL ════════════════════════════ --><div id="train-panel" class="hidden space-y-10" data-astro-cid-5tabbh6g><div class="cafe-card rounded-3xl p-8 border shadow-lg max-w-xl mx-auto" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="text-center mb-8" data-astro-cid-5tabbh6g><h2 class="text-2xl font-extrabold font-outfit mb-2" style="color:var(--text);" data-astro-cid-5tabbh6g>Configuration de l&#39;entraînement</h2><p class="text-sm font-medium" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Configurez votre session d&#39;apprentissage.</p></div><form action="/languagelounge/en-fr/training/verbs/train/" method="GET" class="space-y-8" id="deck-train-form" data-astro-cid-5tabbh6g><input type="hidden" name="level" value="a2" data-astro-cid-5tabbh6g><input type="hidden" name="deck" value="verbs-a2-planning_organising" data-astro-cid-5tabbh6g><!-- Mode selection --><div class="space-y-3" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold tracking-widest uppercase" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Type de question</p><div class="grid grid-cols-2 gap-3" data-astro-cid-5tabbh6g><button type="button" data-group="mode" data-value="mc" class="sel-opt sel-active" data-astro-cid-5tabbh6g><span class="text-xl mb-1 block" data-astro-cid-5tabbh6g>🔘</span><span class="text-sm font-bold" data-astro-cid-5tabbh6g>Choix multiple</span></button><button type="button" data-group="mode" data-value="type" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-xl mb-1 block" data-astro-cid-5tabbh6g>⌨️</span><span class="text-sm font-bold" data-astro-cid-5tabbh6g>Saisie de texte</span></button></div><input type="hidden" name="mode" id="mode-hidden" value="mc" data-astro-cid-5tabbh6g></div><!-- Direction selection --><div class="space-y-3" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold tracking-widest uppercase" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Direction</p><div class="grid grid-cols-2 gap-3" data-astro-cid-5tabbh6g><button type="button" data-group="dir" data-value="en-fr" class="sel-opt sel-active" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>🇺🇸 English → 🇫🇷 Français</span></button><button type="button" data-group="dir" data-value="fr-en" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>🇫🇷 Français → 🇺🇸 English</span></button></div><input type="hidden" name="dir" id="dir-hidden" value="en-fr" data-astro-cid-5tabbh6g></div><!-- Count Selection --><div class="space-y-3" data-astro-cid-5tabbh6g><div class="flex justify-between items-end" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold tracking-widest uppercase" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Nombre de cartes</p><span class="text-xs font-bold" style="color:var(--espresso);" data-astro-cid-5tabbh6g>20 cartes dans le paquet</span></div><div class="grid grid-cols-4 gap-3" data-astro-cid-5tabbh6g><button type="button" data-group="count" data-value="30" class="sel-opt sel-active" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>30</span></button><button type="button" data-group="count" data-value="60" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>60</span></button><button type="button" data-group="count" data-value="90" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>90</span></button><button type="button" data-group="count" data-value="1000" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>Toutes</span></button></div><input type="hidden" name="count" id="count-hidden" value="30" data-astro-cid-5tabbh6g></div><button type="submit" class="w-full py-4 rounded-xl font-bold text-base transition-all hover:opacity-90 mt-4 shadow-md active:scale-[0.98]" style="background-color:var(--espresso); color:#F5F2EB;" data-astro-cid-5tabbh6g>Démarrer l&#39;entraînement &rarr;</button></form></div></div></div></main><footer class="mt-auto border-t py-8" style="background-color:var(--bg);border-color:var(--border);"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-medium" style="color:var(--text-muted);"><div>&copy; 2025 - 2026 Small Talk Café Podcasts. All rights reserved.</div><div class="flex gap-4">Made in Bayern ❤️ Los Geht's!</div></div></footer><!-- Minimal script for Theme and Dropdown toggle --><script>
+      // ── Theme ──────────────────────────────────────
+      function applyTheme(dark) {
+        if (dark) {
+          document.documentElement.classList.add('dark');
+          localStorage.setItem('wortschatz_theme', 'dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+          localStorage.setItem('wortschatz_theme', 'light');
+        }
+        const icon = document.getElementById('theme-icon');
+        const label = document.getElementById('theme-label');
+        if (icon) icon.textContent = dark ? '🌙' : '☀️';
+        if (label) label.textContent = dark ? 'Dark' : 'Light';
+      }
+
+      const isDark = document.documentElement.classList.contains('dark');
+      applyTheme(isDark);
+
+      document.getElementById('theme-toggle')?.addEventListener('click', () => {
+        const nowDark = !document.documentElement.classList.contains('dark');
+        applyTheme(nowDark);
+      });
+
+      // ── Dropdown Toggle ──────────────────────────
+      const langBtn = document.getElementById('lang-btn');
+      const langMenu = document.getElementById('lang-menu');
+
+      langBtn?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        langMenu?.classList.toggle('hidden');
+      });
+
+      document.addEventListener('click', () => {
+        langMenu?.classList.add('hidden');
+      });
+    </script></body></html><script type="module" src="/languagelounge/_astro/_deckId_.astro_astro_type_script_index_0_lang.DwXABuW8.js"></script><script>(function(){const cardsJson = "[{\"id\":\"verbs-a2-planning_organising-001\",\"target\":\"organiser\",\"source\":\"to organise\",\"type\":\"regular\",\"cefr\":\"A2\",\"grammar_note\":\"Regular -er verb, auxiliary avoir.\",\"examples\":[{\"target\":\"Nous organisons une fête ce week-end.\",\"source\":\"We are organising a party this weekend.\"},{\"target\":\"Tu organises ton voyage facilement.\",\"source\":\"You organise your trip easily.\"}],\"conjugations\":{\"présent\":{\"je\":\"organise\",\"tu\":\"organises\",\"il/elle/on\":\"organise\",\"nous\":\"organisons\",\"vous\":\"organisez\",\"ils/elles\":\"organisent\"},\"imparfait\":{\"je\":\"organisais\",\"tu\":\"organisais\",\"il/elle/on\":\"organisait\",\"nous\":\"organisions\",\"vous\":\"organisiez\",\"ils/elles\":\"organisaient\"},\"futur_simple\":{\"je\":\"organiserai\",\"tu\":\"organiseras\",\"il/elle/on\":\"organisera\",\"nous\":\"organiserons\",\"vous\":\"organiserez\",\"ils/elles\":\"organiseront\"},\"conditionnel_présent\":{\"je\":\"organiserais\",\"tu\":\"organiserais\",\"il/elle/on\":\"organiserait\",\"nous\":\"organiserions\",\"vous\":\"organiseriez\",\"ils/elles\":\"organiseraient\"},\"passé_composé\":\"a organisé\",\"participe_passé\":\"organisé\"},\"tags\":[\"verb\",\"a2\"],\"metadata\":{}},{\"id\":\"verbs-a2-planning_organising-002\",\"target\":\"planifier\",\"source\":\"to plan\",\"type\":\"regular\",\"cefr\":\"A2\",\"grammar_note\":\"Regular -er verb, auxiliary avoir.\",\"examples\":[{\"target\":\"Il planifie ses vacances pour juillet.\",\"source\":\"He is planning his holidays for July.\"},{\"target\":\"Nous planifions une réunion demain.\",\"source\":\"We are planning a meeting tomorrow.\"}],\"conjugations\":{\"présent\":{\"je\":\"planifie\",\"tu\":\"planifies\",\"il/elle/on\":\"planifie\",\"nous\":\"planifions\",\"vous\":\"planifiez\",\"ils/elles\":\"planifient\"},\"imparfait\":{\"je\":\"planifiais\",\"tu\":\"planifiais\",\"il/elle/on\":\"planifiait\",\"nous\":\"planifiions\",\"vous\":\"planifiiez\",\"ils/elles\":\"planifiaient\"},\"futur_simple\":{\"je\":\"planifierai\",\"tu\":\"planifieras\",\"il/elle/on\":\"planifiera\",\"nous\":\"planifierons\",\"vous\":\"planifierez\",\"ils/elles\":\"planifieront\"},\"conditionnel_présent\":{\"je\":\"planifierais\",\"tu\":\"planifierais\",\"il/elle/on\":\"planifierait\",\"nous\":\"planifierions\",\"vous\":\"planifieriez\",\"ils/elles\":\"planifieraient\"},\"passé_composé\":\"a planifié\",\"participe_passé\":\"planifié\"},\"tags\":[\"verb\",\"a2\"],\"metadata\":{}},{\"id\":\"verbs-a2-planning_organising-003\",\"target\":\"inviter\",\"source\":\"to invite\",\"type\":\"regular\",\"cefr\":\"A2\",\"grammar_note\":\"Regular -er verb, auxiliary avoir.\",\"examples\":[{\"target\":\"J'invite mes amis à dîner.\",\"source\":\"I am inviting my friends for dinner.\"},{\"target\":\"Tu invites qui pour ton anniversaire ?\",\"source\":\"Who are you inviting for your birthday?\"}],\"conjugations\":{\"présent\":{\"je\":\"invite\",\"tu\":\"invites\",\"il/elle/on\":\"invite\",\"nous\":\"invitons\",\"vous\":\"invitez\",\"ils/elles\":\"invitent\"},\"imparfait\":{\"je\":\"invitais\",\"tu\":\"invitais\",\"il/elle/on\":\"invitait\",\"nous\":\"invitions\",\"vous\":\"invitiez\",\"ils/elles\":\"invitaient\"},\"futur_simple\":{\"je\":\"inviterai\",\"tu\":\"inviteras\",\"il/elle/on\":\"invitera\",\"nous\":\"inviterons\",\"vous\":\"inviterez\",\"ils/elles\":\"inviteront\"},\"conditionnel_présent\":{\"je\":\"inviterais\",\"tu\":\"inviterais\",\"il/elle/on\":\"inviterait\",\"nous\":\"inviterions\",\"vous\":\"inviteriez\",\"ils/elles\":\"inviteraient\"},\"passé_composé\":\"a invité\",\"participe_passé\":\"invité\"},\"tags\":[\"verb\",\"a2\"],\"metadata\":{}},{\"id\":\"verbs-a2-planning_organising-004\",\"target\":\"confirmer\",\"source\":\"to confirm\",\"type\":\"regular\",\"cefr\":\"A2\",\"grammar_note\":\"Regular -er verb, auxiliary avoir.\",\"examples\":[{\"target\":\"Vous devez confirmer votre réservation.\",\"source\":\"You must confirm your reservation.\"},{\"target\":\"Il confirme sa présence par email.\",\"source\":\"He confirms his attendance by email.\"}],\"conjugations\":{\"présent\":{\"je\":\"confirme\",\"tu\":\"confirmes\",\"il/elle/on\":\"confirme\",\"nous\":\"confirmons\",\"vous\":\"confirmez\",\"ils/elles\":\"confirment\"},\"imparfait\":{\"je\":\"confirmais\",\"tu\":\"confirmais\",\"il/elle/on\":\"confirmait\",\"nous\":\"confirmions\",\"vous\":\"confirmiez\",\"ils/elles\":\"confirmaient\"},\"futur_simple\":{\"je\":\"confirmerai\",\"tu\":\"confimeras\",\"il/elle/on\":\"confirmera\",\"nous\":\"confirmerons\",\"vous\":\"confirmerez\",\"ils/elles\":\"confirmeront\"},\"conditionnel_présent\":{\"je\":\"confirmerais\",\"tu\":\"confirmerais\",\"il/elle/on\":\"confirmerait\",\"nous\":\"confirmerions\",\"vous\":\"confirmeriez\",\"ils/elles\":\"confirmeraît\"},\"passé_composé\":\"a confirmé\",\"participe_passé\":\"confirmé\"},\"tags\":[\"verb\",\"a2\"],\"metadata\":{}},{\"id\":\"verbs-a2-planning_organising-005\",\"target\":\"annuler\",\"source\":\"to cancel\",\"type\":\"regular\",\"cefr\":\"A2\",\"grammar_note\":\"Regular -er verb, auxiliary avoir.\",\"examples\":[{\"target\":\"J'annule mon rendez-vous avec le médecin.\",\"source\":\"I am cancelling my appointment with the doctor.\"},{\"target\":\"Pourquoi est-ce tu annules le voyage ?\",\"source\":\"Why are you cancelling the trip?\"}],\"conjugations\":{\"présent\":{\"je\":\"annule\",\"tu\":\"annules\",\"il/elle/on\":\"annule\",\"nous\":\"annulons\",\"vous\":\"annulez\",\"ils/elles\":\"annulent\"},\"imparfait\":{\"je\":\"annulais\",\"tu\":\"annulais\",\"il/elle/on\":\"annulait\",\"nous\":\"annulions\",\"vous\":\"annuliez\",\"ils/elles\":\"annulaient\"},\"futur_simple\":{\"je\":\"annulerai\",\"tu\":\"annuleras\",\"il/elle/on\":\"annulera\",\"nous\":\"annulerons\",\"vous\":\"annulerez\",\"ils/elles\":\"annuleront\"},\"conditionnel_présent\":{\"je\":\"annulerais\",\"tu\":\"annulerais\",\"il/elle/on\":\"annulerait\",\"nous\":\"annulerions\",\"vous\":\"annuleriez\",\"ils/elles\":\"annuleraient\"},\"passé_composé\":\"a annulé\",\"participe_passé\":\"annulé\"},\"tags\":[\"verb\",\"a2\"],\"metadata\":{}},{\"id\":\"verbs-a2-planning_organising-006\",\"target\":\"reporter\",\"source\":\"to postpone / to reschedule\",\"type\":\"regular\",\"cefr\":\"A2\",\"grammar_note\":\"Regular -er verb, auxiliary avoir.\",\"examples\":[{\"target\":\"On reporte la réunion à jeudi.\",\"source\":\"We are postponing the meeting to Thursday.\"},{\"target\":\"Il faut reporter le départ à cause de la pluie.\",\"source\":\"We must postpone the departure because of the rain.\"}],\"conjugations\":{\"présent\":{\"je\":\"importe\",\"tu\":\"reportes\",\"il/elle/on\":\"reporte\",\"nous\":\"reportons\",\"vous\":\"reportez\",\"ils/elles\":\"reportent\"},\"imparfait\":{\"je\":\"reportais\",\"tu\":\"reportais\",\"il/elle/on\":\"reportait\",\"nous\":\"reportions\",\"vous\":\"reportiez\",\"ils/elles\":\"reportaient\"},\"futur_simple\":{\"je\":\"reporterai\",\"tu\":\"reporteras\",\"il/elle/on\":\"reportera\",\"nous\":\"reporterons\",\"vous\":\"reporterez\",\"ils/elles\":\"reporteront\"},\"conditionnel_présent\":{\"je\":\"reporterais\",\"tu\":\"reporterais\",\"il/elle/on\":\"reporterait\",\"nous\":\"reporterions\",\"vous\":\"reporteriez\",\"ils/elles\":\"reporteraient\"},\"passé_composé\":\"a reporté\",\"participe_passé\":\"reporté\"},\"tags\":[\"verb\",\"a2\"],\"metadata\":{}},{\"id\":\"verbs-a2-planning_organising-007\",\"target\":\"fixer\",\"source\":\"to set / to arrange (a date or time)\",\"type\":\"regular\",\"cefr\":\"A2\",\"grammar_note\":\"Regular -er verb, auxiliary avoir.\",\"examples\":[{\"target\":\"Nous fixons la date du mariage.\",\"source\":\"We are setting the date of the wedding.\"},{\"target\":\"Tu fixes l'heure de notre rencontre ?\",\"source\":\"Are you setting the time of our meeting?\"}],\"conjugations\":{\"présent\":{\"je\":\"fixe\",\"tu\":\"fixes\",\"il/elle/on\":\"fixe\",\"nous\":\"fixons\",\"vous\":\"fixez\",\"ils/elles\":\"fixent\"},\"imparfait\":{\"je\":\"fixais\",\"tu\":\"fixais\",\"il/elle/on\":\"fixait\",\"nous\":\"fixions\",\"vous\":\"fixiez\",\"ils/elles\":\"fixaient\"},\"futur_simple\":{\"je\":\"fixerai\",\"tu\":\"fixeras\",\"il/elle/on\":\"fixera\",\"nous\":\"fixerons\",\"vous\":\"fixerez\",\"ils/elles\":\"fixeront\"},\"conditionnel_présent\":{\"je\":\"fixerais\",\"tu\":\"fixerais\",\"il/elle/on\":\"fixerait\",\"nous\":\"fixerions\",\"vous\":\"fixeriez\",\"ils/elles\":\"fixeraient\"},\"passé_composé\":\"a fixé\",\"participe_passé\":\"fixé\"},\"tags\":[\"verb\",\"a2\"],\"metadata\":{}},{\"id\":\"verbs-a2-planning_organising-008\",\"target\":\"prévoir\",\"source\":\"to foresee / to plan ahead\",\"type\":\"irregular\",\"cefr\":\"A2\",\"grammar_note\":\"Irregular -oir verb, conjugated like voir, auxiliary avoir.\",\"examples\":[{\"target\":\"Je prévois un grand voyage cet été.\",\"source\":\"I am planning a big trip this summer.\"},{\"target\":\"Qu'est-ce tu prévois pour ce soir ?\",\"source\":\"What are you planning for tonight?\"}],\"conjugations\":{\"présent\":{\"je\":\"prévois\",\"tu\":\"prévois\",\"il/elle/on\":\"prévoit\",\"nous\":\"prévoyons\",\"vous\":\"prévoyez\",\"ils/elles\":\"prévoient\"},\"imparfait\":{\"je\":\"prévoyais\",\"tu\":\"prévoyais\",\"il/elle/on\":\"prévoyait\",\"nous\":\"prévoyions\",\"vous\":\"prévoyiez\",\"ils/elles\":\"prévoyaient\"},\"futur_simple\":{\"je\":\"préverrai\",\"tu\":\"préverras\",\"il/elle/on\":\"préverra\",\"nous\":\"préverrons\",\"vous\":\"préverrez\",\"ils/elles\":\"préverront\"},\"conditionnel_présent\":{\"je\":\"préverrais\",\"tu\":\"préverrais\",\"il/elle/on\":\"préverrait\",\"nous\":\"préverrions\",\"vous\":\"préverriez\",\"ils/elles\":\"préverraient\"},\"passé_composé\":\"a prévu\",\"participe_passé\":\"prévu\"},\"tags\":[\"verb\",\"a2\"],\"metadata\":{}},{\"id\":\"verbs-a2-planning_organising-009\",\"target\":\"réserver\",\"source\":\"to book / to reserve\",\"type\":\"regular\",\"cefr\":\"A2\",\"grammar_note\":\"Regular -er verb, auxiliary avoir.\",\"examples\":[{\"target\":\"Je réserve une table pour quatre personnes.\",\"source\":\"I am booking a table for four people.\"},{\"target\":\"Il réserve ses billets de train en ligne.\",\"source\":\"He is booking his train tickets online.\"}],\"conjugations\":{\"présent\":{\"je\":\"réserve\",\"tu\":\"réserves\",\"il/elle/on\":\"réserve\",\"nous\":\"réservons\",\"vous\":\"réservez\",\"ils/elles\":\"réservent\"},\"imparfait\":{\"je\":\"réservais\",\"tu\":\"réservais\",\"il/elle/on\":\"réservait\",\"nous\":\"réservions\",\"vous\":\"réserviez\",\"ils/elles\":\"réservaient\"},\"futur_simple\":{\"je\":\"réserverai\",\"tu\":\"réserveras\",\"il/elle/on\":\"réservera\",\"nous\":\"réserverons\",\"vous\":\"réserverez\",\"ils/elles\":\"réserveront\"},\"conditionnel_présent\":{\"je\":\"réserverais\",\"tu\":\"réserverais\",\"il/elle/on\":\"réserverait\",\"nous\":\"réserverions\",\"vous\":\"réserveriez\",\"ils/elles\":\"réserveraient\"},\"passé_composé\":\"a réservé\",\"participe_passé\":\"réservé\"},\"tags\":[\"verb\",\"a2\"],\"metadata\":{}},{\"id\":\"verbs-a2-planning_organising-010\",\"target\":\"préparer\",\"source\":\"to prepare\",\"type\":\"regular\",\"cefr\":\"A2\",\"grammar_note\":\"Regular -er verb, auxiliary avoir.\",\"examples\":[{\"target\":\"Elle prépare son exposé pour le cours.\",\"source\":\"She is preparing her presentation for the class.\"},{\"target\":\"Nous préparons le dîner ensemble.\",\"source\":\"We are preparing dinner together.\"}],\"conjugations\":{\"présent\":{\"je\":\"prépare\",\"tu\":\"prépares\",\"il/elle/on\":\"prépare\",\"nous\":\"préparons\",\"vous\":\"préparez\",\"ils/elles\":\"préparent\"},\"imparfait\":{\"je\":\"préparais\",\"tu\":\"préparais\",\"il/elle/on\":\"préparait\",\"nous\":\"préparions\",\"vous\":\"prépariez\",\"ils/elles\":\"préparaient\"},\"futur_simple\":{\"je\":\"préparerai\",\"tu\":\"prépareras\",\"il/elle/on\":\"préparera\",\"nous\":\"préparerons\",\"vous\":\"préparerez\",\"ils/elles\":\"prépareront\"},\"conditionnel_présent\":{\"je\":\"préparerais\",\"tu\":\"préparerais\",\"il/elle/on\":\"préparerait\",\"nous\":\"préparerions\",\"vous\":\"prépareriez\",\"ils/elles\":\"prépareraient\"},\"passé_composé\":\"a préparé\",\"participe_passé\":\"préparé\"},\"tags\":[\"verb\",\"a2\"],\"metadata\":{}},{\"id\":\"verbs-a2-planning_organising-011\",\"target\":\"rencontrer\",\"source\":\"to meet\",\"type\":\"regular\",\"cefr\":\"A2\",\"grammar_note\":\"Regular -er verb, auxiliary avoir.\",\"examples\":[{\"target\":\"Je rencontre un client cet après-midi.\",\"source\":\"I am meeting a client this afternoon.\"},{\"target\":\"Tu rencontres tes amis au café ?\",\"source\":\"Are you meeting your friends at the cafe?\"}],\"conjugations\":{\"présent\":{\"je\":\"rencontre\",\"tu\":\"rencontres\",\"il/elle/on\":\"rencontre\",\"nous\":\"rencontrons\",\"vous\":\"rencontrez\",\"ils/elles\":\"rencontrent\"},\"imparfait\":{\"je\":\"rencontrais\",\"tu\":\"rencontrais\",\"il/elle/on\":\"rencontrait\",\"nous\":\"rencontrions\",\"vous\":\"rencontriez\",\"ils/elles\":\"rencontraient\"},\"futur_simple\":{\"je\":\"rencontrerai\",\"tu\":\"rencontreras\",\"il/elle/on\":\"rencontrera\",\"nous\":\"rencontrerons\",\"vous\":\"rencontrerez\",\"ils/elles\":\"rencontreront\"},\"conditionnel_présent\":{\"je\":\"rencontrerais\",\"tu\":\"rencontrerais\",\"il/elle/on\":\"rencontrerait\",\"nous\":\"rencontrerions\",\"vous\":\"rencontreriez\",\"ils/elles\":\"rencontreraient\"},\"passé_composé\":\"a rencontré\",\"participe_passé\":\"rencontré\"},\"tags\":[\"verb\",\"a2\"],\"metadata\":{}},{\"id\":\"verbs-a2-planning_organising-012\",\"target\":\"commencer\",\"source\":\"to start / to begin\",\"type\":\"regular\",\"cefr\":\"A2\",\"grammar_note\":\"Regular -er verb with a spelling change (ç before a/o) in 'nous', auxiliary avoir.\",\"examples\":[{\"target\":\"Le cours commence à neuf heures.\",\"source\":\"The class starts at nine o'clock.\"},{\"target\":\"Nous commençons le projet lundi.\",\"source\":\"We are starting the project on Monday.\"}],\"conjugations\":{\"présent\":{\"je\":\"commence\",\"tu\":\"commences\",\"il/elle/on\":\"commence\",\"nous\":\"commençons\",\"vous\":\"commencez\",\"ils/elles\":\"commencent\"},\"imparfait\":{\"je\":\"commençais\",\"tu\":\"commençais\",\"il/elle/on\":\"commençait\",\"nous\":\"commencions\",\"vous\":\"commenciez\",\"ils/elles\":\"commençaient\"},\"futur_simple\":{\"je\":\"commencerai\",\"tu\":\"commenceras\",\"il/elle/on\":\"commencera\",\"nous\":\"commencerons\",\"vous\":\"commencerez\",\"ils/elles\":\"commenceront\"},\"conditionnel_présent\":{\"je\":\"commencerais\",\"tu\":\"commencerais\",\"il/elle/on\":\"commencerait\",\"nous\":\"commencerions\",\"vous\":\"commenceriez\",\"ils/elles\":\"commenceraient\"},\"passé_composé\":\"a commencé\",\"participe_passé\":\"commencé\"},\"tags\":[\"verb\",\"a2\"],\"metadata\":{}},{\"id\":\"verbs-a2-planning_organising-013\",\"target\":\"terminer\",\"source\":\"to finish / to end\",\"type\":\"regular\",\"cefr\":\"A2\",\"grammar_note\":\"Regular -er verb, auxiliary avoir.\",\"examples\":[{\"target\":\"Tu termines ton travail à quelle heure ?\",\"source\":\"What time do you finish your work?\"},{\"target\":\"Nous terminons les préparatifs ce soir.\",\"source\":\"We are finishing the preparations tonight.\"}],\"conjugations\":{\"présent\":{\"je\":\"termine\",\"tu\":\"termines\",\"il/elle/on\":\"termine\",\"nous\":\"terminons\",\"vous\":\"terminez\",\"ils/elles\":\"terminent\"},\"imparfait\":{\"je\":\"terminais\",\"tu\":\"terminais\",\"il/elle/on\":\"terminait\",\"nous\":\"terminions\",\"vous\":\"terminiez\",\"ils/elles\":\"terminaient\"},\"futur_simple\":{\"je\":\"terminerai\",\"tu\":\"termineras\",\"il/elle/on\":\"terminera\",\"nous\":\"terminerons\",\"vous\":\"terminerez\",\"ils/elles\":\"termineront\"},\"conditionnel_présent\":{\"je\":\"terminerais\",\"tu\":\"terminerais\",\"il/elle/on\":\"terminerait\",\"nous\":\"terminerions\",\"vous\":\"termineriez\",\"ils/elles\":\"termineraient\"},\"passé_composé\":\"a terminé\",\"participe_passé\":\"terminé\"},\"tags\":[\"verb\",\"a2\"],\"metadata\":{}},{\"id\":\"verbs-a2-planning_organising-014\",\"target\":\"choisir\",\"source\":\"to choose\",\"type\":\"regular\",\"cefr\":\"A2\",\"grammar_note\":\"Regular -ir verb (second group), auxiliary avoir.\",\"examples\":[{\"target\":\"Tu choisis quelle date pour la fête ?\",\"source\":\"Which date are you choosing for the party?\"},{\"target\":\"Nous choisissons un restaurant italien.\",\"source\":\"We are choosing an Italian restaurant.\"}],\"conjugations\":{\"présent\":{\"je\":\"choisis\",\"tu\":\"choisis\",\"il/elle/on\":\"choisit\",\"nous\":\"choisissons\",\"vous\":\"choisissez\",\"ils/elles\":\"choisissent\"},\"imparfait\":{\"je\":\"choisissais\",\"tu\":\"choisissais\",\"il/elle/on\":\"choisissait\",\"nous\":\"choisissions\",\"vous\":\"choisissiez\",\"ils/elles\":\"choisissaient\"},\"futur_simple\":{\"je\":\"choisirai\",\"tu\":\"choisiras\",\"il/elle/on\":\"choisira\",\"nous\":\"choisirons\",\"vous\":\"choisirez\",\"ils/elles\":\"choisiront\"},\"conditionnel_présent\":{\"je\":\"choisirais\",\"tu\":\"choisirais\",\"il/elle/on\":\"choisirait\",\"nous\":\"choisirions\",\"vous\":\"choisiriez\",\"ils/elles\":\"choisiraient\"},\"passé_composé\":\"a choisi\",\"participe_passé\":\"choisi\"},\"tags\":[\"verb\",\"a2\"],\"metadata\":{}},{\"id\":\"verbs-a2-planning_organising-015\",\"target\":\"décider\",\"source\":\"to decide\",\"type\":\"regular\",\"cefr\":\"A2\",\"grammar_note\":\"Regular -er verb, auxiliary avoir.\",\"examples\":[{\"target\":\"Qu'est-ce que tu décides pour le weekend ?\",\"source\":\"What are you deciding for the weekend?\"},{\"target\":\"Nous décidons de partir plus tôt.\",\"source\":\"We decide to leave earlier.\"}],\"conjugations\":{\"présent\":{\"je\":\"décide\",\"tu\":\"décides\",\"il/elle/on\":\"décide\",\"nous\":\"décidons\",\"vous\":\"décidez\",\"ils/elles\":\"décident\"},\"imparfait\":{\"je\":\"décidais\",\"tu\":\"décidais\",\"il/elle/on\":\"décidait\",\"nous\":\"décidions\",\"vous\":\"décidiez\",\"ils/elles\":\"décidaient\"},\"futur_simple\":{\"je\":\"déciderai\",\"tu\":\"décideras\",\"il/elle/on\":\"décidera\",\"nous\":\"déciderons\",\"vous\":\"déciderez\",\"ils/elles\":\"décideront\"},\"conditionnel_présent\":{\"je\":\"déciderais\",\"tu\":\"déciderais\",\"il/elle/on\":\"déciderait\",\"nous\":\"déciderions\",\"vous\":\"décideriez\",\"ils/elles\":\"décideraient\"},\"passé_composé\":\"a décidé\",\"participe_passé\":\"décidé\"},\"tags\":[\"verb\",\"a2\"],\"metadata\":{}},{\"id\":\"verbs-a2-planning_organising-016\",\"target\":\"rejoindre\",\"source\":\"to join\",\"type\":\"irregular\",\"cefr\":\"A2\",\"grammar_note\":\"Irregular -re verb (conjugated like peindre), auxiliary avoir.\",\"examples\":[{\"target\":\"Tu me rejoins au bureau à dix heures ?\",\"source\":\"Are you joining me at the office at ten o'clock?\"},{\"target\":\"Nous rejoignons nos amis en ville.\",\"source\":\"We are joining our friends in town.\"}],\"conjugations\":{\"présent\":{\"je\":\"rejoins\",\"tu\":\"rejoins\",\"il/elle/on\":\"rejoint\",\"nous\":\"rejoignons\",\"vous\":\"rejoignez\",\"ils/elles\":\"rejoignent\"},\"imparfait\":{\"je\":\"rejoignais\",\"tu\":\"rejoignais\",\"il/elle/on\":\"rejoignait\",\"nous\":\"rejoignions\",\"vous\":\"rejoigniez\",\"ils/elles\":\"rejoignaient\"},\"futur_simple\":{\"je\":\"rejoindrai\",\"tu\":\"rejoindras\",\"il/elle/on\":\"rejoindra\",\"nous\":\"rejoindrons\",\"vous\":\"rejoindrez\",\"ils/elles\":\"rejoindront\"},\"conditionnel_présent\":{\"je\":\"rejoindrais\",\"tu\":\"rejoindrais\",\"il/elle/on\":\"rejoindrait\",\"nous\":\"rejoindrions\",\"vous\":\"rejoindriez\",\"ils/elles\":\"rejoindraient\"},\"passé_composé\":\"a rejoint\",\"participe_passé\":\"rejoint\"},\"tags\":[\"verb\",\"a2\"],\"metadata\":{}},{\"id\":\"verbs-a2-planning_organising-017\",\"target\":\"participer\",\"source\":\"to participate / to take part\",\"type\":\"regular\",\"cefr\":\"A2\",\"grammar_note\":\"Regular -er verb, takes preposition 'à', auxiliary avoir.\",\"examples\":[{\"target\":\"Tu participes à la réunion de projet ?\",\"source\":\"Are you participating in the project meeting?\"},{\"target\":\"Il participe à l'organisation de la fête.\",\"source\":\"He is taking part in organising the party.\"}],\"conjugations\":{\"présent\":{\"je\":\"participe\",\"tu\":\"participes\",\"il/elle/on\":\"participe\",\"nous\":\"participons\",\"vous\":\"participez\",\"ils/elles\":\"participent\"},\"imparfait\":{\"je\":\"participais\",\"tu\":\"participais\",\"il/elle/on\":\"participait\",\"nous\":\"participions\",\"vous\":\"participiez\",\"ils/elles\":\"participaient\"},\"futur_simple\":{\"je\":\"participerai\",\"tu\":\"participeras\",\"il/elle/on\":\"participera\",\"nous\":\"participerons\",\"vous\":\"participerez\",\"ils/elles\":\"participeront\"},\"conditionnel_présent\":{\"je\":\"participerais\",\"tu\":\"participerais\",\"il/elle/on\":\"participerait\",\"nous\":\"participerions\",\"vous\":\"participeriez\",\"ils/elles\":\"participeraient\"},\"passé_composé\":\"a participé\",\"participe_passé\":\"participé\"},\"tags\":[\"verb\",\"a2\"],\"metadata\":{}},{\"id\":\"verbs-a2-planning_organising-018\",\"target\":\"noter\",\"source\":\"to write down / to note\",\"type\":\"regular\",\"cefr\":\"A2\",\"grammar_note\":\"Regular -er verb, auxiliary avoir.\",\"examples\":[{\"target\":\"Note bien l'adresse du restaurant.\",\"source\":\"Write down the address of the restaurant.\"},{\"target\":\"Je note la date dans mon agenda.\",\"source\":\"I am writing down the date in my planner.\"}],\"conjugations\":{\"présent\":{\"je\":\"note\",\"tu\":\"notes\",\"il/elle/on\":\"note\",\"nous\":\"notons\",\"vous\":\"notez\",\"ils/elles\":\"notent\"},\"imparfait\":{\"je\":\"notais\",\"tu\":\"notais\",\"il/elle/on\":\"notait\",\"nous\":\"notions\",\"vous\":\"notiez\",\"ils/elles\":\"notaient\"},\"futur_simple\":{\"je\":\"noterai\",\"tu\":\"noteras\",\"il/elle/on\":\"notera\",\"nous\":\"noterons\",\"vous\":\"noterez\",\"ils/elles\":\"noteront\"},\"conditionnel_présent\":{\"je\":\"noterais\",\"tu\":\"noterais\",\"il/elle/on\":\"noterait\",\"nous\":\"noterions\",\"vous\":\"noteriez\",\"ils/elles\":\"noteraient\"},\"passé_composé\":\"a noté\",\"participe_passé\":\"noté\"},\"tags\":[\"verb\",\"a2\"],\"metadata\":{}},{\"id\":\"verbs-a2-planning_organising-019\",\"target\":\"patienter\",\"source\":\"to wait / to be patient\",\"type\":\"regular\",\"cefr\":\"A2\",\"grammar_note\":\"Regular -er verb, auxiliary avoir.\",\"examples\":[{\"target\":\"Veuillez patienter quelques minutes, s'il vous plaît.\",\"source\":\"Please wait a few minutes.\"},{\"target\":\"Tu patientes un instant pendant que je réserve ?\",\"source\":\"Will you wait a moment while I book?\"}],\"conjugations\":{\"présent\":{\"je\":\"patiente\",\"tu\":\"patientes\",\"il/elle/on\":\"patiente\",\"nous\":\"patientons\",\"vous\":\"patientez\",\"ils/elles\":\"patientent\"},\"imparfait\":{\"je\":\"patientais\",\"tu\":\"patientais\",\"il/elle/on\":\"patientait\",\"nous\":\"patientions\",\"vous\":\"patientiez\",\"ils/elles\":\"patientaient\"},\"futur_simple\":{\"je\":\"patienterai\",\"tu\":\"patienteras\",\"il/elle/on\":\"patientera\",\"nous\":\"patienterons\",\"vous\":\"patienterez\",\"ils/elles\":\"patienteront\"},\"conditionnel_présent\":{\"je\":\"patienterais\",\"tu\":\"patienterais\",\"il/elle/on\":\"patienterait\",\"nous\":\"patienterions\",\"vous\":\"patienteriez\",\"ils/elles\":\"patienteraient\"},\"passé_composé\":\"a patienté\",\"participe_passé\":\"patienté\"},\"tags\":[\"verb\",\"a2\"],\"metadata\":{}},{\"id\":\"verbs-a2-planning_organising-020\",\"target\":\"oublier\",\"source\":\"to forget\",\"type\":\"regular\",\"cefr\":\"A2\",\"grammar_note\":\"Regular -er verb, auxiliary avoir.\",\"examples\":[{\"target\":\"N'oublie pas notre rendez-vous demain !\",\"source\":\"Don't forget our appointment tomorrow!\"},{\"target\":\"J'oublie toujours de réserver en avance.\",\"source\":\"I always forget to book in advance.\"}],\"conjugations\":{\"présent\":{\"je\":\"oublie\",\"tu\":\"oublies\",\"il/elle/on\":\"oublie\",\"nous\":\"oublions\",\"vous\":\"oubliez\",\"ils/elles\":\"oublient\"},\"imparfait\":{\"je\":\"oubliais\",\"tu\":\"oubliais\",\"il/elle/on\":\"oubliait\",\"nous\":\"oubliions\",\"vous\":\"oubliiez\",\"ils/elles\":\"oubliaient\"},\"futur_simple\":{\"je\":\"oublierai\",\"tu\":\"oublieras\",\"il/elle/on\":\"oubliera\",\"nous\":\"oublierons\",\"vous\":\"oublierez\",\"ils/elles\":\"oublieront\"},\"conditionnel_présent\":{\"je\":\"oublierais\",\"tu\":\"oublierais\",\"il/elle/on\":\"oublierait\",\"nous\":\"oublierions\",\"vous\":\"oublieriez\",\"ils/elles\":\"oublieraient\"},\"passé_composé\":\"a oublié\",\"participe_passé\":\"oublié\"},\"tags\":[\"verb\",\"a2\"],\"metadata\":{}}]";
+const langConfigJson = "{\"language_pair\":\"english_french\",\"target_lang\":\"fr\",\"native_lang\":\"en\",\"target_lang_name\":\"Français\",\"native_lang_name\":\"English\",\"speech_lang\":\"fr-FR\",\"noun_metadata_fields\":[{\"key\":\"article\",\"label\":\"Article\",\"render\":\"article_badge\"},{\"key\":\"gender\",\"label\":\"Genre\",\"render\":\"gender_label\"},{\"key\":\"plural\",\"label\":\"Pluriel\",\"render\":\"text\"}],\"article_colours\":{\"le\":\"#4A7C9E\",\"la\":\"#B05070\",\"l'\":\"#7B6291\"},\"gender_labels\":{\"m\":\"Masculin\",\"f\":\"Féminin\"},\"verb_tenses\":[\"présent\",\"passé_composé\",\"imparfait\",\"participe_passé\",\"futur_simple\",\"conditionnel_présent\"],\"cases\":{},\"ui_labels\":{\"learn_mode\":\"Apprendre\",\"train_mode\":\"S'entraîner\",\"examples_heading\":\"Exemples\",\"grammar_note_heading\":\"Note de grammaire\",\"audio_button\":\"Écouter\",\"back_link\":\"Retour\",\"card_counter\":\"Carte {current} / {total}\",\"next_button\":\"Suivant\",\"finish_button\":\"Terminé\",\"correct\":\"Correct !\",\"wrong\":\"Incorrect\",\"dashboard_link\":\"Tableau de bord\",\"library_prompt\":\"Choisissez un paquet dans la bibliothèque et explorez les cartes.\",\"cards_badge\":\"{count} CARTES\",\"cards_count\":\"{count} cartes\",\"deck_meta\":\"{topic} • {level} • {count} cartes\",\"no_decks\":\"Aucun paquet dans cette catégorie pour le moment.\",\"setup_title\":\"Configuration de l'entraînement\",\"setup_subtitle\":\"Configurez votre session d'apprentissage.\",\"question_type\":\"Type de question\",\"mode_multiple_choice\":\"Choix multiple\",\"mode_typing\":\"Saisie de texte\",\"mode_typing_short\":\"Saisie\",\"direction\":\"Direction\",\"direction_forward\":\"🇺🇸 English → 🇫🇷 Français\",\"direction_reverse\":\"🇫🇷 Français → 🇺🇸 English\",\"select_level\":\"Sélectionnez un niveau\",\"start_training\":\"Démarrer l'entraînement\",\"count_label\":\"Nombre de cartes\",\"all_cards\":\"Toutes\",\"in_deck\":\"dans le paquet\",\"view_cards\":\"Cartes\",\"view_list\":\"Liste\",\"card_word\":\"Carte\",\"keyboard_hint_study\":\"← → Flèches pour naviguer · A pour écouter\",\"example_single_heading\":\"Exemple\",\"no_example\":\"Aucun exemple disponible.\",\"tags_label\":\"Tags :\",\"type_vocab\":\"Vocabulaire\",\"type_verb\":\"Verbe\",\"type_phrase\":\"Expression\",\"type_connector\":\"Connecteur\",\"type_grammar\":\"Grammaire\",\"type_noun\":\"Nom\",\"type_adjective\":\"Adjectif\",\"type_expression\":\"Locution\",\"plural_prefix\":\"Pl. {plural}\",\"plural_only\":\"pluriel uniquement\",\"word_order_heading\":\"Ordre des mots\",\"structure_heading\":\"Structure\",\"training_title\":\"Entraînement\",\"all_levels\":\"Tous les niveaux\",\"type_placeholder\":\"Écrivez le mot en français...\",\"check_button\":\"Vérifier\",\"keyboard_hint_train\":\"Entrée / Espace = valider · A = Écouter\",\"audio_title\":\"Écouter (A)\",\"training_finished\":\"Entraînement terminé !\",\"missed_heading\":\"Réponses incorrectes — à réviser\",\"retry_missed\":\"Réessayer les erreurs\",\"new_config\":\"Nouvelle configuration\",\"plural_hint\":\"Pl : {plural}\",\"results_pct\":\"{pct}% de réussite\",\"result_excellent\":\"Excellent ! Vous maîtrisez parfaitement ce niveau.\",\"result_good\":\"Très bien ! Encore un peu de pratique et ce sera parfait !\",\"result_ok\":\"Bon début ! Révisez encore quelques cartes.\",\"result_retry\":\"Pas d'inquiétude — c'est en forgeant qu'on devient forgeron !\",\"no_cards_title\":\"Aucune carte trouvée\",\"no_cards_hint\":\"Veuillez sélectionner un autre niveau ou un autre paquet.\"},\"answer_normalisation\":{\"strip_leading_words\":[\"le\",\"la\",\"l'\",\"un\",\"une\",\"des\",\"du\",\"de la\",\"de l'\"],\"alt_spellings\":{\"é\":\"e\",\"è\":\"e\",\"ê\":\"e\",\"ë\":\"e\",\"à\":\"a\",\"â\":\"a\",\"ô\":\"o\",\"ù\":\"u\",\"û\":\"u\",\"î\":\"i\",\"ï\":\"i\",\"ç\":\"c\"}}}";
+const category = "verbs";
+const lang = "en-fr";
+const base = "/languagelounge/";
+const defaultView = "cards";
+
+  const cards     = JSON.parse(cardsJson);
+  const config    = JSON.parse(langConfigJson);
+  let currentIndex = 0;
+
+  const dotNav    = document.getElementById('dot-nav');
+  const currentNum = document.getElementById('current-num');
+  const progressBar = document.getElementById('progress-bar');
+  const btnPrev   = document.getElementById('btn-prev');
+  const btnNext   = document.getElementById('btn-next');
+  const cardHost  = document.getElementById('card-host');
+  const progressCont = document.getElementById('progress-container');
+
+  const cardViewWrap = document.getElementById('card-view-wrap');
+  const listViewWrap = document.getElementById('list-view-wrap');
+  const btnViewCards = document.getElementById('view-cards-btn');
+  const btnViewList  = document.getElementById('view-list-btn');
+
+  // Toggle Logic
+  function setViewMode(mode) {
+    if (mode === 'list') {
+      cardViewWrap.classList.add('hidden');
+      listViewWrap.classList.remove('hidden');
+      progressCont.classList.add('hidden');
+      btnViewList.classList.add('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewList.classList.remove('text-[var(--text-muted)]');
+      btnViewCards.classList.remove('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewCards.classList.add('text-[var(--text-muted)]');
+    } else {
+      listViewWrap.classList.add('hidden');
+      cardViewWrap.classList.remove('hidden');
+      progressCont.classList.remove('hidden');
+      btnViewCards.classList.add('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewCards.classList.remove('text-[var(--text-muted)]');
+      btnViewList.classList.remove('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewList.classList.add('text-[var(--text-muted)]');
+    }
+  }
+
+  btnViewCards.addEventListener('click', () => setViewMode('cards'));
+  btnViewList.addEventListener('click', () => setViewMode('list'));
+
+  // Initial view is configured per category (config/language_pairs/*.yaml → categories[].default_view)
+  if (defaultView === 'list') {
+    setViewMode('list');
+  }
+
+
+
+  // ── Helpers (mirror card-renderer.ts — no module imports in inline scripts) ──
+  const articleColours = config.article_colours || {};
+  const genderLabels   = config.gender_labels   || {};
+  const speechLang     = config.speech_lang;
+  const ui             = config.ui_labels || {};
+  const fmt = (tpl, vars) => String(tpl).replace(/\{(\w+)\}/g, (m, k) => (k in vars ? vars[k] : m));
+  const formatHighlight = (text) => text ? String(text).replace(/\*(.*?)\*/g, '<span class="highlighter">$1</span>') : '';
+  // Articles come from the language config (keys of article_colours), never hardcoded
+  const articleList = Object.keys(articleColours);
+  const articlePatterns = articleList.map(a => {
+    const esc = a.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    return esc.endsWith("'") ? esc : `${esc}\\s+`;
+  });
+  const articleRe = articlePatterns.length
+    ? new RegExp('^(?:' + articlePatterns.join('|') + ')', 'i')
+    : null;
+
+  function stripArticle(w) {
+    return articleRe ? (w || '').replace(articleRe, '').trim() : (w || '').trim();
+  }
+
+  function getTypeLabel(card) {
+    const tags = card.tags || [];
+    if (tags.includes('noun'))       return ui.type_noun;
+    if (tags.includes('verb'))       return ui.type_verb;
+    if (tags.includes('adjective'))  return ui.type_adjective;
+    if (tags.includes('expression')) return ui.type_expression;
+    const byType = { vocab: ui.type_vocab, verb: ui.type_verb, phrase: ui.type_phrase, connector: ui.type_connector, grammar: ui.type_grammar };
+    return byType[card.type] || ui.type_vocab;
+  }
+
+  function normaliseEx(ex) {
+    return { target: ex.target||'', source: ex.source||'', note: ex.note };
+  }
+
+  function getMetaFacts(card) {
+    const meta = card.metadata || {};
+    const facts = [];
+    for (const field of (config.noun_metadata_fields || [])) {
+      const raw = meta[field.key];
+      if (!raw || raw==='~') continue;
+      let value = String(raw), colour;
+      if (field.render === 'gender_label')  value  = genderLabels[raw] || raw;
+      if (field.render === 'article_badge') colour = articleColours[raw.toLowerCase()] || 'var(--espresso)';
+      facts.push({ label: field.label, value, colour });
+    }
+    return facts;
+  }
+
+  // ── Card renderer ─────────────────────────────────────────────────────────
+  function renderCard(idx) {
+    const card = cards[idx];
+    if (!card || !cardHost) return;
+
+    const lc = cardHost.querySelector('.learning-card');
+    if (!lc) return;
+
+    function sel(cls) { return lc.querySelector(cls); }
+
+    // Type badge + level
+    sel('.lc-type-badge').textContent = getTypeLabel(card);
+    sel('.lc-level-badge').textContent = (card.level || '').toUpperCase();
+
+    // Article
+    const article = card.metadata?.article;
+    const articleWrap = sel('.lc-article-wrap');
+    const articleEl   = sel('.lc-article');
+    if (article && (card.tags||[]).includes('noun') && !card.metadata?.plural_only) {
+      articleEl.textContent = article;
+      articleEl.style.color = articleColours[article.toLowerCase()] || 'var(--espresso)';
+      articleWrap.style.display = '';
+    } else {
+      articleWrap.style.display = 'none';
+    }
+
+    // Word / translation / forms
+    sel('.lc-word').textContent        = stripArticle(card.target);
+    sel('.lc-translation').textContent = card.source || '';
+    const plural = card.metadata?.plural;
+    sel('.lc-forms').textContent = plural && !card.metadata?.plural_only ? fmt(ui.plural_prefix, { plural }) : card.metadata?.plural_only ? ui.plural_only : '';
+
+    // Meta grid
+    const metaGrid = sel('.lc-meta-grid');
+    const facts = getMetaFacts(card);
+    if (facts.length) {
+      metaGrid.style.gridTemplateColumns = `repeat(${Math.min(facts.length,4)}, 1fr)`;
+      metaGrid.style.display = '';
+      metaGrid.innerHTML = facts.map((f, i) => `
+        <div class="px-5 py-4 ${i<facts.length-1?'border-r':''}" style="border-color:var(--border);">
+          <p class="text-[9px] font-bold uppercase tracking-widest mb-1" style="color:var(--text-muted);">${f.label}</p>
+          <p class="text-sm font-bold" style="color:${f.colour||'var(--text)'};">${f.value}</p>
+        </div>`).join('');
+    } else {
+      metaGrid.style.display = 'none';
+    }
+
+    // Grammar note
+    const grammarWrap = sel('.lc-grammar-wrap');
+    if (card.grammar_note) {
+      sel('.lc-grammar-text').innerHTML = formatHighlight(card.grammar_note);
+      grammarWrap.classList.remove('hidden');
+    } else {
+      grammarWrap.classList.add('hidden');
+    }
+
+    // Examples
+    const examplesEl = sel('.lc-examples');
+    const rawEx = card.examples || [];
+    examplesEl.innerHTML = rawEx.length
+      ? rawEx.map(ex => { const e=normaliseEx(ex); return `
+          <div class="rounded-2xl border overflow-hidden" style="border-color:var(--border);">
+            <div class="px-4 py-3" style="background-color:var(--bg);">
+              <p class="font-semibold leading-snug mb-1" style="color:var(--text);">${e.target}</p>
+              <p class="text-sm italic" style="color:var(--text-muted);">${e.source||''}</p>
+            </div>
+            ${e.note?`<div class="px-4 py-2 border-t" style="border-color:var(--border);">
+              <p class="text-[10px] font-bold font-mono" style="color:var(--espresso);">📐 ${e.note}</p>
+            </div>`:''}
+          </div>`; }).join('')
+      : '<p class="text-sm italic" style="color:var(--text-muted);">' + ui.no_example + '</p>';
+
+    // Verb: conjugation table
+    const conjWrap  = sel('.lc-conjugation-wrap');
+    const conjInner = sel('.lc-conjugation-inner');
+    const cardType = card.type || (card.tags?.includes('verb') ? 'verb' : 'vocab');
+    if (conjWrap && conjInner) {
+      if (cardType === 'verb' && card.conjugations) {
+        conjWrap.classList.remove('hidden');
+        let conjArray = [];
+        if (Array.isArray(card.conjugations)) {
+          conjArray = card.conjugations;
+        } else {
+          for (const [tense, forms] of Object.entries(card.conjugations)) {
+            if (typeof forms === 'string') {
+              conjArray.push({ tense, stringForm: forms });
+            } else {
+              const formsArr = Object.entries(forms).map(([pronoun, form]) => ({ pronoun, form }));
+              conjArray.push({ tense, forms: formsArr });
+            }
+          }
+        }
+
+        const tensesToRender = config.verb_tenses || conjArray.map(t => t.tense);
+        const stringTenses = [];
+        const tableTenses = [];
+
+        tensesToRender.forEach(tense => {
+          const t = conjArray.find(c => c.tense === tense);
+          if (!t) return;
+          if (t.stringForm) stringTenses.push(t);
+          else tableTenses.push(t);
+        });
+
+        let html = '';
+        if (stringTenses.length > 0) {
+          html += `
+            <div class="flex flex-wrap gap-3 mb-6">
+              ${stringTenses.map(t => `
+                <div class="rounded-xl border px-4 py-2.5 flex items-center gap-3 shadow-sm" style="border-color:var(--border); background-color:var(--bg);">
+                  <span class="text-[10px] font-bold uppercase tracking-widest opacity-80" style="color:var(--espresso);">${t.tense.replace(/_/g, ' ')}</span>
+                  <span class="font-bold text-sm" style="color:var(--text);">${t.stringForm}</span>
+                </div>
+              `).join('')}
+            </div>
+          `;
+        }
+
+        if (tableTenses.length > 0) {
+          const pronouns = tableTenses[0].forms.map(f => f.pronoun);
+          html += `
+            <div class="rounded-xl border overflow-x-auto shadow-sm w-full" style="border-color:var(--border);">
+              <table class="w-full text-sm text-left">
+                <thead>
+                  <tr style="background-color:var(--bg); border-bottom: 1px solid var(--border);">
+                    <th class="px-4 py-3 font-bold uppercase tracking-widest text-[10px] w-[1%]" style="color:var(--espresso); border-right: 1px solid var(--border);"></th>
+                    ${tableTenses.map(t => `
+                      <th class="px-4 py-3 font-bold uppercase tracking-widest text-[10px]" style="color:var(--espresso);">${t.tense.replace(/_/g, ' ')}</th>
+                    `).join('')}
+                  </tr>
+                </thead>
+                <tbody>
+                  ${pronouns.map((pronoun, ri) => `
+                    <tr class="${ri < pronouns.length - 1 ? 'border-b' : ''}" style="border-color:var(--border);">
+                      <td class="px-4 py-3 font-bold text-xs whitespace-nowrap" style="color:var(--espresso); background-color:var(--bg); border-right: 1px solid var(--border);">${pronoun}</td>
+                      ${tableTenses.map(t => {
+                        const formObj = t.forms.find(f => f.pronoun === pronoun);
+                        return `<td class="px-4 py-3 font-semibold whitespace-nowrap" style="color:var(--text);">${formObj ? formObj.form : '-'}</td>`;
+                      }).join('')}
+                    </tr>
+                  `).join('')}
+                </tbody>
+              </table>
+            </div>
+          `;
+        }
+        conjInner.innerHTML = html;
+      } else {
+        conjWrap.classList.add('hidden');
+        conjInner.innerHTML = '';
+      }
+    }
+
+    // Connector: word order block
+    const woWrap = sel('.lc-wordorder-wrap');
+    if (woWrap) {
+      if (cardType === 'connector' && card.word_order) {
+        sel('.lc-wordorder-text').textContent = card.word_order;
+        woWrap.classList.remove('hidden');
+      } else {
+        woWrap.classList.add('hidden');
+      }
+    }
+
+    // Phrase: preposition rule block
+    const phraseWrap = sel('.lc-phrase-wrap');
+    if (phraseWrap) {
+      if (cardType === 'phrase' && card.clause_type) {
+        sel('.lc-phrase-rule').textContent = card.clause_type;
+        phraseWrap.classList.remove('hidden');
+      } else {
+        phraseWrap.classList.add('hidden');
+      }
+    }
+
+    // Tags
+    sel('.lc-tags').innerHTML = (card.tags||[]).map(t =>
+      `<span class="text-[10px] font-bold px-2 py-0.5 rounded-md border" style="border-color:var(--border);color:var(--text-muted);background-color:var(--bg);">${t}</span>`
+    ).join('');
+
+    // Progress UI
+    if (currentNum)  currentNum.textContent = String(idx+1);
+    if (progressBar) progressBar.style.width = `${Math.round(((idx+1)/cards.length)*100)}%`;
+    if (btnPrev)     btnPrev.disabled = idx === 0;
+    if (btnNext)     btnNext.innerHTML = idx === cards.length-1
+      ? '✓ ' + ui.finish_button
+      : ui.next_button + ' <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>';
+
+    updateDots();
+
+    // Re-bind audio button cleanly by cloning to strip old listeners
+    const oldBtn = sel('.lc-audio-btn');
+    if (oldBtn) {
+      const newBtn = oldBtn.cloneNode(true);
+      oldBtn.parentNode.replaceChild(newBtn, oldBtn);
+      newBtn.addEventListener('click', speakCurrent);
+    }
+  }
+
+  // ── Dot navigation ────────────────────────────────────────────────────────
+  function buildDots() {
+    if (!dotNav) return;
+    dotNav.innerHTML = '';
+    const maxVisible = 20;
+    const showAll = cards.length <= maxVisible;
+    cards.forEach((_, i) => {
+      if (!showAll && i >= maxVisible) return;
+      const dot = document.createElement('button');
+      dot.className = 'dot w-2 h-2 rounded-full transition-all duration-300 flex-shrink-0';
+      dot.style.backgroundColor = 'var(--border)';
+      dot.title = `${ui.card_word} ${i+1}`;
+      dot.addEventListener('click', () => goTo(i));
+      dotNav.appendChild(dot);
+    });
+    if (!showAll) {
+      const el = document.createElement('span');
+      el.textContent = `+${cards.length - maxVisible}`;
+      el.className = 'text-[10px] font-bold';
+      el.style.color = 'var(--text-muted)';
+      dotNav.appendChild(el);
+    }
+  }
+
+  function updateDots() {
+    dotNav?.querySelectorAll('.dot').forEach((dot, i) => {
+      dot.style.backgroundColor = i===currentIndex ? 'var(--espresso)' : 'var(--border)';
+      dot.style.width     = i===currentIndex ? '20px' : '8px';
+      dot.style.borderRadius = '4px';
+    });
+  }
+
+  // ── Audio ─────────────────────────────────────────────────────────────────
+  function speakCurrent() {
+    const card = cards[currentIndex];
+    if (!card) return;
+    if (window.LoungeAudioEngine) {
+      window.LoungeAudioEngine.speak(card.target || '', speechLang, 0.85);
+    }
+  }
+
+  // ── Navigate ─────────────────────────────────────────────────────────────
+  function goTo(idx) {
+    if (idx < 0 || idx >= cards.length) return;
+    currentIndex = idx;
+    renderCard(currentIndex);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  btnPrev?.addEventListener('click', () => goTo(currentIndex - 1));
+  btnNext?.addEventListener('click', () => {
+    if (currentIndex === cards.length - 1) window.location.href = `${base}${lang}/${category}/`;
+    else goTo(currentIndex + 1);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') goTo(currentIndex + 1);
+    if (e.key === 'ArrowLeft')  goTo(currentIndex - 1);
+    if (e.key === 'a' || e.key === 'A') speakCurrent();
+  });
+
+  // ── Learn / Train panel toggle ──────────────────────
+  const btnLearn = document.getElementById('btn-mode-learn');
+  const btnTrain = document.getElementById('btn-mode-train');
+  const pnlLearn = document.getElementById('learn-panel');
+  const pnlTrain = document.getElementById('train-panel');
+  const toolbar  = document.getElementById('learn-toolbar');
+
+  const STORAGE_KEY = `lounge:${lang}:${category}:deck:mode`;
+  let currentMode = localStorage.getItem(STORAGE_KEY) || 'learn';
+
+  function applyMode() {
+    if (currentMode === 'learn') {
+      btnLearn.style.backgroundColor = 'var(--espresso)';
+      btnLearn.style.color = '#F5F2EB';
+      btnTrain.style.backgroundColor = 'transparent';
+      btnTrain.style.color = 'var(--text-muted)';
+      pnlLearn.classList.remove('hidden');
+      toolbar.classList.remove('hidden');
+      pnlTrain.classList.add('hidden');
+    } else {
+      btnTrain.style.backgroundColor = 'var(--espresso)';
+      btnTrain.style.color = '#F5F2EB';
+      btnLearn.style.backgroundColor = 'transparent';
+      btnLearn.style.color = 'var(--text-muted)';
+      pnlTrain.classList.remove('hidden');
+      pnlLearn.classList.add('hidden');
+      toolbar.classList.add('hidden');
+    }
+    localStorage.setItem(STORAGE_KEY, currentMode);
+  }
+
+  btnLearn?.addEventListener('click', () => { currentMode = 'learn'; applyMode(); });
+  btnTrain?.addEventListener('click', () => { currentMode = 'train'; applyMode(); });
+  applyMode();
+
+  // ── Radio-style selectors (mode & dir & count) ─────────────
+  document.querySelectorAll('.sel-opt').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const group = btn.dataset.group;
+      document.querySelectorAll(`.sel-opt[data-group="${group}"]`).forEach(b => b.classList.remove('sel-active'));
+      btn.classList.add('sel-active');
+      const hidden = document.getElementById(`${group}-hidden`);
+      if (hidden) hidden.value = btn.dataset.value;
+    });
+  });
+
+  document.getElementById('deck-train-form')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const base = form.action;
+    const mode = document.getElementById('mode-hidden')?.value || 'mc';
+    const dir  = document.getElementById('dir-hidden')?.value || `${config.language_pair.source_code}-${config.language_pair.target_code}`.toLowerCase();
+    const count = document.getElementById('count-hidden')?.value || '30';
+    const level = form.querySelector('[name="level"]')?.value || '';
+    const deck = form.querySelector('[name="deck"]')?.value || '';
+    
+    const params = new URLSearchParams();
+    if(level) params.set('level', level);
+    params.set('deck', deck);
+    params.set('mode', mode);
+    params.set('dir', dir);
+    params.set('count', count);
+    
+    window.location.href = `${base}?${params.toString()}`;
+  });
+
+  // ── Init ─────────────────────────────────────────────────────────────────
+  buildDots();
+  // Card 0 is already rendered server-side via LearningCard component.
+  // Sync progress UI to reflect card 0 state.
+  updateDots();
+  if (progressBar) progressBar.style.width = `${Math.round(1/cards.length*100)}%`;
+  // Update card 0 using client-side config too (ensures langConfig is applied)
+  renderCard(0);
+})();</script>

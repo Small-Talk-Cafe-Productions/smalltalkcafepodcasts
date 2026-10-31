@@ -1,0 +1,758 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="description" content="Nederlands Lounge — Jouw vertrouwde lounge voor de Nederlandse taal — vergroot je woordenschat, beheers de grammatica en ontdek het Nederlands van A1 tot B2."><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/languagelounge/favicon.svg"><meta name="generator" content="Astro v7.3.5"><title>Social Change — Nederlands Lounge</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet"><script>
+      (function() {
+        const saved = localStorage.getItem('wortschatz_theme');
+        if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script><link rel="stylesheet" href="/languagelounge/_astro/Layout.Cr1varBg.css"><style>.sel-opt[data-astro-cid-5tabbh6g]{border:2px solid var(--border);background-color:var(--card);color:var(--text);cursor:pointer;text-align:center;border-radius:12px;flex-direction:column;justify-content:center;align-items:center;width:100%;padding:14px 12px;transition:border-color .15s,background-color .15s,color .15s,box-shadow .15s;display:flex}.sel-opt[data-astro-cid-5tabbh6g]:hover{border-color:var(--border-hover);box-shadow:0 2px 8px #00000014}.sel-opt[data-astro-cid-5tabbh6g].sel-active{border-color:var(--espresso);background-color:var(--espresso);color:#f5f2eb;box-shadow:0 2px 12px #0000002e}
+</style></head><body class="antialiased min-h-screen flex flex-col" style="background-color:var(--bg);color:var(--text);"><!-- Header --><header class="sticky top-0 z-50 border-b" style="background-color:var(--bg);border-color:var(--border);"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between gap-4" style="height:4.5rem;"><!-- Logo + Language Switcher --><div class="flex items-center gap-4 shrink-0"><a href="/languagelounge/en-nl/" class="flex items-center gap-2 group"><span class="font-outfit font-extrabold text-xl sm:text-2xl tracking-tight transition-colors" style="color:var(--text);">Small Talk Café<span class="font-normal text-base hidden sm:inline" style="color:var(--text-muted);"> | <span id="site-name">Nederlands Lounge</span></span></span></a><!-- Language Selector Dropdown --><div class="relative" id="lang-dropdown-wrapper"><button id="lang-btn" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-sm font-bold transition-all hover:opacity-70" style="background-color:var(--bg); border-color:var(--border); color:var(--text);"><span id="lang-flag">🇳🇱</span><span id="lang-code">NL</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"></path></svg></button><div id="lang-menu" class="hidden absolute top-full left-0 mt-2 rounded-2xl border shadow-2xl overflow-hidden z-50 min-w-[260px] sm:min-w-[300px]" style="background-color:var(--card); border-color:var(--border);"><div class="px-3.5 py-2 text-[11px] font-bold uppercase tracking-wider border-b" style="background-color:var(--surface); border-color:var(--border); color:var(--text-muted);">Language Lounges</div><div><a href="/languagelounge/en-de/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇩🇪</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Deutsch Lounge</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">Der Raum für die deutsche Sprache</div></div></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-es/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇪🇸</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Lounge Español</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">El espacio para la lengua española</div></div></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-fr/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇫🇷</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Lounge Français</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">Le salon de la langue française</div></div></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-it/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇮🇹</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Lounge Italiano</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">Il salotto per la lingua italiana</div></div></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-nl/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-bold" style="color:var(--text); background-color:var(--surface);"><span class="text-2xl shrink-0">🇳🇱</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Nederlands Lounge</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">Dé ontmoetingsplek voor de Nederlandse taal</div></div><span class="shrink-0 text-[10px] font-extrabold uppercase px-1.5 py-0.5 rounded" style="background-color:var(--accent); color:var(--bg);">Active</span></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-pt/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇵🇹</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Lounge Português</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">O espaço para a língua portuguesa</div></div></a></div><div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/en-sv/" class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors hover:opacity-80 font-medium" style="color:var(--text); "><span class="text-2xl shrink-0">🇸🇪</span><div class="min-w-0 flex-1"><div class="font-bold truncate" style="color:var(--text);">Svenska Lounge</div><div class="text-xs truncate font-normal" style="color:var(--text-muted);">Mötesplatsen för det svenska språket</div></div></a></div><div class="border-t" style="border-color:var(--border);"></div><a href="/languagelounge/" class="w-full flex items-center gap-2.5 px-4 py-2.5 text-xs font-semibold hover:opacity-80 transition-colors " style="color:var(--text); "><span class="text-base">🏛️</span><span>Language Lounge Hub</span><span class="ml-auto text-[11px]" style="color:var(--text-muted);">Overview &rarr;</span></a></div></div></div><!-- Dynamic Nav Links --><nav class="hidden md:flex gap-5 items-center"><a href="https://smalltalkcafe.de/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Small Talk Café Podcasts</a><span class="text-sm font-normal" style="color:var(--border);">|</span><a href="/languagelounge/en-nl/vocabulary/" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Woordenschat</a><a href="/languagelounge/en-nl/verbs/" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Werkwoorden</a><a href="/languagelounge/en-nl/grammatik/" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Grammatica</a><a href="/languagelounge/en-nl/redemittel/" class="text-sm font-semibold transition-colors hover:opacity-70" style="color:var(--text);">Zegswijzen</a><!-- Dark/Light Toggle --><button id="theme-toggle" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-sm font-semibold transition-all hover:opacity-70" style="border-color:var(--border); color:var(--text-muted);" aria-label="Toggle dark/light mode"><span id="theme-icon">☀️</span><span id="theme-label">Light</span></button></nav></div></header><main id="main-content" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-1 w-full"><div class="max-w-4xl mx-auto py-6" data-astro-cid-5tabbh6g><!-- Deck Header --><div class="flex items-start justify-between mb-8 gap-4 flex-wrap" data-astro-cid-5tabbh6g><div data-astro-cid-5tabbh6g><a href="/languagelounge/en-nl/verbs/" class="text-xs font-bold flex items-center gap-1 mb-2 hover:opacity-70 transition-opacity" style="color:var(--espresso);" data-astro-cid-5tabbh6g><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><path d="m15 18-6-6 6-6" data-astro-cid-5tabbh6g></path></svg>Werkwoorden</a><h1 class="text-2xl md:text-3xl font-extrabold font-outfit" style="color:var(--text);" data-astro-cid-5tabbh6g>Social Change</h1><p class="text-xs font-bold uppercase tracking-wider mt-1" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Maatschappelijke Verandering • B2 • 20 kaarten</p></div><div class="flex flex-col items-end gap-4 w-full md:w-auto mt-4 md:mt-0" data-astro-cid-5tabbh6g><!-- ── Mode Toggle ───────────────────────────── --><div class="flex rounded-xl border overflow-hidden p-1 gap-1 w-full max-w-[300px]" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><button id="btn-mode-learn" class="mode-btn flex-1 flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold transition-all" data-astro-cid-5tabbh6g><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" data-astro-cid-5tabbh6g></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" data-astro-cid-5tabbh6g></path></svg>Leren</button><button id="btn-mode-train" class="mode-btn flex-1 flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold transition-all" data-astro-cid-5tabbh6g><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><circle cx="12" cy="12" r="10" data-astro-cid-5tabbh6g></circle><polyline points="12 6 12 12 16 14" data-astro-cid-5tabbh6g></polyline></svg>Oefenen</button></div><div id="learn-toolbar" class="flex flex-col items-end gap-4 w-full" data-astro-cid-5tabbh6g><!-- View switcher (Cards vs List) --><div class="flex rounded-xl border overflow-hidden p-1 gap-1 w-full max-w-[300px]" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><button id="view-cards-btn" class="view-btn flex-1 flex items-center justify-center px-4 py-2 rounded-lg text-xs font-bold transition-all bg-[var(--espresso)] text-[#F5F2EB]" data-astro-cid-5tabbh6g>Kaarten</button><button id="view-list-btn" class="view-btn flex-1 flex items-center justify-center px-4 py-2 rounded-lg text-xs font-bold transition-all text-[var(--text-muted)] hover:opacity-70" data-astro-cid-5tabbh6g>Lijst</button></div><!-- Progress indicator --><div id="progress-container" class="flex items-center gap-3" data-astro-cid-5tabbh6g><div class="text-xs font-semibold" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Kaart <span id="current-num" class="font-extrabold" style="color:var(--text);" data-astro-cid-5tabbh6g>1</span> / 20</div><div class="w-24 h-1.5 rounded-full overflow-hidden border" style="background-color:var(--bg);border-color:var(--border);" data-astro-cid-5tabbh6g><div id="progress-bar" class="h-full transition-all duration-500 rounded-full" style="width:0%; background-color:var(--espresso);" data-astro-cid-5tabbh6g></div></div></div></div></div></div><!-- ══ LEARN PANEL ════════════════════════════ --><div id="learn-panel" class="space-y-6" data-astro-cid-5tabbh6g><!-- ── Universal Study Card (rendered by LearningCard component) ── --><div id="card-view-wrap" data-astro-cid-5tabbh6g><div id="card-host" data-astro-cid-5tabbh6g><!-- The card shell — populated client-side by renderCard() --><div class="learning-card rounded-3xl border shadow-xl overflow-hidden" style="background-color:var(--card); border-color:var(--border);"><!-- ── Top bar ─────────────────────────────────── --><div class="lc-topbar flex items-center justify-between px-6 py-3.5 border-b" style="border-color:var(--border); background-color:var(--bg);"><div class="flex items-center gap-2"><span class="lc-type-badge text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-lg" style="background-color:var(--espresso); color:#F5F2EB;">—</span><span class="lc-level-badge text-[10px] font-bold px-2.5 py-1 rounded-lg cafe-badge"></span></div><button class="lc-audio-btn flex items-center justify-center w-11 h-11 rounded-full transition-transform hover:scale-105 active:scale-95 shadow-md flex-shrink-0" title="Luisteren (A)" style="background-color:var(--espresso); color:#F5F2EB;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg></button></div><!-- ── Main word display ───────────────────────── --><div class="lc-hero px-7 py-8 text-center border-b" style="border-color:var(--border);"><div class="lc-article-wrap mb-1.5"><span class="lc-article text-xl font-bold"></span></div><h2 class="lc-word text-5xl md:text-6xl font-extrabold font-outfit mb-3" style="color:var(--text);">—</h2><p class="lc-translation text-lg font-semibold italic" style="color:var(--text-muted);"></p><p class="lc-forms text-sm font-medium mt-2" style="color:var(--text-muted);"></p></div><!-- ── Meta info grid ─────────────────────────── --><div class="lc-meta-grid grid border-b" style="border-color:var(--border);"><!-- populated by JS --></div><!-- ── Grammar note ───────────────────────────── --><div class="lc-grammar-wrap hidden px-7 py-5 border-b" style="border-color:var(--border); background-color:var(--bg);"><p class="text-[10px] font-bold uppercase tracking-widest mb-2" style="color:var(--espresso);">📌 <span class="lc-grammar-label">Grammaticanotitie</span></p><p class="lc-grammar-text text-sm leading-relaxed font-medium whitespace-pre-wrap" style="color:var(--text);"></p></div><!-- ── Type-specific block ────────────────────── --><!-- Connector word-order block --><div class="lc-wordorder-wrap hidden px-7 py-4 border-b" style="border-color:var(--border); background-color:var(--bg);"><div class="flex items-start gap-3 text-sm font-medium" style="color:var(--text-muted);"><span class="text-base flex-shrink-0">📐</span><span class="lc-wordorder-text"></span></div></div><!-- Phrase preposition block --><div class="lc-phrase-wrap hidden px-7 py-4 border-b" style="border-color:var(--border); background-color:var(--bg);"><p class="text-[10px] font-bold uppercase tracking-widest mb-2" style="color:var(--espresso);">Structuur</p><p class="lc-phrase-rule text-sm font-semibold" style="color:var(--text);"></p></div><!-- ── Examples ───────────────────────────────── --><div class="px-7 py-6 border-b" style="border-color:var(--border);"><p class="lc-examples-label text-[10px] font-bold uppercase tracking-widest mb-5" style="color:var(--text-muted);">Voorbeeldzinnen</p><div class="lc-examples space-y-3"><!-- populated by JS --></div></div><!-- Verb conjugation (hidden by default, shown for verb cards) --><div class="lc-conjugation-wrap hidden border-b px-7 py-6" style="border-color:var(--border);"><div class="lc-conjugation-inner flex flex-wrap gap-4"><!-- populated by JS --></div></div><!-- ── Tags ───────────────────────────────────── --><div class="lc-tags-row px-7 py-4 flex items-center gap-2 flex-wrap"><span class="text-[10px] font-bold uppercase tracking-wider" style="color:var(--text-muted);">Tags:</span><div class="lc-tags flex gap-2 flex-wrap"></div></div></div><script>(function(){const cardJson = "{\"id\":\"verbs-b2-social_change-001\",\"target\":\"zich aanpassen\",\"source\":\"to adapt\",\"type\":\"reflexive\",\"cefr\":\"B2\",\"grammar_note\":\"Weak reflexive verb taking 'hebben'. Uses the preposition 'aan' (zich aanpassen aan).\",\"examples\":[{\"target\":\"Burgers moeten zich snel aanpassen aan de veranderende arbeidsmarkt.\",\"source\":\"Citizens must quickly adapt to the changing labor market.\"},{\"target\":\"De organisatie paste zich flexibel aan de nieuwe wetgeving aan.\",\"source\":\"The organization flexibly adapted to the new legislation.\"}],\"conjugations\":{\"tegenwoordige_tijd\":{\"ik\":\"ik pas me aan\",\"jij/je\":\"jij past je aan\",\"hij/zij/het\":\"hij/zij past zich aan\",\"wij/we\":\"wij passen ons aan\",\"jullie\":\"jullie passen je aan\",\"zij/ze\":\"zij passen zich aan\"},\"verleden_tijd\":{\"ik\":\"ik paste me aan\",\"jij/je\":\"jij paste je aan\",\"hij/zij/het\":\"hij/zij paste zich aan\",\"wij/we\":\"wij pasten ons aan\",\"jullie\":\"jullie paste je aan\",\"zij/ze\":\"zij pasten zich aan\"},\"toekomende_tijd\":{\"ik\":\"ik zal me aanpassen\",\"jij/je\":\"jij zult je aanpassen\",\"hij/zij/het\":\"hij/zij zal zich aanpassen\",\"wij/we\":\"wij zullen ons aanpassen\",\"jullie\":\"jullie zullen je aanpassen\",\"zij/ze\":\"zij zullen zich aanpassen\"},\"voltooide_tijd\":\"heeft zich aangepast\",\"voltooid_deelwoord\":\"aangepast\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}}";
+const langConfigJson = "{\"language_pair\":\"english_dutch\",\"target_lang\":\"nl\",\"native_lang\":\"en\",\"target_lang_name\":\"Nederlands\",\"native_lang_name\":\"English\",\"speech_lang\":\"nl-NL\",\"noun_metadata_fields\":[{\"key\":\"article\",\"label\":\"Lidwoord\",\"render\":\"article_badge\"},{\"key\":\"gender\",\"label\":\"Geslacht\",\"render\":\"gender_label\"},{\"key\":\"plural\",\"label\":\"Meervoud\",\"render\":\"text\"}],\"article_colours\":{\"de\":\"#4A7C9E\",\"het\":\"#4A8A5A\"},\"gender_labels\":{\"c\":\"de-woord\",\"n\":\"het-woord\"},\"verb_tenses\":[\"tegenwoordige_tijd\",\"verleden_tijd\",\"voltooide_tijd\",\"voltooid_deelwoord\",\"toekomende_tijd\"],\"cases\":{},\"ui_labels\":{\"learn_mode\":\"Leren\",\"train_mode\":\"Oefenen\",\"examples_heading\":\"Voorbeeldzinnen\",\"grammar_note_heading\":\"Grammaticanotitie\",\"audio_button\":\"Luisteren\",\"back_link\":\"Terug\",\"card_counter\":\"Kaart {current} / {total}\",\"next_button\":\"Volgende\",\"finish_button\":\"Klaar\",\"correct\":\"Juist!\",\"wrong\":\"Fout\",\"dashboard_link\":\"Dashboard\",\"library_prompt\":\"Kies een deck uit de bibliotheek en ontdek alle informatie op de kaarten.\",\"cards_badge\":\"{count} KAARTEN\",\"cards_count\":\"{count} kaarten\",\"deck_meta\":\"{topic} • {level} • {count} kaarten\",\"no_decks\":\"Nog geen decks in deze categorie.\",\"setup_title\":\"Training instellen\",\"setup_subtitle\":\"Configureer je leersessie.\",\"question_type\":\"Vraagtype\",\"mode_multiple_choice\":\"Meerkeuze\",\"mode_typing\":\"Tekstinvoer\",\"mode_typing_short\":\"Invoer\",\"direction\":\"Richting\",\"direction_forward\":\"🇺🇸 English → 🇳🇱 Nederlands\",\"direction_reverse\":\"🇳🇱 Nederlands → 🇺🇸 English\",\"select_level\":\"Niveau kiezen\",\"start_training\":\"Training starten\",\"count_label\":\"Aantal kaarten\",\"all_cards\":\"Alles\",\"in_deck\":\"in stapel\",\"view_cards\":\"Kaarten\",\"view_list\":\"Lijst\",\"card_word\":\"Kaart\",\"keyboard_hint_study\":\"← → Pijltjestoetsen om te navigeren · A om te luisteren\",\"example_single_heading\":\"Voorbeeld\",\"no_example\":\"Geen voorbeeld beschikbaar.\",\"tags_label\":\"Tags:\",\"type_vocab\":\"Woordenschat\",\"type_verb\":\"Werkwoord\",\"type_phrase\":\"Zegswijze\",\"type_connector\":\"Voegwoord\",\"type_grammar\":\"Grammatica\",\"type_noun\":\"Zelfstandig naamwoord\",\"type_adjective\":\"Bijvoeglijk naamwoord\",\"type_expression\":\"Uitdrukking\",\"plural_prefix\":\"Pl. {plural}\",\"plural_only\":\"alleen meervoud\",\"word_order_heading\":\"Woordvolgorde\",\"structure_heading\":\"Structuur\",\"training_title\":\"Training\",\"all_levels\":\"Alle niveaus\",\"type_placeholder\":\"Schrijf het woord in het Nederlands...\",\"check_button\":\"Controleren\",\"keyboard_hint_train\":\"Enter / Spatie = bevestigen · A = Luisteren\",\"audio_title\":\"Luisteren (A)\",\"training_finished\":\"Training voltooid!\",\"missed_heading\":\"Fout beantwoord — om te herhalen\",\"retry_missed\":\"Fouten opnieuw doen\",\"new_config\":\"Nieuwe configuratie\",\"plural_hint\":\"Pl: {plural}\",\"results_pct\":\"{pct}% juist\",\"result_excellent\":\"Uitstekend! Je beheerst dit niveau volledig.\",\"result_good\":\"Zeer goed! Nog een beetje oefenen en je hebt het onder de knie!\",\"result_ok\":\"Goed begin! Herhaal de kaarten nog een keer.\",\"result_retry\":\"Geen probleem — oefening baart kunst!\",\"no_cards_title\":\"Geen kaarten gevonden\",\"no_cards_hint\":\"Kies een ander niveau of een ander deck.\"},\"answer_normalisation\":{\"strip_leading_words\":[\"de\",\"het\",\"een\",\"der\",\"des\",\"den\"],\"alt_spellings\":{\"ij\":\"y\",\"ë\":\"e\",\"ï\":\"i\"}}}";
+
+  /**
+   * Client-side card renderer.
+   * Uses the universal card-renderer logic inline (no imports in Astro is:inline).
+   */
+
+  // ── Parse data ──────────────────────────────────────────────────────────
+  const card   = JSON.parse(cardJson);
+  const config = JSON.parse(langConfigJson);
+
+  // ── Helpers ─────────────────────────────────────────────────────────────
+  // Articles come from the language config (keys of article_colours), never hardcoded
+  const articleList = Object.keys(config.article_colours || {});
+  const articlePatterns = articleList.map(a => {
+    const esc = a.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    return esc.endsWith("'") ? esc : `${esc}\\s+`;
+  });
+  const articleRe = articlePatterns.length
+    ? new RegExp('^(?:' + articlePatterns.join('|') + ')', 'i')
+    : null;
+
+  function stripArticle(word) {
+    return articleRe ? (word || '').replace(articleRe, '').trim() : (word || '').trim();
+  }
+
+  function getArticleColour(article) {
+    if (!article || !config.article_colours) return 'var(--espresso)';
+    return config.article_colours[article.toLowerCase()] || 'var(--espresso)';
+  }
+
+  function getGenderLabel(gender) {
+    if (!gender) return '';
+    return (config.gender_labels || {})[gender] || gender;
+  }
+
+  const uiLabels = config.ui_labels || {};
+
+  function getTypeLabel() {
+    const tags = card.tags || [];
+    if (tags.includes('noun'))       return uiLabels.type_noun || 'Noun';
+    if (tags.includes('verb'))       return uiLabels.type_verb || 'Verb';
+    if (tags.includes('adjective'))  return uiLabels.type_adjective || 'Adjective';
+    if (tags.includes('expression')) return uiLabels.type_expression || 'Expression';
+    const map = {
+      vocab: uiLabels.type_vocab || 'Vocab',
+      verb: uiLabels.type_verb || 'Verb',
+      phrase: uiLabels.type_phrase || 'Phrase',
+      connector: uiLabels.type_connector || 'Connector',
+      grammar: uiLabels.type_grammar || 'Grammar'
+    };
+    return map[card.type] || uiLabels.card_word || 'Card';
+  }
+
+  function formatHighlight(text) {
+    if (!text) return '';
+    return String(text).replace(/\*(.*?)\*/g, '<span class="highlighter">$1</span>');
+  }
+
+  function getMetaFacts() {
+    const meta = card.metadata || {};
+    const facts = [];
+    for (const field of (config.noun_metadata_fields || [])) {
+      const raw = meta[field.key] || card[field.key];
+      if (!raw || raw === '~') continue;
+      let value = String(raw);
+      let colour;
+      if (field.render === 'gender_label') value = getGenderLabel(raw);
+      else if (field.render === 'article_badge') colour = getArticleColour(raw);
+      facts.push({ label: field.label, value, colour });
+    }
+    return facts;
+  }
+
+  // ── Render ──────────────────────────────────────────────────────────────
+  const container = document.querySelector('.learning-card');
+  if (!container) { console.error('LearningCard: container not found'); }
+
+  function sel(cls) { return container?.querySelector(cls); }
+
+  // Type badge
+  sel('.lc-type-badge').textContent = getTypeLabel();
+
+  // Level badge
+  sel('.lc-level-badge').textContent = card.level || '';
+
+  // Article
+  const article = card.metadata?.article;
+  const articleWrap = sel('.lc-article-wrap');
+  const articleEl   = sel('.lc-article');
+  if (article && card.tags?.includes('noun') && !card.metadata?.plural_only) {
+    articleEl.textContent  = article;
+    articleEl.style.color  = getArticleColour(article);
+    articleWrap.style.display = '';
+  } else {
+    articleWrap.style.display = 'none';
+  }
+
+  // Word
+  sel('.lc-word').textContent = stripArticle(card.target);
+
+  // Translation
+  sel('.lc-translation').textContent = card.source || '';
+
+  // Plural / forms
+  const plural = card.metadata?.plural;
+  const formsEl = sel('.lc-forms');
+  const prefix = uiLabels.plural_prefix || 'Pl.';
+  const pluralOnly = uiLabels.plural_only || 'Plural only';
+  if (plural && !card.metadata?.plural_only) formsEl.textContent = `${prefix} ${plural}`;
+  else if (card.metadata?.plural_only) formsEl.textContent = pluralOnly;
+  else formsEl.textContent = '';
+
+  // Meta grid
+  const metaGrid = sel('.lc-meta-grid');
+  const facts = getMetaFacts();
+  if (facts.length) {
+    const cols = Math.min(facts.length, 4);
+    metaGrid.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
+    metaGrid.innerHTML = facts.map((f, i) => `
+      <div class="px-5 py-4 ${i < facts.length - 1 ? 'border-r' : ''}" style="border-color:var(--border);">
+        <p class="text-[9px] font-bold uppercase tracking-widest mb-1" style="color:var(--text-muted);">${f.label}</p>
+        <p class="text-sm font-bold" style="color:${f.colour || 'var(--text)'};">${f.value}</p>
+      </div>
+    `).join('');
+  } else {
+    metaGrid.style.display = 'none';
+  }
+
+  // Grammar note
+  const grammarWrap = sel('.lc-grammar-wrap');
+  if (card.grammar_note) {
+    sel('.lc-grammar-text').innerHTML = formatHighlight(card.grammar_note);
+    grammarWrap.classList.remove('hidden');
+  }
+
+  // Grammar label from config
+  const uiLabels = config.ui_labels || {};
+  if (uiLabels.grammar_note_heading) sel('.lc-grammar-label').textContent = uiLabels.grammar_note_heading;
+  if (uiLabels.examples_heading)     sel('.lc-examples-label').textContent = uiLabels.examples_heading;
+  if (uiLabels.audio_button)         { const el = sel('.lc-audio-label'); if (el) el.textContent = uiLabels.audio_button; }
+
+  // ── Type-specific blocks ─────────────────────────────────────────────────
+
+  // Verb: conjugation table
+  const type = card.type || (card.tags?.includes('verb') ? 'verb' : 'vocab');
+  if (type === 'verb' && card.conjugations) {
+    const conjWrap  = sel('.lc-conjugation-wrap');
+    const conjInner = sel('.lc-conjugation-inner');
+    conjWrap.classList.remove('hidden');
+
+    let conjArray = [];
+    if (Array.isArray(card.conjugations)) {
+      conjArray = card.conjugations;
+    } else {
+      for (const [tense, forms] of Object.entries(card.conjugations)) {
+        if (typeof forms === 'string') {
+          conjArray.push({ tense, stringForm: forms });
+        } else {
+          const formsArr = Object.entries(forms).map(([pronoun, form]) => ({ pronoun, form }));
+          conjArray.push({ tense, forms: formsArr });
+        }
+      }
+    }
+
+    const tensesToRender = config.verb_tenses || conjArray.map(t => t.tense);
+
+    const stringTenses = [];
+    const tableTenses = [];
+
+    tensesToRender.forEach(tense => {
+      const t = conjArray.find(c => c.tense === tense);
+      if (!t) return;
+      if (t.stringForm) stringTenses.push(t);
+      else tableTenses.push(t);
+    });
+
+    let html = '';
+
+    // Render simple string forms (e.g. Perfekt, Partizip II) as pill-like tags at the top
+    if (stringTenses.length > 0) {
+      html += `
+        <div class="flex flex-wrap gap-3 mb-6">
+          ${stringTenses.map(t => `
+            <div class="rounded-xl border px-4 py-2.5 flex items-center gap-3 shadow-sm" style="border-color:var(--border); background-color:var(--bg);">
+              <span class="text-[10px] font-bold uppercase tracking-widest opacity-80" style="color:var(--espresso);">${t.tense.replace(/_/g, ' ')}</span>
+              <span class="font-bold text-sm" style="color:var(--text);">${t.stringForm}</span>
+            </div>
+          `).join('')}
+        </div>
+      `;
+    }
+
+    // Render full tables (e.g. Präsens, Präteritum) as a unified table
+    if (tableTenses.length > 0) {
+      // Collect all pronouns from the first available table tense
+      const pronouns = tableTenses[0].forms.map(f => f.pronoun);
+
+      html += `
+        <div class="rounded-xl border overflow-x-auto shadow-sm w-full" style="border-color:var(--border);">
+          <table class="w-full text-sm text-left">
+            <thead>
+              <tr style="background-color:var(--bg); border-bottom: 1px solid var(--border);">
+                <th class="px-4 py-3 font-bold uppercase tracking-widest text-[10px] w-[1%]" style="color:var(--espresso); border-right: 1px solid var(--border);"></th>
+                ${tableTenses.map(t => `
+                  <th class="px-4 py-3 font-bold uppercase tracking-widest text-[10px]" style="color:var(--espresso);">${t.tense.replace(/_/g, ' ')}</th>
+                `).join('')}
+              </tr>
+            </thead>
+            <tbody>
+              ${pronouns.map((pronoun, ri) => `
+                <tr class="${ri < pronouns.length - 1 ? 'border-b' : ''}" style="border-color:var(--border);">
+                  <td class="px-4 py-3 font-bold text-xs whitespace-nowrap" style="color:var(--espresso); background-color:var(--bg); border-right: 1px solid var(--border);">${pronoun}</td>
+                  ${tableTenses.map(t => {
+                    const formObj = t.forms.find(f => f.pronoun === pronoun);
+                    return `<td class="px-4 py-3 font-semibold whitespace-nowrap" style="color:var(--text);">${formObj ? formObj.form : '-'}</td>`;
+                  }).join('')}
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+        </div>
+      `;
+    }
+
+    conjInner.innerHTML = html;
+  }
+
+  // Connector: word order block
+  if (type === 'connector' && card.word_order) {
+    const woWrap = sel('.lc-wordorder-wrap');
+    sel('.lc-wordorder-text').textContent = card.word_order;
+    woWrap.classList.remove('hidden');
+  }
+
+  // Phrase: preposition rule block
+  if (type === 'phrase' && card.clause_type) {
+    const phraseWrap = sel('.lc-phrase-wrap');
+    sel('.lc-phrase-rule').textContent = card.clause_type;
+    phraseWrap.classList.remove('hidden');
+  }
+
+  // ── Examples ─────────────────────────────────────────────────────────────
+  const examplesEl = sel('.lc-examples');
+  const rawExamples = card.examples || [];
+
+  if (rawExamples.length) {
+    examplesEl.innerHTML = rawExamples.map(e => `
+        <div class="rounded-2xl border overflow-hidden" style="border-color:var(--border);">
+          <div class="px-4 py-3" style="background-color:var(--bg);">
+            <p class="font-semibold leading-snug mb-1" style="color:var(--text);">${formatHighlight(e.target)}</p>
+            <p class="text-sm italic" style="color:var(--text-muted);">${formatHighlight(e.source || '')}</p>
+          </div>
+          ${e.note ? `<div class="px-4 py-2 border-t" style="border-color:var(--border);">
+            <p class="text-[10px] font-bold font-mono" style="color:var(--espresso);">📐 ${e.note}</p>
+          </div>` : ''}
+        </div>
+      `).join('');
+  } else {
+    examplesEl.innerHTML = `<p class="text-sm italic" style="color:var(--text-muted);">${uiLabels.no_example || ''}</p>`;
+  }
+
+  // ── Tags ─────────────────────────────────────────────────────────────────
+  const tagsEl = sel('.lc-tags');
+  tagsEl.innerHTML = (card.tags || []).map(t => `
+    <span class="text-[10px] font-bold px-2 py-0.5 rounded-md border uppercase" style="border-color:var(--border); color:var(--text-muted); background-color:var(--bg);">${t}</span>
+  `).join('');
+
+  // ── Audio button ─────────────────────────────────────────────────────────
+  sel('.lc-audio-btn')?.addEventListener('click', () => {
+    if (window.LoungeAudioEngine) {
+      window.LoungeAudioEngine.speak(card.target || '', config.speech_lang, 0.85);
+    }
+  });
+})();</script></div><!-- ── Navigation ───────────────────────────── --><div class="flex items-center justify-between mt-8 gap-4" data-astro-cid-5tabbh6g><button id="btn-prev" disabled class="flex items-center gap-2 px-6 py-3 rounded-2xl border font-bold text-sm transition-all hover:opacity-70 active:scale-95 disabled:opacity-30 disabled:cursor-not-allowed" style="border-color:var(--border); color:var(--text); background-color:var(--card);" data-astro-cid-5tabbh6g><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><path d="m15 18-6-6 6-6" data-astro-cid-5tabbh6g></path></svg>Terug</button><!-- Dot navigation --><div id="dot-nav" class="flex items-center gap-1.5 flex-wrap justify-center max-w-xs overflow-hidden" style="max-height:2rem;" data-astro-cid-5tabbh6g><!-- populated by JS --></div><button id="btn-next" class="flex items-center gap-2 px-6 py-3 rounded-2xl font-bold text-sm transition-all hover:opacity-80 active:scale-95" style="background-color:var(--espresso); color:#F5F2EB;" data-astro-cid-5tabbh6g>Volgende<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5tabbh6g><path d="m9 18 6-6-6-6" data-astro-cid-5tabbh6g></path></svg></button></div><!-- Keyboard hint --><p class="text-center text-xs font-medium mt-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>← → Pijltjestoetsen om te navigeren · A om te luisteren</p></div><!-- ── List View ───────────────────────────── --><div id="list-view-wrap" class="hidden space-y-6" data-astro-cid-5tabbh6g><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>zich aanpassen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to adapt</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammaticanotitie</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Weak reflexive verb taking 'hebben'. Uses the preposition 'aan' (zich aanpassen aan).</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Voorbeeld</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Burgers moeten zich snel aanpassen aan de veranderende arbeidsmarkt.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Citizens must quickly adapt to the changing labor market.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>verbeteren</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to improve</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammaticanotitie</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Weak regular verb taking 'hebben'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Voorbeeld</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>De overheid probeert de leefomstandigheden in achterstandswijken te verbeteren.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The government is trying to improve the living conditions in disadvantaged neighborhoods.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>stimuleren</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to stimulate</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammaticanotitie</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Weak regular verb taking 'hebben'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Voorbeeld</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>De gemeente wil duurzaam gedrag onder bewoners actief stimuleren.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The municipality wants to actively stimulate sustainable behavior among residents.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>beïnvloeden</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to influence</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammaticanotitie</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Weak regular verb taking 'hebben'. Contains a diaeresis on the 'ï'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Voorbeeld</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Sociale media beïnvloeden de publieke opinie over maatschappelijke kwesties sterk.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Social media strongly influence public opinion on social issues.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>organiseren</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to organize</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammaticanotitie</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Weak regular verb taking 'hebben'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Voorbeeld</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Actiegroepen organiseren vreedzame protesten tegen de stijgende kosten van levensonderhoud.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Action groups organize peaceful protests against the rising cost of living.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>integreren</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to integrate</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammaticanotitie</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Weak regular verb taking 'hebben' or 'zijn' depending on context (usually 'hebben' when transitive, 'zijn' when intransitive process).</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Voorbeeld</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Het is belangrijk dat nieuwkomers snel integreren in de nieuwe samenleving.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>It is important that newcomers quickly integrate into the new society.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>deelnemen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to participate</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammaticanotitie</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Strong separable verb (telt as stem change: neemt... deel) taking 'hebben'. Uses preposition 'aan' (deelnemen aan).</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Voorbeeld</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Steeds meer jongeren nemen actief deel aan politieke debatten.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>More and more young people are actively participating in political debates.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>herverdelen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to redistribute</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammaticanotitie</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Weak regular verb taking 'hebben'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Voorbeeld</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Politieke partijen debatteren over hoe ze de welvaart eerlijker kunnen herverdelen.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Political parties are debating how they can redistribute wealth more fairly.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>mobiliseren</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to mobilize</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammaticanotitie</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Weak regular verb taking 'hebben'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Voorbeeld</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Milieuactivisten proberen wereldwijd miljoenen mensen te mobiliseren tegen klimaatverandering.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Environmental activists try to mobilize millions of people worldwide against climate change.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>voortduren</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to persist / continue</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammaticanotitie</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Weak separable verb taking 'zijn' (as it expresses a process continuing over time).</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Voorbeeld</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>De economische crisis zal waarschijnlijk nog enkele jaren voortduren.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The economic crisis will likely continue for a few more years.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>transformeren</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to transform</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammaticanotitie</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Weak regular verb taking 'hebben' or 'zijn' depending on transitivty.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Voorbeeld</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Digitalisering transformeert de manier waarop we communiceren en werken.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Digitization is transforming the way we communicate and work.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>aankaarten</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to bring up / raise an issue</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammaticanotitie</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Weak separable verb taking 'hebben'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Voorbeeld</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Het is noodzakelijk om misstanden op de werkvloer direct aan te kaarten.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>It is necessary to bring up abuses on the work floor immediately.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>ontwikkelen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to develop</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammaticanotitie</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Weak regular verb taking 'hebben'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Voorbeeld</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Wetenschappers ontwikkelen nieuwe technologieën om de energietransitie te versnellen.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Scientists are developing new technologies to accelerate the energy transition.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>emanciperen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to emancipate</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammaticanotitie</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Weak regular verb taking 'hebben'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Voorbeeld</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>In de twintigste eeuw streden vrouwen massaal om zich te emanciperen.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>In the twentieth century, women fought en masse to emancipate themselves.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>tegenstaan</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to oppose / be opposed to</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammaticanotitie</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Strong separable verb (staat... tegen) taking 'hebben'. Also used impersonally meaning 'to displease'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Voorbeeld</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Veel burgers staan de geplande hervormingen van de sociale zekerheid fel tegen.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Many citizens strongly oppose the planned reforms of social security.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>voorkomen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to prevent</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammaticanotitie</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Strong verb (voorkomt - voorkwam - heeft voorkomen) taking 'hebben'. Not to be confused with separable 'voorkomen' (to occur) which takes 'zijn'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Voorbeeld</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Strikte wetgeving kan verdere polarisatie in de samenleving proberen te voorkomen.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Strict legislation can try to prevent further polarization in society.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>veroorzaken</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to cause</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammaticanotitie</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Weak regular verb taking 'hebben'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Voorbeeld</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Snelle gentrificatie kan vaak sociale spanningen in volkswijken veroorzaken.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Rapid gentrification can often cause social tensions in working-class neighborhoods.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>rechtvaardigen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to justify</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammaticanotitie</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Weak regular verb taking 'hebben'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Voorbeeld</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>De minister probeerde de strenge bezuinigingen op cultuur te rechtvaardigen.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The minister tried to justify the severe budget cuts on culture.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>bijeenkomen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to gather / meet</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammaticanotitie</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Strong separable verb (komt... bijeen) taking 'zijn'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Voorbeeld</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Activisten kwamen vorig weekend bijeen om te discussiëren over gelijke rechten.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Activists gathered last weekend to discuss equal rights.</p></div></div></div></div><div class="cafe-card p-6 md:p-8 rounded-3xl border shadow-sm transition-all" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="flex flex-col md:flex-row md:items-start gap-6" data-astro-cid-5tabbh6g><div class="flex-1" data-astro-cid-5tabbh6g><h3 class="text-2xl md:text-3xl font-extrabold font-outfit mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>verwerpen</h3><p class="text-base font-semibold italic mb-4" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>to reject</p><div class="mt-4 p-4 rounded-xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-1 flex items-center gap-1.5" style="color:var(--espresso);" data-astro-cid-5tabbh6g>📌 Grammaticanotitie</p><p class="text-sm font-medium leading-relaxed whitespace-pre-wrap" style="color:var(--text);" data-astro-cid-5tabbh6g>Strong verb (verwerpt - verwierp - heeft verworpen) taking 'hebben'.</p></div></div><div class="flex-1 w-full p-5 rounded-2xl border" style="background-color:var(--bg); border-color:var(--border);" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold uppercase tracking-widest mb-3" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Voorbeeld</p><div class="space-y-1 text-sm" data-astro-cid-5tabbh6g><p class="font-bold text-base mb-1" style="color:var(--text);" data-astro-cid-5tabbh6g>Het parlement heeft het wetsvoorstel over de hervorming resoluut verworpen.</p><p class="italic text-[13px]" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>The parliament resolutely rejected the bill regarding the reform.</p></div></div></div></div></div></div><!-- ══ TRAIN PANEL ════════════════════════════ --><div id="train-panel" class="hidden space-y-10" data-astro-cid-5tabbh6g><div class="cafe-card rounded-3xl p-8 border shadow-lg max-w-xl mx-auto" style="background-color:var(--card); border-color:var(--border);" data-astro-cid-5tabbh6g><div class="text-center mb-8" data-astro-cid-5tabbh6g><h2 class="text-2xl font-extrabold font-outfit mb-2" style="color:var(--text);" data-astro-cid-5tabbh6g>Training instellen</h2><p class="text-sm font-medium" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Configureer je leersessie.</p></div><form action="/languagelounge/en-nl/training/verbs/train/" method="GET" class="space-y-8" id="deck-train-form" data-astro-cid-5tabbh6g><input type="hidden" name="level" value="b2" data-astro-cid-5tabbh6g><input type="hidden" name="deck" value="verbs-b2-social_change" data-astro-cid-5tabbh6g><!-- Mode selection --><div class="space-y-3" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold tracking-widest uppercase" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Vraagtype</p><div class="grid grid-cols-2 gap-3" data-astro-cid-5tabbh6g><button type="button" data-group="mode" data-value="mc" class="sel-opt sel-active" data-astro-cid-5tabbh6g><span class="text-xl mb-1 block" data-astro-cid-5tabbh6g>🔘</span><span class="text-sm font-bold" data-astro-cid-5tabbh6g>Meerkeuze</span></button><button type="button" data-group="mode" data-value="type" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-xl mb-1 block" data-astro-cid-5tabbh6g>⌨️</span><span class="text-sm font-bold" data-astro-cid-5tabbh6g>Tekstinvoer</span></button></div><input type="hidden" name="mode" id="mode-hidden" value="mc" data-astro-cid-5tabbh6g></div><!-- Direction selection --><div class="space-y-3" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold tracking-widest uppercase" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Richting</p><div class="grid grid-cols-2 gap-3" data-astro-cid-5tabbh6g><button type="button" data-group="dir" data-value="en-nl" class="sel-opt sel-active" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>🇺🇸 English → 🇳🇱 Nederlands</span></button><button type="button" data-group="dir" data-value="nl-en" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>🇳🇱 Nederlands → 🇺🇸 English</span></button></div><input type="hidden" name="dir" id="dir-hidden" value="en-nl" data-astro-cid-5tabbh6g></div><!-- Count Selection --><div class="space-y-3" data-astro-cid-5tabbh6g><div class="flex justify-between items-end" data-astro-cid-5tabbh6g><p class="text-[10px] font-bold tracking-widest uppercase" style="color:var(--text-muted);" data-astro-cid-5tabbh6g>Aantal kaarten</p><span class="text-xs font-bold" style="color:var(--espresso);" data-astro-cid-5tabbh6g>20 kaarten in stapel</span></div><div class="grid grid-cols-4 gap-3" data-astro-cid-5tabbh6g><button type="button" data-group="count" data-value="30" class="sel-opt sel-active" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>30</span></button><button type="button" data-group="count" data-value="60" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>60</span></button><button type="button" data-group="count" data-value="90" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>90</span></button><button type="button" data-group="count" data-value="1000" class="sel-opt" data-astro-cid-5tabbh6g><span class="text-sm font-bold" data-astro-cid-5tabbh6g>Alles</span></button></div><input type="hidden" name="count" id="count-hidden" value="30" data-astro-cid-5tabbh6g></div><button type="submit" class="w-full py-4 rounded-xl font-bold text-base transition-all hover:opacity-90 mt-4 shadow-md active:scale-[0.98]" style="background-color:var(--espresso); color:#F5F2EB;" data-astro-cid-5tabbh6g>Training starten &rarr;</button></form></div></div></div></main><footer class="mt-auto border-t py-8" style="background-color:var(--bg);border-color:var(--border);"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-medium" style="color:var(--text-muted);"><div>&copy; 2025 - 2026 Small Talk Café Podcasts. All rights reserved.</div><div class="flex gap-4">Made in Bayern ❤️ Los Geht's!</div></div></footer><!-- Minimal script for Theme and Dropdown toggle --><script>
+      // ── Theme ──────────────────────────────────────
+      function applyTheme(dark) {
+        if (dark) {
+          document.documentElement.classList.add('dark');
+          localStorage.setItem('wortschatz_theme', 'dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+          localStorage.setItem('wortschatz_theme', 'light');
+        }
+        const icon = document.getElementById('theme-icon');
+        const label = document.getElementById('theme-label');
+        if (icon) icon.textContent = dark ? '🌙' : '☀️';
+        if (label) label.textContent = dark ? 'Dark' : 'Light';
+      }
+
+      const isDark = document.documentElement.classList.contains('dark');
+      applyTheme(isDark);
+
+      document.getElementById('theme-toggle')?.addEventListener('click', () => {
+        const nowDark = !document.documentElement.classList.contains('dark');
+        applyTheme(nowDark);
+      });
+
+      // ── Dropdown Toggle ──────────────────────────
+      const langBtn = document.getElementById('lang-btn');
+      const langMenu = document.getElementById('lang-menu');
+
+      langBtn?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        langMenu?.classList.toggle('hidden');
+      });
+
+      document.addEventListener('click', () => {
+        langMenu?.classList.add('hidden');
+      });
+    </script></body></html><script type="module" src="/languagelounge/_astro/_deckId_.astro_astro_type_script_index_0_lang.DwXABuW8.js"></script><script>(function(){const cardsJson = "[{\"id\":\"verbs-b2-social_change-001\",\"target\":\"zich aanpassen\",\"source\":\"to adapt\",\"type\":\"reflexive\",\"cefr\":\"B2\",\"grammar_note\":\"Weak reflexive verb taking 'hebben'. Uses the preposition 'aan' (zich aanpassen aan).\",\"examples\":[{\"target\":\"Burgers moeten zich snel aanpassen aan de veranderende arbeidsmarkt.\",\"source\":\"Citizens must quickly adapt to the changing labor market.\"},{\"target\":\"De organisatie paste zich flexibel aan de nieuwe wetgeving aan.\",\"source\":\"The organization flexibly adapted to the new legislation.\"}],\"conjugations\":{\"tegenwoordige_tijd\":{\"ik\":\"ik pas me aan\",\"jij/je\":\"jij past je aan\",\"hij/zij/het\":\"hij/zij past zich aan\",\"wij/we\":\"wij passen ons aan\",\"jullie\":\"jullie passen je aan\",\"zij/ze\":\"zij passen zich aan\"},\"verleden_tijd\":{\"ik\":\"ik paste me aan\",\"jij/je\":\"jij paste je aan\",\"hij/zij/het\":\"hij/zij paste zich aan\",\"wij/we\":\"wij pasten ons aan\",\"jullie\":\"jullie paste je aan\",\"zij/ze\":\"zij pasten zich aan\"},\"toekomende_tijd\":{\"ik\":\"ik zal me aanpassen\",\"jij/je\":\"jij zult je aanpassen\",\"hij/zij/het\":\"hij/zij zal zich aanpassen\",\"wij/we\":\"wij zullen ons aanpassen\",\"jullie\":\"jullie zullen je aanpassen\",\"zij/ze\":\"zij zullen zich aanpassen\"},\"voltooide_tijd\":\"heeft zich aangepast\",\"voltooid_deelwoord\":\"aangepast\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-social_change-002\",\"target\":\"verbeteren\",\"source\":\"to improve\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Weak regular verb taking 'hebben'.\",\"examples\":[{\"target\":\"De overheid probeert de leefomstandigheden in achterstandswijken te verbeteren.\",\"source\":\"The government is trying to improve the living conditions in disadvantaged neighborhoods.\"},{\"target\":\"Dankzij nieuwe subsidies zijn de sociale voorzieningen aanzienlijk verbeterd.\",\"source\":\"Thanks to new subsidies, the social provisions have improved considerably.\"}],\"conjugations\":{\"tegenwoordige_tijd\":{\"ik\":\"ik verbetert\",\"jij/je\":\"jij verbetert\",\"hij/zij/het\":\"hij/zij verbetert\",\"wij/we\":\"wij verbeteren\",\"jullie\":\"jullie verbeteren\",\"zij/ze\":\"zij verbeteren\"},\"verleden_tijd\":{\"ik\":\"ik verbeterde\",\"jij/je\":\"jij verbeterde\",\"hij/zij/het\":\"hij/zij verbeterde\",\"wij/we\":\"wij verbeterden\",\"jullie\":\"jullie verbeterden\",\"zij/ze\":\"zij verbeterden\"},\"toekomende_tijd\":{\"ik\":\"ik zal verbeteren\",\"jij/je\":\"jij zult verbeteren\",\"hij/zij/het\":\"hij/zij zal verbeteren\",\"wij/we\":\"wij zullen verbeteren\",\"jullie\":\"jullie zullen verbeteren\",\"zij/ze\":\"zij zullen verbeteren\"},\"voltooide_tijd\":\"heeft verbeterd\",\"voltooid_deelwoord\":\"verbeterd\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-social_change-003\",\"target\":\"stimuleren\",\"source\":\"to stimulate\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Weak regular verb taking 'hebben'.\",\"examples\":[{\"target\":\"De gemeente wil duurzaam gedrag onder bewoners actief stimuleren.\",\"source\":\"The municipality wants to actively stimulate sustainable behavior among residents.\"},{\"target\":\"Verschillende initiatieven hebben de lokale economie enorm gestimuleerd.\",\"source\":\"Various initiatives have enormously stimulated the local economy.\"}],\"conjugations\":{\"tegenwoordige_tijd\":{\"ik\":\"ik stimuleer\",\"jij/je\":\"jij stimuleert\",\"hij/zij/het\":\"hij/zij stimuleert\",\"wij/we\":\"wij stimuleren\",\"jullie\":\"jullie stimuleren\",\"zij/ze\":\"zij stimuleren\"},\"verleden_tijd\":{\"ik\":\"ik stimuleerde\",\"jij/je\":\"jij stimuleerde\",\"hij/zij/het\":\"hij/zij stimuleerde\",\"wij/we\":\"wij stimuleerden\",\"jullie\":\"jullie stimuleerden\",\"zij/ze\":\"zij stimuleerden\"},\"toekomende_tijd\":{\"ik\":\"ik zal stimuleren\",\"jij/je\":\"jij zult stimuleren\",\"hij/zij/het\":\"hij/zij zal stimuleren\",\"wij/we\":\"wij zullen stimuleren\",\"jullie\":\"jullie zullen stimuleren\",\"zij/ze\":\"zij zullen stimuleren\"},\"voltooide_tijd\":\"heeft gestimuleerd\",\"voltooid_deelwoord\":\"gestimuleerd\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-social_change-004\",\"target\":\"beïnvloeden\",\"source\":\"to influence\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Weak regular verb taking 'hebben'. Contains a diaeresis on the 'ï'.\",\"examples\":[{\"target\":\"Sociale media beïnvloeden de publieke opinie over maatschappelijke kwesties sterk.\",\"source\":\"Social media strongly influence public opinion on social issues.\"},{\"target\":\"Nieuwe wetgeving heeft de manier van samenleven diepgaand beïnvloed.\",\"source\":\"New legislation has profoundly influenced the way of living together.\"}],\"conjugations\":{\"tegenwoordige_tijd\":{\"ik\":\"ik beïnvloed\",\"jij/je\":\"jij beïnvloedt\",\"hij/zij/het\":\"hij/zij beïnvloedt\",\"wij/we\":\"wij beïnvloeden\",\"jullie\":\"jullie beïnvloeden\",\"zij/ze\":\"zij beïnvloeden\"},\"verleden_tijd\":{\"ik\":\"ik beïnvloedde\",\"jij/je\":\"jij beïnvloedde\",\"hij/zij/het\":\"hij/zij beïnvloedde\",\"wij/we\":\"wij beïnvloedden\",\"jullie\":\"jullie beïnvloedden\",\"zij/ze\":\"zij beïnvloedden\"},\"toekomende_tijd\":{\"ik\":\"ik zal beïnvloeden\",\"jij/je\":\"jij zult beïnvloeden\",\"hij/zij/het\":\"hij/zij zal beïnvloeden\",\"wij/we\":\"wij zullen beïnvloeden\",\"jullie\":\"jullie zullen beïnvloeden\",\"zij/ze\":\"zij zullen beïnvloeden\"},\"voltooide_tijd\":\"heeft beïnvloed\",\"voltooid_deelwoord\":\"beïnvloed\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-social_change-005\",\"target\":\"organiseren\",\"source\":\"to organize\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Weak regular verb taking 'hebben'.\",\"examples\":[{\"target\":\"Actiegroepen organiseren vreedzame protesten tegen de stijgende kosten van levensonderhoud.\",\"source\":\"Action groups organize peaceful protests against the rising cost of living.\"},{\"target\":\"Buurtbewoners hebben een inzamelingsactie georganiseerd voor daklozen.\",\"source\":\"Local residents have organized a fundraising campaign for the homeless.\"}],\"conjugations\":{\"tegenwoordige_tijd\":{\"ik\":\"ik organiseer\",\"jij/je\":\"jij organiseert\",\"hij/zij/het\":\"hij/zij organiseert\",\"wij/we\":\"wij organiseren\",\"jullie\":\"jullie organiseren\",\"zij/ze\":\"zij organiseren\"},\"verleden_tijd\":{\"ik\":\"ik organiseerde\",\"jij/je\":\"jij organiseerde\",\"hij/zij/het\":\"hij/zij organiseerde\",\"wij/we\":\"wij organiseerden\",\"jullie\":\"jullie organiseerden\",\"zij/ze\":\"zij organiseerden\"},\"toekomende_tijd\":{\"ik\":\"ik zal organiseren\",\"jij/je\":\"jij zult organiseren\",\"hij/zij/het\":\"hij/zij zal organiseren\",\"wij/we\":\"wij zullen organiseren\",\"jullie\":\"jullie zullen organiseren\",\"zij/ze\":\"zij zullen organiseren\"},\"voltooide_tijd\":\"heeft georganiseerd\",\"voltooid_deelwoord\":\"georganiseerd\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-social_change-006\",\"target\":\"integreren\",\"source\":\"to integrate\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Weak regular verb taking 'hebben' or 'zijn' depending on context (usually 'hebben' when transitive, 'zijn' when intransitive process).\",\"examples\":[{\"target\":\"Het is belangrijk dat nieuwkomers snel integreren in de nieuwe samenleving.\",\"source\":\"It is important that newcomers quickly integrate into the new society.\"},{\"target\":\"De gemeente heeft diverse programma's opgezet om migranten beter te integreren.\",\"source\":\"The municipality has set up various programs to better integrate migrants.\"}],\"conjugations\":{\"tegenwoordige_tijd\":{\"ik\":\"ik integreer\",\"jij/je\":\"jij integreert\",\"hij/zij/het\":\"hij/zij integreert\",\"wij/we\":\"wij integreren\",\"jullie\":\"jullie integreren\",\"zij/ze\":\"zij integreren\"},\"verleden_tijd\":{\"ik\":\"ik integreerde\",\"jij/je\":\"jij integreerde\",\"hij/zij/het\":\"hij/zij integreerde\",\"wij/we\":\"wij integreerden\",\"jullie\":\"jullie integreerden\",\"zij/ze\":\"zij integreerden\"},\"toekomende_tijd\":{\"ik\":\"ik zal integreren\",\"jij/je\":\"jij zult integreren\",\"hij/zij/het\":\"hij/zij zal integreren\",\"wij/we\":\"wij zullen integreren\",\"jullie\":\"jullie zullen integreren\",\"zij/ze\":\"zij zullen integreren\"},\"voltooide_tijd\":\"heeft geïntegreerd\",\"voltooid_deelwoord\":\"geïntegreerd\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-social_change-007\",\"target\":\"deelnemen\",\"source\":\"to participate\",\"type\":\"separable\",\"cefr\":\"B2\",\"grammar_note\":\"Strong separable verb (telt as stem change: neemt... deel) taking 'hebben'. Uses preposition 'aan' (deelnemen aan).\",\"examples\":[{\"target\":\"Steeds meer jongeren nemen actief deel aan politieke debatten.\",\"source\":\"More and more young people are actively participating in political debates.\"},{\"target\":\"Vorig jaar hebben duizenden burgers deelgenomen aan het referendum.\",\"source\":\"Last year, thousands of citizens participated in the referendum.\"}],\"conjugations\":{\"tegenwoordige_tijd\":{\"ik\":\"ik neem deel\",\"jij/je\":\"jij neemt deel\",\"hij/zij/het\":\"hij/zij neemt deel\",\"wij/we\":\"wij nemen deel\",\"jullie\":\"jullie nemen deel\",\"zij/ze\":\"zij nemen deel\"},\"verleden_tijd\":{\"ik\":\"ik nam deel\",\"jij/je\":\"jij nam deel\",\"hij/zij/het\":\"hij/zij nam deel\",\"wij/we\":\"wij namen deel\",\"jullie\":\"jullie namen deel\",\"zij/ze\":\"zij namen deel\"},\"toekomende_tijd\":{\"ik\":\"ik zal deelnemen\",\"jij/je\":\"jij zult deelnemen\",\"hij/zij/het\":\"hij/zij zal deelnemen\",\"wij/we\":\"wij zullen deelnemen\",\"jullie\":\"jullie zullen deelnemen\",\"zij/ze\":\"zij zullen deelnemen\"},\"voltooide_tijd\":\"heeft deelgenomen\",\"voltooid_deelwoord\":\"deelgenomen\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-social_change-008\",\"target\":\"herverdelen\",\"source\":\"to redistribute\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Weak regular verb taking 'hebben'.\",\"examples\":[{\"target\":\"Politieke partijen debatteren over hoe ze de welvaart eerlijker kunnen herverdelen.\",\"source\":\"Political parties are debating how they can redistribute wealth more fairly.\"},{\"target\":\"De overheid heeft extra belasting geheven om het inkomen te herverdelen.\",\"source\":\"The government has levied extra tax to redistribute income.\"}],\"conjugations\":{\"tegenwoordige_tijd\":{\"ik\":\"ik herverdeel\",\"jij/je\":\"jij herverdeelt\",\"hij/zij/het\":\"hij/zij herverdeelt\",\"wij/we\":\"wij herverdelen\",\"jullie\":\"jullie herverdelen\",\"zij/ze\":\"zij herverdelen\"},\"verleden_tijd\":{\"ik\":\"ik herverdeelde\",\"jij/je\":\"jij herverdeelde\",\"hij/zij/het\":\"hij/zij herverdeelde\",\"wij/we\":\"wij herverdeelden\",\"jullie\":\"jullie herverdeelden\",\"zij/ze\":\"zij herverdeelden\"},\"toekomende_tijd\":{\"ik\":\"ik zal herverdelen\",\"jij/je\":\"jij zult herverdelen\",\"hij/zij/het\":\"hij/zij zal herverdelen\",\"wij/we\":\"wij zullen herverdelen\",\"jullie\":\"jullie zullen herverdelen\",\"zij/ze\":\"zij zullen herverdelen\"},\"voltooide_tijd\":\"heeft herverdeeld\",\"voltooid_deelwoord\":\"herverdeeld\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-social_change-009\",\"target\":\"mobiliseren\",\"source\":\"to mobilize\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Weak regular verb taking 'hebben'.\",\"examples\":[{\"target\":\"Milieuactivisten proberen wereldwijd miljoenen mensen te mobiliseren tegen klimaatverandering.\",\"source\":\"Environmental activists try to mobilize millions of people worldwide against climate change.\"},{\"target\":\"De vakbond wist snel duizenden arbeiders te mobiliseren voor een staking.\",\"source\":\"The union quickly managed to mobilize thousands of workers for a strike.\"}],\"conjugations\":{\"tegenwoordige_tijd\":{\"ik\":\"ik mobiliseer\",\"jij/je\":\"jij mobiliseert\",\"hij/zij/het\":\"hij/zij mobiliseert\",\"wij/we\":\"wij mobiliseren\",\"jullie\":\"jullie mobiliseren\",\"zij/ze\":\"zij mobiliseren\"},\"verleden_tijd\":{\"ik\":\"ik mobiliseerde\",\"jij/je\":\"jij mobiliseerde\",\"hij/zij/het\":\"hij/zij mobiliseerde\",\"wij/we\":\"wij mobiliseerden\",\"jullie\":\"jullie mobiliseerden\",\"zij/ze\":\"zij mobiliseerden\"},\"toekomende_tijd\":{\"ik\":\"ik zal mobiliseren\",\"jij/je\":\"jij zult mobiliseren\",\"hij/zij/het\":\"hij/zij zal mobiliseren\",\"wij/we\":\"wij zullen mobiliseren\",\"jullie\":\"jullie zullen mobiliseren\",\"zij/ze\":\"zij zullen mobiliseren\"},\"voltooide_tijd\":\"heeft gemobiliseerd\",\"voltooid_deelwoord\":\"gemobiliseerd\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-social_change-010\",\"target\":\"voortduren\",\"source\":\"to persist / continue\",\"type\":\"separable\",\"cefr\":\"B2\",\"grammar_note\":\"Weak separable verb taking 'zijn' (as it expresses a process continuing over time).\",\"examples\":[{\"target\":\"De economische crisis zal waarschijnlijk nog enkele jaren voortduren.\",\"source\":\"The economic crisis will likely continue for a few more years.\"},{\"target\":\"Het sociale onrecht duurde voort totdat de wet werd aangepast.\",\"source\":\"The social injustice persisted until the law was amended.\"}],\"conjugations\":{\"tegenwoordige_tijd\":{\"ik\":\"ik duur voort\",\"jij/je\":\"jij duurt voort\",\"hij/zij/het\":\"hij/zij duurt voort\",\"wij/we\":\"wij duren voort\",\"jullie\":\"jullie duren voort\",\"zij/ze\":\"zij duren voort\"},\"verleden_tijd\":{\"ik\":\"ik duurde voort\",\"jij/je\":\"jij duurde voort\",\"hij/zij/het\":\"hij/zij duurde voort\",\"wij/we\":\"wij duurden voort\",\"jullie\":\"jullie duurden voort\",\"zij/ze\":\"zij duurden voort\"},\"toekomende_tijd\":{\"ik\":\"ik zal voortduren\",\"jij/je\":\"jij zult voortduren\",\"hij/zij/het\":\"hij/zij zal voortduren\",\"wij/we\":\"wij zullen voortduren\",\"jullie\":\"jullie zullen voortduren\",\"zij/ze\":\"zij zullen voortduren\"},\"voltooide_tijd\":\"is voortgeduurd\",\"voltooid_deelwoord\":\"voortgeduurd\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-social_change-011\",\"target\":\"transformeren\",\"source\":\"to transform\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Weak regular verb taking 'hebben' or 'zijn' depending on transitivty.\",\"examples\":[{\"target\":\"Digitalisering transformeert de manier waarop we communiceren en werken.\",\"source\":\"Digitization is transforming the way we communicate and work.\"},{\"target\":\"De oude industriewijk is getransformeerd tot een moderne woonzone.\",\"source\":\"The old industrial district has been transformed into a modern residential zone.\"}],\"conjugations\":{\"tegenwoordige_tijd\":{\"ik\":\"ik transformeer\",\"jij/je\":\"jij transformeert\",\"hij/zij/het\":\"hij/zij transformeert\",\"wij/we\":\"wij transformeren\",\"jullie\":\"jullie transformeren\",\"zij/ze\":\"zij transformeren\"},\"verleden_tijd\":{\"ik\":\"ik transformeerde\",\"jij/je\":\"jij transformeerde\",\"hij/zij/het\":\"hij/zij transformeerde\",\"wij/we\":\"wij transformeerden\",\"jullie\":\"jullie transformeerden\",\"zij/ze\":\"zij transformeerden\"},\"toekomende_tijd\":{\"ik\":\"ik zal transformeren\",\"jij/je\":\"jij zult transformeren\",\"hij/zij/het\":\"hij/zij zal transformeren\",\"wij/we\":\"wij zullen transformeren\",\"jullie\":\"jullie zullen transformeren\",\"zij/ze\":\"zij zullen transformeren\"},\"voltooide_tijd\":\"heeft getransformeerd\",\"voltooid_deelwoord\":\"getransformeerd\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-social_change-012\",\"target\":\"aankaarten\",\"source\":\"to bring up / raise an issue\",\"type\":\"separable\",\"cefr\":\"B2\",\"grammar_note\":\"Weak separable verb taking 'hebben'.\",\"examples\":[{\"target\":\"Het is noodzakelijk om misstanden op de werkvloer direct aan te kaarten.\",\"source\":\"It is necessary to bring up abuses on the work floor immediately.\"},{\"target\":\"Tijdens de vergadering heeft ze het gebrek aan diversiteit aangekaart.\",\"source\":\"During the meeting, she brought up the lack of diversity.\"}],\"conjugations\":{\"tegenwoordige_tijd\":{\"ik\":\"ik kaart aan\",\"jij/je\":\"jij kaart aan\",\"hij/zij/het\":\"hij/zij kaart aan\",\"wij/we\":\"wij kaarten aan\",\"jullie\":\"jullie kaarten aan\",\"zij/ze\":\"zij kaarten aan\"},\"verleden_tijd\":{\"ik\":\"ik kaartte aan\",\"jij/je\":\"jij kaartte aan\",\"hij/zij/het\":\"hij/zij kaartte aan\",\"wij/we\":\"wij kaartten aan\",\"jullie\":\"jullie kaartten aan\",\"zij/ze\":\"zij kaartten aan\"},\"toekomende_tijd\":{\"ik\":\"ik zal aankaarten\",\"jij/je\":\"jij zult aankaarten\",\"hij/zij/het\":\"hij/zij zal aankaarten\",\"wij/we\":\"wij zullen aankaarten\",\"jullie\":\"jullie zullen aankaarten\",\"zij/ze\":\"zij zullen aankaarten\"},\"voltooide_tijd\":\"heeft aangekaart\",\"voltooid_deelwoord\":\"aangekaart\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-social_change-013\",\"target\":\"ontwikkelen\",\"source\":\"to develop\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Weak regular verb taking 'hebben'.\",\"examples\":[{\"target\":\"Wetenschappers ontwikkelen nieuwe technologieën om de energietransitie te versnellen.\",\"source\":\"Scientists are developing new technologies to accelerate the energy transition.\"},{\"target\":\"De stedelijke bevolking heeft zich de laatste decennia snel ontwikkeld.\",\"source\":\"The urban population has developed rapidly in recent decades.\"}],\"conjugations\":{\"tegenwoordige_tijd\":{\"ik\":\"ik ontwikkel\",\"jij/je\":\"jij ontwikkelt\",\"hij/zij/het\":\"hij/zij ontwikkelt\",\"wij/we\":\"wij ontwikkelen\",\"jullie\":\"jullie ontwikkelen\",\"zij/ze\":\"zij ontwikkelen\"},\"verleden_tijd\":{\"ik\":\"ik ontwikkelde\",\"jij/je\":\"jij ontwikkelde\",\"hij/zij/het\":\"hij/zij ontwikkelde\",\"wij/we\":\"wij ontwikkelden\",\"jullie\":\"jullie ontwikkelden\",\"zij/ze\":\"zij ontwikkelden\"},\"toekomende_tijd\":{\"ik\":\"ik zal ontwikkelen\",\"jij/je\":\"jij zult ontwikkelen\",\"hij/zij/het\":\"hij/zij zal ontwikkelen\",\"wij/we\":\"wij zullen ontwikkelen\",\"jullie\":\"jullie zullen ontwikkelen\",\"zij/ze\":\"zij zullen ontwikkelen\"},\"voltooide_tijd\":\"heeft ontwikkeld\",\"voltooid_deelwoord\":\"ontwikkeld\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-social_change-014\",\"target\":\"emanciperen\",\"source\":\"to emancipate\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Weak regular verb taking 'hebben'.\",\"examples\":[{\"target\":\"In de twintigste eeuw streden vrouwen massaal om zich te emanciperen.\",\"source\":\"In the twentieth century, women fought en masse to emancipate themselves.\"},{\"target\":\"Deze beweging heeft bijgedragen aan het emanciperen van minderheidsgroepen.\",\"source\":\"This movement has contributed to the emancipation of minority groups.\"}],\"conjugations\":{\"tegenwoordige_tijd\":{\"ik\":\"ik emancipeer\",\"jij/je\":\"jij emancipeert\",\"hij/zij/het\":\"hij/zij emancipeert\",\"wij/we\":\"wij emanciperen\",\"jullie\":\"jullie emanciperen\",\"zij/ze\":\"zij emanciperen\"},\"verleden_tijd\":{\"ik\":\"ik emancipeerde\",\"jij/je\":\"jij emancipeerde\",\"hij/zij/het\":\"hij/zij emancipeerde\",\"wij/we\":\"wij emancipeerden\",\"jullie\":\"jullie emancipeerden\",\"zij/ze\":\"zij emancipeerden\"},\"toekomende_tijd\":{\"ik\":\"ik zal emanciperen\",\"jij/je\":\"jij zult emanciperen\",\"hij/zij/het\":\"hij/zij zal emanciperen\",\"wij/we\":\"wij zullen emanciperen\",\"jullie\":\"jullie zullen emanciperen\",\"zij/ze\":\"zij zullen emanciperen\"},\"voltooide_tijd\":\"heeft geëmancipeerd\",\"voltooid_deelwoord\":\"geëmancipeerd\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-social_change-015\",\"target\":\"tegenstaan\",\"source\":\"to oppose / be opposed to\",\"type\":\"separable\",\"cefr\":\"B2\",\"grammar_note\":\"Strong separable verb (staat... tegen) taking 'hebben'. Also used impersonally meaning 'to displease'.\",\"examples\":[{\"target\":\"Veel burgers staan de geplande hervormingen van de sociale zekerheid fel tegen.\",\"source\":\"Many citizens strongly oppose the planned reforms of social security.\"},{\"target\":\"De nieuwe bezuinigingen stonden de bevolking enorm tegen.\",\"source\":\"The new budget cuts were intensely disliked by the population.\"}],\"conjugations\":{\"tegenwoordige_tijd\":{\"ik\":\"ik sta tegen\",\"jij/je\":\"jij staat tegen\",\"hij/zij/het\":\"hij/zij staat tegen\",\"wij/we\":\"wij staan tegen\",\"jullie\":\"jullie staan tegen\",\"zij/ze\":\"zij staan tegen\"},\"verleden_tijd\":{\"ik\":\"ik stond tegen\",\"jij/je\":\"jij stond tegen\",\"hij/zij/het\":\"hij/zij stond tegen\",\"wij/we\":\"wij stonden tegen\",\"jullie\":\"jullie stonden tegen\",\"zij/ze\":\"zij stonden tegen\"},\"toekomende_tijd\":{\"ik\":\"ik zal tegenstaan\",\"jij/je\":\"jij zult tegenstaan\",\"hij/zij/het\":\"hij/zij zal tegenstaan\",\"wij/we\":\"wij zullen tegenstaan\",\"jullie\":\"jullie zullen tegenstaan\",\"zij/ze\":\"zij zullen tegenstaan\"},\"voltooide_tijd\":\"heeft tegengestaan\",\"voltooid_deelwoord\":\"tegengestaan\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-social_change-016\",\"target\":\"voorkomen\",\"source\":\"to prevent\",\"type\":\"irregular\",\"cefr\":\"B2\",\"grammar_note\":\"Strong verb (voorkomt - voorkwam - heeft voorkomen) taking 'hebben'. Not to be confused with separable 'voorkomen' (to occur) which takes 'zijn'.\",\"examples\":[{\"target\":\"Strikte wetgeving kan verdere polarisatie in de samenleving proberen te voorkomen.\",\"source\":\"Strict legislation can try to prevent further polarization in society.\"},{\"target\":\"De overheid heeft tijdig ingegrepen om grootschalige rellen te voorkomen.\",\"source\":\"The government intervened in time to prevent large-scale riots.\"}],\"conjugations\":{\"tegenwoordige_tijd\":{\"ik\":\"ik voorkom\",\"jij/je\":\"jij voorkomt\",\"hij/zij/het\":\"hij/zij voorkomt\",\"wij/we\":\"wij voorkomen\",\"jullie\":\"jullie voorkomen\",\"zij/ze\":\"zij voorkomen\"},\"verleden_tijd\":{\"ik\":\"ik voorkwam\",\"jij/je\":\"jij voorkwam\",\"hij/zij/het\":\"hij/zij voorkwam\",\"wij/we\":\"wij voorkwamen\",\"jullie\":\"jullie voorkwamen\",\"zij/ze\":\"zij voorkwamen\"},\"toekomende_tijd\":{\"ik\":\"ik zal voorkomen\",\"jij/je\":\"jij zult voorkomen\",\"hij/zij/het\":\"hij/zij zal voorkomen\",\"wij/we\":\"wij zullen voorkomen\",\"jullie\":\"jullie zullen voorkomen\",\"zij/ze\":\"zij zullen voorkomen\"},\"voltooide_tijd\":\"heeft voorkomen\",\"voltooid_deelwoord\":\"voorkomen\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-social_change-017\",\"target\":\"veroorzaken\",\"source\":\"to cause\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Weak regular verb taking 'hebben'.\",\"examples\":[{\"target\":\"Snelle gentrificatie kan vaak sociale spanningen in volkswijken veroorzaken.\",\"source\":\"Rapid gentrification can often cause social tensions in working-class neighborhoods.\"},{\"target\":\"De bezuinigingen hebben veel onrust veroorzaakt onder ambtenaren.\",\"source\":\"The budget cuts have caused a lot of unrest among civil servants.\"}],\"conjugations\":{\"tegenwoordige_tijd\":{\"ik\":\"ik veroorzaak\",\"jij/je\":\"jij veroorzaakt\",\"hij/zij/het\":\"hij/zij veroorzaakt\",\"wij/we\":\"wij veroorzaken\",\"jullie\":\"jullie veroorzaken\",\"zij/ze\":\"zij veroorzaken\"},\"verleden_tijd\":{\"ik\":\"ik veroorzaakte\",\"jij/je\":\"jij veroorzaakte\",\"hij/zij/het\":\"hij/zij veroorzaakte\",\"wij/we\":\"wij veroorzaakten\",\"jullie\":\"jullie veroorzaakten\",\"zij/ze\":\"zij veroorzaakten\"},\"toekomende_tijd\":{\"ik\":\"ik zal veroorzaken\",\"jij/je\":\"jij zult veroorzaken\",\"hij/zij/het\":\"hij/zij zal veroorzaken\",\"wij/we\":\"wij zullen veroorzaken\",\"jullie\":\"jullie zullen veroorzaken\",\"zij/ze\":\"zij zullen veroorzaken\"},\"voltooide_tijd\":\"heeft veroorzaakt\",\"voltooid_deelwoord\":\"veroorzaakt\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-social_change-018\",\"target\":\"rechtvaardigen\",\"source\":\"to justify\",\"type\":\"regular\",\"cefr\":\"B2\",\"grammar_note\":\"Weak regular verb taking 'hebben'.\",\"examples\":[{\"target\":\"De minister probeerde de strenge bezuinigingen op cultuur te rechtvaardigen.\",\"source\":\"The minister tried to justify the severe budget cuts on culture.\"},{\"target\":\"Geen enkele maatschappelijke crisis kan geweld rechtvaardigen.\",\"source\":\"No social crisis whatsoever can justify violence.\"}],\"conjugations\":{\"tegenwoordige_tijd\":{\"ik\":\"ik rechtvaardig\",\"jij/je\":\"jij rechtvaardigt\",\"hij/zij/het\":\"hij/zij rechtvaardigt\",\"wij/we\":\"wij rechtvaardigen\",\"jullie\":\"jullie rechtvaardigen\",\"zij/ze\":\"zij rechtvaardigen\"},\"verleden_tijd\":{\"ik\":\"ik rechtvaardigde\",\"jij/je\":\"jij rechtvaardigde\",\"hij/zij/het\":\"hij/zij rechtvaardigde\",\"wij/we\":\"wij rechtvaardigden\",\"jullie\":\"jullie rechtvaardigden\",\"zij/ze\":\"zij rechtvaardigden\"},\"toekomende_tijd\":{\"ik\":\"ik zal rechtvaardigen\",\"jij/je\":\"jij zult rechtvaardigen\",\"hij/zij/het\":\"hij/zij zal rechtvaardigen\",\"wij/we\":\"wij zullen rechtvaardigen\",\"jullie\":\"jullie zullen rechtvaardigen\",\"zij/ze\":\"zij zullen rechtvaardigen\"},\"voltooide_tijd\":\"heeft gerechtvaardigd\",\"voltooid_deelwoord\":\"gerechtvaardigd\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-social_change-019\",\"target\":\"bijeenkomen\",\"source\":\"to gather / meet\",\"type\":\"separable\",\"cefr\":\"B2\",\"grammar_note\":\"Strong separable verb (komt... bijeen) taking 'zijn'.\",\"examples\":[{\"target\":\"Activisten kwamen vorig weekend bijeen om te discussiëren over gelijke rechten.\",\"source\":\"Activists gathered last weekend to discuss equal rights.\"},{\"target\":\"De gemeenteraad is bijeengekomen om een noodplan op te stellen.\",\"source\":\"The municipal council has gathered to draft an emergency plan.\"}],\"conjugations\":{\"tegenwoordige_tijd\":{\"ik\":\"ik kom bijeen\",\"jij/je\":\"jij komt bijeen\",\"hij/zij/het\":\"hij/zij komt bijeen\",\"wij/we\":\"wij komen bijeen\",\"jullie\":\"jullie komen bijeen\",\"zij/ze\":\"zij komen bijeen\"},\"verleden_tijd\":{\"ik\":\"ik kwam bijeen\",\"jij/je\":\"jij kwam bijeen\",\"hij/zij/het\":\"hij/zij kwam bijeen\",\"wij/we\":\"wij kwamen bijeen\",\"jullie\":\"jullie kwamen bijeen\",\"zij/ze\":\"zij kwamen bijeen\"},\"toekomende_tijd\":{\"ik\":\"ik zal bijeenkomen\",\"jij/je\":\"jij zult bijeenkomen\",\"hij/zij/het\":\"hij/zij zal bijeenkomen\",\"wij/we\":\"wij zullen bijeenkomen\",\"jullie\":\"jullie zullen bijeenkomen\",\"zij/ze\":\"zij zullen bijeenkomen\"},\"voltooide_tijd\":\"is bijeengekomen\",\"voltooid_deelwoord\":\"bijeengekomen\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}},{\"id\":\"verbs-b2-social_change-020\",\"target\":\"verwerpen\",\"source\":\"to reject\",\"type\":\"irregular\",\"cefr\":\"B2\",\"grammar_note\":\"Strong verb (verwerpt - verwierp - heeft verworpen) taking 'hebben'.\",\"examples\":[{\"target\":\"Het parlement heeft het wetsvoorstel over de hervorming resoluut verworpen.\",\"source\":\"The parliament resolutely rejected the bill regarding the reform.\"},{\"target\":\"Burgers verwwerpen elke vorm van discriminatie in de moderne samenleving.\",\"source\":\"Citizens reject every form of discrimination in modern society.\"}],\"conjugations\":{\"tegenwoordige_tijd\":{\"ik\":\"ik verwerp\",\"jij/je\":\"jij verwerpt\",\"hij/zij/het\":\"hij/zij verwerpt\",\"wij/we\":\"wij verwerpen\",\"jullie\":\"jullie verwerpen\",\"zij/ze\":\"zij verwerpen\"},\"verleden_tijd\":{\"ik\":\"ik verwierp\",\"jij/je\":\"jij verwierp\",\"hij/zij/het\":\"hij/zij verwierp\",\"wij/we\":\"wij verwierpen\",\"jullie\":\"jullie verwierpen\",\"zij/ze\":\"zij verwierpen\"},\"toekomende_tijd\":{\"ik\":\"ik zal verwerpen\",\"jij/je\":\"jij zult verwerpen\",\"hij/zij/het\":\"hij/zij zal verwerpen\",\"wij/we\":\"wij zullen verwerpen\",\"jullie\":\"jullie zullen verwerpen\",\"zij/ze\":\"zij zullen verwerpen\"},\"voltooide_tijd\":\"heeft verworpen\",\"voltooid_deelwoord\":\"verworpen\"},\"tags\":[\"verb\",\"b2\"],\"metadata\":{}}]";
+const langConfigJson = "{\"language_pair\":\"english_dutch\",\"target_lang\":\"nl\",\"native_lang\":\"en\",\"target_lang_name\":\"Nederlands\",\"native_lang_name\":\"English\",\"speech_lang\":\"nl-NL\",\"noun_metadata_fields\":[{\"key\":\"article\",\"label\":\"Lidwoord\",\"render\":\"article_badge\"},{\"key\":\"gender\",\"label\":\"Geslacht\",\"render\":\"gender_label\"},{\"key\":\"plural\",\"label\":\"Meervoud\",\"render\":\"text\"}],\"article_colours\":{\"de\":\"#4A7C9E\",\"het\":\"#4A8A5A\"},\"gender_labels\":{\"c\":\"de-woord\",\"n\":\"het-woord\"},\"verb_tenses\":[\"tegenwoordige_tijd\",\"verleden_tijd\",\"voltooide_tijd\",\"voltooid_deelwoord\",\"toekomende_tijd\"],\"cases\":{},\"ui_labels\":{\"learn_mode\":\"Leren\",\"train_mode\":\"Oefenen\",\"examples_heading\":\"Voorbeeldzinnen\",\"grammar_note_heading\":\"Grammaticanotitie\",\"audio_button\":\"Luisteren\",\"back_link\":\"Terug\",\"card_counter\":\"Kaart {current} / {total}\",\"next_button\":\"Volgende\",\"finish_button\":\"Klaar\",\"correct\":\"Juist!\",\"wrong\":\"Fout\",\"dashboard_link\":\"Dashboard\",\"library_prompt\":\"Kies een deck uit de bibliotheek en ontdek alle informatie op de kaarten.\",\"cards_badge\":\"{count} KAARTEN\",\"cards_count\":\"{count} kaarten\",\"deck_meta\":\"{topic} • {level} • {count} kaarten\",\"no_decks\":\"Nog geen decks in deze categorie.\",\"setup_title\":\"Training instellen\",\"setup_subtitle\":\"Configureer je leersessie.\",\"question_type\":\"Vraagtype\",\"mode_multiple_choice\":\"Meerkeuze\",\"mode_typing\":\"Tekstinvoer\",\"mode_typing_short\":\"Invoer\",\"direction\":\"Richting\",\"direction_forward\":\"🇺🇸 English → 🇳🇱 Nederlands\",\"direction_reverse\":\"🇳🇱 Nederlands → 🇺🇸 English\",\"select_level\":\"Niveau kiezen\",\"start_training\":\"Training starten\",\"count_label\":\"Aantal kaarten\",\"all_cards\":\"Alles\",\"in_deck\":\"in stapel\",\"view_cards\":\"Kaarten\",\"view_list\":\"Lijst\",\"card_word\":\"Kaart\",\"keyboard_hint_study\":\"← → Pijltjestoetsen om te navigeren · A om te luisteren\",\"example_single_heading\":\"Voorbeeld\",\"no_example\":\"Geen voorbeeld beschikbaar.\",\"tags_label\":\"Tags:\",\"type_vocab\":\"Woordenschat\",\"type_verb\":\"Werkwoord\",\"type_phrase\":\"Zegswijze\",\"type_connector\":\"Voegwoord\",\"type_grammar\":\"Grammatica\",\"type_noun\":\"Zelfstandig naamwoord\",\"type_adjective\":\"Bijvoeglijk naamwoord\",\"type_expression\":\"Uitdrukking\",\"plural_prefix\":\"Pl. {plural}\",\"plural_only\":\"alleen meervoud\",\"word_order_heading\":\"Woordvolgorde\",\"structure_heading\":\"Structuur\",\"training_title\":\"Training\",\"all_levels\":\"Alle niveaus\",\"type_placeholder\":\"Schrijf het woord in het Nederlands...\",\"check_button\":\"Controleren\",\"keyboard_hint_train\":\"Enter / Spatie = bevestigen · A = Luisteren\",\"audio_title\":\"Luisteren (A)\",\"training_finished\":\"Training voltooid!\",\"missed_heading\":\"Fout beantwoord — om te herhalen\",\"retry_missed\":\"Fouten opnieuw doen\",\"new_config\":\"Nieuwe configuratie\",\"plural_hint\":\"Pl: {plural}\",\"results_pct\":\"{pct}% juist\",\"result_excellent\":\"Uitstekend! Je beheerst dit niveau volledig.\",\"result_good\":\"Zeer goed! Nog een beetje oefenen en je hebt het onder de knie!\",\"result_ok\":\"Goed begin! Herhaal de kaarten nog een keer.\",\"result_retry\":\"Geen probleem — oefening baart kunst!\",\"no_cards_title\":\"Geen kaarten gevonden\",\"no_cards_hint\":\"Kies een ander niveau of een ander deck.\"},\"answer_normalisation\":{\"strip_leading_words\":[\"de\",\"het\",\"een\",\"der\",\"des\",\"den\"],\"alt_spellings\":{\"ij\":\"y\",\"ë\":\"e\",\"ï\":\"i\"}}}";
+const category = "verbs";
+const lang = "en-nl";
+const base = "/languagelounge/";
+const defaultView = "cards";
+
+  const cards     = JSON.parse(cardsJson);
+  const config    = JSON.parse(langConfigJson);
+  let currentIndex = 0;
+
+  const dotNav    = document.getElementById('dot-nav');
+  const currentNum = document.getElementById('current-num');
+  const progressBar = document.getElementById('progress-bar');
+  const btnPrev   = document.getElementById('btn-prev');
+  const btnNext   = document.getElementById('btn-next');
+  const cardHost  = document.getElementById('card-host');
+  const progressCont = document.getElementById('progress-container');
+
+  const cardViewWrap = document.getElementById('card-view-wrap');
+  const listViewWrap = document.getElementById('list-view-wrap');
+  const btnViewCards = document.getElementById('view-cards-btn');
+  const btnViewList  = document.getElementById('view-list-btn');
+
+  // Toggle Logic
+  function setViewMode(mode) {
+    if (mode === 'list') {
+      cardViewWrap.classList.add('hidden');
+      listViewWrap.classList.remove('hidden');
+      progressCont.classList.add('hidden');
+      btnViewList.classList.add('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewList.classList.remove('text-[var(--text-muted)]');
+      btnViewCards.classList.remove('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewCards.classList.add('text-[var(--text-muted)]');
+    } else {
+      listViewWrap.classList.add('hidden');
+      cardViewWrap.classList.remove('hidden');
+      progressCont.classList.remove('hidden');
+      btnViewCards.classList.add('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewCards.classList.remove('text-[var(--text-muted)]');
+      btnViewList.classList.remove('bg-[var(--espresso)]', 'text-[#F5F2EB]');
+      btnViewList.classList.add('text-[var(--text-muted)]');
+    }
+  }
+
+  btnViewCards.addEventListener('click', () => setViewMode('cards'));
+  btnViewList.addEventListener('click', () => setViewMode('list'));
+
+  // Initial view is configured per category (config/language_pairs/*.yaml → categories[].default_view)
+  if (defaultView === 'list') {
+    setViewMode('list');
+  }
+
+
+
+  // ── Helpers (mirror card-renderer.ts — no module imports in inline scripts) ──
+  const articleColours = config.article_colours || {};
+  const genderLabels   = config.gender_labels   || {};
+  const speechLang     = config.speech_lang;
+  const ui             = config.ui_labels || {};
+  const fmt = (tpl, vars) => String(tpl).replace(/\{(\w+)\}/g, (m, k) => (k in vars ? vars[k] : m));
+  const formatHighlight = (text) => text ? String(text).replace(/\*(.*?)\*/g, '<span class="highlighter">$1</span>') : '';
+  // Articles come from the language config (keys of article_colours), never hardcoded
+  const articleList = Object.keys(articleColours);
+  const articlePatterns = articleList.map(a => {
+    const esc = a.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    return esc.endsWith("'") ? esc : `${esc}\\s+`;
+  });
+  const articleRe = articlePatterns.length
+    ? new RegExp('^(?:' + articlePatterns.join('|') + ')', 'i')
+    : null;
+
+  function stripArticle(w) {
+    return articleRe ? (w || '').replace(articleRe, '').trim() : (w || '').trim();
+  }
+
+  function getTypeLabel(card) {
+    const tags = card.tags || [];
+    if (tags.includes('noun'))       return ui.type_noun;
+    if (tags.includes('verb'))       return ui.type_verb;
+    if (tags.includes('adjective'))  return ui.type_adjective;
+    if (tags.includes('expression')) return ui.type_expression;
+    const byType = { vocab: ui.type_vocab, verb: ui.type_verb, phrase: ui.type_phrase, connector: ui.type_connector, grammar: ui.type_grammar };
+    return byType[card.type] || ui.type_vocab;
+  }
+
+  function normaliseEx(ex) {
+    return { target: ex.target||'', source: ex.source||'', note: ex.note };
+  }
+
+  function getMetaFacts(card) {
+    const meta = card.metadata || {};
+    const facts = [];
+    for (const field of (config.noun_metadata_fields || [])) {
+      const raw = meta[field.key];
+      if (!raw || raw==='~') continue;
+      let value = String(raw), colour;
+      if (field.render === 'gender_label')  value  = genderLabels[raw] || raw;
+      if (field.render === 'article_badge') colour = articleColours[raw.toLowerCase()] || 'var(--espresso)';
+      facts.push({ label: field.label, value, colour });
+    }
+    return facts;
+  }
+
+  // ── Card renderer ─────────────────────────────────────────────────────────
+  function renderCard(idx) {
+    const card = cards[idx];
+    if (!card || !cardHost) return;
+
+    const lc = cardHost.querySelector('.learning-card');
+    if (!lc) return;
+
+    function sel(cls) { return lc.querySelector(cls); }
+
+    // Type badge + level
+    sel('.lc-type-badge').textContent = getTypeLabel(card);
+    sel('.lc-level-badge').textContent = (card.level || '').toUpperCase();
+
+    // Article
+    const article = card.metadata?.article;
+    const articleWrap = sel('.lc-article-wrap');
+    const articleEl   = sel('.lc-article');
+    if (article && (card.tags||[]).includes('noun') && !card.metadata?.plural_only) {
+      articleEl.textContent = article;
+      articleEl.style.color = articleColours[article.toLowerCase()] || 'var(--espresso)';
+      articleWrap.style.display = '';
+    } else {
+      articleWrap.style.display = 'none';
+    }
+
+    // Word / translation / forms
+    sel('.lc-word').textContent        = stripArticle(card.target);
+    sel('.lc-translation').textContent = card.source || '';
+    const plural = card.metadata?.plural;
+    sel('.lc-forms').textContent = plural && !card.metadata?.plural_only ? fmt(ui.plural_prefix, { plural }) : card.metadata?.plural_only ? ui.plural_only : '';
+
+    // Meta grid
+    const metaGrid = sel('.lc-meta-grid');
+    const facts = getMetaFacts(card);
+    if (facts.length) {
+      metaGrid.style.gridTemplateColumns = `repeat(${Math.min(facts.length,4)}, 1fr)`;
+      metaGrid.style.display = '';
+      metaGrid.innerHTML = facts.map((f, i) => `
+        <div class="px-5 py-4 ${i<facts.length-1?'border-r':''}" style="border-color:var(--border);">
+          <p class="text-[9px] font-bold uppercase tracking-widest mb-1" style="color:var(--text-muted);">${f.label}</p>
+          <p class="text-sm font-bold" style="color:${f.colour||'var(--text)'};">${f.value}</p>
+        </div>`).join('');
+    } else {
+      metaGrid.style.display = 'none';
+    }
+
+    // Grammar note
+    const grammarWrap = sel('.lc-grammar-wrap');
+    if (card.grammar_note) {
+      sel('.lc-grammar-text').innerHTML = formatHighlight(card.grammar_note);
+      grammarWrap.classList.remove('hidden');
+    } else {
+      grammarWrap.classList.add('hidden');
+    }
+
+    // Examples
+    const examplesEl = sel('.lc-examples');
+    const rawEx = card.examples || [];
+    examplesEl.innerHTML = rawEx.length
+      ? rawEx.map(ex => { const e=normaliseEx(ex); return `
+          <div class="rounded-2xl border overflow-hidden" style="border-color:var(--border);">
+            <div class="px-4 py-3" style="background-color:var(--bg);">
+              <p class="font-semibold leading-snug mb-1" style="color:var(--text);">${e.target}</p>
+              <p class="text-sm italic" style="color:var(--text-muted);">${e.source||''}</p>
+            </div>
+            ${e.note?`<div class="px-4 py-2 border-t" style="border-color:var(--border);">
+              <p class="text-[10px] font-bold font-mono" style="color:var(--espresso);">📐 ${e.note}</p>
+            </div>`:''}
+          </div>`; }).join('')
+      : '<p class="text-sm italic" style="color:var(--text-muted);">' + ui.no_example + '</p>';
+
+    // Verb: conjugation table
+    const conjWrap  = sel('.lc-conjugation-wrap');
+    const conjInner = sel('.lc-conjugation-inner');
+    const cardType = card.type || (card.tags?.includes('verb') ? 'verb' : 'vocab');
+    if (conjWrap && conjInner) {
+      if (cardType === 'verb' && card.conjugations) {
+        conjWrap.classList.remove('hidden');
+        let conjArray = [];
+        if (Array.isArray(card.conjugations)) {
+          conjArray = card.conjugations;
+        } else {
+          for (const [tense, forms] of Object.entries(card.conjugations)) {
+            if (typeof forms === 'string') {
+              conjArray.push({ tense, stringForm: forms });
+            } else {
+              const formsArr = Object.entries(forms).map(([pronoun, form]) => ({ pronoun, form }));
+              conjArray.push({ tense, forms: formsArr });
+            }
+          }
+        }
+
+        const tensesToRender = config.verb_tenses || conjArray.map(t => t.tense);
+        const stringTenses = [];
+        const tableTenses = [];
+
+        tensesToRender.forEach(tense => {
+          const t = conjArray.find(c => c.tense === tense);
+          if (!t) return;
+          if (t.stringForm) stringTenses.push(t);
+          else tableTenses.push(t);
+        });
+
+        let html = '';
+        if (stringTenses.length > 0) {
+          html += `
+            <div class="flex flex-wrap gap-3 mb-6">
+              ${stringTenses.map(t => `
+                <div class="rounded-xl border px-4 py-2.5 flex items-center gap-3 shadow-sm" style="border-color:var(--border); background-color:var(--bg);">
+                  <span class="text-[10px] font-bold uppercase tracking-widest opacity-80" style="color:var(--espresso);">${t.tense.replace(/_/g, ' ')}</span>
+                  <span class="font-bold text-sm" style="color:var(--text);">${t.stringForm}</span>
+                </div>
+              `).join('')}
+            </div>
+          `;
+        }
+
+        if (tableTenses.length > 0) {
+          const pronouns = tableTenses[0].forms.map(f => f.pronoun);
+          html += `
+            <div class="rounded-xl border overflow-x-auto shadow-sm w-full" style="border-color:var(--border);">
+              <table class="w-full text-sm text-left">
+                <thead>
+                  <tr style="background-color:var(--bg); border-bottom: 1px solid var(--border);">
+                    <th class="px-4 py-3 font-bold uppercase tracking-widest text-[10px] w-[1%]" style="color:var(--espresso); border-right: 1px solid var(--border);"></th>
+                    ${tableTenses.map(t => `
+                      <th class="px-4 py-3 font-bold uppercase tracking-widest text-[10px]" style="color:var(--espresso);">${t.tense.replace(/_/g, ' ')}</th>
+                    `).join('')}
+                  </tr>
+                </thead>
+                <tbody>
+                  ${pronouns.map((pronoun, ri) => `
+                    <tr class="${ri < pronouns.length - 1 ? 'border-b' : ''}" style="border-color:var(--border);">
+                      <td class="px-4 py-3 font-bold text-xs whitespace-nowrap" style="color:var(--espresso); background-color:var(--bg); border-right: 1px solid var(--border);">${pronoun}</td>
+                      ${tableTenses.map(t => {
+                        const formObj = t.forms.find(f => f.pronoun === pronoun);
+                        return `<td class="px-4 py-3 font-semibold whitespace-nowrap" style="color:var(--text);">${formObj ? formObj.form : '-'}</td>`;
+                      }).join('')}
+                    </tr>
+                  `).join('')}
+                </tbody>
+              </table>
+            </div>
+          `;
+        }
+        conjInner.innerHTML = html;
+      } else {
+        conjWrap.classList.add('hidden');
+        conjInner.innerHTML = '';
+      }
+    }
+
+    // Connector: word order block
+    const woWrap = sel('.lc-wordorder-wrap');
+    if (woWrap) {
+      if (cardType === 'connector' && card.word_order) {
+        sel('.lc-wordorder-text').textContent = card.word_order;
+        woWrap.classList.remove('hidden');
+      } else {
+        woWrap.classList.add('hidden');
+      }
+    }
+
+    // Phrase: preposition rule block
+    const phraseWrap = sel('.lc-phrase-wrap');
+    if (phraseWrap) {
+      if (cardType === 'phrase' && card.clause_type) {
+        sel('.lc-phrase-rule').textContent = card.clause_type;
+        phraseWrap.classList.remove('hidden');
+      } else {
+        phraseWrap.classList.add('hidden');
+      }
+    }
+
+    // Tags
+    sel('.lc-tags').innerHTML = (card.tags||[]).map(t =>
+      `<span class="text-[10px] font-bold px-2 py-0.5 rounded-md border" style="border-color:var(--border);color:var(--text-muted);background-color:var(--bg);">${t}</span>`
+    ).join('');
+
+    // Progress UI
+    if (currentNum)  currentNum.textContent = String(idx+1);
+    if (progressBar) progressBar.style.width = `${Math.round(((idx+1)/cards.length)*100)}%`;
+    if (btnPrev)     btnPrev.disabled = idx === 0;
+    if (btnNext)     btnNext.innerHTML = idx === cards.length-1
+      ? '✓ ' + ui.finish_button
+      : ui.next_button + ' <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>';
+
+    updateDots();
+
+    // Re-bind audio button cleanly by cloning to strip old listeners
+    const oldBtn = sel('.lc-audio-btn');
+    if (oldBtn) {
+      const newBtn = oldBtn.cloneNode(true);
+      oldBtn.parentNode.replaceChild(newBtn, oldBtn);
+      newBtn.addEventListener('click', speakCurrent);
+    }
+  }
+
+  // ── Dot navigation ────────────────────────────────────────────────────────
+  function buildDots() {
+    if (!dotNav) return;
+    dotNav.innerHTML = '';
+    const maxVisible = 20;
+    const showAll = cards.length <= maxVisible;
+    cards.forEach((_, i) => {
+      if (!showAll && i >= maxVisible) return;
+      const dot = document.createElement('button');
+      dot.className = 'dot w-2 h-2 rounded-full transition-all duration-300 flex-shrink-0';
+      dot.style.backgroundColor = 'var(--border)';
+      dot.title = `${ui.card_word} ${i+1}`;
+      dot.addEventListener('click', () => goTo(i));
+      dotNav.appendChild(dot);
+    });
+    if (!showAll) {
+      const el = document.createElement('span');
+      el.textContent = `+${cards.length - maxVisible}`;
+      el.className = 'text-[10px] font-bold';
+      el.style.color = 'var(--text-muted)';
+      dotNav.appendChild(el);
+    }
+  }
+
+  function updateDots() {
+    dotNav?.querySelectorAll('.dot').forEach((dot, i) => {
+      dot.style.backgroundColor = i===currentIndex ? 'var(--espresso)' : 'var(--border)';
+      dot.style.width     = i===currentIndex ? '20px' : '8px';
+      dot.style.borderRadius = '4px';
+    });
+  }
+
+  // ── Audio ─────────────────────────────────────────────────────────────────
+  function speakCurrent() {
+    const card = cards[currentIndex];
+    if (!card) return;
+    if (window.LoungeAudioEngine) {
+      window.LoungeAudioEngine.speak(card.target || '', speechLang, 0.85);
+    }
+  }
+
+  // ── Navigate ─────────────────────────────────────────────────────────────
+  function goTo(idx) {
+    if (idx < 0 || idx >= cards.length) return;
+    currentIndex = idx;
+    renderCard(currentIndex);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  btnPrev?.addEventListener('click', () => goTo(currentIndex - 1));
+  btnNext?.addEventListener('click', () => {
+    if (currentIndex === cards.length - 1) window.location.href = `${base}${lang}/${category}/`;
+    else goTo(currentIndex + 1);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') goTo(currentIndex + 1);
+    if (e.key === 'ArrowLeft')  goTo(currentIndex - 1);
+    if (e.key === 'a' || e.key === 'A') speakCurrent();
+  });
+
+  // ── Learn / Train panel toggle ──────────────────────
+  const btnLearn = document.getElementById('btn-mode-learn');
+  const btnTrain = document.getElementById('btn-mode-train');
+  const pnlLearn = document.getElementById('learn-panel');
+  const pnlTrain = document.getElementById('train-panel');
+  const toolbar  = document.getElementById('learn-toolbar');
+
+  const STORAGE_KEY = `lounge:${lang}:${category}:deck:mode`;
+  let currentMode = localStorage.getItem(STORAGE_KEY) || 'learn';
+
+  function applyMode() {
+    if (currentMode === 'learn') {
+      btnLearn.style.backgroundColor = 'var(--espresso)';
+      btnLearn.style.color = '#F5F2EB';
+      btnTrain.style.backgroundColor = 'transparent';
+      btnTrain.style.color = 'var(--text-muted)';
+      pnlLearn.classList.remove('hidden');
+      toolbar.classList.remove('hidden');
+      pnlTrain.classList.add('hidden');
+    } else {
+      btnTrain.style.backgroundColor = 'var(--espresso)';
+      btnTrain.style.color = '#F5F2EB';
+      btnLearn.style.backgroundColor = 'transparent';
+      btnLearn.style.color = 'var(--text-muted)';
+      pnlTrain.classList.remove('hidden');
+      pnlLearn.classList.add('hidden');
+      toolbar.classList.add('hidden');
+    }
+    localStorage.setItem(STORAGE_KEY, currentMode);
+  }
+
+  btnLearn?.addEventListener('click', () => { currentMode = 'learn'; applyMode(); });
+  btnTrain?.addEventListener('click', () => { currentMode = 'train'; applyMode(); });
+  applyMode();
+
+  // ── Radio-style selectors (mode & dir & count) ─────────────
+  document.querySelectorAll('.sel-opt').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const group = btn.dataset.group;
+      document.querySelectorAll(`.sel-opt[data-group="${group}"]`).forEach(b => b.classList.remove('sel-active'));
+      btn.classList.add('sel-active');
+      const hidden = document.getElementById(`${group}-hidden`);
+      if (hidden) hidden.value = btn.dataset.value;
+    });
+  });
+
+  document.getElementById('deck-train-form')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const base = form.action;
+    const mode = document.getElementById('mode-hidden')?.value || 'mc';
+    const dir  = document.getElementById('dir-hidden')?.value || `${config.language_pair.source_code}-${config.language_pair.target_code}`.toLowerCase();
+    const count = document.getElementById('count-hidden')?.value || '30';
+    const level = form.querySelector('[name="level"]')?.value || '';
+    const deck = form.querySelector('[name="deck"]')?.value || '';
+    
+    const params = new URLSearchParams();
+    if(level) params.set('level', level);
+    params.set('deck', deck);
+    params.set('mode', mode);
+    params.set('dir', dir);
+    params.set('count', count);
+    
+    window.location.href = `${base}?${params.toString()}`;
+  });
+
+  // ── Init ─────────────────────────────────────────────────────────────────
+  buildDots();
+  // Card 0 is already rendered server-side via LearningCard component.
+  // Sync progress UI to reflect card 0 state.
+  updateDots();
+  if (progressBar) progressBar.style.width = `${Math.round(1/cards.length*100)}%`;
+  // Update card 0 using client-side config too (ensures langConfig is applied)
+  renderCard(0);
+})();</script>
