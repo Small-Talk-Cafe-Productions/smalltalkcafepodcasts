@@ -15,6 +15,7 @@ import Footer from '@/components/Footer.astro';
 import ShowPlayer from '@/components/ShowPlayer.astro';
 import { siteConfig } from '@/config/site';
 import { getShowEmbedUrl } from '@/utils/podcast';
+import { getLanguageLoungeUrl } from '@/utils/language-lounge';
 import { fetchEpisodes, type RssEpisode } from '@/utils/rss';
 import { formatDate, generatePodcastSchema } from '@/config/seo';
 
@@ -40,6 +41,7 @@ const embedUrl =
   getShowEmbedUrl(show.platform || 'apple', show.spotifyUrl, show.applePodcastsUrl);
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const languageLoungeUrl = getLanguageLoungeUrl(show.targetLanguage, base);
 
 // ── Season grouping ────────────────────────────────────────────────────────
 // Group episodes by season. Prefers explicit RSS <itunes:season>,
@@ -128,6 +130,13 @@ const hreflangLinks = [
           <p class="text-lg text-brand-secondary/70 leading-relaxed">
             {show.description}
           </p>
+          <a
+            href={languageLoungeUrl}
+            class="inline-flex items-center gap-2 mt-4 text-brand-accent hover:opacity-70 transition-opacity font-semibold"
+          >
+            Practice in the Language Lounge
+            <span aria-hidden="true">→</span>
+          </a>
         </div>
 
         <!-- Player: native episode player (artwork + episode list + in-page audio).

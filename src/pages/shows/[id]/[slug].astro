@@ -20,6 +20,7 @@ import EpisodeTranscript from '@/components/EpisodeTranscript.astro';
 import { siteConfig } from '@/config/site';
 import { fetchEpisodes, type RssEpisode } from '@/utils/rss';
 import { getTranscriptForEpisode } from '@/utils/transcripts';
+import { getLanguageLoungeUrl } from '@/utils/language-lounge';
 import { generateEpisodeSchema, generateBreadcrumbSchema, formatDate } from '@/config/seo';
 
 export async function getStaticPaths() {
@@ -75,6 +76,7 @@ const show = siteConfig.shows.find((s) => s.id === showId)!;
 const { seo } = siteConfig;
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const languageLoungeUrl = getLanguageLoungeUrl(show.targetLanguage, base);
 // Trailing slash required: sitemap generates /shows/{id}/{slug}/ and GitHub Pages
 // 301-redirects the slash-less URL. Canonical must match to avoid GSC "Page with redirect".
 const canonicalUrl = `${seo.siteUrl}/shows/${id}/${slug}/`;
@@ -209,6 +211,16 @@ const targetLangName = show.targetLanguage ? languageNames[show.targetLanguage] 
             )}
           </div>
         </header>
+
+        <div class="mb-8">
+          <a
+            href={languageLoungeUrl}
+            class="inline-flex items-center gap-2 text-brand-accent hover:opacity-70 transition-opacity font-semibold"
+          >
+            Practice in the Language Lounge
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
 
         <!-- Audio Player -->
         {episode.audioUrl && (
