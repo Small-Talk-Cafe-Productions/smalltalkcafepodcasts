@@ -125,6 +125,12 @@ const description =
                   </p>
                 </div>
 
+                <div
+                  id="topic-banner"
+                  class="hidden mb-5 px-4 py-3 rounded-xl border text-xs leading-relaxed"
+                  style="background-color:var(--bg-subtle); border-color:var(--amber); color:var(--text);"
+                ></div>
+
                 <form id="contact-form" class="space-y-4">
                   <!-- Name -->
                   <div>
@@ -171,7 +177,7 @@ const description =
                     >
                       <option value="Episode Feedback">Episode Feedback</option>
                       <option value="Language / Show Request">Language / Show Request</option>
-                      <option value="Collaboration or Sponsorship">Collaboration or Sponsorship</option>
+                      <option value="Advertising or Collaboration">Advertising or Collaboration</option>
                       <option value="General Question">General Question</option>
                     </select>
                   </div>
@@ -232,6 +238,121 @@ const description =
   const statusDiv = document.getElementById('form-status') as HTMLDivElement | null;
   const submitBtn = document.getElementById('submit-btn') as HTMLButtonElement | null;
   const btnText = document.getElementById('btn-text') as HTMLSpanElement | null;
+  const topicSelect = document.getElementById('topic') as HTMLSelectElement | null;
+  const messageBox = document.getElementById('message') as HTMLTextAreaElement | null;
+  const topicBanner = document.getElementById('topic-banner') as HTMLDivElement | null;
+
+  // Query parameters (e.g. from /advertise/?topic=advertising&package=premium-german)
+  const params = new URLSearchParams(window.location.search);
+  const topicParam = params.get('topic')?.toLowerCase();
+  const packageParam = params.get('package')?.toLowerCase();
+
+  const packageLabels: Record<string, string> = {
+    'growing-show': 'Growing Show — Italian, French, Spanish, Dutch, Swedish or Portuguese (€29 / 1 mo or €69 / 3 mo)',
+    'premium-german': 'Premium Show — Learn German in Minutes (€49 / 1 mo or €129 / 3 mo)',
+    'full-network': 'Full Network — All 7 Shows (€99 / 1 mo or €249 / 3 mo)',
+    'audio-ad': 'Podcast Audio Ad (15–25s)',
+    'general': 'Podcast Audio Advertising',
+  };
+
+  interface TopicConfig {
+    bannerHtml: string;
+    rows: number;
+    template: () => string;
+  }
+
+  const topicConfigs: Record<string, TopicConfig> = {
+    'Episode Feedback': {
+      bannerHtml: '💬 <strong>Episode feedback template loaded</strong> — let us know which show or episode you listened to.',
+      rows: 6,
+      template: () => [
+        'Hi Small Talk Café team,',
+        '',
+        '• Show / Language: ',
+        '• Episode Title or Number: ',
+        '• Your Feedback or Suggestion: ',
+      ].join('\n'),
+    },
+    'Language / Show Request': {
+      bannerHtml: '🌍 <strong>Show request template loaded</strong> — tell us which language pair you want next.',
+      rows: 6,
+      template: () => [
+        'Hi Small Talk Café team,',
+        '',
+        '• Language I want to learn: ',
+        '• My native / source language: ',
+        '• Topics or everyday situations I’d love covered: ',
+      ].join('\n'),
+    },
+    'Advertising or Collaboration': {
+      bannerHtml: '🎙️ <strong>Advertising inquiry template loaded</strong> — fill in your brand details below and we’ll reply within 48 hours with availability &amp; ad slots.',
+      rows: 10,
+      template: () => {
+        const selectedLabel = (packageParam && packageLabels[packageParam]) || packageLabels.general;
+        return [
+          'Hi Small Talk Café team,',
+          '',
+          `We'd like to advertise our brand on your shows (${selectedLabel}).`,
+          '',
+          '• Brand / Product: ',
+          '• Website: ',
+          '• Target Show(s) / Language(s): ',
+          '• Preferred Launch Date & Campaign Duration (1 or 3 months): ',
+          '• Campaign Goals or Promo Offer (optional): ',
+          '',
+          'Please let us know upcoming ad slot availability and next steps.',
+        ].join('\n');
+      },
+    },
+    'General Question': {
+      bannerHtml: '✉️ <strong>General question template loaded</strong> — feel free to edit or replace the prompt below.',
+      rows: 5,
+      template: () => [
+        'Hi Small Talk Café team,',
+        '',
+        '• Question: ',
+      ].join('\n'),
+    },
+  };
+
+  let lastAutoTemplate = '';
+
+  function applyTopicTemplate(topicValue: string) {
+    const cfg = topicConfigs[topicValue] || topicConfigs['General Question'];
+    if (!messageBox) return;
+
+    const current = messageBox.value;
+    const isUnmodified = !current.trim() || current === lastAutoTemplate;
+
+    if (isUnmodified) {
+      const nextTemplate = cfg.template();
+      messageBox.value = nextTemplate;
+      messageBox.rows = cfg.rows;
+      lastAutoTemplate = nextTemplate;
+      if (topicBanner) {
+        topicBanner.innerHTML = cfg.bannerHtml;
+        topicBanner.classList.remove('hidden');
+      }
+    } else if (topicBanner) {
+      // Keep user's custom text intact, hide stale banner if topic changed
+      topicBanner.classList.add('hidden');
+    }
+  }
+
+  if (topicSelect) {
+    if (topicParam === 'sponsorship' || topicParam === 'advertising' || packageParam) {
+      topicSelect.value = 'Advertising or Collaboration';
+    } else if (topicParam === 'request') {
+      topicSelect.value = 'Language / Show Request';
+    } else if (topicParam === 'question') {
+      topicSelect.value = 'General Question';
+    }
+    applyTopicTemplate(topicSelect.value);
+
+    topicSelect.addEventListener('change', () => {
+      applyTopicTemplate(topicSelect.value);
+    });
+  }
 
   if (form && statusDiv && submitBtn && btnText) {
     form.addEventListener('submit', async (e) => {
@@ -244,6 +365,11 @@ const description =
 
       if (!name || !email || !message) {
         showStatus('Please fill in all required fields.', false);
+        return;
+      }
+
+      if (lastAutoTemplate && message === lastAutoTemplate.trim()) {
+        showStatus('Please fill in your details in the message template before sending.', false);
         return;
       }
 
@@ -269,6 +395,8 @@ const description =
 
         if (response.ok) {
           form.reset();
+          lastAutoTemplate = '';
+          if (topicSelect) applyTopicTemplate(topicSelect.value);
           showStatus(
             '✓ Thank you! Your message has been sent successfully. We will get back to you soon.',
             true

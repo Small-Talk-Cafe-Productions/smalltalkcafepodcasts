@@ -1,0 +1,599 @@
+---
+/**
+ * Advertise With Us
+ *
+ * Clean, data-driven advertising page backed by src/data/analytics.json.
+ * Update stats: npm run analytics
+ * Update pricing: edit the `pricing` array below.
+ */
+
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+import analyticsData from '@/data/analytics.json';
+import { siteConfig } from '@/config/site';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+const { network } = analyticsData;
+const kpis = network.kpis;
+const fmt = (n: number | undefined) => (n ?? 0).toLocaleString('en-US');
+
+const monthlyPlays = kpis.combinedMonthlyPlays ?? 0;
+const allTimePlays = kpis.allTimePlays ?? 0;
+const impressions30d = kpis.impressions30d ?? 0;
+const impressions90d = kpis.impressions90d ?? 0;
+const totalFollowers = kpis.totalFollowers ?? 0;
+const completionRate = kpis.avgCompletionRate ?? 0;
+const appleEngagedRate = kpis.appleEngagedRatePct ?? 0;
+const monthlyHours = Math.round(kpis.monthlyHoursListened ?? 0);
+const returningPct = kpis.returningListenerPct30d ?? 0;
+const age23to44 = kpis.age23to44Pct ?? 0;
+const dachShare = kpis.dachSharePct ?? 0;
+const countriesCount = kpis.countriesCount ?? 0;
+
+const showNameMap = Object.fromEntries(
+  siteConfig.shows.map((s) => [s.id, `${s.title} — ${s.subtitle}`])
+);
+const showsSummary = network.showsSummary ?? [];
+const germanPlays = showsSummary.find((s: { showId: string }) => s.showId === 'english-german')?.combinedMonthlyPlays ?? 9955;
+
+// ── Single-Format Audio Ad Tiers (Audio Ad in Daily Episodes) ─────────────────
+const tiers = [
+  {
+    key: 'growing-show',
+    badge: 'Great Starter',
+    title: 'Growing Shows',
+    showsList: 'Italian, French, Spanish, Dutch, Swedish or Portuguese',
+    price1m: '€29',
+    price3m: '€69',
+    highlight: false,
+    cta: 'Advertise on a Growing Show →',
+  },
+  {
+    key: 'premium-german',
+    badge: 'Flagship Reach',
+    title: 'Premium Show',
+    showsList: `Learn German in Minutes (${fmt(germanPlays)} monthly plays)`,
+    price1m: '€49',
+    price3m: '€129',
+    highlight: true,
+    cta: 'Advertise on Flagship Show →',
+  },
+  {
+    key: 'full-network',
+    badge: 'Best Value',
+    title: 'Full Network',
+    showsList: `All 7 shows (${fmt(monthlyPlays)} monthly plays across German, Spanish, Dutch, Swedish & more)`,
+    price1m: '€99',
+    price3m: '€249',
+    highlight: false,
+    cta: 'Advertise Across All 7 Shows →',
+  },
+];
+
+// Combined monthly platform trends (Spotify + Apple Podcasts across reporting shows)
+const combinedTrends = network.charts?.combinedMonthlyTrends ?? [];
+const monthLabels = combinedTrends.map((m: { month: string }) => {
+  const [y, mo] = m.month.split('-');
+  return new Date(Number(y), Number(mo) - 1, 1).toLocaleDateString('en-US', {
+    month: 'short',
+    year: '2-digit',
+  });
+});
+const spotifyValues = combinedTrends.map((m: { spotify: number }) => m.spotify);
+const appleValues = combinedTrends.map((m: { apple: number }) => m.apple);
+
+const ageBands = (network.demographics?.ageDistribution ?? []).filter(
+  (a: { ageRange: string }) => a.ageRange !== 'Unknown'
+);
+const ageLabels = ageBands.map((a: { ageRange: string }) => a.ageRange);
+const ageValues = ageBands.map((a: { percentage: number }) => a.percentage);
+
+const topCountries = (network.demographics?.topCountries ?? []).slice(0, 8);
+const countryLabels = topCountries.map((c: { country: string }) => c.country);
+const countryValues = topCountries.map((c: { percentage: number }) => c.percentage);
+const allCountries: string[] = network.demographics?.allCountries ?? [];
+
+const generatedAt = network.generatedAt
+  ? new Date(network.generatedAt).toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+    })
+  : 'Recently';
+
+const title = 'Advertise | Small Talk Café Podcasts';
+const description = `Advertise on Small Talk Café podcasts: ${fmt(monthlyPlays)} monthly plays, ${fmt(impressions30d)} monthly impressions, and ${completionRate}% episode completion.`;
+---
+
+<BaseLayout title={title} description={description}>
+  <div class="min-h-screen flex flex-col transition-colors duration-300" style="background-color:var(--bg); color:var(--text);">
+    <Header />
+
+    <main class="flex-grow">
+
+      <!-- ── Header ──────────────────────────────────────────────────── -->
+      <section class="py-10 md:py-14 px-4">
+        <div class="container-custom max-w-4xl mx-auto">
+          <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold font-heading mb-4 leading-tight" style="color:var(--text);">
+            Advertise With Us
+          </h1>
+          <p class="text-base sm:text-lg leading-relaxed" style="color:var(--text-muted);">
+            Reach active language learners directly inside daily bite-sized podcast lessons across Spotify and Apple Podcasts.
+          </p>
+        </div>
+      </section>
+
+      <!-- ── Audience Metrics ────────────────────────────────────────── -->
+      <section class="pb-10 px-4" aria-labelledby="stats-heading">
+        <div class="container-custom max-w-4xl mx-auto">
+          <h2 id="stats-heading" class="text-xl font-bold font-heading mb-4" style="color:var(--text);">
+            Audience Overview
+          </h2>
+
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="rounded-2xl p-5 border shadow-sm" style="background-color:var(--card); border-color:var(--border);">
+              <div class="text-2xl md:text-3xl font-bold" style="color:var(--amber);">{fmt(monthlyPlays)}</div>
+              <div class="text-xs font-semibold mt-1" style="color:var(--text);">Monthly Plays (30d)</div>
+              <div class="text-[11px] mt-0.5" style="color:var(--text-muted);">{fmt(allTimePlays)} all-time</div>
+            </div>
+
+            <div class="rounded-2xl p-5 border shadow-sm" style="background-color:var(--card); border-color:var(--border);">
+              <div class="text-2xl md:text-3xl font-bold" style="color:var(--amber);">{fmt(impressions30d)}</div>
+              <div class="text-xs font-semibold mt-1" style="color:var(--text);">Impressions (30d)</div>
+              <div class="text-[11px] mt-0.5" style="color:var(--text-muted);">{fmt(impressions90d)} in 90d</div>
+            </div>
+
+            <div class="rounded-2xl p-5 border shadow-sm" style="background-color:var(--card); border-color:var(--border);">
+              <div class="text-2xl md:text-3xl font-bold" style="color:var(--amber);">{completionRate}%</div>
+              <div class="text-xs font-semibold mt-1" style="color:var(--text);">Episode Completion</div>
+              <div class="text-[11px] mt-0.5" style="color:var(--text-muted);">{appleEngagedRate}% Apple engaged</div>
+            </div>
+
+            <div class="rounded-2xl p-5 border shadow-sm" style="background-color:var(--card); border-color:var(--border);">
+              <div class="text-2xl md:text-3xl font-bold" style="color:var(--amber);">{returningPct}%</div>
+              <div class="text-xs font-semibold mt-1" style="color:var(--text);">Returning Listeners</div>
+              <div class="text-[11px] mt-0.5" style="color:var(--text-muted);">{fmt(totalFollowers)} followers</div>
+            </div>
+          </div>
+
+          <p class="text-xs mt-3" style="color:var(--text-muted);">
+            {fmt(monthlyHours)} hrs/mo listened · {age23to44}% aged 23–44 · {countriesCount} countries ({dachShare}% DACH) ·
+            Spotify &amp; Apple Podcasts data (updated {generatedAt})
+          </p>
+        </div>
+      </section>
+
+      <!-- ── Advertising Package & Pricing ─────────────────────────────── -->
+      <section id="pricing" class="py-10 pb-12 px-4 border-t" style="border-color:var(--border);">
+        <div class="container-custom max-w-4xl mx-auto">
+          <div class="mb-7">
+            <h2 class="text-2xl font-bold font-heading mb-2" style="color:var(--text);">
+              Sponsorship Packages
+            </h2>
+            <p class="text-sm sm:text-base leading-relaxed" style="color:var(--text-muted);">
+              Every package features your audio ad inside our daily episodes across Spotify and Apple Podcasts. Choose an individual language show or sponsor the entire 7-show network.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-5">
+            {tiers.map((tier) => (
+              <a
+                href={`${base}/contact/?topic=advertising&package=${tier.key}`}
+                class:list={[
+                  'group rounded-2xl p-6 flex flex-col justify-between transition-all duration-200 hover:-translate-y-1 hover:shadow-lg',
+                  tier.highlight ? 'border-2 shadow-md' : 'border shadow-sm',
+                ]}
+                style={`background-color:var(--card); border-color:${tier.highlight ? 'var(--amber)' : 'var(--border)'};`}
+              >
+                <div>
+                  <div class="flex items-center justify-between gap-2 mb-3">
+                    <span
+                      class="text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full"
+                      style={tier.highlight
+                        ? 'background-color:var(--amber); color:#FFFFFF;'
+                        : 'background-color:var(--bg-subtle); color:var(--text-muted);'}
+                    >
+                      {tier.badge}
+                    </span>
+                  </div>
+
+                  <h3 class="text-lg font-bold font-heading mb-1" style="color:var(--text);">
+                    {tier.title}
+                  </h3>
+                  <p class="text-xs leading-relaxed mb-5 min-h-[2.25rem]" style="color:var(--text-muted);">
+                    {tier.showsList}
+                  </p>
+
+                  <div class="pt-4 border-t mb-5" style="border-color:var(--border);">
+                    <div class="flex items-baseline gap-1.5">
+                      <span class="text-3xl font-bold font-heading" style="color:var(--text);">{tier.price1m}</span>
+                      <span class="text-xs" style="color:var(--text-muted);">/ 1 month</span>
+                    </div>
+                    <div class="text-xs font-semibold mt-1" style="color:var(--amber);">
+                      or {tier.price3m} for 3 months
+                    </div>
+                  </div>
+                </div>
+
+                <span
+                  class="w-full inline-flex items-center justify-center font-heading font-bold px-4 py-2.5 rounded-xl text-xs transition-opacity group-hover:opacity-90"
+                  style={tier.highlight
+                    ? 'background-color:var(--amber); color:#FFFFFF;'
+                    : 'background-color:var(--bg-subtle); color:var(--text); border:1.5px solid var(--border);'}
+                >
+                  {tier.cta}
+                </span>
+              </a>
+            ))}
+          </div>
+
+          <div class="mt-5 flex flex-wrap items-center justify-between gap-3 text-xs" style="color:var(--text-muted);">
+            <span>Select any card to open a pre-filled inquiry — no commitment until confirmed.</span>
+            <a
+              href="mailto:smalltalkcafe.productions@gmail.com"
+              class="underline underline-offset-2 hover:opacity-80 transition-opacity"
+              style="color:var(--amber);"
+            >
+              smalltalkcafe.productions@gmail.com
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Audience Demographics & Trends ──────────────────────────── -->
+      <section class="py-10 px-4 border-t" style="border-color:var(--border);">
+        <div class="container-custom max-w-4xl mx-auto">
+          <div class="mb-6">
+            <h2 class="text-2xl font-bold font-heading mb-1" style="color:var(--text);">
+              Audience Demographics &amp; Trends
+            </h2>
+            <p class="text-xs sm:text-sm" style="color:var(--text-muted);">
+              Verified listener analytics across Spotify for Podcasters and Apple Podcasts Connect.
+            </p>
+          </div>
+          <div class="grid md:grid-cols-2 gap-5">
+            <div class="rounded-2xl border p-5 shadow-sm" style="background-color:var(--card); border-color:var(--border);">
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <h3 class="text-sm font-bold" style="color:var(--text);">Monthly Growth Trend</h3>
+                <div class="flex items-center gap-3 text-[11px] font-medium" style="color:var(--text-muted);">
+                  <span class="inline-flex items-center gap-1.5">
+                    <span class="w-2.5 h-2.5 rounded-full inline-block" style="background-color:var(--amber);"></span> Spotify
+                  </span>
+                  <span class="inline-flex items-center gap-1.5">
+                    <span class="w-2.5 h-2.5 rounded-full inline-block" style="background-color:#967D65;"></span> Apple
+                  </span>
+                </div>
+              </div>
+              <canvas id="growthCurveChart" style="max-height:210px;" aria-label="Monthly growth curve chart" role="img"></canvas>
+            </div>
+
+            <div class="rounded-2xl border p-5 shadow-sm" style="background-color:var(--card); border-color:var(--border);">
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <h3 class="text-sm font-bold" style="color:var(--text);">Total Monthly Plays</h3>
+                <div class="flex items-center gap-3 text-[11px] font-medium" style="color:var(--text-muted);">
+                  <span class="inline-flex items-center gap-1.5">
+                    <span class="w-2.5 h-2.5 rounded-sm inline-block" style="background-color:var(--amber);"></span> Spotify
+                  </span>
+                  <span class="inline-flex items-center gap-1.5">
+                    <span class="w-2.5 h-2.5 rounded-sm inline-block" style="background-color:#967D65;"></span> Apple
+                  </span>
+                </div>
+              </div>
+              <canvas id="monthlyBarsChart" style="max-height:210px;" aria-label="Total monthly plays stacked bar chart" role="img"></canvas>
+            </div>
+
+            <div class="rounded-2xl border p-5 shadow-sm" style="background-color:var(--card); border-color:var(--border);">
+              <h3 class="text-sm font-bold mb-3" style="color:var(--text);">Listener Age</h3>
+              <canvas id="ageChart" style="max-height:210px;" aria-label="Listener age distribution chart" role="img"></canvas>
+            </div>
+
+            <div class="rounded-2xl border p-5 shadow-sm" style="background-color:var(--card); border-color:var(--border);">
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <h3 class="text-sm font-bold" style="color:var(--text);">Top Countries (Network)</h3>
+                <span class="text-[11px]" style="color:var(--text-muted);">{allCountries.length || countriesCount} countries</span>
+              </div>
+              <canvas id="geoChart" style="max-height:210px;" aria-label="Top listener countries chart" role="img"></canvas>
+            </div>
+          </div>
+
+          <!-- ── All Countries Where Our Shows Are Heard ───────────────── -->
+          <div class="mt-6 rounded-2xl border p-6 shadow-sm" style="background-color:var(--card); border-color:var(--border);">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4">
+              <div>
+                <h3 class="text-base font-bold font-heading" style="color:var(--text);">
+                  Global Reach — Heard in {allCountries.length || countriesCount} Countries
+                </h3>
+                <p class="text-xs mt-0.5" style="color:var(--text-muted);">
+                  Every country where Small Talk Café shows have active listeners across Europe, the Americas, Asia-Pacific, Africa, and the Middle East.
+                </p>
+              </div>
+              <div class="relative w-full sm:w-60">
+                <input
+                  type="text"
+                  id="countryFilter"
+                  placeholder="Search countries..."
+                  class="w-full text-xs px-3 py-2 rounded-xl border outline-none transition-colors"
+                  style="background-color:var(--bg); border-color:var(--border); color:var(--text);"
+                />
+              </div>
+            </div>
+
+            <div id="countryPills" class="flex flex-wrap gap-1.5 max-h-56 overflow-y-auto pr-1">
+              {allCountries.map((country: string) => (
+                <span
+                  class="country-badge text-[11px] px-2.5 py-1 rounded-lg border font-medium transition-colors"
+                  style="background-color:var(--bg-subtle); border-color:var(--border); color:var(--text);"
+                  data-name={country.toLowerCase()}
+                >
+                  {country}
+                </span>
+              ))}
+            </div>
+            <p id="noCountryMatch" class="hidden text-xs py-4 text-center font-medium" style="color:var(--text-muted);">
+              No matching countries found.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Reporting Shows ─────────────────────────────────────────── -->
+      {showsSummary.length > 0 && (
+        <section class="py-8 px-4 border-t" style="border-color:var(--border);">
+          <div class="container-custom max-w-4xl mx-auto">
+            <h2 class="text-xl font-bold font-heading mb-4" style="color:var(--text);">Show Breakdown</h2>
+            <div class="rounded-2xl border overflow-hidden shadow-sm" style="border-color:var(--border); background-color:var(--card);">
+              <table class="w-full text-sm">
+                <thead>
+                  <tr style="background-color:var(--bg-subtle);">
+                    <th class="text-left px-5 py-3 font-bold" style="color:var(--text);">Show</th>
+                    <th class="text-right px-5 py-3 font-bold" style="color:var(--text);">Monthly Plays</th>
+                    <th class="text-right px-5 py-3 font-bold hidden sm:table-cell" style="color:var(--text);">Impressions (30d)</th>
+                    <th class="text-right px-5 py-3 font-bold hidden md:table-cell" style="color:var(--text);">Completion</th>
+                    <th class="text-right px-5 py-3 font-bold" style="color:var(--text);">Followers</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {showsSummary.map((s: { showId: string; combinedMonthlyPlays: number; impressions30d: number; avgCompletionRate: number; totalFollowers: number }) => (
+                    <tr style="border-top:1px solid var(--border);">
+                      <td class="px-5 py-3 font-medium">
+                        <a href={`${base}/shows/${s.showId}/`} class="hover:underline" style="color:var(--text);">
+                          {showNameMap[s.showId] || s.showId}
+                        </a>
+                      </td>
+                      <td class="px-5 py-3 text-right font-bold" style="color:var(--amber);">{fmt(s.combinedMonthlyPlays)}</td>
+                      <td class="px-5 py-3 text-right hidden sm:table-cell" style="color:var(--text-muted);">{fmt(s.impressions30d)}</td>
+                      <td class="px-5 py-3 text-right hidden md:table-cell" style="color:var(--text-muted);">{s.avgCompletionRate > 0 ? `${s.avgCompletionRate}%` : '—'}</td>
+                      <td class="px-5 py-3 text-right" style="color:var(--text-muted);">{fmt(s.totalFollowers)}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      )}
+
+    </main>
+    <Footer />
+  </div>
+</BaseLayout>
+
+<script is:inline src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+
+<script is:inline define:vars={{
+  monthLabels,
+  spotifyValues,
+  appleValues,
+  ageLabels,
+  ageValues,
+  countryLabels,
+  countryValues,
+}}>
+(function () {
+  const dark = document.documentElement.classList.contains('dark');
+  const textColor = dark ? '#A89880' : '#8C7A6B';
+  const gridColor = dark ? 'rgba(255,255,255,0.06)' : 'rgba(0,0,0,0.06)';
+  const amber = dark ? '#B07D5A' : '#C27A44';
+  const amberFill = dark ? 'rgba(176,125,90,0.18)' : 'rgba(194,122,68,0.15)';
+  const espresso = dark ? '#967D65' : '#4A3B32';
+
+  const tooltip = {
+    backgroundColor: dark ? '#2A1E11' : '#fff',
+    titleColor: dark ? '#F0EBE1' : '#3A2718',
+    bodyColor: textColor,
+    borderColor: dark ? '#3D2D1A' : '#E6E0D5',
+    borderWidth: 1,
+    padding: 10,
+  };
+
+  // 1. Monthly Growth Curves (Spotify & Apple Podcasts)
+  const curveCtx = document.getElementById('growthCurveChart');
+  if (curveCtx && monthLabels.length) {
+    new Chart(curveCtx, {
+      type: 'line',
+      data: {
+        labels: monthLabels,
+        datasets: [
+          {
+            label: 'Spotify',
+            data: spotifyValues,
+            borderColor: amber,
+            backgroundColor: amberFill,
+            borderWidth: 2,
+            pointBackgroundColor: amber,
+            pointRadius: 3,
+            tension: 0.35,
+            fill: false,
+          },
+          {
+            label: 'Apple Podcasts',
+            data: appleValues,
+            borderColor: espresso,
+            backgroundColor: dark ? 'rgba(150,125,101,0.2)' : 'rgba(74,59,50,0.15)',
+            borderWidth: 2,
+            pointBackgroundColor: espresso,
+            pointRadius: 3,
+            tension: 0.35,
+            fill: false,
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        interaction: { mode: 'index', intersect: false },
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            ...tooltip,
+            callbacks: {
+              label: (c) => ` ${c.dataset.label}: ${c.parsed.y.toLocaleString()} plays`,
+              footer: (items) => {
+                const total = items.reduce((a, b) => a + b.parsed.y, 0);
+                return ` Total: ${total.toLocaleString()} plays`;
+              },
+            },
+          },
+        },
+        scales: {
+          x: { ticks: { color: textColor, font: { size: 10 } }, grid: { color: gridColor } },
+          y: {
+            ticks: { color: textColor, font: { size: 10 }, callback: (v) => v >= 1000 ? (v / 1000).toFixed(0) + 'k' : v },
+            grid: { color: gridColor },
+            beginAtZero: true,
+          },
+        },
+      },
+    });
+  }
+
+  // 2. Total Monthly Plays (Stacked Bars: Spotify + Apple Podcasts)
+  const barsCtx = document.getElementById('monthlyBarsChart');
+  if (barsCtx && monthLabels.length) {
+    new Chart(barsCtx, {
+      type: 'bar',
+      data: {
+        labels: monthLabels,
+        datasets: [
+          {
+            label: 'Spotify',
+            data: spotifyValues,
+            backgroundColor: amber,
+            borderRadius: { topLeft: 0, topRight: 0, bottomLeft: 5, bottomRight: 5 },
+            stack: 'combined',
+          },
+          {
+            label: 'Apple Podcasts',
+            data: appleValues,
+            backgroundColor: espresso,
+            borderRadius: { topLeft: 5, topRight: 5, bottomLeft: 0, bottomRight: 0 },
+            stack: 'combined',
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        interaction: { mode: 'index', intersect: false },
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            ...tooltip,
+            callbacks: {
+              label: (c) => ` ${c.dataset.label}: ${c.parsed.y.toLocaleString()} plays`,
+              footer: (items) => {
+                const total = items.reduce((a, b) => a + b.parsed.y, 0);
+                return ` Total: ${total.toLocaleString()} plays`;
+              },
+            },
+          },
+        },
+        scales: {
+          x: { stacked: true, ticks: { color: textColor, font: { size: 10 } }, grid: { display: false } },
+          y: {
+            stacked: true,
+            ticks: { color: textColor, font: { size: 10 }, callback: (v) => v >= 1000 ? (v / 1000).toFixed(0) + 'k' : v },
+            grid: { color: gridColor },
+            beginAtZero: true,
+          },
+        },
+      },
+    });
+  }
+
+  const ageCtx = document.getElementById('ageChart');
+  if (ageCtx && ageValues.length) {
+    new Chart(ageCtx, {
+      type: 'bar',
+      data: {
+        labels: ageLabels,
+        datasets: [{
+          label: 'Audience %',
+          data: ageValues,
+          backgroundColor: ageLabels.map((l) => ['23-27', '28-34', '35-44'].includes(l) ? amber : espresso + '99'),
+          borderRadius: 6,
+        }],
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { display: false },
+          tooltip: { ...tooltip, callbacks: { label: (c) => ` ${c.parsed.y}%` } },
+        },
+        scales: {
+          x: { ticks: { color: textColor, font: { size: 10 } }, grid: { display: false } },
+          y: { ticks: { color: textColor, font: { size: 10 }, callback: (v) => v + '%' }, grid: { color: gridColor }, beginAtZero: true },
+        },
+      },
+    });
+  }
+
+  const geoCtx = document.getElementById('geoChart');
+  if (geoCtx && countryValues.length) {
+    new Chart(geoCtx, {
+      type: 'bar',
+      data: {
+        labels: countryLabels,
+        datasets: [{
+          label: 'Share %',
+          data: countryValues,
+          backgroundColor: amber,
+          borderRadius: 5,
+        }],
+      },
+      options: {
+        indexAxis: 'y',
+        responsive: true,
+        plugins: {
+          legend: { display: false },
+          tooltip: { ...tooltip, callbacks: { label: (c) => ` ${c.parsed.x}%` } },
+        },
+        scales: {
+          x: { ticks: { color: textColor, font: { size: 10 }, callback: (v) => v + '%' }, grid: { color: gridColor }, beginAtZero: true },
+          y: { ticks: { color: textColor, font: { size: 10 } }, grid: { display: false } },
+        },
+      },
+    });
+  }
+
+  // Country live search / filter
+  const filterInput = document.getElementById('countryFilter');
+  const badges = document.querySelectorAll('.country-badge');
+  const noMatch = document.getElementById('noCountryMatch');
+  if (filterInput && badges.length) {
+    filterInput.addEventListener('input', (e) => {
+      const q = e.target.value.toLowerCase().trim();
+      let visible = 0;
+      badges.forEach((b) => {
+        const name = b.getAttribute('data-name') || '';
+        const match = !q || name.includes(q);
+        b.style.display = match ? '' : 'none';
+        if (match) visible++;
+      });
+      if (noMatch) {
+        noMatch.classList.toggle('hidden', visible > 0);
+      }
+    });
+  }
+})();
+</script>

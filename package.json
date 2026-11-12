@@ -13,7 +13,9 @@
     "transcripts:validate": "python3 ./scripts/validate_transcripts.py",
     "preview": "astro preview",
     "check": "astro check",
-    "astro": "astro"
+    "astro": "astro",
+    "analytics": "node analytics/pipeline/process.mjs",
+    "analytics:watch": "node --watch analytics/pipeline/process.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.2",

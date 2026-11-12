@@ -1,0 +1,4597 @@
+{
+  "network": {
+    "showsWithData": 7,
+    "totalShows": 14,
+    "hasOp3": false,
+    "generatedAt": "2026-11-12T19:28:52.840Z",
+    "kpis": {
+      "combinedMonthlyPlays": 13534,
+      "spotifyPlays30d": 10107,
+      "spotifyPlays90d": 27080,
+      "allTimePlays": 85958,
+      "impressions30d": 129676,
+      "impressions90d": 323906,
+      "totalFollowers": 3223,
+      "op3Downloads30d": 0,
+      "avgCompletionRate": 84.6,
+      "appleEngagedRatePct": 82.6,
+      "monthlyHoursListened": 926.6,
+      "consumptionHoursAllTime": 4839.2,
+      "returningListenerPct30d": 75.7,
+      "latestWoWRetentionPct": 30.3,
+      "age23to44Pct": 68.6,
+      "age23to59Pct": 91.3,
+      "dachSharePct": 35.4,
+      "countriesCount": 132
+    },
+    "charts": {
+      "weeklyPlays": [
+        {
+          "weekStart": "2026-08-10",
+          "value": 2237
+        },
+        {
+          "weekStart": "2026-08-17",
+          "value": 2047
+        },
+        {
+          "weekStart": "2026-08-24",
+          "value": 1876
+        },
+        {
+          "weekStart": "2026-08-31",
+          "value": 2452
+        },
+        {
+          "weekStart": "2026-09-07",
+          "value": 2144
+        },
+        {
+          "weekStart": "2026-09-14",
+          "value": 1803
+        },
+        {
+          "weekStart": "2026-09-21",
+          "value": 1690
+        },
+        {
+          "weekStart": "2026-09-28",
+          "value": 2038
+        },
+        {
+          "weekStart": "2026-10-05",
+          "value": 1825
+        },
+        {
+          "weekStart": "2026-10-12",
+          "value": 2010
+        },
+        {
+          "weekStart": "2026-10-19",
+          "value": 2066
+        },
+        {
+          "weekStart": "2026-10-26",
+          "value": 2338
+        },
+        {
+          "weekStart": "2026-11-02",
+          "value": 3144
+        }
+      ],
+      "spotifyMonthlyTrends": [
+        {
+          "month": "2026-05",
+          "plays": 9918
+        },
+        {
+          "month": "2026-06",
+          "plays": 9160
+        },
+        {
+          "month": "2026-07",
+          "plays": 9486
+        },
+        {
+          "month": "2026-08",
+          "plays": 9711
+        },
+        {
+          "month": "2026-09",
+          "plays": 8436
+        },
+        {
+          "month": "2026-10",
+          "plays": 9152
+        }
+      ],
+      "appleMonthlyTrends": [
+        {
+          "month": "2026-05",
+          "plays": 232,
+          "uniqueListeners": 125,
+          "uniqueEngagedListeners": 102,
+          "totalSecondsListened": 45007,
+          "hoursListened": 12.5,
+          "engagedRatePct": 81.6
+        },
+        {
+          "month": "2026-06",
+          "plays": 801,
+          "uniqueListeners": 333,
+          "uniqueEngagedListeners": 241,
+          "totalSecondsListened": 107457,
+          "hoursListened": 29.8,
+          "engagedRatePct": 72.4
+        },
+        {
+          "month": "2026-07",
+          "plays": 1184,
+          "uniqueListeners": 531,
+          "uniqueEngagedListeners": 356,
+          "totalSecondsListened": 165431,
+          "hoursListened": 46,
+          "engagedRatePct": 67
+        },
+        {
+          "month": "2026-08",
+          "plays": 1881,
+          "uniqueListeners": 902,
+          "uniqueEngagedListeners": 688,
+          "totalSecondsListened": 253533,
+          "hoursListened": 70.4,
+          "engagedRatePct": 76.3
+        },
+        {
+          "month": "2026-09",
+          "plays": 1618,
+          "uniqueListeners": 899,
+          "uniqueEngagedListeners": 611,
+          "totalSecondsListened": 263351,
+          "hoursListened": 73.2,
+          "engagedRatePct": 68
+        },
+        {
+          "month": "2026-10",
+          "plays": 3427,
+          "uniqueListeners": 1268,
+          "uniqueEngagedListeners": 972,
+          "totalSecondsListened": 692674,
+          "hoursListened": 192.4,
+          "engagedRatePct": 76.7
+        }
+      ],
+      "combinedMonthlyTrends": [
+        {
+          "month": "2026-05",
+          "spotify": 9918,
+          "apple": 232,
+          "total": 10150
+        },
+        {
+          "month": "2026-06",
+          "spotify": 9160,
+          "apple": 801,
+          "total": 9961
+        },
+        {
+          "month": "2026-07",
+          "spotify": 9486,
+          "apple": 1184,
+          "total": 10670
+        },
+        {
+          "month": "2026-08",
+          "spotify": 9711,
+          "apple": 1881,
+          "total": 11592
+        },
+        {
+          "month": "2026-09",
+          "spotify": 8436,
+          "apple": 1618,
+          "total": 10054
+        },
+        {
+          "month": "2026-10",
+          "spotify": 9152,
+          "apple": 3427,
+          "total": 12579
+        }
+      ],
+      "wowRetention": [
+        {
+          "weekStart": "2026-07-16",
+          "retentionPct": 36.2
+        },
+        {
+          "weekStart": "2026-07-23",
+          "retentionPct": 37.2
+        },
+        {
+          "weekStart": "2026-07-30",
+          "retentionPct": 33
+        },
+        {
+          "weekStart": "2026-08-06",
+          "retentionPct": 36.7
+        },
+        {
+          "weekStart": "2026-08-13",
+          "retentionPct": 37.4
+        },
+        {
+          "weekStart": "2026-08-14",
+          "retentionPct": 37.1
+        },
+        {
+          "weekStart": "2026-08-20",
+          "retentionPct": 36.4
+        },
+        {
+          "weekStart": "2026-08-21",
+          "retentionPct": 58.2
+        },
+        {
+          "weekStart": "2026-08-27",
+          "retentionPct": 31.4
+        },
+        {
+          "weekStart": "2026-08-28",
+          "retentionPct": 57.5
+        },
+        {
+          "weekStart": "2026-09-03",
+          "retentionPct": 33.3
+        },
+        {
+          "weekStart": "2026-09-04",
+          "retentionPct": 40.6
+        },
+        {
+          "weekStart": "2026-09-10",
+          "retentionPct": 28.6
+        },
+        {
+          "weekStart": "2026-09-11",
+          "retentionPct": 40.7
+        },
+        {
+          "weekStart": "2026-09-17",
+          "retentionPct": 35
+        },
+        {
+          "weekStart": "2026-09-18",
+          "retentionPct": 63.4
+        },
+        {
+          "weekStart": "2026-09-24",
+          "retentionPct": 32.6
+        },
+        {
+          "weekStart": "2026-09-25",
+          "retentionPct": 38.2
+        },
+        {
+          "weekStart": "2026-10-01",
+          "retentionPct": 38
+        },
+        {
+          "weekStart": "2026-10-02",
+          "retentionPct": 42.6
+        },
+        {
+          "weekStart": "2026-10-08",
+          "retentionPct": 34.1
+        },
+        {
+          "weekStart": "2026-10-09",
+          "retentionPct": 40
+        },
+        {
+          "weekStart": "2026-10-15",
+          "retentionPct": 34.8
+        },
+        {
+          "weekStart": "2026-10-16",
+          "retentionPct": 29.7
+        },
+        {
+          "weekStart": "2026-10-22",
+          "retentionPct": 31.3
+        },
+        {
+          "weekStart": "2026-10-23",
+          "retentionPct": 32.5
+        },
+        {
+          "weekStart": "2026-10-29",
+          "retentionPct": 29.8
+        },
+        {
+          "weekStart": "2026-10-30",
+          "retentionPct": 32
+        }
+      ]
+    },
+    "demographics": {
+      "ageDistribution": [
+        {
+          "ageRange": "0-17",
+          "percentage": 0.5
+        },
+        {
+          "ageRange": "18-22",
+          "percentage": 4.6
+        },
+        {
+          "ageRange": "23-27",
+          "percentage": 13.5
+        },
+        {
+          "ageRange": "28-34",
+          "percentage": 24
+        },
+        {
+          "ageRange": "35-44",
+          "percentage": 31.1
+        },
+        {
+          "ageRange": "45-59",
+          "percentage": 22.7
+        },
+        {
+          "ageRange": "60+",
+          "percentage": 3.1
+        },
+        {
+          "ageRange": "Unknown",
+          "percentage": 0.5
+        }
+      ],
+      "topCountries": [
+        {
+          "country": "Canada",
+          "percentage": 16.7
+        },
+        {
+          "country": "Germany",
+          "percentage": 13.7
+        },
+        {
+          "country": "United States",
+          "percentage": 9.8
+        },
+        {
+          "country": "Sweden",
+          "percentage": 8.1
+        },
+        {
+          "country": "Netherlands",
+          "percentage": 6.8
+        },
+        {
+          "country": "Vietnam",
+          "percentage": 6.3
+        },
+        {
+          "country": "Japan",
+          "percentage": 5.6
+        },
+        {
+          "country": "Italy",
+          "percentage": 4.3
+        },
+        {
+          "country": "Brazil",
+          "percentage": 3.6
+        },
+        {
+          "country": "Switzerland",
+          "percentage": 2.8
+        }
+      ],
+      "allCountries": [
+        "Afghanistan",
+        "Albania",
+        "Algeria",
+        "Andorra",
+        "Angola",
+        "Argentina",
+        "Armenia",
+        "Australia",
+        "Austria",
+        "Azerbaijan",
+        "Barbados",
+        "Belarus",
+        "Belgium",
+        "Benin",
+        "Bolivia",
+        "Botswana",
+        "Brazil",
+        "Brunei",
+        "Bulgaria",
+        "Cambodia",
+        "Cameroon",
+        "Canada",
+        "Chile",
+        "China",
+        "Colombia",
+        "Costa Rica",
+        "Croatia",
+        "Cyprus",
+        "Czechia",
+        "Denmark",
+        "Dominican Republic",
+        "Ecuador",
+        "Egypt",
+        "El Salvador",
+        "Estonia",
+        "Finland",
+        "France",
+        "Georgia",
+        "Germany",
+        "Ghana",
+        "Greece",
+        "Guatemala",
+        "Guinea",
+        "Honduras",
+        "Hong Kong",
+        "Hungary",
+        "Iceland",
+        "India",
+        "Indonesia",
+        "Iraq",
+        "Ireland",
+        "Israel",
+        "Italy",
+        "Ivory Coast",
+        "Japan",
+        "Jordan",
+        "Kazakhstan",
+        "Kenya",
+        "Kosovo",
+        "Kuwait",
+        "Laos",
+        "Latvia",
+        "Lebanon",
+        "Libya",
+        "Lithuania",
+        "Luxembourg",
+        "Madagascar",
+        "Malawi",
+        "Malaysia",
+        "Maldives",
+        "Mali",
+        "Malta",
+        "Mauritius",
+        "Mexico",
+        "Moldova",
+        "Mongolia",
+        "Morocco",
+        "Mozambique",
+        "Myanmar",
+        "Namibia",
+        "Nepal",
+        "Netherlands",
+        "New Zealand",
+        "Nicaragua",
+        "Nigeria",
+        "North Macedonia",
+        "Norway",
+        "Oman",
+        "Palestine",
+        "Panama",
+        "Papua New Guinea",
+        "Paraguay",
+        "Peru",
+        "Philippines",
+        "Poland",
+        "Portugal",
+        "Puerto Rico",
+        "Qatar",
+        "Romania",
+        "Russia",
+        "Rwanda",
+        "Saudi Arabia",
+        "Senegal",
+        "Serbia",
+        "Singapore",
+        "Slovakia",
+        "Slovenia",
+        "South Africa",
+        "South Korea",
+        "Spain",
+        "Sudan",
+        "Sweden",
+        "Switzerland",
+        "Syria",
+        "Taiwan",
+        "Tanzania",
+        "Thailand",
+        "Togo",
+        "Trinidad and Tobago",
+        "Tunisia",
+        "Turkey",
+        "Uganda",
+        "Ukraine",
+        "United Arab Emirates",
+        "United Kingdom",
+        "United States",
+        "Uruguay",
+        "Uzbekistan",
+        "Venezuela",
+        "Vietnam",
+        "Zambia",
+        "Zimbabwe"
+      ],
+      "gender": [
+        {
+          "gender": "Male",
+          "percentage": 54.6
+        },
+        {
+          "gender": "Female",
+          "percentage": 39.5
+        },
+        {
+          "gender": "Non-binary",
+          "percentage": 0.3
+        },
+        {
+          "gender": "Not specified",
+          "percentage": 5.7
+        }
+      ]
+    },
+    "showsSummary": [
+      {
+        "showId": "english-german",
+        "combinedMonthlyPlays": 9955,
+        "totalFollowers": 2723,
+        "avgCompletionRate": 83.5,
+        "impressions30d": 113979
+      },
+      {
+        "showId": "english-spanish",
+        "combinedMonthlyPlays": 1552,
+        "totalFollowers": 101,
+        "avgCompletionRate": 93.8,
+        "impressions30d": 2022
+      },
+      {
+        "showId": "english-dutch",
+        "combinedMonthlyPlays": 743,
+        "totalFollowers": 147,
+        "avgCompletionRate": 77.5,
+        "impressions30d": 5695
+      },
+      {
+        "showId": "english-swedish",
+        "combinedMonthlyPlays": 430,
+        "totalFollowers": 55,
+        "avgCompletionRate": 0,
+        "impressions30d": 1782
+      },
+      {
+        "showId": "english-italian",
+        "combinedMonthlyPlays": 291,
+        "totalFollowers": 73,
+        "avgCompletionRate": 0,
+        "impressions30d": 2066
+      },
+      {
+        "showId": "english-french",
+        "combinedMonthlyPlays": 283,
+        "totalFollowers": 69,
+        "avgCompletionRate": 90,
+        "impressions30d": 2960
+      },
+      {
+        "showId": "english-portuguese",
+        "combinedMonthlyPlays": 280,
+        "totalFollowers": 55,
+        "avgCompletionRate": 0,
+        "impressions30d": 1172
+      }
+    ]
+  },
+  "shows": [
+    {
+      "showId": "english-dutch",
+      "hasData": true,
+      "latestDate": "2026-11-12",
+      "sources": {
+        "spotify": true,
+        "apple": true,
+        "op3": false
+      },
+      "kpis": {
+        "combinedMonthlyPlays": 743,
+        "spotifyPlays30d": 513,
+        "spotifyPlays90d": 778,
+        "spotifyPlaysAllTime": 784,
+        "spotifyAvgDailyPlays30d": 17.1,
+        "spotifyAvgDailyAudience30d": 4.7,
+        "spotifyPeakDailyPlays": 53,
+        "applePlaysLatestMonth": 230,
+        "applePlaysAllTime": 835,
+        "op3Downloads30d": 0,
+        "op3Downloads90d": 0,
+        "impressions30d": 5695,
+        "impressions90d": 9069,
+        "avgDailyImpressions30d": 190,
+        "spotifyFollowers": 102,
+        "appleFollowers": 45,
+        "totalFollowers": 147,
+        "avgCompletionRate": 77.5,
+        "appleEngagedRatePct": 73.8,
+        "consumptionHours30d": 36.9,
+        "consumptionHoursAllTime": 58.5,
+        "monthlyHoursListened": 45.7,
+        "returningListenerPct30d": 0,
+        "latestWoWRetentionPct": 26.1,
+        "appleGrowthMultiple": 13.5,
+        "age23to44Pct": 91.2,
+        "age23to59Pct": 93.2,
+        "dachSharePct": 13.9,
+        "countriesCount": 23
+      },
+      "charts": {
+        "weeklyPlays": [
+          {
+            "weekStart": "2026-08-10",
+            "value": 0
+          },
+          {
+            "weekStart": "2026-08-17",
+            "value": 8
+          },
+          {
+            "weekStart": "2026-08-24",
+            "value": 11
+          },
+          {
+            "weekStart": "2026-08-31",
+            "value": 10
+          },
+          {
+            "weekStart": "2026-09-07",
+            "value": 13
+          },
+          {
+            "weekStart": "2026-09-14",
+            "value": 18
+          },
+          {
+            "weekStart": "2026-09-21",
+            "value": 13
+          },
+          {
+            "weekStart": "2026-09-28",
+            "value": 44
+          },
+          {
+            "weekStart": "2026-10-05",
+            "value": 105
+          },
+          {
+            "weekStart": "2026-10-12",
+            "value": 139
+          },
+          {
+            "weekStart": "2026-10-19",
+            "value": 68
+          },
+          {
+            "weekStart": "2026-10-26",
+            "value": 143
+          },
+          {
+            "weekStart": "2026-11-02",
+            "value": 120
+          }
+        ],
+        "spotifyMonthlyTrends": [
+          {
+            "month": "2026-06",
+            "plays": 3
+          },
+          {
+            "month": "2026-07",
+            "plays": 2
+          },
+          {
+            "month": "2026-08",
+            "plays": 22
+          },
+          {
+            "month": "2026-09",
+            "plays": 65
+          },
+          {
+            "month": "2026-10",
+            "plays": 482
+          }
+        ],
+        "appleMonthlyTrends": [
+          {
+            "month": "2026-06",
+            "plays": 17,
+            "totalSecondsListened": 529,
+            "uniqueListeners": 9,
+            "uniqueEngagedListeners": 2,
+            "hoursListened": 0.1,
+            "engagedRatePct": 22.2
+          },
+          {
+            "month": "2026-07",
+            "plays": 56,
+            "totalSecondsListened": 5033,
+            "uniqueListeners": 32,
+            "uniqueEngagedListeners": 15,
+            "hoursListened": 1.4,
+            "engagedRatePct": 46.9
+          },
+          {
+            "month": "2026-08",
+            "plays": 176,
+            "totalSecondsListened": 18492,
+            "uniqueListeners": 78,
+            "uniqueEngagedListeners": 55,
+            "hoursListened": 5.1,
+            "engagedRatePct": 70.5
+          },
+          {
+            "month": "2026-09",
+            "plays": 177,
+            "totalSecondsListened": 24479,
+            "uniqueListeners": 87,
+            "uniqueEngagedListeners": 63,
+            "hoursListened": 6.8,
+            "engagedRatePct": 72.4
+          },
+          {
+            "month": "2026-10",
+            "plays": 230,
+            "totalSecondsListened": 31708,
+            "uniqueListeners": 122,
+            "uniqueEngagedListeners": 90,
+            "hoursListened": 8.8,
+            "engagedRatePct": 73.8
+          }
+        ],
+        "wowRetention": [
+          {
+            "weekStart": "2026-08-14",
+            "retentionPct": 66.66667
+          },
+          {
+            "weekStart": "2026-08-21",
+            "retentionPct": 50
+          },
+          {
+            "weekStart": "2026-08-28",
+            "retentionPct": 66.66667
+          },
+          {
+            "weekStart": "2026-09-04",
+            "retentionPct": 25
+          },
+          {
+            "weekStart": "2026-09-11",
+            "retentionPct": 20
+          },
+          {
+            "weekStart": "2026-09-18",
+            "retentionPct": 100
+          },
+          {
+            "weekStart": "2026-09-25",
+            "retentionPct": 42.857143
+          },
+          {
+            "weekStart": "2026-10-02",
+            "retentionPct": 35.714287
+          },
+          {
+            "weekStart": "2026-10-09",
+            "retentionPct": 23.809524
+          },
+          {
+            "weekStart": "2026-10-16",
+            "retentionPct": 20
+          },
+          {
+            "weekStart": "2026-10-23",
+            "retentionPct": 31.25
+          },
+          {
+            "weekStart": "2026-10-30",
+            "retentionPct": 26.086956
+          }
+        ]
+      },
+      "demographics": {
+        "ageByGender": [
+          {
+            "ageRange": "0-17",
+            "totalPct": 0.12755102040816327,
+            "malePct": 0,
+            "femalePct": 0,
+            "nonBinaryPct": 0,
+            "notSpecifiedPct": 0.12755102040816327
+          },
+          {
+            "ageRange": "18-22",
+            "totalPct": 3.061224489795918,
+            "malePct": 0,
+            "femalePct": 2.1683673469387754,
+            "nonBinaryPct": 0,
+            "notSpecifiedPct": 0.8928571428571428
+          },
+          {
+            "ageRange": "23-27",
+            "totalPct": 8.928571428571429,
+            "malePct": 3.188775510204082,
+            "femalePct": 5.229591836734694,
+            "nonBinaryPct": 0.5102040816326531,
+            "notSpecifiedPct": 0
+          },
+          {
+            "ageRange": "28-34",
+            "totalPct": 22.448979591836732,
+            "malePct": 11.35204081632653,
+            "femalePct": 11.096938775510203,
+            "nonBinaryPct": 0,
+            "notSpecifiedPct": 0
+          },
+          {
+            "ageRange": "35-44",
+            "totalPct": 59.82142857142857,
+            "malePct": 11.096938775510203,
+            "femalePct": 48.5969387755102,
+            "nonBinaryPct": 0,
+            "notSpecifiedPct": 0.12755102040816327
+          },
+          {
+            "ageRange": "45-59",
+            "totalPct": 2.0408163265306123,
+            "malePct": 0.5102040816326531,
+            "femalePct": 1.403061224489796,
+            "nonBinaryPct": 0,
+            "notSpecifiedPct": 0.12755102040816327
+          },
+          {
+            "ageRange": "60+",
+            "totalPct": 0.25510204081632654,
+            "malePct": 0.25510204081632654,
+            "femalePct": 0,
+            "nonBinaryPct": 0,
+            "notSpecifiedPct": 0
+          },
+          {
+            "ageRange": "Unknown",
+            "totalPct": 3.316326530612245,
+            "malePct": 0,
+            "femalePct": 0,
+            "nonBinaryPct": 0,
+            "notSpecifiedPct": 3.316326530612245
+          }
+        ],
+        "gender": [
+          {
+            "gender": "Male",
+            "percentage": 26.403061224489793
+          },
+          {
+            "gender": "Female",
+            "percentage": 68.49489795918367
+          },
+          {
+            "gender": "Non-binary",
+            "percentage": 0.5102040816326531
+          },
+          {
+            "gender": "Not specified",
+            "percentage": 4.591836734693878
+          }
+        ],
+        "topCountries": [
+          {
+            "country": "Netherlands",
+            "percentage": 43.51245085190039
+          },
+          {
+            "country": "Italy",
+            "percentage": 26.605504587155966
+          },
+          {
+            "country": "Germany",
+            "percentage": 12.18872870249017
+          },
+          {
+            "country": "France",
+            "percentage": 3.014416775884666
+          },
+          {
+            "country": "Belgium",
+            "percentage": 2.621231979030144
+          },
+          {
+            "country": "United States",
+            "percentage": 2.3591087811271296
+          },
+          {
+            "country": "Portugal",
+            "percentage": 2.2280471821756227
+          },
+          {
+            "country": "United Kingdom",
+            "percentage": 1.9659239842726082
+          },
+          {
+            "country": "Austria",
+            "percentage": 1.7038007863695939
+          },
+          {
+            "country": "Spain",
+            "percentage": 0.9174311926605505
+          },
+          {
+            "country": "Australia",
+            "percentage": 0.655307994757536
+          },
+          {
+            "country": "Poland",
+            "percentage": 0.655307994757536
+          }
+        ],
+        "allCountries": [
+          {
+            "country": "Netherlands",
+            "percentage": 43.51245085190039
+          },
+          {
+            "country": "Italy",
+            "percentage": 26.605504587155966
+          },
+          {
+            "country": "Germany",
+            "percentage": 12.18872870249017
+          },
+          {
+            "country": "France",
+            "percentage": 3.014416775884666
+          },
+          {
+            "country": "Belgium",
+            "percentage": 2.621231979030144
+          },
+          {
+            "country": "United States",
+            "percentage": 2.3591087811271296
+          },
+          {
+            "country": "Portugal",
+            "percentage": 2.2280471821756227
+          },
+          {
+            "country": "United Kingdom",
+            "percentage": 1.9659239842726082
+          },
+          {
+            "country": "Austria",
+            "percentage": 1.7038007863695939
+          },
+          {
+            "country": "Spain",
+            "percentage": 0.9174311926605505
+          },
+          {
+            "country": "Australia",
+            "percentage": 0.655307994757536
+          },
+          {
+            "country": "Poland",
+            "percentage": 0.655307994757536
+          },
+          {
+            "country": "Egypt",
+            "percentage": 0.2621231979030144
+          },
+          {
+            "country": "Israel",
+            "percentage": 0.1310615989515072
+          },
+          {
+            "country": "Mexico",
+            "percentage": 0.1310615989515072
+          },
+          {
+            "country": "Colombia",
+            "percentage": 0.1310615989515072
+          },
+          {
+            "country": "Brazil",
+            "percentage": 0.1310615989515072
+          },
+          {
+            "country": "Qatar",
+            "percentage": 0.1310615989515072
+          },
+          {
+            "country": "Vietnam",
+            "percentage": 0.1310615989515072
+          },
+          {
+            "country": "Nigeria",
+            "percentage": 0.1310615989515072
+          },
+          {
+            "country": "Indonesia",
+            "percentage": 0.1310615989515072
+          },
+          {
+            "country": "Romania",
+            "percentage": 0.1310615989515072
+          },
+          {
+            "country": "Turkey",
+            "percentage": 0.1310615989515072
+          }
+        ]
+      },
+      "topEpisodes": {
+        "byConsumption": [],
+        "byImpressions": []
+      }
+    },
+    {
+      "showId": "english-french",
+      "hasData": true,
+      "latestDate": "2026-11-12",
+      "sources": {
+        "spotify": true,
+        "apple": true,
+        "op3": false
+      },
+      "kpis": {
+        "combinedMonthlyPlays": 283,
+        "spotifyPlays30d": 167,
+        "spotifyPlays90d": 463,
+        "spotifyPlaysAllTime": 535,
+        "spotifyAvgDailyPlays30d": 5.6,
+        "spotifyAvgDailyAudience30d": 1.6,
+        "spotifyPeakDailyPlays": 64,
+        "applePlaysLatestMonth": 116,
+        "applePlaysAllTime": 410,
+        "op3Downloads30d": 0,
+        "op3Downloads90d": 0,
+        "impressions30d": 2960,
+        "impressions90d": 6902,
+        "avgDailyImpressions30d": 99,
+        "spotifyFollowers": 37,
+        "appleFollowers": 32,
+        "totalFollowers": 69,
+        "avgCompletionRate": 90,
+        "appleEngagedRatePct": 0,
+        "consumptionHours30d": 11.9,
+        "consumptionHoursAllTime": 37.5,
+        "monthlyHoursListened": 17.5,
+        "returningListenerPct30d": 0,
+        "latestWoWRetentionPct": 37.5,
+        "appleGrowthMultiple": 3.3,
+        "age23to44Pct": 0,
+        "age23to59Pct": 0,
+        "dachSharePct": 8.2,
+        "countriesCount": 27
+      },
+      "charts": {
+        "weeklyPlays": [
+          {
+            "weekStart": "2026-08-10",
+            "value": 8
+          },
+          {
+            "weekStart": "2026-08-17",
+            "value": 16
+          },
+          {
+            "weekStart": "2026-08-24",
+            "value": 5
+          },
+          {
+            "weekStart": "2026-08-31",
+            "value": 3
+          },
+          {
+            "weekStart": "2026-09-07",
+            "value": 2
+          },
+          {
+            "weekStart": "2026-09-14",
+            "value": 4
+          },
+          {
+            "weekStart": "2026-09-21",
+            "value": 13
+          },
+          {
+            "weekStart": "2026-09-28",
+            "value": 84
+          },
+          {
+            "weekStart": "2026-10-05",
+            "value": 162
+          },
+          {
+            "weekStart": "2026-10-12",
+            "value": 23
+          },
+          {
+            "weekStart": "2026-10-19",
+            "value": 37
+          },
+          {
+            "weekStart": "2026-10-26",
+            "value": 33
+          },
+          {
+            "weekStart": "2026-11-02",
+            "value": 60
+          }
+        ],
+        "spotifyMonthlyTrends": [
+          {
+            "month": "2026-06",
+            "plays": 40
+          },
+          {
+            "month": "2026-07",
+            "plays": 30
+          },
+          {
+            "month": "2026-08",
+            "plays": 30
+          },
+          {
+            "month": "2026-09",
+            "plays": 29
+          },
+          {
+            "month": "2026-10",
+            "plays": 330
+          }
+        ],
+        "appleMonthlyTrends": [
+          {
+            "month": "2026-06",
+            "plays": 35,
+            "totalSecondsListened": 4053,
+            "uniqueListeners": 21,
+            "uniqueEngagedListeners": 0,
+            "hoursListened": 1.1,
+            "engagedRatePct": 0
+          },
+          {
+            "month": "2026-07",
+            "plays": 84,
+            "totalSecondsListened": 11259,
+            "uniqueListeners": 47,
+            "uniqueEngagedListeners": 0,
+            "hoursListened": 3.1,
+            "engagedRatePct": 0
+          },
+          {
+            "month": "2026-08",
+            "plays": 33,
+            "totalSecondsListened": 4535,
+            "uniqueListeners": 21,
+            "uniqueEngagedListeners": 0,
+            "hoursListened": 1.3,
+            "engagedRatePct": 0
+          },
+          {
+            "month": "2026-09",
+            "plays": 123,
+            "totalSecondsListened": 22622,
+            "uniqueListeners": 101,
+            "uniqueEngagedListeners": 0,
+            "hoursListened": 6.3,
+            "engagedRatePct": 0
+          },
+          {
+            "month": "2026-10",
+            "plays": 116,
+            "totalSecondsListened": 19994,
+            "uniqueListeners": 79,
+            "uniqueEngagedListeners": 0,
+            "hoursListened": 5.6,
+            "engagedRatePct": 0
+          }
+        ],
+        "wowRetention": [
+          {
+            "weekStart": "2026-08-14",
+            "retentionPct": 0
+          },
+          {
+            "weekStart": "2026-08-21",
+            "retentionPct": 0
+          },
+          {
+            "weekStart": "2026-08-28",
+            "retentionPct": 25
+          },
+          {
+            "weekStart": "2026-09-04",
+            "retentionPct": 0
+          },
+          {
+            "weekStart": "2026-09-11",
+            "retentionPct": 0
+          },
+          {
+            "weekStart": "2026-09-18",
+            "retentionPct": 0
+          },
+          {
+            "weekStart": "2026-09-25",
+            "retentionPct": 50
+          },
+          {
+            "weekStart": "2026-10-02",
+            "retentionPct": 30
+          },
+          {
+            "weekStart": "2026-10-09",
+            "retentionPct": 33.333334
+          },
+          {
+            "weekStart": "2026-10-16",
+            "retentionPct": 50
+          },
+          {
+            "weekStart": "2026-10-23",
+            "retentionPct": 14.285715
+          },
+          {
+            "weekStart": "2026-10-30",
+            "retentionPct": 37.5
+          }
+        ]
+      },
+      "demographics": {
+        "ageByGender": [],
+        "gender": [],
+        "topCountries": [
+          {
+            "country": "Japan",
+            "percentage": 38.31775700934579
+          },
+          {
+            "country": "Canada",
+            "percentage": 22.242990654205606
+          },
+          {
+            "country": "United States",
+            "percentage": 18.317757009345794
+          },
+          {
+            "country": "Germany",
+            "percentage": 8.037383177570094
+          },
+          {
+            "country": "Spain",
+            "percentage": 2.6168224299065423
+          },
+          {
+            "country": "France",
+            "percentage": 2.2429906542056073
+          },
+          {
+            "country": "United Kingdom",
+            "percentage": 2.2429906542056073
+          },
+          {
+            "country": "Colombia",
+            "percentage": 0.7476635514018692
+          },
+          {
+            "country": "Belgium",
+            "percentage": 0.5607476635514018
+          },
+          {
+            "country": "Philippines",
+            "percentage": 0.5607476635514018
+          },
+          {
+            "country": "Brazil",
+            "percentage": 0.3738317757009346
+          },
+          {
+            "country": "Egypt",
+            "percentage": 0.3738317757009346
+          }
+        ],
+        "allCountries": [
+          {
+            "country": "Japan",
+            "percentage": 38.31775700934579
+          },
+          {
+            "country": "Canada",
+            "percentage": 22.242990654205606
+          },
+          {
+            "country": "United States",
+            "percentage": 18.317757009345794
+          },
+          {
+            "country": "Germany",
+            "percentage": 8.037383177570094
+          },
+          {
+            "country": "Spain",
+            "percentage": 2.6168224299065423
+          },
+          {
+            "country": "France",
+            "percentage": 2.2429906542056073
+          },
+          {
+            "country": "United Kingdom",
+            "percentage": 2.2429906542056073
+          },
+          {
+            "country": "Colombia",
+            "percentage": 0.7476635514018692
+          },
+          {
+            "country": "Belgium",
+            "percentage": 0.5607476635514018
+          },
+          {
+            "country": "Philippines",
+            "percentage": 0.5607476635514018
+          },
+          {
+            "country": "Brazil",
+            "percentage": 0.3738317757009346
+          },
+          {
+            "country": "Egypt",
+            "percentage": 0.3738317757009346
+          },
+          {
+            "country": "Argentina",
+            "percentage": 0.3738317757009346
+          },
+          {
+            "country": "Australia",
+            "percentage": 0.3738317757009346
+          },
+          {
+            "country": "Czechia",
+            "percentage": 0.3738317757009346
+          },
+          {
+            "country": "Portugal",
+            "percentage": 0.1869158878504673
+          },
+          {
+            "country": "Denmark",
+            "percentage": 0.1869158878504673
+          },
+          {
+            "country": "Hungary",
+            "percentage": 0.1869158878504673
+          },
+          {
+            "country": "Sweden",
+            "percentage": 0.1869158878504673
+          },
+          {
+            "country": "Slovakia",
+            "percentage": 0.1869158878504673
+          },
+          {
+            "country": "Switzerland",
+            "percentage": 0.1869158878504673
+          },
+          {
+            "country": "India",
+            "percentage": 0.1869158878504673
+          },
+          {
+            "country": "Cameroon",
+            "percentage": 0.1869158878504673
+          },
+          {
+            "country": "Greece",
+            "percentage": 0.1869158878504673
+          },
+          {
+            "country": "Italy",
+            "percentage": 0.1869158878504673
+          },
+          {
+            "country": "Azerbaijan",
+            "percentage": 0.1869158878504673
+          },
+          {
+            "country": "Netherlands",
+            "percentage": 0.1869158878504673
+          }
+        ]
+      },
+      "topEpisodes": {
+        "byConsumption": [],
+        "byImpressions": [
+          {
+            "title": "S1E98 - Location de bateau: Sur l'eau!",
+            "impressions": 105,
+            "home": 21,
+            "search": 73,
+            "library": 11,
+            "publishDate": "2026-09-09"
+          },
+          {
+            "title": "S1E85 - En boîte de nuit: On va danser!",
+            "impressions": 100,
+            "home": 20,
+            "search": 71,
+            "library": 9,
+            "publishDate": "2026-08-27"
+          },
+          {
+            "title": "S1E128 - Chez l'Ergothérapeute: Mon bras fait mal",
+            "impressions": 86,
+            "home": 20,
+            "search": 64,
+            "library": 2,
+            "publishDate": "2026-10-09"
+          },
+          {
+            "title": "S1E144 - Au Photomaton: Un sourire pour la photo!",
+            "impressions": 83,
+            "home": 27,
+            "search": 54,
+            "library": 2,
+            "publishDate": "2026-10-25"
+          },
+          {
+            "title": "S1E27 - Chez le fleuriste: Un beau bouquet de roses",
+            "impressions": 71,
+            "home": 18,
+            "search": 46,
+            "library": 7,
+            "publishDate": "2026-06-30"
+          },
+          {
+            "title": "S1E141 - Au café coworking: Ma journée de travail",
+            "impressions": 62,
+            "home": 33,
+            "search": 27,
+            "library": 2,
+            "publishDate": "2026-10-22"
+          },
+          {
+            "title": "S1E132 - Au Centre Communautaire: Je cherche une activité",
+            "impressions": 60,
+            "home": 44,
+            "search": 14,
+            "library": 2,
+            "publishDate": "2026-10-13"
+          },
+          {
+            "title": "S1E137 - Au Centre Culturel: Quelle activité choisir ?",
+            "impressions": 60,
+            "home": 51,
+            "search": 8,
+            "library": 1,
+            "publishDate": "2026-10-18"
+          },
+          {
+            "title": "S1E150 - Au Café-Jeux: Quel jeu on choisit ce soir?",
+            "impressions": 58,
+            "home": 48,
+            "search": 9,
+            "library": 1,
+            "publishDate": "2026-10-31"
+          },
+          {
+            "title": "S1E2 - À la banque: J'ai besoin d'ouvrir un compte",
+            "impressions": 55,
+            "home": 6,
+            "search": 47,
+            "library": 2,
+            "publishDate": "2026-06-04"
+          }
+        ]
+      }
+    },
+    {
+      "showId": "english-german",
+      "hasData": true,
+      "latestDate": "2026-11-11",
+      "sources": {
+        "spotify": true,
+        "apple": true,
+        "op3": false
+      },
+      "kpis": {
+        "combinedMonthlyPlays": 9955,
+        "spotifyPlays30d": 8918,
+        "spotifyPlays90d": 24152,
+        "spotifyPlaysAllTime": 71840,
+        "spotifyAvgDailyPlays30d": 297.3,
+        "spotifyAvgDailyAudience30d": 59.4,
+        "spotifyPeakDailyPlays": 647,
+        "applePlaysLatestMonth": 1037,
+        "applePlaysAllTime": 3745,
+        "op3Downloads30d": 0,
+        "op3Downloads90d": 0,
+        "impressions30d": 113979,
+        "impressions90d": 290736,
+        "avgDailyImpressions30d": 3799,
+        "spotifyFollowers": 2363,
+        "appleFollowers": 360,
+        "totalFollowers": 2723,
+        "avgCompletionRate": 83.5,
+        "appleEngagedRatePct": 79.7,
+        "consumptionHours30d": 645.9,
+        "consumptionHoursAllTime": 4549.4,
+        "monthlyHoursListened": 685.7,
+        "returningListenerPct30d": 75.7,
+        "latestWoWRetentionPct": 29.8,
+        "appleGrowthMultiple": 4.5,
+        "age23to44Pct": 69.5,
+        "age23to59Pct": 91.4,
+        "dachSharePct": 36.6,
+        "countriesCount": 130
+      },
+      "charts": {
+        "weeklyPlays": [
+          {
+            "weekStart": "2026-08-10",
+            "value": 2076
+          },
+          {
+            "weekStart": "2026-08-17",
+            "value": 1923
+          },
+          {
+            "weekStart": "2026-08-24",
+            "value": 1745
+          },
+          {
+            "weekStart": "2026-08-31",
+            "value": 2263
+          },
+          {
+            "weekStart": "2026-09-07",
+            "value": 1917
+          },
+          {
+            "weekStart": "2026-09-14",
+            "value": 1599
+          },
+          {
+            "weekStart": "2026-09-21",
+            "value": 1558
+          },
+          {
+            "weekStart": "2026-09-28",
+            "value": 1783
+          },
+          {
+            "weekStart": "2026-10-05",
+            "value": 1437
+          },
+          {
+            "weekStart": "2026-10-12",
+            "value": 1759
+          },
+          {
+            "weekStart": "2026-10-19",
+            "value": 1799
+          },
+          {
+            "weekStart": "2026-10-26",
+            "value": 2042
+          },
+          {
+            "weekStart": "2026-11-02",
+            "value": 2848
+          }
+        ],
+        "spotifyMonthlyTrends": [
+          {
+            "month": "2026-05",
+            "plays": 9918
+          },
+          {
+            "month": "2026-06",
+            "plays": 9009
+          },
+          {
+            "month": "2026-07",
+            "plays": 9069
+          },
+          {
+            "month": "2026-08",
+            "plays": 9069
+          },
+          {
+            "month": "2026-09",
+            "plays": 7647
+          },
+          {
+            "month": "2026-10",
+            "plays": 7770
+          }
+        ],
+        "appleMonthlyTrends": [
+          {
+            "month": "2026-05",
+            "plays": 232,
+            "totalSecondsListened": 45007,
+            "uniqueListeners": 125,
+            "uniqueEngagedListeners": 102,
+            "hoursListened": 12.5,
+            "engagedRatePct": 81.6
+          },
+          {
+            "month": "2026-06",
+            "plays": 439,
+            "totalSecondsListened": 62152,
+            "uniqueListeners": 223,
+            "uniqueEngagedListeners": 180,
+            "hoursListened": 17.3,
+            "engagedRatePct": 80.7
+          },
+          {
+            "month": "2026-07",
+            "plays": 496,
+            "totalSecondsListened": 60837,
+            "uniqueListeners": 244,
+            "uniqueEngagedListeners": 191,
+            "hoursListened": 16.9,
+            "engagedRatePct": 78.3
+          },
+          {
+            "month": "2026-08",
+            "plays": 520,
+            "totalSecondsListened": 74222,
+            "uniqueListeners": 299,
+            "uniqueEngagedListeners": 219,
+            "hoursListened": 20.6,
+            "engagedRatePct": 73.2
+          },
+          {
+            "month": "2026-09",
+            "plays": 726,
+            "totalSecondsListened": 115192,
+            "uniqueListeners": 396,
+            "uniqueEngagedListeners": 314,
+            "hoursListened": 32,
+            "engagedRatePct": 79.3
+          },
+          {
+            "month": "2026-10",
+            "plays": 1037,
+            "totalSecondsListened": 143120,
+            "uniqueListeners": 512,
+            "uniqueEngagedListeners": 408,
+            "hoursListened": 39.8,
+            "engagedRatePct": 79.7
+          }
+        ],
+        "wowRetention": [
+          {
+            "weekStart": "2026-07-16",
+            "retentionPct": 36.206895
+          },
+          {
+            "weekStart": "2026-07-23",
+            "retentionPct": 37.2
+          },
+          {
+            "weekStart": "2026-07-30",
+            "retentionPct": 32.978722
+          },
+          {
+            "weekStart": "2026-08-06",
+            "retentionPct": 36.681223
+          },
+          {
+            "weekStart": "2026-08-13",
+            "retentionPct": 37.444934
+          },
+          {
+            "weekStart": "2026-08-20",
+            "retentionPct": 36.40351
+          },
+          {
+            "weekStart": "2026-08-27",
+            "retentionPct": 31.37931
+          },
+          {
+            "weekStart": "2026-09-03",
+            "retentionPct": 33.333334
+          },
+          {
+            "weekStart": "2026-09-10",
+            "retentionPct": 28.57143
+          },
+          {
+            "weekStart": "2026-09-17",
+            "retentionPct": 34.97537
+          },
+          {
+            "weekStart": "2026-09-24",
+            "retentionPct": 32.568806
+          },
+          {
+            "weekStart": "2026-10-01",
+            "retentionPct": 37.980768
+          },
+          {
+            "weekStart": "2026-10-08",
+            "retentionPct": 34.065935
+          },
+          {
+            "weekStart": "2026-10-15",
+            "retentionPct": 34.782610000000005
+          },
+          {
+            "weekStart": "2026-10-22",
+            "retentionPct": 31.320754
+          },
+          {
+            "weekStart": "2026-10-29",
+            "retentionPct": 29.787233
+          }
+        ]
+      },
+      "demographics": {
+        "ageByGender": [
+          {
+            "ageRange": "0-17",
+            "totalPct": 0.5665367483296214,
+            "malePct": 0.313195991091314,
+            "femalePct": 0.17260579064587975,
+            "nonBinaryPct": 0,
+            "notSpecifiedPct": 0.08073496659242761
+          },
+          {
+            "ageRange": "18-22",
+            "totalPct": 4.679844097995545,
+            "malePct": 2.1088530066815143,
+            "femalePct": 2.093541202672606,
+            "nonBinaryPct": 0.044543429844097995,
+            "notSpecifiedPct": 0.43290645879732736
+          },
+          {
+            "ageRange": "23-27",
+            "totalPct": 13.929565701559019,
+            "malePct": 5.56792873051225,
+            "femalePct": 6.930679287305122,
+            "nonBinaryPct": 0.08908685968819599,
+            "notSpecifiedPct": 1.341870824053452
+          },
+          {
+            "ageRange": "28-34",
+            "totalPct": 24.024220489977726,
+            "malePct": 11.071826280623608,
+            "femalePct": 11.86804008908686,
+            "nonBinaryPct": 0.04593541202672606,
+            "notSpecifiedPct": 1.0384187082405345
+          },
+          {
+            "ageRange": "35-44",
+            "totalPct": 31.538140311804007,
+            "malePct": 16.45740534521158,
+            "femalePct": 13.443763919821826,
+            "nonBinaryPct": 0.04315144766146994,
+            "notSpecifiedPct": 1.5938195991091315
+          },
+          {
+            "ageRange": "45-59",
+            "totalPct": 21.875,
+            "malePct": 16.898663697104677,
+            "femalePct": 4.271993318485523,
+            "nonBinaryPct": 0.020879732739420936,
+            "notSpecifiedPct": 0.6834632516703786
+          },
+          {
+            "ageRange": "60+",
+            "totalPct": 2.9523942093541207,
+            "malePct": 1.8457683741648108,
+            "femalePct": 0.8644209354120268,
+            "nonBinaryPct": 0.005567928730512249,
+            "notSpecifiedPct": 0.23663697104677062
+          },
+          {
+            "ageRange": "Unknown",
+            "totalPct": 0.43429844097995546,
+            "malePct": 0,
+            "femalePct": 0,
+            "nonBinaryPct": 0,
+            "notSpecifiedPct": 0.43429844097995546
+          }
+        ],
+        "gender": [
+          {
+            "gender": "Male",
+            "percentage": 54.26364142538975
+          },
+          {
+            "gender": "Female",
+            "percentage": 39.64504454342984
+          },
+          {
+            "gender": "Non-binary",
+            "percentage": 0.24916481069042315
+          },
+          {
+            "gender": "Not specified",
+            "percentage": 5.842149220489977
+          }
+        ],
+        "topCountries": [
+          {
+            "country": "Germany",
+            "percentage": 30.009356104509084
+          },
+          {
+            "country": "Brazil",
+            "percentage": 5.064864336484618
+          },
+          {
+            "country": "United States",
+            "percentage": 4.95314965577914
+          },
+          {
+            "country": "Switzerland",
+            "percentage": 4.0608286436441325
+          },
+          {
+            "country": "Turkey",
+            "percentage": 3.6558629260867748
+          },
+          {
+            "country": "Spain",
+            "percentage": 3.1461646953680296
+          },
+          {
+            "country": "Canada",
+            "percentage": 3.0777394534359246
+          },
+          {
+            "country": "Egypt",
+            "percentage": 2.7439918448283085
+          },
+          {
+            "country": "Italy",
+            "percentage": 2.704891706581391
+          },
+          {
+            "country": "India",
+            "percentage": 2.6993059725461173
+          },
+          {
+            "country": "Poland",
+            "percentage": 2.658809400790381
+          },
+          {
+            "country": "Austria",
+            "percentage": 2.507994581837986
+          }
+        ],
+        "allCountries": [
+          {
+            "country": "Germany",
+            "percentage": 30.009356104509084
+          },
+          {
+            "country": "Brazil",
+            "percentage": 5.064864336484618
+          },
+          {
+            "country": "United States",
+            "percentage": 4.95314965577914
+          },
+          {
+            "country": "Switzerland",
+            "percentage": 4.0608286436441325
+          },
+          {
+            "country": "Turkey",
+            "percentage": 3.6558629260867748
+          },
+          {
+            "country": "Spain",
+            "percentage": 3.1461646953680296
+          },
+          {
+            "country": "Canada",
+            "percentage": 3.0777394534359246
+          },
+          {
+            "country": "Egypt",
+            "percentage": 2.7439918448283085
+          },
+          {
+            "country": "Italy",
+            "percentage": 2.704891706581391
+          },
+          {
+            "country": "India",
+            "percentage": 2.6993059725461173
+          },
+          {
+            "country": "Poland",
+            "percentage": 2.658809400790381
+          },
+          {
+            "country": "Austria",
+            "percentage": 2.507994581837986
+          },
+          {
+            "country": "Vietnam",
+            "percentage": 2.1323539679658152
+          },
+          {
+            "country": "United Kingdom",
+            "percentage": 2.061135859016073
+          },
+          {
+            "country": "Morocco",
+            "percentage": 1.9996927846280599
+          },
+          {
+            "country": "Kenya",
+            "percentage": 1.6003128011059753
+          },
+          {
+            "country": "Nigeria",
+            "percentage": 1.3782798732038373
+          },
+          {
+            "country": "Azerbaijan",
+            "percentage": 0.9956570917875746
+          },
+          {
+            "country": "Zambia",
+            "percentage": 0.9551605200318386
+          },
+          {
+            "country": "Norway",
+            "percentage": 0.9509712195053832
+          },
+          {
+            "country": "Mexico",
+            "percentage": 0.9328175838907431
+          },
+          {
+            "country": "Philippines",
+            "percentage": 0.9300247168731062
+          },
+          {
+            "country": "France",
+            "percentage": 0.8797531105556409
+          },
+          {
+            "country": "Thailand",
+            "percentage": 0.7833991984471659
+          },
+          {
+            "country": "Ukraine",
+            "percentage": 0.7792098979207105
+          },
+          {
+            "country": "Indonesia",
+            "percentage": 0.7568669617796149
+          },
+          {
+            "country": "Argentina",
+            "percentage": 0.7275418580944268
+          },
+          {
+            "country": "Japan",
+            "percentage": 0.6996131879180573
+          },
+          {
+            "country": "Hungary",
+            "percentage": 0.6674952172152323
+          },
+          {
+            "country": "Algeria",
+            "percentage": 0.6088450098448562
+          },
+          {
+            "country": "South Africa",
+            "percentage": 0.5865020737037606
+          },
+          {
+            "country": "Cameroon",
+            "percentage": 0.5739341721243943
+          },
+          {
+            "country": "Zimbabwe",
+            "percentage": 0.5711413051067573
+          },
+          {
+            "country": "Greece",
+            "percentage": 0.5571769700185725
+          },
+          {
+            "country": "China",
+            "percentage": 0.5529876694921171
+          },
+          {
+            "country": "Colombia",
+            "percentage": 0.523662565806929
+          },
+          {
+            "country": "Netherlands",
+            "percentage": 0.47897669352473776
+          },
+          {
+            "country": "Czechia",
+            "percentage": 0.4440658558042759
+          },
+          {
+            "country": "Romania",
+            "percentage": 0.41474075211908784
+          },
+          {
+            "country": "Kuwait",
+            "percentage": 0.40636215106617696
+          },
+          {
+            "country": "Singapore",
+            "percentage": 0.40356928404854003
+          },
+          {
+            "country": "Portugal",
+            "percentage": 0.39379424948681074
+          },
+          {
+            "country": "Taiwan",
+            "percentage": 0.3910013824691737
+          },
+          {
+            "country": "Sweden",
+            "percentage": 0.374244180363352
+          },
+          {
+            "country": "Slovakia",
+            "percentage": 0.32257614053706835
+          },
+          {
+            "country": "Lithuania",
+            "percentage": 0.31978327351943137
+          },
+          {
+            "country": "Tunisia",
+            "percentage": 0.31419753948415746
+          },
+          {
+            "country": "United Arab Emirates",
+            "percentage": 0.2792867017636955
+          },
+          {
+            "country": "Bulgaria",
+            "percentage": 0.26252949965787375
+          },
+          {
+            "country": "Luxembourg",
+            "percentage": 0.2541508986049629
+          },
+          {
+            "country": "Ireland",
+            "percentage": 0.24577229755205204
+          },
+          {
+            "country": "Ghana",
+            "percentage": 0.24158299702559663
+          },
+          {
+            "country": "Belgium",
+            "percentage": 0.23320439597268577
+          },
+          {
+            "country": "Australia",
+            "percentage": 0.2234293614109564
+          },
+          {
+            "country": "Honduras",
+            "percentage": 0.22063649439331948
+          },
+          {
+            "country": "Russia",
+            "percentage": 0.1996899917610423
+          },
+          {
+            "country": "Mongolia",
+            "percentage": 0.1857256566728575
+          },
+          {
+            "country": "Guinea",
+            "percentage": 0.1801399226375836
+          },
+          {
+            "country": "Albania",
+            "percentage": 0.17874348912876514
+          },
+          {
+            "country": "Latvia",
+            "percentage": 0.1619862870229434
+          },
+          {
+            "country": "Nepal",
+            "percentage": 0.155004119478851
+          },
+          {
+            "country": "Israel",
+            "percentage": 0.14103978439066622
+          },
+          {
+            "country": "Saudi Arabia",
+            "percentage": 0.14103978439066622
+          },
+          {
+            "country": "Oman",
+            "percentage": 0.13405761684657386
+          },
+          {
+            "country": "Hong Kong",
+            "percentage": 0.10752538017902277
+          },
+          {
+            "country": "New Zealand",
+            "percentage": 0.09914677912611192
+          },
+          {
+            "country": "Estonia",
+            "percentage": 0.09635391210847495
+          },
+          {
+            "country": "Panama",
+            "percentage": 0.0809931435114717
+          },
+          {
+            "country": "Croatia",
+            "percentage": 0.07959671000265323
+          },
+          {
+            "country": "Finland",
+            "percentage": 0.07680384298501627
+          },
+          {
+            "country": "Malawi",
+            "percentage": 0.06982167544092388
+          },
+          {
+            "country": "Peru",
+            "percentage": 0.0684252419321054
+          },
+          {
+            "country": "Qatar",
+            "percentage": 0.06702880842328693
+          },
+          {
+            "country": "Angola",
+            "percentage": 0.06702880842328693
+          },
+          {
+            "country": "Slovenia",
+            "percentage": 0.05446090684392063
+          },
+          {
+            "country": "Chile",
+            "percentage": 0.05446090684392063
+          },
+          {
+            "country": "Denmark",
+            "percentage": 0.05446090684392063
+          },
+          {
+            "country": "Ecuador",
+            "percentage": 0.04608230579100976
+          },
+          {
+            "country": "Paraguay",
+            "percentage": 0.04189300526455433
+          },
+          {
+            "country": "South Korea",
+            "percentage": 0.03910013824691737
+          },
+          {
+            "country": "Madagascar",
+            "percentage": 0.03910013824691737
+          },
+          {
+            "country": "Namibia",
+            "percentage": 0.03910013824691737
+          },
+          {
+            "country": "Brunei",
+            "percentage": 0.03770370473809889
+          },
+          {
+            "country": "Togo",
+            "percentage": 0.03770370473809889
+          },
+          {
+            "country": "El Salvador",
+            "percentage": 0.03211797070282499
+          },
+          {
+            "country": "Tanzania",
+            "percentage": 0.03211797070282499
+          },
+          {
+            "country": "Malaysia",
+            "percentage": 0.030721537194006505
+          },
+          {
+            "country": "Kosovo",
+            "percentage": 0.02932510368518803
+          },
+          {
+            "country": "Jordan",
+            "percentage": 0.02792867017636955
+          },
+          {
+            "country": "Papua New Guinea",
+            "percentage": 0.02792867017636955
+          },
+          {
+            "country": "Georgia",
+            "percentage": 0.025135803158732598
+          },
+          {
+            "country": "Barbados",
+            "percentage": 0.022342936141095643
+          },
+          {
+            "country": "North Macedonia",
+            "percentage": 0.022342936141095643
+          },
+          {
+            "country": "Serbia",
+            "percentage": 0.020946502632277163
+          },
+          {
+            "country": "Malta",
+            "percentage": 0.019550069123458684
+          },
+          {
+            "country": "Guatemala",
+            "percentage": 0.019550069123458684
+          },
+          {
+            "country": "Armenia",
+            "percentage": 0.01815363561464021
+          },
+          {
+            "country": "Cyprus",
+            "percentage": 0.01815363561464021
+          },
+          {
+            "country": "Uzbekistan",
+            "percentage": 0.01815363561464021
+          },
+          {
+            "country": "Maldives",
+            "percentage": 0.013964335088184775
+          },
+          {
+            "country": "Nicaragua",
+            "percentage": 0.012567901579366299
+          },
+          {
+            "country": "Cambodia",
+            "percentage": 0.011171468070547821
+          },
+          {
+            "country": "Libya",
+            "percentage": 0.011171468070547821
+          },
+          {
+            "country": "Uganda",
+            "percentage": 0.011171468070547821
+          },
+          {
+            "country": "Rwanda",
+            "percentage": 0.009775034561729342
+          },
+          {
+            "country": "Bolivia",
+            "percentage": 0.009775034561729342
+          },
+          {
+            "country": "Sudan",
+            "percentage": 0.009775034561729342
+          },
+          {
+            "country": "Lebanon",
+            "percentage": 0.009775034561729342
+          },
+          {
+            "country": "Venezuela",
+            "percentage": 0.009775034561729342
+          },
+          {
+            "country": "Botswana",
+            "percentage": 0.008378601052910866
+          },
+          {
+            "country": "Ivory Coast",
+            "percentage": 0.0069821675440923875
+          },
+          {
+            "country": "Syria",
+            "percentage": 0.0069821675440923875
+          },
+          {
+            "country": "Afghanistan",
+            "percentage": 0.005585734035273911
+          },
+          {
+            "country": "Trinidad and Tobago",
+            "percentage": 0.005585734035273911
+          },
+          {
+            "country": "Dominican Republic",
+            "percentage": 0.005585734035273911
+          },
+          {
+            "country": "Mozambique",
+            "percentage": 0.005585734035273911
+          },
+          {
+            "country": "Andorra",
+            "percentage": 0.004189300526455433
+          },
+          {
+            "country": "Benin",
+            "percentage": 0.004189300526455433
+          },
+          {
+            "country": "Costa Rica",
+            "percentage": 0.004189300526455433
+          },
+          {
+            "country": "Moldova",
+            "percentage": 0.004189300526455433
+          },
+          {
+            "country": "Iraq",
+            "percentage": 0.0027928670176369554
+          },
+          {
+            "country": "Senegal",
+            "percentage": 0.0027928670176369554
+          },
+          {
+            "country": "Laos",
+            "percentage": 0.0027928670176369554
+          },
+          {
+            "country": "Myanmar",
+            "percentage": 0.0027928670176369554
+          },
+          {
+            "country": "Palestine",
+            "percentage": 0.0013964335088184777
+          },
+          {
+            "country": "Iceland",
+            "percentage": 0.0013964335088184777
+          },
+          {
+            "country": "Belarus",
+            "percentage": 0.0013964335088184777
+          },
+          {
+            "country": "Mali",
+            "percentage": 0.0013964335088184777
+          },
+          {
+            "country": "Uruguay",
+            "percentage": 0.0013964335088184777
+          },
+          {
+            "country": "Mauritius",
+            "percentage": 0.0013964335088184777
+          }
+        ]
+      },
+      "topEpisodes": {
+        "byConsumption": [
+          {
+            "title": "S2E129 - Beim Hörgeräteakustiker: Das Hörgerät sitzt gut!",
+            "consumptionHours": 12.14,
+            "publishDate": "2026-07-13"
+          },
+          {
+            "title": "S2E123 - Beim Ernährungsberater: Was essen Sie so?",
+            "consumptionHours": 10.71,
+            "publishDate": "2026-07-07"
+          },
+          {
+            "title": "S1E2 - Mein Abend: Nach Hause kommen und entspannen",
+            "consumptionHours": 10.25,
+            "publishDate": "2026-07-19"
+          },
+          {
+            "title": "S2E117 - In der Uhrenwerkstatt: Meine Uhr ist kaputt!",
+            "consumptionHours": 10.2,
+            "publishDate": "2026-07-01"
+          },
+          {
+            "title": "S2E121 - Beim Chiropraktiker: Mein Rücken tut so weh!",
+            "consumptionHours": 10.14,
+            "publishDate": "2026-07-05"
+          },
+          {
+            "title": "S1E1 - Am Morgen: Mein Tag beginnt",
+            "consumptionHours": 10.08,
+            "publishDate": "2026-07-18"
+          },
+          {
+            "title": "S2E131 - In der Volkshochschule: Einen Kurs anmelden",
+            "consumptionHours": 10.02,
+            "publishDate": "2026-07-15"
+          },
+          {
+            "title": "S2E127 - Beim Logopäden: Meine Aussprache verbessern",
+            "consumptionHours": 10.02,
+            "publishDate": "2026-07-11"
+          },
+          {
+            "title": "S1E3 - Morgenkaffee: So starte ich den Tag!",
+            "consumptionHours": 9.96,
+            "publishDate": "2026-07-20"
+          },
+          {
+            "title": "S2E125 - Im Blutspendezentrum: Mein erster Termin",
+            "consumptionHours": 9.9,
+            "publishDate": "2026-07-09"
+          }
+        ],
+        "byImpressions": [
+          {
+            "title": "S1E94 - Zu Hause: Überraschungsgäste kommen!",
+            "impressions": 1443,
+            "home": 1315,
+            "search": 69,
+            "library": 59,
+            "publishDate": "2026-10-19"
+          },
+          {
+            "title": "S1E46 - Geldplanung: Wie viel habe ich noch?",
+            "impressions": 1409,
+            "home": 1048,
+            "search": 104,
+            "library": 257,
+            "publishDate": "2026-09-01"
+          },
+          {
+            "title": "S2E179 - Auf der Freilichtbühne: Ist der Platz frei?",
+            "impressions": 1355,
+            "home": 1011,
+            "search": 72,
+            "library": 272,
+            "publishDate": "2026-09-01"
+          },
+          {
+            "title": "S2E172 - Beim Event-Caterer: Was darf es sein?",
+            "impressions": 1331,
+            "home": 985,
+            "search": 62,
+            "library": 284,
+            "publishDate": "2026-08-25"
+          },
+          {
+            "title": "S2E174 - In der Ausstellungshalle: Was gibt es Neues?",
+            "impressions": 1314,
+            "home": 956,
+            "search": 63,
+            "library": 295,
+            "publishDate": "2026-08-27"
+          },
+          {
+            "title": "S2E178 - Auf dem Weihnachtsmarkt: Glühwein und Lebkuchen!",
+            "impressions": 1307,
+            "home": 958,
+            "search": 73,
+            "library": 276,
+            "publishDate": "2026-08-31"
+          },
+          {
+            "title": "S1E44 - Im Handyladen: Welchen Tarif soll ich nehmen?",
+            "impressions": 1298,
+            "home": 969,
+            "search": 66,
+            "library": 263,
+            "publishDate": "2026-08-30"
+          },
+          {
+            "title": "S1E31 - Meine neue Wohnung: Der Umzug beginnt!",
+            "impressions": 1279,
+            "home": 834,
+            "search": 142,
+            "library": 303,
+            "publishDate": "2026-08-17"
+          },
+          {
+            "title": "S1E39 - Nachbarschaftslärm: Was tun bei lauter Musik?",
+            "impressions": 1278,
+            "home": 924,
+            "search": 58,
+            "library": 296,
+            "publishDate": "2026-08-25"
+          },
+          {
+            "title": "S1E45 - Rechnungen bezahlen: Die Stromrechnung",
+            "impressions": 1256,
+            "home": 910,
+            "search": 74,
+            "library": 272,
+            "publishDate": "2026-08-31"
+          }
+        ]
+      }
+    },
+    {
+      "showId": "english-italian",
+      "hasData": true,
+      "latestDate": "2026-11-12",
+      "sources": {
+        "spotify": true,
+        "apple": true,
+        "op3": false
+      },
+      "kpis": {
+        "combinedMonthlyPlays": 291,
+        "spotifyPlays30d": 203,
+        "spotifyPlays90d": 909,
+        "spotifyPlaysAllTime": 1621,
+        "spotifyAvgDailyPlays30d": 6.8,
+        "spotifyAvgDailyAudience30d": 2,
+        "spotifyPeakDailyPlays": 59,
+        "applePlaysLatestMonth": 88,
+        "applePlaysAllTime": 559,
+        "op3Downloads30d": 0,
+        "op3Downloads90d": 0,
+        "impressions30d": 2066,
+        "impressions90d": 6982,
+        "avgDailyImpressions30d": 69,
+        "spotifyFollowers": 38,
+        "appleFollowers": 35,
+        "totalFollowers": 73,
+        "avgCompletionRate": 0,
+        "appleEngagedRatePct": 0,
+        "consumptionHours30d": 15.3,
+        "consumptionHoursAllTime": 123,
+        "monthlyHoursListened": 17.6,
+        "returningListenerPct30d": 0,
+        "latestWoWRetentionPct": 0,
+        "appleGrowthMultiple": 0.9,
+        "age23to44Pct": 18.9,
+        "age23to59Pct": 97,
+        "dachSharePct": 7.2,
+        "countriesCount": 36
+      },
+      "charts": {
+        "weeklyPlays": [
+          {
+            "weekStart": "2026-08-10",
+            "value": 125
+          },
+          {
+            "weekStart": "2026-08-17",
+            "value": 59
+          },
+          {
+            "weekStart": "2026-08-24",
+            "value": 73
+          },
+          {
+            "weekStart": "2026-08-31",
+            "value": 135
+          },
+          {
+            "weekStart": "2026-09-07",
+            "value": 113
+          },
+          {
+            "weekStart": "2026-09-14",
+            "value": 85
+          },
+          {
+            "weekStart": "2026-09-21",
+            "value": 78
+          },
+          {
+            "weekStart": "2026-09-28",
+            "value": 48
+          },
+          {
+            "weekStart": "2026-10-05",
+            "value": 97
+          },
+          {
+            "weekStart": "2026-10-12",
+            "value": 50
+          },
+          {
+            "weekStart": "2026-10-19",
+            "value": 30
+          },
+          {
+            "weekStart": "2026-10-26",
+            "value": 64
+          },
+          {
+            "weekStart": "2026-11-02",
+            "value": 49
+          }
+        ],
+        "spotifyMonthlyTrends": [
+          {
+            "month": "2026-06",
+            "plays": 98
+          },
+          {
+            "month": "2026-07",
+            "plays": 322
+          },
+          {
+            "month": "2026-08",
+            "plays": 446
+          },
+          {
+            "month": "2026-09",
+            "plays": 398
+          },
+          {
+            "month": "2026-10",
+            "plays": 278
+          }
+        ],
+        "appleMonthlyTrends": [
+          {
+            "month": "2026-06",
+            "plays": 96,
+            "totalSecondsListened": 10448,
+            "uniqueListeners": 0,
+            "uniqueEngagedListeners": 0,
+            "hoursListened": 2.9,
+            "engagedRatePct": 0
+          },
+          {
+            "month": "2026-07",
+            "plays": 76,
+            "totalSecondsListened": 12045,
+            "uniqueListeners": 0,
+            "uniqueEngagedListeners": 0,
+            "hoursListened": 3.3,
+            "engagedRatePct": 0
+          },
+          {
+            "month": "2026-08",
+            "plays": 212,
+            "totalSecondsListened": 12818,
+            "uniqueListeners": 0,
+            "uniqueEngagedListeners": 0,
+            "hoursListened": 3.6,
+            "engagedRatePct": 0
+          },
+          {
+            "month": "2026-09",
+            "plays": 51,
+            "totalSecondsListened": 7897,
+            "uniqueListeners": 0,
+            "uniqueEngagedListeners": 0,
+            "hoursListened": 2.2,
+            "engagedRatePct": 0
+          },
+          {
+            "month": "2026-10",
+            "plays": 88,
+            "totalSecondsListened": 8396,
+            "uniqueListeners": 0,
+            "uniqueEngagedListeners": 0,
+            "hoursListened": 2.3,
+            "engagedRatePct": 0
+          }
+        ],
+        "wowRetention": []
+      },
+      "demographics": {
+        "ageByGender": [
+          {
+            "ageRange": "0-17",
+            "totalPct": 0.24676125848241826,
+            "malePct": 0.24676125848241826,
+            "femalePct": 0,
+            "nonBinaryPct": 0,
+            "notSpecifiedPct": 0
+          },
+          {
+            "ageRange": "18-22",
+            "totalPct": 0.863664404688464,
+            "malePct": 0.24676125848241826,
+            "femalePct": 0.5552128315854411,
+            "nonBinaryPct": 0,
+            "notSpecifiedPct": 0.061690314620604564
+          },
+          {
+            "ageRange": "23-27",
+            "totalPct": 1.4805675508945095,
+            "malePct": 0.863664404688464,
+            "femalePct": 0.431832202344232,
+            "nonBinaryPct": 0,
+            "notSpecifiedPct": 0.1850709438618137
+          },
+          {
+            "ageRange": "28-34",
+            "totalPct": 9.561998766193708,
+            "malePct": 7.464528069093153,
+            "femalePct": 2.0974706971005554,
+            "nonBinaryPct": 0,
+            "notSpecifiedPct": 0
+          },
+          {
+            "ageRange": "35-44",
+            "totalPct": 7.896360271437384,
+            "malePct": 5.1819864281307835,
+            "femalePct": 2.7143738433066007,
+            "nonBinaryPct": 0,
+            "notSpecifiedPct": 0
+          },
+          {
+            "ageRange": "45-59",
+            "totalPct": 78.03824799506478,
+            "malePct": 72.23935842072795,
+            "femalePct": 5.737199259716225,
+            "nonBinaryPct": 0,
+            "notSpecifiedPct": 0.061690314620604564
+          },
+          {
+            "ageRange": "60+",
+            "totalPct": 1.6656384947563232,
+            "malePct": 1.3571869216533003,
+            "femalePct": 0.30845157310302285,
+            "nonBinaryPct": 0,
+            "notSpecifiedPct": 0
+          },
+          {
+            "ageRange": "Unknown",
+            "totalPct": 0.24676125848241826,
+            "malePct": 0,
+            "femalePct": 0,
+            "nonBinaryPct": 0,
+            "notSpecifiedPct": 0.24676125848241826
+          }
+        ],
+        "gender": [
+          {
+            "gender": "Male",
+            "percentage": 87.60024676125849
+          },
+          {
+            "gender": "Female",
+            "percentage": 11.844540407156076
+          },
+          {
+            "gender": "Non-binary",
+            "percentage": 0
+          },
+          {
+            "gender": "Not specified",
+            "percentage": 0.5552128315854411
+          }
+        ],
+        "topCountries": [
+          {
+            "country": "Canada",
+            "percentage": 69.44959802102659
+          },
+          {
+            "country": "Switzerland",
+            "percentage": 4.700061842918986
+          },
+          {
+            "country": "United States",
+            "percentage": 4.205318491032776
+          },
+          {
+            "country": "Brazil",
+            "percentage": 3.83426097711812
+          },
+          {
+            "country": "Argentina",
+            "percentage": 3.277674706246135
+          },
+          {
+            "country": "Poland",
+            "percentage": 2.9684601113172544
+          },
+          {
+            "country": "Germany",
+            "percentage": 2.2881880024737167
+          },
+          {
+            "country": "Australia",
+            "percentage": 2.102659245516388
+          },
+          {
+            "country": "Turkey",
+            "percentage": 1.7934446505875077
+          },
+          {
+            "country": "Italy",
+            "percentage": 0.8658008658008658
+          },
+          {
+            "country": "Mexico",
+            "percentage": 0.5565862708719851
+          },
+          {
+            "country": "Egypt",
+            "percentage": 0.49474335188620905
+          }
+        ],
+        "allCountries": [
+          {
+            "country": "Canada",
+            "percentage": 69.44959802102659
+          },
+          {
+            "country": "Switzerland",
+            "percentage": 4.700061842918986
+          },
+          {
+            "country": "United States",
+            "percentage": 4.205318491032776
+          },
+          {
+            "country": "Brazil",
+            "percentage": 3.83426097711812
+          },
+          {
+            "country": "Argentina",
+            "percentage": 3.277674706246135
+          },
+          {
+            "country": "Poland",
+            "percentage": 2.9684601113172544
+          },
+          {
+            "country": "Germany",
+            "percentage": 2.2881880024737167
+          },
+          {
+            "country": "Australia",
+            "percentage": 2.102659245516388
+          },
+          {
+            "country": "Turkey",
+            "percentage": 1.7934446505875077
+          },
+          {
+            "country": "Italy",
+            "percentage": 0.8658008658008658
+          },
+          {
+            "country": "Mexico",
+            "percentage": 0.5565862708719851
+          },
+          {
+            "country": "Egypt",
+            "percentage": 0.49474335188620905
+          },
+          {
+            "country": "Peru",
+            "percentage": 0.49474335188620905
+          },
+          {
+            "country": "Belgium",
+            "percentage": 0.4329004329004329
+          },
+          {
+            "country": "United Kingdom",
+            "percentage": 0.4329004329004329
+          },
+          {
+            "country": "Madagascar",
+            "percentage": 0.24737167594310452
+          },
+          {
+            "country": "Hong Kong",
+            "percentage": 0.1855287569573284
+          },
+          {
+            "country": "Austria",
+            "percentage": 0.1855287569573284
+          },
+          {
+            "country": "Netherlands",
+            "percentage": 0.1855287569573284
+          },
+          {
+            "country": "Portugal",
+            "percentage": 0.12368583797155226
+          },
+          {
+            "country": "France",
+            "percentage": 0.12368583797155226
+          },
+          {
+            "country": "Estonia",
+            "percentage": 0.12368583797155226
+          },
+          {
+            "country": "Spain",
+            "percentage": 0.12368583797155226
+          },
+          {
+            "country": "Puerto Rico",
+            "percentage": 0.06184291898577613
+          },
+          {
+            "country": "Japan",
+            "percentage": 0.06184291898577613
+          },
+          {
+            "country": "Sweden",
+            "percentage": 0.06184291898577613
+          },
+          {
+            "country": "Morocco",
+            "percentage": 0.06184291898577613
+          },
+          {
+            "country": "Slovakia",
+            "percentage": 0.06184291898577613
+          },
+          {
+            "country": "Ecuador",
+            "percentage": 0.06184291898577613
+          },
+          {
+            "country": "India",
+            "percentage": 0.06184291898577613
+          },
+          {
+            "country": "Chile",
+            "percentage": 0.06184291898577613
+          },
+          {
+            "country": "Greece",
+            "percentage": 0.06184291898577613
+          },
+          {
+            "country": "Colombia",
+            "percentage": 0.06184291898577613
+          },
+          {
+            "country": "Kazakhstan",
+            "percentage": 0.06184291898577613
+          },
+          {
+            "country": "Czechia",
+            "percentage": 0.06184291898577613
+          },
+          {
+            "country": "Azerbaijan",
+            "percentage": 0.06184291898577613
+          }
+        ]
+      },
+      "topEpisodes": {
+        "byConsumption": [],
+        "byImpressions": [
+          {
+            "title": "S1E1 - In panetteria: Un cornetto, per favore!",
+            "impressions": 136,
+            "home": 54,
+            "search": 60,
+            "library": 22,
+            "publishDate": "2026-06-03"
+          },
+          {
+            "title": "S1E3 - Alle Poste: Spedire un pacco",
+            "impressions": 117,
+            "home": 58,
+            "search": 56,
+            "library": 3,
+            "publishDate": "2026-06-05"
+          },
+          {
+            "title": "S1E4 - In Farmacia: Ho mal di testa e la tosse!",
+            "impressions": 95,
+            "home": 60,
+            "search": 16,
+            "library": 19,
+            "publishDate": "2026-06-06"
+          },
+          {
+            "title": "S1E2 - In banca: Aprire un conto o prelevare?",
+            "impressions": 94,
+            "home": 55,
+            "search": 29,
+            "library": 10,
+            "publishDate": "2026-06-04"
+          },
+          {
+            "title": "S1E5 - Al Supermercato: La mia lista della spesa",
+            "impressions": 90,
+            "home": 36,
+            "search": 41,
+            "library": 13,
+            "publishDate": "2026-06-07"
+          },
+          {
+            "title": "S1E147 - Alla Food Hall: Cosa mangiamo oggi?",
+            "impressions": 85,
+            "home": 56,
+            "search": 29,
+            "library": 0,
+            "publishDate": "2026-10-26"
+          },
+          {
+            "title": "S1E126 - Dal Dermatologo: Un problema di pelle",
+            "impressions": 82,
+            "home": 74,
+            "search": 6,
+            "library": 1,
+            "publishDate": "2026-10-05"
+          },
+          {
+            "title": "S1E9 - Al Ristorante: Vorrei un tavolo, per favore.",
+            "impressions": 81,
+            "home": 28,
+            "search": 21,
+            "library": 32,
+            "publishDate": "2026-06-11"
+          },
+          {
+            "title": "S1E123 - Dal Dietologo: Cosa mangio per stare bene?",
+            "impressions": 80,
+            "home": 51,
+            "search": 27,
+            "library": 2,
+            "publishDate": "2026-10-02"
+          },
+          {
+            "title": "S1E15 - Al Mercato Contadino: Quanto costa la frutta?",
+            "impressions": 79,
+            "home": 36,
+            "search": 19,
+            "library": 24,
+            "publishDate": "2026-06-17"
+          }
+        ]
+      }
+    },
+    {
+      "showId": "english-japanese",
+      "hasData": false
+    },
+    {
+      "showId": "english-korean",
+      "hasData": false
+    },
+    {
+      "showId": "english-mandarin",
+      "hasData": false
+    },
+    {
+      "showId": "english-portuguese",
+      "hasData": true,
+      "latestDate": "2026-11-12",
+      "sources": {
+        "spotify": true,
+        "apple": true,
+        "op3": false
+      },
+      "kpis": {
+        "combinedMonthlyPlays": 280,
+        "spotifyPlays30d": 52,
+        "spotifyPlays90d": 87,
+        "spotifyPlaysAllTime": 94,
+        "spotifyAvgDailyPlays30d": 1.7,
+        "spotifyAvgDailyAudience30d": 0.8,
+        "spotifyPeakDailyPlays": 17,
+        "applePlaysLatestMonth": 228,
+        "applePlaysAllTime": 979,
+        "op3Downloads30d": 0,
+        "op3Downloads90d": 0,
+        "impressions30d": 1172,
+        "impressions90d": 2133,
+        "avgDailyImpressions30d": 39,
+        "spotifyFollowers": 16,
+        "appleFollowers": 39,
+        "totalFollowers": 55,
+        "avgCompletionRate": 0,
+        "appleEngagedRatePct": 79.4,
+        "consumptionHours30d": 3.8,
+        "consumptionHoursAllTime": 5.9,
+        "monthlyHoursListened": 12.9,
+        "returningListenerPct30d": 0,
+        "latestWoWRetentionPct": 0,
+        "appleGrowthMultiple": 76,
+        "age23to44Pct": 59.6,
+        "age23to59Pct": 63.8,
+        "dachSharePct": 11.7,
+        "countriesCount": 13
+      },
+      "charts": {
+        "weeklyPlays": [
+          {
+            "weekStart": "2026-08-10",
+            "value": 0
+          },
+          {
+            "weekStart": "2026-08-17",
+            "value": 0
+          },
+          {
+            "weekStart": "2026-08-24",
+            "value": 4
+          },
+          {
+            "weekStart": "2026-08-31",
+            "value": 9
+          },
+          {
+            "weekStart": "2026-09-07",
+            "value": 0
+          },
+          {
+            "weekStart": "2026-09-14",
+            "value": 1
+          },
+          {
+            "weekStart": "2026-09-21",
+            "value": 9
+          },
+          {
+            "weekStart": "2026-09-28",
+            "value": 2
+          },
+          {
+            "weekStart": "2026-10-05",
+            "value": 6
+          },
+          {
+            "weekStart": "2026-10-12",
+            "value": 12
+          },
+          {
+            "weekStart": "2026-10-19",
+            "value": 34
+          },
+          {
+            "weekStart": "2026-10-26",
+            "value": 7
+          },
+          {
+            "weekStart": "2026-11-02",
+            "value": 2
+          }
+        ],
+        "spotifyMonthlyTrends": [
+          {
+            "month": "2026-06",
+            "plays": 0
+          },
+          {
+            "month": "2026-07",
+            "plays": 6
+          },
+          {
+            "month": "2026-08",
+            "plays": 7
+          },
+          {
+            "month": "2026-09",
+            "plays": 17
+          },
+          {
+            "month": "2026-10",
+            "plays": 61
+          }
+        ],
+        "appleMonthlyTrends": [
+          {
+            "month": "2026-06",
+            "plays": 3,
+            "totalSecondsListened": 70,
+            "uniqueListeners": 2,
+            "uniqueEngagedListeners": 0,
+            "hoursListened": 0,
+            "engagedRatePct": 0
+          },
+          {
+            "month": "2026-07",
+            "plays": 112,
+            "totalSecondsListened": 14754,
+            "uniqueListeners": 60,
+            "uniqueEngagedListeners": 34,
+            "hoursListened": 4.1,
+            "engagedRatePct": 56.7
+          },
+          {
+            "month": "2026-08",
+            "plays": 270,
+            "totalSecondsListened": 34923,
+            "uniqueListeners": 121,
+            "uniqueEngagedListeners": 89,
+            "hoursListened": 9.7,
+            "engagedRatePct": 73.6
+          },
+          {
+            "month": "2026-09",
+            "plays": 223,
+            "totalSecondsListened": 37969,
+            "uniqueListeners": 118,
+            "uniqueEngagedListeners": 76,
+            "hoursListened": 10.5,
+            "engagedRatePct": 64.4
+          },
+          {
+            "month": "2026-10",
+            "plays": 228,
+            "totalSecondsListened": 32632,
+            "uniqueListeners": 126,
+            "uniqueEngagedListeners": 100,
+            "hoursListened": 9.1,
+            "engagedRatePct": 79.4
+          }
+        ],
+        "wowRetention": []
+      },
+      "demographics": {
+        "ageByGender": [
+          {
+            "ageRange": "0-17",
+            "totalPct": 0,
+            "malePct": 0,
+            "femalePct": 0,
+            "nonBinaryPct": 0,
+            "notSpecifiedPct": 0
+          },
+          {
+            "ageRange": "18-22",
+            "totalPct": 10.638297872340427,
+            "malePct": 1.0638297872340425,
+            "femalePct": 9.574468085106384,
+            "nonBinaryPct": 0,
+            "notSpecifiedPct": 0
+          },
+          {
+            "ageRange": "23-27",
+            "totalPct": 24.46808510638298,
+            "malePct": 1.0638297872340425,
+            "femalePct": 23.404255319148938,
+            "nonBinaryPct": 0,
+            "notSpecifiedPct": 0
+          },
+          {
+            "ageRange": "28-34",
+            "totalPct": 12.76595744680851,
+            "malePct": 7.446808510638298,
+            "femalePct": 5.319148936170213,
+            "nonBinaryPct": 0,
+            "notSpecifiedPct": 0
+          },
+          {
+            "ageRange": "35-44",
+            "totalPct": 22.340425531914892,
+            "malePct": 17.02127659574468,
+            "femalePct": 5.319148936170213,
+            "nonBinaryPct": 0,
+            "notSpecifiedPct": 0
+          },
+          {
+            "ageRange": "45-59",
+            "totalPct": 4.25531914893617,
+            "malePct": 0,
+            "femalePct": 4.25531914893617,
+            "nonBinaryPct": 0,
+            "notSpecifiedPct": 0
+          },
+          {
+            "ageRange": "60+",
+            "totalPct": 25.53191489361702,
+            "malePct": 25.53191489361702,
+            "femalePct": 0,
+            "nonBinaryPct": 0,
+            "notSpecifiedPct": 0
+          },
+          {
+            "ageRange": "Unknown",
+            "totalPct": 0,
+            "malePct": 0,
+            "femalePct": 0,
+            "nonBinaryPct": 0,
+            "notSpecifiedPct": 0
+          }
+        ],
+        "gender": [
+          {
+            "gender": "Male",
+            "percentage": 52.12765957446809
+          },
+          {
+            "gender": "Female",
+            "percentage": 47.87234042553192
+          },
+          {
+            "gender": "Non-binary",
+            "percentage": 0
+          },
+          {
+            "gender": "Not specified",
+            "percentage": 0
+          }
+        ],
+        "topCountries": [
+          {
+            "country": "United States",
+            "percentage": 35.1063829787234
+          },
+          {
+            "country": "Canada",
+            "percentage": 21.27659574468085
+          },
+          {
+            "country": "Brazil",
+            "percentage": 15.957446808510639
+          },
+          {
+            "country": "Switzerland",
+            "percentage": 10.638297872340425
+          },
+          {
+            "country": "Hong Kong",
+            "percentage": 4.25531914893617
+          },
+          {
+            "country": "Finland",
+            "percentage": 2.127659574468085
+          },
+          {
+            "country": "Portugal",
+            "percentage": 2.127659574468085
+          },
+          {
+            "country": "Spain",
+            "percentage": 2.127659574468085
+          },
+          {
+            "country": "United Kingdom",
+            "percentage": 2.127659574468085
+          },
+          {
+            "country": "Trinidad and Tobago",
+            "percentage": 1.0638297872340425
+          },
+          {
+            "country": "Germany",
+            "percentage": 1.0638297872340425
+          },
+          {
+            "country": "France",
+            "percentage": 1.0638297872340425
+          }
+        ],
+        "allCountries": [
+          {
+            "country": "United States",
+            "percentage": 35.1063829787234
+          },
+          {
+            "country": "Canada",
+            "percentage": 21.27659574468085
+          },
+          {
+            "country": "Brazil",
+            "percentage": 15.957446808510639
+          },
+          {
+            "country": "Switzerland",
+            "percentage": 10.638297872340425
+          },
+          {
+            "country": "Hong Kong",
+            "percentage": 4.25531914893617
+          },
+          {
+            "country": "Finland",
+            "percentage": 2.127659574468085
+          },
+          {
+            "country": "Portugal",
+            "percentage": 2.127659574468085
+          },
+          {
+            "country": "Spain",
+            "percentage": 2.127659574468085
+          },
+          {
+            "country": "United Kingdom",
+            "percentage": 2.127659574468085
+          },
+          {
+            "country": "Trinidad and Tobago",
+            "percentage": 1.0638297872340425
+          },
+          {
+            "country": "Germany",
+            "percentage": 1.0638297872340425
+          },
+          {
+            "country": "France",
+            "percentage": 1.0638297872340425
+          },
+          {
+            "country": "Netherlands",
+            "percentage": 1.0638297872340425
+          }
+        ]
+      },
+      "topEpisodes": {
+        "byConsumption": [],
+        "byImpressions": [
+          {
+            "title": "S1E6 - Na Estação de Trem: Onde é a plataforma?",
+            "impressions": 65,
+            "home": 8,
+            "search": 56,
+            "library": 1,
+            "publishDate": "2026-06-23"
+          },
+          {
+            "title": "S1E1 - Na Padaria: Um pãozinho quente, por favor!",
+            "impressions": 59,
+            "home": 10,
+            "search": 41,
+            "library": 8,
+            "publishDate": "2026-06-18"
+          },
+          {
+            "title": "S1E7 - No Aeroporto: Onde está o meu portão?",
+            "impressions": 59,
+            "home": 12,
+            "search": 45,
+            "library": 2,
+            "publishDate": "2026-06-24"
+          },
+          {
+            "title": "S1E58 - Na Autoescola: Minha primeira aula de direção!",
+            "impressions": 53,
+            "home": 1,
+            "search": 51,
+            "library": 1,
+            "publishDate": "2026-08-14"
+          },
+          {
+            "title": "S1E120 - No Chaveiro: Uma cópia da chave, por favor!",
+            "impressions": 52,
+            "home": 5,
+            "search": 47,
+            "library": 0,
+            "publishDate": "2026-10-15"
+          },
+          {
+            "title": "S1E2 - No Banco: Preciso fazer um depósito!",
+            "impressions": 38,
+            "home": 6,
+            "search": 24,
+            "library": 8,
+            "publishDate": "2026-06-19"
+          },
+          {
+            "title": "S1E109 - No Bar da Praia: Uma caipirinha, por favor!",
+            "impressions": 35,
+            "home": 8,
+            "search": 27,
+            "library": 0,
+            "publishDate": "2026-10-04"
+          },
+          {
+            "title": "S1E5 - No Supermercado: Minha lista de compras",
+            "impressions": 33,
+            "home": 8,
+            "search": 21,
+            "library": 4,
+            "publishDate": "2026-06-22"
+          },
+          {
+            "title": "S1E3 - Nos Correios: Como enviar uma carta?",
+            "impressions": 33,
+            "home": 4,
+            "search": 21,
+            "library": 8,
+            "publishDate": "2026-06-20"
+          },
+          {
+            "title": "S1E125 - No Centro de Doação de Sangue: Minha primeira vez!",
+            "impressions": 32,
+            "home": 12,
+            "search": 20,
+            "library": 0,
+            "publishDate": "2026-10-20"
+          }
+        ]
+      }
+    },
+    {
+      "showId": "english-spanish",
+      "hasData": true,
+      "latestDate": "2026-11-12",
+      "sources": {
+        "spotify": true,
+        "apple": true,
+        "op3": false
+      },
+      "kpis": {
+        "combinedMonthlyPlays": 1552,
+        "spotifyPlays30d": 118,
+        "spotifyPlays90d": 458,
+        "spotifyPlaysAllTime": 569,
+        "spotifyAvgDailyPlays30d": 3.9,
+        "spotifyAvgDailyAudience30d": 1.6,
+        "spotifyPeakDailyPlays": 28,
+        "applePlaysLatestMonth": 1434,
+        "applePlaysAllTime": 2869,
+        "op3Downloads30d": 0,
+        "op3Downloads90d": 0,
+        "impressions30d": 2022,
+        "impressions90d": 4792,
+        "avgDailyImpressions30d": 67,
+        "spotifyFollowers": 21,
+        "appleFollowers": 80,
+        "totalFollowers": 101,
+        "avgCompletionRate": 93.8,
+        "appleEngagedRatePct": 84.9,
+        "consumptionHours30d": 10.2,
+        "consumptionHoursAllTime": 47.1,
+        "monthlyHoursListened": 123.3,
+        "returningListenerPct30d": 0,
+        "latestWoWRetentionPct": 40,
+        "appleGrowthMultiple": 7,
+        "age23to44Pct": 57.6,
+        "age23to59Pct": 59.6,
+        "dachSharePct": 30.3,
+        "countriesCount": 27
+      },
+      "charts": {
+        "weeklyPlays": [
+          {
+            "weekStart": "2026-08-10",
+            "value": 28
+          },
+          {
+            "weekStart": "2026-08-17",
+            "value": 31
+          },
+          {
+            "weekStart": "2026-08-24",
+            "value": 26
+          },
+          {
+            "weekStart": "2026-08-31",
+            "value": 31
+          },
+          {
+            "weekStart": "2026-09-07",
+            "value": 96
+          },
+          {
+            "weekStart": "2026-09-14",
+            "value": 60
+          },
+          {
+            "weekStart": "2026-09-21",
+            "value": 17
+          },
+          {
+            "weekStart": "2026-09-28",
+            "value": 46
+          },
+          {
+            "weekStart": "2026-10-05",
+            "value": 18
+          },
+          {
+            "weekStart": "2026-10-12",
+            "value": 23
+          },
+          {
+            "weekStart": "2026-10-19",
+            "value": 56
+          },
+          {
+            "weekStart": "2026-10-26",
+            "value": 16
+          },
+          {
+            "weekStart": "2026-11-02",
+            "value": 19
+          }
+        ],
+        "spotifyMonthlyTrends": [
+          {
+            "month": "2026-06",
+            "plays": 9
+          },
+          {
+            "month": "2026-07",
+            "plays": 55
+          },
+          {
+            "month": "2026-08",
+            "plays": 114
+          },
+          {
+            "month": "2026-09",
+            "plays": 226
+          },
+          {
+            "month": "2026-10",
+            "plays": 135
+          }
+        ],
+        "appleMonthlyTrends": [
+          {
+            "month": "2026-06",
+            "plays": 206,
+            "totalSecondsListened": 29630,
+            "uniqueListeners": 73,
+            "uniqueEngagedListeners": 58,
+            "hoursListened": 8.2,
+            "engagedRatePct": 79.5
+          },
+          {
+            "month": "2026-07",
+            "plays": 169,
+            "totalSecondsListened": 17493,
+            "uniqueListeners": 67,
+            "uniqueEngagedListeners": 44,
+            "hoursListened": 4.9,
+            "engagedRatePct": 65.7
+          },
+          {
+            "month": "2026-08",
+            "plays": 439,
+            "totalSecondsListened": 66998,
+            "uniqueListeners": 296,
+            "uniqueEngagedListeners": 258,
+            "hoursListened": 18.6,
+            "engagedRatePct": 87.2
+          },
+          {
+            "month": "2026-09",
+            "plays": 196,
+            "totalSecondsListened": 36178,
+            "uniqueListeners": 130,
+            "uniqueEngagedListeners": 107,
+            "hoursListened": 10,
+            "engagedRatePct": 82.3
+          },
+          {
+            "month": "2026-10",
+            "plays": 1434,
+            "totalSecondsListened": 407271,
+            "uniqueListeners": 279,
+            "uniqueEngagedListeners": 237,
+            "hoursListened": 113.1,
+            "engagedRatePct": 84.9
+          }
+        ],
+        "wowRetention": [
+          {
+            "weekStart": "2026-08-14",
+            "retentionPct": 40
+          },
+          {
+            "weekStart": "2026-08-21",
+            "retentionPct": 75
+          },
+          {
+            "weekStart": "2026-08-28",
+            "retentionPct": 75
+          },
+          {
+            "weekStart": "2026-09-04",
+            "retentionPct": 66.66667
+          },
+          {
+            "weekStart": "2026-09-11",
+            "retentionPct": 60
+          },
+          {
+            "weekStart": "2026-09-18",
+            "retentionPct": 75
+          },
+          {
+            "weekStart": "2026-09-25",
+            "retentionPct": 37.5
+          },
+          {
+            "weekStart": "2026-10-02",
+            "retentionPct": 60
+          },
+          {
+            "weekStart": "2026-10-09",
+            "retentionPct": 60
+          },
+          {
+            "weekStart": "2026-10-16",
+            "retentionPct": 25
+          },
+          {
+            "weekStart": "2026-10-23",
+            "retentionPct": 37.5
+          },
+          {
+            "weekStart": "2026-10-30",
+            "retentionPct": 40
+          }
+        ]
+      },
+      "demographics": {
+        "ageByGender": [
+          {
+            "ageRange": "0-17",
+            "totalPct": 0,
+            "malePct": 0,
+            "femalePct": 0,
+            "nonBinaryPct": 0,
+            "notSpecifiedPct": 0
+          },
+          {
+            "ageRange": "18-22",
+            "totalPct": 6.32688927943761,
+            "malePct": 1.2302284710017575,
+            "femalePct": 5.0966608084358525,
+            "nonBinaryPct": 0,
+            "notSpecifiedPct": 0
+          },
+          {
+            "ageRange": "23-27",
+            "totalPct": 2.460456942003515,
+            "malePct": 1.4059753954305798,
+            "femalePct": 1.054481546572935,
+            "nonBinaryPct": 0,
+            "notSpecifiedPct": 0
+          },
+          {
+            "ageRange": "28-34",
+            "totalPct": 51.493848857645,
+            "malePct": 50.43936731107206,
+            "femalePct": 1.054481546572935,
+            "nonBinaryPct": 0,
+            "notSpecifiedPct": 0
+          },
+          {
+            "ageRange": "35-44",
+            "totalPct": 3.6906854130052724,
+            "malePct": 1.2302284710017575,
+            "femalePct": 2.460456942003515,
+            "nonBinaryPct": 0,
+            "notSpecifiedPct": 0
+          },
+          {
+            "ageRange": "45-59",
+            "totalPct": 1.9332161687170475,
+            "malePct": 0.8787346221441126,
+            "femalePct": 1.054481546572935,
+            "nonBinaryPct": 0,
+            "notSpecifiedPct": 0
+          },
+          {
+            "ageRange": "60+",
+            "totalPct": 33.74340949033392,
+            "malePct": 4.92091388400703,
+            "femalePct": 28.822495606326886,
+            "nonBinaryPct": 0,
+            "notSpecifiedPct": 0
+          },
+          {
+            "ageRange": "Unknown",
+            "totalPct": 0.35149384885764495,
+            "malePct": 0,
+            "femalePct": 0,
+            "nonBinaryPct": 0,
+            "notSpecifiedPct": 0.35149384885764495
+          }
+        ],
+        "gender": [
+          {
+            "gender": "Male",
+            "percentage": 60.105448154657296
+          },
+          {
+            "gender": "Female",
+            "percentage": 39.54305799648506
+          },
+          {
+            "gender": "Non-binary",
+            "percentage": 0
+          },
+          {
+            "gender": "Not specified",
+            "percentage": 0.35149384885764495
+          }
+        ],
+        "topCountries": [
+          {
+            "country": "Vietnam",
+            "percentage": 41.7989417989418
+          },
+          {
+            "country": "Germany",
+            "percentage": 30.158730158730158
+          },
+          {
+            "country": "Spain",
+            "percentage": 7.4074074074074066
+          },
+          {
+            "country": "United Kingdom",
+            "percentage": 4.938271604938271
+          },
+          {
+            "country": "Turkey",
+            "percentage": 4.5855379188712515
+          },
+          {
+            "country": "Morocco",
+            "percentage": 1.9400352733686066
+          },
+          {
+            "country": "United States",
+            "percentage": 1.763668430335097
+          },
+          {
+            "country": "Norway",
+            "percentage": 1.0582010582010581
+          },
+          {
+            "country": "Egypt",
+            "percentage": 1.0582010582010581
+          },
+          {
+            "country": "Canada",
+            "percentage": 0.8818342151675485
+          },
+          {
+            "country": "Mali",
+            "percentage": 0.5291005291005291
+          },
+          {
+            "country": "Chile",
+            "percentage": 0.5291005291005291
+          }
+        ],
+        "allCountries": [
+          {
+            "country": "Vietnam",
+            "percentage": 41.7989417989418
+          },
+          {
+            "country": "Germany",
+            "percentage": 30.158730158730158
+          },
+          {
+            "country": "Spain",
+            "percentage": 7.4074074074074066
+          },
+          {
+            "country": "United Kingdom",
+            "percentage": 4.938271604938271
+          },
+          {
+            "country": "Turkey",
+            "percentage": 4.5855379188712515
+          },
+          {
+            "country": "Morocco",
+            "percentage": 1.9400352733686066
+          },
+          {
+            "country": "United States",
+            "percentage": 1.763668430335097
+          },
+          {
+            "country": "Norway",
+            "percentage": 1.0582010582010581
+          },
+          {
+            "country": "Egypt",
+            "percentage": 1.0582010582010581
+          },
+          {
+            "country": "Canada",
+            "percentage": 0.8818342151675485
+          },
+          {
+            "country": "Mali",
+            "percentage": 0.5291005291005291
+          },
+          {
+            "country": "Chile",
+            "percentage": 0.5291005291005291
+          },
+          {
+            "country": "Poland",
+            "percentage": 0.5291005291005291
+          },
+          {
+            "country": "France",
+            "percentage": 0.3527336860670194
+          },
+          {
+            "country": "Thailand",
+            "percentage": 0.3527336860670194
+          },
+          {
+            "country": "Belgium",
+            "percentage": 0.1763668430335097
+          },
+          {
+            "country": "Lithuania",
+            "percentage": 0.1763668430335097
+          },
+          {
+            "country": "Croatia",
+            "percentage": 0.1763668430335097
+          },
+          {
+            "country": "Brazil",
+            "percentage": 0.1763668430335097
+          },
+          {
+            "country": "Israel",
+            "percentage": 0.1763668430335097
+          },
+          {
+            "country": "Mexico",
+            "percentage": 0.1763668430335097
+          },
+          {
+            "country": "Argentina",
+            "percentage": 0.1763668430335097
+          },
+          {
+            "country": "Austria",
+            "percentage": 0.1763668430335097
+          },
+          {
+            "country": "Australia",
+            "percentage": 0.1763668430335097
+          },
+          {
+            "country": "Peru",
+            "percentage": 0.1763668430335097
+          },
+          {
+            "country": "Czechia",
+            "percentage": 0.1763668430335097
+          },
+          {
+            "country": "Netherlands",
+            "percentage": 0.1763668430335097
+          }
+        ]
+      },
+      "topEpisodes": {
+        "byConsumption": [],
+        "byImpressions": [
+          {
+            "title": "S1E43 - En la agencia de viajes: ¡Quiero ir a la playa!",
+            "impressions": 83,
+            "home": 15,
+            "search": 63,
+            "library": 5,
+            "publishDate": "2026-07-12"
+          },
+          {
+            "title": "S1E2 - En el banco: ¿Cómo abrir una cuenta?",
+            "impressions": 74,
+            "home": 51,
+            "search": 15,
+            "library": 8,
+            "publishDate": "2026-06-01"
+          },
+          {
+            "title": "S1E1 - En la Panadería: Un café y un pan, por favor.",
+            "impressions": 70,
+            "home": 40,
+            "search": 20,
+            "library": 10,
+            "publishDate": "2026-05-31"
+          },
+          {
+            "title": "S1E148 - En la terraza: ¡Una noche perfecta en la ciudad!",
+            "impressions": 68,
+            "home": 30,
+            "search": 38,
+            "library": 0,
+            "publishDate": "2026-10-25"
+          },
+          {
+            "title": "S1E4 - En la Farmacia: ¿Puedo comprar un medicamento?",
+            "impressions": 64,
+            "home": 31,
+            "search": 22,
+            "library": 11,
+            "publishDate": "2026-06-03"
+          },
+          {
+            "title": "S1E112 - En la tienda de ropa vintage: ¿Me queda bien?",
+            "impressions": 56,
+            "home": 30,
+            "search": 26,
+            "library": 0,
+            "publishDate": "2026-09-19"
+          },
+          {
+            "title": "S1E3 - En la oficina de correos: Un paquete y sellos, por favor!",
+            "impressions": 53,
+            "home": 35,
+            "search": 9,
+            "library": 9,
+            "publishDate": "2026-06-02"
+          },
+          {
+            "title": "S1E44 - En el taller: Un ruido extraño",
+            "impressions": 51,
+            "home": 16,
+            "search": 33,
+            "library": 2,
+            "publishDate": "2026-07-13"
+          },
+          {
+            "title": "S1E139 - En la Escuela de Música: Mi primera clase de guitarra",
+            "impressions": 49,
+            "home": 18,
+            "search": 31,
+            "library": 0,
+            "publishDate": "2026-10-16"
+          },
+          {
+            "title": "S1E141 - En el Coworking Café: ¡Un buen día de trabajo!",
+            "impressions": 49,
+            "home": 43,
+            "search": 6,
+            "library": 0,
+            "publishDate": "2026-10-18"
+          }
+        ]
+      }
+    },
+    {
+      "showId": "english-swedish",
+      "hasData": true,
+      "latestDate": "2026-11-12",
+      "sources": {
+        "spotify": true,
+        "apple": true,
+        "op3": false
+      },
+      "kpis": {
+        "combinedMonthlyPlays": 430,
+        "spotifyPlays30d": 136,
+        "spotifyPlays90d": 233,
+        "spotifyPlaysAllTime": 236,
+        "spotifyAvgDailyPlays30d": 4.5,
+        "spotifyAvgDailyAudience30d": 1.5,
+        "spotifyPeakDailyPlays": 25,
+        "applePlaysLatestMonth": 294,
+        "applePlaysAllTime": 882,
+        "op3Downloads30d": 0,
+        "op3Downloads90d": 0,
+        "impressions30d": 1782,
+        "impressions90d": 3292,
+        "avgDailyImpressions30d": 59,
+        "spotifyFollowers": 19,
+        "appleFollowers": 36,
+        "totalFollowers": 55,
+        "avgCompletionRate": 0,
+        "appleEngagedRatePct": 91.3,
+        "consumptionHours30d": 10.1,
+        "consumptionHoursAllTime": 17.8,
+        "monthlyHoursListened": 23.9,
+        "returningListenerPct30d": 0,
+        "latestWoWRetentionPct": 10,
+        "appleGrowthMultiple": 58.8,
+        "age23to44Pct": 88.6,
+        "age23to59Pct": 97.5,
+        "dachSharePct": 12.3,
+        "countriesCount": 13
+      },
+      "charts": {
+        "weeklyPlays": [
+          {
+            "weekStart": "2026-08-10",
+            "value": 0
+          },
+          {
+            "weekStart": "2026-08-17",
+            "value": 10
+          },
+          {
+            "weekStart": "2026-08-24",
+            "value": 12
+          },
+          {
+            "weekStart": "2026-08-31",
+            "value": 1
+          },
+          {
+            "weekStart": "2026-09-07",
+            "value": 3
+          },
+          {
+            "weekStart": "2026-09-14",
+            "value": 36
+          },
+          {
+            "weekStart": "2026-09-21",
+            "value": 2
+          },
+          {
+            "weekStart": "2026-09-28",
+            "value": 31
+          },
+          {
+            "weekStart": "2026-10-05",
+            "value": 0
+          },
+          {
+            "weekStart": "2026-10-12",
+            "value": 4
+          },
+          {
+            "weekStart": "2026-10-19",
+            "value": 42
+          },
+          {
+            "weekStart": "2026-10-26",
+            "value": 33
+          },
+          {
+            "weekStart": "2026-11-02",
+            "value": 46
+          }
+        ],
+        "spotifyMonthlyTrends": [
+          {
+            "month": "2026-06",
+            "plays": 1
+          },
+          {
+            "month": "2026-07",
+            "plays": 2
+          },
+          {
+            "month": "2026-08",
+            "plays": 23
+          },
+          {
+            "month": "2026-09",
+            "plays": 54
+          },
+          {
+            "month": "2026-10",
+            "plays": 96
+          }
+        ],
+        "appleMonthlyTrends": [
+          {
+            "month": "2026-06",
+            "plays": 5,
+            "totalSecondsListened": 575,
+            "uniqueListeners": 5,
+            "uniqueEngagedListeners": 1,
+            "hoursListened": 0.2,
+            "engagedRatePct": 20
+          },
+          {
+            "month": "2026-07",
+            "plays": 191,
+            "totalSecondsListened": 44010,
+            "uniqueListeners": 81,
+            "uniqueEngagedListeners": 72,
+            "hoursListened": 12.2,
+            "engagedRatePct": 88.9
+          },
+          {
+            "month": "2026-08",
+            "plays": 231,
+            "totalSecondsListened": 41545,
+            "uniqueListeners": 87,
+            "uniqueEngagedListeners": 67,
+            "hoursListened": 11.5,
+            "engagedRatePct": 77
+          },
+          {
+            "month": "2026-09",
+            "plays": 122,
+            "totalSecondsListened": 19014,
+            "uniqueListeners": 67,
+            "uniqueEngagedListeners": 51,
+            "hoursListened": 5.3,
+            "engagedRatePct": 76.1
+          },
+          {
+            "month": "2026-10",
+            "plays": 294,
+            "totalSecondsListened": 49553,
+            "uniqueListeners": 150,
+            "uniqueEngagedListeners": 137,
+            "hoursListened": 13.8,
+            "engagedRatePct": 91.3
+          }
+        ],
+        "wowRetention": [
+          {
+            "weekStart": "2026-08-14",
+            "retentionPct": 0
+          },
+          {
+            "weekStart": "2026-08-21",
+            "retentionPct": 50
+          },
+          {
+            "weekStart": "2026-08-28",
+            "retentionPct": 0
+          },
+          {
+            "weekStart": "2026-09-04",
+            "retentionPct": 0
+          },
+          {
+            "weekStart": "2026-09-11",
+            "retentionPct": 33.333334
+          },
+          {
+            "weekStart": "2026-09-18",
+            "retentionPct": 0
+          },
+          {
+            "weekStart": "2026-09-25",
+            "retentionPct": 25
+          },
+          {
+            "weekStart": "2026-10-02",
+            "retentionPct": 0
+          },
+          {
+            "weekStart": "2026-10-09",
+            "retentionPct": 0
+          },
+          {
+            "weekStart": "2026-10-16",
+            "retentionPct": 50
+          },
+          {
+            "weekStart": "2026-10-23",
+            "retentionPct": 28.57143
+          },
+          {
+            "weekStart": "2026-10-30",
+            "retentionPct": 10
+          }
+        ]
+      },
+      "demographics": {
+        "ageByGender": [
+          {
+            "ageRange": "0-17",
+            "totalPct": 0,
+            "malePct": 0,
+            "femalePct": 0,
+            "nonBinaryPct": 0,
+            "notSpecifiedPct": 0
+          },
+          {
+            "ageRange": "18-22",
+            "totalPct": 0.8438818565400843,
+            "malePct": 0.8438818565400843,
+            "femalePct": 0,
+            "nonBinaryPct": 0,
+            "notSpecifiedPct": 0
+          },
+          {
+            "ageRange": "23-27",
+            "totalPct": 17.72151898734177,
+            "malePct": 1.6877637130801686,
+            "femalePct": 13.502109704641349,
+            "nonBinaryPct": 0,
+            "notSpecifiedPct": 2.5316455696202533
+          },
+          {
+            "ageRange": "28-34",
+            "totalPct": 53.164556962025316,
+            "malePct": 2.109704641350211,
+            "femalePct": 39.24050632911392,
+            "nonBinaryPct": 11.814345991561181,
+            "notSpecifiedPct": 0
+          },
+          {
+            "ageRange": "35-44",
+            "totalPct": 17.72151898734177,
+            "malePct": 0.8438818565400843,
+            "femalePct": 16.877637130801688,
+            "nonBinaryPct": 0,
+            "notSpecifiedPct": 0
+          },
+          {
+            "ageRange": "45-59",
+            "totalPct": 8.860759493670885,
+            "malePct": 2.109704641350211,
+            "femalePct": 6.751054852320674,
+            "nonBinaryPct": 0,
+            "notSpecifiedPct": 0
+          },
+          {
+            "ageRange": "60+",
+            "totalPct": 0.42194092827004215,
+            "malePct": 0.42194092827004215,
+            "femalePct": 0,
+            "nonBinaryPct": 0,
+            "notSpecifiedPct": 0
+          },
+          {
+            "ageRange": "Unknown",
+            "totalPct": 1.2658227848101267,
+            "malePct": 0,
+            "femalePct": 0,
+            "nonBinaryPct": 0,
+            "notSpecifiedPct": 1.2658227848101267
+          }
+        ],
+        "gender": [
+          {
+            "gender": "Male",
+            "percentage": 8.016877637130802
+          },
+          {
+            "gender": "Female",
+            "percentage": 76.37130801687763
+          },
+          {
+            "gender": "Non-binary",
+            "percentage": 11.814345991561181
+          },
+          {
+            "gender": "Not specified",
+            "percentage": 3.79746835443038
+          }
+        ],
+        "topCountries": [
+          {
+            "country": "Sweden",
+            "percentage": 56.17021276595745
+          },
+          {
+            "country": "Germany",
+            "percentage": 12.340425531914894
+          },
+          {
+            "country": "Slovakia",
+            "percentage": 11.063829787234042
+          },
+          {
+            "country": "Poland",
+            "percentage": 10.638297872340425
+          },
+          {
+            "country": "Ukraine",
+            "percentage": 2.553191489361702
+          },
+          {
+            "country": "United States",
+            "percentage": 2.127659574468085
+          },
+          {
+            "country": "Netherlands",
+            "percentage": 1.702127659574468
+          },
+          {
+            "country": "Finland",
+            "percentage": 0.851063829787234
+          },
+          {
+            "country": "Azerbaijan",
+            "percentage": 0.851063829787234
+          },
+          {
+            "country": "Japan",
+            "percentage": 0.425531914893617
+          },
+          {
+            "country": "China",
+            "percentage": 0.425531914893617
+          },
+          {
+            "country": "Thailand",
+            "percentage": 0.425531914893617
+          }
+        ],
+        "allCountries": [
+          {
+            "country": "Sweden",
+            "percentage": 56.17021276595745
+          },
+          {
+            "country": "Germany",
+            "percentage": 12.340425531914894
+          },
+          {
+            "country": "Slovakia",
+            "percentage": 11.063829787234042
+          },
+          {
+            "country": "Poland",
+            "percentage": 10.638297872340425
+          },
+          {
+            "country": "Ukraine",
+            "percentage": 2.553191489361702
+          },
+          {
+            "country": "United States",
+            "percentage": 2.127659574468085
+          },
+          {
+            "country": "Netherlands",
+            "percentage": 1.702127659574468
+          },
+          {
+            "country": "Finland",
+            "percentage": 0.851063829787234
+          },
+          {
+            "country": "Azerbaijan",
+            "percentage": 0.851063829787234
+          },
+          {
+            "country": "Japan",
+            "percentage": 0.425531914893617
+          },
+          {
+            "country": "China",
+            "percentage": 0.425531914893617
+          },
+          {
+            "country": "Thailand",
+            "percentage": 0.425531914893617
+          },
+          {
+            "country": "Philippines",
+            "percentage": 0.425531914893617
+          }
+        ]
+      },
+      "topEpisodes": {
+        "byConsumption": [],
+        "byImpressions": [
+          {
+            "title": "S1E39 - På återvinningscentralen: Sortera mera!",
+            "impressions": 106,
+            "home": 8,
+            "search": 98,
+            "library": 0,
+            "publishDate": "2026-07-12"
+          },
+          {
+            "title": "S1E58 - På Körskolan: Första körlektionen",
+            "impressions": 84,
+            "home": 2,
+            "search": 82,
+            "library": 0,
+            "publishDate": "2026-07-31"
+          },
+          {
+            "title": "S1E135 - På Frivilligcentralen: Var kan jag hjälpa till?",
+            "impressions": 55,
+            "home": 34,
+            "search": 11,
+            "library": 10,
+            "publishDate": "2026-10-16"
+          },
+          {
+            "title": "S1E105 - På Dykcentret: Hyra utrustning?",
+            "impressions": 54,
+            "home": 2,
+            "search": 52,
+            "library": 0,
+            "publishDate": "2026-09-16"
+          },
+          {
+            "title": "S1E130 - På Fertilitetskliniken: Ett viktigt möte",
+            "impressions": 50,
+            "home": 30,
+            "search": 2,
+            "library": 18,
+            "publishDate": "2026-10-11"
+          },
+          {
+            "title": "S1E2 - På banken: Ska du ta ut pengar?",
+            "impressions": 48,
+            "home": 20,
+            "search": 22,
+            "library": 6,
+            "publishDate": "2026-06-05"
+          },
+          {
+            "title": "S1E134 - Fritidsgården: Vad gör vi ikväll?",
+            "impressions": 46,
+            "home": 15,
+            "search": 19,
+            "library": 12,
+            "publishDate": "2026-10-15"
+          },
+          {
+            "title": "S1E1 - På bageriet: Vad vill du ha idag?",
+            "impressions": 45,
+            "home": 15,
+            "search": 27,
+            "library": 3,
+            "publishDate": "2026-06-04"
+          },
+          {
+            "title": "S1E128 - På arbetsterapeutmottagningen: Min första tid",
+            "impressions": 42,
+            "home": 29,
+            "search": 6,
+            "library": 7,
+            "publishDate": "2026-10-09"
+          },
+          {
+            "title": "S1E137 - På Kulturcentrum: En ny utställning",
+            "impressions": 41,
+            "home": 35,
+            "search": 2,
+            "library": 4,
+            "publishDate": "2026-10-18"
+          }
+        ]
+      }
+    },
+    {
+      "showId": "french-german",
+      "hasData": false
+    },
+    {
+      "showId": "italian-german",
+      "hasData": false
+    },
+    {
+      "showId": "spanish-german",
+      "hasData": false
+    },
+    {
+      "showId": "turkish-german",
+      "hasData": false
+    }
+  ]
+}
