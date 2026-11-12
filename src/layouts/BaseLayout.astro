@@ -63,6 +63,16 @@ const twitterTags = generateTwitterTags(seo);
 <!DOCTYPE html>
 <html lang={lang}>
   <head>
+    {seo.googleTagId && (
+      <>
+        <script is:inline async src={`https://www.googletagmanager.com/gtm.js?id=${seo.googleTagId}`}></script>
+        <script is:inline>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+        </script>
+      </>
+    )}
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/images/podcasts.svg" />
@@ -134,8 +144,8 @@ const twitterTags = generateTwitterTags(seo);
       <meta name="google-site-verification" content={seo.googleSearchConsoleVerification} />
     )}
 
-    <!-- Google Analytics 4 — load only after user interaction or a 5s idle fallback to avoid blocking TBT -->
-    {seo.googleAnalyticsId && (
+    <!-- Google Analytics 4 — load only when googleTagId is not set, after user interaction or 5s idle -->
+    {!seo.googleTagId && seo.googleAnalyticsId && (
       <script is:inline define:vars={{ gaId: seo.googleAnalyticsId }}>
         (function(){
           var loaded = false;

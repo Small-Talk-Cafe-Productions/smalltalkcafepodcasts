@@ -364,10 +364,11 @@ export const siteConfig: SiteConfig = {
     ogImage: 'https://smalltalkcafe.de/images/og-image.jpg',
     siteUrl: 'https://smalltalkcafe.de',
     twitterHandle: 'smalltalkcafe',
-    // Google Analytics 4 — replace with your real Measurement ID from:
-    // analytics.google.com → Admin → Data Streams → Web → Measurement ID
-    // Format: 'G-XXXXXXXXXX'
-    googleAnalyticsId: 'G-82VS48MBBM',
+    // Google Tag / Google Tag Manager container ID (replaces standalone GA4 tag)
+    googleTagId: 'GTM-WTLZMLR8',
+    //
+    // Google Analytics 4 — managed via GTM-WTLZMLR8 above (keep commented to avoid duplicate tags):
+    // googleAnalyticsId: 'G-82VS48MBBM',
     //
     // Google Search Console HTML-tag verification — paste only the `content` value:
     // searchconsole.google.com → Add property → HTML tag → copy content="..."

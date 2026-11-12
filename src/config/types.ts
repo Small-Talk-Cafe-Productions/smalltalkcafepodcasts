@@ -196,9 +196,17 @@ export interface SEOConfig {
   twitterHandle?: string;
 
   /**
+   * Google Tag / Google Tag Manager Container ID (optional).
+   * Format: "GTM-XXXXXXXX" or "GT-XXXXXXXX".
+   * When set, injects the Google tag immediately inside <head> on every page
+   * (takes precedence over googleAnalyticsId so only one Google tag is loaded).
+   */
+  googleTagId?: string;
+
+  /**
    * Google Analytics 4 Measurement ID (optional).
    * Format: "G-XXXXXXXXXX" — get this from your GA4 property settings.
-   * When set, adds the GA4 global site tag to every page.
+   * When set (and googleTagId is unset), adds the GA4 global site tag to every page.
    */
   googleAnalyticsId?: string;
 
